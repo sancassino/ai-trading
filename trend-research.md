@@ -98,3 +98,35 @@ funded ~30%, live ≥$1k/mnd 12mnd ~1%. Dit is dus een orde van grootte beter.
    stond hiervoor al klaar op de VM (zie overdrachtsdocument sectie 5),
    resultaat nooit opgehaald.
 5. **Risico per trade (0,75-1% van kapitaal) zit ruim onder FTMO's
+   3%-max-risico-per-trade-regel** — geen probleem, ruimte over.
+
+## Status 24 sep 2026 (vervolgsessie)
+
+Nieuwe sessie kon de VM niet bereiken: SSH (poort 22) en de TLS-relay
+(poort 443 via `34.70.160.155.nip.io`) timen allebei uit op
+environment-netwerkniveau, ook al claimt het overdrachtsdocument dat de
+nip.io-host al was toegevoegd. Yahoo Finance is in déze sessie eveneens
+geblokkeerd (proxy 403) — dus zelfs het Python/Yahoo-onderzoek kon niet
+verder uitgebreid worden. Actie vereist van Sandro: sessie-titelbalk →
+cloud-omgeving-menu → Edit → Network access → `34.70.160.155.nip.io`
+(opnieuw) toevoegen, en de sessie verifieert dit dan als eerste stap.
+
+Wel gedaan zonder netwerktoegang: `TrendFollow_CrossAsset.mq5` geschreven
+(long-only, SMA200 trendfilter + ATR-trailing-stop, risk-% positiesizing,
+`_Symbol`-onafhankelijk zodat één EA op elk instrument in de cross-asset
+mix gedraaid kan worden). Nog NIET gecompileerd of getest — dat vereist
+`metaeditor64.exe` op de VM, dus wacht op netwerktoegang.
+
+**Volgende stappen zodra VM bereikbaar is** (in volgorde):
+1. Verbinding verifiëren (`whoami`).
+2. `SymbolListerEA`-resultaat ophalen (`SymbolList_FTMO.csv`, zie
+   overdrachtsdocument sectie 5) om te bevestigen welke indices/bonds/olie
+   daadwerkelijk verhandelbaar zijn op dit FTMO-account, met welke
+   spread/swap — dit bepaalt of de cross-asset mix hierboven zo haalbaar is.
+3. `TrendFollow_CrossAsset.mq5` compileren, los per instrument in de
+   Strategy Tester draaien op FTMO's echte data (net als Variant I eerder),
+   jaar-voor-jaar cijfers vastleggen zoals in het overdrachtsdocument.
+4. Cross-asset combinatie (indices + goud + bonds + olie) valideren met
+   echte data, Monte Carlo herhalen met échte trades i.p.v. Yahoo-simulatie.
+5. Pas dan een besluit nemen — dezelfde regel als bij Variant I: geen
+   Python-cijfer vertrouwen totdat MT5 het bevestigt.
