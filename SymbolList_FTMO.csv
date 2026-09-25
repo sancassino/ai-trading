@@ -1,0 +1,167 @@
+symbol;path;description
+AAPL;Equities I CFD\AAPL;Apple, Spot CFD
+AAVUSD;Crypto II CFD\AAVUSD;AAVE vs US Dollar, Spot CFD
+ADAUSD;Crypto I CFD\ADAUSD;Cardano vs US Dollar, Spot CFD
+ADSGn;Equities II CFD\ADSGn;Adidas AG, Spot CFD
+AIRF;Equities II CFD\AIRF;Air France KLM, Spot CFD
+ALGUSD;Crypto II CFD\ALGUSD;Algorand vs US Dollar, Spot CFD
+ALVG;Equities II CFD\ALVG;Allianz, Spot CFD
+AMD;Equities I CFD\AMD;Advanced Micro Devices, Spot CFD
+AMZN;Equities I CFD\AMZN;Amazon Com, Spot CFD
+ARM;Equities I CFD\ARM;Arm Holdings Inc, Spot CFD
+ASML;Equities I CFD\ASML;ASML Holding, Spot CFD
+AUDCAD;Forex\AUDCAD;Australian Dollar vs Canadian Dollar
+AUDCHF;Forex\AUDCHF;Australian Dollar vs Swiss Franc
+AUDJPY;Forex\AUDJPY;Australian Dollar vs Japanese Yen
+AUDNZD;Forex\AUDNZD;Australian Dollar vs New Zealand Dollar
+AUDUSD;Forex\AUDUSD;Australian Dollar vs US Dollar
+AUS200.cash;Cash II CFD\AUS200.cash;Australia 200 Index, Spot CFD
+AVAUSD;Crypto I CFD\AVAUSD;Avalanche vs US Dollar, Spot CFD
+AVGO;Equities I CFD\AVGO;Broadcom, Spot CFD
+AZN;Equities I CFD\AZN;AstraZeneca PLC, Spot CFD
+BA;Equities I CFD\BA;Boeing Co, Spot CFD
+BABA;Equities I CFD\BABA;Alibaba Group, Spot CFD
+BAC;Equities I CFD\BAC;Bank of America, Spot CFD
+BARUSD;Crypto II CFD\BARUSD;Hedera vs US Dollar, Spot CFD
+BAYGn;Equities II CFD\BAYGn;Bayer, Spot CFD
+BCHUSD;Crypto I CFD\BCHUSD;BitCoin Cash vs US Dollar, Spot CFD
+BMW;Equities II CFD\BMW;BMW AG, Spot CFD
+BNBUSD;Crypto II CFD\BNBUSD;Binance Coin vs US Dollar, Spot CFD
+BRK.B;Equities I CFD\BRK.B;Berkshire Hathaway Inc Class B, Spot CFD
+BTCUSD;Crypto I CFD\BTCUSD;Bitcoin vs US Dollar, Spot CFD
+CADCHF;Forex\CADCHF;Canadian Dollar vs Swiss Franc
+CADJPY;Forex\CADJPY;Canadian Dollar vs Japanese Yen
+CHFJPY;Forex\CHFJPY;Swiss Franc vs Japanese Yen
+COCOA.c;Agriculture\COCOA.c;Cocoa vs US Dollar, Spot CFD
+COFFEE.c;Agriculture\COFFEE.c;Coffee vs US Dollar, Spot CFD
+CORN.c;Agriculture\CORN.c;Corn vs US Dollar, Spot CFD
+COTTON.c;Agriculture\COTTON.c;Cotton vs US Dollar, Spot CFD
+CSCO;Equities I CFD\CSCO;Cisco Systems, Spot CFD
+CVX;Equities I CFD\CVX;Chevron, Spot CFD
+DASHUSD;Crypto I CFD\DASHUSD;Dash vs US Dollar, Spot CFD
+DBKGn;Equities II CFD\DBKGn;Deutsche Bank, Spot CFD
+DIS;Equities I CFD\DIS;Walt Disney, Spot CFD
+DOGEUSD;Crypto II CFD\DOGEUSD;Dogecoin vs US Dollar, Spot CFD
+DOTUSD;Crypto I CFD\DOTUSD;Polkadot vs US Dollar, Spot CFD
+DXY.cash;Cash III CFD\DXY.cash;Dollar Index, Spot CFD
+ETCUSD;Crypto I CFD\ETCUSD;Ethereum Classic vs US Dollar, Spot CFD
+ETHUSD;Crypto I CFD\ETHUSD;Ethereum vs US Dollar, Spot CFD
+EU50.cash;Cash II CFD\EU50.cash;Euro Stoxx 50 Index, Spot CFD
+EURAUD;Forex\EURAUD;Euro vs Australian Dollar
+EURCAD;Forex\EURCAD;Euro vs Canadian Dollar
+EURCHF;Forex\EURCHF;Euro vs Swiss Franc
+EURCZK;Exotics\EURCZK;Euro vs Czech Republic Koruna
+EURGBP;Forex\EURGBP;Euro vs Great Britain Pound
+EURHUF;Exotics\EURHUF;Euro vs Hungarian Forint
+EURJPY;Forex\EURJPY;Euro vs Japanese Yen
+EURNOK;Exotics\EURNOK;Euro vs Norwegian Krone
+EURNZD;Forex\EURNZD;Euro vs New Zealand Dollar
+EURPLN;Exotics\EURPLN;Euro vs Polish Zloty
+EURUSD;Forex\EURUSD;Euro vs United States Dollar
+FDX;Equities I CFD\FDX;FedEx, Spot CFD
+FRA40.cash;Cash II CFD\FRA40.cash;France 40 Index, Spot CFD
+GALUSD;Crypto II CFD\GALUSD;GALA vs US Dollar, Spot CFD
+GBPAUD;Forex\GBPAUD;Great Britain Pound vs Australian Dollar
+GBPCAD;Forex\GBPCAD;Great Britain Pound vs Canadian Dollar
+GBPCHF;Forex\GBPCHF;Great Britain Pound vs Swiss Franc
+GBPJPY;Forex\GBPJPY;Great Britain Pound vs Japanese Yen
+GBPNZD;Forex\GBPNZD;Great Britain Pound vs New Zealand Dollar
+GBPUSD;Forex\GBPUSD;Great Britain Pound vs US Dollar
+GE;Equities I CFD\GE;General Aerospace, Spot CFD
+GER40.cash;Cash CFD\GER40.cash;German 40 Index, Spot CFD
+GM;Equities I CFD\GM;General Motors, Spot CFD
+GME;Equities I CFD\GME;GameStop, Spot CFD
+GOOG;Equities I CFD\GOOG;Alphabet Class C, Spot CFD
+GRTUSD;Crypto II CFD\GRTUSD;The Graph vs US Dollar, Spot CFD
+HEATOIL.c;Commodities\HEATOIL.c;Heating Oil, Spot CFD
+HK50.cash;Cash II CFD\HK50.cash;Hong Kong Index, Spot CFD
+IBE;Equities II CFD\IBE;Iberdrola, Spot CFD
+IBM;Equities I CFD\IBM;IBM Corp, Spot CFD
+ICPUSD;Crypto II CFD\ICPUSD;Internet Computer vs US Dollar, Spot CFD
+IMXUSD;Crypto II CFD\IMXUSD;Immutable X vs US Dollar, Spot CFD
+INTC;Equities I CFD\INTC;Intel Corp, Spot CFD
+JNJ;Equities I CFD\JNJ;Johnson and Johnson, Spot CFD
+JP225.cash;Cash II CFD\JP225.cash;Japan 225 Index, Spot CFD
+JPM;Equities I CFD\JPM;JPMorgan Chase, Spot CFD
+KO;Equities I CFD\KO;Coca-Cola, Spot CFD
+LMT;Equities I CFD\LMT;Lockheed Martin, Spot CFD
+LNKUSD;Crypto II CFD\LNKUSD;Chainlink vs US Dollar, Spot CFD
+LTCUSD;Crypto I CFD\LTCUSD;Litecoin vs US Dollar, Spot CFD
+LVMH;Equities II CFD\LVMH;LVMH, Spot CFD
+MANUSD;Crypto II CFD\MANUSD;Decentraland vs US Dollar, Spot CFD
+MBG;Equities II CFD\MBG;Mercedes-Benz Group AG, Spot CFD
+MCD;Equities I CFD\MCD;McDonald's, Spot CFD
+META;Equities I CFD\META;Meta Platforms, Spot CFD
+MSFT;Equities I CFD\MSFT;Microsoft, Spot CFD
+MSTR;Equities I CFD\MSTR;MicroStrategy, Spot CFD
+N25.cash;Cash II CFD\N25.cash;Netherlands 25 Index, Spot CFD
+NATGAS.cash;Commodities\NATGAS.cash;Natural Gas Instrument, Spot CFD
+NEOUSD;Crypto II CFD\NEOUSD;Neo vs US Dollar, Spot CFD
+NERUSD;Crypto II CFD\NERUSD;NEAR protocol vs US Dollar, Spot CFD
+NFLX;Equities I CFD\NFLX;Netflix, Spot CFD
+NKE;Equities I CFD\NKE;Nike, Spot CFD
+NVDA;Equities I CFD\NVDA;NVIDIA, Spot CFD
+NZDCAD;Forex\NZDCAD;New Zealand Dollar vs Canadian Dollar
+NZDCHF;Forex\NZDCHF;New Zealand Dollar vs Swiss Franc
+NZDJPY;Forex\NZDJPY;New Zealand Dollar vs Japanese Yen
+NZDUSD;Forex\NZDUSD;New Zealand Dollar vs US Dollar
+PFE;Equities I CFD\PFE;Pfizer, Spot CFD
+PLTR;Equities I CFD\PLTR;Palantir Technologies, Spot CFD
+QCOM;Equities I CFD\QCOM;Qualcomm, Spot CFD
+RACE;Equities I CFD\RACE;Ferrari, Spot CFD
+RTX;Equities I CFD\RTX;Raytheon Technologies, Spot CFD
+SAN;Equities II CFD\SAN;Banco Santander, Spot CFD
+SANUSD;Crypto II CFD\SANUSD;The Sandbox vs US Dollar, Spot CFD
+SBUX;Equities I CFD\SBUX;Starbucks, Spot CFD
+SIEGn;Equities II CFD\SIEGn;Siemens AG, Spot CFD
+SNOW;Equities I CFD\SNOW;Snowflake Inc, Spot CFD
+SOLUSD;Crypto I CFD\SOLUSD;Solana vs US Dollar, Spot CFD
+SOYBEAN.c;Agriculture\SOYBEAN.c;Soybean vs US Dollar, Spot CFD 
+SPCX;Equities I CFD\SPCX;SpaceX, Spot CFD
+SPN35.cash;Cash II CFD\SPN35.cash;Spain 35 Index, Spot CFD
+SUGAR.c;Agriculture\SUGAR.c;Sugar vs US Dollar, Spot CFD
+T;Equities I CFD\T;AT&T, Spot CFD
+TSLA;Equities I CFD\TSLA;Tesla, Spot CFD
+TTE;Equities II CFD\TTE;TotalEnergies, Spot CFD
+UK100.cash;Cash CFD\UK100.cash;FTSE 100 Index, Spot CFD
+UKOIL.cash;Cash II CFD\UKOIL.cash;Crude Oil Brent, Spot CFD
+UNIUSD;Crypto II CFD\UNIUSD;Uniswap vs US Dollar, Spot CFD
+US100.cash;Cash CFD\US100.cash;NASDAQ 100 Index, Spot CFD
+US2000.cash;Cash II CFD\US2000.cash;Russell 2000 Index, Spot CFD
+US30.cash;Cash CFD\US30.cash;Dow Jones Industrial Average Index, Spot CFD
+US500.cash;Cash CFD\US500.cash;S&P 500 Index, Spot CFD
+USDCAD;Forex\USDCAD;US Dollar vs Canadian Dollar
+USDCHF;Forex\USDCHF;US Dollar vs Swiss Franc
+USDCNH;Exotics\USDCNH;US Dollar vs Chinese Yuan
+USDCZK;Exotics\USDCZK;US Dollar vs Czech Republic Koruna
+USDHKD;Exotics\USDHKD;US Dollar vs Hong Kong Dollar
+USDHUF;Exotics\USDHUF;US Dollar vs Hungarian Forint
+USDILS;Exotics\USDILS;US Dollar vs Israeli New Sheqel
+USDJPY;Forex\USDJPY;US Dollar vs Japanese Yen
+USDMXN;Exotics\USDMXN;US Dollar vs Mexican Peso
+USDNOK;Exotics\USDNOK;US Dollar vs Norwegian Krone
+USDPLN;Exotics\USDPLN;US Dollar vs Polish Zloty
+USDSEK;Exotics\USDSEK;US Dollar vs Swedish Krona
+USDSGD;Exotics\USDSGD;US Dollar vs Singapore Dollar
+USDZAR;Exotics\USDZAR;US Dollar vs South African Rand
+USOIL.cash;Cash II CFD\USOIL.cash;West Texas Intermediate Crude Oil, Spot CFD
+V;Equities I CFD\V;Visa, Spot CFD
+VECUSD;Crypto II CFD\VECUSD;VeChain vs US Dollar, Spot CFD
+VOWG_p;Equities II CFD\VOWG_p;Volkswagen, Spot CFD
+WHEAT.c;Agriculture\WHEAT.c;Wheat, Spot CFD
+WMT;Equities I CFD\WMT;Walmart, Spot CFD
+XAGAUD;Metals CFD\XAGAUD;Silver vs Australian Dollar, Spot CFD
+XAGEUR;Metals CFD\XAGEUR;Silver vs Euro, Spot CFD
+XAGUSD;Metals CFD\XAGUSD;Silver vs US Dollar, Spot CFD
+XAUAUD;Metals CFD\XAUAUD;Gold vs Australian Dollar, Spot CFD
+XAUEUR;Metals CFD\XAUEUR;Gold vs Euro, Spot CFD
+XAUUSD;Metals CFD\XAUUSD;Gold vs US Dollar, Spot CFD
+XCUUSD;Metals CFD\XCUUSD;Copper vs US Dollar, Spot CFD
+XLMUSD;Crypto II CFD\XLMUSD;Stellar Lumens vs US Dollar, Spot CFD
+XMRUSD;Crypto II CFD\XMRUSD;Monero vs US Dollar, Spot CFD
+XOM;Equities I CFD\XOM;Exxon Mobil, Spot CFD
+XPDUSD;Metals CFD\XPDUSD;Palladium vs United States Dollar, Spot CFD
+XPTUSD;Metals CFD\XPTUSD;Platinum vs United States Dollar, Spot CFD
+XRPUSD;Crypto I CFD\XRPUSD;Ripple vs US Dollar, Spot CFD
+XTZUSD;Crypto II CFD\XTZUSD;Tezos vs US Dollar, Spot CFD
+ZM;Equities I CFD\ZM;Zoom Video Communications, Spot CFD
