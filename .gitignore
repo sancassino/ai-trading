@@ -2,3 +2,4 @@ mt5_vm_key.txt
 log_dump*.txt
 mom_log_start.txt
 swapcheck_log.txt
+.claude/
