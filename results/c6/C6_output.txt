@@ -1,0 +1,10 @@
+SPX: vol-getimed CAGR +2.69% vol 9.5% SR 0.33 DD 32.6% | b&h@8% (w=0.45) CAGR +2.04% vol 8.0% SR 0.29 DD 39.5% | ΔSR +0.03 → afgewezen
+    1990–2007: SR getimed 0.22 vs b&h 0.19
+    2008–2026: SR getimed 0.42 vs b&h 0.38
+NDX: vol-getimed CAGR +5.02% vol 9.4% SR 0.57 DD 27.9% | b&h@8% (w=0.30) CAGR +3.40% vol 8.0% SR 0.46 DD 39.6% | ΔSR +0.11 → afgewezen
+    1990–2007: SR getimed 0.44 vs b&h 0.36
+    2008–2026: SR getimed 0.68 vs b&h 0.59
+DAX: vol-getimed CAGR +1.64% vol 9.3% SR 0.22 DD 37.7% | b&h@8% (w=0.36) CAGR +1.63% vol 8.0% SR 0.24 DD 38.9% | ΔSR -0.02 → afgewezen
+    1990–2007: SR getimed 0.32 vs b&h 0.25
+    2008–2026: SR getimed 0.15 vs b&h 0.23
+Combinatie 3 indices (informatief, 1994-01-03..): SR getimed 0.45 vs b&h 0.38; DSR344 getimed 0.33

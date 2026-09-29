@@ -161,3 +161,10 @@ Getest (PREREG_C5.md vóór berekening): c5_crypto.py, Yahoo BTC/ETH 2016–2026
 Resultaat met FTMO-financiering: CAGR +3,5%, SR 0,30, t 0,98, DD 42,3%, 7/11 jaar+, SR excl. beste 2 jaren (2016/2017) −0,06, DSR 0,03. Diagnostiek zonder financiering: SR 0,75, excl. beste 2 jaren 0,39, DD 29,6%; met DTB3±2%: SR 0,71 / 0,35.
 Conclusie: afgewezen — ook bruto niet robuust zonder de 2016/17-bull, en FTMO's 30%/jr-swap maakt elke meerdaagse crypto-positie kansloos. TRIAL_COUNT 341.
 Volgende stap: C6 (vol-timing van index-exposure, Moreira–Muir).
+
+## 2026-09-29 21:58 — C6: vol-timing van index-exposure — AFGEWEZEN
+
+Getest (PREREG_C6.md vóór berekening): c6_voltiming.py, maandelijks w = min(1,5; 8%/σ21) vs b&h op gelijke vol (ex-post schaal), CFD-financiering DTB3+2%, spread 0,02%, SPX/NDX 1990–2026, DAX 1994–2026 (prijsindex).
+Resultaat: SPX SR 0,33 vs 0,29 (ΔSR +0,03), DD 32,6%; NDX 0,57 vs 0,46 (+0,11), DD 27,9%; DAX 0,22 vs 0,24 (−0,02), DD 37,7%. Combinatie informatief SR 0,45 vs 0,38, DSR 0,33. Verbetering overal < 0,15 en DD ≫ 15%.
+Conclusie: afgewezen; vol-timing geeft slechts een kleine DD-verbetering, geen bruikbare basiscomponent onder de FTMO-DD-grens. TRIAL_COUNT 344.
+Volgende stap: C7 (alleen ontwerp B5-EV in MT5-realisme + FTMO-voorwaarde-risico's).
