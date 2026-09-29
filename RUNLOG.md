@@ -268,3 +268,12 @@ Getest (volgens NEXT_STEPS v4: gewichten E3, schaal bepaald door de FTMO-dagverl
 Resultaat 2021-09..2026: SR 0,95 (bootstrap-CI 0,23–1,65), CAGR +3,4% ≈ €225/mnd op €80k, dag-equity-DD 4,4%, slechtste FTMO-dagverlies 3,80%, 5/6 jaar+ → beslisregel F3 gehaald. Maar FTMO-economie (ftmo_economics, schaal 1): fase 1 24,9%, funded 17,5%, mediaan ~31 mnd tot funded, EV −€11/poging (nul-drift −€536).
 Conclusie: technisch overlevende, FTMO-conforme kandidaat met kleine edge; economisch te klein voor een challenge. PLAFOND_RAPPORT bijgewerkt (≈ €200–250/mnd). F6 (demo-forward) is volgens de voorwaarde nu toegestaan, maar staat na F4/F5 in de volgorde; vereist bovendien een tweede MT5-instantie (tester-scripts sluiten alle terminal64-processen).
 Volgende stap: F4 (plateau/decay-check).
+
+## 2026-09-29 23:45 — F4: plateau/decay — RSI(2) PLATEAU (maar SPX-decay), ORB PIEK
+
+Getest (PREREG_F4.md vóór berekening): f4_plateau.py.
+(a) Decay RSI(2), Sharpe <2010 → ≥2010: SPX 0,87 → 0,46 (rollend 5-jr van ~1,4 eind jaren '90 naar 0,1–0,7), NDX 0,65 → 0,57, DAX 0,05 → −0,08, FTSE 0,37 → 0,27 (recent negatief), N225 −0,04 → 0,25, GLD 0,22 → 0,41.
+(b) RSI(2)-plateaukaart (drempel 5/10/15 × SMA150/200/250), gepoolde t 3,27–3,73, CAGR 1,7–2,8%; kandidaat 10/200 t 3,65 → 8/8 buren zelfde teken én ≥ 50% → PLATEAU.
+(c) ORB-plateaukaart (OR 15/30/60 min × uitstap 12:00/sessie-einde): alle 6 cellen positief; sessie-einde 15/30/60 min: +1,23 / +1,73 / +1,49 bp (t 2,13/2,93/2,58); uitstap 12:00: +0,50–0,72 bp. 5/5 buren zelfde teken maar slechts 2/5 ≥ 50% → volgens de vooraf vastgelegde eis PIEK. Per symbool robuust positief: US100, GER40, US500; ~0 of negatief: US30, UK100, EURUSD.
+Conclusie: RSI(2) is geen toevalstreffer in parameters, maar de edge op SPX is sinds 2010 gehalveerd; ORB hangt af van vasthouden tot sessie-einde en is in de 30-min-cel het sterkst (piek). TRIAL_COUNT 364 (13 plateau-buren, transparant geteld).
+Volgende stap: F5 (breedte met identieke regels).
