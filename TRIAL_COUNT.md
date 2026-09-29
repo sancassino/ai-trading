@@ -31,3 +31,5 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-29 | C4 sizing/combinatie bestaande sleeves (geen nieuwe signalen) | 0 | 340 |
 | 2026-09-29 | C5 crypto-trend BTC+ETH | 1 | 341 |
 | 2026-09-29 | C6 vol-timing SPX/NDX/DAX | 3 | 344 |
+| 2026-09-29 | C7 alleen ontwerp (geen trial) | 0 | 344 |
+| 2026-09-29 | D1 EURUSD-intradagseizoen (2 vaste vensters) | 2 | 346 |

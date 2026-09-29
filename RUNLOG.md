@@ -175,3 +175,10 @@ Opgeleverd: PREREG_C7.md (ontwerp, niet uitgevoerd — Sandro beslist), C7_ev_ta
 EV (schaal 1, slot-tot-slot, optimistisch): C4-combinatie funded 89,8%, €808/mnd | funded, EV €8.640/poging (nul-drift €524); RSI(2) EV €24 (nul-drift −€510); SPY@10% EV €3.092 (nul-drift €219).
 FTMO-risico's (ftmo.com FAQ/forbidden practices): Standard-account moet posities vóór weekend/rollover >2 u sluiten → RSI(2) vereist Swing-account; nieuwsvenster ±2 min (ook SL/TP) raakt ORB; gap trading/handelen vlak vóór sluiting verboden; consistente positiegrootte en risicoconcentratie; 'unfair advantage tools' (tekst verifiëren); Best Day Rule-drempel niet gevonden.
 Volgende stap: portefeuilleregel — C4 haalde DSR 0,55 → geen PLAFOND-pauze; door met reserve D1 en VOORSTEL MT5-bevestiging C4.
+
+## 2026-09-29 22:01 — D1: FX-intradagseizoen EURUSD — AFGEWEZEN
+
+Getest (PREREG_D1.md vóór berekening): d1_fx_season.py, Breedon & Ranaldo-hypothese, FTMO-M5 EURUSD 2021–26: (i) short 08:00–12:00 Londen, (ii) long 14:00–18:00 Londen, kosten spread + €2,25/lot/kant.
+Resultaat: (i) N 1.490, −1,31 bp, t train −2,15 / test −1,07, 1/6 jaar+; (ii) N 1.490, −1,44 bp, t −1,82 / −1,21, 1/6 jaar+. Effect in deze periode eerder omgekeerd (EUR sterker in Europese uren). (Opmerking: DSR-label in de output toont N=338 door hergebruik van de C2-functie; DSR is 0,00 ongeacht N.)
+Conclusie: afgewezen. TRIAL_COUNT 346.
+Volgende stap: D2 (goud vs reële rente lead-lag).
