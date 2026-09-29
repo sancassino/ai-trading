@@ -50,3 +50,10 @@ Volgende stap: echt ensemble in de EA (9 sub-portefeuilles in één account, gew
 Getest: nieuwe EA-modus EnsembleTopNs='2,3,4' × EnsembleLookbacks='1,2,3' met herschaling; T10 @30/60/90% ± guard 3%, 16 @30% en @60%+guard; €80k EUR, SMA10, swap-gecorrigeerd.
 Resultaat: EA-ensemble T10 @30% €186/mnd ≈ lineaire benadering €200 (validatie OK). T10 @60% zonder guard €375/mnd maar dagverlies 8,1% (breekt FTMO); met guard 3% instorting naar €38–42/mnd, stat. DD 14–17%. 16 @60%+guard €637/mnd (test €409) maar hindsight-universum. Conclusie: geen FTMO-conforme route naar €880/mnd zonder hindsight in deze strategiefamilie; haalbaar ~€190–320/mnd.
 Volgende stap: Next-steps-bestand uit de repo ophalen en die taken uitvoeren.
+
+## 2026-09-29 14:36 — NEXT_STEPS stap 2: reconciliatie Python ↔ MT5 (T10)
+
+Getest: nieuwe simulator momentum_sim.py (exact de EA-regels: rebalans 1e handelsdag, lookback N×30d, SMA10 op 10 samples à 30d, geen herschaling van aangehouden legs, CFD-boekhouding in EUR incl. EURUSD/EURGBP, 8%/jr financiering, 0,05% spread/kant). Bestaande momentum_rotation*.py kenden geen SMA10/kosten, dus niet bruikbaar voor deze vergelijking. Vergeleken met MT5 T10 (swap-gecorrigeerd), 2021-01..2026-09, reconcile.py (nieuw).
+Resultaat: TopN=2/lb=3: corr 0,895 (0,915 vanaf 2021-02), totaal py +20,0% vs MT5 +9,0% → criterium (≥0,95 en <15%) NIET gehaald. Oorzaken: (1) MT5-datagat jan 2021: posities pas ~25 jan gevuld; (2) 10/56 maanden andere #2-keuze (randgevallen in de ranking); vultiming (slot vs vorige slot) maakt nauwelijks uit. Per config corr 0,87–0,94, afwijking beide richtingen (py hoger in 4, lager in 5 van 9) → geen systematische bias. Ensemble van 9 (vanaf 2021-02): corr 0,951, totaal +19,7% vs +18,2% (8%) → wél binnen criterium.
+Conclusie: Python-resultaten zijn overdraagbaar op plateau/ensemble-niveau, niet per losse config.
+Volgende stap: stap 1 (lange validatie 2000–2026, universum A en B).
