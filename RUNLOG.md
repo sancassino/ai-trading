@@ -132,3 +132,10 @@ Resultaat netto: ETF SPY/DIA t −4,07, SPY/QQQ −2,59, GLD/SLV −3,48 (−61%
 Diagnostiek zonder kosten/financiering (geen beslisgrond): ETF-paren t −2,57…+1,22; alleen UKOIL/USOIL bruto t 2,70 (5,6 jr). De spreads mean-reverten niet betrouwbaar op 60d-z-score (goud/zilver trendt).
 Conclusie: C1 afgewezen. TRIAL_COUNT 334.
 Volgende stap: C2 (lead-lag / tijd-van-de-dag op M5).
+
+## 2026-09-29 21:47 — C2: lead-lag en tijd-van-de-dag op M5 — alle 4 AFGEWEZEN
+
+Getest (PREREG_C2.md vóór berekening): c2_leadlag.py, FTMO-M5 2021–26, kosten zoals B4. (a) teken US500-sessie → GER40/UK100 eerste 60 min; (b) GER40 eerste 30 min → US500 eerste 60 min; (c1) XAU long 13:30–14:30 CET; (c2) US100 long 15:30–16:00 CET.
+Resultaat: (a) N 2.473, −0,69 bp, t train +0,33 / test −1,87, 1/6 jaar+; (b) N 1.161, −0,81 bp, t −0,81 / −0,12; (c1) N 1.481, −1,69 bp, t −1,79 / −2,01, 0/6 jaar+; (c2) N 1.301, +0,84 bp, t +1,04 / −0,17. DSR ≈ 0.
+Conclusie: geen lead-lag- of tijdvenster-edge na FTMO-kosten. TRIAL_COUNT 338.
+Volgende stap: C3 (kortetermijn-omkeer markt-neutraal op FTMO-aandelen).
