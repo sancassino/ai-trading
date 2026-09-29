@@ -284,3 +284,10 @@ Getest (PREREG_F5.md vóór berekening): f5_breadth.py. Nieuwe FTMO-data: M5 voo
 Resultaat (t / corr / helften): RSI(2): JP225 +1,99/0,39/+6%,+39% (net onder t 2), AUS200 +0,66, HK50 +0,48, EU50 +0,55 (corr 0,61), FRA40 −0,54, SPN35 +0,61, N25 −0,56, XAG −0,47. ORB: JP225 +0,21, AUS200 −4,35, HK50 +0,72, EU50 +0,42, FRA40 −0,33, SPN35 −1,64, N25 −2,60, XAG −0,41. IBS: US500 +1,50 (corr 0,51), US100 +1,60 (corr 0,45).
 Conclusie: 0/18 opgenomen. De edge generaliseert niet over instrumenten: ORB werkt alleen op US-indices/GER40, RSI(2) vooral op US-indices. Breedte-hypothese (SR +0,1–0,2) verworpen. TRIAL_COUNT 382.
 Volgende stap: F6 (demo-forward) — eerst accounttype verifiëren (zie volgende entry); ondertussen reserve G1/G2.
+
+## 2026-09-29 23:52 — F6: demo-forward-test GEBLOKKEERD — account staat geen handel toe (actie Sandro nodig)
+
+Voorwaarde F6 (F3-beslisregel) is met F3b gehaald. Vóór het live zetten het account gecontroleerd via Python (MetaTrader5.account_info): login 1514742872, naam '€80k FTMO Free Trial Swing 2-Step', server FTMO-Demo, trade_mode 0 (demo), hefboom 1:30, balance €80.000, **trade_allowed = False** (1 deal in historie, 0 posities). Handelen op dit account is niet toegestaan — waarschijnlijk is de Free Trial verlopen.
+NIET gestart: geen EA live gezet, niets op het account gedaan.
+Nodig van Sandro: een nieuwe FTMO Free Trial (Swing, €80k) of andere demo-inloggegevens in de terminal op de VM. Technisch daarna: een tweede, aparte MT5-instantie voor live/demo (de tester-scripts sluiten alle terminal64-processen), EA's RSI2Sleeve (LegFrac 0,62/6) + ORBSleeve (LegFrac 0,43/7) volgens F3b, dagelijkse export naar forward/daily.csv.
+Volgende stap: reserve G1 (kostengevoeligheid) en G2 (beta/stresscorrelatie).
