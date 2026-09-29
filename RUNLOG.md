@@ -139,3 +139,10 @@ Getest (PREREG_C2.md vóór berekening): c2_leadlag.py, FTMO-M5 2021–26, koste
 Resultaat: (a) N 2.473, −0,69 bp, t train +0,33 / test −1,87, 1/6 jaar+; (b) N 1.161, −0,81 bp, t −0,81 / −0,12; (c1) N 1.481, −1,69 bp, t −1,79 / −2,01, 0/6 jaar+; (c2) N 1.301, +0,84 bp, t +1,04 / −0,17. DSR ≈ 0.
 Conclusie: geen lead-lag- of tijdvenster-edge na FTMO-kosten. TRIAL_COUNT 338.
 Volgende stap: C3 (kortetermijn-omkeer markt-neutraal op FTMO-aandelen).
+
+## 2026-09-29 21:50 — C3: kortetermijn-omkeer markt-neutraal — AFGEWEZEN
+
+Getest (PREREG_C3.md vóór berekening): c3_reversal.py, 49 FTMO-aandelen (universe_stocks49.txt), elke 5 handelsdagen long onderste 20% / short bovenste 20% op 5-daags rendement, uitvoering t+1, 0,05%/kant, FTMO-swap long −8,4% / short −6,7%/jr. FTMO-D1 2021–26 (beslisgrond; 13 extra koersreeksen geëxporteerd) + Yahoo 2000–26 als survivorship-bovengrens.
+Resultaat: FTMO CAGR −16,1%, SR −1,08, t −2,62, DD 65%, elk jaar negatief; Yahoo-bovengrens −8,4%/jr, t −3,16, alleen positief in 2000/03/08/09. Diagnostiek DTB3±2%: FTMO −11,5%/jr, Yahoo −3,4%/jr (2013–26 −76%). Kosten: wekelijkse omzet ≈ 8%/jr spread + FTMO-swap op beide benen ≈ 7,5%/jr.
+Conclusie: afgewezen; omkeer-effect in large caps na 2010 verdwenen en FTMO-shortswap maakt markt-neutraal op aandelen-CFD's structureel duur. TRIAL_COUNT 340.
+Volgende stap: C4 (sizing RSI(2) + combinatie van sleeves).
