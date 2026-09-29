@@ -33,3 +33,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-29 | C6 vol-timing SPX/NDX/DAX | 3 | 344 |
 | 2026-09-29 | C7 alleen ontwerp (geen trial) | 0 | 344 |
 | 2026-09-29 | D1 EURUSD-intradagseizoen (2 vaste vensters) | 2 | 346 |
+| 2026-09-29 | D2 goud vs reële rente | 1 | 347 |

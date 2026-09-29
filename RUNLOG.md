@@ -182,3 +182,10 @@ Getest (PREREG_D1.md vóór berekening): d1_fx_season.py, Breedon & Ranaldo-hypo
 Resultaat: (i) N 1.490, −1,31 bp, t train −2,15 / test −1,07, 1/6 jaar+; (ii) N 1.490, −1,44 bp, t −1,82 / −1,21, 1/6 jaar+. Effect in deze periode eerder omgekeerd (EUR sterker in Europese uren). (Opmerking: DSR-label in de output toont N=338 door hergebruik van de C2-functie; DSR is 0,00 ongeacht N.)
 Conclusie: afgewezen. TRIAL_COUNT 346.
 Volgende stap: D2 (goud vs reële rente lead-lag).
+
+## 2026-09-29 22:01 — D2: goud vs reële rente — AFGEWEZEN
+
+Getest (PREREG_D2.md vóór berekening): d2_gold_realrate.py, maandelijks long/short GLD op teken van 20-daagse verandering DFII10 (t−2), FTMO-swap long −7,93% / short −0,37%/jr, spread 0,02%.
+Resultaat: CAGR −4,3%, SR −0,15, t −0,70, DD 69,6%, helften −27% / −50%, 11/23 jaar+. Diagnostiek DTB3±2%: SR −0,02.
+Conclusie: afgewezen; geen bruikbare lead-lag van reële rente naar goud op maandbasis. TRIAL_COUNT 347.
+Volgende stap: D3 (haalbaarheid futures-basis/roll op FTMO), dan D4.
