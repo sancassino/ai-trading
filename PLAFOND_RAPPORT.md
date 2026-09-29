@@ -39,3 +39,13 @@ Structureel bij FTMO: swaps op aandelen-CFD's (long −8%, short −7%/jr), cryp
 Advies uitvoerder: optie 1 alleen met het besef dat het doel €880+ met deze aanpak waarschijnlijk niet gehaald wordt.
 
 De uitvoerder pauzeert nieuw onderzoek (portefeuilleregel) en blijft elk uur controleren op nieuwe NEXT_STEPS.
+
+## Update na MT5-bevestiging (F1–F3, 2026-09-29)
+- F1 (RSI(2)-EA) en F2 (ORB-EA) reconciliëren uitstekend met Python (trades identiek resp. binnen 2%, maand-/tradecorrelatie 0,99).
+- **F3 (combinatie op E3-schaal) faalt de beslisregel:** SR 0,96 (CI 0,22–1,66), ≈ €410/mnd, maar **FTMO-dagverlies tot 8,56%**
+  (balance 00:00 − laagste equity; 5%-grens herhaaldelijk overschreden in jan 2022, mrt/apr 2025, mrt 2026) en dag-equity-DD 9,6%.
+  Oorzaak: de RSI(2)-poot houdt meerdere gecorreleerde indexposities dagenlang vast; zwevend verlies stapelt tegen de middernacht-balance.
+  De Python-schattingen (slot-tot-slot) misten dit.
+- Diagnostiek (in-sample, geen beslisgrond): binnen FTMO-veilige grenzen (dag-DD < 8%, dagverlies < 4%) is het maximum
+  ≈ **€330–365/mnd** (RSI ¼–½ van 1/6 per positie, ORB 1/7 per trade), SR ≈ 1,1.
+- **Bijgesteld plafond: ≈ €250–365/mnd op €80k (Swing), vóór live-decay; kans op ≥ €880/mnd < 5%.**

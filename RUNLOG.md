@@ -239,3 +239,11 @@ Resultaat: MT5 N 9.414, +1,76 bp/trade, t +3,03 vs Python B4a N 9.249, +1,73 bp,
 Kanttekening: de tester vult stop-orders exact op de stopprijs (geen slippage) → optimistisch; G1 (kostengevoeligheid) blijft nodig.
 Conclusie: ORB-poot bevestigd in MT5 (bp/trade > 0).
 Volgende stap: F3 (combinatie op één €80k-account, schaal/gewichten uit E3).
+
+## 2026-09-29 23:26 — F3: MT5-combinatie — beslisregel NIET gehaald (FTMO-dagverlies 8,6%); plafond bijgesteld
+
+Getest (PREREG_F3.md vóór berekening): RSI2Sleeve (LegFrac 0,2311) en ORBSleeve (LegFrac 0,1376) = E3-schaal, apart gedraaid op €80k EUR (tester: één EA per run; gemeld), conservatief gecombineerd (som van dagminima). RSI-poot swap-gecorrigeerd.
+Resultaat 2021-09..2026: SR 0,96 (bootstrap-CI 0,22–1,66), CAGR +6,2% ≈ €410/mnd, 5/6 jaar+, max dag-equity-DD 9,6% (grens 8%), slechtste FTMO-dagverlies 8,56% (2022-01-24; >5% ook in mrt/apr 2025 en mrt 2026). Beslisregel niet gehaald → F6 (demo-forward) vervalt volgens voorwaarde.
+Diagnostiek (in-sample, geen beslisgrond): binnen dag-DD < 8% en dagverlies < 4% max ≈ €330–365/mnd (RSI ¼–½ van 1/6 per positie, ORB 1/7), SR ≈ 1,1 (results/f/F3_diagnostiek.txt).
+Conclusie: de meerdaagse RSI(2)-poot is onder FTMO's middernacht-balance-regel de zwakke schakel. PLAFOND_RAPPORT bijgewerkt: ≈ €250–365/mnd, kans €880+ < 5%.
+Volgende stap: F4 (plateau/decay-check) en F5 (breedte), dan reserve G1–G3.
