@@ -189,3 +189,8 @@ Getest (PREREG_D2.md vóór berekening): d2_gold_realrate.py, maandelijks long/s
 Resultaat: CAGR −4,3%, SR −0,15, t −0,70, DD 69,6%, helften −27% / −50%, 11/23 jaar+. Diagnostiek DTB3±2%: SR −0,02.
 Conclusie: afgewezen; geen bruikbare lead-lag van reële rente naar goud op maandbasis. TRIAL_COUNT 347.
 Volgende stap: D3 (haalbaarheid futures-basis/roll op FTMO), dan D4.
+
+## 2026-09-29 22:02 — D3: futures-basis/roll — NIET UITVOERBAAR op FTMO (geen trial)
+
+Haalbaarheidscheck (geen strategie gedraaid): FTMO-symbolenlijst bevat voor indices alleen cash-CFD's (5+10+1 'Cash'), geen futures of kalenderspreads; futures-gebaseerde grondstof-CFD's (.c: cocoa, coffee, corn, soybean, wheat, cotton, sugar, heatoil) hebben data pas vanaf 2023/2024 en geen termijnstructuur (één doorlopend contract) → roll-yield/basis niet meetbaar of verhandelbaar. Geen trial geteld.
+Volgende stap: D4 (risicopariteit op FTMO-verhandelbare asset-klassen; geen obligatie-CFD's bij FTMO).
