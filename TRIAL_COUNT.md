@@ -28,3 +28,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-29 | C1 pairs/stat-arb (8 paren; ETF-versie = zelfde regel) | 8 | 334 |
 | 2026-09-29 | C2 lead-lag (a,b) + vaste vensters (c1 XAU, c2 US100) | 4 | 338 |
 | 2026-09-29 | C3 kortetermijn-omkeer markt-neutraal (FTMO-set + Yahoo-bovengrens) | 2 | 340 |
+| 2026-09-29 | C4 sizing/combinatie bestaande sleeves (geen nieuwe signalen) | 0 | 340 |

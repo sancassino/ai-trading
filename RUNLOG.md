@@ -146,3 +146,11 @@ Getest (PREREG_C3.md vóór berekening): c3_reversal.py, 49 FTMO-aandelen (unive
 Resultaat: FTMO CAGR −16,1%, SR −1,08, t −2,62, DD 65%, elk jaar negatief; Yahoo-bovengrens −8,4%/jr, t −3,16, alleen positief in 2000/03/08/09. Diagnostiek DTB3±2%: FTMO −11,5%/jr, Yahoo −3,4%/jr (2013–26 −76%). Kosten: wekelijkse omzet ≈ 8%/jr spread + FTMO-swap op beide benen ≈ 7,5%/jr.
 Conclusie: afgewezen; omkeer-effect in large caps na 2010 verdwenen en FTMO-shortswap maakt markt-neutraal op aandelen-CFD's structureel duur. TRIAL_COUNT 340.
 Volgende stap: C4 (sizing RSI(2) + combinatie van sleeves).
+
+## 2026-09-29 21:52 — C4: RSI(2)+ORB-combinatie — EERSTE KANDIDAAT (DSR 0,55), nog niet bewezen
+
+Getest (PREREG_C4.md vóór berekening): c4_combine.py. (a) RSI(2) SPX+NDX 50/50, schaal zodat dag-DD <8% en dagverlies <3%: schaal 0,35 → SR 0,71, t 4,30, CAGR +1,9% (≈ €125/mnd), DD 5,2%, DSR 0,91; helften +53% / +26%. (b) Sleeves met t ≥ 2,5 (vooraf): RSI(2) gepoold (B2b) + ORB gepoold (B4a); overlap 2021-09..2026-09; correlatie −0,09; 1/vol-gewichten 0,54/0,46; schaal 3,60 → SR 1,30, t 2,97, CAGR +13,9% ≈ €929/mnd op €80k, DD 8,0%, slechtste dag −2,5%, DSR340 0,55 (benodigd SR 1,41).
+Extra controle (buiten prereg, gemeld): gewichten + schaal vastgezet op 2021-09..2023 en ongewijzigd toegepast op 2024–2026 → SR 1,35, t 2,27, ≈ €1.107/mnd, DD 9,8%, slechtste dag −3,2%.
+Kanttekeningen: korte overlap (5,2 jr), schaal in-sample (volledige periode), ORB test-t in B4 slechts 1,14, 2022 draagt veel (+24%), DD-marge t.o.v. FTMO 10% klein; RSI(2) op Yahoo-indices (zonder dividend) i.p.v. FTMO-CFD's.
+Conclusie: eerste combinatie boven DSR 0,5 → kandidaat voor MT5-bevestiging (FTMO-CFD's, echte swaps, balance-om-middernacht-regel). Geen succesclaim.
+Volgende stap: C5 (crypto-trend), daarna C6, C7.
