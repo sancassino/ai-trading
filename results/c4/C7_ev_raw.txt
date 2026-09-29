@@ -1,0 +1,33 @@
+C4_comb_daily.csv: 1312 dagen, vol 10.4%/jr (scale 1)
+  scale   fase1  funded mnd→fund breuk live €/mnd|funded  EV/poging break-even fee
+    0.5   78.6%   74.6%     21.1       0.1%          413      3,553          4,093
+    1.0   93.2%   89.8%     11.0       8.9%          808      8,640          9,180
+    2.0   80.1%   69.4%      4.4      59.5%        1,303     10,639         11,179
+B2_b_daily.csv: 9553 dagen, vol 4.4%/jr (scale 1)
+  scale   fase1  funded mnd→fund breuk live €/mnd|funded  EV/poging break-even fee
+    0.5    0.4%    0.1%     39.8       0.0%           72       -539              1
+    1.0   26.5%   18.2%     29.0       1.6%          215         24            564
+    2.0   62.8%   51.0%     17.9      20.7%          423      2,307          2,847
+R2_famref_daily.csv: 6717 dagen, vol 10.0%/jr (scale 1)
+  scale   fase1  funded mnd→fund breuk live €/mnd|funded  EV/poging break-even fee
+    0.5   37.7%   28.7%     27.5       2.0%          241        436            976
+    1.0   71.1%   59.5%     15.4      23.3%          467      3,092          3,632
+    2.0   67.0%   52.5%      5.8      67.6%          747      4,404          4,944
+  [controle: gedemeand, edge = 0]
+C4_comb_daily.csv: 1312 dagen, vol 10.4%/jr (scale 1)
+  scale   fase1  funded mnd→fund breuk live €/mnd|funded  EV/poging break-even fee
+    0.5   13.8%    5.9%     25.1       3.1%          173       -392            148
+    1.0   39.3%   24.0%     14.6      38.7%          333        524          1,064
+    2.0   43.2%   26.3%      4.6      89.0%          480      1,072          1,612
+  [controle: gedemeand, edge = 0]
+B2_b_daily.csv: 9553 dagen, vol 4.4%/jr (scale 1)
+  scale   fase1  funded mnd→fund breuk live €/mnd|funded  EV/poging break-even fee
+    0.5    0.0%    0.0%      nan       nan%            0       -540              0
+    1.0    5.4%    1.7%     32.4       3.5%          112       -510             30
+    2.0   27.3%   15.9%     20.0      29.1%          244         -1            539
+  [controle: gedemeand, edge = 0]
+R2_famref_daily.csv: 6717 dagen, vol 10.0%/jr (scale 1)
+  scale   fase1  funded mnd→fund breuk live €/mnd|funded  EV/poging break-even fee
+    0.5    8.3%    3.2%     29.8       6.2%          133       -474             66
+    1.0   35.5%   21.7%     18.0      34.6%          255        219            759
+    2.0   46.0%   29.9%      7.0      80.5%          417      1,073          1,613

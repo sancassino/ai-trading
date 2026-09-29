@@ -168,3 +168,10 @@ Getest (PREREG_C6.md vóór berekening): c6_voltiming.py, maandelijks w = min(1,
 Resultaat: SPX SR 0,33 vs 0,29 (ΔSR +0,03), DD 32,6%; NDX 0,57 vs 0,46 (+0,11), DD 27,9%; DAX 0,22 vs 0,24 (−0,02), DD 37,7%. Combinatie informatief SR 0,45 vs 0,38, DSR 0,33. Verbetering overal < 0,15 en DD ≫ 15%.
 Conclusie: afgewezen; vol-timing geeft slechts een kleine DD-verbetering, geen bruikbare basiscomponent onder de FTMO-DD-grens. TRIAL_COUNT 344.
 Volgende stap: C7 (alleen ontwerp B5-EV in MT5-realisme + FTMO-voorwaarde-risico's).
+
+## 2026-09-29 22:00 — C7: ontwerp FTMO-EV met MT5-realisme (NIET uitgevoerd) + EV-tabel + risicolijst
+
+Opgeleverd: PREREG_C7.md (ontwerp, niet uitgevoerd — Sandro beslist), C7_ev_tabel.csv (ftmo_economics.py op C4-combinatie, RSI(2), SPY-referentie; schaal 0,5/1/2; historisch én nul-drift-controle), results/c4/C4_comb_daily.csv.
+EV (schaal 1, slot-tot-slot, optimistisch): C4-combinatie funded 89,8%, €808/mnd | funded, EV €8.640/poging (nul-drift €524); RSI(2) EV €24 (nul-drift −€510); SPY@10% EV €3.092 (nul-drift €219).
+FTMO-risico's (ftmo.com FAQ/forbidden practices): Standard-account moet posities vóór weekend/rollover >2 u sluiten → RSI(2) vereist Swing-account; nieuwsvenster ±2 min (ook SL/TP) raakt ORB; gap trading/handelen vlak vóór sluiting verboden; consistente positiegrootte en risicoconcentratie; 'unfair advantage tools' (tekst verifiëren); Best Day Rule-drempel niet gevonden.
+Volgende stap: portefeuilleregel — C4 haalde DSR 0,55 → geen PLAFOND-pauze; door met reserve D1 en VOORSTEL MT5-bevestiging C4.
