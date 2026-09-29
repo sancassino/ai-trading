@@ -1,3 +1,7 @@
+> ## 📊 2026-09-30 00:20 — PLAFOND BEREIKT: eerste kandidaat met kleine, mogelijk echte edge
+> Na ~350 vooraf-vastgelegde, multiple-testing-getelde varianten (momentum, trend, carry, pairs, reversal, lead-lag, seizoen, crypto, vol-timing, risicopariteit) is er **één** kandidaat: **RSI(2)-mean-reversion op indices + opening-range-breakout**, op FTMO-data (2021-09..2026): Sharpe 0,98 ± 0,42, ≈ **€480/mnd op €80k (Swing-account)**, max DD 7,8%, slechtste dag −3,0%; Standard-account ≈ €230/mnd. **Gedeflateerde Sharpe 0,27** (dus nog niet bewezen). Verwachte live-uitkomst ≈ **€250–350/mnd**; kans op ≥ €880/mnd **< 10%**.
+> Volgende fase (op jouw 'doorgaan'): MT5-bevestiging met echte fills/swaps (F1–F3), plateau-check, meer breedte met identieke regels (F5), en een **forward-test op de FTMO-demo zonder echt geld** (F6). Beslispunt voor jou blijft: accepteer je een doel van ≈ €250–500/mnd, of zoek je een andere bron van edge.
+
 > ## ▶️ 2026-09-29 22:55 — Sandro kiest: DOORGAAN, met sneller werkritme
 > Supervisor (Cloud) en uitvoerder (Debian) werken nu volgens `COORDINATION.md`: uurlijkse server-side controle door mij (`SUPERVISOR_LOG.md`), gevulde BACKLOG in `NEXT_STEPS.md` (hoge-breedte-strategieën, long/short-neutraal, gedeflateerde Sharpe), zodat de uitvoerder nooit hoeft te wachten. Onderstaande conclusies over momentum/trend/carry blijven gelden.
 
