@@ -194,3 +194,10 @@ Volgende stap: D3 (haalbaarheid futures-basis/roll op FTMO), dan D4.
 
 Haalbaarheidscheck (geen strategie gedraaid): FTMO-symbolenlijst bevat voor indices alleen cash-CFD's (5+10+1 'Cash'), geen futures of kalenderspreads; futures-gebaseerde grondstof-CFD's (.c: cocoa, coffee, corn, soybean, wheat, cotton, sugar, heatoil) hebben data pas vanaf 2023/2024 en geen termijnstructuur (één doorlopend contract) → roll-yield/basis niet meetbaar of verhandelbaar. Geen trial geteld.
 Volgende stap: D4 (risicopariteit op FTMO-verhandelbare asset-klassen; geen obligatie-CFD's bij FTMO).
+
+## 2026-09-29 22:03 — D4: risicopariteit (FTMO-verhandelbare klassen) — AFGEWEZEN
+
+Getest (PREREG_D4.md vóór berekening): d4_riskparity.py, SPY/EFA/GLD/USO (gespliced), 1/σ60-gewichten, 8% vol-target, hefboom ≤3, DTB3+2% financiering, 2001–2026. Geen obligatie-CFD's bij FTMO → geen klassieke risicopariteit mogelijk.
+Resultaat: CAGR +3,4%, SR 0,40, t 2,04, DD 27,6%, helften +62% / +45%, 19/26 jaar+, DSR 0,18. Referentie SPY@8%: SR 0,36, DD 29,1%.
+Conclusie: afgewezen (DD ≫ 15%, SR < 0,7). TRIAL_COUNT 348. Backlog C1–C7 + reserve D1–D4 afgerond.
+Volgende stap: VOORSTEL_E.md met 3 hypothesen (FTMO-validatie van de C4-kandidaat) en direct de best onderbouwde uitvoeren.

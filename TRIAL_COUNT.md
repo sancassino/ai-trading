@@ -34,3 +34,5 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-29 | C7 alleen ontwerp (geen trial) | 0 | 344 |
 | 2026-09-29 | D1 EURUSD-intradagseizoen (2 vaste vensters) | 2 | 346 |
 | 2026-09-29 | D2 goud vs reële rente | 1 | 347 |
+| 2026-09-29 | D3 niet uitvoerbaar (geen trial) | 0 | 347 |
+| 2026-09-29 | D4 risicopariteit FTMO-klassen | 1 | 348 |
