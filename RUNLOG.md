@@ -76,3 +76,10 @@ Volgende stap: wachten op nieuwe NEXT_STEPS (uurlijkse check).
 
 Vastgelegd in PREREG_ronde2.md vóór enige berekening: familie 1 (12m tijdreeks-trend, 12 instrumenten, vol-target 10%) en familie 2 (G10 FX carry top3/bottom3 + 12m trend, 50/50, vol-target 10%); kosten spread 0,05%/kant, financiering DTB3 ± 2%/jr (ETF/grondstoffen), FX renteverschil (FRED IR3TIB, 1 mnd vertraagd) − 1,5%/jr; beslisregel Sharpe ≥ 0,7, ≥ 65% jaren+, DD < 15%, dagverlies < 5%, over ≥ 20 jaar. Data-beschikbaarheid gecontroleerd (geen rendementen bekeken): JPY-rente pas vanaf 2002-04.
 Volgende stap: implementatie en run familie 1 en 2.
+
+## 2026-09-29 17:14 — Ronde 2: familie 1 en 2 — AFGEWEZEN (stop)
+
+Getest: ronde2_sim.py volgens PREREG_ronde2.md, 2000-01..2026-09, 10% vol-target, kosten spread 0,05%/kant + financiering korte rente ± markup.
+Resultaat: familie 1 (12m trend, 12 instrumenten) Sharpe 0,19, CAGR +1,5%, maand-DD 39,1%, 59% jaren+, slechtste dag −4,83%; familie 2 (G10 carry+trend) Sharpe −0,04, CAGR −1,0%, DD 68,1%, 41% jaren+, slechtste dag −5,14%. Referentie SPY @10% vol: Sharpe 0,41, CAGR +5,7%. Bugfix gemeld: Sharpe trok rf dubbel af (vóór 0,02/−0,21). Diagnostiek zonder markup: 0,58/0,42, ook dan afgewezen.
+Conclusie: beide AFGEWEZEN. Verslag: VERSLAG_ronde2_2026-09-29.md. Geen MT5-implementatie.
+Volgende stap: STOP — wachten op beslissing Sandro (EINDVERSLAG.md); uurlijkse NEXT_STEPS-check blijft actief.
