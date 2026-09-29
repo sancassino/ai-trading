@@ -18,6 +18,6 @@ for p in sys.argv[1:]:
     a, b = stats(tr, 1), stats(te, 1)
     rows.append((p.split("/")[-1].replace("_daily.csv", ""), a, b))
 rows.sort(key=lambda r: -r[1][0])
-print(f"{'config':<26}{'train $/m':>10}{'tr DD':>7}{'test $/m':>10}{'test %':>8}{'te DD':>7}")
+print(f"{'config':<26}{'train /m':>10}{'tr DD':>7}{'test /m':>10}{'test %':>8}{'te DD':>7}")
 for n, a, b in rows:
     print(f"{n:<26}{a[0]:>10,.0f}{a[2]:>6.1f}%{b[0]:>10,.0f}{b[1]:>7.1f}%{b[2]:>6.1f}%")

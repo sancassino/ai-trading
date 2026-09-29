@@ -390,3 +390,33 @@ niet-crypto met D1-data ≤ 2020-12-31; `universe_wide.txt`, `symbol_history_FTM
    $350–500/mnd — onder het doel van $1.000.
 3. Veel varianten getest op dezelfde 5,7 jaar data → verder variëren op deze data is
    data-mining. Verder zoeken vereist een andere bron van edge of langere/onafhankelijke data.
+
+## Gecorrigeerd naar het echte account: €80.000, EUR (29 sep 2026)
+
+Alle kernconfigs opnieuw in de Strategy Tester gedraaid met Deposit=80000, Currency=EUR
+(`run_eur.sh`, `results/eur/`) — niet simpelweg omgerekend, want een EUR-account met
+USD-posities (US-aandelen, goud, olie) loopt ook EUR/USD-valutarisico. Analysetools
+lezen nu `ACCOUNT_START` en `MONTHLY_TARGET` uit de omgeving. FTMO-limieten schalen mee:
+max loss €8.000, dagverlies €4.000. Doel $1.000/mnd ≈ **€880/mnd** (EUR/USD 1,138 op
+2026-09-23); ook getoetst tegen €1.000.
+
+| Kernconclusie | Was ($100k USD) | Nu (€80k EUR) |
+|---|---|---|
+| Beste in-sample config (TopN=2, lb=1, SMA10, guard 3%, 60%) | $1.340/mnd, 6/6 jaar | **€1.069/mnd**, 6/6 jaar, stat. DD 5,6%, dag 4,1% |
+| — idem train → test | $1.646 → $827 | **€1.321 → €648** |
+| Plateau 9 configs SMA10 @30%, per config | $189–473/mnd | **€163–380/mnd** |
+| Plateau-ensemble @30% | $341/mnd (train 245, test 503) | **€284/mnd** (train 204, test 417), stat. DD 6,4%, dag 5,2% |
+| "Realistisch FTMO-veilig" | $350–500/mnd | **≈ €280–420/mnd** |
+| Baseline TopN=2/lb=3 zonder filter | $512/mnd, stat. DD 10,4%, dag 6,7% | €434/mnd, stat. DD 10,1%, dag 6,9% |
+
+Dag-Monte Carlo (FTMO-regels op dagniveau, hele echte maanden gebootstrapt, blok 1/6/12 mnd):
+
+| Config | Fase 1 | Funded | Live ≥ €880/mnd (12 mnd) | idem netto na 80% split | Live ≥ €1.000 |
+|---|---|---|---|---|---|
+| Baseline t2/lb3 zonder filter | 34–53% | 19–28% | 3–6% | 2–4% | — |
+| t3/lb1 SMA10 @30%, geen guard | 26–28% | 10–17% | 1–3% | 0–1% | — |
+| Beste in-sample (t2/lb1/SMA10/guard3/60%) | 59–68% | 44–62% | 19–22% | 15–18% | 17–20% |
+
+De beste-config-rij is in-sample geselecteerd (zie train/test hierboven: halvering in de
+testperiode) en dus een bovengrens, geen verwachting. Kernconclusies blijven gelijk:
+teken robuust, niveau ~€300–400/mnd bij FTMO-veilig risico, onder het doel van €880.

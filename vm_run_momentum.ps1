@@ -14,6 +14,8 @@ param(
     [string]$UniverseList = "",
     [string]$RankByRiskAdj = "false",
     [int]$MaxWait = 180,
+    [int]$Deposit = 100000,
+    [string]$Currency = "USD",
     [string]$OutCsv = "MomentumRotation_output.csv"
 )
 
@@ -29,8 +31,8 @@ Model=1
 FromDate=$FromDate
 ToDate=$ToDate
 ForwardMode=0
-Deposit=100000
-Currency=USD
+Deposit=$Deposit
+Currency=$Currency
 Leverage=100
 ExecutionMode=0
 Optimization=0

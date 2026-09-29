@@ -9,11 +9,11 @@ de dag-minimum-equity t.o.v. de BALANCE bij dagstart, als % van het
 startkapitaal -- FTMO-regel: equity moet boven (balance om 00:00 CE(S)T - 5%
 van het startkapitaal) blijven, dus meegenomen zwevend verlies telt mee.
 """
-import csv
+import csv, os
 import sys
 from collections import defaultdict
 
-START = 100000.0
+START = float(os.environ.get("ACCOUNT_START", 100000))
 
 
 def load_daily(path):
@@ -74,7 +74,7 @@ def summarize(deals_path):
 
 
 if __name__ == "__main__":
-    print(f"{'file':<22}{'net':>10}{'$/mnd':>8}{'jaren+':>8}{'DDpeak':>8}{'DDstat':>8}{'dagDD':>7}  per jaar")
+    print(f"{'file':<22}{'net':>10}{'/mnd':>8}{'jaren+':>8}{'DDpeak':>8}{'DDstat':>8}{'dagDD':>7}  per jaar")
     for p in sys.argv[1:]:
         s = summarize(p)
         yrs = " ".join(f"{y[2:]}:{v/1000:+.1f}k" for y, v in s["yearly"].items())

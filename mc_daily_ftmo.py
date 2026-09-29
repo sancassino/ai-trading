@@ -21,11 +21,12 @@ MT5 bevestigen.
 Gebruik: python3 mc_daily_ftmo.py results/plateau/PL_t2_l3_r10_daily.csv [--scale 1.3]
 """
 import argparse
-import csv
+import csv, os
 import random
 from collections import OrderedDict
 
-ACC = 100000.0
+ACC = float(os.environ.get("ACCOUNT_START", 100000))
+MONTHLY_TARGET = float(os.environ.get("MONTHLY_TARGET", 1000))  # in accountvaluta
 
 
 def load_months(path):
@@ -94,8 +95,8 @@ def simulate(months, scale, block, n_sims, seed, phase_months):
         if r3 == "fail":
             c["live_breach"] += 1
             continue
-        c["live_gross"] += (eq - ACC) >= 12000
-        c["live_net"] += (eq - ACC) * 0.8 >= 12000
+        c["live_gross"] += (eq - ACC) >= 12 * MONTHLY_TARGET
+        c["live_net"] += (eq - ACC) * 0.8 >= 12 * MONTHLY_TARGET
     out = {k: v / n_sims for k, v in c.items()}
     to_fund.sort()
     out["median_months_to_fund"] = to_fund[len(to_fund) // 2] if to_fund else float("nan")

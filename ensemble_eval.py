@@ -4,15 +4,15 @@ exposure. Zonder guard is P&L ~lineair in exposure, dus ensemble-balance/equity
 de runs (30%). Rapporteert FTMO-maatstaven op dagniveau + train/test.
 Gebruik: python3 ensemble_eval.py "results/plateau/PL_t?_l?_r10_daily.csv" 1 1.5 2
 """
-import csv, glob, sys
-START = 100000.0; SPLIT = "2024.08.01"
+import csv, os, glob, sys
+START = float(os.environ.get("ACCOUNT_START", 100000)); SPLIT = "2024.08.01"
 files = sorted(glob.glob(sys.argv[1]))
 data = [{r["date"]: (float(r["start_balance"]), float(r["start_equity"]), float(r["min_equity"]), float(r["end_equity"]))
          for r in csv.DictReader(open(f, encoding="utf-8-sig"), delimiter=";") if r.get("date")} for f in files]
 dates = sorted(set.intersection(*[set(d) for d in data]))
 avg = [[sum(d[t][i] for d in data) / len(data) - START for i in range(4)] for t in dates]
 print(f"{len(files)} runs, {len(dates)} dagen")
-print(f"{'k':>5}{'$/mnd':>8}{'train':>8}{'test':>8}{'statDD':>8}{'trailDD':>8}{'dagDD':>7}{'dagen>4%':>9}  per jaar")
+print(f"{'k':>5}{'/mnd':>8}{'train':>8}{'test':>8}{'statDD':>8}{'trailDD':>8}{'dagDD':>7}{'dagen>4%':>9}  per jaar")
 for k in map(float, sys.argv[2:]):
     pk = START; dd = sdd = dl = 0; n4 = 0; yr = {}
     for t, (b, s, m, e) in zip(dates, avg):
