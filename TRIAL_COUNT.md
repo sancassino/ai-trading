@@ -1,0 +1,24 @@
+# TRIAL_COUNT — aantal geteste varianten (voor multiple-testing-correctie)
+
+Telling 2026-09-29 (eerlijke schatting; sterk gecorreleerde varianten tellen elk mee).
+
+| Blok | Varianten | Bron |
+|---|---|---|
+| Overdrachtsdocument mean-reversion (edelmetalen), niet in repo | ~20 (schatting) | Bevindingen/trend-research |
+| Python/Yahoo trend-grid (trend 100–250 × ATR 2–4) | ~20 (schatting) | trend-research.md |
+| MT5-runs vorige sessies (root-CSV's: TrendFollow TP/ATR/Donchian/regime/buffer, MomRot, MR/TRAIN/TEST) | 89 | root-CSV's |
+| Plateau USD (r0/r10/guard/exposure) | 45 | results/plateau |
+| EUR-herberekening | 19 | results/eur |
+| Breed universum, vol-gecorr., IDX, T10, dual momentum | 51 (+3 ongeldig) | results/wide |
+| Ensemble-EA + stap-3-universums | 13 | results/ens |
+| Lange validatie A/B (kostengevoeligheid niet apart geteld) | 18 | results/long |
+| Ronde 2 (familie 1, 2) | 2 | results/ronde2 |
+| **Totaal** | **≈ 300** | |
+
+Gebruik in `stats_tools.py`: N = 300 (eerlijk) en N = 30 (grove schatting "effectief onafhankelijk",
+omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
+
+## Log van nieuwe trials (vanaf B1)
+| Datum | Taak | Nieuwe varianten | Lopend totaal |
+|---|---|---|---|
+| 2026-09-29 | B1 (alleen statistiek, geen nieuwe strategie) | 0 | 300 |
