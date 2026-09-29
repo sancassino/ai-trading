@@ -64,3 +64,10 @@ Getest: momentum_sim.py, exact de EA-regels, 9 configs (TopN 2–4 × lb 1–3),
 Resultaat (ensemble, 8%): A CAGR +0,04%/jr, 13/27 jaar+ (48%), maand-DD 27,8%; B +0,25%/jr, 9/27 (33%), DD 25,1%. Per config A −0,5..+0,75%, B −0,6..+1,2%/jr; trailing DD 22–39%. Episodes (ensemble A/B): 2000–02 −7,0/−5,9%, 2008 +0,5/−0,5%, 2020-Q1 −3,3/−0,3%, 2022 −1,1/−9,9%. B werkte alleen 2019–2024. Bruto (0% fin.) A +1,9%/jr (70% jaren+), B +2,1% (56%). SPY b&h 30%: +2,18%/jr. Beslisregel (≥65% jaren+, DD<20%) faalt voor A én B.
 Conclusie: de FTMO-uitvoerbare edge (aandelen/indices-CFD's) is NIET aangetoond; financieringskosten ≈ bruto edge; strategie verslaat passieve blootstelling niet. Stap 4 vervalt (voorwaarde niet gehaald).
 Volgende stap: stap 3 (rang-gevoeligheid T10) ter volledigheid, via ensemble-EA in MT5.
+
+## 2026-09-29 14:52 — NEXT_STEPS stap 3 (rang-gevoeligheid), stap 4 overgeslagen, eindverslag
+
+Getest: ensemble-EA (9 configs) in MT5 op 7 universums (T10-basis + 10 aandelen): META→NVDA, BABA→NVDA, 5 willekeurige trekkingen uit de 49 aandelen van de brede lijst (random.Random(42), universe_step3.csv). €80k EUR, 30%, SMA10, geen guard, swap-gecorrigeerd (koersen 25 extra aandelen geëxporteerd).
+Resultaat: T10 €186/mnd; NVDA-alternatieven €242 en €406; willekeurig €96, €64, €333 (bevat NVDA+PLTR), €1, −€77 → gem. €83, spreiding ≫ niveau. Stap 4 niet uitgevoerd (stap 1 faalde).
+Conclusie: edge niet aangetoond; volledig verslag in VERSLAG_NEXT_STEPS_2026-09-29.md.
+Volgende stap: wachten op nieuwe NEXT_STEPS (uurlijkse check).

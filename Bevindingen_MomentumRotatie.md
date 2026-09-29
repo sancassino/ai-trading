@@ -470,3 +470,8 @@ Gewichten en herschaling handmatig gecontroleerd. SMA10, €80k EUR, swap-gecorr
 De dagguard vernietigt het hindsight-vrije ensemble (verlies realiseren, herstel missen).
 **Binnen deze strategiefamilie is er zonder hindsight geen FTMO-conforme route naar €880/mnd;
 het haalbare niveau is ~€190–320/mnd op €80k.**
+
+## NEXT_STEPS-toetsen (29 sep 2026) — zie `VERSLAG_NEXT_STEPS_2026-09-29.md`
+Lange validatie 2000–2026 (ETF's en point-in-time top-10): ensemble +0,04 resp. +0,25%/jr na 8%
+financiering, 48% resp. 33% jaren positief → faalt. Python↔MT5 klopt op ensemble-niveau (corr 0,951),
+niet per config. Willekeurige universums: gem. €83/mnd, spreiding −€77…€333. **Edge niet aangetoond.**

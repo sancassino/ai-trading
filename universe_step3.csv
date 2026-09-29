@@ -1,0 +1,9 @@
+# NEXT_STEPS stap 3: rang-gevoeligheid; basis = 9 idx/grondst./FX van T10 + 10 aandelen; random.Random(42), pool = aandelen uit universe_wide.txt
+naam;aandelen
+alt_meta2nvda;AAPL,MSFT,AMZN,GOOG,NVDA,TSLA,BABA,BRK.B,V,JNJ
+alt_baba2nvda;AAPL,MSFT,AMZN,GOOG,META,TSLA,NVDA,BRK.B,V,JNJ
+rand1;ADSGn,AMZN,ASML,AVGO,AZN,CSCO,CVX,DIS,NKE,RTX
+rand2;ADSGn,AIRF,AMZN,BRK.B,CSCO,KO,MSTR,PLTR,QCOM,VOWG_p
+rand3;BAYGn,CSCO,JPM,LMT,NKE,NVDA,PLTR,SBUX,V,VOWG_p
+rand4;AAPL,BA,BABA,BRK.B,DIS,GOOG,KO,TSLA,V,ZM
+rand5;AIRF,AMZN,ASML,DBKGn,IBE,INTC,LVMH,QCOM,V,ZM
