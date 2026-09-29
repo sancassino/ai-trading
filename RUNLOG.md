@@ -223,3 +223,11 @@ Opgesteld volgens portefeuilleregel (geen FTMO-gevalideerde sleeve/combinatie me
 Kern: beste kandidaat RSI(2)+ORB op FTMO-data (E3), Swing: SR 0,98 ± 0,42 (bootstrap-CI 0,34–1,66), ≈ €480/mnd, DD 7,8%, test 2024–26 ≈ €519/mnd; Standard ≈ €230/mnd. Benodigde SR €880/mnd = 1,41; P(ware SR ≥ 1,41) ≈ 16% vóór correctie; DSR(348) 0,27. Verwacht live (30–50% haircut) ≈ €250–350/mnd.
 Beslispunt Sandro: (1) doel verlagen + MT5-bevestiging (PREREG_C7-ontwerp) op Swing, (2) stoppen, (3) andere bron van edge.
 Volgende stap: pauze nieuw onderzoek; uurlijkse NEXT_STEPS-check blijft actief.
+
+## 2026-09-29 23:13 — F1: MT5-EA RSI(2) — reconciliatie GESLAAGD, maar FTMO-dagverliesregel breekt bij 100% notional
+
+Getest (PREREG_F1.md vóór berekening): nieuwe EA RSI2Sleeve.mq5 (6 FTMO-symbolen, E1-regels, 1/6 equity per positie, Swing), generieke runner vm_run_ea.ps1/run_ea.sh; Strategy Tester Model=1, €80k EUR, 2021-01..2026-09.
+Reconciliatie met Python E1: trades 277 = 277 (per symbool identiek); maandcorrelatie 0,989; totaal Python +15,4% vs MT5 +12,4% (swap-gecorrigeerd; ruw +9,1%) → verschil precies op de 25%-tolerantie. Resterend verschil verklaarbaar: MT5 vult op de open van de volgende serverdag i.p.v. het slot, en Python rekent geen EUR-conversie voor USD-instrumenten.
+BELANGRIJK: MT5-dag-equity toont FTMO-dagverlies (balance 00:00 − min equity) tot 6,08% (2022-01-24) en 5,44% (2026-03-23) al bij 100% notional — meerdaagse verliesposities in gecorreleerde indices stapelen tegen de middernacht-balance. Python (slot-tot-slot) zag dit niet. Bij de E3-schaal (RSI-blootstelling ≈1,4×) breekt de regel zeker.
+Conclusie: EA ≈ Python (goed), maar de RSI(2)-poot vereist een dagverlies-guard of veel kleinere schaal onder FTMO-regels. Meenemen in F3.
+Volgende stap: F2 (MT5-EA ORB + reconciliatie).
