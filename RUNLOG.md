@@ -71,3 +71,8 @@ Getest: ensemble-EA (9 configs) in MT5 op 7 universums (T10-basis + 10 aandelen)
 Resultaat: T10 €186/mnd; NVDA-alternatieven €242 en €406; willekeurig €96, €64, €333 (bevat NVDA+PLTR), €1, −€77 → gem. €83, spreiding ≫ niveau. Stap 4 niet uitgevoerd (stap 1 faalde).
 Conclusie: edge niet aangetoond; volledig verslag in VERSLAG_NEXT_STEPS_2026-09-29.md.
 Volgende stap: wachten op nieuwe NEXT_STEPS (uurlijkse check).
+
+## 2026-09-29 17:11 — Ronde 2: pre-registratie (vóór resultaten)
+
+Vastgelegd in PREREG_ronde2.md vóór enige berekening: familie 1 (12m tijdreeks-trend, 12 instrumenten, vol-target 10%) en familie 2 (G10 FX carry top3/bottom3 + 12m trend, 50/50, vol-target 10%); kosten spread 0,05%/kant, financiering DTB3 ± 2%/jr (ETF/grondstoffen), FX renteverschil (FRED IR3TIB, 1 mnd vertraagd) − 1,5%/jr; beslisregel Sharpe ≥ 0,7, ≥ 65% jaren+, DD < 15%, dagverlies < 5%, over ≥ 20 jaar. Data-beschikbaarheid gecontroleerd (geen rendementen bekeken): JPY-rente pas vanaf 2002-04.
+Volgende stap: implementatie en run familie 1 en 2.
