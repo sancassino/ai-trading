@@ -36,3 +36,5 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-29 | D2 goud vs reële rente | 1 | 347 |
 | 2026-09-29 | D3 niet uitvoerbaar (geen trial) | 0 | 347 |
 | 2026-09-29 | D4 risicopariteit FTMO-klassen | 1 | 348 |
+| 2026-09-30 | E1/E3/F1–F3 validatie (geen nieuwe signalen) | 0 | 348 |
+| 2026-09-30 | F1b dagverlies-varianten RSI(2) (cap, guard, beide) | 3 | 351 |

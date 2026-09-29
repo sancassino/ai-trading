@@ -261,3 +261,10 @@ Getest (PREREG_F1b.md vóór berekening): RSI2Sleeve met MaxIndexPositions / Day
 Resultaat (schaal 1,0): (i) cap SR 0,26, dagverlies 4,7%, ≈ €50/mnd; (ii) guard SR 0,44, dagverlies 3,9%, ≈ €118/mnd, ~49 trades/jr; (iii) beide SR 0,22, 3,7%, ≈ €41/mnd. Guard houdt dagverlies ≤ 3,9% op alle schalen maar verlaagt het rendement sterk (sluit op het dieptepunt, mist de omkeer); cap blokkeert juist de gelijktijdige index-signalen. Bij schaal ≥ 1,5 stijgt de DD naar 8–16%.
 Conclusie: geen variant haalt SR ≥ 0,5 bij dagverlies < 4% → alle drie afgewezen. TRIAL_COUNT 351.
 Volgende stap: F3 opnieuw met schaal bepaald door de dagverliesregel (< 4%) i.p.v. Python-DD.
+
+## 2026-09-29 23:43 — F3b: MT5-combinatie met dagverlies-gebonden schaal — kandidaat leeft, maar ≈ €225/mnd
+
+Getest (volgens NEXT_STEPS v4: gewichten E3, schaal bepaald door de FTMO-dagverliesregel < 4%): conservatieve combinatie van F1 (RSI2, 1/6) en F2 (ORB, 1/7) MT5-dagreeksen in verhouding 1,3865:0,9635, grootste schaal t met slechtste dagverlies < 4% → t = 0,45 (RSI 0,62 × 1/6 per positie, ORB 0,43 × 1/7 per trade).
+Resultaat 2021-09..2026: SR 0,95 (bootstrap-CI 0,23–1,65), CAGR +3,4% ≈ €225/mnd op €80k, dag-equity-DD 4,4%, slechtste FTMO-dagverlies 3,80%, 5/6 jaar+ → beslisregel F3 gehaald. Maar FTMO-economie (ftmo_economics, schaal 1): fase 1 24,9%, funded 17,5%, mediaan ~31 mnd tot funded, EV −€11/poging (nul-drift −€536).
+Conclusie: technisch overlevende, FTMO-conforme kandidaat met kleine edge; economisch te klein voor een challenge. PLAFOND_RAPPORT bijgewerkt (≈ €200–250/mnd). F6 (demo-forward) is volgens de voorwaarde nu toegestaan, maar staat na F4/F5 in de volgorde; vereist bovendien een tweede MT5-instantie (tester-scripts sluiten alle terminal64-processen).
+Volgende stap: F4 (plateau/decay-check).

@@ -49,3 +49,12 @@ De uitvoerder pauzeert nieuw onderzoek (portefeuilleregel) en blijft elk uur con
 - Diagnostiek (in-sample, geen beslisgrond): binnen FTMO-veilige grenzen (dag-DD < 8%, dagverlies < 4%) is het maximum
   ≈ **€330–365/mnd** (RSI ¼–½ van 1/6 per positie, ORB 1/7 per trade), SR ≈ 1,1.
 - **Bijgesteld plafond: ≈ €250–365/mnd op €80k (Swing), vóór live-decay; kans op ≥ €880/mnd < 5%.**
+
+## Update F1b/F1c/F3b (2026-09-30)
+- FTMO-dagverliesregel geverifieerd (ftmo.com, trading objectives): limiet = balance om 00:00 CE(S)T − 5% van startkapitaal; floating telt mee.
+- F1b: guard/cap-varianten voor RSI(2) alle afgewezen (SR ≤ 0,44 bij dagverlies < 4%).
+- **F3b (schaal door dagverliesregel):** t = 0,45 → SR 0,95 (CI 0,23–1,65), dag-DD 4,4%, slechtste dag 3,80%, 5/6 jaar+
+  → beslisregel 'kandidaat leeft' gehaald, maar **≈ €225/mnd** (+3,4%/jr). FTMO-economie: funded 17,5%, mediaan ~31 mnd
+  tot fase 1, EV ≈ −€11/poging (nul-drift −€536).
+- **Bijgesteld plafond onder FTMO-regels (MT5): ≈ €200–250/mnd; een challenge is met deze edge economisch niet zinvol
+  (te traag om +10% te halen). Kans op ≥ €880/mnd: < 5%.**
