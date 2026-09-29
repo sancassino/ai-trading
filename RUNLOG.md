@@ -89,3 +89,10 @@ Volgende stap: STOP — wachten op beslissing Sandro (EINDVERSLAG.md); uurlijkse
 Getest (PREREG_B1.md, vóór berekening gecommit): stats_tools.py met Sharpe ± SE (Mertens), block-bootstrap-CI, t-stat, gedeflateerde Sharpe (Bailey–López de Prado), min. trackrecordlengte, required_sharpe(); make_ensemble_daily.py; TRIAL_COUNT.md (≈300 varianten). Retroactief toegepast.
 Resultaat: required Sharpe €880/mnd = 1,41 (13,2%/jr, vol ≤9,4%, P(−10%) ≤5%); €2.000/mnd = 2,12; €400/mnd = 0,95. DSR (N=300 / N=30): 16-ensemble SR 0,84 → 0,20/0,50; beste in-sample config SR 1,04 → 0,38/0,70; T10-ensemble SR 0,49 → 0,04/0,19; lang A/B SR 0,03/0,07 → 0,00; familie 1 SR 0,20 → 0,03; familie 2 → 0,00. Referentie SPY@10%vol SR 0,61 (ruwe rendementen, incl. cash-rente) → 0,61/0,86. Geen enkele strategie haalt DSR ≥ 0,95; alle positieve 2021–26-resultaten zijn na correctie niet significant.
 Volgende stap: B2 (dagfrequente edges op indices 1990–2026).
+
+## 2026-09-29 21:18 — B2: dagfrequente edges op indices 1990–2026 — alle 5 AFGEWEZEN
+
+Getest (PREREG_B2.md vóór berekening): b2_sim.py, gepoolde sleeves (1/N), kosten 0,02%/kant + (DTB3+2%) per overnachting. Datakeuzes op kwaliteit: FTSE heeft geen echte opens (valt af voor c), SPX/NDX-opens tot 2007/2000 onbruikbaar → SPY/QQQ voor c; DAX pas vanaf 1994; goud via GLD 2004+ (GC=F-OHLC onbruikbaar, Stooq achter bot-check).
+Resultaat (t / H1 1995–2010 / H2 2011–26 / maxDD / DSR305): (a) IBS t 1,93, +78%/+102%, DD 45,7%, 0,17; (b) RSI(2) t 3,65, +95%/+38%, DD 15,9%, 0,76 — faalt alleen op DD (grens 15%), edge verzwakt na 2010 (~2%/jr); (c1) intraday t −5,98 (kosten 2×0,02%/dag ≈ 10%/jr); (c2) overnight t −3,49; (d) TOM t 2,49, H2 slechts +9%. Per instrument: RSI(2) SPX t 4,0, NDX 3,7; IBS NDX 3,4.
+Conclusie: alle 5 afgewezen volgens de beslisregel; RSI(2) is het dichtst bij (niet gered). TRIAL_COUNT 305.
+Volgende stap: B3 (dollar-neutrale long/short momentum).
