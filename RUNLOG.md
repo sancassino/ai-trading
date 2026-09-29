@@ -277,3 +277,10 @@ Getest (PREREG_F4.md vóór berekening): f4_plateau.py.
 (c) ORB-plateaukaart (OR 15/30/60 min × uitstap 12:00/sessie-einde): alle 6 cellen positief; sessie-einde 15/30/60 min: +1,23 / +1,73 / +1,49 bp (t 2,13/2,93/2,58); uitstap 12:00: +0,50–0,72 bp. 5/5 buren zelfde teken maar slechts 2/5 ≥ 50% → volgens de vooraf vastgelegde eis PIEK. Per symbool robuust positief: US100, GER40, US500; ~0 of negatief: US30, UK100, EURUSD.
 Conclusie: RSI(2) is geen toevalstreffer in parameters, maar de edge op SPX is sinds 2010 gehalveerd; ORB hangt af van vasthouden tot sessie-einde en is in de 30-min-cel het sterkst (piek). TRIAL_COUNT 364 (13 plateau-buren, transparant geteld).
 Volgende stap: F5 (breedte met identieke regels).
+
+## 2026-09-29 23:51 — F5: breedte met identieke regels — geen enkele sleeve opgenomen
+
+Getest (PREREG_F5.md vóór berekening): f5_breadth.py. Nieuwe FTMO-data: M5 voor JP225, AUS200, HK50, EU50, FRA40, SPN35, N25, XAGUSD; D1-OHLC US500/US100 (data/ftmo_d1ohlc_US500_US100.txt); swaps via MT5. Afwijking (gemeld): FTMO-longswap EU50 (+10%/jr) en FRA40 (+31%/jr) is een dividendseizoen-anomalie → GER40-swap (−6,52%) gebruikt.
+Resultaat (t / corr / helften): RSI(2): JP225 +1,99/0,39/+6%,+39% (net onder t 2), AUS200 +0,66, HK50 +0,48, EU50 +0,55 (corr 0,61), FRA40 −0,54, SPN35 +0,61, N25 −0,56, XAG −0,47. ORB: JP225 +0,21, AUS200 −4,35, HK50 +0,72, EU50 +0,42, FRA40 −0,33, SPN35 −1,64, N25 −2,60, XAG −0,41. IBS: US500 +1,50 (corr 0,51), US100 +1,60 (corr 0,45).
+Conclusie: 0/18 opgenomen. De edge generaliseert niet over instrumenten: ORB werkt alleen op US-indices/GER40, RSI(2) vooral op US-indices. Breedte-hypothese (SR +0,1–0,2) verworpen. TRIAL_COUNT 382.
+Volgende stap: F6 (demo-forward) — eerst accounttype verifiëren (zie volgende entry); ondertussen reserve G1/G2.

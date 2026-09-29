@@ -1,0 +1,31 @@
+RSI(2)-sleeves (FTMO-D1), vs RSI(2) gepoold-6:
+  RSI JP225cash          t +1.99 | corr +0.39 | 2021–23 +6.4% | 2024–26 +39.1% → niet
+  RSI AUS200cash         t +0.66 | corr +0.46 | 2021–23 +14.4% | 2024–26 -6.0% → niet
+  RSI HK50cash           t +0.48 | corr +0.27 | 2021–23 -1.6% | 2024–26 +10.2% → niet
+  RSI EU50cash           t +0.55 | corr +0.61 | 2021–23 +6.3% | 2024–26 +2.9% → niet
+  RSI FRA40cash          t -0.54 | corr +0.58 | 2021–23 -0.5% | 2024–26 -11.3% → niet
+  RSI SPN35cash          t +0.61 | corr +0.39 | 2021–23 -2.2% | 2024–26 +12.1% → niet
+  RSI N25cash            t -0.56 | corr +0.50 | 2021–23 -4.7% | 2024–26 -5.2% → niet
+  RSI XAGUSD             t -0.47 | corr +0.34 | 2021–23 -12.7% | 2024–26 -13.2% → niet
+ORB-sleeves (FTMO-M5), vs ORB gepoold-7:
+    (JP225cash: 1274 trades)
+  ORB JP225cash          t +0.21 | corr +0.00 | 2021–23 +9.3% | 2024–26 -6.4% → niet
+    (AUS200cash: 1145 trades)
+  ORB AUS200cash         t -4.35 | corr -0.01 | 2021–23 -43.3% | 2024–26 +3.7% → niet
+    (HK50cash: 1196 trades)
+  ORB HK50cash           t +0.72 | corr +0.03 | 2021–23 +10.9% | 2024–26 +5.9% → niet
+    (EU50cash: 1281 trades)
+  ORB EU50cash           t +0.42 | corr +0.37 | 2021–23 +17.0% | 2024–26 -8.2% → niet
+    (FRA40cash: 1279 trades)
+  ORB FRA40cash          t -0.33 | corr +0.31 | 2021–23 +6.8% | 2024–26 -15.1% → niet
+    (SPN35cash: 834 trades)
+  ORB SPN35cash          t -1.64 | corr +0.22 | 2021–23 -19.3% | 2024–26 -11.5% → niet
+    (N25cash: 899 trades)
+  ORB N25cash            t -2.60 | corr +0.18 | 2021–23 -3.5% | 2024–26 -33.7% → niet
+    (XAGUSD: 1386 trades)
+  ORB XAGUSD             t -0.41 | corr +0.23 | 2021–23 -4.2% | 2024–26 -17.3% → niet
+IBS-sleeves (FTMO-D1-OHLC), vs RSI(2) gepoold-6:
+  IBS US500cash          t +1.50 | corr +0.51 | 2021–23 +30.6% | 2024–26 +11.8% → niet
+  IBS US100cash          t +1.60 | corr +0.45 | 2021–23 +60.7% | 2024–26 +6.2% → niet
+
+Opgenomen: RSI [] | ORB [] | IBS []
