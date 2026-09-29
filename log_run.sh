@@ -7,5 +7,5 @@ cd "$(dirname "$0")"
 printf '\n## %s — %s\n\n%b\n' "$(date '+%Y-%m-%d %H:%M')" "$1" "$2" >> RUNLOG.md
 git add -A
 git commit -q -m "RUNLOG: $1" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
-git push -q origin HEAD:main
+for i in 1 2 3; do git push -q origin HEAD:main && break; echo "push mislukt, opnieuw over 20s"; sleep 20; done
 git log --oneline -1
