@@ -1,0 +1,22 @@
+ETF-paren (Yahoo, 2004–2026):
+  SPY/DIA                  22.7jr N  231 CAGR  -1.60% SR -0.85 t -4.07 DD  30.7% jaren+ 2/23 DSR 0.00 totaal -30.7%
+  SPY/QQQ                  22.7jr N  229 CAGR  -1.77% SR -0.54 t -2.59 DD  33.9% jaren+ 5/23 DSR 0.00 totaal -33.3%
+  GLD/SLV                  20.1jr N  171 CAGR  -4.57% SR -0.77 t -3.48 DD  63.2% jaren+ 5/21 DSR 0.00 totaal -61.0%
+  EWG/EWU                  22.7jr N  244 CAGR  +0.01% SR +0.03 t +0.12 DD  22.9% jaren+ 13/23 DSR 0.00 totaal +0.2%
+FTMO-paren (D1, test 2021–2026):
+  US500/US30                5.9jr N   69 CAGR  -3.12% SR -1.24 t -3.01 DD  17.7% jaren+ 0/6 DSR 0.00 totaal -17.0%
+      → afgewezen
+  US500/US100               5.9jr N   75 CAGR  -1.21% SR -0.52 t -1.26 DD   7.6% jaren+ 2/6 DSR 0.00 totaal -6.9%
+      → afgewezen
+  GER40/EU50                5.8jr N   71 CAGR  -1.59% SR -0.63 t -1.52 DD  11.5% jaren+ 0/6 DSR 0.00 totaal -8.9%
+      → afgewezen (geen ETF-tegenhanger: 15-jaar-eis niet toetsbaar)
+  GER40/FRA40               5.8jr N   64 CAGR  -2.64% SR -0.79 t -1.91 DD  16.6% jaren+ 2/6 DSR 0.00 totaal -14.4%
+      → afgewezen (geen ETF-tegenhanger: 15-jaar-eis niet toetsbaar)
+  UK100/EU50                5.7jr N   64 CAGR  -0.28% SR -0.07 t -0.18 DD   8.3% jaren+ 4/6 DSR 0.00 totaal -1.6%
+      → afgewezen (geen ETF-tegenhanger: 15-jaar-eis niet toetsbaar)
+  XAUUSD/XAGUSD             5.9jr N   65 CAGR  -7.49% SR -1.21 t -2.94 DD  38.8% jaren+ 0/6 DSR 0.00 totaal -36.7%
+      → afgewezen
+  UKOIL/USOIL               5.6jr N   47 CAGR  +1.83% SR +0.63 t +1.49 DD   3.4% jaren+ 2/6 DSR 0.08 totaal +10.8%
+      → afgewezen (geen ETF-tegenhanger: 15-jaar-eis niet toetsbaar)
+  GER40/UK100               5.7jr N   65 CAGR  -1.90% SR -0.36 t -0.86 DD  15.7% jaren+ 3/6 DSR 0.00 totaal -10.3%
+      → afgewezen

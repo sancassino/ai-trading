@@ -124,3 +124,11 @@ Volgende stap: backlog B1–B5 af → verslag + VOORSTEL (COORDINATION-regel 1).
 Backlog leeg. Verslag: VERSLAG_backlog_B1-B5_2026-09-29.md. Geen enkele taak haalde de beslisregel (TRIAL_COUNT 326).
 VOORSTEL (label conform COORDINATION): 'FTMO-EV met MT5-realisme' — US500.cash long met vol-target + dagguard, EV per challenge-poging in MT5 (echte swap, intraday-dips) vs nul-edge-controle; eerlijk kader: positieve-verwachting-gok per fee, geen stabiel inkomen. Alternatief: stoppen.
 Volgende stap: wachten op supervisor/Sandro via uurlijkse NEXT_STEPS-check (geen open taken in de backlog).
+
+## 2026-09-29 21:46 — C1: pairs/stat-arb — alle paren AFGEWEZEN
+
+Getest (PREREG_C1.md vóór berekening): c1_pairs.py, rollende 60d-OLS-hedge, z-score entry |z|>2, exit <0,5, stop >4, max 20 d, uitvoering t+1, kosten 0,02–0,05%/kant/been + financiering DTB3±2% beide benen. 4 ETF-paren 2004–2026, 8 FTMO-D1-paren test 2021–26.
+Resultaat netto: ETF SPY/DIA t −4,07, SPY/QQQ −2,59, GLD/SLV −3,48 (−61% totaal), EWG/EWU +0,12. FTMO: alle negatief behalve UKOIL/USOIL +1,8%/jr (t 1,49, geen lange data, contango-swap niet gemodelleerd). N ≈ 10 trades/jaar per paar → N ≥ 300 nergens. DSR 0,00–0,08.
+Diagnostiek zonder kosten/financiering (geen beslisgrond): ETF-paren t −2,57…+1,22; alleen UKOIL/USOIL bruto t 2,70 (5,6 jr). De spreads mean-reverten niet betrouwbaar op 60d-z-score (goud/zilver trendt).
+Conclusie: C1 afgewezen. TRIAL_COUNT 334.
+Volgende stap: C2 (lead-lag / tijd-van-de-dag op M5).

@@ -25,3 +25,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-29 | B2 dagfrequent (a IBS, b RSI2, c1 intraday, c2 overnight, d TOM), gepoold | 5 | 305 |
 | 2026-09-29 | B3 dollar-neutrale L/S momentum (9 configs × universum A en B) | 18 | 323 |
 | 2026-09-29 | B4 intraday FTMO-M5 (ORB, laatste-30-min, gap-reversal), gepoold over 7 symbolen | 3 | 326 |
+| 2026-09-29 | C1 pairs/stat-arb (8 paren; ETF-versie = zelfde regel) | 8 | 334 |
