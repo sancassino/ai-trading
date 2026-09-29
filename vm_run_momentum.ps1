@@ -13,6 +13,7 @@ param(
     [double]$TotalGuardPct = 0,
     [string]$UniverseList = "",
     [string]$RankByRiskAdj = "false",
+    [string]$AbsMomentumFilter = "false",
     [int]$MaxWait = 180,
     [int]$Deposit = 100000,
     [string]$Currency = "USD",
@@ -52,6 +53,7 @@ DailyGuardPct=$DailyGuardPct
 TotalGuardPct=$TotalGuardPct
 UniverseList=$UniverseList
 RankByRiskAdj=$RankByRiskAdj
+AbsMomentumFilter=$AbsMomentumFilter
 MagicNumber=20260925
 DiagBestandsnaam=$OutCsv
 "@

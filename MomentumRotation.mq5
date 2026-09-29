@@ -25,6 +25,7 @@ input double DailyGuardPct   = 0;      // 0 = off. >0: flatten + wait for next m
 input double TotalGuardPct   = 0;      // 0 = off. >0: flatten + wait for next month if equity < initial capital - pct% (FTMO max-loss protection)
 input double InitialCapital  = 0;      // 0 = balance at EA start
 
+input bool   AbsMomentumFilter = false; // true: only hold instruments whose own lookback return > 0; empty slots stay in cash (dual momentum)
 input bool   RankByRiskAdj   = false;  // true: rank on return / ATR%(20) instead of raw return (vol-adjusted momentum)
 input string UniverseList    = "";     // comma-separated symbols, or "file:<name>" = read from Common\Files (tester truncates long strings); empty = DEFAULT_UNIVERSE
 
@@ -305,6 +306,11 @@ void PrepareRebalance()
          continue;
         }
       rets[count] = (now - then) / then;
+      if(AbsMomentumFilter && rets[count] <= 0)
+        {
+         AddRankLine(TimeToString(TimeCurrent(), TIME_DATE) + ";" + s + ";" + DoubleToString(rets[count], 4) + ";neg;");
+         continue;
+        }
       if(RankByRiskAdj)
         {
          double v = AtrPct(s);
@@ -332,7 +338,14 @@ void PrepareRebalance()
      }
 
    int k = MathMin(TopN, count);
-   if(k <= 0) return;
+   if(k <= 0)
+     {
+      // nothing qualifies (e.g. all momentum negative with AbsMomentumFilter): go flat
+      ArrayResize(targetSyms, 0);
+      ArrayResize(targetLots, 0);
+      rebalancePending = true;
+      return;
+     }
    double equity = AccountInfoDouble(ACCOUNT_EQUITY);
 
    // select either the K best (normal) or K worst (SelectBottom, for the
@@ -375,7 +388,7 @@ void PrepareRebalance()
      }
    else
      {
-      for(int i = 0; i < k; i++) legWeight_[i] = 1.0 / k;
+      for(int i = 0; i < k; i++) legWeight_[i] = AbsMomentumFilter ? 1.0 / TopN : 1.0 / k;
      }
 
    ArrayResize(targetSyms, k);
