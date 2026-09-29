@@ -118,3 +118,9 @@ Gebouwd: ftmo_economics.py — block-bootstrap (21 dagen) van een dagreeks × po
 Resultaat (scale 1/2/3, EV per poging): RSI(2) (B2b, vol 4,4%) €25 / €2.358 / €3.207, funded 18/52/50%; familie 1 €1.556 / €1.676 / €770 (live-breuk 46/94/100%); T10-ensemble-EA €359 / €2.681 / €2.975; SPY@10%vol €3.058 / €4.341 / €3.161. Controle zonder drift (edge = 0): SPY-vol €219 / €1.066 / €769, RSI(2)-vol −€510 / €24 / €516.
 Inzicht: een challenge is optiewaarde (verlies begrensd tot de fee, winst gedeeld) → EV per poging kan zelfs zonder edge positief zijn bij voldoende vol, maar dat is loterij: live-breuk 36–96%, geen stabiel inkomen. Een echte trader zonder edge heeft negatieve drift (kosten), dus de controle is een bovengrens.
 Volgende stap: backlog B1–B5 af → verslag + VOORSTEL (COORDINATION-regel 1).
+
+## 2026-09-29 21:31 — Backlog B1–B5 afgerond + VOORSTEL
+
+Backlog leeg. Verslag: VERSLAG_backlog_B1-B5_2026-09-29.md. Geen enkele taak haalde de beslisregel (TRIAL_COUNT 326).
+VOORSTEL (label conform COORDINATION): 'FTMO-EV met MT5-realisme' — US500.cash long met vol-target + dagguard, EV per challenge-poging in MT5 (echte swap, intraday-dips) vs nul-edge-controle; eerlijk kader: positieve-verwachting-gok per fee, geen stabiel inkomen. Alternatief: stoppen.
+Volgende stap: wachten op supervisor/Sandro via uurlijkse NEXT_STEPS-check (geen open taken in de backlog).
