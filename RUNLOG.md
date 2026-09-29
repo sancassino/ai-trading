@@ -299,3 +299,10 @@ G1: basis SR 1,03, ≈ €225/mnd, slechtste dag 3,80%; +50% spread → SR 0,91,
 G2: correlatie met US500 +0,39, beta +0,07 (volledig); stress 2022-01..10 corr +0,10; stress 2025-03..04 corr +0,63 (beta 0,11); rollende 63d-correlatie −0,36 … +0,78 (mediaan +0,46).
 Conclusie: kleine, deels marktgebonden edge die bij realistische kosten richting €150–200/mnd zakt.
 Volgende stap: G3 — VOORSTEL_F.md met 3 hypothesen (pre-registratie) en de best onderbouwde uitvoeren.
+
+## 2026-09-29 23:59 — G3-H1: NR7-opening-range-breakout — AFGEWEZEN
+
+Getest (VOORSTEL_F.md, H1 vóór berekening vastgelegd): g3_nr7orb.py, B4a-ORB alleen na een NR7-sessie, 7 FTMO-symbolen, 2021–2026, kosten B4.
+Resultaat: N 1.389, +3,61 bp/trade (2,1× B4a: +1,73), t train +2,36 / test +0,89, 4/6 jaar+, DSR 0,38. Per symbool: US500 +10,4 bp, US100 +9,4, US30 +4,4, GER40 +1,8, XAU +0,4, UK100 −0,8, EURUSD −0,7. Per jaar: 2022 +14,5 bp draagt het resultaat; 2024 −1,0.
+Conclusie: kostenvoordeel (≥ 2× bp) gehaald, maar t ≥ 3 in train én test niet → afgewezen. TRIAL_COUNT 383.
+Volgende stap: H2 (Double 7s) en H3 (RSI(2) in hoog-vol-regime).

@@ -1,0 +1,10 @@
+  US500cash  NR7-dagen  212 | trades  212 | +10.40 bp
+  US100cash  NR7-dagen  187 | trades  186 | +9.44 bp
+  US30cash   NR7-dagen  219 | trades  217 | +4.44 bp
+  XAUUSD     NR7-dagen  218 | trades  212 | +0.36 bp
+  GER40cash  NR7-dagen  172 | trades  171 | +1.78 bp
+  UK100cash  NR7-dagen  199 | trades  198 | -0.77 bp
+  EURUSD     NR7-dagen  193 | trades  193 | -0.72 bp
+H1 NR7-ORB (gepoold)   N  1389 | exp  +3.61 bp | t train +2.36 (N 645) | t test +0.89 (N 744) | jaren+ 4/6 | DSR338 0.38 | afgewezen
+    per jaar (bp, N): 2021:-0.8(138) 2022:+14.5(251) 2023:+1.8(256) 2024:-1.0(267) 2025:+1.5(288) 2026:+4.5(189)
+  bp/trade NR7 +3.61 vs B4a +1.73 → ≥ 2× (eis ≥ 2×)
