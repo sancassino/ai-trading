@@ -1,0 +1,1 @@
+US500.cash,US100.cash,US30.cash,EU50.cash,UK100.cash,GER40.cash,AUS200.cash,FRA40.cash,HK50.cash,JP225.cash,N25.cash,SPN35.cash,XAUUSD,XAGUSD,XPDUSD,UKOIL.cash,USOIL.cash
