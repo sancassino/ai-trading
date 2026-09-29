@@ -1,4 +1,4 @@
-# NEXT_STEPS / BACKLOG v3 — supervisor, 2026-09-30 00:17 Amsterdam
+# NEXT_STEPS / BACKLOG v4 — supervisor, 2026-09-30 01:16 Amsterdam (bijgewerkt na F1)
 
 Sandro heeft gekozen om **door te gaan** (geen stop). De pauze uit je PLAFOND_RAPPORT vervalt: er is één kandidaat met een kleine, mogelijk echte edge (RSI(2)+ORB, Swing, SR 0,98 ± 0,42, ≈ €480/mnd, DD 7,8%). Het doel blijft €880+, maar de eerlijke route is nu: (1) kandidaat hard bevestigen in MT5 en op een demo-forward-test, (2) breedte vergroten met **identieke** regels. Zelfde discipline: PREREG vóór resultaat, TRIAL_COUNT bijwerken, push na elke taak, nooit wachten.
 
@@ -7,13 +7,23 @@ Sandro heeft gekozen om **door te gaan** (geen stop). De pauze uit je PLAFOND_RA
 - Zwaktes van de kandidaat (repareren via F1–F5): (a) sleeve-selectie (t ≥ 2,5) gebeurde ná het zien van B2/B4-resultaten → optimistisch; (b) de combinatie leunt op 5,2 jaar en 2022; (c) ORB test-t slechts 1,14 en 1,7 bp/trade — extreem kosten-/slippagegevoelig; (d) RSI(2) op FTMO zwakker dan Yahoo (t 1,39 vs 3,65; UK100/XAU ≈ 0) — mogelijk decay na 2010; (e) alleen Python — nog geen MT5-bevestiging met echte fills/swaps/rollover; (f) schaal 2,35–3,6× = hefboom; slippage bij drukte niet gemodelleerd.
 - B5/C7-EV-loterij blijft **niet** het doel (FTMO-risico's); MT5-bevestiging moet werken op regels en drawdown, niet op optiewaarde.
 
-## BACKLOG (prioriteit 1 = eerst)
+## Update 2026-09-30 01:16 — beoordeling F1 (belangrijk gat gevonden)
+- Goed: EA ≈ Python (277 = 277 trades, maandcorrelatie 0,989); verschil totaal 15,4% vs 12,4% is het maximum van de tolerantie → houd 'MT5 = 80% van Python' als werkschatting.
+- **Groot gat:** Python (slot-tot-slot) zag het FTMO-dagverlies niet. MT5 geeft 6,08% (2022-01-24) en 5,44% (2026-03-23) **al bij 100% notional**; E3-schaal (≈1,4× RSI-blootstelling, totaal 2,35×) breekt de 5%-regel zeker. Alle €/mnd-schattingen uit E3/PLAFOND (≈ €480) zijn dus **bovengrenzen**; de werkelijke schaal wordt gebonden door de dagverlies-regel in MT5, niet door Python-DD. Verwacht: schaal ~×0,5–0,7 → ≈ €150–300/mnd Swing.
+- Oorzaak: meerdaagse verliesposities in sterk gecorreleerde indices (US500/US100/US30) stapelen tegen de middernacht-balance. Dit is structureel voor mean-reversion zonder stop.
+
+## Extra taken (voor F3 uitvoeren; pre-registreer, telt in TRIAL_COUNT)
+**F1b — Dagverlies-beheersing voor RSI(2), drie vooraf vastgelegde varianten (geen tuning):** (i) correlatiecap: max 2 gelijktijdige index-posities (goud telt apart), volgorde = laagste RSI(2) eerst; (ii) portefeuille-dagguard: als equity − balance(00:00) < −3% → alle RSI-posities sluiten, geen nieuwe tot volgende dag; (iii) (i)+(ii). Rapporteer per variant: MT5 worst dag-equity-verlies, SR, ≈ €/mnd op €80k bij de grootste schaal die worst dag < 4% houdt, trades/jaar. Beslisregel: variant blijft alleen als SR ≥ 0,5 én worst dag < 4% bij schaal ≥ 0,8.
+
+**F1c — Verifieer de FTMO-dagverliesdefinitie** (ftmo.com FAQ/rules, citeer de tekst in het verslag): wordt de dagelijkse limiet vanaf balance of vanaf de hoogste van balance/equity om 00:00 CE(S)T gemeten, en telt floating P&L mee? Implementeer in analyze_daily.py de **strengste** lezing en vermeld beide uitkomsten.
+
+## BACKLOG (prioriteit 1 = eerst; F2 loopt, daarna F1b/F1c, dan F3–F6)
 
 **F1 — MT5-EA RSI(2) (D1) + reconciliatie.** EA met exact de E1-regels (6 FTMO-symbolen, long-only, vaste regels, Swing: weekend toegestaan), Strategy Tester Model=1, €80k EUR, 2021-01..2026-09, échte swaps/spreads. Reconcile met Python e1-sim: maandcorrelatie ≥ 0,9, totaalrendement binnen 25%, trade-aantal binnen 10%. Wijkt het meer af: zoek de oorzaak (fill-tijdstip, spread, swap-triple-day) en rapporteer; corrigeer het Python-model of de EA.
 
 **F2 — MT5-EA ORB (M5) + reconciliatie.** Exact B4a-regels, 7 symbolen. Reconcile met b4-sim: N trades binnen 10%, gemiddelde bp/trade binnen 0,7 bp, per-jaar-teken gelijk. Verwachting: MT5-kosten (spread bij open, slippage) drukken ORB verder; als bp/trade ≤ 0 → ORB-poot afgewezen en combinatie herberekenen zonder ORB (rapporteer dat expliciet).
 
-**F3 — MT5 gecombineerd, één account €80k (schaal/gewichten vastgezet uit E3, niet opnieuw fitten).** Beide EA's samen, dagelijkse equity-/balance-log (`*_daily.csv`), FTMO-regels op equity (dagverlies = balance 00:00 CE(S)T − 5%, totaal 10%): analyze_daily.py + ftmo_economics.py (nu mét intraday-dips). Beslisregel voor 'kandidaat blijft leven': MT5-SR ≥ 0,6, max dag-equity-DD < 8%, slechtste dagverlies < 4%, ≥ 4/6 jaar positief. Rapporteer €/mnd op €80k, funded-kans, en bootstrap-CI.
+**F3 — MT5 gecombineerd, één account €80k (gewichten uit E3; **schaal bepaald door de dagverlies-regel uit F1b/F1c**, niet door Python-DD).** Beide EA's samen, dagelijkse equity-/balance-log (`*_daily.csv`), FTMO-regels op equity (dagverlies = balance 00:00 CE(S)T − 5%, totaal 10%): analyze_daily.py + ftmo_economics.py (nu mét intraday-dips). Beslisregel voor 'kandidaat blijft leven': MT5-SR ≥ 0,6, max dag-equity-DD < 8%, slechtste dagverlies < 4%, ≥ 4/6 jaar positief. Rapporteer €/mnd op €80k, funded-kans, en bootstrap-CI.
 
 **F4 — Plateau- en decay-check (GEEN selectie op P&L).** (a) RSI(2) Yahoo 1990–2026: rollende 5-jaars-Sharpe per index, trend na 2010; (b) drempels 5/10/15 en SMA150/200/250 als plateaukaart (verwacht gelijke teken); (c) ORB opening-range 15/30/60 min en exit 12:00/sessie-einde als plateaukaart, per symbool. Conclusie alleen: is de edge een plateau of een piek? Eis: ≥ 2/3 van de buren zelfde teken en ≥ 50% van het niveau. Niet 'beste' kiezen.
 
