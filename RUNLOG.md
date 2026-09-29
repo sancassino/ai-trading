@@ -291,3 +291,11 @@ Voorwaarde F6 (F3-beslisregel) is met F3b gehaald. Vóór het live zetten het ac
 NIET gestart: geen EA live gezet, niets op het account gedaan.
 Nodig van Sandro: een nieuwe FTMO Free Trial (Swing, €80k) of andere demo-inloggegevens in de terminal op de VM. Technisch daarna: een tweede, aparte MT5-instantie voor live/demo (de tester-scripts sluiten alle terminal64-processen), EA's RSI2Sleeve (LegFrac 0,62/6) + ORBSleeve (LegFrac 0,43/7) volgens F3b, dagelijkse export naar forward/daily.csv.
 Volgende stap: reserve G1 (kostengevoeligheid) en G2 (beta/stresscorrelatie).
+
+## 2026-09-29 23:58 — G1+G2: kostengevoeligheid en marktcorrelatie van de F3b-combinatie
+
+Getest (PREREG_G1G2.md vóór berekening): g1g2.py op de MT5-reeksen (F1/F2) op F3b-schaal (t = 0,45).
+G1: basis SR 1,03, ≈ €225/mnd, slechtste dag 3,80%; +50% spread → SR 0,91, ≈ €200/mnd; +50% spread + 1 punt slippage per ORB-trade → SR 0,66, ≈ €146/mnd (slechtste dag onveranderd ~3,8%). De ORB-poot (1,7 bp/trade) is de kostengevoelige schakel; realistische live-kosten kunnen de helft van het rendement kosten.
+G2: correlatie met US500 +0,39, beta +0,07 (volledig); stress 2022-01..10 corr +0,10; stress 2025-03..04 corr +0,63 (beta 0,11); rollende 63d-correlatie −0,36 … +0,78 (mediaan +0,46).
+Conclusie: kleine, deels marktgebonden edge die bij realistische kosten richting €150–200/mnd zakt.
+Volgende stap: G3 — VOORSTEL_F.md met 3 hypothesen (pre-registratie) en de best onderbouwde uitvoeren.
