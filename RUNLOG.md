@@ -208,3 +208,11 @@ Getest (VOORSTEL_E.md, E1 vóór berekening vastgelegd): e1_rsi2_ftmo.py, regel 
 Resultaat: per symbool t: US500 +2,64, US100 +1,27, US30 +1,37, GER40 +0,50, UK100 −0,56 (eind-van-dag-spread 0,074%), XAU +0,10. FTMO gepoold (6) SR 0,57, t 1,39, 2021–23 +2,9%, 2024–26 +12,2%; Yahoo-versie (5) SR 0,64. Maandcorrelatie FTMO ↔ Yahoo 0,91.
 Conclusie: beslisregel E1 gehaald (beide helften > 0, corr ≥ 0,7) — de RSI(2)-poot van de C4-kandidaat is geen Yahoo-artefact; wel iets zwakker op FTMO. Geen nieuwe trial (zelfde regel).
 Volgende stap: E3 (weekend-regel Standard vs Swing voor de C4-combinatie).
+
+## 2026-09-29 22:05 — E3: C4-combinatie op FTMO-data, weekendregel — Swing ≈ €480–520/mnd, Standard ≈ €200–265/mnd
+
+Getest (PREREG_E3.md vóór berekening): e3_weekend.py, RSI(2)-poot = FTMO-versie (E1), ORB = B4a; gewichten + schaal vastgezet op 2021-09..2023, ongewijzigd op 2024–26.
+Resultaat Swing (weekend toegestaan): gewichten 0,59/0,41, schaal 2,35 → volledig SR 0,97, t 2,20, ≈ €481/mnd, DD 7,8%, slechtste dag −3,0%, DSR 0,26; test 2024–26 SR 0,99, ≈ €519/mnd, DD 6,3%. FTMO-EV (slot-tot-slot): funded 73,8%, €485/mnd | funded, EV €4.142/poging vs nul-drift −€93.
+Standard (vrijdag sluiten): schaal 1,85 → SR 0,63, ≈ €230/mnd, test SR 0,53, ≈ €201/mnd; EV €1.141 vs nul-drift −€251.
+Conclusie: op FTMO-data halveert de C4-schatting (Yahoo gaf €929–1.107/mnd). Realistisch plafond ≈ €480–520/mnd op een Swing-account bij DD < 8%; onder €880. E2 (nieuwsvenster) is voor een Swing-account niet van toepassing (geen nieuws-/weekendbeperking volgens ftmo.com).
+Volgende stap: PLAFOND_RAPPORT.md (portefeuilleregel: FTMO-gevalideerde DSR 0,26 < 0,5).

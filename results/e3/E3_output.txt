@@ -1,0 +1,20 @@
+
+== Swing: gewichten RSI 0.59 / ORB 0.41, schaal 2.35 (vastgezet op 2021-09..2023)
+   volledig 2021-09..2026: schaal 2.35 | 5.2 jr | CAGR +7.22% | €/mnd op €80k ≈ 481 | SR 0.97 | t 2.20 | DD 7.8% | slechtste dag -2.98% | DSR340 0.26
+    per jaar: 21:+0.5 22:+11.3 23:+3.8 24:+6.9 25:+12.0 26:+3.3
+   TRAIN 2021-09..2023: schaal 2.35 | 2.4 jr | CAGR +6.54% | €/mnd op €80k ≈ 436 | SR 0.93 | t 1.43 | DD 7.8% | slechtste dag -2.98% | DSR340 0.06
+    per jaar: 21:+0.5 22:+11.3 23:+3.8
+   TEST 2024..2026: schaal 2.35 | 2.8 jr | CAGR +7.79% | €/mnd op €80k ≈ 519 | SR 0.99 | t 1.67 | DD 6.3% | slechtste dag -2.16% | DSR340 0.13
+    per jaar: 24:+6.9 25:+12.0 26:+3.3
+
+== Standard: gewichten RSI 0.61 / ORB 0.39, schaal 1.85 (vastgezet op 2021-09..2023)
+   volledig 2021-09..2026: schaal 1.85 | 5.2 jr | CAGR +3.45% | €/mnd op €80k ≈ 230 | SR 0.63 | t 1.43 | DD 7.9% | slechtste dag -2.37% | DSR340 0.07
+    per jaar: 21:+0.7 22:+8.8 23:+0.1 24:+2.1 25:+6.6 26:-0.1
+   TRAIN 2021-09..2023: schaal 1.85 | 2.4 jr | CAGR +3.97% | €/mnd op €80k ≈ 265 | SR 0.76 | t 1.18 | DD 7.9% | slechtste dag -2.37% | DSR340 0.04
+    per jaar: 21:+0.7 22:+8.8 23:+0.1
+   TEST 2024..2026: schaal 1.85 | 2.8 jr | CAGR +3.01% | €/mnd op €80k ≈ 201 | SR 0.53 | t 0.89 | DD 6.1% | slechtste dag -1.75% | DSR340 0.02
+    per jaar: 24:+2.1 25:+6.6 26:-0.1
+Swing historisch:     1.0   79.3%   73.8%     17.8       3.8%          485      4,142          4,682
+Swing nul-drift:      1.0   26.7%   14.4%     21.0      16.9%          221        -93            447
+Standard historisch:     1.0   50.7%   39.6%     22.4       3.2%          311      1,141          1,681
+Standard nul-drift:      1.0   20.2%   10.4%     23.2      10.8%          192       -251            289
