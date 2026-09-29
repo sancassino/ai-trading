@@ -104,3 +104,10 @@ Resultaat netto: ensemble A CAGR −3,25%, Sharpe −0,29, t −1,48, DD 65%, 11
 Diagnostiek (geen beslisgrond) zonder spread/markup: A Sharpe 0,02, B −0,30 (B 2000–12 −61%, 2013–26 +15%): in de top-10 keren recente winnaars eerder om. Markup kost bij hefboom tot 4× ~6–8%/jr.
 Conclusie: beslisregel (Sharpe ≥0,3 in beide universums) faalt ruim → momentum-familie definitief dood. TRIAL_COUNT 323.
 Volgende stap: B4 (intraday op FTMO-M5-data, VM-export).
+
+## 2026-09-29 21:29 — B4: intraday op FTMO-M5 2021–2026 — alle 3 AFGEWEZEN
+
+Getest (PREREG_B4.md vóór berekening): b4_sim.py op FTMO-M5 (US500, US100, US30, GER40, UK100, XAUUSD, EURUSD) met spread per bar + commissie (indices 0; XAU €2,00/lot/kant; EURUSD €2,25/lot/kant, afgeleid uit eigen MT5-runs). MT5 MaxBars verhoogd 100k→5M (backup common.ini.bak_maxbars100000). Servertijd = NY+7u geverifieerd. data/m5/ uit git gehouden (135 MB, opnieuw te exporteren).
+Resultaat (gepoold): (a) ORB N 9.249, +1,73 bp/trade (+0,037 R), t train +2,90 / test +1,14, 4/6 jaar+, DSR 0,54 — per symbool US100 t +2,5, GER40 +2,2, UK100/EURUSD negatief; (b) laatste-30-min N 9.300, −0,68 bp, t train −3,19 / test −1,33, 1/6 jaar+; (c) gap-reversal N 2.745, −1,38 bp, t −2,66 / +0,77, 2/6 jaar+.
+Conclusie: alle drie afgewezen (t ≥ 3 in train én test niet gehaald). ORB het dichtst bij, maar test-t 1,14. TRIAL_COUNT 326.
+Volgende stap: B5 (FTMO-economie-tool) — geen B2–B4-resultaat haalde de beslisregel, dus tool bouwen en demonstreren.
