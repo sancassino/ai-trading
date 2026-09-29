@@ -1,3 +1,20 @@
+# EINDVERSLAG (bijgewerkt 2026-09-29 ~17:00) — voor Sandro
+
+> ## ⚠️ BESLISSING VAN SANDRO NODIG
+> **De momentum-rotatie-aanpak is duidelijk AFGEWEZEN.** De lange validatie (2000–2026, zonder hindsight en zonder survivorship-bias) laat **geen edge** zien: ensemble +0,04%/jr (26 ETF's) en +0,25%/jr (point-in-time top-10 aandelen) bij 30% exposure, na financiering; bruto ≈ +2%/jr, gelijk aan gewoon SPY kopen. De positieve 2021–2026-resultaten waren een regime-/hindsight-artefact. Willekeurige aandelenuniversums gaven gemiddeld €83/mnd (spreiding ≫ niveau).
+> **Het doel €1.000–2.000/mnd op €80k (13–30%/jr bij max 10% DD, dus Sharpe ≳ 1,5) is met deze strategiefamilie niet haalbaar.**
+> Keuze voor jou: (A) stoppen met deze richting en een compleet andere strategiefamilie proberen (kans klein, zie onder), (B) je doel verlagen (bv. FTMO-challenge niet loont bij edge van 0–3%/jr; overweeg of het onderzoek de moeite waard blijft), of (C) de agent laten doorgaan met één laatste, vooraf vastgelegde test van 2 andere families (zie NEXT_STEPS.md). Ik adviseer C met harde stopregel, daarna A/B beslissen.
+
+## Update 2026-09-29 (uitkomst NEXT_STEPS ronde 1)
+- Stap 2 Python↔MT5: per losse config corr 0,87–0,94 (criterium niet gehaald), ensemble van 9: corr 0,95 → Python bruikbaar op ensemble-niveau.
+- Stap 1 lange validatie: NEGATIEF (zie boven). Beslisregel (≥65% jaren+, DD<20%) faalt voor beide universums; 2022 was in universum B −9,9%, 2000–02 −6–7%.
+- Stap 3 rang-gevoeligheid: T10 €186/mnd; NVDA-varianten €242 en €406; 5 willekeurige trekkingen €96, €64, €333, €1, −€77 (gem. €83). Dus de 2021–26-uitkomst hangt aan welke aandelen erin zitten (NVDA/PLTR).
+- EA-ensemble T10: €186/mnd @30%; @60% breekt dagverlies (8,1%), met guard stort het in (€38–42/mnd).
+- Kans einddoel met deze aanpak: **<2%**. Kans op een kleine echte edge (€200+/mnd): **<15%** (was 35–45%).
+
+---
+(Onderstaand: eerdere tussenstand, voor context)
+
 # EINDVERSLAG (tussenstand 2026-09-29) — voor Sandro
 
 > **Stand van zaken: doel (€1.000–2.000/mnd op €80k FTMO, 5+ jaar aantoonbaar) is NIET gehaald.**

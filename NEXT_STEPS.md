@@ -1,38 +1,22 @@
-# NEXT_STEPS — opdracht van supervisor (2026-09-29)
+# NEXT_STEPS — supervisor, 2026-09-29 ~17:00
 
-## Beoordeling in het kort
-- Goed werk: hindsight-universum ontmaskerd, swap-artefact gevonden, walk-forward gedaan. Dit is de juiste, kritische lijn.
-- Eerlijke stand: zonder hindsight (T10) is de edge **~€200–330/mnd bij 30% exposure op €80k** (~3–5%/jaar). Doel is €880–2.000/mnd = 13–30%/jaar bij max 10% DD. Dat is een factor 3–5 te weinig; opschalen van exposure breekt de FTMO-dagregel (dagverlies was al 5,2% @30%).
-- Resterende zwaktes:
-  1. **Alles leunt op 5,7 jaar (2021–2026), 1 bear-episode (2022).** Eis is 5–10 jaar en meerdere regimes. De 26-jaars Yahoo-proxy is alleen op 4 indices gedaan, niet op het echte universum/de echte regels.
-  2. Parameterkeuze heeft geen voorspellende waarde (rho −0,05…−0,28) → verder tunen = data-mining. **Stop met nieuwe parametervarianten op 2021–2026.**
-  3. T10-marktkapitalisaties komen "uit eigen kennis" → risico op onbewuste bias (bv. NVDA ~#13 in 2020 net buiten de lijst). Rang-onzekerheid moet als gevoeligheidstest worden meegenomen.
-  4. Winst is geconcentreerd (top-3 maanden = 50–100% van netto). Gedeeltelijk winnaars-bias van mega-caps 2021–26.
-  5. Swap-correctie is een Python-nabewerking, geen MT5-resultaat. Reconcilieer (zie stap 2).
+## Beoordeling van ronde 1
+Uitstekend uitgevoerd: stappen 1–3 netjes, negatief resultaat eerlijk gerapporteerd, stap 4 terecht overgeslagen. Momentum-rotatie op aandelen/indices-CFD's is afgewezen (27 jaar: ≈ +0–0,3%/jr netto, ≈ SPY buy&hold). **Geen verdere MT5-runs, geen nieuwe parametervarianten voor deze familie.**
 
-## Opdracht (in deze volgorde; geen nieuwe parametergrids)
+Kanttekening op jullie stap 1 (geen reden om de conclusie te wijzigen, wel te vermelden): 8%/jr financiering is voor 2009–2021 te hoog; jullie 0%-gevoeligheid gaf bruto +2%/jr, dus de conclusie houdt.
 
-### Stap 1 — Lange, onafhankelijke validatie zonder hindsight en zonder survivorship (Python, Yahoo/Stooq, geen MT5 nodig)
-Hypothese: cross-sectionele momentum + SMA10-regimefilter (zelfde regels, dezelfde 9 configs TopN 2–4 × lb 1–3, **exact de bestaande regels, niets tunen**) heeft ook over 2000–2026 een positieve netto-expectancy in een universum dat **vooraf vaststaat en geen survivorship-bias heeft**.
-- Universum A (asset-class rotatie): SPY, QQQ, DIA, IWM, EFA, EEM, EWJ, EWG, EWU, GLD (vanaf 2004; ervoor goud-spot), SLV, USO/oliefutures, TLT, IEF, HYG, de 11 SPDR-sector-ETF's (XLK, XLF, XLE, XLV, XLY, XLP, XLI, XLB, XLU, + XLRE/XLC vanaf lancering). Gebruik adjusted close.
-- Universum B (single stocks, point-in-time): per 1 januari elk jaar de 10 grootste US-bedrijven op marktkap **voor dat jaar** (gebruik een gedocumenteerde bron; leg de lijst per jaar vast in `universe_pit_top10.csv` mét bronvermelding). Dit omvat ook namen die later zakten (GE, Cisco, Intel, Exxon, Citi, Pfizer, AT&T, Lucent, Nortel enz.); gebruik alleen namen waarvan data beschikbaar is en **rapporteer expliciet welke ontbreken** (survivorship-check). Als data van gedelistte namen niet te krijgen is: zeg dat, en behandel B als bovengrens.
-- Rapporteer per jaar 2000–2026: rendement, DD, aantal trades; specifiek 2000–02, 2008, 2020-Q1, 2022. Kosten: 8%/jr financiering (constant %), spread 0,05% per zijde.
-- Verwachting/beslisregel: als A én B over ≥15 jaar netto positief zijn in ≥65% van de jaren met portefeuille-DD < 20% bij 30% exposure → edge is niet slechts een 2021–26-artefact; ga naar stap 3. Als B negatief/vlak is en alleen A werkt → dan is de FTMO-uitvoerbare edge (aandelen/indices-CFD's) niet aangetoond; zeg dat glashelder.
+## Wat het doel eigenlijk vraagt
+€880–2.000/mnd op €80k = 13–30%/jr bij max 10% DD en max 5% dagverlies. Dat vereist netto Sharpe ≳1,5 bij lage DD. Bekende publieke edges (momentum, trend, carry) halen na kosten typisch Sharpe 0,3–0,7. Verwacht dus eerlijk: niet haalbaar. Nog één laatste, strikt begrensde poging om dat te falsifiëren:
 
-### Stap 2 — Reconcilieer Python-simulatie met MT5 (methodologische controle)
-Draai `momentum_rotation.py`/`momentum_rotation_daily.py` op precies het T10-universum, 2021-01→2026-09, config TopN=2/lb=3/SMA10/30%, en vergelijk maandrendementen met de MT5-run (`results/...` T10). Rapporteer correlatie en verschil in totaal-€. Verwachting: ≥0,95 correlatie, totaalverschil <15%. Zo niet: de lange Python-resultaten uit stap 1 zijn niet overdraagbaar en dat moet vermeld worden.
+## Opdracht (alleen Python, lange data 2000–2026, geen MT5 tenzij beide drempels gehaald)
+Pre-registratie: leg **vóór** het draaien in `PREREG_ronde2.md` vast: families, parameters (geen grid, één vaste set uit literatuur), kosten, beslisregel. Niets aanpassen na het zien van resultaten.
 
-### Stap 3 — Rang-gevoeligheid T10 (hindsight-check op de check)
-Draai T10-universum nog 2× met alternatieve, plausibele top-10-lijsten (bv. vervang META door NVDA; vervang BABA door TSM/NVDA) en 1× met een **willekeurig getrokken** universum van 10 aandelen uit de 65 wide-lijst (5 trekkingen, vaste seed). Verwachting bij echte edge: alle uitkomsten positief, spreiding ≪ het niveau. Rapporteer de 5 trekkingen in een tabel (geen cherry-pick).
+**Familie 1 — Tijdreeks-trend, multi-asset, vol-getarget** (managed-futures-stijl): ETF/FX/grondstof-universum (SPY, EFA, EEM, TLT, IEF, GLD, USO/CL=F, DBC-proxy, EURUSD, USDJPY, GBPUSD, AUDUSD), signaal = 12-maands rendement > 0 → long, < 0 → short (of flat), gewicht = 10% jaarvol-target / eigen 60-daagse vol, maandelijks herbalanceren. Één vaste set (12m, geen varianten). Kosten: spread 0,05%/kant, financiering realistisch per periode (gebruik historische korte rente, bv. FRED/Yahoo ^IRX, niet flat 8%).
+**Familie 2 — FX-carry + trend-combo op G10** (high-minus-low rente, 3 long/3 short, maandelijks; rente uit FRED indien beschikbaar, anders melden en overslaan).
 
-### Stap 4 — Alleen als 1 én 2 slagen: het echte ensemble in de EA (één keer, vooraf vastgelegd)
-9 sub-portefeuilles in één account op T10, SMA10, gewichten per symbool opgeteld, dag-guard 3%, **exposure vooraf gekozen op basis van dagverlies ≤ 4% in de MT5-run** (niet op winst kiezen). Eén run, één rapport: €/mnd, statische DD op dag-equity, max dagverlies, dag-Monte-Carlo funded% en live ≥ €880. Geen herhaling met andere exposure tot na rapportage.
+Rapporteer per familie: netto CAGR, vol, Sharpe, max maand-DD, %jaren+, per-jaar-tabel, 2000–02/2008/2020/2022. Vergelijk met SPY b&h op gelijke vol.
 
-### Stap 5 — Rapportage
-Voeg RUNLOG-regel toe per stap. Bij een negatief resultaat: schrijf dat op, niet zoeken naar een variant die het toch redt.
+**Beslisregel (hard):** doorgaan naar MT5-implementatie alleen als Sharpe netto ≥ 0,7 over ≥ 20 jaar, ≥ 65% jaren positief, max DD < 15% bij 10% vol-target, én de FTMO-dagregel (max dagverlies 5%) in de dagreeks niet wordt overschreden. Anders: schrijf "afgewezen", update RUNLOG, en **stop** — wacht op beslissing van Sandro (zie EINDVERSLAG.md).
 
-## Verwacht beeld (mijn prior, zodat je kunt zien of iets afwijkt)
-- Stap 1A: momentum op asset-class/sector werkt historisch matig, ~4–8%/jr bruto, DD-jaren 2000–02/2008 grotendeels gedempt door SMA10. Stap 1B: positief, maar duidelijk lager dan het 16-universum.
-- Stap 2: Python en MT5 wijken enkele % af (swap, spread, gaps).
-- Stap 3: spreiding van ±€100/mnd rond €200.
-- Realistisch plafond bij FTMO-veilig risico: ~€200–450/mnd. €1.000+/mnd blijft alleen haalbaar als stap 1 een veel sterker signaal laat zien dan tot nu toe.
+## Verwacht beeld (prior)
+Familie 1: Sharpe netto 0,3–0,6, DD 15–25% bij 10% vol; mogelijk sterke jaren 2008/2022 maar veel zwakke jaren 2011–2019. Familie 2: carry-Sharpe ~0,3, crash-risico. Meest waarschijnlijke uitkomst: beide falen de beslisregel, en zelfs bij slagen is 13%/jr bij DD<10% ver weg. Een uitkomst die veel beter is dan dit → extra wantrouwen (lookahead-bug, survivorship) en eerst controleren.
