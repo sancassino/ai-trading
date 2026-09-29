@@ -1,3 +1,8 @@
+> ## ⛔ UPDATE 2026-09-29 (avond): RONDE 2 OOK AFGEWEZEN — WACHT OP JOUW BESLISSING
+> Vooraf vastgelegde test (PREREG_ronde2.md) van 2 andere families over 2000–2026, 10% vol-target: **tijdreeks-trend** Sharpe 0,19, CAGR +1,5%, DD 39%; **FX-carry+trend** Sharpe −0,04, CAGR −1,0%, DD 68%. Beide ver onder de drempel (Sharpe ≥ 0,7). Ter vergelijking: SPY @10% vol Sharpe 0,41, +5,7%/jr. (Kanttekening: de agent meldde en herstelde een Sharpe-bug; zonder financiering-markup 0,58/0,42 — óók dan afgewezen.)
+> **Conclusie: na 3 strategiefamilies (mean-reversion, trend/momentum-rotatie, multi-asset trend/carry) is er geen aantoonbare edge die het doel (€880–2.000/mnd op €80k, DD<10%) benadert.** De agent staat stil; ik start geen nieuw onderzoek zonder jouw keuze.
+> **Jouw keuze:** (A) stoppen; (B) doel drastisch verlagen (bv. alleen kapitaalbehoud/kleine winst — een FTMO-challenge met kosten loont dan niet); (C) een écht andere bron van edge aanleveren (bv. eigen discretionaire/orderflow-strategie met regels die we kunnen backtesten). Mijn advies: A of C. Doorgaan met vergelijkbare systematische families is data-mining.
+
 # EINDVERSLAG (bijgewerkt 2026-09-29 ~17:00) — voor Sandro
 
 > ## ⚠️ BESLISSING VAN SANDRO NODIG
