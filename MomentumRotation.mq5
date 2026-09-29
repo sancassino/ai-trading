@@ -25,6 +25,9 @@ input double DailyGuardPct   = 0;      // 0 = off. >0: flatten + wait for next m
 input double TotalGuardPct   = 0;      // 0 = off. >0: flatten + wait for next month if equity < initial capital - pct% (FTMO max-loss protection)
 input double InitialCapital  = 0;      // 0 = balance at EA start
 
+input string EnsembleTopNs  = "";     // ensemble mode when both lists set, e.g. "2,3,4" x "1,2,3": one sub-portfolio per combination, 1/N of the exposure each
+input string EnsembleLookbacks = "";
+input double ResizeTolerance = 0.25;   // ensemble: re-size a held leg when its volume is off target by more than this fraction
 input bool   AbsMomentumFilter = false; // true: only hold instruments whose own lookback return > 0; empty slots stay in cash (dual momentum)
 input bool   RankByRiskAdj   = false;  // true: rank on return / ATR%(20) instead of raw return (vol-adjusted momentum)
 input string UniverseList    = "";     // comma-separated symbols, or "file:<name>" = read from Common\Files (tester truncates long strings); empty = DEFAULT_UNIVERSE
@@ -51,6 +54,7 @@ int      guardTriggers = 0;
 bool   rebalancePending = false;
 string targetSyms[];   // this month's target legs
 double targetLots[];   // pre-computed lot size per leg
+bool   targetResized[]; // ensemble: leg already re-sized during this rebalance
 
 void ExportDeals()
   {
@@ -222,6 +226,106 @@ bool IsTarget(string sym)
    return false;
   }
 
+double LotsForNotional(string s, double notional)
+  {
+   double price = SymbolInfoDouble(s, SYMBOL_ASK);
+   double tickValue = SymbolInfoDouble(s, SYMBOL_TRADE_TICK_VALUE);
+   double tickSize  = SymbolInfoDouble(s, SYMBOL_TRADE_TICK_SIZE);
+   if(price <= 0 || tickValue <= 0 || tickSize <= 0) return 0;
+   double contractValue = price * (tickValue / tickSize);
+   if(contractValue <= 0) return 0;
+   double minLot  = SymbolInfoDouble(s, SYMBOL_VOLUME_MIN);
+   double maxLot  = SymbolInfoDouble(s, SYMBOL_VOLUME_MAX);
+   double lotStep = SymbolInfoDouble(s, SYMBOL_VOLUME_STEP);
+   double lots = MathFloor(notional / contractValue / lotStep) * lotStep;
+   if(lots < minLot) return 0;
+   return MathMin(maxLot, lots);
+  }
+
+int ParseIntList(string list, int &out[])
+  {
+   string parts[];
+   int n = StringSplit(list, ',', parts);
+   ArrayResize(out, 0);
+   for(int i = 0; i < n; i++)
+     {
+      int v = (int)StringToInteger(parts[i]);
+      if(v <= 0) continue;
+      int k = ArraySize(out);
+      ArrayResize(out, k + 1);
+      out[k] = v;
+     }
+   return ArraySize(out);
+  }
+
+bool EnsembleMode() { return StringLen(EnsembleTopNs) > 0 && StringLen(EnsembleLookbacks) > 0; }
+
+// Ensemble: every (TopN, lookback) combination is its own equal-weight
+// sub-portfolio holding 1/N of the exposure; weights per symbol are summed.
+void PrepareEnsemble()
+  {
+   int tops[], lbs[];
+   int nt = ParseIntList(EnsembleTopNs, tops), nl = ParseIntList(EnsembleLookbacks, lbs);
+   int combos = nt * nl;
+   int n = ArraySize(UNIVERSE);
+   double w[]; ArrayResize(w, n); ArrayInitialize(w, 0);
+   for(int a = 0; a < nl; a++)
+     {
+      double rets[]; int idx[]; ArrayResize(rets, n); ArrayResize(idx, n);
+      int count = 0;
+      for(int i = 0; i < n; i++)
+        {
+         double now = CurrentClose(UNIVERSE[i]);
+         double then = MonthsAgoClose(UNIVERSE[i], lbs[a]);
+         if(now <= 0 || then <= 0) continue;
+         rets[count] = (now - then) / then;
+         idx[count] = i;
+         count++;
+        }
+      for(int i = 0; i < count - 1; i++)
+        {
+         int best = i;
+         for(int j = i + 1; j < count; j++) if(rets[j] > rets[best]) best = j;
+         if(best != i)
+           {
+            double tr = rets[i]; rets[i] = rets[best]; rets[best] = tr;
+            int ti = idx[i]; idx[i] = idx[best]; idx[best] = ti;
+           }
+        }
+      for(int b = 0; b < nt; b++)
+        {
+         int k = MathMin(tops[b], count);
+         for(int i = 0; i < k; i++) w[idx[i]] += 1.0 / (k * combos);
+        }
+     }
+   double equity = AccountInfoDouble(ACCOUNT_EQUITY);
+   ArrayResize(targetSyms, 0); ArrayResize(targetLots, 0); ArrayResize(targetResized, 0);
+   for(int i = 0; i < n; i++)
+     {
+      if(w[i] <= 0) continue;
+      double lots = LotsForNotional(UNIVERSE[i], equity * ExposureFrac * w[i]);
+      AddRankLine(TimeToString(TimeCurrent(), TIME_DATE) + ";" + UNIVERSE[i] + ";" + DoubleToString(w[i], 4) + ";ens;" + DoubleToString(lots, 2));
+      if(lots <= 0) continue;
+      int k = ArraySize(targetSyms);
+      ArrayResize(targetSyms, k + 1); ArrayResize(targetLots, k + 1); ArrayResize(targetResized, k + 1);
+      targetSyms[k] = UNIVERSE[i]; targetLots[k] = lots; targetResized[k] = false;
+     }
+   rebalancePending = true;
+  }
+
+double PositionVolumeOn(string sym)
+  {
+   double v = 0;
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+     {
+      ulong ticket = PositionGetTicket(i);
+      if(ticket == 0) continue;
+      if(PositionGetInteger(POSITION_MAGIC) != (long)MagicNumber) continue;
+      if(PositionGetString(POSITION_SYMBOL) == sym) v += PositionGetDouble(POSITION_VOLUME);
+     }
+   return v;
+  }
+
 // Retry-friendly: called on every tick while a rebalance is pending. Closes
 // any open leg that is no longer a target, then opens any target leg that
 // isn't filled yet. Safe to call repeatedly -- a broker "Market closed"
@@ -239,9 +343,31 @@ void ProcessPendingRebalance()
          trade.PositionClose(ticket);
      }
 
+   // ensemble: a held leg whose size is far off target is closed once per
+   // rebalance; the fill loop below then re-opens it at the target size
+   if(EnsembleMode())
+      for(int i = 0; i < ArraySize(targetSyms); i++)
+        {
+         if(targetResized[i]) continue;
+         double v = PositionVolumeOn(targetSyms[i]);
+         if(v <= 0) { targetResized[i] = true; continue; }
+         if(MathAbs(v - targetLots[i]) <= ResizeTolerance * targetLots[i]) { targetResized[i] = true; continue; }
+         bool closedAll = true;
+         for(int j = PositionsTotal() - 1; j >= 0; j--)
+           {
+            ulong ticket = PositionGetTicket(j);
+            if(ticket == 0) continue;
+            if(PositionGetInteger(POSITION_MAGIC) != (long)MagicNumber) continue;
+            if(PositionGetString(POSITION_SYMBOL) != targetSyms[i]) continue;
+            if(!trade.PositionClose(ticket)) closedAll = false;
+           }
+         if(closedAll) targetResized[i] = true;
+        }
+
    bool allFilled = true;
    for(int i = 0; i < ArraySize(targetSyms); i++)
      {
+      if(EnsembleMode() && !targetResized[i]) { allFilled = false; continue; }
       if(HasPositionOn(targetSyms[i])) continue;
       allFilled = false;
       if(targetLots[i] > 0)
@@ -291,6 +417,7 @@ void PrepareRebalance()
       rebalancePending = true;
       return;
      }
+   if(EnsembleMode()) { PrepareEnsemble(); return; }
    int n = ArraySize(UNIVERSE);
    double rets[]; string syms[];
    ArrayResize(rets, n); ArrayResize(syms, n);

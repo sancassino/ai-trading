@@ -452,3 +452,21 @@ Zonder hindsight is de edge echt maar klein: **≈ €200–330/mnd bij 30% expo
 €80k** (~40% van het 16-niveau). €880/mnd zou ~3–4× de exposure vergen → breekt
 FTMO-limieten. Swap-correctie maakt het 16-universum beter, maar dat universum is niet
 eerlijk te gebruiken als verwachting.
+
+### Echt ensemble in de EA (29 sep 2026)
+EA-optie `EnsembleTopNs`/`EnsembleLookbacks` (9 sub-portefeuilles TopN 2–4 × lb 1–3 in één
+account, gewichten per symbool opgeteld, legs >25% naast doel worden herschaald).
+Gewichten en herschaling handmatig gecontroleerd. SMA10, €80k EUR, swap-gecorrigeerd:
+
+| Run | €/mnd | jaren+ | stat. DD | dagverlies | train → test €/mnd |
+|---|---|---|---|---|---|
+| T10 30%, geen guard | €186 (lineaire benadering €200 ✓) | 5/6 | 4,7% | 3,9% | 107 → 318 |
+| T10 60%, geen guard | €375 | 5/6 | 9,2% | **8,1% (breekt)** | 187 → 688 |
+| T10 60%, guard 3% | €38 | 2/6 | 14,0% | 4,0% | 24 → 61 |
+| T10 90%, guard 3% | €42 | 3/6 | 17,2% | 5,4% | −132 → 332 |
+| 16 30%, geen guard | €450 | 5/6 | 3,5% | 4,8% | 442 → 462 |
+| 16 60%, guard 3% | €637 | 5/6 | 8,1% | 4,7% | 773 → 409 |
+
+De dagguard vernietigt het hindsight-vrije ensemble (verlies realiseren, herstel missen).
+**Binnen deze strategiefamilie is er zonder hindsight geen FTMO-conforme route naar €880/mnd;
+het haalbare niveau is ~€190–320/mnd op €80k.**

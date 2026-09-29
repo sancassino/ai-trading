@@ -44,3 +44,9 @@ Volgende stap: absolute-momentum-filter (dual momentum: alleen houden bij eigen 
 Getest: EA-optie AbsMomentumFilter (alleen houden bij eigen lookback-rendement > 0, lege slots in cash; bugfix: bij 0 kandidaten nu flat i.p.v. oude posities houden). 9 configs × {SMA10, geen regimefilter} op T10-universum, €80k EUR, 30%, swap-gecorrigeerd. Swap-aanname geverifieerd via mt5_swap_specs.py: aandelen ~8,2–8,8%/jr constant % van notional, indices 5–8%, puntwaarden worden door FTMO bijgesteld (swap_specs_FTMO.csv).
 Resultaat: met SMA10 vrijwel identiek aan zonder abs-filter (ensemble €200/mnd; filter bindt zelden in risk-on). Zonder SMA10: ensemble €172/mnd, stat. DD 9,0% vs 4,7%. Geen verbetering → SMA10-regimefilter blijft de betere risicobeperking.
 Volgende stap: echt ensemble in de EA (9 sub-portefeuilles in één account, gewichten per symbool opgeteld) + portefeuille-guard, zodat hogere exposure realistisch (niet lineair benaderd) getoetst kan worden.
+
+## 2026-09-29 14:29 — Echt ensemble in de EA (T10 en 16, 30–90% exposure, dagguard)
+
+Getest: nieuwe EA-modus EnsembleTopNs='2,3,4' × EnsembleLookbacks='1,2,3' met herschaling; T10 @30/60/90% ± guard 3%, 16 @30% en @60%+guard; €80k EUR, SMA10, swap-gecorrigeerd.
+Resultaat: EA-ensemble T10 @30% €186/mnd ≈ lineaire benadering €200 (validatie OK). T10 @60% zonder guard €375/mnd maar dagverlies 8,1% (breekt FTMO); met guard 3% instorting naar €38–42/mnd, stat. DD 14–17%. 16 @60%+guard €637/mnd (test €409) maar hindsight-universum. Conclusie: geen FTMO-conforme route naar €880/mnd zonder hindsight in deze strategiefamilie; haalbaar ~€190–320/mnd.
+Volgende stap: Next-steps-bestand uit de repo ophalen en die taken uitvoeren.
