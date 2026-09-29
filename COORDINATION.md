@@ -17,3 +17,7 @@ Besluit Sandro 2026-09-29: doorgaan. Snelheid was het probleem: 2–3 acties per
 
 ## Heartbeat
 Beide partijen loggen: uitvoerder in `RUNLOG.md`, supervisor in `SUPERVISOR_LOG.md` (elk uur een regel, ook als er niets nieuws is). Ontbreekt een uur → dat is een signaal voor Sandro.
+
+## Aanvulling 2026-09-30
+- De uitvoerder bleek B1–B5 in 20 min af te ronden; backlog moet dus ≥ 6 uur werk bevatten. Bij lege backlog: pak de Reserve (D-lijst) / schrijf zelf `VOORSTEL_*.md` en ga door — niet wachten.
+- `check_next_steps.sh` moet ook mijn branch `claude/vibrant-volta-ysy5m4` controleren (doet het al voor alle remote branches).
