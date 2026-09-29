@@ -111,3 +111,10 @@ Getest (PREREG_B4.md vóór berekening): b4_sim.py op FTMO-M5 (US500, US100, US3
 Resultaat (gepoold): (a) ORB N 9.249, +1,73 bp/trade (+0,037 R), t train +2,90 / test +1,14, 4/6 jaar+, DSR 0,54 — per symbool US100 t +2,5, GER40 +2,2, UK100/EURUSD negatief; (b) laatste-30-min N 9.300, −0,68 bp, t train −3,19 / test −1,33, 1/6 jaar+; (c) gap-reversal N 2.745, −1,38 bp, t −2,66 / +0,77, 2/6 jaar+.
 Conclusie: alle drie afgewezen (t ≥ 3 in train én test niet gehaald). ORB het dichtst bij, maar test-t 1,14. TRIAL_COUNT 326.
 Volgende stap: B5 (FTMO-economie-tool) — geen B2–B4-resultaat haalde de beslisregel, dus tool bouwen en demonstreren.
+
+## 2026-09-29 21:31 — B5: FTMO-economie-tool (ftmo_economics.py)
+
+Gebouwd: ftmo_economics.py — block-bootstrap (21 dagen) van een dagreeks × positieschaal; 2-Step-regels (10%/5%, dag 5%, totaal 10%, ≥4 dagen, fee terug bij 1e uitbetaling), funded 12 mnd met maandelijkse uitbetaling (80% split, saldo terug naar start). Fee €540 als parameter (niet geverifieerd: ftmo.com toont de prijs niet in opvraagbare vorm). Benaderingen: slot-tot-slot (geen intraday-dips → slaagkansen optimistisch), balance = equity. Geen B2–B4-resultaat haalde de beslisregel; tool gedemonstreerd.
+Resultaat (scale 1/2/3, EV per poging): RSI(2) (B2b, vol 4,4%) €25 / €2.358 / €3.207, funded 18/52/50%; familie 1 €1.556 / €1.676 / €770 (live-breuk 46/94/100%); T10-ensemble-EA €359 / €2.681 / €2.975; SPY@10%vol €3.058 / €4.341 / €3.161. Controle zonder drift (edge = 0): SPY-vol €219 / €1.066 / €769, RSI(2)-vol −€510 / €24 / €516.
+Inzicht: een challenge is optiewaarde (verlies begrensd tot de fee, winst gedeeld) → EV per poging kan zelfs zonder edge positief zijn bij voldoende vol, maar dat is loterij: live-breuk 36–96%, geen stabiel inkomen. Een echte trader zonder edge heeft negatieve drift (kosten), dus de controle is een bovengrens.
+Volgende stap: backlog B1–B5 af → verslag + VOORSTEL (COORDINATION-regel 1).
