@@ -216,3 +216,10 @@ Resultaat Swing (weekend toegestaan): gewichten 0,59/0,41, schaal 2,35 → volle
 Standard (vrijdag sluiten): schaal 1,85 → SR 0,63, ≈ €230/mnd, test SR 0,53, ≈ €201/mnd; EV €1.141 vs nul-drift −€251.
 Conclusie: op FTMO-data halveert de C4-schatting (Yahoo gaf €929–1.107/mnd). Realistisch plafond ≈ €480–520/mnd op een Swing-account bij DD < 8%; onder €880. E2 (nieuwsvenster) is voor een Swing-account niet van toepassing (geen nieuws-/weekendbeperking volgens ftmo.com).
 Volgende stap: PLAFOND_RAPPORT.md (portefeuilleregel: FTMO-gevalideerde DSR 0,26 < 0,5).
+
+## 2026-09-29 22:06 — PLAFOND_RAPPORT: max haalbaar ≈ €250–500/mnd (Swing), kans €880+ < 10% — pauze
+
+Opgesteld volgens portefeuilleregel (geen FTMO-gevalideerde sleeve/combinatie met DSR ≥ 0,5): PLAFOND_RAPPORT.md.
+Kern: beste kandidaat RSI(2)+ORB op FTMO-data (E3), Swing: SR 0,98 ± 0,42 (bootstrap-CI 0,34–1,66), ≈ €480/mnd, DD 7,8%, test 2024–26 ≈ €519/mnd; Standard ≈ €230/mnd. Benodigde SR €880/mnd = 1,41; P(ware SR ≥ 1,41) ≈ 16% vóór correctie; DSR(348) 0,27. Verwacht live (30–50% haircut) ≈ €250–350/mnd.
+Beslispunt Sandro: (1) doel verlagen + MT5-bevestiging (PREREG_C7-ontwerp) op Swing, (2) stoppen, (3) andere bron van edge.
+Volgende stap: pauze nieuw onderzoek; uurlijkse NEXT_STEPS-check blijft actief.
