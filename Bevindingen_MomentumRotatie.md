@@ -420,3 +420,35 @@ Dag-Monte Carlo (FTMO-regels op dagniveau, hele echte maanden gebootstrapt, blok
 De beste-config-rij is in-sample geselecteerd (zie train/test hierboven: halvering in de
 testperiode) en dus een bovengrens, geen verwachting. Kernconclusies blijven gelijk:
 teken robuust, niveau ~€300–400/mnd bij FTMO-veilig risico, onder het doel van €880.
+
+## 29 sep 2026 — swap-artefact, universums zonder hindsight, walk-forward (alles €80k EUR)
+
+### Swap-artefact in de Strategy Tester
+FTMO-swap = vaste punten per lot per dag (`swap_mode=1`); de tester past de huidige
+puntwaarde op de hele historie toe, terwijl koersen split-gecorrigeerd zijn. NVDA stond
+in FTMO-data op $13 (2021) vs $225 nu → tester rekent ~145%/jaar financiering i.p.v. ~8%.
+Swap at 34–62% van de bruto winst op. `swap_correct.py` herrekent swap naar constante
+%-van-notional tegen het huidige tarief (conservatief voor 2021–22, rente toen ~0%;
+nooit goedkoper voor instrumenten die sindsdien daalden). Correctie: +€10–23k per run
+op het 16-universum. **Alle cijfers hieronder zijn swap-gecorrigeerd.** Commissie en
+spread (zitten al in de tester via historische M1-spreads) zijn verwaarloosbaar.
+
+### Universums (9 configs TopN 2–4 × lb 1–3, SMA10, 30%)
+| Universum | Ensemble €/mnd | Walk-forward ensemble (24/6/3) | Per config €/mnd |
+|---|---|---|---|
+| Origineel 16 (hindsight: NVDA/META/TSLA) | €470 (train 475 / test 463) | €592, 12/14 vensters+ | €327–630 |
+| **Top-10 marktkap. 31-12-2020 + 9 idx/grondst./FX (geen hindsight)** | **€200** (train 129 / test 318) | €333, 10/14 vensters+ | €61–309 |
+| Alleen indices/grondstoffen (17) | €130 | €159, 8/14 vensters+ | €−3–212 |
+
+Top-10 per 31-12-2020 (vooraf bekend): AAPL, MSFT, AMZN, GOOG, META, TSLA, BABA, BRK.B,
+V, JNJ (NVDA stond toen ~#13). Marktkapitalisaties uit eigen kennis, op rangniveau.
+
+### Walk-forward
+Gem. rangcorrelatie train↔test in alle universums −0,05 tot −0,18: config kiezen op
+historie voorspelt niets. Ensemble presteert gelijk of beter dan "kies de beste".
+
+### Conclusie
+Zonder hindsight is de edge echt maar klein: **≈ €200–330/mnd bij 30% exposure op
+€80k** (~40% van het 16-niveau). €880/mnd zou ~3–4× de exposure vergen → breekt
+FTMO-limieten. Swap-correctie maakt het 16-universum beter, maar dat universum is niet
+eerlijk te gebruiken als verwachting.
