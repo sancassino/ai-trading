@@ -231,3 +231,11 @@ Reconciliatie met Python E1: trades 277 = 277 (per symbool identiek); maandcorre
 BELANGRIJK: MT5-dag-equity toont FTMO-dagverlies (balance 00:00 − min equity) tot 6,08% (2022-01-24) en 5,44% (2026-03-23) al bij 100% notional — meerdaagse verliesposities in gecorreleerde indices stapelen tegen de middernacht-balance. Python (slot-tot-slot) zag dit niet. Bij de E3-schaal (RSI-blootstelling ≈1,4×) breekt de regel zeker.
 Conclusie: EA ≈ Python (goed), maar de RSI(2)-poot vereist een dagverlies-guard of veel kleinere schaal onder FTMO-regels. Meenemen in F3.
 Volgende stap: F2 (MT5-EA ORB + reconciliatie).
+
+## 2026-09-29 23:18 — F2: MT5-EA ORB — reconciliatie GESLAAGD
+
+Getest (PREREG_F2.md vóór berekening): nieuwe EA ORBSleeve.mq5 (7 symbolen, OR 30 min, buy-/sell-stop OCO met SL andere kant, flat op sessie-einde; sessietijden in servertijd incl. DST-afwijkingsweken), Model=1, €80k EUR, 2021–2026, 1/7 equity per trade.
+Resultaat: MT5 N 9.414, +1,76 bp/trade, t +3,03 vs Python B4a N 9.249, +1,73 bp, t +2,93 → N binnen 2%, bp-verschil 0,03 (< 0,7), teken per jaar identiek (2021 −, 2022–2025 +, 2026 −). Overlap 9.182 (datum, symbool), correlatie per trade 0,99. Per symbool gelijk: US100 +6,1/+5,9 bp, GER40 +4,1/+4,0, US500 +2,2/+2,4, XAU +1,1/+1,5, US30 +0,6/+0,3, EURUSD −0,4/−0,4, UK100 −0,7/−0,8.
+Kanttekening: de tester vult stop-orders exact op de stopprijs (geen slippage) → optimistisch; G1 (kostengevoeligheid) blijft nodig.
+Conclusie: ORB-poot bevestigd in MT5 (bp/trade > 0).
+Volgende stap: F3 (combinatie op één €80k-account, schaal/gewichten uit E3).
