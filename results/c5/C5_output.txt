@@ -1,0 +1,6 @@
+C5 crypto-trend [financiering: ftmo] 2016-01-01..2026-09-21 | CAGR +3.49% | vol 15.4% | SR 0.30 | t 0.98 | DD 42.3% | jaren+ 7/11 | SR excl. beste 2 jaren ([2017, 2016]) -0.06 | DSR341 0.03 | afgewezen
+    per jaar: 16:+26.0 17:+39.1 18:+6.5 19:-19.7 20:+22.9 21:+19.2 22:+6.3 23:-12.6 24:+0.7 25:-21.3 26:-10.8
+C5 crypto-trend [financiering: none] 2016-01-01..2026-09-21 | CAGR +10.88% | vol 15.4% | SR 0.75 | t 2.45 | DD 29.6% | jaren+ 7/11 | SR excl. beste 2 jaren ([2017, 2016]) 0.39 | DSR341 0.31 | afgewezen
+    per jaar: 16:+35.6 17:+44.8 18:+9.7 19:-16.0 20:+31.4 21:+26.3 22:+12.4 23:-2.1 24:+10.6 25:-14.1 26:-3.6
+C5 crypto-trend [financiering: rf] 2016-01-01..2026-09-21 | CAGR +10.17% | vol 15.4% | SR 0.71 | t 2.31 | DD 29.8% | jaren+ 7/11 | SR excl. beste 2 jaren ([2017, 2016]) 0.35 | DSR341 0.26 | afgewezen
+    per jaar: 16:+34.8 17:+44.3 18:+9.7 19:-16.2 20:+30.9 21:+25.8 22:+12.6 23:-3.9 24:+8.5 25:-15.4 26:-3.2

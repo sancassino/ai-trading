@@ -154,3 +154,10 @@ Extra controle (buiten prereg, gemeld): gewichten + schaal vastgezet op 2021-09.
 Kanttekeningen: korte overlap (5,2 jr), schaal in-sample (volledige periode), ORB test-t in B4 slechts 1,14, 2022 draagt veel (+24%), DD-marge t.o.v. FTMO 10% klein; RSI(2) op Yahoo-indices (zonder dividend) i.p.v. FTMO-CFD's.
 Conclusie: eerste combinatie boven DSR 0,5 → kandidaat voor MT5-bevestiging (FTMO-CFD's, echte swaps, balance-om-middernacht-regel). Geen succesclaim.
 Volgende stap: C5 (crypto-trend), daarna C6, C7.
+
+## 2026-09-29 21:57 — C5: crypto-trend BTC+ETH — AFGEWEZEN
+
+Getest (PREREG_C5.md vóór berekening): c5_crypto.py, Yahoo BTC/ETH 2016–2026, maandelijks, 12-1-momentum én SMA50/200, vol-target 20% (0,5 per asset), spread 0,05%. FTMO-crypto-kosten via MT5 opgevraagd: swap_mode 5 = −30%/jr op notional, long én short (!).
+Resultaat met FTMO-financiering: CAGR +3,5%, SR 0,30, t 0,98, DD 42,3%, 7/11 jaar+, SR excl. beste 2 jaren (2016/2017) −0,06, DSR 0,03. Diagnostiek zonder financiering: SR 0,75, excl. beste 2 jaren 0,39, DD 29,6%; met DTB3±2%: SR 0,71 / 0,35.
+Conclusie: afgewezen — ook bruto niet robuust zonder de 2016/17-bull, en FTMO's 30%/jr-swap maakt elke meerdaagse crypto-positie kansloos. TRIAL_COUNT 341.
+Volgende stap: C6 (vol-timing van index-exposure, Moreira–Muir).
