@@ -201,3 +201,10 @@ Getest (PREREG_D4.md vóór berekening): d4_riskparity.py, SPY/EFA/GLD/USO (gesp
 Resultaat: CAGR +3,4%, SR 0,40, t 2,04, DD 27,6%, helften +62% / +45%, 19/26 jaar+, DSR 0,18. Referentie SPY@8%: SR 0,36, DD 29,1%.
 Conclusie: afgewezen (DD ≫ 15%, SR < 0,7). TRIAL_COUNT 348. Backlog C1–C7 + reserve D1–D4 afgerond.
 Volgende stap: VOORSTEL_E.md met 3 hypothesen (FTMO-validatie van de C4-kandidaat) en direct de best onderbouwde uitvoeren.
+
+## 2026-09-29 22:04 — E1: RSI(2) repliceert op FTMO-data — GESLAAGD (validatie, geen nieuwe trial)
+
+Getest (VOORSTEL_E.md, E1 vóór berekening vastgelegd): e1_rsi2_ftmo.py, regel B2b ongewijzigd op FTMO-D1-slotkoersen (US500, US100, US30, GER40, UK100, XAUUSD), 2021–2026, spread = mediaan laatste M5-bar van de dag, FTMO-longswap per symbool per kalendernacht.
+Resultaat: per symbool t: US500 +2,64, US100 +1,27, US30 +1,37, GER40 +0,50, UK100 −0,56 (eind-van-dag-spread 0,074%), XAU +0,10. FTMO gepoold (6) SR 0,57, t 1,39, 2021–23 +2,9%, 2024–26 +12,2%; Yahoo-versie (5) SR 0,64. Maandcorrelatie FTMO ↔ Yahoo 0,91.
+Conclusie: beslisregel E1 gehaald (beide helften > 0, corr ≥ 0,7) — de RSI(2)-poot van de C4-kandidaat is geen Yahoo-artefact; wel iets zwakker op FTMO. Geen nieuwe trial (zelfde regel).
+Volgende stap: E3 (weekend-regel Standard vs Swing voor de C4-combinatie).

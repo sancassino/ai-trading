@@ -1,0 +1,11 @@
+FTMO-sleeves (2021–2026):
+  US500cash  trades  55 | spread 0.0077% | CAGR +7.21% | t +2.64
+  US100cash  trades  46 | spread 0.0074% | CAGR +4.15% | t +1.27
+  US30cash   trades  54 | spread 0.0054% | CAGR +3.22% | t +1.37
+  GER40cash  trades  45 | spread 0.0141% | CAGR +1.35% | t +0.50
+  UK100cash  trades  45 | spread 0.0738% | CAGR -1.89% | t -0.56
+  XAUUSD     trades  32 | spread 0.0077% | CAGR +0.02% | t +0.10
+FTMO gepoold (6)                     SR +0.57 t +1.39 | 2021–23 +2.9% | 2024–26 +12.2% | totaal +15.4%
+FTMO gepoold (5, zelfde als Yahoo)   SR +0.51 t +1.24 | 2021–23 +0.7% | 2024–26 +13.5% | totaal +14.3%
+Yahoo gepoold (5)                    SR +0.64 t +1.55 | 2021–23 +3.5% | 2024–26 +13.2% | totaal +17.2%
+maandcorrelatie FTMO(5) ↔ Yahoo(5): 0.91 | beslisregel E1 (FTMO(6) beide helften > 0, corr ≥ 0,7): GESLAAGD
