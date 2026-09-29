@@ -50,6 +50,7 @@ def summarize(deals_path):
     max_dd_static = 0.0
     worst_day = 0.0
     worst_day_date = None
+    worst_strict = 0.0  # strengste lezing: referentie = max(balance, equity) om middernacht
     for d, sb, se, mn, en in daily:
         max_dd_static = max(max_dd_static, (START - mn) / START)
         max_dd_peak = max(max_dd_peak, (peak - mn) / peak)
@@ -57,6 +58,7 @@ def summarize(deals_path):
         loss = (sb - mn) / START
         if loss > worst_day:
             worst_day, worst_day_date = loss, d
+        worst_strict = max(worst_strict, (max(sb, se) - mn) / START)
 
     return {
         "file": deals_path.split("/")[-1],
@@ -69,14 +71,15 @@ def summarize(deals_path):
         "dd_static": max_dd_static,
         "worst_day": worst_day,
         "worst_day_date": worst_day_date,
+        "worst_strict": worst_strict,
         "trades": len(deals),
     }
 
 
 if __name__ == "__main__":
-    print(f"{'file':<22}{'net':>10}{'/mnd':>8}{'jaren+':>8}{'DDpeak':>8}{'DDstat':>8}{'dagDD':>7}  per jaar")
+    print(f"{'file':<22}{'net':>10}{'/mnd':>8}{'jaren+':>8}{'DDpeak':>8}{'DDstat':>8}{'dagDD':>7}{'streng':>7}  per jaar")
     for p in sys.argv[1:]:
         s = summarize(p)
         yrs = " ".join(f"{y[2:]}:{v/1000:+.1f}k" for y, v in s["yearly"].items())
         print(f"{s['file']:<22}{s['net']:>10,.0f}{s['per_month']:>8,.0f}{s['years_pos']:>5}/{s['years']:<2}"
-              f"{s['dd_peak']*100:>7.1f}%{s['dd_static']*100:>7.1f}%{s['worst_day']*100:>6.1f}%  {yrs}")
+              f"{s['dd_peak']*100:>7.1f}%{s['dd_static']*100:>7.1f}%{s['worst_day']*100:>6.1f}%{s['worst_strict']*100:>6.1f}%  {yrs}")

@@ -247,3 +247,10 @@ Resultaat 2021-09..2026: SR 0,96 (bootstrap-CI 0,22–1,66), CAGR +6,2% ≈ €4
 Diagnostiek (in-sample, geen beslisgrond): binnen dag-DD < 8% en dagverlies < 4% max ≈ €330–365/mnd (RSI ¼–½ van 1/6 per positie, ORB 1/7), SR ≈ 1,1 (results/f/F3_diagnostiek.txt).
 Conclusie: de meerdaagse RSI(2)-poot is onder FTMO's middernacht-balance-regel de zwakke schakel. PLAFOND_RAPPORT bijgewerkt: ≈ €250–365/mnd, kans €880+ < 5%.
 Volgende stap: F4 (plateau/decay-check) en F5 (breedte), dan reserve G1–G3.
+
+## 2026-09-29 23:27 — F1c: FTMO-dagverliesdefinitie geverifieerd + strengste lezing in analyze_daily
+
+Bron ftmo.com/en/trading-objectives (29-09-2026), letterlijk: 'The Maximum Daily Loss Limit is recalculated daily at 00:00 CE(S)T as the difference between: the account balance recorded at 00:00 CE(S)T of the current day and the Maximum Daily Loss Amount, which is 5% of the Initial Simulated Capital.' Floating P/L telt mee (equity = balance + open P/L ± swaps − commissies). Max loss statisch 10% van startkapitaal. Best Day Rule geldt alleen voor 1-Step, niet 2-Step.
+Implementatie: analyze_daily.py rapporteert nu naast de officiële lezing (balance om middernacht − laagste equity) ook de strengste (max(balance, equity) om middernacht). Kanttekening: EA-dag = servermiddernacht (= 23:00 CE(S)T, 1 u eerder dan FTMO) — klein effect.
+Uitkomsten: F1 RSI(2) officieel 6,1% / streng 6,1%; F2 ORB 1,4% / 1,4%; F3-RSI-poot 8,5% / 8,5%. De dagverliesproblemen zitten volledig in de RSI(2)-poot.
+Volgende stap: F1b (drie vooraf vastgelegde dagverlies-varianten voor RSI(2)).
