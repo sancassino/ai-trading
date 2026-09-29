@@ -9,6 +9,11 @@ param(
     [string]$SelectBottom = "false",
     [int]$RegimeSMAMonths = 0,
     [string]$RegimeSymbol = "US500.cash",
+    [double]$DailyGuardPct = 0,
+    [double]$TotalGuardPct = 0,
+    [string]$UniverseList = "",
+    [string]$RankByRiskAdj = "false",
+    [int]$MaxWait = 180,
     [string]$OutCsv = "MomentumRotation_output.csv"
 )
 
@@ -41,6 +46,10 @@ MaxLegWeight=$MaxLegWeight
 SelectBottom=$SelectBottom
 RegimeSMAMonths=$RegimeSMAMonths
 RegimeSymbol=$RegimeSymbol
+DailyGuardPct=$DailyGuardPct
+TotalGuardPct=$TotalGuardPct
+UniverseList=$UniverseList
+RankByRiskAdj=$RankByRiskAdj
 MagicNumber=20260925
 DiagBestandsnaam=$OutCsv
 "@
@@ -53,7 +62,7 @@ if (Test-Path $commonFile) { Remove-Item $commonFile -Force }
 Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{
     CommandLine = "`"C:\Program Files\MetaTrader 5\terminal64.exe`" /config:`"$iniPath`""
 } | Out-Null
-$maxWait = 180
+$maxWait = $MaxWait
 $waited = 0
 while (-not (Test-Path $commonFile) -and $waited -lt $maxWait) { Start-Sleep -Seconds 5; $waited += 5 }
 Start-Sleep -Seconds 3

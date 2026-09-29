@@ -313,3 +313,80 @@ risicobeperking — niet als garantie tegen elke bear-market.
   (bijv. niet handelen als de brede markt onder zijn eigen langetermijn-MA
   staat) zonder de whipsaw-problemen van eerdere trend-experimenten te
   herintroduceren.
+
+## Sessie 28 sep 2026 — regimefilter over plateau, dag-equity, FTMO-dagregel
+
+### Infrastructuur
+- Python `MetaTrader5` 5.0.6180 op de VM werkt gewoon via SSH (`mt5_account_info.py`):
+  FTMO-Demo, login 1514742872, **€80.000 (EUR!)** — backtests rekenen met $100k USD.
+- EA logt nu per dag balance/equity bij dagstart + min-equity (`*_daily.csv`), en heeft
+  een optionele equity-guard (`DailyGuardPct`, `TotalGuardPct`). Baseline reproduceert
+  de oude `MR_t2_l3.csv` op centen na.
+- Tools: `analyze_daily.py` (DD op dag-equity, FTMO-dagverlies), `mc_daily_ftmo.py`
+  (Monte Carlo met hele echte maanden, balance + equity per dag), `split_eval.py`
+  (train/test op dag-equity), runners `run_sweep_regime_plateau.sh`, `run_expo_l1.sh`.
+  Alle resultaten in `results/plateau/`. Periode 2021-01-01 t/m 2026-09-24.
+
+### 1. Eerdere drawdowns waren te rooskleurig
+Oude cijfers keken alleen naar gesloten deals. Op dag-equity (incl. zwevend verlies):
+TopN=2/lb=3 @30%: statische DD **10,4%** (niet 9,8%), trailing 19,4% (niet 8,8%), en
+FTMO-dagverlies tot **6,7%** (maart 2021). FTMO-regel: equity moet boven
+*balance om 00:00 CE(S)T − 5% van startkapitaal* blijven — zwevend verlies van eerdere
+dagen telt dus mee, en dat is precies het risico van een maand vasthouden.
+$/maand over de volle 69 maanden = $512 (eerder $695, gedeeld door ~52 mnd).
+Dag-MC (FTMO-regels op dagniveau): funded 21–29%, live ≥$1k/mnd **3–6%**.
+
+### 2. Regimefilter (US500 > SMA10 maanden) over alle 9 configs, 30% exposure
+Alle 9 blijven positief, rendement vrijwel gelijk, 2022 grotendeels gedempt,
+statische DD omlaag in élke config (10,4–15,9% → 4,4–10,4%), trailing ~19% → 12–15%.
+**Lost de dagverlies-overschrijdingen niet op** (5,3–10,0%): die zitten in risk-on maanden.
+
+### 3. Equity-guard
+- `TotalGuardPct=8` is een ontwerpfout: onder $92k flattent de EA bij elke rebalans
+  opnieuw → permanent plat (5 configs eindigen op −$8k). Niet gebruiken.
+- `DailyGuardPct=4` (flat tot volgende maand): dagverlies ≤4–5% overal. Bij lb=1
+  (TopN 2/3/4) goed: stat. DD 2,3–4,3%, 5/6 jaar+. Bij lb=2/3 schadelijk
+  (verlies realiseren en daarna opnieuw instappen in de verliezer).
+- Exposure omhoog (lb=1): resultaten sterk padafhankelijk. Beste in-sample:
+  TopN=2/lb=1/SMA10/guard 3%/60%: $1.340/mnd, 6/6 jaar, stat. DD 5,6%, dag 4,1%,
+  top-3 maanden = 50% van netto; dag-MC funded 45–61%, live ≥$1k 21–22%.
+  Maar guard 4% i.p.v. 3% geeft $925, en TopN=3 gaat juist omlaag ($821→$661).
+
+### 4. Train/test (2021-01..2024-07 / 2024-08..2026-09) over 36 runs
+- **Teken robuust: 36/36 positief in de testperiode.**
+- **Parameterkeuze niet robuust: Spearman train↔test = −0,28.** De beste
+  train-configs (60% + guard) halen in test gemiddeld ~$440/mnd; simpele 30%-configs
+  zonder guard $550–820/mnd in test (maar breken de FTMO-dagregel).
+- Conclusie: $1.340/mnd is een in-sample selectie, geen verwachting. Realistische
+  verwachting bij FTMO-veilige instelling ligt rond $400–600/mnd.
+
+### 5. Plateau-ensemble (alle 9 configs tegelijk, elk 1/9 exposure) — `ensemble_eval.py`
+Met SMA10-filter @30%: ~$341/mnd, stat. DD 6,8%, dagverlies 5,0%, train $245 → test $503.
+Verdubbelen van exposure: dagverlies 10%, stat. DD 13,6% → breekt FTMO.
+**Robuuste edge van de 16-instrumenten-rotatie ≈ $350–500/mnd per $100k bij FTMO-veilig risico.**
+
+### 6. Breed universum (65 FTMO-instrumenten, vooraf vastgelegde regel: alle niet-FX/
+niet-crypto met D1-data ≤ 2020-12-31; `universe_wide.txt`, `symbol_history_FTMO.csv`)
+- Valkuil gevonden: Strategy Tester kapt string-inputs af (~255 tekens) → eerste "brede"
+  run gebruikte stilletjes 33 symbolen (gearchiveerd in `results/wide/invalid_truncated/`).
+  Fix: `UniverseList="file:<naam>"` leest uit Common\Files.
+- Valkuil 2: retry-op-elke-tick met 65 symbolen gaf een tester-log van 3,8 GB; een
+  log-query daarop liet de VM (8 GB) out-of-memory gaan → VM gereset via gcloud.
+  Fix: retry max 1x/minuut (run 2x sneller, log ~70 MB). EA schrijft nu ook `*_ranks.csv`.
+- Ruwe momentum, TopN {3,5,8} × lb {1,3}: **5/6 netto negatief, 1–2/6 jaar positief,
+  stat. DD tot 30%.** Top-3 wordt gedomineerd door MSTR/NVDA/PLTR/AMD/TSLA/GME; GME
+  alleen −$14,7k.
+- Vol-gecorrigeerd (rang op rendement/ATR%, inverse-vol weging; `RankByRiskAdj`):
+  breed lb=1 +$250–400/mnd maar 3/6 jaar+ (alle winst 2024–26), lb=3 ~vlak;
+  op het 16-universum juist slechter ($131 vs $436/mnd). Geen robuuste verbetering.
+
+### Conclusie na deze sessie
+1. De momentum-edge is **niet universum-robuust**: buiten de 16 met terugwerkende
+   kracht gekozen instrumenten (incl. NVDA/META/TSLA, de grote winnaars van precies
+   2021–2026) verdwijnt hij. Het 16-resultaat is waarschijnlijk deels
+   hindsight-selectie van het universum.
+2. Binnen het 16-universum is het teken robuust (36/36 test-runs positief), maar
+   parameterkeuze niet (Spearman −0,28) en het FTMO-veilige niveau ligt rond
+   $350–500/mnd — onder het doel van $1.000.
+3. Veel varianten getest op dezelfde 5,7 jaar data → verder variëren op deze data is
+   data-mining. Verder zoeken vereist een andere bron van edge of langere/onafhankelijke data.

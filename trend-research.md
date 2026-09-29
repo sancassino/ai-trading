@@ -1,7 +1,7 @@
 # Trend-following op indices/cross-asset — eerste bevindingen (24 sep 2026)
 
 Status: Python/Yahoo-onderzoek, NOG NIET gevalideerd met echte MT5/FTMO-data.
-Blocker: SSH naar de VM (34.70.160.155:22) is geblokkeerd op omgevingsniveau
+Blocker: SSH naar de VM (34.69.153.107:22) is geblokkeerd op omgevingsniveau
 van deze cloud-sessie (raw TCP timeout, los van tooling) — actie nodig van
 Sandro: sessie-titelbalk → cloud-omgeving-menu → Edit → Network access →
 host toevoegen. Zodra dat open staat kan alles hieronder op de FTMO Strategy
@@ -103,12 +103,12 @@ funded ~30%, live ≥$1k/mnd 12mnd ~1%. Dit is dus een orde van grootte beter.
 ## Status 24 sep 2026 (vervolgsessie)
 
 Nieuwe sessie kon de VM niet bereiken: SSH (poort 22) en de TLS-relay
-(poort 443 via `34.70.160.155.nip.io`) timen allebei uit op
+(poort 443 via `34.69.153.107.nip.io`) timen allebei uit op
 environment-netwerkniveau, ook al claimt het overdrachtsdocument dat de
 nip.io-host al was toegevoegd. Yahoo Finance is in déze sessie eveneens
 geblokkeerd (proxy 403) — dus zelfs het Python/Yahoo-onderzoek kon niet
 verder uitgebreid worden. Actie vereist van Sandro: sessie-titelbalk →
-cloud-omgeving-menu → Edit → Network access → `34.70.160.155.nip.io`
+cloud-omgeving-menu → Edit → Network access → `34.69.153.107.nip.io`
 (opnieuw) toevoegen, en de sessie verifieert dit dan als eerste stap.
 
 Wel gedaan zonder netwerktoegang: `TrendFollow_CrossAsset.mq5` geschreven

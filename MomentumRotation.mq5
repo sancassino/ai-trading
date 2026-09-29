@@ -21,10 +21,32 @@ input ulong  MagicNumber    = 20260925;
 input string DiagBestandsnaam = "MomentumRotation_output.csv";
 input int    RegimeSMAMonths = 0;      // 0 = disabled. >0: only trade when RegimeSymbol > its N-month SMA
 input string RegimeSymbol    = "US500.cash";
+input double DailyGuardPct   = 0;      // 0 = off. >0: flatten + wait for next month if equity < day-start balance - pct% of initial capital (FTMO daily-loss protection)
+input double TotalGuardPct   = 0;      // 0 = off. >0: flatten + wait for next month if equity < initial capital - pct% (FTMO max-loss protection)
+input double InitialCapital  = 0;      // 0 = balance at EA start
 
-string UNIVERSE[] = {"US500.cash","US100.cash","US30.cash","EU50.cash","UK100.cash","GER40.cash","XAUUSD","USOIL.cash","EURUSD","AAPL","MSFT","AMZN","GOOG","META","NVDA","TSLA"};
+input bool   RankByRiskAdj   = false;  // true: rank on return / ATR%(20) instead of raw return (vol-adjusted momentum)
+input string UniverseList    = "";     // comma-separated symbols, or "file:<name>" = read from Common\Files (tester truncates long strings); empty = DEFAULT_UNIVERSE
+
+string DEFAULT_UNIVERSE[] = {"US500.cash","US100.cash","US30.cash","EU50.cash","UK100.cash","GER40.cash","XAUUSD","USOIL.cash","EURUSD","AAPL","MSFT","AMZN","GOOG","META","NVDA","TSLA"};
+string UNIVERSE[];
 
 datetime lastRebalanceMonth = 0;
+
+// Daily equity log (for FTMO daily-loss / floating-drawdown analysis):
+// per server day the balance+equity at the first tick, the lowest equity
+// seen during the day, and the equity at the last tick.
+datetime dayDate[];
+double   dayStartBal[], dayStartEq[], dayMinEq[], dayEndEq[];
+int      dayCount = 0;
+
+string   rankLog[];      // one line per instrument per rebalance: month;symbol;return
+int      rankCount = 0;
+datetime lastAttempt = 0; // retry throttle for ProcessPendingRebalance
+
+double   initialCap = 0;
+bool     guardHalted = false; // flat until the next monthly rebalance
+int      guardTriggers = 0;
 bool   rebalancePending = false;
 string targetSyms[];   // this month's target legs
 double targetLots[];   // pre-computed lot size per leg
@@ -53,16 +75,102 @@ void ExportDeals()
    Print("ExportDeals: wrote deal records to ", DiagBestandsnaam);
   }
 
+void TrackDaily()
+  {
+   datetime now = TimeCurrent();
+   datetime d = now - (now % 86400);
+   double eq  = AccountInfoDouble(ACCOUNT_EQUITY);
+   if(dayCount == 0 || dayDate[dayCount - 1] != d)
+     {
+      dayCount++;
+      ArrayResize(dayDate, dayCount, 4096);
+      ArrayResize(dayStartBal, dayCount, 4096);
+      ArrayResize(dayStartEq, dayCount, 4096);
+      ArrayResize(dayMinEq, dayCount, 4096);
+      ArrayResize(dayEndEq, dayCount, 4096);
+      int i = dayCount - 1;
+      dayDate[i] = d;
+      dayStartBal[i] = AccountInfoDouble(ACCOUNT_BALANCE);
+      dayStartEq[i] = eq;
+      dayMinEq[i] = eq;
+      dayEndEq[i] = eq;
+      return;
+     }
+   int i = dayCount - 1;
+   if(eq < dayMinEq[i]) dayMinEq[i] = eq;
+   dayEndEq[i] = eq;
+  }
+
+void AddRankLine(string line)
+  {
+   ArrayResize(rankLog, rankCount + 1, 8192);
+   rankLog[rankCount++] = line;
+  }
+
+void ExportRanks()
+  {
+   string fn = DiagBestandsnaam;
+   StringReplace(fn, ".csv", "_ranks.csv");
+   int fh = FileOpen(fn, FILE_WRITE|FILE_TXT|FILE_COMMON|FILE_ANSI);
+   if(fh == INVALID_HANDLE) return;
+   FileWriteString(fh, "time;symbol;ret;rank;lots\n");
+   for(int i = 0; i < rankCount; i++) FileWriteString(fh, rankLog[i] + "\n");
+   FileClose(fh);
+  }
+
+void ExportDaily()
+  {
+   string fn = DiagBestandsnaam;
+   StringReplace(fn, ".csv", "_daily.csv");
+   int fh = FileOpen(fn, FILE_WRITE|FILE_CSV|FILE_COMMON|FILE_ANSI, ';');
+   if(fh == INVALID_HANDLE) return;
+   FileWrite(fh, "date", "start_balance", "start_equity", "min_equity", "end_equity");
+   for(int i = 0; i < dayCount; i++)
+      FileWrite(fh, TimeToString(dayDate[i], TIME_DATE), DoubleToString(dayStartBal[i], 2), DoubleToString(dayStartEq[i], 2), DoubleToString(dayMinEq[i], 2), DoubleToString(dayEndEq[i], 2));
+   FileClose(fh);
+  }
+
 int OnInit()
   {
    trade.SetExpertMagicNumber(MagicNumber);
+   initialCap = (InitialCapital > 0) ? InitialCapital : AccountInfoDouble(ACCOUNT_BALANCE);
+   if(StringLen(UniverseList) > 0)
+     {
+      string list = UniverseList;
+      if(StringFind(list, "file:") == 0)
+        {
+         int fh = FileOpen(StringSubstr(list, 5), FILE_READ|FILE_TXT|FILE_COMMON|FILE_ANSI);
+         if(fh == INVALID_HANDLE) { Print("Universe file not found: ", list); return(INIT_FAILED); }
+         list = "";
+         while(!FileIsEnding(fh)) list += FileReadString(fh);
+         FileClose(fh);
+        }
+      string parts[];
+      int n = StringSplit(list, ',', parts);
+      ArrayResize(UNIVERSE, 0);
+      for(int i = 0; i < n; i++)
+        {
+         StringTrimLeft(parts[i]); StringTrimRight(parts[i]);
+         if(StringLen(parts[i]) == 0) continue;
+         int k = ArraySize(UNIVERSE);
+         ArrayResize(UNIVERSE, k + 1);
+         UNIVERSE[k] = parts[i];
+        }
+     }
+   else
+      ArrayCopy(UNIVERSE, DEFAULT_UNIVERSE);
    for(int i = 0; i < ArraySize(UNIVERSE); i++)
-      SymbolSelect(UNIVERSE[i], true);
+      if(!SymbolSelect(UNIVERSE[i], true))
+         Print("Universe: cannot select ", UNIVERSE[i]);
+   Print("Universe size: ", ArraySize(UNIVERSE));
    return(INIT_SUCCEEDED);
   }
 
 void OnDeinit(const int reason)
   {
+   Print("Equity guard triggers: ", guardTriggers);
+   ExportRanks();
+   ExportDaily(); // before ExportDeals: runners wait for the deals file
    ExportDeals();
   }
 
@@ -73,6 +181,20 @@ double MonthsAgoClose(string sym, int monthsAgo)
    if(shift < 0) return -1;
    double c = iClose(sym, PERIOD_D1, shift);
    return c;
+  }
+
+double AtrPct(string sym)
+  {
+   int h = iATR(sym, PERIOD_D1, 20);
+   double buf[]; ArraySetAsSeries(buf, true);
+   double pct = 0;
+   if(h != INVALID_HANDLE && CopyBuffer(h, 0, 1, 1, buf) > 0)
+     {
+      double px = iClose(sym, PERIOD_D1, 1);
+      if(px > 0) pct = buf[0] / px;
+     }
+   if(h != INVALID_HANDLE) IndicatorRelease(h);
+   return pct;
   }
 
 double CurrentClose(string sym)
@@ -177,8 +299,22 @@ void PrepareRebalance()
       string s = UNIVERSE[i];
       double now = CurrentClose(s);
       double then = MonthsAgoClose(s, LookbackMonths);
-      if(now <= 0 || then <= 0) continue;
+      if(now <= 0 || then <= 0)
+        {
+         AddRankLine(TimeToString(TimeCurrent(), TIME_DATE) + ";" + s + ";NA;;");
+         continue;
+        }
       rets[count] = (now - then) / then;
+      if(RankByRiskAdj)
+        {
+         double v = AtrPct(s);
+         if(v <= 0)
+           {
+            AddRankLine(TimeToString(TimeCurrent(), TIME_DATE) + ";" + s + ";NA;;");
+            continue;
+           }
+         rets[count] /= v;
+        }
       syms[count] = s;
       count++;
      }
@@ -270,11 +406,61 @@ void PrepareRebalance()
       targetSyms[i] = s;
       targetLots[i] = lots;
      }
+   for(int i = 0; i < count; i++)
+     {
+      string lotStr = "";
+      for(int j = 0; j < k; j++) if(targetSyms[j] == syms[i]) lotStr = DoubleToString(targetLots[j], 2);
+      AddRankLine(TimeToString(TimeCurrent(), TIME_DATE) + ";" + syms[i] + ";" + DoubleToString(rets[i], 4) + ";" + IntegerToString(i + 1) + ";" + lotStr);
+     }
    rebalancePending = true;
+  }
+
+// Closes every position of this EA. Returns true when none remain.
+bool CloseAll()
+  {
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+     {
+      ulong ticket = PositionGetTicket(i);
+      if(ticket == 0) continue;
+      if(PositionGetInteger(POSITION_MAGIC) != (long)MagicNumber) continue;
+      trade.PositionClose(ticket);
+     }
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+     {
+      ulong ticket = PositionGetTicket(i);
+      if(ticket != 0 && PositionGetInteger(POSITION_MAGIC) == (long)MagicNumber) return false;
+     }
+   return true;
+  }
+
+bool GuardBreached()
+  {
+   if(dayCount == 0) return false;
+   double eq = AccountInfoDouble(ACCOUNT_EQUITY);
+   if(DailyGuardPct > 0 && eq < dayStartBal[dayCount - 1] - initialCap * DailyGuardPct / 100.0) return true;
+   if(TotalGuardPct > 0 && eq < initialCap * (1.0 - TotalGuardPct / 100.0)) return true;
+   return false;
   }
 
 void OnTick()
   {
+   TrackDaily();
+   if(!guardHalted && GuardBreached())
+     {
+      guardHalted = true;
+      guardTriggers++;
+      rebalancePending = false;
+      PrintFormat("Equity guard hit at %s: equity %.2f, day-start balance %.2f", TimeToString(TimeCurrent()), AccountInfoDouble(ACCOUNT_EQUITY), dayStartBal[dayCount - 1]);
+     }
+   if(guardHalted)
+     {
+      // keep retrying the flatten (market-closed rejections) until the new month
+      CloseAll();
+      MqlDateTime g;
+      TimeToStruct(TimeCurrent(), g);
+      if((datetime)(g.year * 100 + g.mon) == lastRebalanceMonth) return;
+      guardHalted = false;
+     }
    MqlDateTime dt;
    TimeToStruct(TimeCurrent(), dt);
    datetime monthKey = (datetime)(dt.year * 100 + dt.mon); // crude month id
@@ -283,7 +469,10 @@ void OnTick()
       lastRebalanceMonth = monthKey;
       PrepareRebalance();
      }
-   if(rebalancePending)
+   if(rebalancePending && TimeCurrent() - lastAttempt >= 60)
+     {
+      lastAttempt = TimeCurrent();
       ProcessPendingRebalance();
+     }
   }
 //+------------------------------------------------------------------+
