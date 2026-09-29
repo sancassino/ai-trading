@@ -96,3 +96,11 @@ Getest (PREREG_B2.md vóór berekening): b2_sim.py, gepoolde sleeves (1/N), kost
 Resultaat (t / H1 1995–2010 / H2 2011–26 / maxDD / DSR305): (a) IBS t 1,93, +78%/+102%, DD 45,7%, 0,17; (b) RSI(2) t 3,65, +95%/+38%, DD 15,9%, 0,76 — faalt alleen op DD (grens 15%), edge verzwakt na 2010 (~2%/jr); (c1) intraday t −5,98 (kosten 2×0,02%/dag ≈ 10%/jr); (c2) overnight t −3,49; (d) TOM t 2,49, H2 slechts +9%. Per instrument: RSI(2) SPX t 4,0, NDX 3,7; IBS NDX 3,4.
 Conclusie: alle 5 afgewezen volgens de beslisregel; RSI(2) is het dichtst bij (niet gered). TRIAL_COUNT 305.
 Volgende stap: B3 (dollar-neutrale long/short momentum).
+
+## 2026-09-29 21:20 — B3: dollar-neutrale long/short momentum — factor bestaat niet, familie definitief dood
+
+Getest (PREREG_B3.md vóór berekening): b3_sim.py, long top-K/short bottom-K, 9 configs × universum A (26 ETF's) en B (PIT top-10), 2000–2026, vol-target 10%, hefboom ≤4, geen regimefilter, spread 0,05%/kant, financiering DTB3 ± 2%.
+Resultaat netto: ensemble A CAGR −3,25%, Sharpe −0,29, t −1,48, DD 65%, 11/27 jaar+; ensemble B −6,01%, Sharpe −0,65, t −3,36, DD 83%, 9/27. Alle 18 configs negatief. Correlatie met SPY −0,05…−0,18 (beta-neutraal, zoals bedoeld). DSR 0,00.
+Diagnostiek (geen beslisgrond) zonder spread/markup: A Sharpe 0,02, B −0,30 (B 2000–12 −61%, 2013–26 +15%): in de top-10 keren recente winnaars eerder om. Markup kost bij hefboom tot 4× ~6–8%/jr.
+Conclusie: beslisregel (Sharpe ≥0,3 in beide universums) faalt ruim → momentum-familie definitief dood. TRIAL_COUNT 323.
+Volgende stap: B4 (intraday op FTMO-M5-data, VM-export).

@@ -23,3 +23,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 |---|---|---|---|
 | 2026-09-29 | B1 (alleen statistiek, geen nieuwe strategie) | 0 | 300 |
 | 2026-09-29 | B2 dagfrequent (a IBS, b RSI2, c1 intraday, c2 overnight, d TOM), gepoold | 5 | 305 |
+| 2026-09-29 | B3 dollar-neutrale L/S momentum (9 configs × universum A en B) | 18 | 323 |
