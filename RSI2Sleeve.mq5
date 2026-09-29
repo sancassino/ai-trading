@@ -16,6 +16,8 @@ input double LegFrac     = 0.1666667; // notional per open position as fraction 
 input double EntryRSI    = 10;
 input double ExitRSI     = 70;
 input int    TrendSMA    = 200;
+input int    MaxIndexPositions = 0;   // 0 = onbeperkt; XAUUSD telt niet als index
+input double DayGuardPct = 0;         // 0 = uit; >0: flat + geen instap rest van de dag als equity < dagstart-balance - pct% startkapitaal
 input ulong  MagicNumber = 20260930;
 input string DiagBestandsnaam = "RSI2Sleeve_output.csv";
 
@@ -24,6 +26,8 @@ int      hRsi[], hSma[];
 datetime lastBar[];
 int      want[];          // 1 = should be long, 0 = should be flat, -1 = no pending action
 datetime lastAttempt = 0;
+double   initialCap = 0;
+datetime guardDay = 0;
 
 // daily equity log (same format as MomentumRotation)
 datetime dayDate[];
@@ -119,8 +123,21 @@ void ClosePos(string s)
      }
   }
 
+bool IsIndex(string s) { return s != "XAUUSD"; }
+
+int IndexExposure()
+  {
+   int n = 0;
+   for(int k = 0; k < ArraySize(syms); k++)
+      if(IsIndex(syms[k]) && (HasPos(syms[k]) || want[k] == 1)) n++;
+   return n;
+  }
+
+bool GuardActive() { datetime now = TimeCurrent(); return guardDay == now - (now % 86400); }
+
 void Evaluate()
   {
+   int cand[]; double candRsi[];
    for(int k = 0; k < ArraySize(syms); k++)
      {
       string s = syms[k];
@@ -131,8 +148,37 @@ void Evaluate()
       if(CopyBuffer(hRsi[k], 0, 1, 1, r) != 1 || CopyBuffer(hSma[k], 0, 1, 1, m) != 1) continue;
       double c1 = iClose(s, PERIOD_D1, 1);
       bool held = HasPos(s);
-      if(!held && r[0] < EntryRSI && c1 > m[0]) want[k] = 1;
+      if(!held && r[0] < EntryRSI && c1 > m[0])
+        {
+         int n = ArraySize(cand); ArrayResize(cand, n + 1); ArrayResize(candRsi, n + 1);
+         cand[n] = k; candRsi[n] = r[0];
+        }
       else if(held && r[0] > ExitRSI) want[k] = 0;
+     }
+   // instapkandidaten: laagste RSI(2) eerst, met index-cap
+   int n = ArraySize(cand);
+   for(int i = 0; i < n; i++)
+     {
+      int best = i;
+      for(int j = i + 1; j < n; j++) if(candRsi[j] < candRsi[best]) best = j;
+      int tk = cand[i]; cand[i] = cand[best]; cand[best] = tk;
+      double tr = candRsi[i]; candRsi[i] = candRsi[best]; candRsi[best] = tr;
+      int k = cand[i];
+      if(GuardActive()) continue;
+      if(MaxIndexPositions > 0 && IsIndex(syms[k]) && IndexExposure() >= MaxIndexPositions) continue;
+      want[k] = 1;
+     }
+  }
+
+void CheckGuard()
+  {
+   if(DayGuardPct <= 0 || dayCount == 0 || GuardActive()) return;
+   if(AccountInfoDouble(ACCOUNT_EQUITY) < dayStartBal[dayCount - 1] - initialCap * DayGuardPct / 100.0)
+     {
+      datetime now = TimeCurrent();
+      guardDay = now - (now % 86400);
+      for(int k = 0; k < ArraySize(syms); k++) want[k] = HasPos(syms[k]) ? 0 : -1;
+      PrintFormat("Dagguard %s: equity %.2f < dagstart-balance %.2f - %.1f%%", TimeToString(now), AccountInfoDouble(ACCOUNT_EQUITY), dayStartBal[dayCount - 1], DayGuardPct);
      }
   }
 
@@ -147,6 +193,7 @@ void Execute()
       bool held = HasPos(s);
       if(want[k] == 1 && !held)
         {
+         if(GuardActive()) { want[k] = -1; continue; }
          double lots = LotsForNotional(s, AccountInfoDouble(ACCOUNT_EQUITY) * LegFrac);
          if(lots > 0 && trade.Buy(lots, s) && HasPos(s)) want[k] = -1;
         }
@@ -162,6 +209,7 @@ void Execute()
 int OnInit()
   {
    trade.SetExpertMagicNumber(MagicNumber);
+   initialCap = AccountInfoDouble(ACCOUNT_BALANCE);
    string parts[];
    int n = StringSplit(SymbolList, ',', parts);
    ArrayResize(syms, n); ArrayResize(hRsi, n); ArrayResize(hSma, n); ArrayResize(lastBar, n); ArrayResize(want, n);
@@ -182,6 +230,7 @@ void OnDeinit(const int reason) { EventKillTimer(); ExportAll(); }
 void Step()
   {
    TrackDaily();
+   CheckGuard();
    Evaluate();
    Execute();
   }

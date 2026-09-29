@@ -254,3 +254,10 @@ Bron ftmo.com/en/trading-objectives (29-09-2026), letterlijk: 'The Maximum Daily
 Implementatie: analyze_daily.py rapporteert nu naast de officiële lezing (balance om middernacht − laagste equity) ook de strengste (max(balance, equity) om middernacht). Kanttekening: EA-dag = servermiddernacht (= 23:00 CE(S)T, 1 u eerder dan FTMO) — klein effect.
 Uitkomsten: F1 RSI(2) officieel 6,1% / streng 6,1%; F2 ORB 1,4% / 1,4%; F3-RSI-poot 8,5% / 8,5%. De dagverliesproblemen zitten volledig in de RSI(2)-poot.
 Volgende stap: F1b (drie vooraf vastgelegde dagverlies-varianten voor RSI(2)).
+
+## 2026-09-29 23:43 — F1b: dagverlies-beheersing RSI(2) — alle 3 varianten AFGEWEZEN
+
+Getest (PREREG_F1b.md vóór berekening): RSI2Sleeve met MaxIndexPositions / DayGuardPct; varianten (i) cap 2 indexposities, (ii) dagguard 3%, (iii) beide; schalen 0,8/1,0/1,5/2,0 × 1/6; MT5 €80k EUR 2021–2026, swap-gecorrigeerd.
+Resultaat (schaal 1,0): (i) cap SR 0,26, dagverlies 4,7%, ≈ €50/mnd; (ii) guard SR 0,44, dagverlies 3,9%, ≈ €118/mnd, ~49 trades/jr; (iii) beide SR 0,22, 3,7%, ≈ €41/mnd. Guard houdt dagverlies ≤ 3,9% op alle schalen maar verlaagt het rendement sterk (sluit op het dieptepunt, mist de omkeer); cap blokkeert juist de gelijktijdige index-signalen. Bij schaal ≥ 1,5 stijgt de DD naar 8–16%.
+Conclusie: geen variant haalt SR ≥ 0,5 bij dagverlies < 4% → alle drie afgewezen. TRIAL_COUNT 351.
+Volgende stap: F3 opnieuw met schaal bepaald door de dagverliesregel (< 4%) i.p.v. Python-DD.
