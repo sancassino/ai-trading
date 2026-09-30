@@ -11,3 +11,15 @@
   3. `PREREG_S2_USOIL_EIA.md` — USOIL EIA-window breakout, flat zelfde dag
 - Beslisregel overal: dag-/event-geclusterde t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; reserve 2025+ onaangeraakt.
 - Volgende cyclus: geen engine-run door Strateeg-2 (Uitvoerder/CTO); eventueel verfijning na Manager/CEO-vergelijking met Strateeg-1.
+
+## 2026-09-30 ~21:47 Europe/Amsterdam — Hourly cycle (:40 slot)
+
+- `git fetch --all`; tip `grok/strateeg-2` @ 7c844c2 (up to date with origin).
+- **Refresh (read-only, geen merge):**
+  - `BESLUITEN.md` tail via `origin/claude/upbeat-dirac-g2810q`: D-083…D-086 FTMO-pivot (EV-maatstaf, reserve 2025+ geschorst, SymbolList_FTMO universum, daily-flat/laag-swap zoekrichting).
+  - `STRATEGIE_CATALOGUS.md` §9–§10 via `origin/claude/trusting-faraday-34tsmg`: A1 ORB, A2 SIP, A3 noise, A4 C17, A5 FX London-open; B1–B3 FX/D1; §10 noteerde S2 nog leeg (verouderd t.o.v. onze kickoff-PREREGs).
+  - `origin/grok/strateeg-1` research cycle 1: `PREREG_GS01` (gap-aligned long-only index ORB), `PREREG_GS02` (Asian-range fade EUR/GBP) — distinct van S2-kickoff.
+- **SymbolList_FTMO / costs:** 166 symbolen; COSTS_FTMO.csv kern (indices RT 0,45–0,78 bp; XAU 0,83; FX majors 0,63–1,22; USOIL 3,34); BTCUSD in COSTS_FTMO_alle ≈ 1,25 bp rondreis; crypto overnight-swap zwaar → intraday-flat verplicht.
+- **Catalog-overlap check (geen duplicaat):** XAU overlap / GER40 open / USOIL EIA blijven; GS01/GS02/A5/Q3/I3/F5-JP225-ORB niet heropenen.
+- **Nieuw deze cyclus:** `PREREG_S2_BTC_USOPEN.md` — BTCUSD break pre-US-cash range 15:30–16:00 Europe/Amsterdam, gefilterd op US100-gap teken, flat 21:00 (swap≈0). Beslisregel: dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; reserve 2025+ onaangeraakt.
+- Geen engine-run / geen gefabriceerde resultaten. Volgende cyclus: stilten tenzij Manager feedback of verdere niet-overlappende familie.
