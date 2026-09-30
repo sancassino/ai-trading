@@ -1,4 +1,4 @@
-# NEXT_STEPS v21 — Manager, 2026-09-30 14:15 Amsterdam — verwerkt D-042…D-046, RUNLOG_R2 (catalogusrun 2), engine-vehikelstandaarden
+# NEXT_STEPS v22 — Manager, 2026-09-30 14:40 Amsterdam — verwerkt D-042…D-050, RUNLOG_R2, U-005
 
 Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
 
@@ -23,6 +23,16 @@ Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). All
 1. **D2-uitbreiding (D-044, ≤ 3 u):** (a) TR/dividend (S&P, DAX, NDX) binnen bronvoorwaarden; (b) ≥ 20 instrumenten voor C54 (NZD/SEK/NOK-FX, Bund/JGB/Gilt-proxy's, agri/energie); (c) roll-schone zilver/koper/gas; (d) **FRED vanaf Debian ophalen en committen** (rentes, goud/CPI, FX); rate-limit, eerlijke UA, niets omzeilen.
 2. **Engine (D-045):** future-model-fix (FX = spot + renteverschil; doorlopende futures zonder rf-aftrek) blijft; opnemen in engine/README + ENGINE_TEMPLATE (Manager werkt ENGINE_TEMPLATE bij: zie §V).
 3. S3/P0 en F (forward) volgens bestaande punten hieronder.
+
+## 0d. D-047…D-050 (bindend) + Manager-QA
+**Uitvoerder-2 (vóór de reserve-run, naast run 3; geen extra trials, alleen vehikelrapporten):** (1) `cfd_retail` (−1,5%/jr op |notional|, beide kanten, + spread; 2× S0 gevoeligheid) voor C54qa, C05, C02, C17, C52; (2) `future_rounded` (hele micro-contracten bij €80k; 16 én 6–8 instrumenten; tracking-error, aantal nul-contracten); (3) **drie portefeuilles overal naast elkaar: P-ETF** (C52 lang + C02 + C17, geen hefboom/shorts; **dit is de adviesbasis**), **P1** (bovengrens) en **P-breed** (alle sleeves gelijk); (4) EUR-perspectief incl. hedged-variant; (5) live-haircut 30–50% expliciet in elk rapport.
+**Uitvoerder-1 (F, D-050):** `forward/portfolio_daily.csv` (P-ETF/P1/P-breed), sleeves + regel **exact** zoals in PREREG_PORT.md (levert Uitvoerder-2 binnen 1 cyclus), dagelijks mark-to-market, kosten per vehikel, vergelijking met engine (tracking-band). Papier, geen orders.
+**Manager-QA:**
+1. **Eén vehikelset vastleggen in PREREG_PORT.md (U-005):** de R2-etf-reeksen zijn gemaakt met oude standaard (3 bp, TER 0,10%, prijsindex); nu 13 bp, TER 0,07%, SPX_TR → **herrekenen met de nieuwe set vóór de portefeuilleregel/SHA**. Nooit twee vehikelsets in één rapport.
+2. **rf-definitie forward ≠ engine (DTB3 vs Treasury 3m via Yahoo):** vastleggen welke bron waar geldt, en het verschil (bp) rapporteren zodat tracking-afwijking niet ten onrechte als signaalfout wordt gelezen.
+3. **Forward-data zonder lookahead/restatement:** log per dag de gebruikte ruwe slotkoersen + tijdstempel van de download; adjclose achteraf kan herschreven worden (dividend) → forward-signalen op ruwe slot + apart TR-bijschrift; bewaar de dagelijkse bestanden onveranderd (data/daily-cron 22:05 UTC is append-only? bevestig).
+4. **Reserve-run-drempel:** alleen vrijgeven als D-047-rapporten er zijn én PREREG_PORT gecommit is; Uitvoerder-2 mag uitstellen met methodische reden (D-049). Meerdere portefeuilles = één gezamenlijke run, drie vooraf genoemde uitkomsten, geen selectie achteraf.
+5. **Broker-kosten:** alleen 'web-claim, onbevestigd' (D-048); geen omzeiling van 403.
 
 ## R — Catalogus (werkstroom R; volgorde D-032; ontdekking ≤ 2024-12-31, reserve-OOS 2025→ onaangeraakt)
 1. **C02-QA (Uitvoerder-2; CFD-benchmark al ✔: SR 0,32 vs 0,18, maxDD 54% vs 88%). Nog te doen per vehikel etf/future (geen reserve-OOS):** (a) vergelijk met **buy-and-hold** (SR, maxDD, DD-duur, CAGR) op dezelfde 5 indices; (b) **total return** (adjclose) i.p.v. price-index en **rente op cash** (IRX) in de vlakke maanden; (c) signaal bij maand-slot, uitvoering volgende handelsdag (geen lookahead), **switch-kosten** per vehikel; (d) effectieve N: 5 indices zijn sterk gecorreleerd → dag-/maandgeclusterde bootstrap over de gepoolde reeks, en 1 index tegelijk (SPX 1927–2024, N225, DAX) als robuustheidscheck; (e) subperiodes (decennia) en 'verloren decennia'; (f) publicatie 2007: rapporteer 2008→2024 apart als quasi-out-of-sample.
