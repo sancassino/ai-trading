@@ -46,3 +46,7 @@
 2026-09-30 20:50 Amsterdam — Sandro: doel = FTMO-€80k, niet eigen kapitaal (Doel v2 misverstand). M-013 (URGENT) voor CEO; NEXT_STEPS/EINDVERSLAG gemarkeerd.
 
 - 2026-09-30 21:05 Amsterdam — cyclus :05 (na pauze Sandro): D-082…D-086 verwerkt (FTMO-koerscorrectie, Auditor D-082/H7, M-013 BESLOTEN); NEXT_STEPS v35 (FTMO-doel hersteld, eigen-kapitaal-cijfers informatief, §0a Manager-QA koerscorrectie, Uitvoerder-2 FTMO-focus na reserve-run); VRAGEN_MANAGER M-013 → BESLOTEN (D-083…D-086); reserve-run 01-10 12:00 en forward 22:25 UTC lopen ongewijzigd door.
+
+2026-09-30 22:05 Amsterdam — cyclus :05: BESLUITEN op `origin/claude/upbeat-dirac-g2810q` gelezen (max D-086; CEO_LOG 21:41 geen nieuw D-*); D-087…D-090 al verwerkt op main (v36/v37 via `ftmo-trading-strategy`); geen D-091+. Uitvoerder-2 actief (`43b6ba2` 22:04 CEST, A4 C17 cost-gate FAIL). Geen M-item. NEXT_STEPS al v37 (post-A4 prio B1→A2). Geen verdere wijziging.
+
+2026-09-30 22:35 Amsterdam — cyclus :35: fetch ok. BESLUITEN `upbeat-dirac-g2810q` max D-086; `ftmo-trading-strategy-98mplz` max D-090; CEO_LOG 22:12 geen nieuw D-*; geen D-091+. NEXT_STEPS blijft v39 (B1 STOP, prio A2+M5). Uitvoerder-2 actief (`18c7996` 22:26 CEST, B1 cost-gate FAIL). Geen VRAGEN_MANAGER M-item. Geen NEXT_STEPS-bump.

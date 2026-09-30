@@ -954,3 +954,22 @@ Uitvoerder-1-taken ongewijzigd: D-086 (FTMO-snapshot/spreads) klaar; forward-con
 ## 2026-09-30 19:43 — NEXT_STEPS v36 (main, D-089/D-090) gelezen; Managerbranch 'v35 compleet' gemerged met voorrang main en verwijderd
 
 D-090: Claude = CEO + Auditor; Grok = CTO + Manager + Uitvoerder-2 + Strateeg(-2). Voor Uitvoerder-1 (Debian/VM/MT5) geen wijziging in v36: cron's laten draaien (data-update 22:05, F3b 22:15, portefeuille-papier 22:25, FTMO-snapshot 21:30), Uitvoerder-2-branch in main mergen, data/FTMO-specs bijhouden, MT5 op verzoek. D-089 model-beleid genoteerd. Beide NEXT_STEPS-blobs gemarkeerd.
+
+## 2026-09-30 22:07 — NEXT_STEPS v37: post-A4 prio (Manager)
+
+A4 C17 formeel gestopt (kostenpoort TRAIN FAIL `43b6ba2`). Prio lock: **1) B1 TSMOM-mix FX** → **2) A2 ORB** parallel PREREG; A5 geparkeerd tot M5; A1 skip zonder Sandro-data. Strateeg/Strateeg-2 akkoord in teamchat. Uitvoerder-2 wacht op B1-PREREG.
+
+
+## 2026-09-30 20:14 — NEXT_STEPS v38 gelezen (main): A5 wacht op M5, A2 op US41-spreads — U-006 aan Manager/CTO; US41-spreads staan al op main
+
+v38: B1 (TSMOM-mix FX, D1) prio 1 bij Uitvoerder-2; A2 Stocks-in-Play ORB wacht op 'US41-spreads'; A5 FX-intradag geparkeerd tot M5 beschikbaar is. Beide raken data die alleen op Debian staat. US41-spreads zijn al op main (COSTS_FTMO_alle.csv + per uur; alle 41 aandelen, met caveat over spread-0-bars). Voor M5: vraag U-006 (VRAGEN_UITVOERDER.md) met standaardactie na 60 min: eenmalige gzip-momentopname van 24 symbolen (15 FX + XAU + 8 kern-indices, ≈ 100 MB, t/m 2026-09-29) in data/m5gz/ + checksums (repo privé). Blob v38 gemarkeerd.
+
+## 2026-09-30 22:30 — NEXT_STEPS v39: B1 STOP → prio A2 + M5
+
+B1 kostenpoort FAIL (`18c7996`). A4 blijft dood. Prio: A2-PREREG (Strateeg) + M5-snapshot U-006 A/Debian (Uitvoerder-2); A5 parallel zodra M5. Geen nieuwe overnight maand-sleeves. CTO-opdracht.
+
+
+## 2026-09-30 20:45 — U-006 optie A (NEXT_STEPS v39): FTMO-M5-momentopname van 24 symbolen in data/m5gz/ (96 MB gzip) — deblokkeert A5/S2-intradag
+
+Uitgevoerd door Uitvoerder-1 (data staat alleen op Debian; v39 noemde Uitvoerder-2/Debian). data/m5gz/: 14 FX-paren (EURUSD, GBPUSD, USDJPY, AUDUSD, USDCAD, USDCHF, NZDUSD, EURGBP, EURJPY, GBPJPY, AUDJPY, EURCHF, EURAUD, GBPAUD), XAUUSD, XAGUSD, 8 indices (US500, US100, US30, GER40, UK100, JP225, AUS200, EU50) — gzip van de originele CSV (identieke inhoud), 2021-01 → 2026-09-29, servertijd (NY + 7 u), spread in punten × point.
+Integriteit: CHECKSUMS.sha256 (gz) geverifieerd; CHECKSUMS_bron_csv.sha256 (ongecomprimeerd) — steekproef EURUSD uitgepakt = bron (SHA-256 ac7d326d…). README.md met laadfunctie (load_gz) of uitpakken naar data/m5 voor b4_sim.load; licentie: FTMO-platformdata, alleen intern (privé-repo); niet dagelijks bijgewerkt. Reserve 2025-01→ zit in de data — alleen gebruiken zoals PREREG/CEO toestaat. Aandelen-M5 (A2) op verzoek (≈ 40 MB).

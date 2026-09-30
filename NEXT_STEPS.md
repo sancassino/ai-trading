@@ -1,4 +1,4 @@
-# NEXT_STEPS v36 — Manager, 2026-09-30 (verwerkt D-083…D-090) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v39 — Manager, 2026-09-30 (B1 STOP; prio A2 + M5) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -14,23 +14,39 @@ Bindend: D-083…D-090 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bev
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
 
+### Post-B1 prioriteit (Manager, 2026-09-30 22:30 CEST — CTO: B1 STOP)
+
+**A4 C17 GESTOPT** — kostenpoort TRAIN FAIL (`43b6ba2`).  
+**B1 TSMOM-mix FX GESTOPT** — kostenpoort FAIL (`18c7996` op `claude/uitvoerder2-r`). Geen herstart; **geen nieuwe overnight maand-sleeves**.
+
+| Prio | Item | Eigenaar | Status / notitie |
+|------|------|----------|------------------|
+| **1** | **A2 Stocks-in-Play ORB** PREREG dichttrekken | Strateeg | US41-spreads; intradag-vlak |
+| **1** | **M5-snapshot** (U-006 optie A / Debian) | Uitvoerder-2 | Blokkeert A5; parallel spoor |
+| — | **A5** FX-intradag | Uitvoerder-2 | Parallel **zodra M5** er is |
+| — | **A4 / B1** | — | Dood; niet herstarten |
+| — | **A1** ORB/S3 | — | Skip zonder Sandro-data (geen ping) |
+| — | S2-PREREGs (intradag/M5) | Strateeg-2 | Parallel met A5 zodra M5 er is |
+
+**Uitvoerder-2:** prio = M5-snapshot (U-006 A); daarna A5. **Strateeg:** A2-PREREG. Vragen → Manager; eindbesluit → CTO. Geen vragen aan Sandro.
+
 ### Acties (bindend, D-087; rollen D-090)
 
 1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — review `engine/ftmo.py` (D-087 actie 1, prio 1):**
    - `git show origin/grok/cto-1:engine/ftmo.py` lezen + vergelijken met `q1_frontier.py`, `mc_daily_ftmo.py`, `ftmo_economics.py`
    - Rapporteer in RUNLOG_R2: (a) FTMO-regels correct? (b) discrepanties t.o.v. bestaande simulators (bewuste keuze of fout)? (c) welke catalogus-sleeves als eerste door `ftmo_ev()` jagen?
    - Geen eigen implementatie tenzij aantoonbare fout gevonden.
-   - Daarna A-tier: A4=FOMC C17, A5=FX-intradag (PREREG's op `claude/trusting-faraday-34tsmg`); A1=ORB/S3 geblokkeerd op data → skip. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
+   - **Post-B1:** A4+B1 dood. Prio = **M5-snapshot** (U-006 A/Debian) + wacht op A2-PREREG; A5 parallel zodra M5. Geen nieuwe overnight maand-sleeves. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
 
 2. **Grok CTO — A-tier runs na Uitvoerder-2-feedback (D-087 actie 2):**
    - Wacht max. 1 cyclus op Uitvoerder-2.
-   - Daarna: draai `ftmo_ev()` op A1=ORB/B4a, A4=FOMC-cyclus (C17), A5=FX-intradag-breakout met data/daily/ en data/m5/.
+   - Post-B1: `ftmo_ev()` op **A2** wanneer PREREG dicht + data; A4/B1 niet herstarten; A5 pas met M5. Geen nieuwe overnight maand-sleeves.
    - Rapporteer FTMO-EV per rule in RUNLOG_CTO.
 
-3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — A4/A5 PREREG + B-tier (D-087 actie 3):**
-   - PREREG_FTMO_C17.md / PREREG_FTMO_FX_INTRADAG.md checken/aanvullen.
-   - Volgende: B1 TSMOM-mix FX; A2 Stocks-in-Play ORB earnings. Catalogus §9 bijhouden.
-   - Vergelijk met Strateeg-2 (`grok/strateeg-2`) na commits; rapporteer in catalogus §10.
+3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — post-B1 A2 (D-087 actie 3, herzien):**
+   - **Prio 1:** A2 Stocks-in-Play ORB — PREREG dichttrekken (US41-spreads).
+   - B1 dood (`18c7996`); geen nieuwe overnight maand-sleeves.
+   - A5/FX-intradag PREREG pas relevant wanneer M5 beschikbaar is. Catalogus §9 bijhouden; vergelijk Strateeg-2 in §10.
 
 4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090):** parallel 2–3 nieuwe FTMO-hypotheses (niet al in catalogus); PREREG_S2_*.md; RUNLOG_STRATEEG2.md. CEO vergelijkt na 3 cycli.
 
