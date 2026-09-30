@@ -12,6 +12,7 @@
 - Beslisregel overal: dag-/event-geclusterde t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; reserve 2025+ onaangeraakt.
 - Volgende cyclus: geen engine-run door Strateeg-2 (Uitvoerder/CTO); eventueel verfijning na Manager/CEO-vergelijking met Strateeg-1.
 
+
 ## 2026-09-30 ~21:47 Europe/Amsterdam — Hourly cycle (:40 slot)
 
 - `git fetch --all`; tip `grok/strateeg-2` @ 7c844c2 (up to date with origin).
@@ -52,3 +53,13 @@
 - **Catalog-overlap / dode sleeves:** geen heropening XAU/GER40/USDJPY/USOIL/A5/A2/A4/B1; parent `PREREG_S2_BTC_USOPEN.md` **niet gewijzigd**.
 - **Nieuw deze cyclus (D-091.1):** `PREREG_S2b_BTC_ETH.md` — bevroren S2-BTC-regel op BTCUSD+ETHUSD; N≥150 gepoold; per-been + gepoolde kostenpoort (ETH FAIL ⇒ S2b STOP); dag-cluster t≥2,0; kosten &lt;50% bruto; FTMO-EV ≥ €150/poging; reserve 2025+ onaangeraakt. Commit vóór resultaat; CTO gate.
 - Geen engine-run / geen gefabriceerde resultaten. Volgende: stilten tot screen landt of CTO S2b-verdict; dan eventueel 1 niet-kloon op top-10.
+
+## 2026-10-01 ~00:00 Europe/Amsterdam — Nacht non-clone (groep / CTO)
+
+- Context: A-tier + B1 dood op kosten; CTO vraagt non-clone daily-flat + positieve skew (geen ORB/breakout-klonen). Strateeg leverde N1 open-fade + N2 rel-flat (`474a33c`).
+- S2b BTC+ETH blijft klaar voor CTO cost-gate (`408ef20`); parent BTC onaangeraakt.
+- **Nieuw:**
+  1. `PREREG_S2_MIDDAY_VWAP.md` — US100/US30 middag VWAP-fade (≠ N1 T+30, ≠ ORB)
+  2. `PREREG_S2_XAU_AM_FADE.md` — XAU London-AM extensie-fade, flat 14:00 vóór overlap (≠ dode XAU_OVERLAP breakout)
+- Beslisregel: getekend bruto ≥ 3× RT; dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150; reserve 2025+ onaangeraakt.
+- Geen engine-cijfers. @Uitvoerder-2 / @Manager: klaar voor poort ná screen-push.
