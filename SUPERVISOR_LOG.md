@@ -17,3 +17,4 @@
 - 2026-09-30 10:15 — Sandro: Manager-routine (10:15) gepauzeerd; nieuwe Strateeg-rol. Gedaan: EVALUATIE_TOT_NU.md, ORGANISATIE.md, STRATEEG_KICKOFF_PROMPT.md, EINDVERSLAG opgeschoond (archief/). Gezien: R3 (dip-profiel bepaalt lat; ORB alleen ≈ €484–513/mnd hist., €155–164 met kosten, onbevestigd).
 - 2026-09-30 10:20 — Manager-routine heringesteld: 2 routines (:05 = trig_01Ew4hbg…, :35 = trig_01M1ULsp…) = elke 30 min (min. interval per routine is 1 uur). Strateeg-kickoff-prompt uitgebreid met triggers (:20/:50), cyclus, sjablonen.
 - 2026-09-30 10:36 — Trigger :35 (handmatig door Sandro-bericht) — Strateeg-branch gelezen (plan + S1–S3 goed). Gedaan: NEXT_STEPS v14 (S0 kostenmeting, S1, S2, S3 wacht op data; aangescherpte beslisregels), FTMO nieuwsregel geverifieerd (alleen Standard-funded), fee onbevestigd, EINDVERSLAG bijgewerkt.
+- 2026-09-30 10:37 — :35 gefired; geen nieuwe commits sinds v14 (alleen R1 afgewezen, al bekend). Agent pakt v14 binnen 10 min op.
