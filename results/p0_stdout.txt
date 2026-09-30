@@ -50,3 +50,4 @@
 2026-09-30 12:06:51Z   netwerkfout bij USA500IDXUSD 2012-02-13: <urlopen error timed out>; wacht 240 s (poging 3)
 2026-09-30 12:11:57Z   503 bij USA500IDXUSD 2012-02-13; wacht 480 s (poging 4)
 2026-09-30 12:22:15Z   netwerkfout bij USA500IDXUSD 2012-02-14: <urlopen error timed out>; wacht 60 s (poging 1)
+2026-09-30 12:25:57Z   503 bij USA500IDXUSD 2012-02-17; wacht 60 s (poging 1)
