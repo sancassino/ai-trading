@@ -377,3 +377,12 @@ Berekend (results/k1/K2_power.txt): 80% kans op t ≥ 2 na ≈ 8,9 jaar bij ware
 Vastgelegd in forward/README.md (vóór de eerste forward-dag): harde review bij papieren dagverlies ≥ 4% of DD ≥ 8%; na 6 mnd stop als SR < −0,29; na 12 mnd stop als SR < 0, heroverwegen als SR ≥ 0,66; ORB-kostencontrole na 6 mnd (< −1,0 bp/trade → onderzoeken); elk forward-verslag noemt de optimistische aannames.
 Conclusie: de forward-test is een foutdetector, geen snel bewijs; statistische bevestiging van deze edge vergt jaren.
 Volgende stap: backlog v6 afgerond; verslag + wachten op nieuwe NEXT_STEPS (uurlijkse check).
+
+## 2026-09-30 01:34 — J2: drie nieuwe hypothesen — alle AFGEWEZEN
+
+Getest (VOORSTEL_G.md vóór berekening): j2_batch.py, FTMO-M5 2021–26, kosten B4.
+(1) US100 gap-continuatie (|gap| > 0,5%, 60 min): N 561, −2,19 bp, t train −0,29 / test −0,82, 2/6 jaar+.
+(2) XAUUSD ORB op de Londense sessie: N 1.482, +1,49 bp, t −0,26 / +1,56, 4/6 jaar+.
+(3) GER40 ORB alleen in de richting van de overnight US500-beweging: N 647, +3,58 bp, t +1,44 / +0,35, gedragen door 2022 (+12,8 bp).
+Conclusie: geen van drie haalt t ≥ 3 in train én test. TRIAL_COUNT 394.
+Volgende stap: backlog v6 afgerond; uurlijkse NEXT_STEPS-check.
