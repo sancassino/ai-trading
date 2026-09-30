@@ -1,6 +1,6 @@
 # CTO_AUDIT — ORB / S3 + post-A4/B1 FTMO redirect
 
-**Status:** updated 2026-09-30 23:35 Europe/Amsterdam (CTO wake; §3c A2/S2-BTC/USOIL kills — program exhausted).  
+**Status:** updated 2026-10-01 ~00:05 Europe/Amsterdam (CTO wake; §3d S2b FAIL + ambition SR×skew).  
 **Branch:** `grok/cto-1`. **No reserve 2025-01→ opened. No new TRIALS. No fabricated backtests.**  
 **Engine:** `engine/ftmo.py` blob `ac7abef6` (p_survive right-censor; U2 re-validated PASS @ `18c7996`).
 
@@ -125,6 +125,25 @@ US41+BTC/ETH/olie M5 landed on main (v41). U2 ran A2 → FAIL. CTO ran remaining
 
 ---
 
+
+## 3d. S2b BTC+ETH cost-gate (2026-10-01 ~00:05 CEST) + ambition calibration
+
+**COSTS bridge (C-005):** crypto RT from `COSTS_FTMO_alle.csv` (BTC 1.25 / ETH 7.98 bp) — not in `COSTS_FTMO.csv`.
+
+| Sleeve | N | mean bruto | Poort | Verdict |
+|---|---:|---:|---|---|
+| S2b BTC leg | 132 | +22.91 bp | 2×1.25 + share + stress | **PASS** |
+| S2b ETH leg | 120 | +13.89 bp | 2×7.98 + share + stress | **FAIL** (share 67%) |
+| S2b pooled | 252 | +18.61 bp | 2×TW-RT + share; N≥150 | pooled OK; **STOP via ETH** |
+
+**Ambition calibration (synthetic, `results/cto/ambition_sr_skew_grid.json`, n_paths=2500):**  
+At **p95 daily dip ≤ 2%** sizing (compliant soft bind), `net_ev_monthly` ≥ €800 typically requires **annualized Sharpe ≳ 1.0** (or SR≳0.8 with strong positive skew ≳1.5). SR 1.2–1.5 → ~€1000–1600/m in the synthetic table.  
+At p95≈4% many cells show high EV but **p_survive ≈ 0** (daily-loss breaches) — not a viable plan number.  
+Implication: ORB F2 (~€40–286/m at compliant size) is far below; need higher-SR intradag sleeves or multi-sleeve stack — not more low-SR ORB clones.
+
+**Night queue (Manager v44):** U2 owns N1 → N2 → MIDDAY_VWAP → XAU_AM_FADE. S2b closed here.
+
+---
 ## 4. Engine notes
 
 - `ftmo_ev` API stable; U2 P1 PASS on censor fix.  
@@ -137,5 +156,5 @@ US41+BTC/ETH/olie M5 landed on main (v41). U2 ran A2 → FAIL. CTO ran remaining
 ## 5. Pointers
 
 - PREREG: `PREREG_S3.md`, `PREREG_FTMO_A2.md`, `PREREG_FTMO_B1.md`, `PREREG_FTMO_C17.md`, `PREREG_S2_XAU_OVERLAP.md`, `PREREG_S2_GER40_OPEN.md`, `PREREG_S2_USDJPY_HANDOFF.md`  
-- Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,a2,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy,btc,usoil}_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`  
-- Decisions: C-001…**C-004** (A2+S2-BTC/USOIL STOP; program redirect)
+- Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,a2,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy,btc,usoil}_prep/`, `results/cto/s2b_btc_eth_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`, `results/cto/ambition_sr_skew_grid.json`  
+- Decisions: C-001…**C-005** (S2b ETH STOP + COSTS_alle bridge; ambition SR×skew)

@@ -4,6 +4,34 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-005 — S2b BTC+ETH COSTS bridge + cost-gate FAIL (ETH leg)
+**Opened:** 2026-09-30 23:57 Europe/Amsterdam (NEXT_STEPS v44: CTO owns S2b after COSTS bridge; BTC/ETH absent from `COSTS_FTMO.csv`).  
+**Closed:** 2026-10-01 ~00:05 Europe/Amsterdam by CTO (executable path; no CEO wait).
+
+**COSTS bridge (binding):**
+- Use **`COSTS_FTMO_alle.csv`** fixed `rondreis_bp` for crypto: **BTCUSD = 1.25 bp**, **ETHUSD = 7.98 bp**.
+- Rationale: `COSTS_FTMO.csv` has no crypto rows; `alle` is the S0 M5-barspread + commission table already in-repo (same methodology as US41 rows). Do **not** invent RT or wait for Sandro/MT5 re-export.
+- Applied identically in `PREREG_S2b_BTC_ETH.md` §3 and `scripts/s2b_btc_eth_cost_gate_train.py`.
+
+**Facts (TRAIN 2021–2023; 2025→ skipped at load; no TRIALS append):**
+| Leg | N | mean bruto | mean cost | Fixed 2×RT | Cost share | Verdict |
+|---|---:|---:|---:|---:|---:|---|
+| BTCUSD | 132 | +22.91 bp | 4.37 bp | 2.50 bp | 19% | **PASS** (same as parent) |
+| ETHUSD | 120 | +13.89 bp | 9.35 bp | 15.96 bp | 67% | **FAIL** (2×fixed + share + stress) |
+| Pooled | 252 | +18.61 bp | 6.74 bp | TW 4.45 bp | 36% | pooled PASS; power N≥150 PASS |
+
+**Decision:**
+1. **S2b = STOP** — PREREG §4.4: ETH-leg FAIL → stop; no post-hoc drop-ETH / BTC-only re-label (would evade parent power stop).
+2. Do **not** formal-trial; do **not** retune gap/range/width; do **not** append TRIALS.
+3. Parent S2-BTC power-FAIL (N=132) and S2b ETH-cost-FAIL close the US-open crypto impulse family for now.
+4. **U2:** continue night queue N1 → N2 → MIDDAY_VWAP → XAU_AM_FADE (unchanged; those are non-clone daily-flat).
+5. **Strateeg / Strateeg-2:** no more crypto US-open impulse clones; keep non-clone index/metal fades already queued.
+6. CEO/Sandro: no decision required (bridge + STOP within CTO authority).
+
+**Where applied:** `results/cto/s2b_btc_eth_prep/`, `PREREG_S2b_BTC_ETH.md` (CTO copy), `CTO_AUDIT.md` §3d, `RUNLOG_CTO.md` (00:05 wake), this ticket.
+
+---
+
 ### C-004 — Post-A2 STOP + S2-BTC/USOIL FAIL + program exhausted
 **Opened:** 2026-09-30 23:20–23:25 Europe/Amsterdam (U2 A2 kostenpoort FAIL @ `bba5c0c`; U2 waiting on CTO/Manager direction; m5gz v41 has BTC/USOIL).  
 **Closed:** 2026-09-30 23:35 Europe/Amsterdam by CTO (technical co-founder; executable m5gz path — no CEO wait).
@@ -99,4 +127,4 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (not blocking):_ bump NEXT_STEPS off dead A2 — **all A-tier + S2-* STOP** (C-004); board = non-clone research + optional multi-sleeve survivor `ftmo_ev`. CEO/Sandro: no new decision required unless revising €800–900 ambition / fee €540 after full kill table. A1/`long_m1` ping stays deferred.
+_Open for Manager (not blocking):_ NEXT_STEPS v44 already queues N1/N2/VWAP/XAU_AM for U2. After C-005, also mark **S2b STOP**. CEO/Sandro: no new decision — ambition calibration (CTO 00:05) shows €800/m needs ~SR≥1.0 at p95-dip≤2% (synthetic); revise ambition/fee only if CEO chooses. A1/`long_m1` ping stays deferred.

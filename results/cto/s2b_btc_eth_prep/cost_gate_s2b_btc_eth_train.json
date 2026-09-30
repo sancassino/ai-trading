@@ -1,0 +1,48 @@
+{
+  "prereg": "PREREG_S2b_BTC_ETH",
+  "train": "2021-01-01..2023-12-31",
+  "costs_bridge": "COSTS_FTMO_alle.csv (C-005); BTC=1.25 ETH=7.98 bp RT",
+  "n_pooled": 252,
+  "power_n_ge_150": true,
+  "legs": {
+    "BTCUSD": {
+      "n": 132,
+      "mean_gross_bp": 22.909771644618687,
+      "median_gross_bp": -37.538968551003165,
+      "mean_cost_bp": 4.369519204502803,
+      "mean_cost_stress_bp": 6.354278806754203,
+      "fixed_rt_bp": 1.25,
+      "gate_2x_fixed": true,
+      "gate_cost_share": true,
+      "gate_stress_2x": true,
+      "gate_stress_share": true,
+      "cost_share_pct": 19.072731375431086,
+      "pass": true
+    },
+    "ETHUSD": {
+      "n": 120,
+      "mean_gross_bp": 13.890453057354758,
+      "median_gross_bp": -40.36649845760503,
+      "mean_cost_bp": 9.349059248562268,
+      "mean_cost_stress_bp": 13.823588872843402,
+      "fixed_rt_bp": 7.98,
+      "gate_2x_fixed": false,
+      "gate_cost_share": false,
+      "gate_stress_2x": false,
+      "gate_stress_share": false,
+      "cost_share_pct": 67.30564661900715,
+      "pass": false
+    }
+  },
+  "pooled_mean_gross_bp": 18.614858031635862,
+  "pooled_mean_cost_bp": 6.740728749293024,
+  "pooled_trade_weighted_fixed_rt_bp": 4.454761904761906,
+  "pooled_gate_2x_tw_rt": true,
+  "pooled_gate_cost_share_lt_50pct": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "ETH_leg_FAIL"
+  ],
+  "reserve_2025_touched": false,
+  "note": "CTO wake S2b cost-gate; no TRIALS append on FAIL; ETH FAIL binds STOP per PREREG \u00a74.4"
+}

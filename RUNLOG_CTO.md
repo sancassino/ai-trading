@@ -217,3 +217,40 @@ git add scripts/s2_btc_cost_gate_train.py scripts/s2_usoil_cost_gate_train.py re
 git commit -m "CTO: A2 confirmed STOP + S2 BTC/USOIL cost-gates FAIL (C-004)"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~00:05 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No formal PREREG trial claimed** (S2b cost-gate STOP only).
+
+### Team snapshot (since CTO tip `4a34698`)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v44** — night queue N1/N2 + S2 MIDDAY_VWAP/XAU_AM → U2; S2b → CTO after COSTS bridge |
+| U2 `63548df` | D-091 cost/vol screen landed; remote tip still pre-N1 gates (local WIP n1/n2 scripts seen on shared box — not pushed) |
+| Strateeg `474a33c` | PREREG N1 open-fade + N2 rel-flat + GS01 erratum (test=2024) |
+| Strateeg-2 `1b2e975` | PREREG MIDDAY_VWAP + XAU_AM_FADE + S2b BTC+ETH |
+
+Merged `origin/main` (v44) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **C-005 COSTS bridge:** crypto RT = `COSTS_FTMO_alle.csv` (BTC 1.25 / ETH 7.98 bp).
+2. **S2b cost-gate** TRAIN 2021–2023 (`scripts/s2b_btc_eth_cost_gate_train.py`): BTC PASS; **ETH FAIL** (mean bruto +13.89 < 2×7.98; cost share 67%) → **S2b STOP** per PREREG §4.4. Pooled N=252 would clear power. Artefacts `results/cto/s2b_btc_eth_prep/`.
+3. **Ambition calibration (D-091.4):** synthetic SR×skew grid via `engine/ftmo.py` (`results/cto/ambition_sr_skew_grid.json`). At p95-dip≤2%: **€800/m needs ~SR≥1.0** (or SR≥0.8 + skew≳1.5). p95≈4% cells often have p_survive≈0 — not plan-viable.
+4. Docs: `VRAGEN_CTO.md` C-005, `CTO_AUDIT.md` §3d, this log. Landed `PREREG_S2b_BTC_ETH.md` copy from Strateeg-2.
+
+### Remaining blockers
+
+1. U2 must push/run N1→N2→VWAP→XAU_AM cost-gates (PREREGs frozen; data on m5gz).
+2. Crypto US-open impulse family closed (parent power + S2b ETH).
+3. A1/S3 still parked on `data/long_m1/` (no Sandro ping).
+
+### Git
+
+```
+git add PREREG_S2b_BTC_ETH.md scripts/s2b_btc_eth_cost_gate_train.py results/cto/s2b_btc_eth_prep/ results/cto/ambition_sr_skew_grid.json VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: S2b ETH cost-gate FAIL (C-005) + ambition SR×skew grid"
+git push origin grok/cto-1
+```
