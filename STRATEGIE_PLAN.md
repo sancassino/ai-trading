@@ -1,4 +1,6 @@
-# STRATEGIE_PLAN (Strateeg, 2026-09-30 10:45 Amsterdam) — v1
+# STRATEGIE_PLAN (Strateeg, bijgewerkt 2026-09-30 10:55 Amsterdam) — v1.1
+
+**Update 10:55:** Manager heeft S0–S3 goedgekeurd (NEXT_STEPS v14). Nieuw op main: R1 (FX-ML) en R2 (aandelen-ML) afgewezen (bruto ≈ 0, zoals verwacht), **R4 (Donchian/ATR-trail H4 op FX+goud) afgewezen** (netto −3,1 bp, t −1,8/+0,2; alleen XAU positief) → mijn S4 is grotendeels afgedaan (alleen D1/lange FRED-historie blijft, prior nu laag). FX-kosten zijn nu **gemeten** (R1: spread 0,18–0,85 bp, per kant 0,28–0,86 incl. commissie) → FX-rijen in §2 zijn G i.p.v. A. Geen S1-regelbevestiging mogelijk: SSRN/concretum/sfi geven alleen de samenvatting; ik heb de bandformule uit geheugen → **niet als exact beschouwen**. Gevraagd aan Sandro (2 min, optioneel): paper-PDF handmatig van SSRN (abstract_id=4824172) in `docs/` zetten. Zo niet: S1 alleen met expliciet label 'regel uit samenvatting', en dan is een negatief resultaat geen bewijs tegen het paper.
 
 Eerlijk vooraf: met 404 trials, kosten-muur en ~5,7 jr data is de kans dat hieruit €800–900/mnd via FTMO komt **klein (mijn schatting ≤ 10%)**. Dit plan maximaliseert de kans per uur Uitvoerder-tijd; het belooft niets. Details/bronnen: `STRATEGIE_BIJLAGE.md`.
 
@@ -12,7 +14,7 @@ Eerlijk vooraf: met 404 trials, kosten-muur en ~5,7 jr data is de kans dat hieru
 Break-even = spread + 2×commissie (intraday) of + swap/nacht (overnight). Gemeten = uit repo; "a-priori" = niet gemeten, door S0 te verifiëren.
 | Klasse | Rondreis-kosten intraday (bp) | Swap long / short (bp per nacht) | Bron |
 |---|---|---|---|
-| FX-majors (EURUSD …) | ≈ 0,5–1 (comm 0,46 + spread ≈0,1–0,5 a-priori) | EURUSD −1,1 / +0,1 | commissie gemeten, spread a-priori |
+| FX-majors (EURUSD, GBPUSD, USDJPY, USDCAD, USDCHF) | ≈ 0,6–0,8 rondreis (spread 0,18–0,33 + commissie 0,19–0,26/kant); AUD/NZD/crosses 1,0–1,7 | EURUSD −1,1 / +0,1; USDJPY long +0,4 / short −1,6 | gemeten (R1), swaps data/swap_specs_fx.csv |
 | US-indices (US500/US100/US30) | ≈ 0,5–0,8 | −1,4…−2,3 / −0,8…+0,1 | gemeten (E1) |
 | XAUUSD | ≈ 0,8 (comm 0,1) | −2,2 / −0,1 | gemeten |
 | GER40 | ≈ 1,4 | −1,8 / 0 | gemeten |
@@ -27,11 +29,11 @@ Toets voor elk: dagelijks-vlak, positief scheef, kosten laag, structurele oorzaa
 1. **S3 ORB-bevestiging op lange data** (bevroren B4a-regel, SPX/NSX/GRX/XAU 2011–20). Hoogste waarde/kosten; vereist Sandro (§4). `VOORSTEL_S3.md`.
 2. **S1 Noise-area intraday-momentum** (Zarattini–Aziz–Barbon 2024: volatiliteitsbanden, trailing, EOD-exit) op US500/US100/US30/GER40. Zelfde mechanisme als ORB maar vol-genormaliseerd; structurele oorzaak = gamma-/hedgingvraag + onder-reactie. `VOORSTEL_S1.md`.
 3. **S2 Stocks-in-Play ORB** (earnings-dagen, 5-min ORB, stop, EOD) op 41 FTMO-aandelen; data grotendeels aanwezig (earnings.csv). Oorzaak: nieuws-gedreven order-onbalans. `VOORSTEL_S2.md`.
-4. **S4 D1-breakout met trailing op FX-majors + goud** (Donchian 20/10 of ATR-trail, 1 regel; sluit aan op Manager-R4). Positief scheef, kosten ≈ 0 op D1; lange historie via FRED-FX (1971+, noon-fixings) en Yahoo-goud. Let op: houdt posities over nacht → dagverlies-dip (meegedragen float) telt.
+4. **S4 (AFGEWEZEN op H4 door R4; D1-variant laag)** D1-breakout met trailing op FX-majors + goud (Donchian 20/10 of ATR-trail, 1 regel; sluit aan op Manager-R4). Positief scheef, kosten ≈ 0 op D1; lange historie via FRED-FX (1971+, noon-fixings) en Yahoo-goud. Let op: houdt posities over nacht → dagverlies-dip (meegedragen float) telt.
 5. **S5 Maandeinde-FX-fixing** (Melvin–Prins: rebalancing-flows rond WM/Reuters 16:00 Londen) EURUSD/GBPUSD/USDJPY/AUDUSD. Flow-oorzaak, kosten ≈ 0,5 bp, maar N klein (~70 maandeinden × 4) en effect waarschijnlijk afgenomen sinds 2015-fixing-hervorming → lage kans.
 6. **S6 Olie-voorraadcijfers (woensdag 16:30 CET) onderreactie-drift** na eerste 15 min, alleen intraday. NB: FTMO-nieuwsregel ±2 min verifiëren (Manager). Geen straddle rond nieuws.
 7. **S7 Kwartaal-expiratie/herbalancering slotveiling** (3e vrijdag mrt/jun/sep/dec): slotbewegingsdrift. N ≈ 22 dagen × 4 indices → ver onder N ≥ 500; alleen exploratief, waarschijnlijk niet bewijsbaar.
-8. **R1 FX-ML-breedte (Manager-backlog): lage prioriteit.** Q4 toont: voorspelbare beweging < spread; FX is het meest efficiënte vlak; kosten laag maar signaal lager. Pas ná S1–S4; 15 paren × 3 horizons = 45 trials → multiple-testing-zwaar.
+8. **R1 FX-ML-breedte: uitgevoerd en afgewezen (bruto ≈ 0) — bevestigt mijn prior.** Q4 toont: voorspelbare beweging < spread; FX is het meest efficiënte vlak; kosten laag maar signaal lager. Pas ná S1–S4; 15 paren × 3 horizons = 45 trials → multiple-testing-zwaar.
 
 ## 4. Data-strategie (gewone taal; Sandro beslist, niemand doet iets zonder hem)
 Doel: dezelfde *bevroren* regels (ORB, straks noise-area) op 2011–2020 laten draaien. Eén bevestiging weegt zwaarder dan tien nieuwe ideeën.
@@ -50,4 +52,4 @@ Mijn advies: **B eerst** (gratis, genoeg voor SPX/NSX/GRX/XAU); D alleen als B t
 - **Eigen kapitaal:** zonder first-passage-regels is de lat ≈ SR 0,9 bij 15% vol voor ≈ €1.000/mnd op €80k (SR × vol × kapitaal), maar met DD 15–25% en zonder fee/split. FTMO's regels verhogen de vereiste SR voor negatief-scheef profiel naar 3–4 (R3) — voor positief-scheef ≈ 1. Dus: het profiel bepaalt of FTMO überhaupt zin heeft; bij SR < 0,7 is FTMO niet beter dan eigen geld. Of €80k eigen kapitaal bestaat/gewenst is: Sandro.
 
 ## 6. Nu bij Manager/Uitvoerder neerleggen
-S0 (gratis, nu) → S2 (data aanwezig, direct) → S1 (M5 aanwezig) → S3 zodra Sandro data kiest. S4–S8 in reserve (≥ 3 klaar: S1, S2, S3 + S0).
+Actief bij Manager/Uitvoerder (v14): S0, S1, S2, S3 (S3 wacht op Sandro-data; M-001). Volgorde: S0 (gratis, nu) → S2 (data aanwezig, direct) → S1 (M5 aanwezig) → S3 zodra Sandro data kiest. S4–S8 in reserve (≥ 3 klaar: S1, S2, S3 + S0).
