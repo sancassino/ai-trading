@@ -35,3 +35,4 @@
 2026-09-30 15:40 Amsterdam — cyclus :35: D-052..D-054, PREREG_PORT (bevroren), run 3 (435 trials), Strateeg v2.6 verwerkt; NEXT_STEPS v24 (SR-0,94-decompositie, haircut-definitie → M-012, labels run 3, P-breed-v2 apart); Uitvoerder-2 weer actief.
 2026-09-30 16:10 Amsterdam — cyclus :05: D-055…D-059 + decompositie P-ETF-a + EUR-geldmarkt verwerkt; NEXT_STEPS v25 (tijdlijn reserve-run 01-10 09:00/12:00, valuta-consistentie, D-056 afmaken); M-012 BESLOTEN; EINDVERSLAG met totaal én alfa boven cash.
 2026-09-30 16:40 Amsterdam — cyclus :35: D-060…D-064, run 4 (0 diversifiers), frontier, PREREG_PORT2 verwerkt; NEXT_STEPS v26 (frontier op 2011–24/2021–24, hefboom onbevestigd, reserve-run-integriteit, trial-merge).
+2026-09-30 17:10 Amsterdam — cyclus :05: D-065…D-067 + VOORSTEL_S11 verwerkt; NEXT_STEPS v27 (correctie: DAX/N225 zaten in de C02-ontdekking → onafhankelijk n=3 (FTSE/CAC/HSI), tijdsoverlap, labels vooraf); reserve-run 01-10 12:00 bevestigd.
