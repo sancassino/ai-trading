@@ -1,4 +1,4 @@
-# NEXT_STEPS v36 — Manager, 2026-09-30 (verwerkt D-083…D-090) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v38 — Manager, 2026-09-30 (B1 groen; poort signed mean) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -14,23 +14,39 @@ Bindend: D-083…D-090 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bev
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
 
+### Post-A4 prioriteit (Manager, 2026-09-30 22:07 CEST — CTO + Strateeg/Strateeg-2 akkoord)
+
+**A4 C17 formeel GESTOPT** — kostenpoort TRAIN FAIL (`43b6ba2`). Geen herstart zonder nieuw CEO-besluit.
+
+| Prio | Item | Eigenaar | Status / notitie |
+|------|------|----------|------------------|
+| **1** | **B1 TSMOM-mix FX** (D1, swap≈carry, geen M5) | Strateeg → Uitvoerder-2 | PREREG stub afronden → kostenpoort |
+| **2** | **A2 Stocks-in-Play ORB** (intraday-vlak) | Strateeg | Parallel PREREG-dichttrekken |
+| — | **A5** FX-intradag / Debian-M5 | Uitvoerder-2 | **GEPARKEERD tot M5** |
+| — | **A1** ORB/S3 | — | Skip zonder Sandro-data (geen ping) |
+| — | S2-PREREGs (`XAU_OVERLAP`, `GER40_OPEN`, `USOIL_EIA`, `BTC_USOPEN`) | Strateeg-2 | Ná B1; parallel met A5 zodra M5 er is |
+
+**Uitvoerder-2:** wacht op prio 1 (B1) zodra PREREG klaar is; geen A5 tot M5. Vragen → Manager; eindbesluit → CTO. Geen vragen aan Sandro.
+
+**B1 groen (22:09 CEST):** `PREREG_FTMO_B1.md` @ `05caced` op `claude/trusting-faraday-34tsmg`. @Uitvoerder-2 mag kostenpoort draaien. **Poort:** 3×-check op het **getekende gemiddelde bruto**, niet op mediaan |maand-bruto| (Strateeg-2). A2 blijft parallel (wacht op US41-spreads).
+
 ### Acties (bindend, D-087; rollen D-090)
 
 1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — review `engine/ftmo.py` (D-087 actie 1, prio 1):**
    - `git show origin/grok/cto-1:engine/ftmo.py` lezen + vergelijken met `q1_frontier.py`, `mc_daily_ftmo.py`, `ftmo_economics.py`
    - Rapporteer in RUNLOG_R2: (a) FTMO-regels correct? (b) discrepanties t.o.v. bestaande simulators (bewuste keuze of fout)? (c) welke catalogus-sleeves als eerste door `ftmo_ev()` jagen?
    - Geen eigen implementatie tenzij aantoonbare fout gevonden.
-   - Daarna A-tier: A4=FOMC C17, A5=FX-intradag (PREREG's op `claude/trusting-faraday-34tsmg`); A1=ORB/S3 geblokkeerd op data → skip. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
+   - **Post-A4:** A4 C17 dood (`43b6ba2`). Volgende run = **B1** (na PREREG); A2 parallel PREREG. A5 geparkeerd tot M5; A1 skip zonder Sandro-data. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
 
 2. **Grok CTO — A-tier runs na Uitvoerder-2-feedback (D-087 actie 2):**
    - Wacht max. 1 cyclus op Uitvoerder-2.
-   - Daarna: draai `ftmo_ev()` op A1=ORB/B4a, A4=FOMC-cyclus (C17), A5=FX-intradag-breakout met data/daily/ en data/m5/.
+   - Post-A4: `ftmo_ev()` eerst op **B1** (daily/FX); A2 wanneer PREREG dicht; A4 niet herstarten; A5 pas met M5.
    - Rapporteer FTMO-EV per rule in RUNLOG_CTO.
 
-3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — A4/A5 PREREG + B-tier (D-087 actie 3):**
-   - PREREG_FTMO_C17.md / PREREG_FTMO_FX_INTRADAG.md checken/aanvullen.
-   - Volgende: B1 TSMOM-mix FX; A2 Stocks-in-Play ORB earnings. Catalogus §9 bijhouden.
-   - Vergelijk met Strateeg-2 (`grok/strateeg-2`) na commits; rapporteer in catalogus §10.
+3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — post-A4 B1/A2 (D-087 actie 3, herzien):**
+   - **Prio 1:** B1 TSMOM-mix FX — PREREG stub afronden → kostenpoort (geen M5).
+   - **Prio 2:** A2 Stocks-in-Play ORB — parallel PREREG-dichttrekken.
+   - A5/FX-intradag PREREG pas relevant wanneer M5 beschikbaar is. Catalogus §9 bijhouden; vergelijk Strateeg-2 in §10.
 
 4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090):** parallel 2–3 nieuwe FTMO-hypotheses (niet al in catalogus); PREREG_S2_*.md; RUNLOG_STRATEEG2.md. CEO vergelijkt na 3 cycli.
 
