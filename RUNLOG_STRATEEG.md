@@ -37,3 +37,17 @@ Commit op `claude/trusting-faraday-34tsmg` + push `-u origin`.
 - Reserve: 2025-01-01 → ONAANGERAAKT / UNTOUCHED (niet openen, niet gebruiken)
 
 **Geen CEO 2025-vrijgave nodig** voor dit amendement. Geen backtest, geen 2025-data, geen trial-resultaten.
+
+## 2026-09-30 22:08 Europe/Amsterdam — B1 PREREG bevroren (post-A4)
+
+**Context:** A4 C17 kostenpoort FAIL (`43b6ba2`). Manager NEXT_STEPS v37: B1 eerst, A2 parallel. Strateeg-2 akkoord B1→A2; S2-M5 ná B1.
+
+**Geleverd:** `PREREG_FTMO_B1.md` van stub → volledige freeze:
+- Universe: EURUSD/GBPUSD/USDJPY/AUDUSD/USDCAD/USDCHF (NZDUSD uit)
+- Regel: C05 TSMOM-mix 21/63/252 × 0,10/σ60 cap 3, maandeinde
+- Kosten: COSTS_FTMO RT + swap bp/nacht-tabel; poort 3×; +50% swap-gevoeligheid
+- Venster: train 2021–2023 / test 2024 / reserve 2025 ONAANGERAAKT
+- Sizing: p95 dagverlies ≤ 2%; FTMO-EV via engine/ftmo.py
+- ≠ B2/C12
+
+**Niet gedaan:** geen backtest, geen A2-upgrade deze commit, geen 2025-touch.
