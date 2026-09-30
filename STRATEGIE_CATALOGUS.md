@@ -185,3 +185,35 @@ Per heropende regel de volgende metriek berekenen:
 - `FTMO_EV_netto`: voorgaande min fee/pogingen
 
 **Doel: FTMO-EV ≥ €400/mnd bij realistisch risico (≤ 2% dagverlies als het fout gaat).** Schaal > 4% dagverlies-risico wordt alleen als bovengrens gerapporteerd (D-016/D-085).
+
+## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
+
+*Bijgewerkt: 2026-09-30 21:55 Amsterdam*
+
+### 10a. Overzicht nieuwe PREREGs (Grok Strateeg-1 + Strateeg-2, per 2026-09-30)
+
+| Code | Naam | Branch | Distinct van catalogus? | Overlap-risico |
+|------|------|--------|------------------------|---------------|
+| GS01 | Gap-aligned long-only ORB (indices US500/US100/GER40) | grok/strateeg-1 | Ja — A1 is bidirectioneel, GS01 is long-only + gapfilter | Zelfde B4a-simulator; ander signaal (gap≥+0,2%) |
+| GS02 | Asian-range fade FX (EUR/GBP, London-open) | grok/strateeg-1 | Ja — A5 PREREG_FTMO_FX_INTRADAG = momentum-breakout; GS02 = fade | Geen overlap |
+| S2-XAU | XAUUSD London–NY overlap breakout (14:00–17:00) | grok/strateeg-2 | Ja — A1 ORB is cash-open; dit is overlap-venster | Beperkt (beide XAU, ander tijdstip) |
+| S2-GER40 | GER40 Frankfurt open-drive (09:00 CET) | grok/strateeg-2 | Ja — A1 ORB is 09:00 CET OR 30 min; dit mogelijk dezelfde opening → **check overlap met A1** | Mogelijk ≈ A1 GER40; rapporteer correlatie |
+| S2-USOIL | USOIL EIA-window breakout (woensdag 16:30 CET) | grok/strateeg-2 | Ja — nieuw (S6 was exploratief, geen PREREG) | Geen overlap met A/B-tier |
+| S2-BTC | BTCUSD US-open range break (15:30–16:00 CET), US100-gap filter | grok/strateeg-2 | Ja — geen crypto in A/B-tier | Geen overlap |
+
+### 10b. FDR-teller impact
+
+- GS01, GS02: **2 nieuwe trials** (indien kostenpoort gehaald) → TRIAL_COUNT + 2 vóór run.
+- S2-XAU, S2-GER40, S2-USOIL, S2-BTC: **4 nieuwe trials** → TRIAL_COUNT + 4 vóór run.
+- PREREG_FTMO_C17 (dit branch): **+1 trial** (indien poort gehaald).
+- PREREG_FTMO_FX_INTRADAG (dit branch): **+1 trial** (indien poort gehaald; anders +0).
+- **Totaal na alle poorten: TRIAL_COUNT → 440 + max 8 = max 448** (exact afhankelijk van poort-uitkomsten).
+- Manager: BH-FDR herberekenen na elke merge van TRIALS.csv.
+
+### 10c. Actiepunten Strateeg (`claude/trusting-faraday-34tsmg`)
+
+1. ✅ PREREG_FTMO_C17.md geschreven (A4 FOMC).
+2. ✅ PREREG_FTMO_FX_INTRADAG.md geschreven (A5 FX London-open; wacht op hertest FX-M5 data).
+3. **Volgende:** B1 TSMOM-mix FX (C05) PREREG zodra FX-M5 data beschikbaar (Uitvoerder-1 D-086).
+4. **Check S2-GER40 vs A1 overlap:** als S2-GER40 Frankfurt open-drive ≈ eerste 30 min van GER40 cash-sessie → hoge correlatie met A1 te verwachten; rapporteer aan Manager.
+5. Catalogus §9-tabel bijhouden naarmate PREREGs resultatenloos komen.
