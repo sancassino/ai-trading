@@ -22,7 +22,7 @@ MAP = {"SPXUSD": "USA500IDXUSD", "NSXUSD": "USATECHIDXUSD", "GRXEUR": "DEUIDXEUR
 FTMO = {"SPXUSD": "US500cash", "NSXUSD": "US100cash", "GRXEUR": "GER40cash", "XAUUSD": "XAUUSD"}
 RAW = "data/dukascopy_raw"
 OUT = "data/long_m1"
-PAUSE = 30.0
+PAUSE = 60.0
 LOG = "results/p0/p0_log.txt"
 
 

@@ -85,3 +85,4 @@
 2026-09-30 14:21:28Z   netwerkfout bij USA500IDXUSD 2012-04-13: <urlopen error [Errno 104] Connection reset by peer>; wacht 240 s (poging 3)
 2026-09-30 14:26:09Z   netwerkfout bij USA500IDXUSD 2012-04-13: <urlopen error [Errno 104] Connection reset by peer>; wacht 480 s (poging 4)
 2026-09-30 14:34:43Z   503 bij USA500IDXUSD 2012-04-13; wacht 900 s (poging 5)
+2026-09-30 14:50:44Z P0 GESTOPT (netjes): 503 zes keer op rij bij https://datafeed.dukascopy.com/datafeed/USA500IDXUSD/2012/03/13/BID_candles_min_1.bi5

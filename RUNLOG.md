@@ -822,3 +822,7 @@ Gemeenschappelijke stand (main = U-2-branch): TRIAL_COUNT 440; catalogus/TRIALS.
 QA-4: catalogus/PORTFOLIOS.csv = aparte BH-familie 'portefeuilles' (P-ETF-a/b, P1, P-breed volgens PREREG_PORT; P-ETF+, P-breed-2 volgens PREREG_PORT2; met SHA's en ontdekkings-SR/maxDD) — geen trials.
 QA-5: D2-uitbreiding af (status in RUNLOG 30-09; NDX-TR niet vrij beschikbaar). Forward: F3b-cron 22:15 UTC vanavond, portefeuille-cron 22:25 UTC maakt vanavond de bestanden (kop) aan; eerste portefeuille-dag (01-10) wordt op 02-10 gelogd — controle 01-10/02-10 in RUNLOG.
 D1/P0: Dukascopy verbreekt weer steeds de verbinding (2012-04-13, poging 5); downloader stopt netjes na 6 fouten; SPX 2012: 89 dagen.
+
+## 2026-09-30 14:53 — P0: Dukascopy-downloader netjes gestopt (throttling) — herstart over 1 u met 60 s pauze
+
+14:50Z: 503 zes keer op rij bij USA500IDXUSD 2012-04-13 (ook de controledatum faalde → feed-throttling, geen ontbrekende datum). Stand: SPX 2011 niet op de feed, 2012: 89 handelsdagen binnen (jan–half april). Tempo met 30 s pauze ≈ 0,5–1 dag/min door wachttijden bij fouten. Herstart gepland om ≈ 15:55Z met 60 s tussen verzoeken (hervatbaar, niets omzeild). Verwachting eerlijk: SPX 2012–2020 via deze feed kost dagen; S3 blijft laagste prioriteit (D-032) tot de data compleet is.
