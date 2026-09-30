@@ -936,3 +936,17 @@ Beste uur US-indices 12–13u NY (0,39–0,65 bp), GER40 07u NY (0,47). Grote P9
 
 check_next_steps meldde drie keer NIEUW: (1) origin/claude/vibrant-volta-ysy5m4 met een v35 van 19:14 (D-082…D-086; zegt nog 'reserve-run loopt door'), (2) origin/main met de v35 die de Manager om 19:29 direct op main zette (D-083…D-088; reserve-run geschorst volgens D-084), (3) origin/grok/strateeg-1 (nieuwe Grok-Strateeg-branch; NEXT_STEPS = kopie van main). Afhandeling: branch-v35 gemerged met -X ours (main-v35 nieuwer en consistent met D-084), branch verwijderd, beide blobs gemarkeerd. grok/strateeg-1 NIET verwijderd: dat is de actieve werkbranch van een andere agent (bevat RUNLOG_STRATEEG.md), alleen de NEXT_STEPS-kopie is gemarkeerd.
 Uitvoerder-1-taken ongewijzigd: D-086 (FTMO-snapshot/spreads) klaar; forward-controle na 22:25 UTC; S3/P0 loopt (SPX 2012: 140 dagen).
+
+## 2026-09-30 21:41 CEST — Manager-cyclus 1 (Grok): NEXT_STEPS v36; D-089/D-090 verwerkt
+
+**Bron BESLUITEN:** `origin/claude/upbeat-dirac-g2810q` tip = ca25968 (tot D-086). D-087…D-090 staan in `origin/claude/ftmo-trading-strategy-98mplz:BESLUITEN.md` (zelfde bronpatroon als v35 voor D-087/D-088). Geen besluiten verzonnen.
+
+**Nieuw verwerkt:**
+- **D-089** — model-beleid (Haiku vs Sonnet), Grok Strateeg-2 (`grok/strateeg-2`), trigger-frequentie (platform-min 1 u; Grok 30 min).
+- **D-090** — teamherstructurering: Claude = CEO+Auditor; Grok = CTO/Manager/U2/Strateeg/Strateeg-2; `GROK_CTO_INSTRUCTIE.md` op main.
+
+**NEXT_STEPS v35 → v36:** header/bindend D-083…D-090; acties herlabeld naar Grok-rollen; Strateeg-2 + model-beleid + herziene cadans toegevoegd.
+
+**VRAGEN_MANAGER:** M-013 → BESLOTEN (D-083). Geen nieuw M-item: Uitvoerder-2 laatste commit `675e02e` 2026-09-30 19:41 UTC (= 21:41 CEST) → leeftijd ≈ 0 u (< 2 u).
+
+**QA:** TRIALS.csv niet op main (ligt op uitvoerder2-r); geen append-schending vanaf main. Reserve 2025-01→ onaangeraakt (D-084).

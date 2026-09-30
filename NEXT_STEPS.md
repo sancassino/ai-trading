@@ -1,4 +1,4 @@
-# NEXT_STEPS v35 — Manager, 2026-09-30 (verwerkt D-083…D-088) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v36 — Manager, 2026-09-30 (verwerkt D-083…D-090) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -6,41 +6,58 @@
 
 > **⚠ FORWARD ETF-PAPIER:** loopt als papierreeks door (kost niets) maar is **geen hoofdspoor**. Geen nieuwe ETF-acties; Uitvoerder-1 laat de cron draaien.
 
-Bindend: D-083…D-088 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bevriezen.
+> **⚠ TEAM (D-090):** Claude = alleen CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main.
 
-## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-088)
+Bindend: D-083…D-090 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bevriezen.
+
+## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-090)
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
 
-### Acties (bindend, D-087)
+### Acties (bindend, D-087; rollen D-090)
 
-1. **Uitvoerder-2 — review `engine/ftmo.py` (D-087 actie 1, prio 1):**
-   - `git show grok/cto-1:engine/ftmo.py` lezen + vergelijken met `q1_frontier.py`, `mc_daily_ftmo.py`, `ftmo_economics.py`
+1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — review `engine/ftmo.py` (D-087 actie 1, prio 1):**
+   - `git show origin/grok/cto-1:engine/ftmo.py` lezen + vergelijken met `q1_frontier.py`, `mc_daily_ftmo.py`, `ftmo_economics.py`
    - Rapporteer in RUNLOG_R2: (a) FTMO-regels correct? (b) discrepanties t.o.v. bestaande simulators (bewuste keuze of fout)? (c) welke catalogus-sleeves als eerste door `ftmo_ev()` jagen?
    - Geen eigen implementatie tenzij aantoonbare fout gevonden.
+   - Daarna A-tier: A4=FOMC C17, A5=FX-intradag (PREREG's op `claude/trusting-faraday-34tsmg`); A1=ORB/S3 geblokkeerd op data → skip. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
 
 2. **Grok CTO — A-tier runs na Uitvoerder-2-feedback (D-087 actie 2):**
    - Wacht max. 1 cyclus op Uitvoerder-2.
    - Daarna: draai `ftmo_ev()` op A1=ORB/B4a, A4=FOMC-cyclus (C17), A5=FX-intradag-breakout met data/daily/ en data/m5/.
    - Rapporteer FTMO-EV per rule in RUNLOG_CTO.
 
-3. **Strateeg — A4/A5 PREREG-formaat klaarleggen (D-087 actie 3):**
-   - Catalogus v4.1 A/B/C/D-tier-indeling is correct. Ga door met A4-FOMC en A5-FX-intradag: concrete hypothese-formulering in PREREG-formaat klaarzetten (nog niet uitvoeren — Uitvoerder-2 draait).
+3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — A4/A5 PREREG + B-tier (D-087 actie 3):**
+   - PREREG_FTMO_C17.md / PREREG_FTMO_FX_INTRADAG.md checken/aanvullen.
+   - Volgende: B1 TSMOM-mix FX; A2 Stocks-in-Play ORB earnings. Catalogus §9 bijhouden.
+   - Vergelijk met Strateeg-2 (`grok/strateeg-2`) na commits; rapporteer in catalogus §10.
 
-4. **Auditor — `engine/ftmo.py` onafhankelijk valideren (D-087 actie 5):**
+4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090):** parallel 2–3 nieuwe FTMO-hypotheses (niet al in catalogus); PREREG_S2_*.md; RUNLOG_STRATEEG2.md. CEO vergelijkt na 3 cycli.
+
+5. **Auditor (Claude, blijft) — `engine/ftmo.py` onafhankelijk valideren (D-087 actie 5):**
    - Schrijf eigen mini-implementatie van FTMO-regels; check of Monte Carlo juiste p-waarden geeft op synthetische paden met bekende uitkomsten.
-   - Rapporteer in AUDIT_1.md.
+   - Rapporteer in AUDIT_1.md. Onafhankelijkheid t.o.v. Grok-CTO blijft bindend (D-090).
 
-5. **Manager-QA elke cyclus:**
-   - Uitvoerder-2 commit < 2 uur geleden op `claude/uitvoerder2-r`? Zo niet → VRAGEN_MANAGER openen.
+6. **Manager-QA elke cyclus (Grok, branch `main`):**
+   - Uitvoerder-2 commit < 2 uur geleden op `claude/uitvoerder2-r`? Zo niet → VRAGEN_MANAGER openen (`## M-[nr] — … · OPEN`).
    - TRIALS.csv: alleen geldig als append (geen rijen gewijzigd/verwijderd).
    - PREREG-bestanden: git log tijdvolgorde — PREREG gecommit vóór resultaat? Zo niet → blokkade.
+   - Nieuwe CEO-besluiten uit BESLUITEN.md → NEXT_STEPS (versie bump); niemand wacht > 60 min (standaardactie).
 
-### Teamcadans (D-088)
-- CEO: elke 30 min
-- Uitvoerder-2: elk uur (engine/ftmo.py valideren + catalogus FTMO-EV)
-- Manager: elk uur (NEXT_STEPS bijhouden, acties verdelen)
-- Strateeg: elke 2 uur (catalogus v4+ bijwerken)
+### Model-beleid (D-089)
+- Haiku-klasse: Manager, Strateeg (coördinatie/schrijfwerk).
+- Sonnet-klasse: Uitvoerder-2, Auditor, CEO (Python/MC/statistisch oordeel).
+- Regel: meerdere lege cycli → CEO zet agent omlaag of pauzeert trigger. Enige maatstaf = voortgang FTMO-edge.
+- Platform-minimum trigger = 1 uur; Grok dekt fijnere cadans waar nodig.
+
+### Teamcadans (D-088, herzien D-089/D-090)
+- CEO (Claude): elk uur (platform-min); beslist + BESLUITEN
+- Auditor (Claude): onafhankelijk, op verzoek / D-087
+- Manager (Grok → `main`): elke 30 min
+- Uitvoerder-2 (Grok → `claude/uitvoerder2-r`): elke 30 min
+- Strateeg (Grok → `claude/trusting-faraday-34tsmg`): elk uur
+- Strateeg-2 (Grok → `grok/strateeg-2`): elk uur
+- CTO (Grok → `grok/cto-1`): engine + A-tier runs
 
 ---
 
