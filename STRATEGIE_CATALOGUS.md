@@ -166,6 +166,9 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 | B1 | **TSMOM-mix FX (C05 op FX)** | Overnight maand-omloop + swap-drag | **GESTOPT** kostenpoort TRAIN FAIL (`18c7996`); geen nieuwe overnight maand-sleeves |
 | B2 | **FX-carry + trendfilter (C12)** | Carry-risicopremie; C12 CAT1 ≈ 0 na kosten → herevalueer alleen met D1-reeksen + FTMO-FX-swaps | Lage prioriteit |
 | B3 | **Donchian D1 FX/XAU (C03)** | R4 H4 negatief maar op short reeks; FX D1 = 1 nacht swap; positief scheef | Herevalueer met lange FX-dagreeksen (FRED 1971+) |
+| **N — D-091 niet-kloon (nacht)** | | | |
+| N1 | **Opening-drive exhaustion FADE** — US100/US30/US500, T+30 ATR-filter, target→open, EOD flat | ≠ ORB (tegen drive, geen OR-break) | **PREREG bevroren** `PREREG_FTMO_N1_OPEN_FADE.md` |
+| N2 | **US100↔US500 relative morning** — z-score diff T+60, equal-risk, EOD flat | ≠ ORB/richting; twin-index | **PREREG bevroren** `PREREG_FTMO_N2_REL_FLAT.md` |
 | **C — HERBEOORDELEN met FTMO-EV** | | | |
 | C1 | **C02 Faber (D1 DD-filter, 1 nacht swap)** | Als overlay (long/flat), swap ≈ 1–2,3 bp/nacht → 5–8%/jr drag op long; nuttig als risicobeheer maar geen FTMO-trial | Geen trial; als portefeuille-overlay in FTMO-context herbeoordelen |
 | C2 | **C55 DAA** | Weinig trades; swap-drag als in positie | Na engine/ftmo.py eventueel herbeoordelen |
