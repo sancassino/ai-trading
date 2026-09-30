@@ -1,4 +1,4 @@
-# NEXT_STEPS v33 — Manager, 2026-09-30 20:10 Amsterdam (v32-inhoud hieronder blijft gelden) — verwerkt D-042…D-079, ALLOCATIE_V1.1, kosten NL-retail, run 7 (C66/C67)
+# NEXT_STEPS v34 — Manager, 2026-09-30 20:40 Amsterdam (inhoud v32/v33 blijft gelden) — verwerkt D-042…D-079, ALLOCATIE_V1.1, kosten NL-retail, run 7 (C66/C67)
 
 Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
 
@@ -23,6 +23,15 @@ Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). All
 1. **D2-uitbreiding (D-044, ≤ 3 u):** (a) TR/dividend (S&P, DAX, NDX) binnen bronvoorwaarden; (b) ≥ 20 instrumenten voor C54 (NZD/SEK/NOK-FX, Bund/JGB/Gilt-proxy's, agri/energie); (c) roll-schone zilver/koper/gas; (d) **FRED vanaf Debian ophalen en committen** (rentes, goud/CPI, FX); rate-limit, eerlijke UA, niets omzeilen.
 2. **Engine (D-045):** future-model-fix (FX = spot + renteverschil; doorlopende futures zonder rf-aftrek) blijft; opnemen in engine/README + ENGINE_TEMPLATE (Manager werkt ENGINE_TEMPLATE bij: zie §V).
 3. S3/P0 en F (forward) volgens bestaande punten hieronder.
+
+## 0p. ALLOCATIE_V1.3 + run 8 + PORT3/PORT4-uitkomst — Manager-QA
+**Stand:** P-ETF-lite (PREREG_PORT4; 18 trades/jr, kosten ≈ €27/jr) faalt 3 van 4 vooraf vastgelegde criteria (ΔSR −0,06; maxDD 15,2% > 14,4%; 2021–24 SR 0,25 vs 0,42) → **niet geselecteerd als vervanging** (Strateeg V1.3, correct toegepast). Drempel 1% (PORT3 'D1'): SR 0,91, 57 trades/jr, kosten ≈ €116/jr (ref. €268), alfa 5,4%/jr — beste kosten/SR-verhouding. Run 8 (EM + USD-rijen, informatief): Faber in USD/EM zelfde beeld als run 5 (DD-bescherming in 6/7 markten, ΔSR +0,13 niet significant); label ongewijzigd.
+**Manager-QA:**
+1. **Winnaarsvloek bij D1:** D1 is de beste van 3 in-sample varianten; economisch logisch (minder trades), maar **geen selectie tot forward-resultaat + ≥ 3 maanden**; specificatie blijft L0 tot CEO anders besluit; D1 alleen als 'kandidaat-verbetering' labelen. Rapporteer alle varianten.
+2. **Simulator-SR-verschil (0,86 vs 0,94):** vergelijkingen alleen binnen één simulator; in EINDVERSLAG/Sandro-getallen nooit simulator-getallen met PREREG_PORT-getallen mengen.
+3. **Reserve-run-scope (Uitvoerder-2, vóór 09:00 bevroren lijst):** `r2_reserve.py` gebruikt `all_portfolios(1)+(2)`; P-ETF-lite (port4.py) en PORT3-drempelvariant staan er niet in. Kies één van: (a) toevoegen als **informatieve rijen** (alleen als dat zonder codewijziging aan bestaande rijen kan; nieuw script-SHA vastleggen vóór vrijgave; testen op ontdekking), of (b) expliciet in het reserve-rapport vermelden dat ze niet zijn meegenomen. Geen late aanpassing na 09:00.
+4. **Forward-volledigheid:** controleer 22:25 UTC dat alle pre-geregistreerde portefeuilles (a, b, +, breed, PORT3 'D1', PORT4-lite) in `forward/portfolio_daily.csv` staan, met hedged/ongehedged-kolommen.
+5. **Run 9-voorstel (Uitvoerder-2; laagste prioriteit, geen trial):** frontier/DD-budget en MC opnieuw **met L1 (drempel 1%) en model B** als gevoeligheid naast L0, zodat het €-getal in de rapportage de realistische kosten weerspiegelt.
 
 ## 0o. D-080/D-081, ALLOCATIE_V1.2 (P-ETF-lite), R2-007 — Manager-QA
 **Naamconflict PREREG_PORT3 (oplossen vóór 01-10 12:00):** Uitvoerder-1 heeft `PREREG_PORT3.md` (drempelvariant van P-ETF-a, mijn v32 QA-1) al gecommit en bevroren; D-080 noemt **P-ETF-lite** óók PREREG_PORT3. Regel (precedent D-052: vroegste commit geldt): **PORT3 = drempelvariant (blijft)**, **P-ETF-lite = `PREREG_PORT4.md`** (exacte definitie: Strateeg ALLOCATIE_V1_2 §2 — 4 instrumenten, sleeve A kwartaalherweging, Faber alleen SPX, drempel 2%, geen hefboom; eigen SHA in RUNLOG). Uitvoerder-1 committeert PORT4 vóór 01-10 12:00 en neemt beide in `forward_portfolio.py` op vóór de eerste run (22:25 UTC); Uitvoerder-2 backtest-rijen L0–L3 + lite (geen trials). Niets bevroren wijzigen.
