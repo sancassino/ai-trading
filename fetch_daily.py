@@ -19,6 +19,12 @@ SERIES = {  # naam: Yahoo-ticker
     "SPX_TR": "^SP500TR", "NDX_TR": "^XNDX", "IEF": "IEF", "SHY": "SHY", "LQD": "LQD", "HYG": "HYG", "TIP": "TIP", "AGG": "AGG",
     "EFA": "EFA", "EEM": "EEM", "IWM": "IWM", "GLD": "GLD", "SLV": "SLV", "DBC": "DBC", "VNQ": "VNQ",
     "AUDUSD": "AUDUSD=X", "USDCAD": "CAD=X", "USDCHF": "CHF=X", "NZDUSD": "NZDUSD=X", "FVX_5Y": "^FVX", "TYX_30Y": "^TYX",
+    # D-044: meer instrumenten (C54), roll-inclusieve ETF-proxy's
+    "USDSEK": "SEK=X", "USDNOK": "NOK=X", "EURGBP": "EURGBP=X", "EURJPY": "EURJPY=X", "EURCHF": "EURCHF=X",
+    "CORN_F": "ZC=F", "WHEAT_F": "ZW=F", "SOY_F": "ZS=F", "COFFEE_F": "KC=F", "SUGAR_F": "SB=F", "COTTON_F": "CT=F", "CATTLE_F": "LE=F",
+    "HEATOIL_F": "HO=F", "GASOLINE_F": "RB=F", "BRENT_F": "BZ=F", "PLAT_F": "PL=F", "PALL_F": "PA=F",
+    "CPER": "CPER", "UNG": "UNG", "USO": "USO", "PPLT": "PPLT", "DBA": "DBA",
+    "BUND_ETF": "EXX6.DE", "GILT_ETF": "IGLT.L", "BWX": "BWX", "EMB": "EMB", "SPX_EQW": "RSP",
 }
 
 
