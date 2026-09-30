@@ -209,3 +209,46 @@ Manager/Strateeg/Uitvoerder halen dit bestand op met `git show origin/claude/upb
  5. **Zoekrichting (Strateeg, plan v4):** dagelijks-vlak of laag-swap, positief-scheef of laag-DD-profielen met SR ≥ 0,8 na FTMO-kosten; combineer sleeves (ORB-achtig intraday, kortingsgedreven shorts, FX-intraday, event-strategieën, vol-getarget multi-asset op CFD) met het FTMO-EV als toets; herzie wat in fase 1 faalde (ORB-verval, kostenpoort) **met de nieuwe methodiek** (cluster-t, nul-kalibratie, regimes).
  6. **Forward:** nieuwe papierreeksen voor FTMO-kandidaten met FTMO-mechaniek (dagverlies/equity) — geen echte stap zonder S10 (FTMO-variant: H-poorten) + Auditor; aankoop/evaluatie is altijd Sandro's beslissing.
 **D-086 · Teamacties (nu)** · **Uitvoerder-2:** routine-prompt aangepast (ik zet hem nu om): bouw `engine/ftmo.py`, herbeoordeel catalogus-sleeves op `cfd` + FTMO-EV; geen ETF-werk meer. **Auditor:** hertarget op FTMO-pipeline (engine `cfd`-vehikel, Q1b/FTMO-simulator, ORB/B4a-resultaten, reserve-hygiëne; ETF-replicatie mag alleen als ze de engine-kern bevestigt). **Uitvoerder-1:** forward-ETF laten lopen, data (FTMO-M5/D1 actueel, D2b) en MT5-reconciliatie; nieuwe prioriteit: FTMO-instrumenten + swaps bijhouden (tijdvariabel), spreads per uur. **Strateeg:** plan v4 (FTMO-pivot), S10 (FTMO-EV-variant) reactiveren; catalogus herordenen naar FTMO-uitvoerbaarheid. **Manager:** NEXT_STEPS v32, EINDVERSLAG (Sandro-samenvatting!) en ORGANISATIE aanpassen: **doel = FTMO-prop €80k**; eigen-kapitaal-stukken naar archief; M-/S-/U-vragen die eigen kapitaal veronderstelden sluiten. **Niemand** rapporteert nog "beter dan 60/40/cash" als doelmaat.
+
+## 2026-09-30 ~22:00 Amsterdam — CEO-cyclus na Sandro-briefing
+
+**D-087 · Grok CTO vs andere agents — vergelijking en conclusies (CEO-besluit, 2026-09-30)**
+
+Ik heb RUNLOG_CTO.md (branch grok/cto-1) en RUNLOG_R2.md vergeleken. Uitkomst:
+
+**Grok CTO (grok/cto-1):**
+- Leverde `engine/ftmo.py` (323 regels) in de kickoff zelf — vectorized block-bootstrap Monte Carlo, correcte FTMO-2-Step-regels (fase 1/2, dagverlies op floating equity, statisch max-DD, min_days, fee-refund bij eerste uitbetaling, restart-on-breach), CLI en smoke-tests.
+- Laag: RUNLOG_CTO slechts 46 regels, context-read bondig maar correct (D-083…D-086 verwerkt, bestaande simulators q1_frontier/mc_daily_ftmo/ftmo_economics gelezen en uitlijning beschreven).
+- Sterk punt: **Priority 1 in één cyclus geleverd**. Geen eigen-kapitaal-werk, direct FTMO-pivot.
+
+**Uitvoerder-2 (claude/uitvoerder2-r):**
+- Uitstekend procesmatig: 442 trials netjes bijgehouden, PREREG vóór resultaat, nul-kalibratie, dag-geclusterd t, BH-FDR — alle statistieken correct.
+- Zwak punt: **volledig op het verkeerde doel gewerkt** (eigen-kapitaal ETF, niet FTMO CFD) tot D-083. Na D-083/D-086 nog geen enkel commit richting engine/ftmo.py of catalogus-FTMO-herbeoordeling zichtbaar in RUNLOG_R2.
+- Meest waardevolle bijdrage: run 5 nul-kalibratie (C02 = DD-filter, geen alfa), lange-historie-toets, frontier-analyse.
+
+**Conclusie:**
+- Grok CTO wint op **snelheid van pivot en concrete levering** (Priority 1 afgerond).
+- Uitvoerder-2 wint op **procesdiepte en statistisch vakmanschap**.
+- De twee zijn complementair: CTO bouwt de module snel, Uitvoerder-2 valideert en integreert nauwkeurig.
+
+**Acties (bindend):**
+
+1. **Uitvoerder-2:** review `grok/cto-1:engine/ftmo.py` vs eigen kennis van `q1_frontier.py`, `mc_daily_ftmo.py`, `ftmo_economics.py`. Rapporteer in RUNLOG_R2: (a) zijn de FTMO-regels correct geïmplementeerd? (b) zijn er discrepanties met bestaande simulators die een bewuste keuze zijn? (c) welke catalogus-sleeves worden als eerste door `ftmo_ev()` gejaagd? GEEN eigen implementatie — gebruik Grok's module tenzij je een aantoonbare fout vindt.
+
+2. **Grok CTO:** wacht op Uitvoerder-2-feedback (max 1 cyclus). Als correcties nodig zijn, implementeer die. Daarna: draai `ftmo_ev()` op de A-tier catalogusregels (A1=ORB/B4a, A4=FOMC-cyclus C17, A5=FX-intradag-breakout) met de beschikbare dagdata (data/daily/, data/m5/). Rapporteer FTMO-EV per rule in RUNLOG_CTO.
+
+3. **Strateeg:** catalogus v4.1 is correct (A/B/C/D-tier indeling). Ga door met A4-FOMC en A5-FX-intradag concrete hypothese-formulering (PREREG-formaat klaar zetten, nog niet uitvoeren — Uitvoerder-2 draait).
+
+4. **Manager:** update NEXT_STEPS naar v35 met bovenstaande acties als prioriteiten. Eigen-kapitaal-stukken definitief naar archief/eigen_kapitaal/ (Manager doet dit als geen enkel bestand daar nog mist).
+
+5. **Auditor:** hertarget bevestigd (D-086). Prioriteit 1: valideer `engine/ftmo.py` onafhankelijk — schrijf eigen mini-implementatie van de FTMO-regels en check of de Monte Carlo de juiste p-waarden geeft op synthetische paden met bekende uitkomsten. Rapporteer in AUDIT_1.md.
+
+**D-088 · Scheduled triggers voor alle agents (CEO-besluit, 2026-09-30)**
+
+CEO stelt de volgende uurcycli in via MCP:
+- CEO-cyclus: elke 30 min (eigen sessie, dit bestand + NEXT_STEPS + RUNLOG's lezen, open vragen verwerken)
+- Uitvoerder-2-cyclus: elk uur (engine/ftmo.py valideren + catalogus FTMO-EV)
+- Manager-cyclus: elk uur (NEXT_STEPS bijhouden, acties verdelen)
+- Strateeg-cyclus: elke 2 uur (catalogus v4+ bijwerken)
+
+Alle agents werken op claude-sonnet-4-6, low efficiency, zoals Sandro vroeg.
