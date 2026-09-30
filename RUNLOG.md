@@ -386,3 +386,13 @@ Getest (VOORSTEL_G.md vóór berekening): j2_batch.py, FTMO-M5 2021–26, kosten
 (3) GER40 ORB alleen in de richting van de overnight US500-beweging: N 647, +3,58 bp, t +1,44 / +0,35, gedragen door 2022 (+12,8 bp).
 Conclusie: geen van drie haalt t ≥ 3 in train én test. TRIAL_COUNT 394.
 Volgende stap: backlog v6 afgerond; uurlijkse NEXT_STEPS-check.
+
+## 2026-09-30 03:11 — L1: lange onafhankelijke intraday-data — GEBLOKKEERD (geen gratis, geautomatiseerd toegestane bron); L2/L4 op dit pad gestopt
+
+Geprobeerd (volgens NEXT_STEPS v7):
+- Dukascopy datafeed (datafeed.dukascopy.com, M1-candles .bi5): eerste verzoek HTTP 429 'Too Many Requests' met verwijzing naar dukascopy.com/wiki/en/development/data-export; met browser-User-Agent 1 bestand gelukt, daarna weer 429. Hun officiële bulkroute is een AWS S3-bucket met 'Requester Pays' (≈ $0,0004/1.000 requests + $0,02/GB) → vereist AWS-account + betaling. Rate-limit niet omzeild.
+- HistData.com (gratis M1 SPX/NSX/GRX vanaf 2010-11, XAU 2009, EURUSD 2000; geen US30): download-POST geeft leeg bestand bij geautomatiseerde aanvraag (2 pogingen); geautomatiseerde toegang wordt als betaald abonnement aangeboden. Bescherming niet omzeild.
+- Stooq: JavaScript-botcheck (eerder vastgesteld).
+Conclusie: geen gratis, geautomatiseerd bruikbare lange intraday-bron → L1 geblokkeerd; L2 (ORB 2010–2020) en L4 (portefeuille op lange steekproef) gestopt op dit pad, zoals de opdracht voorschrijft.
+Opties voor Sandro: (1) AWS-account voor Dukascopy S3 (kosten naar schatting enkele dollars), (2) HistData handmatig downloaden (≈ 80 jaar-/maandbestanden SPX/NSX/GRX/XAU/EURUSD, ASCII M1) en in data/long_m1/ zetten, (3) betaalde bron.
+Volgende stap: L3(a) pre-FOMC op Yahoo-dagproxy 1994–2026 en L5 (forward-weekrapport).
