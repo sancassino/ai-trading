@@ -640,3 +640,10 @@ ORB-B4a: laag +2,02 bp (dag-t 1,37, N 3.182) | midden +1,51 (0,68) | hoog +1,60 
 Per jaar geen consistent patroon (2022 draagt alle tercielen: +11,4/+8,2/+3,1 bp; 2025 hoog +6,0 maar 2026 hoog −4,1). De regimehypothese (edge = hoge vol) wordt in 2021–26 niet ondersteund; S3b blijft vastgelegd als secundaire toets op 2011–20 (PREREG_S3, vóór data), maar de prior is lager.
 Belangrijke nevenvondst (D-006): ORB-B4a per-trade t 2,93 (N 9.249) wordt dag-geclusterd **1,81** (1.490 dagen; train 1,67, test 0,81) — de symbolen bewegen samen, dus het eerdere bewijs was overschat. Voor S3 betekent dit dat de t ≥ 2,5-lat (dag-geclusterd) strenger is dan het 2021–26-resultaat zelf haalde.
 Volgende stap: U3 (London-open ORB FX, D-015 GO), P0 loopt op de achtergrond.
+
+## 2026-09-30 10:01 — U3: London-open ORB op EURUSD/GBPUSD — kostenpoort FAALT (geen trial)
+
+PREREG_U3.md vóór berekening; u3_london_orb.py = b4_sim.run_orb ongewijzigd, sessie 08:00–17:00 Londen, FTMO-M5 2021–26, kosten spread + €2,25/lot/kant.
+Poort (train 2021–23): gemiddeld bruto +0,79 bp/trade vs 3× kosten 4,49 bp (kosten ≈ 1,5 bp/trade incl. spread aan de uitstap) → STOP, TRIAL_COUNT blijft 414.
+Informatief: N 2.979; netto train −0,71 bp (dag-t −0,81), test +0,17 (+0,28); per jaar −3,2 … +0,7 bp; EURUSD −0,48 bp, GBPUSD −0,09; dag-SR −0,21, skew +1,96.
+Conclusie: in FX-majors bestaat geen opening-range-momentum na de Londense open (past bij R1: bruto ≈ 0). Volgende stap: U2 (ORB-sizing op OR-breedte, informatief).

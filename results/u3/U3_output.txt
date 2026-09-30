@@ -1,0 +1,6 @@
+U3 London-open ORB: N 2979 | poort train: bruto +0.79 bp vs 3× kosten 4.49 bp → STOP (geen trial)
+   netto: train -0.71 bp (dag-t -0.81, N 1556) | test +0.17 bp (dag-t +0.28, N 1423) | +50% spread test dag-t +0.11 | per-trade t -0.60
+   per jaar: 2021:-3.16(520) 2022:+0.57(518) 2023:+0.47(518) 2024:-0.20(520) 2025:+0.72(518) 2026:-0.06(385)
+   per symbool: EURUSD:-0.48 bp/t -0.80 GBPUSD:-0.09 bp/t -0.12
+   dagreeks (gelijk gewogen): SR -0.21 | skew +1.96
+   → AFGEWEZEN
