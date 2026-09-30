@@ -722,3 +722,12 @@ PREREG_S3.md en s3_run.py terug naar t ≥ 2,0 (D-029/D-036; mijn terugdraaiing 
 SHA-256 PREREG_S3.md: bfd755b827c31fbf22896e7cefaf2f5ea900afdd3ada53002462272e5deb1a19
 SHA-256 s3_run.py: 11283dcc1e6f31f6186fa9cd559e9fb3970bb8b0ab01b8b8b6c06d7daeff7c3f
 Niemand wijzigt deze bestanden hierna.
+
+## 2026-09-30 11:15 — CAT1 volgens ENGINE_TEMPLATE (D-037): 7 trials (TRIAL_COUNT 421); alleen C02 Faber door G-ontdekking; engine krijgt vehikels + G-benchmark (D-038)
+
+Engine-aanpassingen: kostenpoort = bruto ≥ 3× spread/commissie (financiering alleen in netto); vehicle-parameter cfd / etf (long-only, TER 0,10%, 3 bp rondreis, cash-rente DTB3 op niet-belegd) / future (overschotrendement + rf op kapitaal, 1 bp + rol 4×0,5 bp) — standaardwaarden tot engine/vehicles.csv (Strateeg) er is; G-benchmark = buy-and-hold van dezelfde instrumenten met hetzelfde vehikel (SR én maxDD); vehikelrapporten tellen niet als extra trial (geen p in TRIALS.csv).
+CAT1 opnieuw (identieke cijfers, template-poort; alle 7 door de kostenpoort):
+C02 Faber: min t 3,14, SR 0,32, H1 2,01 / H2 2,59, 84% 5j+, BH-q 0,003 → **door G-ontdekking**; benchmark (cfd) SR 0,32 vs B&H 0,18, maxDD 54% vs 88%, CAGR 3,1% vs 1,6% → beter.
+C17 FOMC-cyclus: t 2,85 (bootstrap 3,05), SR 0,52, BH-q 0,006, benchmark beter (SR 0,52 vs 0,26; DD 42% vs 73%) → afgewezen op t-lat (min(NW, bootstrap) < 3).
+C01, C03, C05, C07, C12: afgewezen (t ≤ 1,3). 
+D-037: C02 is een ontdekkingsresultaat, geen kandidaat; reserve-OOS pas in de gezamenlijke run na catalogusrun 2 (D-038). Volgende: C02-QA per vehikel (etf/future) en tegen B&H, D2-uitbreiding (total-return-indices).

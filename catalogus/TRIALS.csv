@@ -1,9 +1,9 @@
 datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
 2026-09-30;rep_b2b_rsi2;basis;D2 (replicatie, telt niet als nieuwe trial);ontdekking;0.520;3.211;0.000661;0.0034;door G-ontdekking
-2026-09-30;C01_tsmom12;basis;D2;ontdekking;-0.012;-0.118;0.547148;0.5471;stop: kostenpoort (geen trial)
-2026-09-30;C02_faber;basis;D2;ontdekking;0.318;3.140;0.000844;0.0034;stop: kostenpoort (geen trial)
-2026-09-30;C03_donchian;basis;D2;ontdekking;0.134;0.971;0.165844;0.2654;stop: kostenpoort (geen trial)
-2026-09-30;C05_tsmom_mix;basis;D2;ontdekking;0.129;1.270;0.102069;0.2041;stop: kostenpoort (geen trial)
-2026-09-30;C07_xmom;basis;D2;ontdekking;0.002;0.024;0.490413;0.5471;stop: kostenpoort (geen trial)
-2026-09-30;C12_carry_trend;basis;D2;ontdekking;0.012;0.092;0.463344;0.5471;stop: kostenpoort (geen trial)
-2026-09-30;C17_fomc_cycle;basis;D2;ontdekking;0.520;2.850;0.002189;0.0058;stop: kostenpoort (geen trial)
+2026-09-30;C01_tsmom12;basis;D2 [cfd];ontdekking;-0.012;-0.118;0.547148;0.5471;afgewezen
+2026-09-30;C02_faber;basis;D2 [cfd];ontdekking;0.318;3.140;0.000844;0.0034;door G-ontdekking
+2026-09-30;C03_donchian;basis;D2 [cfd];ontdekking;0.134;0.971;0.165844;0.2654;afgewezen
+2026-09-30;C05_tsmom_mix;basis;D2 [cfd];ontdekking;0.129;1.270;0.102069;0.2041;afgewezen
+2026-09-30;C07_xmom;basis;D2 [cfd];ontdekking;0.002;0.024;0.490413;0.5471;afgewezen
+2026-09-30;C12_carry_trend;basis;D2 [cfd];ontdekking;0.012;0.092;0.463344;0.5471;afgewezen
+2026-09-30;C17_fomc_cycle;basis;D2 [cfd];ontdekking;0.520;2.850;0.002189;0.0058;afgewezen

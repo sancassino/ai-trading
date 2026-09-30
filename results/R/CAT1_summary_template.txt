@@ -1,0 +1,35 @@
+=== C01_tsmom12
+- t: dag -0.12 | Newey-West -0.12 | blok-bootstrap -0.12 | H1 -0.61 | H2 +0.91 | +50% spread (NW) -0.13
+- kosten: bruto +1651.4% | spread/commissie 10.0% | financiering +1609.5% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) DOOR
+- G-benchmark (vehikel cfd): regel SR -0.01, CAGR -0.4%, maxDD 64.4% | buy-and-hold SR +0.14, CAGR +1.0%, maxDD 88.0% → niet beter
+- beslissing: afgewezen (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C02_faber
+- t: dag +3.16 | Newey-West +3.15 | blok-bootstrap +3.14 | H1 +2.01 | H2 +2.59 | +50% spread (NW) +3.14
+- kosten: bruto +2090.8% | spread/commissie 2.0% | financiering +1158.9% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) DOOR
+- G-benchmark (vehikel cfd): regel SR +0.32, CAGR +3.1%, maxDD 54.0% | buy-and-hold SR +0.18, CAGR +1.6%, maxDD 88.0% → BETER (SR én maxDD)
+- beslissing: door G-ontdekking (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C03_donchian
+- t: dag +0.99 | Newey-West +0.97 | blok-bootstrap +1.00 | H1 +3.17 | H2 -1.21 | +50% spread (NW) +0.93
+- kosten: bruto +275.3% | spread/commissie 12.8% | financiering +263.8% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) DOOR
+- G-benchmark (vehikel cfd): regel SR +0.13, CAGR +0.5%, maxDD 38.3% | buy-and-hold SR -0.18, CAGR -0.9%, maxDD 44.9% → BETER (SR én maxDD)
+- beslissing: afgewezen (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C05_tsmom_mix
+- t: dag +1.29 | Newey-West +1.27 | blok-bootstrap +1.27 | H1 +0.98 | H2 +0.89 | +50% spread (NW) +1.25
+- kosten: bruto +1332.4% | spread/commissie 17.0% | financiering +1066.2% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) DOOR
+- G-benchmark (vehikel cfd): regel SR +0.13, CAGR +0.6%, maxDD 38.7% | buy-and-hold SR +0.14, CAGR +1.0%, maxDD 88.0% → niet beter
+- beslissing: afgewezen (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C07_xmom
+- t: dag +0.02 | Newey-West +0.02 | blok-bootstrap +0.02 | H1 -0.75 | H2 +0.27 | +50% spread (NW) +0.01
+- kosten: bruto +1166.8% | spread/commissie 7.6% | financiering +1079.6% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) DOOR
+- G-benchmark (vehikel cfd): regel SR +0.00, CAGR -0.1%, maxDD 41.4% | buy-and-hold SR +0.14, CAGR +1.0%, maxDD 88.0% → niet beter
+- beslissing: afgewezen (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C12_carry_trend
+- t: dag +0.09 | Newey-West +0.09 | blok-bootstrap +0.10 | H1 +nan | H2 +0.09 | +50% spread (NW) +0.08
+- kosten: bruto +71.4% | spread/commissie 2.0% | financiering +60.9% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) DOOR
+- G-benchmark (vehikel cfd): regel SR +0.01, CAGR +0.0%, maxDD 19.0% | buy-and-hold SR -0.27, CAGR -1.2%, maxDD 52.1% → BETER (SR én maxDD)
+- beslissing: afgewezen (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C17_fomc_cycle
+- t: dag +2.94 | Newey-West +2.85 | blok-bootstrap +3.05 | H1 +2.15 | H2 +2.01 | +50% spread (NW) +2.81
+- kosten: bruto +1701.1% | spread/commissie 33.0% | financiering +664.8% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) DOOR
+- G-benchmark (vehikel cfd): regel SR +0.52, CAGR +6.3%, maxDD 41.7% | buy-and-hold SR +0.26, CAGR +2.9%, maxDD 73.4% → BETER (SR én maxDD)
+- beslissing: afgewezen (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
