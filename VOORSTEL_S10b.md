@@ -16,3 +16,14 @@
 5. **Verwachting.** Nu: H1 alleen C02 (en C17 net onder); H2 C02 ja op CFD-basis; H3–H8 open. Kans dat alle acht ooit gehaald worden voor ≥ €400/mnd: ≈ 15–25% (CEO 20–30% voor €400–500; ik iets lager door live-haircut en 421 trials). €800–900: ≈ 3–5%.
 6. **Beslisregel.** Go-advies = H1–H8 alle waar. Tussenstanden: 'sleeve goedgekeurd voor portefeuille' = H1+H2. Drempels vast.
 7. **Falen.** Te streng → we adviseren nooit (acceptabel: het echte geld staat op het spel, een gemist kans kost minder dan een vals-positief); te los → 421 trials en 97%-beta-achtige regels (C02) kunnen marktbeta zijn met een DD-filter i.p.v. alpha — H2 (benchmark) en H1 (decennia) zijn daarvoor bedoeld.
+
+
+---
+## S10b v2 (2026-09-30 18:30 Amsterdam) — aangepast aan D-070 (risicogestuurde allocatie, premie-gebaseerde verwachting)
+**Herlabeling:** C02 = DD-filter; P-ETF-a = risicogestuurde allocatie, geen bewezen alfa. Beloning = risicopremies + structuur (1/σ, vol-target, DD-filter).
+- **H1 (bewijs = robuustheid van de structuur):** (i) cross-market: DD-reductie in ≥ 10/12 markten (run 5: 12/12 ✔, maar filtermechanica — kalibreer op nulpaden); (ii) regimes incl. 1970s en 2022 (rente stijgend, aandelen+obligaties samen omlaag); (iii) plateau (SMA 8/10/12, vol-venster 30/60/90, vol-target 8–12%) zonder piek; (iv) DD-reductie op eigen én geschudde paden; (v) ≥ 20 jr. *Geen* eis t ≥ 3 op alfa.
+- **H2:** netto-SR én maxDD/Calmar beter dan 60/40 én cash-only, per vehikel (ETF/future/CFD); voor P-ETF-a: SR ≥ 60/40 of DD ≤ 60% van 60/40 bij gelijke of hogere SR.
+- **H3:** reserve-run: teken + BI (geen pass/fail op puntschatting).
+- **H4 (forward-looking, nieuw):** verwachting = **premie-gebaseerd** (`VERWACHTING.md`), *niet* backtest; haircut alleen op excess; toon **alfa boven cash én totaal** (EUR-cash apart), scenario laag/midden/hoog en p(totaal ≥ drempel) uit Monte-Carlo. **Drempels vast (CEO):** advies 'go' vereist midden-scenario-totaal ≥ €400 **of** een door Sandro (via CEO) vooraf vastgesteld tussendoel; stand nu: midden ≈ €240 → **H4 niet gehaald**.
+- **H5–H8 ongewijzigd** (uitvoerbaarheid per vehikel, forward ≥ 3 mnd, Auditor, gefaseerde start ≤ 25% × 6 mnd).
+**Opmerking:** alleen cash levert EUR ≈ €163/mnd; het advies moet laten zien wat *extra* risico bij Sandro's DD-tolerantie oplevert (midden ≈ €79/mnd alfa ongehefeld).
