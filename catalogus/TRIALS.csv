@@ -1,9 +1,26 @@
 datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
-2026-09-30;rep_b2b_rsi2;basis;D2 (replicatie, telt niet als nieuwe trial);ontdekking;0.520;3.211;0.000661;0.0034;door G-ontdekking
+2026-09-30;rep_b2b_rsi2;basis;D2 (replicatie, telt niet als nieuwe trial);ontdekking;0.520;3.211;0.000661;0.0023;door G-ontdekking
 2026-09-30;C01_tsmom12;basis;D2 [cfd];ontdekking;-0.012;-0.118;0.547148;0.5471;afgewezen
-2026-09-30;C02_faber;basis;D2 [cfd];ontdekking;0.318;3.140;0.000844;0.0034;door G-ontdekking
-2026-09-30;C03_donchian;basis;D2 [cfd];ontdekking;0.134;0.971;0.165844;0.2654;afgewezen
-2026-09-30;C05_tsmom_mix;basis;D2 [cfd];ontdekking;0.129;1.270;0.102069;0.2041;afgewezen
-2026-09-30;C07_xmom;basis;D2 [cfd];ontdekking;0.002;0.024;0.490413;0.5471;afgewezen
-2026-09-30;C12_carry_trend;basis;D2 [cfd];ontdekking;0.012;0.092;0.463344;0.5471;afgewezen
-2026-09-30;C17_fomc_cycle;basis;D2 [cfd];ontdekking;0.520;2.850;0.002189;0.0058;afgewezen
+2026-09-30;C02_faber;basis;D2 [cfd];ontdekking;0.318;3.140;0.000844;0.0024;door G-ontdekking
+2026-09-30;C03_donchian;basis;D2 [cfd];ontdekking;0.134;0.971;0.165844;0.2111;afgewezen
+2026-09-30;C05_tsmom_mix;basis;D2 [cfd];ontdekking;0.129;1.270;0.102069;0.1429;afgewezen
+2026-09-30;C07_xmom;basis;D2 [cfd];ontdekking;0.002;0.024;0.490413;0.5281;afgewezen
+2026-09-30;C12_carry_trend;basis;D2 [cfd];ontdekking;0.012;0.092;0.463344;0.5281;afgewezen
+2026-09-30;C17_fomc_cycle;basis;D2 [cfd];ontdekking;0.520;2.850;0.002189;0.0037;afgewezen
+2026-09-30;C51_volmanaged;basis;D2 [etf];ontdekking;0.314;2.827;0.002347;0.0037;afgewezen
+2026-09-30;C52_allweather;basis;D2 [etf];ontdekking;0.651;3.030;0.001224;0.0029;door G-ontdekking
+2026-09-30;C52_allweather;lang;D2 [etf];ontdekking;0.786;3.828;0.000065;0.0005;door G-ontdekking
+2026-09-30;C53_gem;basis;D2 [etf];ontdekking;0.558;2.827;0.002350;0.0037;afgewezen
+2026-09-30;C54_carver;basis;D2 [future];ontdekking;0.439;4.149;;;"ongeldig: future-model FX/grondstof fout (tooling, herrun na engine-fix; telt niet)"
+2026-09-30;C54_carver;qa;D2 [future];ontdekking;0.422;2.450;;;"ongeldig: future-model FX/grondstof fout (tooling, herrun na engine-fix; telt niet)"
+2026-09-30;C51_volmanaged;basis;D2 [future];ontdekking-vehikelrapport;0.321;2.891;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C51_volmanaged;basis;D2 [cfd];ontdekking-vehikelrapport;0.193;1.753;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C54_carver;qa;D2 [cfd];ontdekking-vehikelrapport;0.014;0.083;;;vehikelrapport (geen extra trial); benchmark niet beter
+2026-09-30;C02_faber;basis;D2 [etf];ontdekking-vehikelrapport;0.465;4.558;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C02_faber;basis;D2 [future];ontdekking-vehikelrapport;0.471;4.617;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C05_tsmom_mix;basis;D2 [future];ontdekking-vehikelrapport;0.442;4.243;;;"ongeldig: future-model FX/grondstof fout (tooling, herrun na engine-fix; telt niet)"; benchmark beter
+2026-09-30;C17_fomc_cycle;basis;D2 [etf];ontdekking-vehikelrapport;0.696;3.816;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C17_fomc_cycle;basis;D2 [future];ontdekking-vehikelrapport;0.736;4.033;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C54_carver;basis;D2 [future];ontdekking;0.467;4.425;0.000005;0.0001;door G-ontdekking
+2026-09-30;C54_carver;qa;D2 [future];ontdekking;0.573;3.317;0.000456;0.0021;door G-ontdekking
+2026-09-30;C05_tsmom_mix;basis;D2 [future];ontdekking-vehikelrapport;0.412;4.017;;;vehikelrapport (geen extra trial); benchmark beter

@@ -1,0 +1,15 @@
+# PREREG-definitie (Uitvoerder-2, 2026-09-30, vóór resultaat) — zie PREREG_CAT2.md; code = catalogus/C53_gem.py
+id: 'C53_gem'
+naam: 'Dual momentum (Antonacci GEM): US / ex-US aandelen of obligaties'
+familie: 'momentum/allocatie'
+mechanisme: 'Absolute momentum (aandelen vs geldmarkt) beperkt bear-markt-DD; relatieve momentum kiest de sterkste regio.'
+bron: "Antonacci (2014) 'Dual Momentum Investing'"
+instrumenten: ['SPY', 'EFA', 'IEF']
+vehicle: 'etf'
+aggregatie: 'som'
+benchmark: {'naam': '60/40 SPY/IEF', 'gewichten': {'SPY': 0.6, 'IEF': 0.4}}
+varianten: {'basis': {}}
+start_jaar: 2003
+ontdekking: '<= 2024-12-31'
+reserve_oos: '2025-01 -> gezamenlijke run (D-038), niet aangeraakt'
+gates: 'ENGINE_TEMPLATE §4 + D-037/D-038 (G-kosten, G-ontdekking t>=3, BH q=0.10, G-benchmark)'

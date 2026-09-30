@@ -10,3 +10,5 @@ data/m5_vol/
 data/long_m1/
 data/long_m5/
 data/dukascopy_raw/
+__pycache__/
+*.pyc

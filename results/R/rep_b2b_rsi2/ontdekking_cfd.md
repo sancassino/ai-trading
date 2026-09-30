@@ -11,5 +11,5 @@ Bron: Connors & Alvarez (2008); eerder getest als B2b (t 3,65)
 - per jaar (%): 1990:-8.6 1991:+3.6 1992:-1.9 1993:+3.5 1994:+0.6 1995:+11.5 1996:+2.2 1997:+13.9 1998:+2.7 1999:+11.5 2000:+6.9 2001:-0.5 2002:+0.2 2003:+9.2 2004:-1.2 2005:+2.3 2006:-1.2 2007:+3.7 2008:-5.5 2009:+7.6 2010:+6.9 2011:-4.1 2012:+5.0 2013:+9.0 2014:-2.3 2015:+2.6 2016:+0.5 2017:+4.1 2018:-4.9 2019:+0.4 2020:-3.4 2021:+4.9 2022:-1.2 2023:+0.7 2024:+5.5
 - kosten: bruto +655.4% | spread/commissie 19.3% | financiering +187.5% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) DOOR
 - 5-jaarsvensters positief: 86% (6/7)
-- G-benchmark (vehikel cfd): regel SR +0.52, CAGR +2.3%, maxDD 16.6% | buy-and-hold SR +0.24, CAGR +2.4%, maxDD 62.2% → BETER (SR én maxDD)
+- G-benchmark (vehikel cfd): regel SR +0.52, CAGR +2.3%, maxDD 16.6%, Calmar 0.14 | buy-and-hold (gelijk gewogen) SR +0.24, CAGR +2.4%, maxDD 62.2%, Calmar 0.04 → BETER (SR én maxDD)
 - beslissing: door G-ontdekking (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)

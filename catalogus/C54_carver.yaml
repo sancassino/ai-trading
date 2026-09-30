@@ -1,0 +1,13 @@
+# PREREG-definitie (Uitvoerder-2, 2026-09-30, vóór resultaat) — zie PREREG_CAT2.md; code = catalogus/C54_carver.py
+id: 'C54_carver'
+naam: 'Carver-forecastcombinatie: EWMAC(8,32/16,64/32,128/64,256) + FX-carry, 16 instrumenten, vol-target per instrument 10%'
+familie: 'trend+carry (multi-asset)'
+mechanisme: 'Trend (onder-reactie, hedgers) en carry (risicopremie) over veel weinig-gecorreleerde markten; diversificatie is de hefboom.'
+bron: "Carver (2015) 'Systematic Trading'; Hurst–Ooi–Pedersen (2017); Koijen e.a. (2018)"
+instrumenten: ['FX_EURUSD', 'FX_GBPUSD', 'FX_USDJPY', 'FX_AUDUSD', 'FX_USDCAD', 'FX_USDCHF', 'GOLD_F', 'SILVER_F', 'WTI_F', 'COPPER_F', 'SPX', 'NDX', 'DAX', 'N225', 'FTSE', 'BOND10_SYN']
+vehicle: 'future'
+benchmark: {'naam': '60/40 SPX/BOND10_SYN', 'gewichten': {'SPX': 0.6, 'BOND10_SYN': 0.4}}
+varianten: {'basis': {}}
+ontdekking: '<= 2024-12-31'
+reserve_oos: '2025-01 -> gezamenlijke run (D-038), niet aangeraakt'
+gates: 'ENGINE_TEMPLATE §4 + D-037/D-038 (G-kosten, G-ontdekking t>=3, BH q=0.10, G-benchmark)'

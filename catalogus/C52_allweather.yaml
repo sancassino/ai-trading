@@ -1,0 +1,15 @@
+# PREREG-definitie (Uitvoerder-2, 2026-09-30, vóór resultaat) — zie PREREG_CAT2.md; code = catalogus/C52_allweather.py
+id: 'C52_allweather'
+naam: 'All-weather / risicopariteit: aandelen, obligaties, goud, grondstoffen (∝ 1/σ60, vol-target 8%, geen hefboom)'
+familie: 'allocatie/risicopariteit'
+mechanisme: 'Diversificatie over groei-/inflatieregimes; gelijke risicobijdrage i.p.v. gelijke kapitaalbijdrage.'
+bron: 'Dalio (All Weather); Asness–Frazzini–Pedersen (2012) risk parity'
+instrumenten: ['SPY', 'IEF', 'GLD', 'DBC', 'BOND10_SYN', 'GOLD_F']
+vehicle: 'etf'
+aggregatie: 'som'
+benchmark: {'naam': '60/40 SPY/IEF', 'gewichten': {'SPY': 0.6, 'IEF': 0.4}}
+varianten: {'basis': {}, 'lang': {'assets': ['SPY', 'BOND10_SYN', 'GOLD_F'], 'start_jaar': 2001, 'benchmark': {'naam': '60/40 SPY/BOND10_SYN', 'gewichten': {'SPY': 0.6, 'BOND10_SYN': 0.4}}}}
+start_jaar: 2003
+ontdekking: '<= 2024-12-31'
+reserve_oos: '2025-01 -> gezamenlijke run (D-038), niet aangeraakt'
+gates: 'ENGINE_TEMPLATE §4 + D-037/D-038 (G-kosten, G-ontdekking t>=3, BH q=0.10, G-benchmark)'
