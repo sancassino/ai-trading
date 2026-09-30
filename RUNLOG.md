@@ -451,3 +451,8 @@ Opgeleverd: reproduce.sh (≈ 50 s, geen VM nodig) + data/CHECKSUMS.sha256 (208 
 Controles en uitkomst: checksums ruwe data PASS; B2 RSI(2) Yahoo 1.381 trades, t 3,65 PASS; K1 Yahoo max 1/2 nachten t +3,05/+3,59 PASS; N5-audit 11/11 vergelijkingen 100% PASS; F3b SR 0,95, slechtste dag 3,80% PASS; N3 plafondtabel SR 0,49/€84 en 0,48/€99 PASS. Resultaat: 6 geslaagd, 0 mislukt (results/n5/N6_reproduce_output.txt).
 Beperking: MT5-uitkomsten worden uit de gecommitte tester-exports (results/f/) herberekend, niet opnieuw in MT5 gedraaid; data/m5 moet bij een schone checkout opnieuw geëxporteerd worden (mt5_export_m5.py).
 Volgende stap: steady-state (forward-test + weekrapport); opnieuw werken bij nieuwe data of input van Sandro.
+
+## 2026-09-30 06:10 — STEADY-STATE OPGEHEVEN (backlog v11) + check elke 10 minuten
+
+Backlog v11 (supervisor, op verzoek van Sandro) samengevoegd: steady-state vervalt; doel ≈ €800–900/mnd; taken Q1 (inkomens-frontier onder FTMO-regels), Q2 (aandelen-earnings-events), Q3 (crypto-intraday), Q4 (machine learning met walk-forward + permutatietest), Q5 (portefeuille), Q6 (forward-onderhoud). NEXT_STEPS-check nu elke 10 minuten (sessie-cron 9e5fd912; vervangt de uurlijkse 8897bb28; vuurt alleen als de agent niet bezig is). Discipline blijft: PREREG vóór resultaat, max ~4 varianten per familie, t ≥ 3 in train én test, TRIAL_COUNT bijhouden.
+Volgende stap: Q1.
