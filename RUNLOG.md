@@ -855,3 +855,11 @@ qa_exposures_mc.py → results/port/QA_exposures_MC.md (geen trial; ontdekking �
 (3) Premie-verwachting met echte exposures (kosten −0,20%/jr aangenomen): alfa laag/midden/hoog ≈ −€34 / €58 / €144 per mnd; totaal met EUR-cash (€STR 2,44%) €128 / €220 / €306; met USD-cash (4,07%) €237 / €329 / €415.
 (4) Monte-Carlo (200k; premies ~ N(midden, SE), EUR-cash vast): p(totaal ≥ €400) 0,4% (SE 2%) … 3,8–5% (SE 3% / corr 0,3); incl. gerealiseerd 10-jr-gemiddelde (portefeuillevol 6,1%) 12–13%; p(alfa ≥ €287) ≤ 1,7% (parameter) resp. 7–8%. Mediaan totaal ≈ €220–224/mnd.
 Conclusie: bevestigt D-073 — met deze allocatie en premie-verwachtingen is ≥ €400 totaal onwaarschijnlijk (≈ 5%, of ≈ 12% als geluk over 10 jaar meetelt).
+
+## 2026-09-30 16:45 — v30 QA-1: Monte-Carlo prior-afhankelijk — p(totaal ≥ €400) 0,4–13% (waarderingsprior) vs 6–28% (historische prior); v30 punt 7 D2b/R2-006 afgerond
+
+qa_exposures_mc.py uitgebreid (geen trial): twee priors naast elkaar, exposures 2001–24 en 2021–24 (echte P-ETF-a-gewichten), EUR-cash vast op €STR 2,44%, kosten −0,20%/jr.
+Prior A — VERWACHTING-midden (waarderingscorrectie, CAPE ≈ 41; aandelen 2,0 / obligaties 1,0 / goud −0,25%): mediaan totaal €220–224/mnd; p(≥ €400) 0,4–5% (parameter, SE 2–3%), 12–13% incl. 10-jr-toeval; p(alfa ≥ €287) ≤ 1,7% resp. 7–8%.
+Prior B — historische lange termijn zonder waarderingscorrectie (4,5 / 1,2 / 0,5%): mediaan totaal €296–308/mnd; p(≥ €400) 6–20% (parameter), 25–28% incl. 10-jr-toeval; p(alfa ≥ €287) 1–9% resp. 16–18%.
+Label: **prior-afhankelijk** — geen enkel getal is 'de' kans; de belangrijkste onzekerheid is of de huidige waardering de aandelenpremie drukt.
+v30 punt 7: D2b en R2-006 afgerond (licenties per bron in RUNLOG/DATA_CATALOGUS); HKMA HIBOR derde poging HTTP 500 → definitief niet beschikbaar via deze route (niet omzeild); HKD-proxy: USDHKD-peg + US-rente (vermeld).
