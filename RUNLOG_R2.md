@@ -291,3 +291,33 @@ Conclusie A4: C17 is een FTMO-kandidaat op basis van in-sample data. Geen extra 
 
 Volgende A-tier: A5=FX-intradag EURUSD London-open ORB (EURUSD M5 aanwezig; run kan starten); GBPUSD/USDJPY wachten op Uitvoerder-1 M5-data.
 R2-008 status: vraag beantwoord door NEXT_STEPS v36 + Strateeg PREREGs. BESLOTEN.
+
+## 2026-09-30 (uurcyclus 21:57 Amsterdam / 19:57 UTC) — D-090 FASE 3: P1 bevestigd → P2 PREREG A4/A5
+
+**Verwerkt:** `git fetch --all`; tip was `49cacc8` (synced met `origin/claude/uitvoerder2-r`). BESLUITEN via `origin/claude/upbeat-dirac-g2810q` (eindigt op D-086); NEXT_STEPS v36 op `origin/main` (D-087…D-090 acties). Geen scope verzonnen.
+
+### P1 — engine/ftmo.py validatie
+
+**(a)(b)(c) al beantwoord** in eerdere entries (`6bf784c` + cyclus 20:25). `HEAD:engine/ftmo.py` == `origin/grok/cto-1:engine/ftmo.py` blob `f13a5d11`. Geen her-validatie deze cyclus. **Status: already_done → advance P2.**
+
+### P2 — A4/A5 PREREG geland (vóór resultaat)
+
+Bron: `origin/claude/trusting-faraday-34tsmg` (`d5143a2` / merge `…19:54 UTC`).
+- `PREREG_FTMO_C17.md` SHA-256 `bb879200e25dfc19d742c50c046447f0c83d886d0f40503bcaff4ffd817550b5`
+- `PREREG_FTMO_FX_INTRADAG.md` SHA-256 `3fcfe26dfd65a84d3fd467a47e4dda544cd2dee849d247e7f13fa1ce74fde7c9`
+
+**Review (soliditeit):**
+- Beide hebben bevroren regel, kostenpoort, train/test, dag-geclusterde t, FTMO-EV via `engine/ftmo.py`, ≤2 varianten (FX), expliciet "geen resultaten vóór deze commit".
+- Geen OPEN-§1a-blokkade in deze Strateeg-bestanden (eerdere RUNLOG-notitie over V-CAT1/OPEN betrof een oudere draft).
+- A1 ORB/S3: overgeslagen (data-blokkade, NEXT_STEPS).
+
+**Correctie t.o.v. cyclus 20:25:** run-10 FTMO-EV op bestaande C17-cfd-reeks is **geen** uitvoering van `PREREG_FTMO_C17` (die eist kostenpoort op train 2021–23, dag-geclusterde t, en formele trial → TRIALS). Geen trial-cijfers verzonnen of toegevoegd deze cyclus. `catalogus/TRIALS.csv` onaangeroerd. Reserve **2025-01→ onaangeraakt**.
+
+### Blockers (hard stop vóór trial)
+
+1. **Testvenster-conflict:** PREREG_FTMO_C17 §4 Test = 2024–2026, terwijl D-030/D-084 + NEXT_STEPS v36 reserve **2025-01→ onaangeraakt** houden. Geen trial tot CEO/Manager het testvenster bevriest op ≤2024-12-31 of expliciet 2025→ voor deze FTMO-PREREG vrijgeeft.
+2. **data/m5/ ontbreekt** op deze branch → A5 (FX intradag) kan niet; A4 mag D1-closes (`data/daily/` + FOMC-kalender) per PREREG §2, maar pas na (1).
+3. **BESLUITEN.md op upbeat-dirac** stopt bij D-086; D-087…D-090 staan in NEXT_STEPS v36 (main) — gevolgd als Manager-verwerking.
+
+**Volgende cyclus (als deblokkeerd):** A4 kostenpoort op train (gratis) → zo ja formele trial + TRIALS-append; daarna A5 zodra M5 EURUSD op branch.
+
