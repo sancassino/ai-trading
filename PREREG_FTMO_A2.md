@@ -1,8 +1,9 @@
 # PREREG_FTMO_A2 — Stocks-in-Play ORB earnings (FASE 3 heropening) — FTMO-EV
 
-**Status:** Pre-registratie BEVROREN 2026-09-30 22:15 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Grok). **Geen resultaten vóór deze commit.**  
-**Tier:** A2 (STRATEGIE_CATALOGUS §9). Post-A4 prio 2 (NEXT_STEPS v38: B1→A2 parallel).  
+**Status:** Pre-registratie BEVROREN 2026-09-30 22:15 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg` (ook geland op U2 `ce5abdc`).  
+**Runtime-status (NEXT_STEPS v41):** **wacht US41 equity M5gz** (~40 MB → `data/m5gz/`). Spreads/PREREG klaar; A2 cost-gate geblokkeerd tot data. Enige actieve Faraday A/B-spoor na A4/B1/A5 STOP.  
+**Auteur:** Strateeg (Grok). **Geen resultaten vóór deze commit / vóór US41-M5.**  
+**Tier:** A2 (STRATEGIE_CATALOGUS §9). Post-A5/S2 prio 1 (NEXT_STEPS v41).  
 **Relatie:** heropening van `PREREG_S2.md` die stopte op **mediaan**-kostenpoort. Dit is **1 nieuwe trial-familie** onder D-012 (poort op **gemiddelde** bruto) + dag-geclusterde t + FTMO-EV — niet dezelfde S2-trial opnieuw labelen.  
 **Venster:** train 2021–2023, test 2024, reserve 2025→ ONAANGERAAKT (D-084; CTO-deblokker).
 

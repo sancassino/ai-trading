@@ -74,3 +74,24 @@ Sterkste *nieuwe* sleeve op kosten/distinctheid: **S2-XAU_OVERLAP**. Programma-p
 
 ### Niet gedaan
 - Geen backtest / geen FTMO-EV-cijfers verzonnen / geen 2025-touch / geen A4-herstart.
+
+## 2026-09-30 23:15 Europe/Amsterdam — Hourly FTMO (:10): post-A5/S2 STOP catalog sync
+
+**Fetch:** `origin/claude/trusting-faraday-34tsmg` @ `5a66435` (fast-forward). Tip was Strateeg-log 22:50.
+
+**BESLUITEN (origin/claude/upbeat-dirac-g2810q):** D-083 DOEL v3 FTMO €80k; D-084 reserve 2025+ geschorst; D-085 FASE 3 FTMO-EV; D-086 teamacties. Geen D-087+ in BESLUITEN.md; operationeel leidend = CEO_LOG 23:15 + NEXT_STEPS v41 (`2b2492c`).
+
+**Uitkomsten sinds vorige cyclus (niet door Strateeg gedraaid):**
+- A5 FX London-ORB kostenpoort FAIL (`ce5abdc`, median bruto −5,91 bp < 3× 3,93 bp).
+- S2 XAU/GER40/USDJPY cost-gate FAIL (`7bac598`).
+- B1 al STOP (`18c7996`); A4 al STOP (`43b6ba2`).
+- M5gz 24 symbolen op main; **US41 equity M5 ontbreekt** → A2 geblokkeerd.
+
+**Geleverd deze commit:**
+1. `PREREG_FTMO_FX_INTRADAG.md` status → FORMEEL GESTOPT (`ce5abdc`).
+2. `PREREG_FTMO_B1.md` status → FORMEEL GESTOPT (`18c7996`).
+3. `PREREG_FTMO_A2.md` runtime → wacht US41-M5gz (v41 prio-1).
+4. `STRATEGIE_CATALOGUS.md` §9 A2/A5/B1 + §10a–d herschreven (sterkte: A2 programma-prio; GS01 research-fit; S2-BTC/USOIL open).
+5. `STRATEGIE_LOG.md` cyclusregel.
+
+**Niet gedaan:** geen backtest; geen nieuwe PREREG; geen overnight sleeve; geen 2025-data; geen merge van U2-resultaten (alleen status-sync).

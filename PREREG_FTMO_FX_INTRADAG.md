@@ -1,11 +1,11 @@
 # PREREG_FTMO_FX_INTRADAG — FX Intradag London-Open ORB (A5, FTMO-EV variant)
 
 **Status:** Pre-registratie 2026-09-30 21:55 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Runtime-status (NEXT_STEPS v38):** **GEPARKEERD tot M5** (GBPUSD/USDJPY/USDCHF export). PREREG blijft bevroren; geen trial tot data.  
-**Auteur:** Strateeg (Claude). **Geen resultaten vóór deze commit.**  
-**Relatie:** A5-slot in catalogus §9; eerder getest als U3 (London-open ORB FX) — kostenpoort gefaald op FTMO-spread. Dit PREREG definieert de bevroren regel voor eventuele hertest bij lagere kostenramingen of smallere spread-majors. **Distinct van Grok GS02** (Asian-range fade) en distinct van U3 (eerder gefaald op kostenpoort, niet als formele trial geteld).
+**Uitkomst (Uitvoerder-2, `ce5abdc`, 22:49 CEST):** **FORMEEL GESTOPT** — kostenpoort TRAIN FAIL (median bruto −5,91 bp < 3× median cost 3,93 bp; n=3106 op m5gz FX). TRIALS append stop:kostenpoort; TRIAL_COUNT ongewijzigd per §5. Geen herstart (NEXT_STEPS v41 / CTO C-003).  
+**Auteur:** Strateeg (Claude). Resultaten pas ná freeze-SHA; gate-run landde op `claude/uitvoerder2-r`.  
+**Relatie:** A5-slot in catalogus §9; U3-familie (London-open ORB FX). **Distinct van Grok GS02** (Asian-range fade). Bevestigt U3-poort-precedent op m5gz-data.
 
-**⚠ KOSTEN-POORT EERST:** U3 heeft eerder de kostenpoort niet gehaald op FX-majors bij London-open. Dit PREREG bevat de bevroren regel; de poort-check (gratis) moet worden uitgevoerd vóór een formele trial telt. Als de poort opnieuw faalt → STOP, geen trial.
+**⚠ GESLOTEN:** poort opnieuw FAIL na M5-deblokkering — niet opnieuw openen zonder CEO-besluit.
 
 ---
 

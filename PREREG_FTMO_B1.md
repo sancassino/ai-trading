@@ -1,7 +1,8 @@
 # PREREG_FTMO_B1 — TSMOM-mix op FX (C05-FX) — FTMO-EV
 
 **Status:** Pre-registratie 2026-09-30 22:08 Europe/Amsterdam (poort-amend 22:15: signed mean, NEXT_STEPS v38), branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Grok). **Geen resultaten vóór deze commit.**  
+**Uitkomst (Uitvoerder-2, `18c7996`, 22:27 CEST):** **FORMEEL GESTOPT** — kostenpoort TRAIN FAIL (signed mean bruto −16,94 bp vs drempel 36,05 bp). Geen herstart; **geen nieuwe overnight maand-sleeves** (NEXT_STEPS v39/v41).  
+**Auteur:** Strateeg (Grok). Resultaten pas ná freeze-SHA; gate-run landde op `claude/uitvoerder2-r`.  
 **Tier:** B1 (STRATEGIE_CATALOGUS §9). Post-A4 prio (NEXT_STEPS v37 / Manager `beb2a3b`).  
 **Relatie:** C05 uit `PREREG_CAT1.md`, **alleen** op FTMO-FX-majors (geen indices/goud). **≠ B2/C12** (carry-primary + trendfilter).  
 **Venster:** zelfde freeze als A4/A5 CTO-deblokker — train 2021–2023, test 2024, reserve 2025→ ONAANGERAAKT.
