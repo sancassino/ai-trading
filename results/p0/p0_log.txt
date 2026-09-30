@@ -7,3 +7,4 @@
 2026-09-30 10:01:07Z SPXUSD: deler 1000 (Dukascopy 4361.55 vs FTMO 4357.83, verschil 0.09%)
 2026-09-30 10:01:44Z   503 bij USA500IDXUSD 2011-01-03; wacht 60 s (poging 1)
 2026-09-30 10:03:00Z   503 bij USA500IDXUSD 2011-01-03; wacht 120 s (poging 2)
+2026-09-30 10:10:24Z   503 bij USA500IDXUSD 2011-01-03; wacht 480 s (poging 4)
