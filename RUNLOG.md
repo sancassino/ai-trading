@@ -598,3 +598,11 @@ PREREG_S3.md (vóór data): bevroren b4_sim.run_orb op SPX→US500, NSX→US100,
 s3_histdata.py: zips uit data/long_m1 → EST (UTC−5, geen DST) → servertijd (NY + 7 u) → M5, rapporteert 24-uurs quotes (dan OR op cash-open). s3_run.py: beslisregel + labels. run_s3.sh: checksums → parser → test (results/s3/).
 s3_test_parser.py: FTMO-M5 2021–23 van US500 en GER40 omgezet naar een synthetisch HistData-M1-zip (EST, 24-uurs) en teruggeparsed: ORB-trades US500 565/565 en GER40 512/512 bruto identiek, inclusief de DST-mismatchweken maart 2022 (10/10 per symbool). data/long_m1/ bestaat nog niet (wacht op Sandro, A-01).
 Volgende stap: Q7 (portefeuille ORB+RSI(2) onder FTMO-regels, geen trial).
+
+## 2026-09-30 09:20 — Q7 (geen trial): ORB + RSI(2) samen verlaagt de FTMO-uitkomst t.o.v. ORB alleen (onder aanname fee €540/€80k)
+
+q7_portfolio.py, MT5-dagreeksen F2 (ORB) en F1 RSI(2) swap-gecorrigeerd, 1.487 gemeenschappelijke dagen 2021–26; RSI(2) op gelijke vol als ORB geschaald; Q1b 2-Step, schaal 1–10×.
+ORB SR 0,91 (skew +1,51), RSI(2) SR 0,49 (skew +0,56), corr −0,03 → de mix heeft hogere SR (0,25 RSI: 1,03; 0,5: 1,01).
+Maar de FTMO-uitkomst daalt (historisch, conservatieve dip = som): ORB alleen €484/mnd (P<0 22%) → 0,25 RSI €171 (43%) → 0,5 RSI −€22 → RSI alleen −€53. Optimistische dip-grens (max van de dips): 0,25 RSI €333 (32%), 0,5 RSI −€2. ORB −50% drift: €232 alleen vs €21 met 0,25 RSI; ORB-drift 0: €64 vs −€11.
+Conclusie: de meegedragen zwevende dips van RSI(2) (overnight, negatief-scheve staart) raken de 5%-daggrens bij de hoge schaal die de first-passage-mechaniek beloont; diversificatie-SR weegt daar niet tegen op. Bevestigt R3: onder FTMO telt het dip-profiel meer dan SR. Aanbeveling: als er een challenge komt, dan ORB alleen (en alleen na S3 'bevestigd + blijvend'); RSI(2) niet combineren. Forward-paper blijft F3b volgen (ongewijzigd, pre-geregistreerd).
+Volgende stap: wachtrij v15.1 leeg op S3 (wacht op data) en Q6 → forward-onderhoud; */10-checks.

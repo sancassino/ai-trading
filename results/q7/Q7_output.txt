@@ -1,0 +1,27 @@
+1487 gemeenschappelijke dagen (2021.01.01 … 2026.09.23) | ORB SR 0.91 skew +1.51 | RSI(2) SR 0.49 skew +0.56 | corr -0.03
+
+historisch:
+  RSI(2)-aandeel 0.00: SR +0.91 skew +1.51 max dip 7.1% | beste schaal 5× → €484/mnd, P(netto<0) 22%, funded 94%
+  RSI(2)-aandeel 0.25: SR +1.03 skew +1.34 max dip 11.1% | beste schaal 5× → €171/mnd, P(netto<0) 43%, funded 89%
+  RSI(2)-aandeel 0.50: SR +1.01 skew +1.29 max dip 3.2% | beste schaal 1× → €-22/mnd, P(netto<0) 99%, funded 2%
+  RSI(2)-aandeel 0.75: SR +0.76 skew +1.09 max dip 4.7% | beste schaal 1× → €-23/mnd, P(netto<0) 100%, funded 1%
+  RSI(2)-aandeel 1.00: SR +0.49 skew +0.56 max dip 6.3% | beste schaal 1× → €-53/mnd, P(netto<0) 99%, funded 1%
+
+ORB-drift −50%:
+  RSI(2)-aandeel 0.00: SR +0.46 skew +1.51 max dip 7.1% | beste schaal 5× → €232/mnd, P(netto<0) 42%, funded 85%
+  RSI(2)-aandeel 0.25: SR +0.59 skew +1.34 max dip 4.4% | beste schaal 2× → €21/mnd, P(netto<0) 75%, funded 32%
+  RSI(2)-aandeel 0.50: SR +0.68 skew +1.29 max dip 3.2% | beste schaal 1× → €-22/mnd, P(netto<0) 100%, funded 1%
+  RSI(2)-aandeel 0.75: SR +0.62 skew +1.09 max dip 4.7% | beste schaal 1× → €-23/mnd, P(netto<0) 100%, funded 0%
+  RSI(2)-aandeel 1.00: SR +0.49 skew +0.56 max dip 6.3% | beste schaal 1× → €-53/mnd, P(netto<0) 99%, funded 1%
+
+ORB-drift 0:
+  RSI(2)-aandeel 0.00: SR +0.00 skew +1.51 max dip 7.1% | beste schaal 5× → €64/mnd, P(netto<0) 61%, funded 73%
+  RSI(2)-aandeel 0.25: SR +0.16 skew +1.34 max dip 4.4% | beste schaal 2× → €-11/mnd, P(netto<0) 88%, funded 17%
+  RSI(2)-aandeel 0.50: SR +0.35 skew +1.29 max dip 3.2% | beste schaal 1× → €-23/mnd, P(netto<0) 100%, funded 0%
+  RSI(2)-aandeel 0.75: SR +0.47 skew +1.09 max dip 4.7% | beste schaal 1× → €-23/mnd, P(netto<0) 100%, funded 0%
+  RSI(2)-aandeel 1.00: SR +0.49 skew +0.56 max dip 6.3% | beste schaal 1× → €-53/mnd, P(netto<0) 99%, funded 1%
+1487 gemeenschappelijke dagen (2021.01.01 … 2026.09.23) | ORB SR 0.91 skew +1.51 | RSI(2) SR 0.49 skew +0.56 | corr -0.03
+
+Optimistische dip-grens (dip = max van de twee gewogen dips), historisch:
+  RSI(2)-aandeel 0.25: beste schaal 6× → €333/mnd, P(netto<0) 32%, funded 94%
+  RSI(2)-aandeel 0.50: beste schaal 2× → €-2/mnd, P(netto<0) 71%, funded 39%
