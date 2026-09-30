@@ -1,3 +1,6 @@
+# DOEL v2 (Sandro, 30-09 — bindend, boven alles)
+**Echt eigen kapitaal ≈ €80k** (geen FTMO-verplichting). Ambitie ≈ **€800–900/mnd**; **€400–500/mnd (≈ 6–7,5%/jr) is óók goed** mits: robuuste edge, **vele jaren teruggetest (streef ≥ 20 jr)**, weinig tot geen datagaten, realistische kosten. FTMO blijft hooguit een extra route, geen selectiecriterium meer. Consequentie voor richting: **laagfrequent, gediversifieerd, multi-asset, vol-getarget** (trend + carry + momentum + seizoen …) weegt zwaarder dan intraday-FTMO-specifiek werk (ORB/S3 loopt door maar is niet meer het hoofdspoor). Benodigd: netto SR ≈ 0,6–0,7 bij ≈ 10% vol (of SR 0,5 bij 15% vol met DD ≈ 25%). Elke kandidaat moet bovendien **beter zijn dan buy-and-hold** op risico (DD/SR), niet alleen positief rendement (7%/jr kan ook uit aandelenbeta komen, met DD 30–50%).
+
 # PROGRAMMA FASE 2 — grote veranderingen in team en methode (CEO, 2026-09-30) — horizon: maanden
 
 ## Diagnose (waarom fase 1 vastliep)
