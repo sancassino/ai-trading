@@ -456,3 +456,11 @@ Volgende stap: steady-state (forward-test + weekrapport); opnieuw werken bij nie
 
 Backlog v11 (supervisor, op verzoek van Sandro) samengevoegd: steady-state vervalt; doel ≈ €800–900/mnd; taken Q1 (inkomens-frontier onder FTMO-regels), Q2 (aandelen-earnings-events), Q3 (crypto-intraday), Q4 (machine learning met walk-forward + permutatietest), Q5 (portefeuille), Q6 (forward-onderhoud). NEXT_STEPS-check nu elke 10 minuten (sessie-cron 9e5fd912; vervangt de uurlijkse 8897bb28; vuurt alleen als de agent niet bezig is). Discipline blijft: PREREG vóór resultaat, max ~4 varianten per familie, t ≥ 3 in train én test, TRIAL_COUNT bijhouden.
 Volgende stap: Q1.
+
+## 2026-09-30 06:14 — Q1: inkomens-frontier onder FTMO-regels — bij geen enkele schaal positief netto inkomen; €900/mnd vereist Sharpe ≈ 4
+
+Uitgevoerd (PREREG_Q1.md vóór berekening): q1_frontier.py (numpy, venv .venv), 20.000 paden × 24 mnd per (reeks, schaal, variant), block-bootstrap 21 d, dagverlies uit MT5-dagequity (incl. meegedragen zwevend verlies), fee €540 per poging, herstart bij breuk, funded-uitbetaling maandelijks × 80%, fee terug bij eerste reward. FTMO-voorwaarden geverifieerd: 80% split (90% met Scaling), eerste reward vanaf dag 14, fee terug (ftmo.com FAQ/how-it-works); fee zelf secundaire bron.
+Reeks A (F3b RSI(2)+ORB), historisch: t 0,3–1,0 → funded 0–3,9% in 24 mnd, netto ≈ −€21/mnd; t 1,5 → funded 15,8%, breuk-12m 22%, −€45; t 2 → 31%, −€90; t 3 → 58%, breuk 55%, 12,5 pogingen, −€160/mnd; P(netto < 0) 75–100%. −50%-drift en nul-drift overal slechter. Reeks B (RSI(2) alleen): overal −€22 tot −€488/mnd.
+Extra diagnostiek (buiten prereg, gemeld): drift van A × m bij gelijk risicoprofiel → beste netto €/mnd: m 2 (SR ≈ 2,1) €125; m 3 (SR ≈ 3,1) €507; m 4 (SR ≈ 4,1) €945; m 6 (SR ≈ 6,2) €1.891.
+Conclusie: met de huidige edges levert geen enkel risiconiveau positief verwacht netto inkomen op; een challenge kost per saldo geld. Voor ≈ €500 resp. €900/mnd onder de echte FTMO-mechaniek (tijd tot doelen, fees, herstarts, dagregel) is een Sharpe van ≈ 3 resp. ≈ 4 nodig — veel hoger dan de eerdere ideaal-schatting 1,41. Dit is de lat voor Q2–Q5.
+Volgende stap: Q2 (aandelen-earnings-events).
