@@ -404,3 +404,8 @@ Slot(d−1)→slot(FOMC), SPY: 1994–2026 N 264, +22,9 bp, t +3,03 (baseline +4
 Beslisregel formeel gehaald (t ≥ 2,5, N ≥ 120, 2010–20 ≥ 50% van 2021–26), maar het tweede criterium is ontaard (2021–26-dagproxy ≈ 0). Inhoudelijk: klassiek Lucca–Moench-effect bevestigd voor 1994–2011, sindsdien grotendeels verdwenen; de +26,7 bp uit I3 zit alleen in het venster tot 14:00 ET, dat dagdata niet kunnen isoleren. L3(b) (nachtontleding op Dukascopy) vervalt door L1-blokkade.
 Conclusie: pre-FOMC niet als betrouwbare sleeve behandelen.
 Volgende stap: L5 (forward-weekrapport).
+
+## 2026-09-30 03:15 — L5: wekelijks forward-rapport (cron maandag 22:45 UTC)
+
+Gebouwd: forward_week.py — elke maandag 22:45 UTC (na de papieren run) een blok in forward/weekrapport.md: aantal dagen, equity/P&L, €/mnd, geschatte SR ± 1 SE (met K2-waarschuwing), ORB bp/trade vs backtest +1,7 bp, slechtste FTMO-dagverlies en max DD, K2-alarm (dag ≥ 4% of DD ≥ 8%), ontbrekende werkdagen (cron-gaten), en de optimistische aannames; commit + push. Cron toegevoegd ('45 22 * * 1'), bestaande regels behouden. Eerste rapport: maandag 2026-10-05.
+Volgende stap: verslag backlog v7; wachten op nieuwe NEXT_STEPS / beslissing Sandro (data-optie voor L1).
