@@ -497,3 +497,20 @@ PREREGs: Strateeg `474a33c` (N1/N2); Strateeg-2 `1b2e975` (MIDDAY_VWAP / XAU_AM_
 
 Scripts: `scripts/n1_cost_gate_train.py`, `n2_cost_gate_train.py`, `s2_midday_vwap_gate.py`, `s2_xau_am_fade_gate.py`. Results under `results/`. Reserve 2025→ untouched. Dead A4/B1/A5/A2 not restarted.
 
+
+## Cyclus 00:05 CEST — verify nacht-queue (D-091 / NEXT_STEPS v44)
+
+**Branch tip:** `8c7a8e1` (already pushed). **Docs:** BESLUITEN D-091 via CEO `d64f668` / `ftmo-trading-strategy-98mplz` (upbeat-dirac tip still ends D-086); NEXT_STEPS **v44** on branch.
+
+**U2 assign (v44):** cost-gate N1→N2→MIDDAY_VWAP→XAU_AM_FADE — **DONE** this night (`8c7a8e1`).
+
+| Sleeve | Result | Note |
+|--------|--------|------|
+| N1 OPEN_FADE | STOP | N=0; 1.5× D1-ATR never hit |
+| N2 REL_FLAT | FAIL STOP | mean bruto −0.84 bp < 4.32 |
+| S2 MIDDAY_VWAP | FAIL STOP | n=3 |
+| S2 XAU_AM_FADE | gate PASS | mean +18.70 bp; **N=12 ≪ 120** → no ftmo_ev / no trial claim |
+
+**Not started:** S2b BTC+ETH (CTO + COSTS RT-gap); dead A4/B1/A5/A2 not restarted. TRIAL_COUNT remains 444 (poort-fails). Reserve 2025→ untouched.
+
+**Next for U2:** idle until Manager/CTO assign (S2b bridge, XAU power path, or new PREREG). Strateeg note: N1 D1-ATR×1.5 looks mis-scaled for 30m drive (max \|drive\|/ATR ≈ 0.3–0.9 on train).
