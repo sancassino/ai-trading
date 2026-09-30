@@ -49,7 +49,7 @@ Familie = 1 trial (twee varianten samen; rapporteer beide, beslis op (a)).
 ## 3. Instrumenten en data
 
 - FTMO-M5 FX: data/m5/ — EURUSD aanwezig; GBPUSD/USDJPY/USDCHF exporteren (D-086-taak Uitvoerder-1).
-- Periode train: 2021–2023; test: 2024–2026.
+- Periode: train 2021-01-01 … 2023-12-31; test 2024-01-01 … 2024-12-31; reserve 2025-01-01 → ONAANGERAAKT (plafond ≤ 2024-12-31).
 - Sessietijden CET/CEST DST-bewust.
 
 ---
@@ -64,8 +64,10 @@ Familie = 1 trial (twee varianten samen; rapporteer beide, beslis op (a)).
 
 ## 5. Train/test en beslisregel
 
-- **Train:** 2021–2023.
-- **Test:** 2024–2026.
+- **Train:** 2021-01-01 … 2023-12-31 (bevroren 2021–2023).
+- **Test:** 2024-01-01 … 2024-12-31 (volledig kalenderjaar 2024; discovery/test-plafond ≤ 2024-12-31).
+- **Reserve:** 2025-01-01 → **ONAANGERAAKT / UNTOUCHED** (niet openen, niet gebruiken; D-084 reserve geschorst).
+- **Resolutie D-030 vs D-084:** oudere venstertaal (test 2024–2026) conflicteert met D-084 (reserve geschorst). Dit amendement krimpt het testvenster tot 2024 zodat de 2025-reserve bevroren blijft. **Geen CEO 2025-vrijgave nodig** voor dit amendement.
 - **Beslisregel (vooraf):**
   - Kosten-poort haalt → netto dag-geclusterd t (Newey-West) ≥ 2,5 (train) EN test-t ≥ 1,5 EN FTMO-EV ≥ €100/poging → **bevestigd**
   - Kostenpoort faalt → **verworpen direct** (geen trial toegevoegd aan TRIAL_COUNT)

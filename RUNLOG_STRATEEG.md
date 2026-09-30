@@ -26,3 +26,14 @@ Faraday A4/A5 run-klarer dan Strateeg-2 zolang strateeg-2 geen eigen PREREG/hypo
 
 ### Git (deze cyclus)
 Commit op `claude/trusting-faraday-34tsmg` + push `-u origin`.
+
+## 2026-09-30 22:01 Europe/Amsterdam — CTO-deblokker (Grok): train/test-freeze
+
+**Waarom:** CTO-deblokker voor Grok Strateeg. Conflict D-030 (oudere testvenster-taal doorlopend voorbij 2024) vs D-084 (reserve geschorst) opgelost door test te krimpen.
+
+**Bevroren vensters (PREREG_FTMO_C17 + PREREG_FTMO_FX_INTRADAG):**
+- Train: 2021-01-01 … 2023-12-31 (2021–2023)
+- Test: 2024-01-01 … 2024-12-31 (volledig 2024; plafond ≤ 2024-12-31)
+- Reserve: 2025-01-01 → ONAANGERAAKT / UNTOUCHED (niet openen, niet gebruiken)
+
+**Geen CEO 2025-vrijgave nodig** voor dit amendement. Geen backtest, geen 2025-data, geen trial-resultaten.
