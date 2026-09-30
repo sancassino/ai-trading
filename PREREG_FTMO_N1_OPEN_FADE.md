@@ -1,7 +1,8 @@
 # PREREG_FTMO_N1 — Opening-drive exhaustion FADE (intraday-vlak)
 
 **Status:** Pre-registratie 2026-09-30 23:55 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Grok). **Geen resultaten vóór deze commit.**  
+**Uitkomst (Uitvoerder-2, `8c7a8e1`, ~00:05 CEST):** **FORMEEL GESTOPT** — poort n=0 (1,5× D1-ATR nooit geraakt door 30-min drive op train). Geen trial. U2-note: drempel lijkt mis-scaled (max |drive|/ATR ≈ 0,3–0,9) — **geen post-hoc heropening** zonder CEO/nieuw distinct PREREG.  
+**Auteur:** Strateeg (Grok).  
 **D-091 prio 3:** niet-kloon; **≠ ORB/breakout** (A1/A2/A5/GS01/S2-open).  
 **Universum (top cost/vol-screen, COSTS aanwezig):** `US100cash`, `US30cash`, `US500cash` (rank_day 1–2–4 in `results/screen_cost_vol.csv`).
 

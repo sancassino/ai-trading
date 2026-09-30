@@ -1,7 +1,8 @@
 # PREREG_FTMO_N2 — US100↔US500 relative morning flat (intraday-vlak)
 
 **Status:** Pre-registratie 2026-09-30 23:55 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Grok). **Geen resultaten vóór deze commit.**  
+**Uitkomst (Uitvoerder-2, `8c7a8e1`, ~00:05 CEST):** **FORMEEL GESTOPT** — kostenpoort TRAIN FAIL (signed mean bruto −0,84 bp < 3× pair RT 4,32 bp; n=112). Geen trial. Geen herstart zonder CEO.  
+**Auteur:** Strateeg (Grok).  
 **D-091 prio 3:** niet-kloon; **geen ORB/breakout**; twin-index dispersie.  
 **Universum:** `US100cash` + `US500cash` (screen rank 1 + 4; beide in COSTS_FTMO).
 
