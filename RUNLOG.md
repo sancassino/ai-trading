@@ -429,3 +429,8 @@ Volgende stap: N3 (definitieve PLAFOND/SCENARIO-update).
 Opgeleverd: PLAFOND_DEFINITIEF.md (één pagina, gewone taal) + verwijzing bovenaan PLAFOND_RAPPORT.md en SCENARIO_RAPPORT.md. Cijfers (MT5, FTMO-kosten, schaal zodat slechtste dag < 4%; results/f/N3_numbers.txt): kern RSI(2) max 1 nacht SR 0,48 (CI −0,24–1,17), ≈ €99/mnd, realistisch ≈ €50 (SR 0,23), verliesjaar 28%, slechtste dag 3,6%; RSI(2) oorspronkelijk SR 0,49 (CI −0,12–1,14), ≈ €84/mnd, verliesjaar 24%; RSI(2)+ORB (ORB onbevestigd) SR 0,95 (CI 0,23–1,65), ≈ €225 → realistisch €146/mnd. Nodig voor €880/mnd: SR ≈ 1,4. Challenge-EV ≈ −€10; ETF-alternatief ≈ €557/mnd op €80k eigen geld met −55% DD.
 Conclusie: realistisch ± €50–150/mnd; €880/mnd niet haalbaar met deze aanpak.
 Volgende stap: N4 (forward-onderhoud), daarna steady-state.
+
+## 2026-09-30 04:27 — N4 + STEADY-STATE: forward-test in onderhoud, geen nieuwe hypothesen
+
+N4: forward/paper_daily.csv bestaat nog niet — correct: de eerste echte handelsdag (2026-09-30) wordt pas vanavond om 22:15 UTC verwerkt (na de US-slot); controle nu 04:27 UTC. Cron aanwezig: dagelijks 22:15 UTC (forward_paper.py) en maandag 22:45 UTC (forward_week.py, eerste weekrapport 2026-10-05). Eventuele gaten worden in het weekrapport gemeld.
+STEADY-STATE (stopregel supervisor, backlog v8): N1–N4 klaar; de kern (RSI(2) max 1–2 nachten) haalde in MT5 SR < 0,5. Geen nieuwe hypothesen meer (TRIAL_COUNT blijft 394). Alleen nog: (a) papieren forward-test dagelijks, (b) wekelijks verslag, (c) opnieuw werken zodra Sandro lange data levert (DATA_REQUEST_SANDRO.md → L2/L3b) of zelf een nieuw idee met regels aanlevert. Uurlijkse NEXT_STEPS-check blijft actief.
