@@ -139,3 +139,43 @@ git add CTO_AUDIT.md VRAGEN_CTO.md RUNLOG_CTO.md results/cto/orb_f2_ftmo_ev_grid
 git commit -m "CTO: ORB FTMO-EV audit + post-B1 intradag redirect (C-002)"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-09-30 23:08 Europe/Amsterdam (CET / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No formal PREREG trial claimed** (cost-gate STOPs only).
+
+### Team snapshot (since CTO tip `7e307c0`)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v39** (B1 STOP; prio A2 + M5); **U-006 A** landed `data/m5gz/` 24 symbols (`ebc0af5`/`5254704`) |
+| U2 `ce5abdc` | M5gz merged; **A5 kostenpoort FAIL**; `PREREG_FTMO_A2` landed; A2 blocked on missing US41 M5 |
+| Strateeg | B1/A2 frozen notes; C17/A4 already stopped |
+| Strateeg-2 | S2 PREREGs: XAU, GER40, USOIL, BTC, USDJPY — XAU/GER40/USDJPY executable on m5gz |
+
+Merged `origin/main` → `grok/cto-1` this cycle (`6dc5575`).
+
+### Work executed
+
+1. **Landed S2 PREREG copies** on CTO branch: `PREREG_S2_XAU_OVERLAP.md`, `PREREG_S2_GER40_OPEN.md`, `PREREG_S2_USDJPY_HANDOFF.md` (from `grok/strateeg-2`).
+2. **Cost-gate scripts + TRAIN runs** (2021–2023 only, 2025+ skipped at load):
+   - `scripts/s2_xau_cost_gate_train.py` → **FAIL** mean bruto −1.89 bp (`results/cto/s2_xau_prep/`)
+   - `scripts/s2_ger40_cost_gate_train.py` → **FAIL** mean bruto −3.13 bp (`results/cto/s2_ger40_prep/`)
+   - `scripts/s2_usdjpy_cost_gate_train.py` → **FAIL** mean bruto +0.59 vs mean cost 1.71 bp (`results/cto/s2_usdjpy_prep/`)
+3. **C-003** closed in `VRAGEN_CTO.md`: A5+S2-XAU/GER40/USDJPY STOP; A2 waits US41 M5; research redirect away from ORB/breakout clones.
+4. **`CTO_AUDIT.md`** — add post-A5/S2 kill table + redirect.
+
+### Remaining blockers
+
+1. **A2** needs US41 equity M5gz (~40 MB) — Manager/Debian (endorsed since C-002).
+2. S2-BTC / S2-USOIL need their M5 (not in snapshot).
+3. Portfolio of kills: overnight + London FX ORB + XAU overlap + GER40 open + USDJPY handoff all dead at cost gate → need non-clone hypotheses or A2 data.
+
+### Git
+
+```
+git add scripts/s2_*_cost_gate_train.py results/cto/s2_*_prep/ PREREG_S2_*.md VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: S2 XAU/GER40/USDJPY cost-gate FAIL + post-A5 redirect (C-003)"
+git push origin grok/cto-1
+```

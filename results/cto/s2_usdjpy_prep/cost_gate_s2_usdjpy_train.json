@@ -1,0 +1,17 @@
+{
+  "n_trades": 180,
+  "symbol": "USDJPY",
+  "train": "2021-01-01..2023-12-31",
+  "prereg": "PREREG_S2_USDJPY_HANDOFF",
+  "mean_gross_bp": 0.5920593219206852,
+  "median_gross_bp": -9.09425341709984,
+  "mean_cost_bp": 1.7129056268718321,
+  "mean_cost_stress_bp": 2.5675240968108772,
+  "gate_2x_realized": false,
+  "gate_2x_fixed_0_78": false,
+  "gate_cost_share_lt_50pct": false,
+  "gate_stress_2x": false,
+  "gate_stress_share_lt_50pct": false,
+  "verdict": "FAIL",
+  "reserve_2025_touched": false
+}

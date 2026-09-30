@@ -4,6 +4,35 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-003 — Post-A5 STOP + S2 m5gz cost-gates FAIL + research redirect
+**Opened:** 2026-09-30 22:50 Europe/Amsterdam (U2 A5 kostenpoort FAIL @ `ce5abdc`; M5gz landed U-006).  
+**Closed:** 2026-09-30 23:08 Europe/Amsterdam by CTO (technical co-founder; executable path available without CEO wait).
+
+**Facts (no reserve 2025→ opened; no TRIALS append — poort-FAIL before formal trial):**
+- **A5** FX London-ORB: U2 STOP — median bruto −5.91 bp < 3× mean cost 3.93 bp (`ce5abdc`, artefacts `results/R2/a5_prep/`).
+- **A2** Stocks-in-Play: PREREG frozen/landed; **blocked** — US41 equity M5 absent from `data/m5gz/` (24-sym FX/indices/metals only; README: ~40 MB on request).
+- **S2 cost-gates on m5gz** (CTO this cycle, TRAIN 2021–2023, scripts under `scripts/s2_*_cost_gate_train.py`):
+
+| Sleeve | N | mean bruto | mean cost | Verdict |
+|---|---:|---:|---:|---|
+| S2-XAU_OVERLAP | 351 | −1.89 bp | 0.55 bp | **FAIL** |
+| S2-GER40_OPEN | 232 | −3.13 bp | 0.72 bp | **FAIL** |
+| S2-USDJPY_HANDOFF | 180 | +0.59 bp | 1.71 bp | **FAIL** (also N&lt;200 power stop) |
+
+- S2-BTC / S2-USOIL: **no M5 in m5gz** — parked.
+- Pattern with A4/B1/A5: vanilla session ORB/breakout + FTMO CFD costs → systematic cost-gate death (overnight *and* intradag).
+
+**Decision (binding until BESLUITEN says otherwise):**
+1. **A5 = STOP** — confirm U2; no restart / no `ftmo_ev` without CEO rule amend.
+2. **S2-XAU / S2-GER40 / S2-USDJPY = STOP** at kostenpoort — do not formal-trial; do not burn FDR/TRIALS. Strateeg-2 may file *new* non-duplicate PREREGs; do not retune dead rules.
+3. **Immediate execution path = A2** when US41 M5 lands (Manager → Debian/U-006 extra ~40 MB into `data/m5gz/` or Debian-only run). No Sandro ping for `long_m1`/A1 this cycle.
+4. **Research redirect (Strateeg + Strateeg-2):** stop proposing new single-asset session ORB/breakout clones of A5/S2-XAU/GER40/USDJPY. Next hypotheses must be *mechanically distinct*, e.g. (a) event/microstructure with pre-registered calendar (non-EIA if no USOIL M5), (b) cross-asset relative-value intradag flat, (c) inventory of *existing* Phase-1 survivors only (ORB F2 family) as multi-sleeve portfolio under `ftmo_ev` with honest sizing — not new overnight TSMOM. BTC/USOIL only after their M5 exists.
+5. **U2 next:** do not re-run dead A4/B1/A5/S2-XAU/GER40/USDJPY; wait A2 data **or** implement next *new* frozen PREREG that has m5gz symbols and is not a breakout-clone.
+
+**Where applied:** `CTO_AUDIT.md`, `RUNLOG_CTO.md` (23:08 wake), artefacts `results/cto/s2_{xau,ger40,usdjpy}_prep/`, this ticket.
+
+---
+
 ### C-002 — Post-B1 STOP + intradag redirect + M5 path (U-006)
 **Opened:** 2026-09-30 22:26 Europe/Amsterdam (U2 B1 kostenpoort FAIL @ `18c7996`).  
 **Closed:** 2026-09-30 22:32 Europe/Amsterdam by CTO (technical co-founder default; >30 min wait not required — facts already on U2 branch).
@@ -47,4 +76,4 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Open (for CEO / Manager if needed)
 
-_None this cycle._ Manager: please bump NEXT_STEPS post-B1 (B1 STOP; A2 + M5 as prio 1) when convenient — CTO default above is enough for U2/Strateeg to proceed without waiting.
+_Open for Manager (not blocking U2):_ (1) land US41 M5gz (~40 MB) for A2 — only remaining A-tier with data path; (2) bump NEXT_STEPS: A5+S2-XAU/GER40/USDJPY STOP; research ≠ new ORB clones. CEO: no decision required unless revising €800–900 ambition or fee €540 after portfolio of kills.

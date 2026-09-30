@@ -1,6 +1,6 @@
 # CTO_AUDIT — ORB / S3 + post-A4/B1 FTMO redirect
 
-**Status:** written 2026-09-30 22:30 Europe/Amsterdam (CTO wake).  
+**Status:** updated 2026-09-30 23:08 Europe/Amsterdam (CTO wake; §3b A5/S2 kills).  
 **Branch:** `grok/cto-1`. **No reserve 2025-01→ opened. No new TRIALS. No fabricated backtests.**  
 **Engine:** `engine/ftmo.py` blob `ac7abef6` (p_survive right-censor; U2 re-validated PASS @ `18c7996`).
 
@@ -73,17 +73,37 @@
 
 ---
 
-## 3. Post-A4/B1 portfolio redirect (CTO default)
+## 3. Post-A4/B1 portfolio redirect (CTO default) — superseded by §3b
 
 | Priority | Item | Owner | Note |
 |---|---|---|---|
-| **1** | **A2** Stocks-in-Play ORB (earnings, EOD flat, swap=0) | Strateeg PREREG frozen @ Strateeg tip; U2 when data | `PREREG_FTMO_A2.md` — needs US41 **M5** (gitignored). Spreads already on main (`COSTS_FTMO_alle.csv`). |
-| **2** | **M5 path** for A2/A5/S2-* | Sandro/Debian or U-006 | See `VRAGEN_CTO.md` C-002. |
-| **3** | Strateeg-2 intradag PREREGs (XAU overlap, GER40 open, USOIL EIA, BTC US open) | Strateeg-2 | After/with M5; overnight holds disfavored unless swap-positive by design. |
-| — | A4 / B1 | — | **STOP** — no restart without CEO. |
-| — | A5 FX intradag | U2 | Parked until M5. |
-| — | A1 / S3 | — | Parked until `data/long_m1/`. |
-| — | New overnight monthly FX/index | Strateeg | **Deprioritize** until a sleeve shows signed train bruto ≫ 3× (RT+swap) *before* PREREG freeze. |
+| **1** | **A2** Stocks-in-Play ORB (earnings, EOD flat, swap=0) | Strateeg PREREG frozen; U2 when data | `PREREG_FTMO_A2.md` — needs US41 **M5** (~40 MB). Spreads on main. |
+| **2** | **US41 M5gz** | Manager → Debian / U-006 extra | Only remaining A-tier with a live PREREG + clear data ask. |
+| **3** | **Non-clone research** | Strateeg + Strateeg-2 | See C-003 / §3b — no new session ORB/breakout clones. |
+| — | A4 / B1 / A5 | — | **STOP** (kostenpoort). |
+| — | S2-XAU / GER40 / USDJPY | — | **STOP** (CTO cost-gate 2026-09-30 23:08). |
+| — | S2-BTC / S2-USOIL | — | Parked — symbols absent from `data/m5gz/`. |
+| — | A1 / S3 | — | Parked until `data/long_m1/` (no Sandro ping). |
+| — | New overnight monthly FX/index | Strateeg | **Deprioritize** (C-002). |
+
+---
+
+## 3b. Post-A5 + S2 m5gz cost-gates (2026-09-30 23:08 CEST)
+
+**U-006 A unblocked FX/index/metal intradag.** U2 ran A5 → FAIL. CTO ran the three S2 PREREGs that have m5gz symbols (TRAIN 2021–2023; 2025+ skipped at load; no TRIALS append):
+
+| Sleeve | Commit/artefact | N | mean bruto | mean cost | Verdict |
+|---|---|---:|---:|---:|---|
+| A5 FX London ORB | U2 `ce5abdc` / `results/R2/a5_prep/` | 3106 | med −5.91 | 3.93 (3×) | **FAIL** |
+| S2-XAU_OVERLAP | CTO `results/cto/s2_xau_prep/` | 351 | −1.89 | 0.55 | **FAIL** |
+| S2-GER40_OPEN | CTO `results/cto/s2_ger40_prep/` | 232 | −3.13 | 0.72 | **FAIL** |
+| S2-USDJPY_HANDOFF | CTO `results/cto/s2_usdjpy_prep/` | 180 | +0.59 | 1.71 | **FAIL** |
+
+**Kill pattern (bindend):** FTMO CFD session ORB / range-breakout families die at the cost gate whether overnight (A4/B1) or intradag-flat (A5/S2-*). Do not spend more cycles cloning that microstructure with different symbols/sessions.
+
+**Still open with positive option value:** A2 (equity SIP — different universe, earnings catalyst; blocked only on US41 M5). Phase-1 index-ORB F2 remains a *profile* candidate under §1/§2 but not ambition-viable alone at compliant size.
+
+**Research ask (Strateeg / Strateeg-2):** mechanically distinct intradag-flat ideas (event calendars with available M5, cross-asset RV, or honest multi-sleeve `ftmo_ev` on existing survivors) — not another Tokyo/London/overlap breakout.
 
 ---
 
@@ -91,12 +111,13 @@
 
 - `ftmo_ev` API stable; U2 P1 PASS on censor fix.  
 - ORB grid above: informational reassessment of published F2 series — **not** a PREREG trial; do not append TRIALS.  
-- Next engine work (later wake): optional CLI `--scale-grid` + JSON emit for sleeve EV tables; not blocking.
+- S2 cost-gate scripts: `scripts/s2_{xau,ger40,usdjpy}_cost_gate_train.py` (m5gz loader pattern shared with U2 A5).  
+- Next engine work (later wake): optional CLI `--scale-grid` + JSON emit for sleeve EV tables; not blocking while A2 data pending.
 
 ---
 
 ## 5. Pointers
 
-- PREREG: `PREREG_S3.md`, `PREREG_FTMO_A2.md` (Strateeg), `PREREG_FTMO_B1.md` (landed U2), `PREREG_FTMO_C17.md`  
-- Results: `results/f/F2_ORB_daily.csv`, `results/r3/ORB_frontier.txt`, `results/R2/b1_prep/cost_gate_b1_train.*`  
-- Decisions: `VRAGEN_CTO.md` C-001 (windows), C-002 (post-B1 + M5)
+- PREREG: `PREREG_S3.md`, `PREREG_FTMO_A2.md`, `PREREG_FTMO_B1.md`, `PREREG_FTMO_C17.md`, `PREREG_S2_XAU_OVERLAP.md`, `PREREG_S2_GER40_OPEN.md`, `PREREG_S2_USDJPY_HANDOFF.md`  
+- Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy}_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`  
+- Decisions: `VRAGEN_CTO.md` C-001 (windows), C-002 (post-B1 + M5), **C-003** (post-A5 + S2 STOP + research redirect)

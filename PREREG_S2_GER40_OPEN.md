@@ -48,6 +48,14 @@ Bruto mean ≥ 2× 0,72 bp; **kosten < 50% bruto**. +50% spread-stress. Fail →
 **Verwacht:** werkt vooral in trendregimes (SMA-filter); faalt in choppy EU mornings.  
 **Falen:** t < 2; kostenpoort; FTMO-EV < €150; of short-helft systematisch negatief (one-sided artefact).
 
-## 7. Constraints
+## 7. Refine-notitie (2026-09-30 ~22:45 — catalogus §10 / Faraday)
+
+Faraday §10a markeert **overlap-risico met A1 GER40**. Bindend vóór shortlist-plaats:
+1. Rapporteer ρ van deze dagreeks vs (a) A1 multi-ORB pool en (b) A1 **GER40-only** sleeve (indien beschikbaar).
+2. Als \|ρ\| met (b) > 0,7 **én** Δ FTMO-EV < €50 vs A1-GER40 → **geen aparte sleeve** (informatief; t mag gerapporteerd).
+3. Geen wijziging van entry/stop/exit na deze notitie — alleen rapportage-eis aangescherpt.
+
+## 8. Constraints
+
 
 Geen post-hoc range-lengte tuning. Geen 2025+ peek. Geen real money.

@@ -1,0 +1,16 @@
+{
+  "n_trades": 232,
+  "symbol": "GER40cash",
+  "train": "2021-01-01..2023-12-31",
+  "prereg": "PREREG_S2_GER40_OPEN",
+  "mean_gross_bp": -3.12754460968776,
+  "median_gross_bp": -18.423322279409224,
+  "mean_cost_bp": 0.7200000000000001,
+  "mean_cost_stress_bp": 1.08,
+  "gate_2x_realized": false,
+  "gate_cost_share_lt_50pct": false,
+  "gate_stress_2x": false,
+  "gate_stress_share_lt_50pct": false,
+  "verdict": "FAIL",
+  "reserve_2025_touched": false
+}

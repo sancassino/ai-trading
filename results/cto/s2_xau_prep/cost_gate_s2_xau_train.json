@@ -1,0 +1,20 @@
+{
+  "n_trades": 351,
+  "symbol": "XAUUSD",
+  "train": "2021-01-01..2023-12-31",
+  "prereg": "PREREG_S2_XAU_OVERLAP",
+  "mean_gross_bp": -1.8870564058360746,
+  "median_gross_bp": -2.9477032941973222,
+  "mean_cost_bp": 0.5539645842771981,
+  "mean_cost_stress_bp": 0.7221625649707331,
+  "fixed_rt_bp": 0.83,
+  "gate_2x_realized": false,
+  "gate_2x_fixed_0_83": false,
+  "gate_cost_share_lt_50pct": false,
+  "gate_stress_2x": false,
+  "gate_stress_share_lt_50pct": false,
+  "cost_share_pct": -29.35601620407101,
+  "verdict": "FAIL",
+  "reserve_2025_touched": false,
+  "note": "CTO wake cost-gate; formal trial/TRIALS only if PASS and U2/CTO appends under PREREG discipline"
+}
