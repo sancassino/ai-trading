@@ -330,3 +330,12 @@ Getest (PREREG_I2.md vóór berekening): i2_intraday_mr.py, FTMO-M5 → H1 (serv
 (b) RSI(2)-H1 < 10, uitstap > 65/sessie-einde: N 879, −1,24 bp, t −1,13 / +0,13, 2/6 jaar+.
 Conclusie: intraday omkeer lost de dagverlies-bottleneck op maar heeft na kosten geen edge → beide afgewezen. De dag-RSI(2)-edge verdwijnt als de positie niet overnight mag blijven. TRIAL_COUNT 387.
 Volgende stap: I3 (event-drift FOMC/CPI/NFP) — eerst datalijst met bron.
+
+## 2026-09-30 01:16 — I3: event-drift — pre-FOMC formeel GESLAAGD (maar event-t 2,35), post-nieuws afgewezen
+
+Getest (PREREG_I3.md vóór berekening): i3_events.py, events.csv (FOMC van federalreserve.gov; NFP/CPI van bls.gov, automatisch uitgelezen en geverifieerd met de US500-08:30-ET-range).
+Datakwaliteit (eerlijk): de verificatie is onbetrouwbaar — 2021-02..09 niet te bevestigen (onvolledige FTMO-M5), en de ±2-dagen-correctie koos 2x een verkeerde dag (2022-03-04 → 03-02; 2026-05-08 → 05-12 = CPI-dag); ontbrekende maanden niet teruggevonden. Raakt alleen (b).
+(a) Pre-FOMC-drift (long US500/US100, slot dag−1 → 14:00 ET): N 82 (41 events × 2), +26,7 bp, t +3,18, 2021–23 +42,1 bp / 2024–26 +13,4 bp → volgens prereg GESLAAGD. Extra controle (buiten prereg): event-niveau t +2,35 (N 41, 26/41 positief) — onder 2,5; zelfde venster op niet-FOMC-dagen +1,6 bp → FOMC-effect ≈ +25 bp, wel afnemend (bekend gepubliceerd effect, Lucca–Moench).
+(b) Post-nieuws-momentum NFP/CPI (richting eerste 5 min, 30 min vasthouden, 2× spread): N 223, +0,5 bp, t +0,21 → afgewezen.
+Conclusie: pre-FOMC is een klein, echt maar zwakker wordend effect (8×/jaar, ≈ 2%/jr bij 100% notional); met overnight-risico op FOMC-dagen. Geen zelfstandige route naar het doel; mogelijk kleine diversificatie. TRIAL_COUNT 389.
+Volgende stap: I4 (SCENARIO_RAPPORT voor Sandro) en I5 (RSI(2)-regimecheck).
