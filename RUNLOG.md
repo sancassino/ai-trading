@@ -950,3 +950,7 @@ Uitvoerder-1-taken ongewijzigd: D-086 (FTMO-snapshot/spreads) klaar; forward-con
 **VRAGEN_MANAGER:** M-013 → BESLOTEN (D-083). Geen nieuw M-item: Uitvoerder-2 laatste commit `675e02e` 2026-09-30 19:41 UTC (= 21:41 CEST) → leeftijd ≈ 0 u (< 2 u).
 
 **QA:** TRIALS.csv niet op main (ligt op uitvoerder2-r); geen append-schending vanaf main. Reserve 2025-01→ onaangeraakt (D-084).
+
+## 2026-09-30 19:43 — NEXT_STEPS v36 (main, D-089/D-090) gelezen; Managerbranch 'v35 compleet' gemerged met voorrang main en verwijderd
+
+D-090: Claude = CEO + Auditor; Grok = CTO + Manager + Uitvoerder-2 + Strateeg(-2). Voor Uitvoerder-1 (Debian/VM/MT5) geen wijziging in v36: cron's laten draaien (data-update 22:05, F3b 22:15, portefeuille-papier 22:25, FTMO-snapshot 21:30), Uitvoerder-2-branch in main mergen, data/FTMO-specs bijhouden, MT5 op verzoek. D-089 model-beleid genoteerd. Beide NEXT_STEPS-blobs gemarkeerd.
