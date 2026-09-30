@@ -24,3 +24,6 @@ Beide partijen loggen: uitvoerder in `RUNLOG.md`, supervisor in `SUPERVISOR_LOG.
 
 ## Aanvulling 2026-09-30 ~07:40
 Steady-state is opgeheven op verzoek van Sandro. Uitvoerder controleert NEXT_STEPS elke 10 minuten (cron */10) en pakt direct de volgende taak; backlog nooit leeg.
+
+## Aanvulling 2026-09-30 10:15
+Nieuwe rolverdeling: zie ORGANISATIE.md (Manager/Strateeg/Uitvoerder/Auditor). Manager-uurroutine gepauzeerd op verzoek van Sandro. Uitvoerder blijft */10 checken (alle remote branches).
