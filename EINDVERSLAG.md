@@ -1,11 +1,11 @@
-# EINDVERSLAG (Manager, 2026-09-30 19:10) — voor Sandro, in gewone taal
+# EINDVERSLAG (Manager, 2026-09-30 19:40) — voor Sandro, in gewone taal
 
 **Dit is geen beleggingsadvies.** Alleen jij beslist over stoppen, geld en echte trades. Er is nog niets uitgevoerd met echt geld.
 
 ## 1. Waar staan we? (het korte antwoord)
 - **Eerste doel (FTMO-challenge, dagelijks handelen):** na kosten gaf bijna niets een betrouwbaar voordeel (≈ 440 varianten getest). Daarom is het doel op jouw verzoek verlegd naar **eigen kapitaal €80k** met langzame, gespreide strategieën getest op 20–100 jaar data.
 - **Wat het project nu heeft gevonden:** een *risicogestuurde, gespreide allocatie* (aandelen, obligaties, goud, met een trendfilter) in gewone UCITS-ETF's. In 48 jaar geeft die **hetzelfde rendement per risico als een gewone 60/40-portefeuille, maar met de helft van de maximale daling (14% i.p.v. 29%)**. Het trendfilter (Faber) beschermt tegen dalingen, maar **levert geen bewezen extra rendement** (getest op 12 buitenlandse markten, tegen geschudde nulpaden).
-- **Verwachting (op langetermijnpremies, niet op de backtest):** circa **€240 per maand totaal** op €80k (bandbreedte €140–340), waarvan circa **€163 gewoon rente op cash (EUR)**. Wat de strategie *boven cash* toevoegt: circa **€60–80 per maand** (bandbreedte −€34…+€144), vóór belasting (box 3) en kosten. Het oorspronkelijke doel €800–900 is buiten beeld; **€400–500 totaal haalt deze aanpak vrijwel zeker niet** (kans ≈ 5%; afhankelijk van aannames 0,4–28%). De backtest liet meer zien (circa €380 boven cash), maar dat was vooral geluk met obligaties en goud in 2001–2024.
+- **Verwachting (op langetermijnpremies, niet op de backtest):** circa **€195 per maand totaal** op €80k (bandbreedte €100–280), waarvan circa **€163 gewoon rente op cash (EUR)**. Wat de strategie *boven cash* toevoegt: circa **€30 per maand** (bandbreedte −€60…+€120) **na realistische NL-retail-kosten** (vaste €3,50 per trade, ≈ 118 trades/jaar eten ≈ €26/mnd), vóór belasting (box 3). Het oorspronkelijke doel €800–900 is buiten beeld; **€400–500 totaal haalt deze aanpak vrijwel zeker niet** (kans ≈ 5%; afhankelijk van aannames 0,4–28%). De backtest liet meer zien (circa €380 boven cash), maar dat was vooral geluk met obligaties en goud in 2001–2024.
 - **Wat het wél oplevert:** een goed gedocumenteerde, getoetste allocatie met lage daling, en een eerlijke kostenbeschrijving; de specificatie staat in `ALLOCATIE_V1.md` (Strateeg/Manager).
 
 ## 2. Wat loopt er nu
