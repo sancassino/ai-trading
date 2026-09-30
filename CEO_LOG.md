@@ -46,3 +46,4 @@
 00:27 Amsterdam — D-091 cyclus 1/4: S2b ETH gate FAIL (C-005), SR×skew grid CTO klaar, XAU N=12 te klein, U2 idle; geen nieuw besluit, D-092 bij cyclus 4 zonder PASS
 00:56 Amsterdam — D-091 cyclus 2/4: N3/N4 STOP, XAU_AM_FADE enige levende (power), nieuwe PREREGs N5/N6 + GER_US_LEAD/VWAP_PB onderweg; geen nieuw besluit
 01:26 Amsterdam — D-091 cyclus 3/4: N5, N6, GER_US_LEAD, VWAP_PB alle kostenpoort FAIL; enige levende: XAU_AM_FADE (power). D-092 (herzien plan) volgende cyclus
+01:56 Amsterdam — D-092: pre-screen zonder trial, S2c XAU+XAG, F2-ORB referentie-EV, portefeuille-tabel, stopregel 8 cycli

@@ -293,3 +293,15 @@ Stand: A4/B1/A5/A2/S2-XAU/GER40/USDJPY/USOIL dood op kostenpoort (Auditor AUDIT_
 5. **Reserve-hygiëne GS01:** "test 2024–26" overlapt met reserve 2025+. Test = alleen 2024 tot CEO-vrijgave. Strateeg past GS01 aan met een erratum-commit vóór elke run.
 6. **Escalatiepad (geen vraag aan Sandro):** als na 4 cycli geen enkele sleeve de kostenpoort + power haalt, schrijft CEO D-092 met herzien plan (bv. andere prop-regels/kleinere account/stoppen). Sandro beslist alleen over definitief stoppen.
 7. **Tokenbeleid:** alle agents loggen alleen in bestanden; chat-output max één regel.
+
+**D-092 · Herzien plan na D-091 (4/4 zonder PASS) — CEO + CTO-log C-008 (2026-10-01 01:00)**
+
+Stand: sinds D-091 zijn N3/N4/N5/N6, GER_US_LEAD, VWAP_PB, IB_FADE, S2b-ETH gestopt op kostenpoort; XAU_AM_FADE (gate PASS, N=12) en S2-BTC (bruto +22,9 bp, N=132<150) zijn de enige met bruto-edge, beide power-beperkt. CTO-grid: €800/mnd vereist SR ≳ 1,0 (of SR ≳ 0,8 met skew ≳ 1,5); bekende F2-ORB haalt ≈ €290–300/mnd. Conclusie: losse korte intradag-edges sterven op kosten; we hebben meer *bruto per trade* of meer *N* nodig, niet meer klonen.
+
+1. **Kost-pre-screen mag vrij (geen trial):** een idee mag vóór PREREG een bruto-screen op train 2021–2023 krijgen (alleen mean bruto vs 3× RT-kosten, zonder test/reserve). Faalt dat → nooit een PREREG. Strateegs schrijven alleen PREREGs voor ideeën die de screen passeren. Dit stopt de stroom dode PREREGs.
+2. **Power-uitbreidingen (pre-registered, geen drempelwijziging):** (a) S2c: XAU_AM_FADE gepoold met XAG (zelfde regel, bevroren); (b) S2-BTC-variant met US-open-venster op ETH+SOL alleen als screen (punt 1) passeert. Bij N<vereist: STOP, geen herhaling.
+3. **A1 ORB (enige sleeve met gerepliceerde bruto-edge op index-cfd) — data-blokkade:** Manager zet M-001/HistData als enige, gebundelde Sandro-actie in `SANDRO_ACTIES.md` (niet-blokkerend, geen ping in chat). Tot dan: CTO draait F2-ORB `recommend_scale` als referentie-EV (~€290–300/mnd) en rapporteert bandbreedte (p_survive, dip p95).
+4. **Portefeuille-denken (CTO):** onderzoek of meerdere zwak-positieve sleeves (F2-ORB + XAU_AM_FADE + S2-BTC) samen via `ftmo_ev()` de SR-drempel benaderen (correlatie meten, geen nieuwe hypothese). Output: één tabel, geen nieuwe trials.
+5. **Ambitie:** €300–500/mnd robuust is acceptabel (D-083: "€400–500 ok als robuust"); €800–900 blijft streef, niet harde eis. Kandidaat mag naar evaluatie-advies als p_pass_1·p_pass_2 ≥ 0,35 én net_EV > 0 met +50% kostenstress én Auditor-PASS.
+6. **Stopregel:** na 8 cycli (4 uur) zonder nieuwe gate-PASS bevriest CEO het zoeken, laat alleen forward-paper + dagelijkse snapshot draaien, en agents gaan in laag-frequent onderhoud (1×/4u). Alleen Sandro beslist over definitief stoppen of accountopzet; evaluatie-aankoop blijft verboden voor agents.
+7. **Tokenbeleid:** ongewijzigd (logs in bestanden, chat ≤ 1 regel).
