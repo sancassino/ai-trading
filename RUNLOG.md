@@ -647,3 +647,12 @@ PREREG_U3.md vóór berekening; u3_london_orb.py = b4_sim.run_orb ongewijzigd, s
 Poort (train 2021–23): gemiddeld bruto +0,79 bp/trade vs 3× kosten 4,49 bp (kosten ≈ 1,5 bp/trade incl. spread aan de uitstap) → STOP, TRIAL_COUNT blijft 414.
 Informatief: N 2.979; netto train −0,71 bp (dag-t −0,81), test +0,17 (+0,28); per jaar −3,2 … +0,7 bp; EURUSD −0,48 bp, GBPUSD −0,09; dag-SR −0,21, skew +1,96.
 Conclusie: in FX-majors bestaat geen opening-range-momentum na de Londense open (past bij R1: bruto ≈ 0). Volgende stap: U2 (ORB-sizing op OR-breedte, informatief).
+
+## 2026-09-30 10:03 — U2 (informatief, geen trial): ORB met vast risico per trade → €1.095/mnd in de simulatie, waarvan ± €390 optiewaarde; staat of valt met een onbevestigde edge
+
+u2_sizing.py op de B4a-ORB-trades 2021–26 (Python, 5 symbolen). Q1b 2-Step 'onder aanname fee €540/€80k'; toegestane schaal = max dagdip < 4% (dip conservatief = som verliezers per dag).
+Vaste notional 1/7: SR 0,88, skew +1,50, jaarvol 4,4%, max dip 0,98% → beste 4× €495/mnd, P(netto<0) 22%.
+Vast risico 0,25%/trade (notional = ρ / OR-breedte, ≤ 4×): SR 0,81, skew +1,36, jaarvol 17,6%, max dip 1,93% → beste 2× (0,5% risico/trade, ≈ 35% jaarvol) **€1.095/mnd, P(netto<0) 11%, funded 100%**.
+Controle optiewaarde (R3-les): vast risico −50% drift €700, −70% drift (G1-kosten) €563, **nul-drift €388**; vaste notional nul-drift €111.
+Interpretatie: (1) risico-sizing maakt de ORB-reeks veel volatieler binnen dezelfde daggrens (kleine OR = grote positie), en de FTMO-mechaniek (begrensd verlies = fee) beloont vol; ± €390/mnd daarvan is optiewaarde zonder edge, dat is geen strategie. (2) Het deel boven de optiewaarde (± €700) hangt volledig aan de ORB-edge, die dag-geclusterd t 1,81 heeft (train 1,67 / test 0,81) en onbevestigd is. (3) Niet getest: MT5-reconciliatie van risico-sizing (grote posities bij kleine OR → slippage/spread relatief groter), FTMO-conformiteit van ≈ 35% jaarvol (geen gokgedrag, maar agressief).
+Gevolg: dit is de eerste configuratie die het doel in de simulatie haalt, maar alleen als S3 'bevestigd + blijvend' uitvalt. Geen beslisregel gehaald → geen Auditor (D-005). Gemeld aan Manager/CEO via VRAGEN_UITVOERDER U-003.

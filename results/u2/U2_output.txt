@@ -1,0 +1,10 @@
+vaste notional 1/7       SR +0.88 skew +1.50 jaarvol 4.4% max dip 0.98% P99 dip 0.64% | toegestaan tot 4× → beste 4×: €495/mnd, P(netto<0) 22%, funded 91%
+vast risico 0,25%/trade  SR +0.81 skew +1.36 jaarvol 17.6% max dip 1.93% P99 dip 1.77% | toegestaan tot 2× → beste 2×: €1,095/mnd, P(netto<0) 11%, funded 100%
+
+Controle optiewaarde (zelfde dips, drift verlaagd):
+  vaste notional 1/7       −50% drift               beste 4×: €267/mnd, P(netto<0) 39%, funded 81%
+  vaste notional 1/7       nul-drift                beste 4×: €111/mnd, P(netto<0) 58%, funded 69%
+  vaste notional 1/7       −70% drift (G1-kosten)   beste 4×: €196/mnd, P(netto<0) 47%, funded 76%
+  vast risico 0,25%/trade  −50% drift               beste 2×: €700/mnd, P(netto<0) 21%, funded 100%
+  vast risico 0,25%/trade  nul-drift                beste 2×: €388/mnd, P(netto<0) 35%, funded 99%
+  vast risico 0,25%/trade  −70% drift (G1-kosten)   beste 2×: €563/mnd, P(netto<0) 26%, funded 99%
