@@ -21,3 +21,6 @@ Beide partijen loggen: uitvoerder in `RUNLOG.md`, supervisor in `SUPERVISOR_LOG.
 ## Aanvulling 2026-09-30
 - De uitvoerder bleek B1–B5 in 20 min af te ronden; backlog moet dus ≥ 6 uur werk bevatten. Bij lege backlog: pak de Reserve (D-lijst) / schrijf zelf `VOORSTEL_*.md` en ga door — niet wachten.
 - `check_next_steps.sh` moet ook mijn branch `claude/vibrant-volta-ysy5m4` controleren (doet het al voor alle remote branches).
+
+## Aanvulling 2026-09-30 ~07:40
+Steady-state is opgeheven op verzoek van Sandro. Uitvoerder controleert NEXT_STEPS elke 10 minuten (cron */10) en pakt direct de volgende taak; backlog nooit leeg.
