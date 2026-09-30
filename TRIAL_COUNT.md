@@ -55,3 +55,5 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | R2 aandelen-ML cross-sectioneel (2 targets) | 2 | 409 |
 | 2026-09-30 | R4 Donchian 20/10 + ATR-trailing H4 (FX/goud) | 1 | 410 |
 | 2026-09-30 | S1 noise-area intraday-momentum (4 varianten, alle door kostenpoort) | 4 | 414 |
+
+**Noot N7 (2026-09-30):** dag-geclusterde t-waarden van kernresultaten staan in RESULTATEN_GECLUSTERD.md; ORB-B4a (7 symbolen) 2,93 → 1,81, S3-set 3,73 → 2,90; B2b (dagreeks) overleeft (NW 3,80).

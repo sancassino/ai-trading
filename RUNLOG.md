@@ -671,3 +671,12 @@ Referentie deze symbolen: +3,38 bp/trade (2024–26 +1,65), dag-geclusterd t 2,9
 Kans op 'bevestigd' (9 jaar ≈ 2012–20): effect op 2021–26-niveau (A) t ≥ 2,5 88% | (B) eenzijdig t ≥ 2,0 95%; effect gehalveerd 18% | 33% (onbeslist 56% | 41%); nul-wereld 0% | 0% (verworpen 99%). 10 jaar: 91/97% en 21/39%.
 Toegepast (M-009 standaardactie C): primaire drempel → eenzijdig t ≥ 2,0 in PREREG_S3.md en s3_run.py; overige eisen, labels en S3b ongewijzigd; data/long_m1/ was leeg op het moment van vastleggen. Kanttekening: 'effect op 2021–26-niveau' is optimistisch (winnaarsvloek); realistisch is iets tussen gehalveerd en vol.
 Volgende stap: N7 (cluster-audit).
+
+## 2026-09-30 10:20 — N7: cluster-audit kernresultaten — ORB 2,93 → 1,81 (S3-set 2,90); RSI(2) Yahoo-dagreeks overleeft; K1-FTMO zakt naar 0,43
+
+n7_cluster.py (geen trial) → RESULTATEN_GECLUSTERD.md: per-trade-t vs dag-geclusterd; dagreeksen gewone t vs Newey-West (lag 5) en blok-bootstrap (21 d).
+ORB-B4a 7 symbolen 2,93 → 1,81 (9.249 trades, 1.490 dagen); S3-set (US500/US100/GER40/XAU) 3,73 → 2,90 (5.091 trades, 1.457 dagen); F2-dagreeks 2,21 / NW 2,22 / bootstrap 2,14.
+S1(a) 2,19 → 2,05. K1 max 1/2 nachten Yahoo 3,05 → 3,01 / 3,59 → 3,30; FTMO 1,79 → 0,43 / 1,53 → 0,94.
+B2b RSI(2) Yahoo 1990–2026 was al een gepoolde dagreeks: 3,65 → NW 3,80 / bootstrap 3,99 → overleeft. F3b 2,14 → NW 2,29 / bootstrap 2,35. Forward: nog geen data.
+**Correctie:** in de RUNLOG-entries S9-stap-1 en U2 stond 'ORB-B4a 5 symbolen'; het bestand bevat 7 (ook EURUSD en UK100). Cijfers kloppen, label niet. N8 gebruikte expliciet de 4 S3-symbolen (klopt). Noot toegevoegd aan TRIAL_COUNT.md.
+Volgende stap: U2b (MT5-reconciliatie ORB-sizing, D-019).
