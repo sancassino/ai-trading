@@ -875,3 +875,10 @@ EUR-backtest hele P-ETF-a (backtest = gerealiseerde premies, vóór haircut/box 
 
 Gevoeligheidsvariant (geen trial, geen selectie): instrumentniveau-simulator met meedrijvende posities; P-ETF-a-inst (drempel 0, referentie) en P-ETF-a-D1 (handel pas bij ≥ 1% afwijking van het doel per instrument); kosten model B (NL-retail €3,50/transactie + 1,5 bp) primair, model A als gevoeligheid; TER per instrument. Forward forward/portfolio3_daily.csv vanaf 2026-10-01 (cron 22:25 UTC). PREREG_PORT/PORT2 onveranderd. Vastgelegd vóór de forward-start en de reserve-run.
 SHA-256 PREREG_PORT3.md: 5e1648dfad70d615715c5d57166307a9fa1b6fbb9694c4f2cff635902b911972
+
+## 2026-09-30 17:55 — PORT3 (v32 QA-1): drempel 1% verlaagt transacties 153 → 57/jr en kosten (model B) €268 → €116/jr; SR 0,86 → 0,91; forward vanaf 01-10
+
+port3.py (PREREG_PORT3, SHA in RUNLOG) → results/port/PORT3_backtest.md; ontdekking ≤ 2024, geen trial/selectie. Instrumentniveau-simulator (8 ETF's + cash, meedrijvende posities, doel-exposure uit P-ETF-a-gewichten × sleeve-posities, TER per instrument).
+Model B (NL-retail €3,50/transactie + 1,5 bp), 2001–24: P-ETF-a-inst (drempel 0) SR 0,86, CAGR 6,8%, maxDD 11,1%, alfa 5,1%/jr (≈ €341/mnd backtest), 153 transacties/jr, omloop 2,35×, kosten €268/jr → P-ETF-a-D1 (drempel 1%) SR 0,91, CAGR 7,1%, maxDD 11,3%, alfa 5,4%/jr (≈ €362/mnd), 57 transacties/jr, omloop 2,14×, kosten €116/jr. 2021–24: inst 0,42 → D1 0,46 (alfa €175 → €192/mnd). Model A: D1 ≈ inst (verschil vooral vaste kosten).
+Kanttekeningen: kosten-€ zijn in startkapitaal-euro's (vaste €3,50 op groeiend vermogen weegt relatief minder); inst-SR (0,86–0,90) ligt onder PREREG_PORT (0,94) door meedrijvende posities en instrument-TER; backtest = gerealiseerde premies (niet de verwachting).
+Forward: forward/portfolio3_daily.csv (P-ETF-a-inst en -D1: USD, EUR ongehedged/gehedged, transacties) vanaf 2026-10-01 via forward_portfolio.sh (cron 22:25 UTC). Cron-script robuuster gemaakt (git add per bestand, ontbrekend bestand blokkeert de commit niet meer).
