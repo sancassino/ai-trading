@@ -32,3 +32,13 @@ C02 op de shortlist → reserve-OOS 2025-01→ één keer; daarna FTMO-mechaniek
 13 bp, TER 0,07% en SPX_TR voor SPX (VEHICLE_ANALYSE v1). PREREG_PORT moet één vehikelset vastleggen. (2) Forward (D-050) kan FRED-reeksen niet bijwerken
 (FX_*, IR3TIB, DTB3 geblokkeerd): forward gebruikt Yahoo =X-FX, US Treasury 3m voor rf en de officiële rentebronnen. **Standaardactie:** forward_portfolio.py
 gebruikt de vehikelset en sleeves exact zoals in PREREG_PORT.md; waar een FRED-reeks nodig is, wordt de genoemde vervanger gebruikt en vermeld.
+
+## U-006 (2026-09-30 ≈ 22:20 Amsterdam) — M5-data voor A5/A2 naar de repo? (v38: 'A5 geparkeerd tot M5', 'A2 wacht op US41-spreads')
+**Stand:** FTMO-M5 2021-01 → 2026-09-29 staat alleen lokaal op Debian (`data/m5`, 841 MB, gitignored); cloud-agents (Grok) kunnen er niet bij.
+**US41-spreads (A2):** staan al op main: `COSTS_FTMO_alle.csv` en `COSTS_FTMO_alle_per_uur.csv` (alle 41 US-aandelen, mediaan/P90 per NY-uur, 2024–26;
+let op: bij ≈ 20 aandelen is 74–81% van de M5-bars spread 0 = ontbrekend → mediaan op de rest; Q2 mat ≈ 2,9 bp rondreis).
+**M5 voor A5 (FX-intradag):** gzip-CSV ≈ 4,4 MB per FX-paar, ≈ 3,7 MB per index, ≈ 1 MB per aandeel. Opties: (A) eenmalig `data/m5gz/` met 15 FX-paren + XAU + 8 kern-indices
+(US500, US100, US30, GER40, UK100, JP225, AUS200, EU50) ≈ 100 MB, momentopname t/m 2026-09-29 + checksums (repo is privé); (B) hetzelfde als M15 (≈ ⅓ grootte);
+(C) niets committen; Uitvoerder-1 draait A5-runs op Debian voor Uitvoerder-2 (op PREREG + script uit de repo).
+**Standaardactie (na 60 min):** A — eenmalige gz-momentopname van die 24 symbolen in `data/m5gz/` (niet dagelijks bijgewerkt), laadbaar met `b4_sim.load`-formaat
+(zelfde kolommen). Aandelen-M5 (A2) alleen op verzoek (≈ 40 MB extra).
