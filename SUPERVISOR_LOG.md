@@ -50,3 +50,5 @@
 2026-09-30 22:05 Amsterdam — cyclus :05: BESLUITEN op `origin/claude/upbeat-dirac-g2810q` gelezen (max D-086; CEO_LOG 21:41 geen nieuw D-*); D-087…D-090 al verwerkt op main (v36/v37 via `ftmo-trading-strategy`); geen D-091+. Uitvoerder-2 actief (`43b6ba2` 22:04 CEST, A4 C17 cost-gate FAIL). Geen M-item. NEXT_STEPS al v37 (post-A4 prio B1→A2). Geen verdere wijziging.
 
 2026-09-30 22:35 Amsterdam — cyclus :35: fetch ok. BESLUITEN `upbeat-dirac-g2810q` max D-086; `ftmo-trading-strategy-98mplz` max D-090; CEO_LOG 22:12 geen nieuw D-*; geen D-091+. NEXT_STEPS blijft v39 (B1 STOP, prio A2+M5). Uitvoerder-2 actief (`18c7996` 22:26 CEST, B1 cost-gate FAIL). Geen VRAGEN_MANAGER M-item. Geen NEXT_STEPS-bump.
+
+2026-09-30 23:05 Amsterdam — cyclus :05: fetch ok. BESLUITEN `upbeat-dirac-g2810q` max D-086; `ftmo-trading-strategy-98mplz` max D-090; CEO_LOG 22:50 geen nieuw D-*; geen D-091+. NEXT_STEPS → **v40** (A5 kostenpoort FAIL `ce5abdc`; M5gz klaar; A2 geblokkeerd op US41-M5; prio S2-intradag XAU/GER40/USDJPY + US41-M5gz via Uitvoerder-1). Uitvoerder-2 actief (`ce5abdc` 22:49 CEST). Geen VRAGEN_MANAGER M-item.
