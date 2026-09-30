@@ -1,4 +1,4 @@
-RUNLOG-regel: 2026-09-30 ~19:10Z · AUDITOR-1 · AUDIT_1 (deel 1: ETF-replicatie P-ETF-a + statistiek + reserve-hygiëne) gepusht op claude/auditor-1. Deel 2 (FTMO/cfd-retarget D-083…D-086) NOG NIET gedaan.
+RUNLOG-regel: 2026-09-30 ~19:10Z · AUDITOR-1 · AUDIT_1 deel 1 gepusht. 2026-09-30 ~21:30Z · AUDIT_1 deel 2 (FTMO-engine validatie D-087 + reserve-hygiëne post-D-084) gepusht op claude/auditor-1.
 
 # AUDIT_1 — onafhankelijke audit (red team), deel 1
 
@@ -37,3 +37,88 @@ Eigen code in `audit/` (geen import van engine/ of catalogus/ in de replicatie).
 
 ## Niet gedaan (retarget 19:00Z, D-083…D-086)
 De nieuwe prioriteit (cfd-vehikel en FTMO-kosten/swaps, FTMO-simulatoren Q1b/ftmo_economics/mc_daily_ftmo, ORB/B4a cluster-t 2,93→1,81, hygiëne) is **niet** onderzocht: de sessie is door de eigenaar gepauzeerd om credits te sparen. Zie RUNLOG-regel bovenaan; hervatten alleen op aanwijzing van Sandro.
+
+---
+
+# Deel 2 — FTMO-engine validatie (D-087) + reserve-hygiëne post-D-084
+
+Eigen code in `audit/ftmo_compare.py`. Geen import van `engine/` of `catalogus/` in mijn replicatie. CTO-code geladen vanuit een losse kopie (`/tmp/ftmo_cto.py`) van `git show origin/grok/cto-1:engine/ftmo.py`.
+
+## 2A — Onafhankelijke FTMO mini-implementatie
+
+### Geïmplementeerde regels
+| Regel | Implementatie in `ftmo_mini()` | Bron |
+|---|---|---|
+| Dagverlies-limiet | `dd = max(0, −r) × eq`; breach als `dd >= 0.05` (fraction van initial) | FTMO 2-Step spec |
+| Max drawdown vloer | statisch: `floor = 1 − 0.10 = 0.90`; breach als `eq − dd ≤ floor` of `eq ≤ floor` | FTMO 2-Step spec |
+| Fase 1 | `eq >= 1.10` EN `days_in >= 4`, reset equity=1.0 en teller=0 bij slagen | D-087 |
+| Fase 2 | `eq >= 1.05` EN `days_in >= 4`, vanuit gereset startpunt 1.0 | D-087 |
+| Volgorde per dag | trough-check → return toepassen → floor-check → teller+1 → breach-reset → fase-check | CTO-volgorde nagemeten |
+
+Implementatie: 44 uitvoerbare regels (exclusief lege regels / commentaar), vectorized NumPy.
+
+### Vergelijkingsresultaten (5 synthetische scenario's, n_paths=20.000, block=21)
+
+| scenario | mini p_pass_1 | mini p_pass_2 | cto p_pass_1 | cto p_pass_2 | Δp1 | Δp2 | oordeel |
+|---|---|---|---|---|---|---|---|
+| drift+ (μ=+0,08%/d, σ=0,80%) | 0,9718 | 0,9031 | 0,9718 | 0,9031 | 0,0000 | 0,0000 | **PASS** |
+| flat (μ=0, σ=0,80%) | 0,3380 | 0,1135 | 0,3380 | 0,1135 | 0,0000 | 0,0000 | **PASS** |
+| high-vol (μ=+0,08%/d, σ=1,80%) | 0,9981 | 0,9480 | 0,9981 | 0,9480 | 0,0000 | 0,0000 | **PASS** |
+| low-vol (μ=+0,06%/d, σ=0,40%) | 1,0000 | 0,9991 | 1,0000 | 0,9991 | 0,0000 | 0,0000 | **PASS** |
+| neg-drift (μ=−0,05%/d, σ=0,80%) | 0,5524 | 0,2424 | 0,5524 | 0,2424 | 0,0000 | 0,0000 | **PASS** |
+
+Cross-seed controle (seed 7, 13, 99, 200, 999; n_paths=10.000): Δp1=Δp2=0.00000 bij alle seeds.
+
+### Grensgedrag (aanvullende controles)
+| test | verwacht | mini | cto | OK? |
+|---|---|---|---|---|
+| Dagverlies exact −5,0% (eq=1.0) | breach (dd=0.05 ≥ 0.05) → p_pass_1=0 | 0,0000 | 0,0000 | ✓ |
+| Totaalverlies −10,01% op dag 1 | breach (eq=0.899 < floor 0.90) → p_pass_1=0 | 0,0000 | 0,0000 | ✓ |
+| Doelstelling bereikt na 3 dagen (< min_days=4) | geen fase-1-pas | 0,0000 | 0,0000 | ✓ |
+| Statische vloer: patroon −8%/+1%×20 (eq nooit < 0.90) | paden kunnen fase 1 halen | 1,0000 | 1,0000 | ✓ |
+
+**Opmerking statische vloer:** vloer is 0,90 ongeacht de piekequity. Na een piek van 1,09 is de vloer nog steeds 0,90 (niet 1,09 × 0,90 = 0,981). Dit is het correcte FTMO-gedrag en is goed geïmplementeerd in `ftmo_ev()`.
+
+### Verdict Prioriteit 1
+
+**PASS** — beide implementaties komen bit-voor-bit overeen (Δ=0,0000) op alle 5 scenarios, 5 seeds en 4 grenstests. Geen fundamentele fout gevonden in `engine/ftmo.py`. Regels (vloer-definitie, dagverlies-limiet, min_days, fase-reset) zijn correct geïmplementeerd.
+
+---
+
+## 2B — Reserve-hygiëne na D-084
+
+**Opschorting D-084:** 2026-09-30 ~20:44 CEST = ~18:44 UTC. Gecontroleerd: alle commits na 18:44 UTC op alle branches.
+
+### Post-opschortings commits (na 18:44 UTC op 2026-09-30)
+
+| commit | tijdstip (UTC) | bestanden | bevat 2025→-data? |
+|---|---|---|---|
+| `7148ab3` | 19:12 | `engine/ftmo.py` (nieuw) | Nee — code |
+| `6ea527d` | 19:14 | `NEXT_STEPS.md` | Nee — log |
+| `902d8d0` | 19:16 | `data/ftmo_specs/2026-09-30.csv` (nieuw) | Zie opmerking ① |
+| `52fb9d8` | 19:17 | `data/ftmo_specs/2026-09-30.csv` (update) | Zie opmerking ① |
+| `3862f0b` | 19:17 | `ftmo_snapshot.sh`, `mt5_symbol_snapshot.py` | Nee — scripts |
+| `005b85f` | 19:17 | `RUNLOG.md` | Nee — log |
+| `87a1305` | 19:21 | `STRATEGIE_LOG.md` | Nee — log |
+| `ca25968` | 19:24 | `BESLUITEN.md`, `CEO_LOG.md` | Nee — beslislog |
+
+**① `data/ftmo_specs/2026-09-30.csv`:** snapshot van FTMO-broker specs (swap-tarieven, bid/ask-spreads, contractgrootten voor 166 symbolen, timestamp 2026-09-30T19:14Z). Dit zijn **broker-operationele parameters** — géén backtesting-koersenreeksen. De "reserve" is de terugtest-koersenreeks vanaf 2025-01-01 (dagsloten indices/ETF's/obligaties/goud). De specs-data zijn categorisch anders: ze gaan over tradingkosten voor het FTMO-live-evaluatieproject, niet over de P-ETF-a backtest.
+
+**Backtesting-koersenbestanden** (`data/daily/`, `data/yahoo/`, `data/derived/`, `data/fred/`, `data/ohlc/`, `data/monthly/`): de laatste commit die één van deze directories aanraakte was vóór D-084-opschorting (`cdecff7` om 14:17 UTC, `8c6e034` om 23:51 UTC vorige dag).
+
+**`data/ftmo_d1ohlc_US500_US100.txt`** (bevat US100-data t/m 2026-09-30): laatste commit om 14:17 UTC — **vóór** opschorting. Wordt gebruikt voor FTMO-live-analyse (forward periode), niet voor de P-ETF-a backtesting reserve. Pre-bestaande situatie, niet nieuw post-D-084.
+
+### Verdict Prioriteit 2
+
+**PASS** — na D-084-opschorting zijn géén backtesting-koersenbestanden (de eigenlijke "reserve" vanaf 2025-01-01) aangeraakt. `data/ftmo_specs/` is broker-operationele data, geen onderdeel van de backtesting-reserve. De pre-bestaande reserve-twijfel (punt 2h uit deel 1: `trend-research.md` gebruikte 2025–26-data vóór de reserve-aanwijzing) is **onveranderd** — dat is een eerder gedocumenteerde schending, niet nieuw.
+
+---
+
+## Overzicht deel 2
+
+| prioriteit | onderwerp | oordeel |
+|---|---|---|
+| P1 | `engine/ftmo.py` validatie (FTMO 2-Step regels) | **PASS** (Δ=0 op alle tests) |
+| P2 | Reserve-hygiëne na D-084-opschorting | **PASS** (geen koersendata aangeraakt) |
+
+Auditor: AUDITOR-1 (claude/auditor-1). Eigen code: `audit/ftmo_compare.py`. Geen engine/-import in replicatie.
