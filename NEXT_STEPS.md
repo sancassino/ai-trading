@@ -1,4 +1,4 @@
-# NEXT_STEPS v23 — Manager, 2026-09-30 15:10 Amsterdam — verwerkt D-042…D-051, RUNLOG_R2, U-005, Strateeg-input PREREG_PORT
+# NEXT_STEPS v24 — Manager, 2026-09-30 15:40 Amsterdam — verwerkt D-042…D-054, run 3, PREREG_PORT (SHA 9f17d335…), Strateeg v2.6
 
 Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
 
@@ -23,6 +23,17 @@ Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). All
 1. **D2-uitbreiding (D-044, ≤ 3 u):** (a) TR/dividend (S&P, DAX, NDX) binnen bronvoorwaarden; (b) ≥ 20 instrumenten voor C54 (NZD/SEK/NOK-FX, Bund/JGB/Gilt-proxy's, agri/energie); (c) roll-schone zilver/koper/gas; (d) **FRED vanaf Debian ophalen en committen** (rentes, goud/CPI, FX); rate-limit, eerlijke UA, niets omzeilen.
 2. **Engine (D-045):** future-model-fix (FX = spot + renteverschil; doorlopende futures zonder rf-aftrek) blijft; opnemen in engine/README + ENGINE_TEMPLATE (Manager werkt ENGINE_TEMPLATE bij: zie §V).
 3. S3/P0 en F (forward) volgens bestaande punten hieronder.
+
+## 0f. Stand 15:40 + Manager-QA (bindend voor Uitvoerder-1/2; CEO-besluit over haircut: zie M-012)
+Uitvoerder-2 is weer actief (commit 15:32); PREREG_PORT staat (Uitvoerder-1, D-052, SHA `9f17d335…`, bevroren); forward-papier start 2026-10-01 (cron 22:25 UTC). Run 3: 435 trials; door de poort C16, C33, C44, C45, C55.
+**QA-taken (geen trials):**
+1. **Verdacht hoge SR P-ETF-a (0,94, ongehefeld, 2 sleeves) — decompositie (Strateeg v2.6 punt 1, Manager-akkoord):** rendement en SR per asset (aandelen/obligatie/goud/cash) en per decennium; P-ETF-a **zonder obligatiepoot** (synthetische D=8/C=80 in de rentedaling 2001–2020); P-ETF-a met C02 op price-index i.p.v. adjclose; 2001–2010/2011–2024 apart. Zonder deze uitsplitsing geldt 0,94 niet als uitgangspunt voor verwachtingen (Uitvoerder-1 of -2, wie het eerst pakt; meld welke).
+2. **Haircut-definitie (M-012):** haircut op **excess-rendement (x−rf)**, cash-rente apart opgeteld in de eigen valuta (EUR: ESTR/EUR-geldmarkt, niet USD-IRX); rapporteer altijd **cash-only nulbenchmark** naast 60/40 en 'alfa boven cash' in €/mnd. Tot de CEO beslist: beide berekeningen (haircut op totaal én op excess) tonen, met labels.
+3. **Run-3-labels (G-benchmark):** C45 haalt de benchmark niet (DD = B&H) en C33 voegt niets toe aan C05 (corr 0,64) → in TRIALS.csv/shortlist expliciet 'geen kandidaat'. C16 Halloween = gepubliceerd seizoenseffect (decay-risico) → alleen als bijsleeve bekijken, niet als eigenstandige. C44: 17 jr/45 wijzigingen = kleine effectieve N.
+4. **Frozen PREREG_PORT:** run-3-sleeves (C55 DAA, C44, C16, …) niet in PREREG_PORT wijzigen; alleen als apart, vooraf gecommit **P-breed-v2** (eigen PREREG + SHA) na de reserve-run-voorbereiding. Nooit 'P-breed' achteraf herdefiniëren.
+5. **C54:** op 2015–2024 fractionele SR met 15 instrumenten 0,09; retail-CFD niet beter dan 60/40 → C54 blijft 'bovengrens/onbewezen'; niet in de adviesbasis. Sub-selecties 6/8 instrumenten zijn a priori op micro-beschikbaarheid gekozen: als extra trials tellen in BH.
+6. **Reserve-run (D-042: uiterlijk 01-10 12:00):** pas na 1–5 gerapporteerd; drie portefeuilles + per sleeve, CI, geen selectie achteraf. Uitvoerder-2 meldt als hij methodisch uitstelt.
+7. **Sessie-bewaking (D-051/D-053):** Uitvoerder-2 commit < 90 min ✔; melden bij `disconnected`.
 
 ## 0e. D-051 + Strateeg-input PREREG_PORT (v2.5) — Manager-akkoord
 - **Uitvoerder-2 was idle** (laatste commit 13:26 Amsterdam); CEO heeft hem gewekt + uurroutine (:25). **Manager-controle elke cyclus:** heeft `claude/uitvoerder2-r` een commit < 90 min? Zo niet → melding in VRAGEN_MANAGER (CEO wekt). Uitvoerder-2: begin elke beurt met `git fetch --all`, lees NEXT_STEPS/BESLUITEN, commit minstens per uur (ook tussenstand), zodat idle zichtbaar is.
