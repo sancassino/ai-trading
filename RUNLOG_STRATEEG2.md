@@ -23,3 +23,18 @@
 - **Catalog-overlap check (geen duplicaat):** XAU overlap / GER40 open / USOIL EIA blijven; GS01/GS02/A5/Q3/I3/F5-JP225-ORB niet heropenen.
 - **Nieuw deze cyclus:** `PREREG_S2_BTC_USOPEN.md` — BTCUSD break pre-US-cash range 15:30–16:00 Europe/Amsterdam, gefilterd op US100-gap teken, flat 21:00 (swap≈0). Beslisregel: dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; reserve 2025+ onaangeraakt.
 - Geen engine-run / geen gefabriceerde resultaten. Volgende cyclus: stilten tenzij Manager feedback of verdere niet-overlappende familie.
+
+## 2026-09-30 ~22:45 Europe/Amsterdam — Hourly cycle (:40 slot)
+
+- `git fetch --all`; tip `grok/strateeg-2` @ b25b231 (up to date with origin) vóór deze commit.
+- **Refresh (read-only, geen merge):**
+  - `BESLUITEN.md` via `origin/claude/upbeat-dirac-g2810q` + `origin/claude/ftmo-trading-strategy-98mplz`: D-083…D-090 FTMO-pivot bindend; D-084 reserve 2025+ geschorst; D-089/D-090 Strateeg-2 parallel op `grok/strateeg-2`.
+  - `CEO_LOG` (upbeat-dirac): 22:12 — A4 gestopt, B1 PREREG groen toen, A2 in PREREG; S2 kickoff-3 genoemd.
+  - `NEXT_STEPS` v39 (`origin/main`): **B1 STOP** (kostenpoort FAIL `18c7996`); prio A2 + M5-snapshot; **geen nieuwe overnight maand-sleeves**; S2-PREREGs parallel intradag/M5.
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ fcaf8bc): A1–A5/B1–B3 status; §10a lijst S2-XAU/GER40/USOIL/BTC; §10c rang **S2-XAU #1** onder nieuwe sleeves; open actie S2-GER40↔A1 correlatie.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd distinct.
+- **SymbolList_FTMO / costs:** USDJPY RT ≈ 0,78 bp (kern); XAG RT ≈ 5,07 bp → geen XAG-sleeve; ETH RT ≈ 7,98 bp → geen ETH-sleeve; post-B1 alleen intradag-flat.
+- **Catalog-overlap check:** XAU / GER40 / USOIL / BTC blijven; A5/GS02/U3/B1/A1/F5-JP225-ORB/I3-NFP niet heropenen.
+- **Nieuw deze cyclus:** `PREREG_S2_USDJPY_HANDOFF.md` — USDJPY Tokyo-range (00:00–08:00 Europe/Amsterdam) continuation-breakout in London-handoff 09:00–10:30, flat 16:00 (swap≈0). Distinct van A5/U3 (EUR/GBP ORB) en GS02 (Asian fade). Beslisregel: dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; reserve 2025+ onaangeraakt.
+- **Refine:** `PREREG_S2_GER40_OPEN.md` §7 — bindende A1-GER40 correlatie-/ΔEV-rapportage (Faraday §10 open punt); regel zelf ongewijzigd.
+- Geen engine-run / geen gefabriceerde resultaten. Volgende cyclus: stilten tenzij Manager feedback of verdere niet-overlappende familie.
