@@ -1,4 +1,4 @@
-# NEXT_STEPS v39 — Manager, 2026-09-30 (B1 STOP; prio A2 + M5) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v41 — Manager, 2026-09-30 (S2 STOP; prio US41 m5gz → A2) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -14,21 +14,26 @@ Bindend: D-083…D-090 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bev
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
 
-### Post-B1 prioriteit (Manager, 2026-09-30 22:30 CEST — CTO: B1 STOP)
+### Post-A5/S2 prioriteit (Manager, 2026-09-30 23:11 CEST — CTO: A5 + S2 STOP)
 
-**A4 C17 GESTOPT** — kostenpoort TRAIN FAIL (`43b6ba2`).  
-**B1 TSMOM-mix FX GESTOPT** — kostenpoort FAIL (`18c7996` op `claude/uitvoerder2-r`). Geen herstart; **geen nieuwe overnight maand-sleeves**.
+**Dood (kostenpoort FAIL — niet herstarten):**
+- **A4** C17 (`43b6ba2`)
+- **B1** TSMOM-mix FX (`18c7996`)
+- **A5** London-ORB (`ce5abdc`)
+- **S2** XAU-overlap / GER40-open / USDJPY-handoff (cost gate op M5-snapshot)
+- **Geen nieuwe overnight maand-sleeves**
+
+**M5gz (U-006 A):** 24 symbolen FX/indices/metalen op main. **US41 equity M5 ontbreekt** (~40 MB in `data/m5gz/`) → A2 geblokkeerd. **S2 BTC / USOIL** missen nog hun M5.
 
 | Prio | Item | Eigenaar | Status / notitie |
 |------|------|----------|------------------|
-| **1** | **A2 Stocks-in-Play ORB** PREREG dichttrekken | Strateeg | US41-spreads; intradag-vlak |
-| **1** | **M5-snapshot** (U-006 optie A / Debian) | Uitvoerder-2 | Blokkeert A5; parallel spoor |
-| — | **A5** FX-intradag | Uitvoerder-2 | Parallel **zodra M5** er is |
-| — | **A4 / B1** | — | Dood; niet herstarten |
+| **1** | **US41 equity M5 → `data/m5gz/`** (~40 MB, Debian/U-006) | Uitvoerder-1 (Debian) | Deblokkeert A2; spreads al op main |
+| **2** | **A2 Stocks-in-Play ORB** cost-gate | Uitvoerder-2 | PREREG bevroren (`ce5abdc`); **wacht US41 m5gz** |
+| — | **S2 BTC / USOIL** | Strateeg-2 / U2 | Geen M5 in `data/m5gz/` — wachten |
+| — | A4 / B1 / A5 / S2-XAU / S2-GER40 / S2-USDJPY | — | Dood |
 | — | **A1** ORB/S3 | — | Skip zonder Sandro-data (geen ping) |
-| — | S2-PREREGs (intradag/M5) | Strateeg-2 | Parallel met A5 zodra M5 er is |
 
-**Uitvoerder-2:** prio = M5-snapshot (U-006 A); daarna A5. **Strateeg:** A2-PREREG. Vragen → Manager; eindbesluit → CTO. Geen vragen aan Sandro.
+**Uitvoerder-2:** geen S2-XAU/GER40/USDJPY meer (dood); prio na US41 = **A2 cost-gate**. **Uitvoerder-1:** land US41-M5gz. **Strateeg:** A2-PREREG blijft bevroren. Vragen → Manager; eindbesluit → CTO. Geen vragen aan Sandro.
 
 ### Acties (bindend, D-087; rollen D-090)
 
@@ -36,19 +41,19 @@ Bindend: D-083…D-090 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bev
    - `git show origin/grok/cto-1:engine/ftmo.py` lezen + vergelijken met `q1_frontier.py`, `mc_daily_ftmo.py`, `ftmo_economics.py`
    - Rapporteer in RUNLOG_R2: (a) FTMO-regels correct? (b) discrepanties t.o.v. bestaande simulators (bewuste keuze of fout)? (c) welke catalogus-sleeves als eerste door `ftmo_ev()` jagen?
    - Geen eigen implementatie tenzij aantoonbare fout gevonden.
-   - **Post-B1:** A4+B1 dood. Prio = **M5-snapshot** (U-006 A/Debian) + wacht op A2-PREREG; A5 parallel zodra M5. Geen nieuwe overnight maand-sleeves. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
+   - **Post-A5/S2:** A4/B1/A5 + S2 XAU/GER40/USDJPY dood. Prio = wacht **US41 m5gz** → **A2 cost-gate**. S2 BTC/USOIL wachten op M5. Geen nieuwe overnight maand-sleeves. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
 
 2. **Grok CTO — A-tier runs na Uitvoerder-2-feedback (D-087 actie 2):**
    - Wacht max. 1 cyclus op Uitvoerder-2.
-   - Post-B1: `ftmo_ev()` op **A2** wanneer PREREG dicht + data; A4/B1 niet herstarten; A5 pas met M5. Geen nieuwe overnight maand-sleeves.
+   - Post-A5/S2: `ftmo_ev()` / cost-gate op **A2** na US41 m5gz; A4/B1/A5 + S2-XAU/GER40/USDJPY niet herstarten. Geen nieuwe overnight maand-sleeves.
    - Rapporteer FTMO-EV per rule in RUNLOG_CTO.
 
-3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — post-B1 A2 (D-087 actie 3, herzien):**
-   - **Prio 1:** A2 Stocks-in-Play ORB — PREREG dichttrekken (US41-spreads).
-   - B1 dood (`18c7996`); geen nieuwe overnight maand-sleeves.
-   - A5/FX-intradag PREREG pas relevant wanneer M5 beschikbaar is. Catalogus §9 bijhouden; vergelijk Strateeg-2 in §10.
+3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — post-A5 A2 (D-087 actie 3, herzien):**
+   - **A2 PREREG bevroren** (geland op U2-branch `ce5abdc`); run wacht op US41-M5gz.
+   - A4/B1/A5 dood; geen nieuwe overnight maand-sleeves.
+   - Catalogus §9 bijhouden; vergelijk Strateeg-2 in §10 (S2-XAU/GER40/USDJPY dood; BTC/USOIL wachten op M5).
 
-4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090):** parallel 2–3 nieuwe FTMO-hypotheses (niet al in catalogus); PREREG_S2_*.md; RUNLOG_STRATEEG2.md. CEO vergelijkt na 3 cycli.
+4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090):** S2 XAU/GER40/USDJPY **STOP** (cost gate). USOIL/BTC wachten op M5. Geen engine-runs door Strateeg-2. CEO vergelijkt na 3 cycli.
 
 5. **Auditor (Claude, blijft) — `engine/ftmo.py` onafhankelijk valideren (D-087 actie 5):**
    - Schrijf eigen mini-implementatie van FTMO-regels; check of Monte Carlo juiste p-waarden geeft op synthetische paden met bekende uitkomsten.
