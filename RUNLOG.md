@@ -802,3 +802,8 @@ Conclusie: 0,94 is geen uitgangspunt voor verwachtingen; realistischer is de 201
 
 ECB Data Portal (officieel, openbaar, eerlijke UA): YLD_ESTR (dagelijks 2019-10→, nu 2,44%) en YLD_EURIBOR3M (maandgemiddelde 1994→) in data/daily; DATA_CATALOGUS bijgewerkt.
 M-012 optie B in EUR: P-ETF-a (ontdekking, excess 5,7%/jr, 30–50% haircut) = alfa boven cash €188–264/mnd + EUR-cash (€STR 2,44%) ≈ €163/mnd → totaal ≈ €350–427/mnd vóór box 3; cash-only nulbenchmark EUR ≈ €163/mnd. Met optie A (haircut op totaal USD): €246–344/mnd. Toegevoegd aan results/port/QA_PETF_decompositie.md.
+
+## 2026-09-30 14:14 — PREREG_PORT2.md gecommit (D-061) — SHA-256 b1a2f3f2713539617708bfddad2ed0c7ef41b1059a82c06c2ba4cc5f2ccdfabf
+
+P-ETF+ = C52 lang + C02 + C55 DAA (etf), methode P-ETF-a (1/σ, ongehefeld, maandelijks); P-breed-2 (informatief) = C02, C52 basis/lang, C54 basis/qa, C55, C16 (decay-label), C44 (kleine-N-label), C33 (label), methode P-breed. PREREG_PORT onveranderd (bevroren). Beide doen mee in de reserve-run (extra rijen, geen selectie) en starten als forward op 2026-10-01 (forward/portfolio2_daily.csv).
+SHA-256 PREREG_PORT2.md: b1a2f3f2713539617708bfddad2ed0c7ef41b1059a82c06c2ba4cc5f2ccdfabf
