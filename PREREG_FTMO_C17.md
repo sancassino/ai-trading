@@ -1,101 +1,67 @@
-# PREREG FTMO-C17 — FOMC-Cyclus Day-Trading Rule (2026-09-30)
+# PREREG FTMO-C17 — FOMC-cyclus op index-CFD (FTMO-EV) — 2026-09-30
 
-**Status: Pre-Registration for FTMO-EV evaluation. Ready for engine/ftmo.py implementation.**
+**Status:** Pre-registratie FASE 3 (D-085/D-087). Structuur compleet. **Nog geen resultaat.** Uitvoerder-2/CTO draait pas na freeze van OPEN-punt §1a.  
+**Tier:** A4 (STRATEGIE_CATALOGUS §9).  
+**Trial:** +1 als de kostenpoort haalt; append-only in `catalogus/TRIALS.csv`; BH over hele catalogus. Reserve 2025-01→ **onaangeraakt** tot CEO shortlist vrijgeeft.
 
-## 1. Regel (Exact)
+## 1. Regel (exact — bevroren zodra OPEN §1a gesloten is)
 
-**FOMC-Cyclus D1-Trading:** Long US500/US100 CFD op dagen D-5 tot D-1 (vóór FOMC-vergaderingen). 
-- Entry: Open dag D-5; Exit: Sluit dag D-1 (voormarkt of eerste uur NYC-open, 14:00–15:00 CET)
-- Geen positie op FOMC-dag zelf (D0) of daarna
-- Gewicht: gelijk (50% US500, 50% US100) of per vooraf vastgestelde balans na portfolio-simulatie
-- Universum: US500 (SPX) en US100 (NDX) CFD's via FTMO
+### 1a. OPEN — regeldefinitie (blokkeert run)
+Er liggen **twee** incompatible definities in de repo. Kies er één vóór enige berekening:
 
-## 2. Mechanisme (Waarom het werkt)
+| Variant | Bron | Definitie |
+|---------|------|-----------|
+| **V-CAT1 (voorkeur tot CEO anders besluit)** | `PREREG_CAT1.md` C17 | FOMC-dag = dag 0; **long** indices op handelsdagen −1…+4, +9…+14, +19…+24, +29…+34 (even weken 0/2/4/6 in FOMC-tijd, SPX-handelsdagen sinds dag 0); anders flat. Dit is de regel met gerapporteerde t ≈ 2,85 op ETF-vehikel. |
+| **V-PRE** | eerdere FTMO-PREREG-draft | Long D−5…D−1 vóór FOMC; flat op D0 en daarna. |
 
-**Fed-informatieeffect:** Centrale banken geven subliminale signalen in hun communicatie (renteverwachtingen, forward guidance). Beleggers herbeoordelen aandelen vóór officiële FOMC-vergaderingen op basis van anticipatie op informatie. Historisch (Cieslak–Morse–Vissing-Jorgensen 2019): overtollige avkastingen (Sharpe 0,3–0,6) in "even weken" (D-5 tot D-1) vóór FOMC-data.
+**Besluit tot CEO/Manager anders schrijft:** run op **V-CAT1**. V-PRE alleen als aparte PREREG (+1 trial) als iemand die expliciet wil — niet stilzwijgend verwisselen. Catalogusregel A4-tekst "5 van 6 weken vóór FOMC" is **niet** V-CAT1; §9 wordt bijgewerkt naar V-CAT1-formulering.
 
-**FTMO-aanpassingen:**
-- D1 = slechts 1 nacht swap-blootstelling (tegen ~1,5 bp × aantal nachten)
-- Intraday-sluitings zijn mogelijk (voorkomen swap op D0)
-- Swap-kosten ≈ 5–8%/jr voor long index, maar gespreid over 5 nachten en kort venster (alleen tijdens de voorbereiding van FOMC)
+### 1b. Bevroren parameters (V-CAT1)
+- **Instrumenten:** US500cash, US100cash (FTMO-index-CFD). Gelijk gewicht 50/50 (geen post-hoc portfolio-optimalisatie).
+- **Gewicht per sleeve:** notional-doel zodanig dat **gecombineerd** dagverlies-risico bij −2% move ≈ 1% account (hard cap: never > 2% account-risico per dag op floating). Exacte lots = `engine/ftmo.py` sizing-helper; geen handmatige override na resultaat.
+- **Entry/exit:** op D1-slot van de dag waarop de regel long zegt; flat op dagen waarop de regel geen long zegt. Geen intraday-timing in de primaire trial (intraday-vlak = aparte exploratieve C3, geen trial zonder eigen PREREG).
+- **FOMC-kalender:** `fomc_dates_1994_2020.txt` + `events.csv` (2021→); geen handmatige uitzonderingen.
+- **Stop:** geen trade-stop in primaire regel (D1-positie); FTMO-dagverlies wordt via sizing + `engine/ftmo.py` bewaakt, niet via een post-hoc stopregel.
 
-## 3. Entry/Exit-regels (Vooraf vastgesteld)
+## 2. Mechanisme
+Cieslak–Morse–Vissing-Jørgensen (2019): excess returns geconcentreerd in even weken van de FOMC-cyclus (Fed-informatie-/risicopremie-kanaal). **Web/literatuur = claim; bewijs alleen via eigen data + FTMO-kosten.**
 
-| Element | Specificatie |
-|---------|-----------|
-| **FOMC-daten** | Bron: `fomc_dates_1994_2020.txt` (herverlengen tot 2026) + forward-kalender |
-| **Entry** | Open van dag D-5 (09:30 ET / 14:30 CET) |
-| **Exit** | Sluit dag D-1 vóór 15:00 CET (einde NYC-sessie) |
-| **Stop-loss** | −2% intraday per positie (FTMO 5%-dagdips voorkomen) |
-| **Positionering** | 0,25× geheelde notional per index (totaal 0,5× account) |
-| **Clustering** | Alle FOMC-cycli gelijk behandeld; geen gevoeligheid voor voorafgaande marktomstandigheden |
-
-## 4. Dataset
-
+## 3. Dataset / vensters
 | Item | Waarde |
 |------|--------|
-| **Lange basisreeks** | `data/daily/` — SPX en NDX van Yahoo Finance (1970–heden, aangeboren adjust) |
-| **FTMO-testserie** | `data/ftmo_daily_spx_ndx.csv` (M5 → D1 aggregatie, 2021–09-30) |
-| **Ruwe ontdekking** | 2001–2024-12 (lange ETF/index-data via Yahoo) |
-| **Reserve-OOS** | 2025-01-01 tot vandaag (enkel na shortlist-selectie, éénmalig) |
-| **FOMC-kalender** | `fomc_dates_1994_2020.txt` + handmatig verlengd tot 2026-12 |
+| Ontdekking | ≤ 2024-12-31 (D2-dagdata SPX/NDX als proxy; FTMO D1 waar beschikbaar 2021–24) |
+| FTMO-check | FTMO D1/M5→D1 2021–2024 (zelfde regel, cfd-kosten) |
+| Reserve-OOS | 2025-01-01→ **gesloten** tot CEO FTMO-shortlist vrijgeeft (D-084) |
+| Bron FOMC | `fomc_dates_1994_2020.txt`, `events.csv` |
 
-## 5. Kostenmodel (FTMO-CFD)
+## 4. Kostenmodel (vehikel `cfd`, gemeten S0 waar beschikbaar)
+Bron: `COSTS_FTMO.csv` (S0, 2026-09-30):
 
-| Kostencomponent | Schatting | Toelichting |
-|-----------------|-----------|-----------|
-| **Bid-ask spread** | 0,8 bp intraday | Indices, normaal volume; US500/US100 liquide |
-| **Commissie FTMO** | ≈ 0,2–0,3 bp | Typisch voor index-CFD's |
-| **Nacht-swap long** | ≈ 1,5 bp/nacht | US500 ≈ 1,4%, US100 ≈ 1,6% per jaar ÷ 365 |
-| **Swap-bijzonderheden** | 3× op vrijdag (rollover) | Drie nachten heffing voor weekend |
-| **Totaal netto (5 nachten)** | ≈ 8 bp bruto kosten | Swap (1,5 × 5 = 7,5 bp) + spread/commissie (1 bp) |
-| **Poorteis** | Bruto gemiddeld ≥ 3 × 8 bp = 24 bp/maand | Anders geen trial |
+| Symbool | Rondreis intraday (bp) | Swap long (bp/nacht) | Swap short (bp/nacht) |
+|---------|------------------------|----------------------|------------------------|
+| US500cash | 0,78 | 1,36 | 0,81 |
+| US100cash | 0,66 | 1,95 | 0,21 |
 
-## 6. Beslisregel (FTMO-EV-variant)
+- D1-hold ≈ 1 kalendernacht swap (vrijdag → 3× weekend-rollover volgens FTMO-conventie; modelleer expliciet).
+- Gevoeligheid: +50% spread én +50% \|swap\| (aparte rijen in uitvoer, geen extra trial).
+- **Kostenpoort (geen trial als fail):** gemiddelde bruto ≥ 3× (spread-rondreis-equivalent + swap over hold). Exacte poortberekening in engine; faalt → stop, geen TRIALS-rij met "pass".
 
-Volg de STRATEGIE_CATALOGUS v2 §3 (PREREG-sjabloon), maar vervang SR-grift met:
+## 5. Beslisregel (FTMO-EV, vooraf)
+1. Kostenpoort (§4) → anders STOP.
+2. Statistiek ontdekking: dag-geclusterde t (NW lag 5 en/of blok-bootstrap 21d) — rapporteer beide; **poort:** min(t) ≥ 2,0 **én** beide helften (≤2012 / 2013–2024) excess > 0 na kosten **én** ≥ 60% niet-overlappende 5-jaarsvensters > 0.
+3. FTMO-EV via `engine/ftmo.py` (aanname fee €540/€80k, split 80% — label "onder aanname fee"):  
+   `P(fase1)`, `P(fase2|fase1)`, `P(survive_12m|funded)`, `E[uitbetaling/mnd]`, `FTMO_EV_netto`.  
+   **Kandidaat-drempel (informatief tot S10-FTMO bindend is):** FTMO_EV_netto ≥ €100/poging **én** schaal zodanig dat p95 dagverlies ≤ 2% account (schaal > 4% alleen als bovengrens, D-016/D-085).
+4. BH q ≤ 0,10 over catalogus-TRIALS (incl. eerdere 400+ trials).
+5. Correlatie met A1 (ORB) en A5 (FX-intradag) rapporteren; geen selectie op correlatie.
 
-**Metrics:**
-1. **FTMO-EV (verwacht netto per poging)** per regel, via `engine/ftmo.py`:
-   - P(fase 1: +10% vóór −10%) — Monte Carlo op realiseerde dagrendement
-   - P(fase 2 | fase1_pass) — idem +5% vóór −5%
-   - P(12m overleven | funded) — geen statisch verlies
-   - E[uitbetaling | gefunded] — na winstsplit (aanname: 80%)
-   - Fee-aanname: €540/poging (niet geverifieerd; Sandro vaststellen)
+## 6. Verwachting (geen resultaat — alleen prior)
+ETF-vehikel gaf t ≈ 2,85 (CAT1); cfd-swap long 1,4–2,0 bp/nacht sleept. Prior: FTMO-EV vaak **onder** fee na realistische sizing; nuttig als lage-omloop sleeve alleen als EV ≥ drempel én lage correlatie met ORB.
 
-2. **Statistiek:**
-   - Day-geclusterde t-waarde (Newey–West, τ=5)
-   - SR_netto ≥ 0,3 over lange reeks
-   - ≥ 60% van 5-jaars-vensters > 0
-   - Beide helften (2001–12 en 2013–24) > 0
-
-3. **Bevestigingscriteria:**
-   - FTMO-EV ≥ €100/poging netto (boven fee en ruis)
-   - Max intraday-dip ≤ −2% (FTMO 5%-dagdipgrens niet voorkomen)
-   - Positieve scheefheid of laag-DD-profiel (negatieve scheefheid = hoger risico op dagruin)
-   - Swap-aandeel in kosten ≤ 80% (anders is het carry, niet een edge)
-
-4. **Korte verwalking:** Herproberen met andere FOMC-cyclus-regels (bv. D-6…D-2 i.p.v. D-5…D-1) **vóór** resultaat alleen als hypothese vooraf gewijzigd
-
-## 7. Verwachte Uitkomst & Falen
-
-**Waarschijnlijk:** Historisch t ≈ 2,85 op Yahoo ETF-data, maar FTMO-CFD-kosten zijn hoger dan eigen vermogen. Verwacht: FTMO-EV ~€50–150/poging (negatief na €540 fee).
-
-**Succes:** FTMO-EV > €200/poging netto + statistisch bevredigend; geen overlap met andere FTMO-A-tier-regels.
-
-**Falen:** FTMO-EV < €50/poging, of de t-waarde < 1,5 op cluster-niveau (ruis, geen effect).
-
-## 8. Uitvoer (na engine/ftmo.py)
-
-- Netto Sharpe per periode (2001–12, 2013–24, 2021–26 totaal)
-- Scheefheid en max intraday-dip
-- FTMO-fase-slagingskansen (tabel per periode)
-- FTMO-EV, fee, break-even analyse
-- Swap-aandeel als % van totale kosten
-- Correlatie met andere A-tier-sleeves (ORB, FX-intradag)
+## 7. Uitvoer (verplicht)
+Netto SR/scheefheid/maxDD; jaar-per-jaar; swap-aandeel % kosten; FTMO-fase-kansen; EV-tabel; +50%-kostenrij; correlatie A1/A5; expliciete regel-SHA van dit bestand in RUNLOG vóór run.
 
 ---
-
-**Bereid op:** 2026-09-30 21:30 CET  
-**Auteur:** Strateeg  
-**Volgende stap:** Engine/ftmo.py klaar → herbereken op CFD-kostenmodel
+**Bijgewerkt:** 2026-09-30 21:41 CEST — D-090 re-kickoff (Grok Strateeg): gaps gevuld (regel-OPEN, gemeten kosten, trial/BH, sizing-freeze).  
+**Auteur:** Strateeg (`claude/trusting-faraday-34tsmg`)  
+**Volgende:** Manager/CEO bevestigt V-CAT1; Uitvoerder-2 valideert `engine/ftmo.py`; daarna één run.

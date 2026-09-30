@@ -1,4 +1,4 @@
-# STRATEGIE_CATALOGUS v2 — premies (Strateeg, 2026-09-30 19:00 Amsterdam; v1.2 16:05; v1.1 13:20; v1 12:45) — Fase 2, werkstroom R
+# STRATEGIE_CATALOGUS v4.1+ — FTMO-pivot (Strateeg, 2026-09-30 21:41 Amsterdam; v4.1 §9 21:15; v2 premies 19:00; …) — FASE 3
 
 Doel: 50 economisch onderbouwde regels op **één** engine/kostenmodel, getest op **lange dagdata eerst** (ontdekkingsset ≤ 2024-12), met FDR over de hele catalogus en reserve-OOS 2025-01→heden (alleen voor shortlist, één keer). Elke regel = 1 trial (+ ≤ 2 vooraf genoemde varianten). Mijn verwachtingen zijn **literatuur-ordegroottes uit geheugen, niet geverifieerd**; alleen de kostenkolom is uit de repo (S0, swap-specs).
 
@@ -158,12 +158,12 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 |------|--------|------------------------|-------------|
 | **A — HEROPENEN (hoge prioriteit)** | | | |
 | A1 | **ORB/B4a (S3)** — intraday-vlak, US500/US100/GER40/XAU | Swap 0, instrumenten aanwezig, bevroren regel; bevestiging 2011–20 ontbreekt nog | Data-acquisitie (Sandro-actie), dan S3 |
-| A2 | **Stocks-in-Play ORB earnings (S2)** — intraday-vlak, FTMO-aandelen-CFD | Eerder gefaald op kostenpoort (vaste 60-min); stop+EOD-profiel verschilt; herevalueer met cluster-t | PREREG vernieuwen, kosten-poort opnieuw meten |
+| A2 | **Stocks-in-Play ORB earnings (S2)** — intraday-vlak, FTMO-aandelen-CFD | Eerder gefaald op kostenpoort (vaste 60-min); stop+EOD-profiel verschilt; herevalueer met cluster-t + D-012 average-poort | **PREREG_FTMO_A2.md stub** (OPEN: poortgetal, 1 variant, trial-ja/nee) |
 | A3 | **Noise-area intradag-momentum (S1)** — trailing EOD-exit, US-indices | Eerder afgewezen (na 2023); heroverwegen met nul-kalibratie en vol-regime; intraday-vlak | F1-heronderzoek, geen extra trial tenzij hypothese nieuw |
-| A4 | **FOMC-cyclus (C17)** — 5 van 6 weken vóór FOMC, D1, index-CFD | D1 = 1 nacht swap; swap-kosten laag (<1,5 bp); t 2,85 op ETF → FTMO-cfd nog niet gerekend | **PREREG_FTMO_C17.md klaar** → engine/ftmo.py-run gereed |
-| A5 | **FX-intradag-breakout** — EURUSD/GBPUSD/USDJPY londen-open of NY-open | Kosten laag (0,6–0,8 bp), swap 0 bij intraday-exit | **PREREG_FTMO_FX_INTRADAG.md klaar** → wacht M5-data (R2-007) |
+| A4 | **FOMC-cyclus (C17)** — V-CAT1 even weken 0/2/4/6 (zie PREREG; niet “pre-FOMC D−5…D−1”) | D1 hold ≈ 1 nacht swap; gemeten US500/US100 swap long 1,36/1,95 bp/nacht; t ≈ 2,85 was ETF | **PREREG_FTMO_C17.md gaps gevuld**; OPEN §1a freeze V-CAT1; run na engine-validatie |
+| A5 | **FX-intradag-breakout** — London 08:00–08:30 range; EURUSD first | Gemeten RT 0,63/0,70/0,78 bp; swap 0; afgebakend t.o.v. U3 | **PREREG_FTMO_FX_INTRADAG.md gaps gevuld**; wacht GBP/JPY M5 + engine |
 | **B — ONDERZOEKEN (middel)** | | | |
-| B1 | **TSMOM-mix FX (C05 op FX)** | FX-swap ≈ carry-premie; positief scheef; maand | Herbereken: swap vs carry-premie per paar; long hoge-rente = meevaller |
+| B1 | **TSMOM-mix FX (C05 op FX)** | FX-swap ≈ carry-premie; positief scheef; maand | **PREREG_FTMO_B1.md stub**; OPEN: universum, swap-vs-carry-tabel, sizing |
 | B2 | **FX-carry + trendfilter (C12)** | Carry-risicopremie; C12 CAT1 ≈ 0 na kosten → herevalueer alleen met D1-reeksen + FTMO-FX-swaps | Lage prioriteit |
 | B3 | **Donchian D1 FX/XAU (C03)** | R4 H4 negatief maar op short reeks; FX D1 = 1 nacht swap; positief scheef | Herevalueer met lange FX-dagreeksen (FRED 1971+) |
 | **C — HERBEOORDELEN met FTMO-EV** | | | |
@@ -185,3 +185,16 @@ Per heropende regel de volgende metriek berekenen:
 - `FTMO_EV_netto`: voorgaande min fee/pogingen
 
 **Doel: FTMO-EV ≥ €400/mnd bij realistisch risico (≤ 2% dagverlies als het fout gaat).** Schaal > 4% dagverlies-risico wordt alleen als bovengrens gerapporteerd (D-016/D-085).
+
+## 10. Vergelijking Strateeg vs Strateeg-2 (D-090, 2026-09-30 21:41 Amsterdam)
+
+**Bronnen gelezen (geen inventie):** deze branch `claude/trusting-faraday-34tsmg` (PREREG_FTMO_* + §9); `origin/grok/strateeg-1` (`RUNLOG_STRATEEG.md` kickoff, geen nieuwe PREREG); lokale/remote `grok/strateeg-2` = tip van `origin/main` + `GROK_CTO_INSTRUCTIE.md` (D-090) — **nog geen** `RUNLOG_STRATEEG2.md` en **geen** eigen FTMO-hypothese-commits op het moment van deze cyclus.
+
+| As | Deze branch (Strateeg / faraday) | Strateeg-2 (`grok/strateeg-2`) |
+|----|----------------------------------|--------------------------------|
+| Bevroren A-tier PREREG | A4 C17 + A5 FX-intradag (gaps gevuld); A2 stub | Geen |
+| B-tier | B1 stub (OPEN swap-vs-carry) | Geen |
+| Web/nieuwe families | Niet deze cyclus | Opdracht in CTO-instructie: 2–3 net-nieuwe hypotheses — **nog niet geleverd** |
+| Sterkte nu | **Sterker op uitvoerbare, bevroren specs** (A4/A5 klaar voor engine na OPEN-dicht + data) | Nog geen vergelijkbare artefacten |
+
+**One-liner:** Tot Strateeg-2 concrete PREREG/hypotheses commit, is faraday’s A4/A5 (gemeten kosten + trial/BH-freeze) de sterkere, run-klare lijn; Strateeg-2’s waarde start pas bij net-nieuwe families buiten §9.
