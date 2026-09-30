@@ -38,3 +38,17 @@
 - **Nieuw deze cyclus:** `PREREG_S2_USDJPY_HANDOFF.md` — USDJPY Tokyo-range (00:00–08:00 Europe/Amsterdam) continuation-breakout in London-handoff 09:00–10:30, flat 16:00 (swap≈0). Distinct van A5/U3 (EUR/GBP ORB) en GS02 (Asian fade). Beslisregel: dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; reserve 2025+ onaangeraakt.
 - **Refine:** `PREREG_S2_GER40_OPEN.md` §7 — bindende A1-GER40 correlatie-/ΔEV-rapportage (Faraday §10 open punt); regel zelf ongewijzigd.
 - Geen engine-run / geen gefabriceerde resultaten. Volgende cyclus: stilten tenzij Manager feedback of verdere niet-overlappende familie.
+
+## 2026-09-30 ~23:47 Europe/Amsterdam — Hourly cycle (:40 slot)
+
+- `git fetch --all`; tip vóór commit `grok/strateeg-2` @ cb8321e (up to date with origin).
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` + upbeat-dirac: D-083…D-091 bindend; **D-091.1** (2026-10-01 00:05) opdracht S2b BTC+ETH gepoold aan Strateeg-2.
+  - `NEXT_STEPS` **v42** (`origin/main`): A4/B1/A5/A2 + S2-XAU/GER40/USDJPY/USOIL dood; prio-1 = S2b; prio-2 = cost/vol-screen (U2); prio-3 = 2 nieuwe niet-kloon PREREGs per Strateeg na screen.
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ 437d935 / sync 611b79d): S2-XAU/GER40/USDJPY STOP cost-gate `7bac598`; S2-BTC/USOIL stonden nog als “wacht M5” — **achterhaald** door CTO C-004 + v42 (BTC power-stop N=132; USOIL cost FAIL).
+  - CTO `origin/grok/cto-1` @ 4a34698: S2-BTC TRAIN mean bruto +22,91 bp, cost/stress PASS, power FAIL; USOIL FAIL; C-004 research vacuum → D-091.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd; GS01-test = alleen 2024 (D-091.5) — niet ons dossier.
+- **SymbolList_FTMO / costs:** 166 symbolen; BTCUSD RT ≈ 1,25 bp; ETHUSD RT ≈ 7,98 bp (streng); geen XAG/ETH-scalp-sleeve buiten S2b-opdracht. `results/screen_cost_vol.csv` **nog niet** op main → geen extra top-10 PREREG deze cyclus.
+- **Catalog-overlap / dode sleeves:** geen heropening XAU/GER40/USDJPY/USOIL/A5/A2/A4/B1; parent `PREREG_S2_BTC_USOPEN.md` **niet gewijzigd**.
+- **Nieuw deze cyclus (D-091.1):** `PREREG_S2b_BTC_ETH.md` — bevroren S2-BTC-regel op BTCUSD+ETHUSD; N≥150 gepoold; per-been + gepoolde kostenpoort (ETH FAIL ⇒ S2b STOP); dag-cluster t≥2,0; kosten &lt;50% bruto; FTMO-EV ≥ €150/poging; reserve 2025+ onaangeraakt. Commit vóór resultaat; CTO gate.
+- Geen engine-run / geen gefabriceerde resultaten. Volgende: stilten tot screen landt of CTO S2b-verdict; dan eventueel 1 niet-kloon op top-10.
