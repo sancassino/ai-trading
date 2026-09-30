@@ -688,3 +688,10 @@ ORBSleeve.mq5 uitgebreid met RiskPct/MaxLevPos (standaard 0 = oud gedrag). Twee 
 (2) Vast risico 0,5%/trade (≤ 4× per positie): SR 0,85, skew +1,40, jaarvol 33,7%, max dagverlies 3,50% (P99 3,32%) → historisch €1.136/mnd (P<0 9%), −50% drift €715, **nul-drift/optiewaarde €389** (≈ ⅓). Python-U2 gaf €1.095 / €388 → reconciliatie OK.
 Risico's die de tester niet toont: bij kleine OR-breedte zeer grote posities (US500 mediaan 61 lots, max 271 = 4×-plafond) → slippage/marge/FTMO-positielimieten; 34% jaarvol is agressief (niet verboden, wel dicht bij 'gokgedrag'-grens — Manager/CEO oordeelt).
 Status: alleen techniek-voorbereiding. Zonder S3 'bevestigd + blijvend' geen kandidaat. Geen challenge, geen echte trades.
+
+## 2026-09-30 10:48 — D2: 34 lange dagreeksen (1927–2026) in de repo + D3-QA + DATA_CATALOGUS
+
+fetch_daily.py: Yahoo chart-API met eerlijke User-Agent (geen browser-imitatie, anders dan het oude fetch_ohlc.py), 3 s per verzoek, back-off bij 429/5xx. FRED gaf op dat moment een time-out (later opnieuw). data/daily/ (16 MB, in git, zodat een cloud-agent kan rekenen): indices SPX (1927→), NASDAQ_COMP (1971→), NDX (1985→), DJI (1992→), RUT, DAX (1987→), FTSE (1984→), N225 (1965→), HSI, STOXX50, CAC40; VIX (1990→), TNX 10j (1962→), IRX 3m (1960→), DXY (1971→); futures goud/zilver/WTI/koper/aardgas (2000→); 9 sector-ETF's (1998→), SPY, TLT; EURUSD/GBPUSD (2003→), USDJPY (1996→).
+D3-QA (d3_qa_daily.py → data/DATA_CATALOGUS.md, CHECKSUMS_daily.sha256): geen dubbele datums; weinig gaten > 7 d (N225 3, FX 2); OHLC-inconsistenties alleen bij futures/FX (Yahoo-artefacten, 7–441 dagen; slot bruikbaar, OHLC met voorzichtigheid); sprongen > 20% alleen bij VIX/IRX/aardgas/WTI (echt of rol; WTI 1 dag ≤ 0 = april 2020).
+Overlap met FTMO 2022–26 (slot-op-slot): SPX↔US500 corr 0,999 (niveau 0,02%), NDX↔US100 0,999, DAX↔GER40 0,992, GOLD_F↔XAUUSD 0,913 (future vs spot, slottijd). 
+Volgende stap: R0 (engine volgens ENGINE_TEMPLATE).

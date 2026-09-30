@@ -4,7 +4,7 @@ Regels: eerlijke User-Agent (geen browser-imitatie), 1 verzoek per 4 s, 429/503 
 na 6 mislukte pogingen op rij stoppen en loggen; hervatbaar (bestaande bestanden worden overgeslagen); zaterdagen overgeslagen.
 Uitvoer: data/dukascopy_raw/<SYM>/<jaar>/<mm>/<dd>.bi5 en per symbool/jaar een zip in HistData-formaat (EST = UTC−5) in data/long_m1/,
 zodat s3_histdata.py / run_s3.sh ongewijzigd werken.
-Gebruik: python p0_dukascopy.py [SYM ...]   (standaard SPX → NSX → GRX → XAU)"""
+Gebruik: python p0_dukascopy.py [SYM ...]   (standaard SPX → GRX → NSX → XAU, v18)"""
 import io
 import lzma
 import os
@@ -172,7 +172,7 @@ def run(hd):
 
 
 if __name__ == "__main__":
-    syms = sys.argv[1:] or ["SPXUSD", "NSXUSD", "GRXEUR", "XAUUSD"]
+    syms = sys.argv[1:] or ["SPXUSD", "GRXEUR", "NSXUSD", "XAUUSD"]
     log(f"start P0 voor {', '.join(syms)} (pauze {PAUSE} s, UA '{UA}')")
     try:
         for hd in syms:
