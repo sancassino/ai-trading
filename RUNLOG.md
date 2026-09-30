@@ -797,3 +797,8 @@ C02 op prijsindex i.p.v. SPX_TR: SR 0,92 (dividend-proxy nauwelijks van belang).
 Bijdrage per activum in C52 lang (vóór kasrente): SPY +2,31%/jr (SR 0,56; gewicht 0,25), BOND10_SYN +2,05% (0,53; 0,52), goud +2,25% (0,61; 0,20) — gespreid, geen enkele poot draagt alles.
 Haircut (M-012, beide getoond): A op totaal 30–50% → €246–344/mnd; B op excess → **alfa boven cash €188–264/mnd** + cash apart (USD-3m nu 4,25% ≈ €283/mnd; EUR-geldmarkt lager — ESTR nog ophalen). Nulbenchmark cash-only ≈ €283/mnd (USD) → het beoordelingsgetal is de alfa boven cash.
 Conclusie: 0,94 is geen uitgangspunt voor verwachtingen; realistischer is de 2011–24-waarde (0,83) of lager (2020s 0,53) mét haircut.
+
+## 2026-09-30 13:45 — EUR-geldmarkt toegevoegd (ECB €STR/Euribor 3m) — M-012 in EUR: P-ETF-a ≈ alfa €188–264 + cash ≈ €163/mnd
+
+ECB Data Portal (officieel, openbaar, eerlijke UA): YLD_ESTR (dagelijks 2019-10→, nu 2,44%) en YLD_EURIBOR3M (maandgemiddelde 1994→) in data/daily; DATA_CATALOGUS bijgewerkt.
+M-012 optie B in EUR: P-ETF-a (ontdekking, excess 5,7%/jr, 30–50% haircut) = alfa boven cash €188–264/mnd + EUR-cash (€STR 2,44%) ≈ €163/mnd → totaal ≈ €350–427/mnd vóór box 3; cash-only nulbenchmark EUR ≈ €163/mnd. Met optie A (haircut op totaal USD): €246–344/mnd. Toegevoegd aan results/port/QA_PETF_decompositie.md.
