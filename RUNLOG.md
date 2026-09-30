@@ -807,3 +807,10 @@ M-012 optie B in EUR: P-ETF-a (ontdekking, excess 5,7%/jr, 30–50% haircut) = a
 
 P-ETF+ = C52 lang + C02 + C55 DAA (etf), methode P-ETF-a (1/σ, ongehefeld, maandelijks); P-breed-2 (informatief) = C02, C52 basis/lang, C54 basis/qa, C55, C16 (decay-label), C44 (kleine-N-label), C33 (label), methode P-breed. PREREG_PORT onveranderd (bevroren). Beide doen mee in de reserve-run (extra rijen, geen selectie) en starten als forward op 2026-10-01 (forward/portfolio2_daily.csv).
 SHA-256 PREREG_PORT2.md: b1a2f3f2713539617708bfddad2ed0c7ef41b1059a82c06c2ba4cc5f2ccdfabf
+
+## 2026-09-30 14:17 — PREREG_PORT2 ingevoerd (forward + backtest) + EUR-consistente alfa (v25 QA-2) + D2 status vóór 01-10 09:00
+
+forward_portfolio.py: tweede sectie volgens PREREG_PORT2 (P-ETF+ = C52L + C02 + C55, P-ETF-a-methode; P-breed-2 informatief), forward/portfolio2_daily.csv vanaf 2026-10-01 (cron 22:25 UTC, zelfde script); PREREG_PORT-uitkomsten byte-identiek (geverifieerd). Merge van Uitvoerder-2 run 3 in main; regressietest OK.
+Ontdekking (≤ 2024, USD, vóór haircut): P-ETF+ (2005→) SR 0,89, vol 6,5%, CAGR 7,4%, maxDD 10,8%; P-breed-2 (2008→) SR 0,73, CAGR 7,9%, maxDD 16,0%, hefboom 2,29.
+v25 QA-2 (één consistent EUR-perspectief, t.o.v. EUR-cash = €STR/Euribor 3m): P-ETF-a (2003-12→) alfa USD 5,8%/jr | EUR gehedged 5,5%/jr (≈ USD-alfa; → €183–257/mnd na 30–50% haircut) | EUR ongehedged 6,9%/jr maar SR 0,61 (EURUSD-resultaat, dollar steeg) → €231–324/mnd. P-ETF+: 5,7 | 5,4 | 7,3%/jr (SR 0,64). Twee getallen i.p.v. de eerdere gemengde 'alfa' (USD-excess + EUR-cash) — die vorige formulering vervalt.
+D2 vóór 01-10 09:00 (D-057): TR/dividend (SPX_TR; DAX performance-index; NDX-TR niet vrij beschikbaar), C54-extra-instrumenten, FRED-vervangers (Treasury, MoF, BoE, Bundesbank, BLS, ECB) — af; ontbreekt alleen NDX-TR (vermeld).
