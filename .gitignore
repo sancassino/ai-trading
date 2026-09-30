@@ -6,3 +6,4 @@ swapcheck_log.txt
 data/m5/
 forward/cron.log
 .venv/
+data/m5_vol/

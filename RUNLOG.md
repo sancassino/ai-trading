@@ -561,3 +561,12 @@ Volgende stap: R5 (STANDPUNT_SUPERVISOR.md).
 Opgeleverd: STANDPUNT_SUPERVISOR.md. Kern: ± 410 varianten in ± 25 families; kosten-muur (spread 0,3 bp FX … 8 bp crypto, overnight-financiering 5–8%/jr indices/aandelen, 30% crypto); vereiste SR onder FTMO-mechaniek ± 3/± 4 (€500/€900) bij meegedragen verliezen, ± 1 bij dagelijks vlak + positief scheef (deels loterij-effect); enige kandidaat met dat profiel = ORB (SR ± 0,9, positief scheef; historisch ± €480–510/mnd, realistisch ± €150–160, onbevestigd buiten 2021–26). R1–R4 geen enkele sleeve SR ≥ 1,5. Beslisregel: stoppen of doel bijstellen; enige uitzondering = lange minuutdata leveren om ORB te toetsen (DATA_REQUEST_SANDRO.md); papieren forward loopt door.
 Backlog v13 afgerond: R1 (FX-ML) afgewezen, R2 (aandelen-ML) afgewezen, R3 (vorm) inzicht, extra ORB-frontier, R4 (breakout FX) afgewezen, R5 standpunt. TRIAL_COUNT 410.
 Volgende stap: wachten op nieuwe NEXT_STEPS / beslissing Sandro (check elke 10 min).
+
+## 2026-09-30 08:51 — S0: kostenmeting per instrument (geen trial) — COSTS_FTMO.csv + per-uur-tabel + tick_volume-export
+
+Uitgevoerd volgens NEXT_STEPS v14: 17 instrumenten (US500, US100, US30, GER40, XAU, XAG, 9 FX, USOIL, UKOIL). Spread = mediaan/P90 M5-barspread 2024–26; commissie uit MT5-deals (FX €2,25/lot/kant, XAU €2,00; indices 0; XAG/olie aangenomen); swap uit huidige FTMO-specs (data/swap_specs_17.csv).
+Rondreis intraday (bp, spread + 2× commissie): US30 0,45 · US100 0,66 · GER40 0,72 (P90 2,78!) · US500 0,78 · XAU 0,83 · EURUSD 0,63 · GBPUSD 0,70 · USDJPY 0,78 · USDCAD 0,80 · USDCHF 1,01 · EURGBP 1,04 · EURJPY 1,10 · AUDUSD 1,22 · NZDUSD 1,85 · UKOIL 2,71 · USOIL 3,34 · XAG 5,07.
+Swap per nacht (bp, kosten; negatief = ontvangen): indices long 1,4–2,3 / short −0,1–0,8; XAU long 2,15 / short 0,10; FX meestal < 1,6 (USDCHF short 2,17); olie long −5,4/−6,0 (ontvangen) en short 24,5/27,0 → oliespecs wijken sterk af (mogelijk andere swapmodus/rolverrekening), niet gebruiken zonder controle.
+Bestanden: COSTS_FTMO.csv, COSTS_FTMO_per_uur.csv (mediaan/P90 per NY-uur), data/swap_specs_17.csv, mt5_export_m5_vol.py; tick_volume voor alle 17 in data/m5_vol/ (gitignored, time;tick_volume); USOIL/UKOIL M5 nieuw in data/m5/.
+Kosten-poort-vuistregel: bruto ≥ 3× rondreis → indices ≥ 1,4–2,4 bp/trade, FX-majors ≥ 1,9–2,4 bp, XAU ≥ 2,5 bp.
+Volgende stap: S1 (noise-area intraday-momentum).
