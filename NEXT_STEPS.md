@@ -1,4 +1,4 @@
-# NEXT_STEPS v30 — Manager, 2026-09-30 18:40 Amsterdam — verwerkt D-042…D-076, MC p(≥€400), run 6, catalogus v2 (premies)
+# NEXT_STEPS v31 — Manager, 2026-09-30 19:10 Amsterdam — verwerkt D-042…D-079, MC onder twee priors, ALLOCATIE_V1
 
 Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
 
@@ -23,6 +23,16 @@ Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). All
 1. **D2-uitbreiding (D-044, ≤ 3 u):** (a) TR/dividend (S&P, DAX, NDX) binnen bronvoorwaarden; (b) ≥ 20 instrumenten voor C54 (NZD/SEK/NOK-FX, Bund/JGB/Gilt-proxy's, agri/energie); (c) roll-schone zilver/koper/gas; (d) **FRED vanaf Debian ophalen en committen** (rentes, goud/CPI, FX); rate-limit, eerlijke UA, niets omzeilen.
 2. **Engine (D-045):** future-model-fix (FX = spot + renteverschil; doorlopende futures zonder rf-aftrek) blijft; opnemen in engine/README + ENGINE_TEMPLATE (Manager werkt ENGINE_TEMPLATE bij: zie §V).
 3. S3/P0 en F (forward) volgens bestaande punten hieronder.
+
+## 0m. D-077…D-079 + ALLOCATIE_V1 (Strateeg v1) — Manager-review (compliance/QA)
+**Bindend:** run 7 (Uitvoerder-2): C65 factor-evidentie (geen trial; FF-licentie vóór gebruik) → C66 VRP-proxy + PutWrite-substitutie (25% aandelenbeta in P-ETF-a; ^PUT/^BXM alleen privé-repo met licentienotitie; WisdomTree-PutWrite-UCITS = route, TER/historie onbevestigd; **haircut 30–60% (McLean-Pontiff) vóór €/mnd**) → C67 landenrotatie (1 trial) → C68 CAPE-multiplier; PREREG vóór resultaat. MC (Uitvoerder-1, v30 QA-1): p(totaal ≥ €400) 0,4–13% (waarderingsprior) vs 6–28% (historische prior) → nooit één getal. **D-078:** `ALLOCATIE_V1.md` = deliverable (Strateeg + Manager); Sandro-samenvatting in EINDVERSLAG (klaar, 19:10). D-079: CEO kan ritme na de reserve-run verlagen; Manager houdt :05/:35 tot CEO anders bepaalt, korte 'geen nieuws'-rondes toegestaan.
+**Manager-review ALLOCATIE_V1 (verwerken door Strateeg in v1.1; Uitvoerder-1 voor data):**
+1. **Uitvoerbaarheid Faber in de praktijk:** backtest = 5 indices (SPX, NDX, DJI, DAX, N225; gelijk gewogen long/cash); UCITS-trackers voor NDX/DJI/DAX/N225 zijn 'te identificeren'. Specificeer of live de 5-indexversie of een vereenvoudiging (bijv. alleen SPX + DAX/Nikkei via breed ETF) wordt gebruikt — **vereenvoudiging = andere regel** → eerst als gevoeligheidsrun (geen trial) en in de forward meenemen. Signaal op prijsindex, belegging in accumulerend ETF: dividend-effect documenteren.
+2. **Valuta (USD-activa, EUR-belegger):** ALLOCATIE_V1 noemt het; voeg een **EUR-backtest van de hele allocatie** toe (ongehedged én hedged = renteverschil), met €/mnd-uitkomst in EUR. Niet alleen een EUR-rij.
+3. **Kosten/omloop per jaar:** turnover, transactiekosten (€3–3,75/trade NL-retail, web-claim), TER per bouwsteen, spreads; leg het jaarlijkse kostenbedrag in €/€80k vast en trek het af van alfa-verwachting (nu −0,20%/jr aangenomen) — Uitvoerder-1 uit `forward_portfolio.py`.
+4. **Compliance-formulering:** 'niet aanbevolen bij huidig excess' (P-ETF-b) → 'niet geselecteerd'; vermijd 'aanbeveling' voor instrumenten; ISIN/TER expliciet 'web-claim, onbevestigd' (staat er); geen individuele belegging-/belastingadvies; versienummer + SHA van code/PREREG's waarop de specificatie rust (reproduceerbaarheid); wijzigingen alleen via nieuwe versie.
+5. **H-status consistent houden met EINDVERSLAG** (H4 niet gehaald; H7 Auditor nog niet gestart); Auditor pas bij kandidaat (CEO-besluit) — Manager houdt dit bij.
+6. **Reserve-run 01-10 12:00 / forward 22:25 UTC:** ongewijzigd; controleer na 22:25 UTC of `forward/portfolio_daily.csv` bestaat en noteer gaten.
 
 ## 0l. D-073…D-076 + run 6 + MC + catalogus v2 — Manager-QA
 **Stand:** CEO (D-073): verwachting ≈ €240/mnd totaal (€140–340), waarvan ≈ €163 EUR-cash, alfa boven cash ≈ €80; kans robuust €400–500 met deze aanpak ≈ 5–10% (was 20–25%), €800–900 ≈ 1%; project gaat door (alleen Sandro beslist). MC (Uitvoerder-1, D-075): p(totaal ≥ €400) ≈ 0,4–5% (parameter), 12–13% incl. 10-jr-toeval; mediaan ≈ €220. Run 6 (Uitvoerder-2, geen trials): plateau C02/C52 (geen pieken); **lange historie 1976–2024: risicopariteit SR 0,51 = 60/40 SR 0,51, maxDD 14% vs 29%, CAGR 7,7% vs 9,4%** → structuur = DD-beheersing, geen SR-alfa. Catalogus v2 (Strateeg): geen premie afzonderlijk > ≈ €10–30/mnd; gestapeld ≈ +€55 → ≈ €295 totaal, < €400.
