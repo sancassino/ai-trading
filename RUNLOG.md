@@ -409,3 +409,12 @@ Volgende stap: L5 (forward-weekrapport).
 
 Gebouwd: forward_week.py — elke maandag 22:45 UTC (na de papieren run) een blok in forward/weekrapport.md: aantal dagen, equity/P&L, €/mnd, geschatte SR ± 1 SE (met K2-waarschuwing), ORB bp/trade vs backtest +1,7 bp, slechtste FTMO-dagverlies en max DD, K2-alarm (dag ≥ 4% of DD ≥ 8%), ontbrekende werkdagen (cron-gaten), en de optimistische aannames; commit + push. Cron toegevoegd ('45 22 * * 1'), bestaande regels behouden. Eerste rapport: maandag 2026-10-05.
 Volgende stap: verslag backlog v7; wachten op nieuwe NEXT_STEPS / beslissing Sandro (data-optie voor L1).
+
+## 2026-09-30 04:25 — N1: MT5-bevestiging kern RSI(2) max 1/2 nachten — NIET gehaald
+
+Getest (PREREG_N1.md vóór berekening): RSI2Sleeve + MaxNights (sluiten op de n-de cash-sessie-open, US 16:30 server, GER40/UK100 10:00/11:00), 1/6 per positie, MT5 €80k EUR 2021–26, swap-gecorrigeerd.
+Reconciliatie met k1_nights.py: trades max 1 nacht 478 vs 472 (+1%), max 2 nachten 317 vs 331 (−4%), per symbool dichtbij; maandcorrelatie 0,834 / 0,890 (< 0,9); totaal Python +5,1% / +6,6% vs MT5 +3,2% / +1,2% (> 25% verschil) → reconciliatie deels buiten tolerantie (MT5 duidelijk zwakker; waarschijnlijk bredere spread op de sessie-open en instap op eerste tick van de serverdag).
+Resultaat MT5: max 1 nacht SR 0,47 (CI −0,23–1,15), €36/mnd bij 1/6; schaal 2,8× → €98/mnd, slechtste dag 3,56%, DD 6,5%; met +50% spread SR 0,23. Max 2 nachten SR 0,12 (CI −0,62–0,91), €13/mnd bij 1/6; €100/mnd vereist 7,5× → dag 17%.
+Beslisregel kern (SR ≥ 0,5 én dagverlies < 4% bij ≥ €100/mnd): NIET gehaald. Cache toegevoegd aan e1_rsi2_ftmo.eod_spread_frac (snelheid, geen uitkomstwijziging).
+Conclusie: de korte-houdduur-kern van RSI(2) is in MT5 met FTMO-kosten te zwak. Enige FTMO-conforme kandidaat blijft F3b (RSI(2) oorspronkelijk + ORB, ORB onbevestigd).
+Volgende stap: N2 (DATA_REQUEST_SANDRO.md), N3 (definitieve PLAFOND/SCENARIO), N4 (forward).

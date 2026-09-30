@@ -1,6 +1,7 @@
 """E1: RSI(2) (regel B2b ongewijzigd) op FTMO-dagslotkoersen met FTMO-kosten; vergelijking met de Yahoo-versie.
 Zie VOORSTEL_E.md. Gebruik: python3 e1_rsi2_ftmo.py"""
 import csv
+from functools import lru_cache
 import math
 import statistics
 from collections import defaultdict
@@ -21,6 +22,7 @@ def ftmo_close(sym):
     return sorted(rows)
 
 
+@lru_cache(maxsize=None)
 def eod_spread_frac(sym):
     """mediaan (spread/prijs) van de laatste M5-bar van elke serverdag"""
     last = {}

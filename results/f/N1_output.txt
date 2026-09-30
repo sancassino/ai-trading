@@ -1,0 +1,4 @@
+N1_max1 [MT5]: SR 0.47 (CI -0.23–1.15) | €/mnd bij 1/6 36 | slechtste dag 1.28% | schaal 2.8× → €98/mnd, slechtste dag 3.56%, DD 6.5% → KERN NIET GEHAALD
+N1_max1 [MT5 + G1 (+50% spread)]: SR 0.23 (CI -0.47–0.91) | €/mnd bij 1/6 18 | slechtste dag 1.30% | schaal 5.6× → €97/mnd, slechtste dag 7.31%, DD 13.2% → KERN NIET GEHAALD
+N1_max2 [MT5]: SR 0.12 (CI -0.62–0.91) | €/mnd bij 1/6 13 | slechtste dag 2.30% | schaal 7.5× → €97/mnd, slechtste dag 17.32%, DD 27.9% → KERN NIET GEHAALD
+N1_max2 [MT5 + G1 (+50% spread)]: SR 0.02 (CI -0.72–0.80) | €/mnd bij 1/6 1 | slechtste dag 2.32% | schaal 97.6× → €97/mnd, slechtste dag 226.25%, DD 298.4% → KERN NIET GEHAALD

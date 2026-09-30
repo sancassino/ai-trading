@@ -18,6 +18,7 @@ input double ExitRSI     = 70;
 input int    TrendSMA    = 200;
 input int    MaxIndexPositions = 0;   // 0 = onbeperkt; XAUUSD telt niet als index
 input double DayGuardPct = 0;         // 0 = uit; >0: flat + geen instap rest van de dag als equity < dagstart-balance - pct% startkapitaal
+input int    MaxNights = 0;           // 0 = uit; n: sluiten op de n-de cash-sessie-open na instap
 input ulong  MagicNumber = 20260930;
 input string DiagBestandsnaam = "RSI2Sleeve_output.csv";
 
@@ -27,6 +28,8 @@ datetime lastBar[];
 int      want[];          // 1 = should be long, 0 = should be flat, -1 = no pending action
 datetime lastAttempt = 0;
 double   initialCap = 0;
+int      nightsSeen[];
+datetime lastOpenCounted[];
 datetime guardDay = 0;
 
 // daily equity log (same format as MomentumRotation)
@@ -125,6 +128,53 @@ void ClosePos(string s)
 
 bool IsIndex(string s) { return s != "XAUUSD"; }
 
+int SundayOf(int year, int month, int n)
+  {
+   MqlDateTime t; t.year = year; t.mon = month; t.day = 1; t.hour = 0; t.min = 0; t.sec = 0;
+   MqlDateTime f; TimeToStruct(StructToTime(t), f);
+   int firstSunday = 1 + (7 - f.day_of_week) % 7;
+   if(n > 0) return firstSunday + 7 * (n - 1);
+   int dim = (month == 4 || month == 6 || month == 9 || month == 11) ? 30 : 31;
+   int last = firstSunday; while(last + 7 <= dim) last += 7;
+   return last;
+  }
+
+bool DstMismatch(datetime server)
+  {
+   MqlDateTime s; TimeToStruct(server - 7 * 3600, s);
+   int md = s.mon * 100 + s.day;
+   int usStart = 300 + SundayOf(s.year, 3, 2), euStart = 300 + SundayOf(s.year, 3, 0);
+   int euEnd = 1000 + SundayOf(s.year, 10, 0), usEnd = 1100 + SundayOf(s.year, 11, 1);
+   return (md >= usStart && md < euStart) || (md >= euEnd && md < usEnd);
+  }
+
+// cash-sessie-open (servertijd) van de huidige serverdag
+datetime SessionOpen(string s, datetime now)
+  {
+   datetime d0 = now - (now % 86400);
+   if(s == "GER40.cash" || s == "UK100.cash") return d0 + 10 * 3600 + (DstMismatch(now) ? 3600 : 0);
+   return d0 + 16 * 3600 + 30 * 60;
+  }
+
+void CheckMaxNights()
+  {
+   if(MaxNights <= 0) return;
+   datetime now = TimeCurrent();
+   MqlDateTime dt; TimeToStruct(now, dt);
+   if(dt.day_of_week == 0 || dt.day_of_week == 6) return;
+   for(int k = 0; k < ArraySize(syms); k++)
+     {
+      if(!HasPos(syms[k])) { nightsSeen[k] = 0; lastOpenCounted[k] = 0; continue; }
+      datetime op = SessionOpen(syms[k], now);
+      if(now >= op && lastOpenCounted[k] != op)
+        {
+         lastOpenCounted[k] = op;
+         nightsSeen[k]++;
+         if(nightsSeen[k] >= MaxNights) want[k] = 0;
+        }
+     }
+  }
+
 int IndexExposure()
   {
    int n = 0;
@@ -213,6 +263,7 @@ int OnInit()
    string parts[];
    int n = StringSplit(SymbolList, ',', parts);
    ArrayResize(syms, n); ArrayResize(hRsi, n); ArrayResize(hSma, n); ArrayResize(lastBar, n); ArrayResize(want, n);
+   ArrayResize(nightsSeen, n); ArrayResize(lastOpenCounted, n); ArrayInitialize(nightsSeen, 0); ArrayInitialize(lastOpenCounted, 0);
    for(int i = 0; i < n; i++)
      {
       syms[i] = parts[i];
@@ -231,6 +282,7 @@ void Step()
   {
    TrackDaily();
    CheckGuard();
+   CheckMaxNights();
    Evaluate();
    Execute();
   }
