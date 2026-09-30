@@ -30,10 +30,13 @@ EXTRA_RT_BP = {"UK100cash": 3.88, "JP225cash": 1.78, "EU50cash": 3.12, "FRA40cas
 # ---------- data ----------
 def load_daily(name, field="adjclose"):
     d, o, h, l, c = [], [], [], [], []
-    for line in open(f"data/daily/{name}.csv"):
+    path = next((p for p in (f"data/daily/{name}.csv", f"data/derived/{name}.csv", f"data/yahoo/{name}.csv") if os.path.exists(p)))
+    for line in open(path):
         if not line[:1].isdigit():
             continue
-        f = line.rstrip("\n").split(";")
+        f = line.rstrip("\n").replace(".", "-", 2).split(";") if path.startswith("data/yahoo") else line.rstrip("\n").split(";")
+        if path.startswith("data/yahoo"):  # R2: alleen datum;close (adjusted) → OHLC = close
+            f = [f[0], f[1], f[1], f[1], f[1], f[1], "0"]
         px = float(f[5] if field == "adjclose" and f[5] else f[4])
         k = px / float(f[4]) if f[4] and float(f[4]) else 1.0  # OHLC op dezelfde (adj-)schaal
         d.append(date.fromisoformat(f[0]))
@@ -147,11 +150,13 @@ def rf_on(dates):
     return np.array([vs[max(0, bisect.bisect_right(ks, d) - 1)] for d in dates])
 
 
-def net_returns_vehicle(df, pos, spread_mult, veh):
+def net_returns_vehicle(df, pos, spread_mult, veh, cap=True):
     """netto dagrendement van het kapitaal per vehikel. cfd = net_returns; etf = long-only, TER, cash-rente op niet-belegd;
     future = positie × (rendement − rf) + rf op het kapitaal, rol- en handelskosten."""
     V = vehicles()[veh]
     if V["model"] == "cfd":
+        if COST_MAP.get(df["name"]) is None:   # R2: geen CFD-kosten bekend (bv. synthetische obligatie, koper) → niet in het CFD-universum
+            nan = np.full(len(pos), np.nan); return nan, np.zeros(len(pos)), nan, nan, nan
         return net_returns(df, pos, spread_mult)
     if df["name"].startswith("FX_") and V["model"] == "etf":
         nan = np.full(len(pos), np.nan); return nan, np.zeros(len(pos)), nan, nan, nan
@@ -166,12 +171,12 @@ def net_returns_vehicle(df, pos, spread_mult, veh):
     ter = np.abs(p_prev) * V["ter"] / 100 / 365 * nights
     if V["model"] == "etf":
         gross = p_prev * r
-        cash = np.clip(1 - np.abs(p_prev), 0, 1) * rf if V["cash_rate"] else 0.0
+        cash = np.clip(1 - np.abs(p_prev), 0, 1) * rf if (V["cash_rate"] and cap) else 0.0   # cap=False: kasrente op portefeuilleniveau (aggregatie 'som')
         fin = ter - cash
     else:  # future: overschotrendement + rente op het volledige kapitaal
         gross = p_prev * (r - rf)
         roll = np.abs(p_prev) * V.get("roll_bp", 0.5) * V.get("rolls", 4) * 1e-4 / 365 * nights
-        fin = roll - rf
+        fin = roll - (rf if cap else 0.0)
     return gross - cost - fin, turn, gross, cost, fin
 
 
@@ -228,15 +233,27 @@ def run(rule_id, reserve=False, vehicle=None):
     sleeves = {k: load_sleeve(p) for k, p in (("ORB", "results/f/F2_ORB_daily.csv"), ("RSI2", "results/f/F1_RSI2_swapcorr_daily.csv")) if os.path.exists(p)}
     lines = [f"# {R['id']} — {R['naam']} ({R['familie']})", f"Mechanisme: {R['mechanisme']}", f"Bron: {R['bron']}", ""]
     rows = []
-    # G-benchmark (D-038): buy-and-hold van dezelfde instrumenten, zelfde vehikel, gelijk gewogen
-    bh = {}
-    for n, df in data.items():
-        net, *_ = net_returns_vehicle(df, np.ones(len(df["date"])), 1.0, veh)
-        for d, v in zip(df["date"], net):
-            if np.isfinite(v) and (d >= RESERVE_START) == reserve and d.year >= R.get("start_jaar", 1900) and (reserve or d <= DISCOVERY_END):
-                bh.setdefault(d, []).append(v)
+    mode = R.get("aggregatie", "gemiddelde"); cap = mode != "som"
+
+    def make_bh(bench, sj, bsum):
+        """G-benchmark (D-038): buy-and-hold, zelfde vehikel. Standaard gelijk gewogen over de regel-instrumenten;
+        R["benchmark"] = {"naam":..., "gewichten": {instrument: w}} (vast, dagelijks herwogen) voor allocatieregels (R2); per variant te overschrijven."""
+        bdata = {n: (data[n] if n in data else load_daily(n, R.get("field", "adjclose"))) for n in bench["gewichten"]}
+        bh, bh_abs = {}, {}
+        for n, df in bdata.items():
+            w = bench["gewichten"][n]
+            net, *_ = net_returns_vehicle(df, np.full(len(df["date"]), float(w)), 1.0, veh, not bsum)
+            for d, v in zip(df["date"], net):
+                if np.isfinite(v) and (d >= RESERVE_START) == reserve and d.year >= sj and (reserve or d <= DISCOVERY_END):
+                    bh.setdefault(d, []).append(v); bh_abs[d] = bh_abs.get(d, 0.0) + abs(w)
+        return bh, bh_abs
+
     for vname, params in R["varianten"].items():
+        sj = params.get("start_jaar", R.get("start_jaar", 1900))
+        bench = params.get("benchmark", R.get("benchmark", {"gewichten": {n: 1.0 for n in R["instrumenten"]}})); bsum = "benchmark" in params or "benchmark" in R
+        bh, bh_abs = make_bh(bench, sj, bsum)
         port, port50, ntr = {}, {}, 0
+        absp = {}
         per_inst, comp = {}, {"gross": 0.0, "cost": 0.0, "swap": 0.0}
         mp = R.get("max_pos", 1.0)
         if hasattr(mod, "positions_all"):
@@ -246,21 +263,34 @@ def run(rule_id, reserve=False, vehicle=None):
         for n, df in data.items():
             pos = np.clip(np.nan_to_num(np.asarray(allpos[n], float)), -mp, mp)
             for mult, tgt in ((1.0, port), (1.5, port50)):
-                net, turn, gross, cost, swap = net_returns_vehicle(df, pos, mult, veh)
-                ok = np.isfinite(net) & np.array([(d >= RESERVE_START) == reserve and d.year >= R.get("start_jaar", 1900) and
+                net, turn, gross, cost, swap = net_returns_vehicle(df, pos, mult, veh, cap)
+                ok = np.isfinite(net) & np.array([(d >= RESERVE_START) == reserve and d.year >= sj and
                                                    (reserve or d <= DISCOVERY_END) for d in df["date"]])
                 for d, v in zip(df["date"][ok], net[ok]):
                     tgt.setdefault(d, []).append(v)
                 if mult == 1.0:
+                    pp = np.r_[0.0, (pos if vehicles()[veh]["short"] else np.maximum(pos, 0.0))[:-1]]
+                    for d, v in zip(df["date"][ok], np.abs(pp[ok])):
+                        absp[d] = absp.get(d, 0.0) + v
                     ntr += int((turn[ok] > 0).sum()); per_inst[n] = net[ok]
                     comp["gross"] += float(gross[ok].sum()); comp["cost"] += float(cost[ok].sum()); comp["swap"] += float(np.nansum(swap[ok]))
         days = sorted(port)
-        x = np.array([np.mean(port[d]) for d in days]); x50 = np.array([np.mean(port50[d]) for d in days])
+        agg = np.sum if mode == "som" else np.mean
+        x = np.array([agg(port[d]) for d in days]); x50 = np.array([agg(port50[d]) for d in days])
+        # R2: etf/future-rendementen bevatten de kasrente → statistiek (SR, t) op overschotrendement (x − rf), zoals cfd al is;
+        # maxDD/CAGR/equity op totaalrendement. Aggregatie 'som': kasrente/kapitaalrente één keer op portefeuilleniveau.
+        nights_p = np.r_[0, [(b - a).days for a, b in zip(days[:-1], days[1:])]]
+        rf_p = rf_on(days) / 100 / 365 * nights_p if veh != "cfd" else np.zeros(len(days))
+        if mode == "som" and veh != "cfd":
+            V_ = vehicles()[veh]
+            cashfrac = np.array([np.clip(1 - absp.get(d, 0.0), 0, 1) for d in days]) if V_["model"] == "etf" else np.ones(len(days))
+            x = x + rf_p * cashfrac; x50 = x50 + rf_p * cashfrac
+        x_tot = x.copy(); x = x - rf_p; x50 = x50 - rf_p
         gross_turn_days = len(days)
         sr = x.mean() / x.std() * math.sqrt(252) if x.std() > 0 else float("nan")
         tb, sr_ci = boot(x)
         h = len(x) // 2
-        eq = np.cumprod(1 + x); dd = float(np.max(1 - eq / np.maximum.accumulate(eq)))
+        eq = np.cumprod(1 + x_tot); dd = float(np.max(1 - eq / np.maximum.accumulate(eq)))
         sk = float(((x - x.mean()) ** 3).mean() / x.std() ** 3) if x.std() > 0 else float("nan")
         yr = {}
         for d, v in zip(days, x):
@@ -272,11 +302,17 @@ def run(rule_id, reserve=False, vehicle=None):
             corr[k] = float(np.corrcoef([x[days.index(d)] for d in cd], [s[d] for d in cd])[0, 1]) if len(cd) > 50 else float("nan")
         bull = [v for d, v in zip(days, x) if spx_bull.get(d) is True]; bear = [v for d, v in zip(days, x) if spx_bull.get(d) is False]
         t_day = t_plain(x); t_n = t_nw(x)
-        bx = np.array([np.mean(bh[d]) for d in days if d in bh])
-        beq = np.cumprod(1 + bx); bdd = float(np.max(1 - beq / np.maximum.accumulate(beq))) if len(bx) else float("nan")
+        bdays = [d for d in days if d in bh]
+        bx_tot = np.array([(np.sum if bsum else np.mean)(bh[d]) for d in bdays])
+        if bsum and veh != "cfd":
+            V_ = vehicles()[veh]
+            bx_tot = bx_tot + np.array([rf_p[days.index(d)] * (np.clip(1 - bh_abs[d], 0, 1) if V_["model"] == "etf" else 1.0) for d in bdays])
+        bx = bx_tot - np.array([rf_p[days.index(d)] for d in bdays])
+        beq = np.cumprod(1 + bx_tot); bdd = float(np.max(1 - beq / np.maximum.accumulate(beq))) if len(bx) else float("nan")
         bsr = bx.mean() / bx.std() * math.sqrt(252) if len(bx) and bx.std() > 0 else float("nan")
         cagr = eq[-1] ** (252 / len(x)) - 1; bcagr = beq[-1] ** (252 / len(bx)) - 1 if len(bx) else float("nan")
-        gate_bench = sr > bsr and dd < bdd
+        calmar = cagr / dd if dd > 0 else float("nan"); bcalmar = bcagr / bdd if bdd > 0 else float("nan")
+        gate_bench = sr > bsr and dd < bdd   # SR (overschot) én maxDD (totaal) beter; Calmar wordt erbij gerapporteerd
         # 5-jaarsvensters (kalender, niet-overlappend vanaf het eerste volledige jaar)
         yrs_all = sorted(yr); win = [yrs_all[i:i + 5] for i in range(0, len(yrs_all) - 4, 5)]
         w5 = [sum(sum(yr[y]) for y in w) > 0 for w in win]
@@ -308,7 +344,7 @@ def run(rule_id, reserve=False, vehicle=None):
                   "- per jaar (%): " + " ".join(f"{y}:{v*100:+.1f}" for y, v in res["per_jaar"].items()),
                   f"- kosten: bruto {comp['gross']*100:+.1f}% | spread/commissie {comp['cost']*100:.1f}% | financiering {comp['swap']*100:+.1f}% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) {'DOOR' if gate_cost else 'FAALT'}",
                   f"- 5-jaarsvensters positief: {frac5*100:.0f}% ({sum(w5)}/{len(w5)})",
-                  f"- G-benchmark (vehikel {veh}): regel SR {sr:+.2f}, CAGR {cagr*100:+.1f}%, maxDD {dd*100:.1f}% | buy-and-hold SR {bsr:+.2f}, CAGR {bcagr*100:+.1f}%, maxDD {bdd*100:.1f}% → {'BETER (SR én maxDD)' if gate_bench else 'niet beter'}",
+                  f"- G-benchmark (vehikel {veh}): regel SR {sr:+.2f}, CAGR {cagr*100:+.1f}%, maxDD {dd*100:.1f}%, Calmar {calmar:.2f} | buy-and-hold ({bench.get('naam', 'gelijk gewogen')}) SR {bsr:+.2f}, CAGR {bcagr*100:+.1f}%, maxDD {bdd*100:.1f}%, Calmar {bcalmar:.2f} → {'BETER (SR én maxDD)' if gate_bench else 'niet beter'}",
                   f"- beslissing: {beslis} (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)", ""]
     recompute_fdr()
     open(f"{out_dir}/{'reserve' if reserve else 'ontdekking'}_{veh}.md", "w").write("\n".join(lines))

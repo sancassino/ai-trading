@@ -1,0 +1,1 @@
+dagcorrelatie IEF vs BOND10_SYN 0.947; vol IEF 0.068 syn 0.073; CAGR IEF 0.0346 syn 0.0312

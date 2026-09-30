@@ -1,0 +1,12 @@
+# PREREG-definitie (Uitvoerder-2, 2026-09-30, vóór resultaat) — zie PREREG_CAT2.md; code = catalogus/C51_volmanaged.py
+id: 'C51_volmanaged'
+naam: 'Vol-managed index: gewicht = min(1; 10%/σ21), maandelijks'
+familie: 'volatiliteit/sizing'
+mechanisme: 'Risico/rendement is niet evenredig: bij hoge vol daalt het rendement per risico-eenheid, dus vol-schalen verbetert SR en DD.'
+bron: 'Moreira & Muir (2017); Harvey e.a. (2018)'
+instrumenten: ['SPX', 'NDX', 'DAX']
+vehicle: 'etf'
+varianten: {'basis': {}}
+ontdekking: '<= 2024-12-31'
+reserve_oos: '2025-01 -> gezamenlijke run (D-038), niet aangeraakt'
+gates: 'ENGINE_TEMPLATE §4 + D-037/D-038 (G-kosten, G-ontdekking t>=3, BH q=0.10, G-benchmark)'

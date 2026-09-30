@@ -31,3 +31,35 @@ def hold_monthly(target, me):
             cur = target[i]
         pos[i] = cur
     return pos
+
+
+def common_calendar(data, names):
+    """gezamenlijke handelsdagen (inner join) van de genoemde reeksen + closes-matrix (R2, allocatieregels)."""
+    sets = [set(data[n]["date"]) for n in names]
+    cal = sorted(set.intersection(*sets)) if sets else []
+    return cal
+
+
+def to_series(df, cal_idx):
+    """rij-index in df voor elke datum van cal_idx (dict datum → i)."""
+    return {d: i for i, d in enumerate(df["date"])}
+
+
+def weights_to_positions(data, weights_by_date):
+    """weights_by_date: {datum: {naam: w}} (beslissing op slot van die dag) → per instrument een positie-array op de eigen kalender;
+    doorgezet tot de volgende beslisdatum."""
+    ends = sorted(weights_by_date); out = {}
+    for n, df in data.items():
+        pos = np.zeros(len(df["date"])); cur = 0.0; j = 0
+        for i, d in enumerate(df["date"]):
+            while j < len(ends) and ends[j] <= d:
+                cur = weights_by_date[ends[j]].get(n, 0.0); j += 1
+            pos[i] = cur
+        out[n] = pos
+    return out
+
+
+def cash_12m(dates, i):
+    """gemiddelde risicovrije rente over de 252 dagen tot en met dates[i], als 12m-rendement (fractie)."""
+    from engine.run_rule import rf_on
+    return float(np.mean(rf_on(dates[max(0, i - 251):i + 1])) / 100)
