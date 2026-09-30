@@ -766,3 +766,8 @@ update_daily.py/.sh: per Yahoo-reeks in data/daily alleen de laatste 35 dagen op
 Engine: rf_on loopt na de laatste FRED-DTB3-datum (25-09) door met US Treasury 3m (officieel); regressietest OK.
 Nog niet bij te werken (FRED geblokkeerd): FX_*-reeksen (FRED noon rates) en IR3TIB-rentes (FX-carry) — forward moet Yahoo =X-FX gebruiken; carry houdt de laatste maandwaarde (vermeld, U-005).
 forward_portfolio.py volgt zodra PREREG_PORT.md (Uitvoerder-2) er is; engine/forward.py is gevalideerd.
+
+## 2026-09-30 12:44 — v22 QA-2/QA-3 (forward-data): rf-bron vastgelegd en gekwantificeerd; data-update append-only met dagelijkse ruwe snapshots
+
+QA-2 rf: engine gebruikt FRED DTB3 (discontobasis) t/m de laatste FRED-datum (25-09-2026) en daarna US Treasury 3m (par/CMT, officieel; YLD_US3M) — beide in engine/run_rule.rf_on, dus forward en engine gebruiken dezelfde bron per datum. Verschil Treasury 3m − DTB3 over 9.187 overlappende dagen 1990–2026: mediaan +6 bp (P5/P95 0/+23 bp); sinds 2024 mediaan +15 bp/jr ≈ 0,06 bp/dag → verwaarloosbaar voor tracking; wordt in de forward-tracking-band vermeld.
+QA-3 lookahead/herschrijving: update_daily.py voegt alleen nieuwe datums toe (bestaande regels worden nooit overschreven; een gewijzigde Yahoo-slotkoers op een oude datum wordt alleen gelogd in results/update_daily.log); de lopende dag wordt niet opgeslagen. Nieuw: forward/data_snapshots/<downloaddag>.csv bewaart elke toegevoegde ruwe regel (open/high/low/close/adjclose/volume) met UTC-download-tijdstempel, append-only, mee gecommit. Forward-signalen worden op de bestanden zoals ze op die dag waren berekend (de repo-historie is het bewijs).
