@@ -6,7 +6,8 @@
 3. **Te veel focus op één klasse** (intraday indices/ORB) waar kosten de muur zijn; nauwelijks laagfrequente, diversifiërende sleeves met decennia bewijs.
 4. **Eén Uitvoerder-thread** doet data, onderzoek en forward; data-werk wordt door onderzoek verdrongen ("wachten op data").
 
-## Verandering 1 — Data-programma (permanente werkstroom D, loopt maanden op de achtergrond)
+## Verandering 1 — Data-programma (werkstroom D; downloaden zelf kost dagen, niet maanden — het onderzoek erop loopt maanden)
+NB (CEO-correctie 30-09): rekensom bij 1 verzoek/8 s ≈ 450 verzoeken/uur → 4 instrumenten × 9 jaar ≈ 20 u; 15 instrumenten ≈ 3 dagen — mits de feed stabiel blijft (nu traag/instabiel). "Maanden" gold voor het programma, niet voor het downloaden.
 - **D1 Intraday-lake via Dukascopy-feed** (huidige P0-methode: eerlijke UA, 1 verzoek/8 s, back-off, hervatbaar; **niets omzeilen**). Uitbreiden van 4 naar een prioriteitenlijst: US500, GER40, US100, XAUUSD, EURUSD, GBPUSD, USDJPY, AUDUSD, USDCAD, USDCHF, US30, USOIL, XAGUSD, … ; volgorde en voortgang in `data/DATA_CATALOGUS.md` (symbool, jaren, gaten, checksum, QA). Draait continu; onderzoek gebruikt wat er ligt.
 - **D2 Lange dagdata (gratis, geautomatiseerd, toegestaan):** FRED (FX, rente, olie, goud-proxy's), Yahoo/stooq-daghistorie (indices, sectoren, ETF's, grondstof-futures-proxy's) — **20–50 jaar** waar beschikbaar; alleen binnen de gebruiksvoorwaarden, met rate-limiet. Basis voor laagfrequente sleeves (trend, carry, momentum, seizoen, value-proxy's).
 - **D3 Data-QA:** elk bestand: gaten, splits/DST, spread-aanname, vergelijking met FTMO-overlap (zoals S3-parsertest). Geen resultaat op ongecontroleerde data.
