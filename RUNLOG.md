@@ -814,3 +814,11 @@ forward_portfolio.py: tweede sectie volgens PREREG_PORT2 (P-ETF+ = C52L + C02 + 
 Ontdekking (≤ 2024, USD, vóór haircut): P-ETF+ (2005→) SR 0,89, vol 6,5%, CAGR 7,4%, maxDD 10,8%; P-breed-2 (2008→) SR 0,73, CAGR 7,9%, maxDD 16,0%, hefboom 2,29.
 v25 QA-2 (één consistent EUR-perspectief, t.o.v. EUR-cash = €STR/Euribor 3m): P-ETF-a (2003-12→) alfa USD 5,8%/jr | EUR gehedged 5,5%/jr (≈ USD-alfa; → €183–257/mnd na 30–50% haircut) | EUR ongehedged 6,9%/jr maar SR 0,61 (EURUSD-resultaat, dollar steeg) → €231–324/mnd. P-ETF+: 5,7 | 5,4 | 7,3%/jr (SR 0,64). Twee getallen i.p.v. de eerdere gemengde 'alfa' (USD-excess + EUR-cash) — die vorige formulering vervalt.
 D2 vóór 01-10 09:00 (D-057): TR/dividend (SPX_TR; DAX performance-index; NDX-TR niet vrij beschikbaar), C54-extra-instrumenten, FRED-vervangers (Treasury, MoF, BoE, Bundesbank, BLS, ECB) — af; ontbreekt alleen NDX-TR (vermeld).
+
+## 2026-09-30 14:44 — v26 QA-4/5: merge Uitvoerder-2 (run 4) in main — gemeenschappelijke trial-stand 440; portefeuille-familie apart; D2/forward-status
+
+Merge claude/uitvoerder2-r → main (run 4 C57–C61, frontier, decompositie); geen conflicten; geen pycache; regressietest B2b OK.
+Gemeenschappelijke stand (main = U-2-branch): TRIAL_COUNT 440; catalogus/TRIALS.csv 52 rijen = 27 met p in BH (26 catalogustrials + de B2b-replicatie), 3 ongeldig (future-model-fout, buiten BH), 22 vehikelrapporten zonder p. 414 + 26 = 440 ✔.
+QA-4: catalogus/PORTFOLIOS.csv = aparte BH-familie 'portefeuilles' (P-ETF-a/b, P1, P-breed volgens PREREG_PORT; P-ETF+, P-breed-2 volgens PREREG_PORT2; met SHA's en ontdekkings-SR/maxDD) — geen trials.
+QA-5: D2-uitbreiding af (status in RUNLOG 30-09; NDX-TR niet vrij beschikbaar). Forward: F3b-cron 22:15 UTC vanavond, portefeuille-cron 22:25 UTC maakt vanavond de bestanden (kop) aan; eerste portefeuille-dag (01-10) wordt op 02-10 gelogd — controle 01-10/02-10 in RUNLOG.
+D1/P0: Dukascopy verbreekt weer steeds de verbinding (2012-04-13, poging 5); downloader stopt netjes na 6 fouten; SPX 2012: 89 dagen.
