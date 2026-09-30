@@ -30,3 +30,24 @@ Status: **eerste versie (cyclus 1 van ≤ 3)**. Alles met bron is web-claim (D-0
 
 ## 5. Open punten (volgende cycli ≤ 2)
 (1) Retail-CFD-spread/financiering van een EU-broker echt opzoeken (IBKR/anderen) i.p.v. FTMO-S0; (2) CME-toegang en micro-contractspecs bij IBKR verifiëren (multiplier, margin, commissie); (3) UCITS-universumlijst (aandelen regio's, sectoren, goud, obligatie-duur, geldmarkt) met TER + ISIN → `engine/vehicles.csv`; (4) valuta-hedge-kosten; (5) `engine`-parameters formeel aan Uitvoerder/Manager doorgeven.
+
+---
+# v2-addendum (2026-09-30 14:10 Amsterdam) — H5 uitvoerbaarheid van C54 (Carver) bij €80k, en wat het voor de shortlist betekent
+**Verificatie-status:** IBKR-Ireland-pagina's (futures-commissie, CFD-financiering/margin) gaven HTTP 403 via WebFetch; **niet omzeild** → broker-kosten blijven onbevestigd (W-claims uit v1 en CEO-log; rest ᵉ/A). Broker-specifieke cijfers moeten later handmatig of via een toegestane route komen.
+
+## 1. Granulariteit (eigen rekensom, aannames: €80k, 10% vol-doel, IDM 1,5, 16 instrumenten gelijk gewogen ⇒ standalone-risico ≈ €750 per instrument; contractspecs ᵉ onbevestigd; prijzen uit swap_specs, USD→EUR 1,17)
+| Instrument (micro-future) | contractwaarde | doelpositie bij forecast 10 (≈ €750 ÷ σ) | = contracten |
+|---|---|---|---|
+| US500 (MES) | ≈ €32,9k | ≈ €4,7k | **0,14** |
+| US100 (MNQ) | ≈ €51,9k | ≈ €3,8k | **0,07** |
+| GER40 (micro-DAX ᵉ) | ≈ €25,5k | ≈ €4,2k | **0,16** |
+| Goud (MGC) | ≈ €35,5k | ≈ €5,0k | **0,14** |
+| EURUSD (M6E) | ≈ €12,5k | ≈ €9,4k | 0,75 |
+**Conclusie H5:** bij 16 instrumenten is een micro-future-positie voor indices en goud 0,07–0,16 contract — **onuitvoerbaar** (rondt naar 0 of naar ≥ 6× te groot). Alleen FX-micro's zijn bij benadering deelbaar. De 'future'-vehikel-resultaten van C54 (SR 0,47–0,57) zijn dus **niet** uitvoerbaar bij €80k zonder (a) veel minder instrumenten (dan daalt diversificatie/IDM en stijgt rondingsfout), of (b) kapitaal ≫ €300k, of (c) CFD/ETF voor de grove legs.
+## 2. Het CFD-alternatief is ook niet gratis
+Retail-CFD: long kost benchmark + 1,5% op het **volledige notional**, short ontvangt benchmark − 1,5% (CEO-log/IBKR-documentatie): netto ≈ **−1,5%/jr × gross notional**, long én short. Bij Carver-gross-notional ≈ 2–3× kapitaal ⇒ **≈ 3–4,5%/jr drag** plus spread. Engine-`cfd` gebruikt FTMO-swaps (C54 cfd SR 0,01 omdat die swaps de carry vernietigen), wat een ander profiel is dan de retail-formule (rf ± 1,5%): **de werkelijke C54-waarde bij €80k ligt dus tussen 'future' (te optimistisch) en 'cfd-FTMO' (te pessimistisch)** en is nu onbekend.
+## 3. Aanvragen aan Uitvoerder-2 / Engine (geen trial — vehikelrapporten)
+1. Vehikel `cfd_retail`: rendement = x_spot + (carry-component) − 1,5% × |notional| per jaar (beide kanten) − spread uit `vehicles.csv` (2× FTMO-S0 als gevoeligheid); C54 (qa), C05, C02, C17, C52 rapporteren.
+2. `future_rounded`: C54 met hele micro-contracten bij €80k (afrondingsfout meenemen) voor 16 én voor 6–8 instrumenten; rapporteer SR, tracking-error t.o.v. fractioneel, aantal instrumenten met 0 contracten.
+3. **ETF-only basisportefeuille** (implementeerbaar zonder hefboom/shorts): C52 lang + C02 + C17 (+ C53 niet), sleeves 10% vol ⇒ gemiddeld; **P-ETF** naast P1 rapporteren. Dit is de eerlijke ondergrens voor H5.
+4. **EUR-perspectief:** portefeuille ook in EUR-termen (EURUSD uit `data/daily`/FRED) — USD-ETF's en -goud voegen ≈ 6–8% FX-vol toe; hedged-klasse kost ≈ renteverschil USD−EUR.
