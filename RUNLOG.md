@@ -738,3 +738,7 @@ Nieuw in data/daily (Yahoo, eerlijke UA, 3 s/verzoek): SPX_TR (1988→), IEF/SHY
 Niet gelukt: NDX total return (^XNDX HTTP 422); FRED geeft vanaf Debian én VM time-outs (vermoedelijk blokkade van cloud-IP's) → DGS10/DGS2/T10Y2Y/BAA10Y/DTWEXBGS ontbreken; niet omzeild. Bestaande data/fred (DTB3, FX, 3m-rentes tot 2026-09) blijft bruikbaar.
 Engine: engine/README.md (gebruik, kostenmodel per vehikel, gates) en engine/test_b2b.py (regressietest: t_NW 3,21, SR 0,52 → OK) voor Uitvoerder-2 (D-039).
 Taakverdeling (kickoff Uitvoerder-2): catalogusruns, C02-QA en portefeuille liggen bij Uitvoerder-2; ik doe D (data), F (forward), S3, MT5 en engine-basis.
+
+## 2026-09-30 11:44 — Engine: vehikel-standaarden volgens VEHICLE_ANALYSE v1 + total-return-proxy (geen trial)
+
+Tot engine/vehicles.csv (Strateeg) er is: etf = 13 bp rondreis (IBKR 0,05% per kant + ≈ 3 bp spread), TER 0,07%/jr, long-only, cash-rente DTB3 op niet-belegd; future = 1 bp + rol 4×0,5 bp, overschotrendement + rf; cfd = S0 + FTMO-swap (ongewijzigd). Voor etf/future wordt waar mogelijk total return gebruikt (SPX → SPX_TR vanaf 1988; DAX is al een performance-index; overige prijsindex, dividend genegeerd — vermeld in engine/README). Regressietest B2b (cfd) ongewijzigd OK (t_NW 3,21, SR 0,52).

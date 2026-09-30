@@ -32,3 +32,12 @@
 2026-09-30 11:14:23Z   503 bij USA500IDXUSD 2012-01-24; wacht 120 s (poging 2)
 2026-09-30 11:17:54Z   netwerkfout bij USA500IDXUSD 2012-01-25: <urlopen error timed out>; wacht 60 s (poging 1)
 2026-09-30 11:20:02Z   netwerkfout bij USA500IDXUSD 2012-01-25: <urlopen error timed out>; wacht 120 s (poging 2)
+2026-09-30 11:20:41Z start P0 voor SPXUSD, GRXEUR, NSXUSD, XAUUSD (pauze 30.0 s, UA 'ai-trading-research/1.0 (slow, resumable; respects 429/Retry-After)')
+2026-09-30 11:21:52Z SPXUSD: deler 1000 (Dukascopy 4361.55 vs FTMO 4357.83, verschil 0.09%)
+2026-09-30 11:21:52Z SPXUSD 2011: eerste 10 werkdagen leeg/404 → jaar niet beschikbaar op de feed, overgeslagen
+2026-09-30 11:22:37Z   503 bij USA500IDXUSD 2012-01-25; wacht 60 s (poging 1)
+2026-09-30 11:26:45Z   netwerkfout bij USA500IDXUSD 2012-01-27: <urlopen error timed out>; wacht 60 s (poging 1)
+2026-09-30 11:29:15Z   netwerkfout bij USA500IDXUSD 2012-01-27: <urlopen error timed out>; wacht 120 s (poging 2)
+2026-09-30 11:34:22Z   netwerkfout bij USA500IDXUSD 2012-01-30: <urlopen error timed out>; wacht 60 s (poging 1)
+2026-09-30 11:36:52Z   netwerkfout bij USA500IDXUSD 2012-01-30: <urlopen error timed out>; wacht 120 s (poging 2)
+2026-09-30 11:39:27Z   503 bij USA500IDXUSD 2012-01-30; wacht 240 s (poging 3)
