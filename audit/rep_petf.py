@@ -32,7 +32,7 @@ def own_bond(D=8.0, C=80.0):
     r = y.shift() * cd / 365 - D * dy + 0.5 * C * dy ** 2
     return (1 + r.fillna(0)).cumprod()
 
-def c02_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, signal_price_tr=False):
+def c02_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, signal_price_tr=False, shift=0):
     """5 indices; signaal: slot(maandeinde) > gemiddelde laatste 10 maandeinde-sloten (prijsindex); rendement: SPX -> SPX_TR, overige prijsindex; long/cash."""
     cols = {}
     for nm in ["SPX", "NDX", "DJI", "DAX", "N225"]:
@@ -47,6 +47,8 @@ def c02_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, signal_price_tr=False):
             r = trf.pct_change()
             r[px.index < tr.index[0]] = px.pct_change()[px.index < tr.index[0]]
         me = px.groupby([px.index.year, px.index.month]).tail(1).index
+        if shift:   # beslisdatum = maandeinde + shift handelsdagen (negatief = eerder); geen toekomstinformatie
+            loc = px.index.get_indexer(me) + shift; loc = np.clip(loc, 0, len(px) - 1); me = px.index[np.unique(loc)]
         ms = px.loc[me]; sma = ms.rolling(10).mean()
         sig = (ms > sma).astype(float); sig[sma.isna()] = np.nan
         tgt = pd.Series(np.nan, index=px.index); tgt.loc[me] = sig.values
@@ -64,7 +66,7 @@ def c02_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, signal_price_tr=False):
     x = x[net.notna().any(axis=1)]
     return x, cols  # totaalrendement (kasrente zit erin); mean over beschikbare indices die dag
 
-def c52_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, bond="syn", assets=("SPY", "BOND", "GOLD"), scale_cap=1.0, tgt=0.08, quirk=False):
+def c52_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, bond="syn", assets=("SPY", "BOND", "GOLD"), scale_cap=1.0, tgt=0.08, quirk=False, shift=0):
     px = {"SPY": load("SPY", "adjclose"), "GOLD": load("GOLD_F", "close")}
     px["BOND"] = own_bond() if bond in ("syn", "own") else (own_bond(6.0, 50.0) if bond == "own6" else load("IEF", "adjclose"))
     if bond == "file":
@@ -73,6 +75,8 @@ def c52_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, bond="syn", assets=("SPY", "BOND
     ret = {k: v.pct_change().dropna() for k, v in px.items()}
     cal = pd.DatetimeIndex(sorted(set().union(*[set(v.index) for v in px.values()])))
     me = pd.Series(cal, index=cal).groupby([cal.year, cal.month]).tail(1)  # maandeinde in gezamenlijke kalender
+    if shift:
+        loc = np.clip(cal.get_indexer(me.index) + shift, 0, len(cal) - 1); me = pd.Series(cal[np.unique(loc)], index=cal[np.unique(loc)])
     if quirk:      # gedrag dat in de bestaande engine zit: asset met een gat in het 60d-venster valt die maand weg
         R = pd.DataFrame(ret).reindex(cal)
     else:          # schoon: prijzen doorgetrokken op gezamenlijke kalender (feestdag = 0-rendement)
