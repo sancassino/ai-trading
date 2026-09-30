@@ -24,3 +24,14 @@ futures-/CFD-afgeleid); de OR geldt dan op het cash-openingsuur, zoals bij FTMO.
 - Rapporteer ook: jaar-per-jaar bp 2011–2026 (gestapeld met FTMO 2021–26), per symbool, +50% spread, en een voorlopige uitslag met alleen SPX
   zodra dat bestand er is (voorlopig = geen beslissing).
 - TRIAL_COUNT +1 (één test).
+
+## Secundaire hypothese S3b — vol-regime (D-017, VOORSTEL_S9), vastgelegd 2026-09-30 ≈ 09:55Z, vóór er een bestand in data/long_m1/ stond
+- Primair S3-label en -drempels blijven ongewijzigd; S3b is secundair en telt +1 trial.
+- Regel: dezelfde bevroren ORB-B4a-trades, maar alleen op dagen met **20d-RV(t−1) > eigen 252d-mediaan**. RV = standaarddeviatie van de
+  20 laatste slot-op-slot-dagrendementen van de volledige cash-sessies van dat symbool (t.e.m. dag t−1); mediaan over de 252 laatste
+  RV-waarden (t.e.m. t−1). Opwarming: S3b-dagen pas vanaf de eerste dag met volledige historie (≈ 2012-02); geen andere drempels, geen grid.
+- Beslisregel S3b: dag-geclusterde gepoolde netto t ≥ 2,5 binnen hoog-vol-dagen **én** beide helften (2011–15, 2016–20) positief **én**
+  ≥ 0,9 bp/trade **én** verschil hoog-vol − laag-vol > 0 met dag-geclusterde t ≥ 2 (t van het verschil van de dagelijkse gemiddelden,
+  Welch). Anders 'S3b verworpen'. Kostenpoort binnen hoog-vol: gemiddeld bruto ≥ 3× gemiddelde kosten, anders geen toets.
+- Uitsluitend op 2011–2020; 2021–26 wordt voor S3b niet gebruikt (hindsight). Bron van de data: HistData óf de publieke Dukascopy-feed
+  (P0, zelfde parser/formaat; bron wordt in de uitslag vermeld).
