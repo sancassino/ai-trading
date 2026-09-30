@@ -1,0 +1,14 @@
+FTMO 2021–26, S3-symbolen: 1457 dagen, 5091 trades, gemiddeld +3.38 bp; 2024–26 +1.65 bp → 'blijvend'-voorwaarden (≥ 0,9 bp én 2024–26 ≥ 0): JA
+9 jaar | (A) t ≥ 2,5            | effect 2021–26-niveau          | bevestigd   88% | onbeslist   11% | verworpen    1%
+9 jaar | (A) t ≥ 2,5            | effect gehalveerd              | bevestigd   18% | onbeslist   56% | verworpen   26%
+9 jaar | (A) t ≥ 2,5            | nul (bruto 0, netto −kosten)   | bevestigd    0% | onbeslist    1% | verworpen   99%
+9 jaar | (B) eenzijdig t ≥ 2,0  | effect 2021–26-niveau          | bevestigd   95% | onbeslist    4% | verworpen    0%
+9 jaar | (B) eenzijdig t ≥ 2,0  | effect gehalveerd              | bevestigd   33% | onbeslist   41% | verworpen   26%
+9 jaar | (B) eenzijdig t ≥ 2,0  | nul (bruto 0, netto −kosten)   | bevestigd    0% | onbeslist    1% | verworpen   99%
+10 jaar | (A) t ≥ 2,5            | effect 2021–26-niveau          | bevestigd   91% | onbeslist    9% | verworpen    0%
+10 jaar | (A) t ≥ 2,5            | effect gehalveerd              | bevestigd   21% | onbeslist   55% | verworpen   24%
+10 jaar | (A) t ≥ 2,5            | nul (bruto 0, netto −kosten)   | bevestigd    0% | onbeslist    1% | verworpen   99%
+10 jaar | (B) eenzijdig t ≥ 2,0  | effect 2021–26-niveau          | bevestigd   97% | onbeslist    3% | verworpen    0%
+10 jaar | (B) eenzijdig t ≥ 2,0  | effect gehalveerd              | bevestigd   39% | onbeslist   38% | verworpen   24%
+10 jaar | (B) eenzijdig t ≥ 2,0  | nul (bruto 0, netto −kosten)   | bevestigd    0% | onbeslist    1% | verworpen   99%
+S3-symbolen (zonder US30) FTMO 2021–26: dag-geclusterd t +2.90 (1457 dagen) | train +2.79 | test +1.12

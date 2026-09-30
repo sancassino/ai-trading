@@ -35,3 +35,18 @@ futures-/CFD-afgeleid); de OR geldt dan op het cash-openingsuur, zoals bij FTMO.
   Welch). Anders 'S3b verworpen'. Kostenpoort binnen hoog-vol: gemiddeld bruto ≥ 3× gemiddelde kosten, anders geen toets.
 - Uitsluitend op 2011–2020; 2021–26 wordt voor S3b niet gebruikt (hindsight). Bron van de data: HistData óf de publieke Dukascopy-feed
   (P0, zelfde parser/formaat; bron wordt in de uitslag vermeld).
+
+## Aanpassing primaire drempel (M-009, standaardactie C / NEXT_STEPS v17 N8) — vastgelegd 2026-09-30 ≈ 10:25Z, vóór er een bestand in data/long_m1/ stond
+- **Bevestigd** vereist nu **eenzijdig dag-geclusterd t ≥ 2,0** (was t ≥ 2,5). Alle overige eisen ongewijzigd (beide helften positief,
+  ≥ 0,9 bp/trade, ≥ 2 van 3 indices positief; 'blijvend' = FTMO 2021–26 ≥ 0,9 bp én 2024–26 ≥ 0; verworpen = t < 1 of ≤ 0,5 bp).
+  S3b (vol-regime) houdt zijn eigen drempels. Periode wordt in de uitslag vermeld (Dukascopy-feed begint niet in 2011 → ≈ 2012–2020).
+- **Power-annex** (n8_power.py, results/n8/N8_output.txt; dag-blok-bootstrap 21 d uit de FTMO-ORB-trades 2021–26 van de 4 S3-symbolen,
+  3.000 simulaties): referentie FTMO 2021–26 op deze symbolen +3,38 bp/trade (2024–26 +1,65), dag-geclusterd t 2,90 (train 2,79 / test 1,12).
+  | wereld (9 jaar) | (A) t ≥ 2,5: bevestigd / onbeslist / verworpen | (B) eenzijdig t ≥ 2,0 |
+  |---|---|---|
+  | effect op 2021–26-niveau | 88% / 11% / 1% | 95% / 4% / 0% |
+  | effect gehalveerd | 18% / 56% / 26% | 33% / 41% / 26% |
+  | nul (bruto 0, netto −kosten) | 0% / 1% / 99% | 0% / 1% / 99% |
+  (10 jaar: 91/21/0% resp. 97/39/0% bevestigd.) Kanttekening: 'effect op 2021–26-niveau' neemt het steekproefgemiddelde als waarheid
+  (winnaarsvloek → optimistisch); de halvering is het realistischer scenario. Label 'blijvend' vs 'vervallen' hangt alleen af van de
+  vaste FTMO-referentie (nu: blijvend-voorwaarden vervuld).
