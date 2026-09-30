@@ -1,4 +1,4 @@
-# NEXT_STEPS v24 — Manager, 2026-09-30 15:40 Amsterdam — verwerkt D-042…D-054, run 3, PREREG_PORT (SHA 9f17d335…), Strateeg v2.6
+# NEXT_STEPS v25 — Manager, 2026-09-30 16:10 Amsterdam — verwerkt D-042…D-059, decompositie P-ETF-a, EUR-geldmarkt, Strateeg v2.7
 
 Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
 
@@ -23,6 +23,18 @@ Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). All
 1. **D2-uitbreiding (D-044, ≤ 3 u):** (a) TR/dividend (S&P, DAX, NDX) binnen bronvoorwaarden; (b) ≥ 20 instrumenten voor C54 (NZD/SEK/NOK-FX, Bund/JGB/Gilt-proxy's, agri/energie); (c) roll-schone zilver/koper/gas; (d) **FRED vanaf Debian ophalen en committen** (rentes, goud/CPI, FX); rate-limit, eerlijke UA, niets omzeilen.
 2. **Engine (D-045):** future-model-fix (FX = spot + renteverschil; doorlopende futures zonder rf-aftrek) blijft; opnemen in engine/README + ENGINE_TEMPLATE (Manager werkt ENGINE_TEMPLATE bij: zie §V).
 3. S3/P0 en F (forward) volgens bestaande punten hieronder.
+
+## 0g. D-055…D-059 (bindend) + Manager-QA — tijdlijn reserve-run
+**Tijdlijn:** shortlist bevroren **01-10 09:00**, één gezamenlijke reserve-run **01-10 12:00 Amsterdam** (individueel + de vier PREREG_PORT-portefeuilles; PREREG_PORT blijft bevroren; nieuwe sleeves → P2/PREREG_PORT2 ná de run). Forward-papier start 01-10 (cron 22:25 UTC). Rapportage reserve-run met CI (SR-SE ≈ 0,75): pass/fail alleen op teken + niet-significant-afwijkend.
+**Standaard in elk rapport (D-055):** drie regels — (1) cash-only nulbenchmark (T-bill/ESTR, USD én EUR), (2) 60/40, (3) strategie; oordeel = **alfa boven cash in €/mnd**, totaal ernaast; haircut 30–50% op excess. M-012 = BESLOTEN (D-055, optie C).
+**Stand decompositie (Uitvoerder-1, geen trial):** P-ETF-a SR 0,94 = diversificatie (C52 lang 0,81 + C02 0,47, lage corr.) + obligatiebull; zonder obligatie SR 0,79/DD 16,9%; 2001–10 1,09 · 2011–20 0,97 · **2021–24 0,53**; EUR: alfa €188–264 + EUR-cash ≈ €163 → ≈ €350–427/mnd vóór box 3; cash-only EUR ≈ €163.
+**QA-taken (geen trials):**
+1. **D-056 afmaken (Uitvoerder-2, `results/R2/decompositie.md`):** obligatieleg vervangen door échte IEF/TLT-reeksen (2002→) naast synthetisch en verschil rapporteren; 1970–2000 en 2022 apart; alles op excess.
+2. **Valuta-consistentie (Manager-opmerking):** alfa is berekend op USD-excess (t.o.v. USD-rf) en cash apart in EUR opgeteld → mengt USD-excess en EUR-cash. Rapporteer één consistent EUR-perspectief: EUR-belegger krijgt USD-ETF-excess ± valutaresultaat (ongehedged EURUSD-volatiliteit) of gehedged (kosten = renteverschil). Twee getallen (ongehedged/gehedged) i.p.v. één 'alfa'.
+3. **2021–24 SR 0,53** is de meest recente en dus meest representatieve (regime rente hoog); geef bij de verwachting expliciet 'ontdekking vs 2011–24 vs 2021–24' naast elkaar; oordeelsgetal = de conservatiefste redelijke.
+4. **D2-uitbreiding (Uitvoerder-1) af vóór 01-10 09:00** (TR/dividend, extra instrumenten C54, FRED-vervangers); anders draait de reserve-run zonder en wordt dat vermeld (D-057).
+5. **Run 4 (Uitvoerder-2):** prio-4 + v1.1-resten + Strateeg-v1.2-diversifiers (corr < 0,3 met C02/C52; uitvoerbaar bij €80k vooraf) — PREREG vóór resultaat; C16 (decay) en C44 (kleine N) krijgen labels.
+6. **EINDVERSLAG/H4 (Manager, klaar):** Sandro krijgt beide getallen (totaal en boven cash).
 
 ## 0f. Stand 15:40 + Manager-QA (bindend voor Uitvoerder-1/2; CEO-besluit over haircut: zie M-012)
 Uitvoerder-2 is weer actief (commit 15:32); PREREG_PORT staat (Uitvoerder-1, D-052, SHA `9f17d335…`, bevroren); forward-papier start 2026-10-01 (cron 22:25 UTC). Run 3: 435 trials; door de poort C16, C33, C44, C45, C55.

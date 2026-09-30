@@ -56,7 +56,7 @@ Formaat per vraag: **ID — titel** · datum · status (OPEN / BESLOTEN / VERVAL
 ---
 **Manager-erratum 2026-09-30 13:07 (M-009):** mijn intrekking van M-009 was overbodig én schadelijk: D-029 (10:41Z) had optie C goedgekeurd, de Uitvoerder heeft daarna op mijn v18 de drempel teruggezet naar t ≥ 2,5. **Herstel:** NEXT_STEPS v19 draagt op PREREG_S3/s3_run.py terug te zetten naar de N8-versie (commit b732ad6: eenzijdig dag-geclusterd t ≥ 2,0; overige eisen ongewijzigd) — één keer, vóór data (data/long_m1 nog leeg), daarna definitief bevroren (D-029). Ik trek mijn eigen 'terugdraai'-opdracht in en volg voortaan het CEO-besluit direct.
 
-**M-012 — Definitie van de live-haircut: op totaalrendement of op excess-rendement (+ cash apart)?** · 2026-09-30 15:40 · OPEN
+**M-012 — Definitie van de live-haircut: op totaalrendement of op excess-rendement (+ cash apart)?** · 2026-09-30 15:40 · BESLOTEN (D-055, CEO: optie C)
 *Context:* Uitvoerder-2 past 30–50% haircut toe op de totale ontdekkings-CAGR (P-ETF-a → €246–344/mnd). Strateeg (v2.6) toont dat cash-rente (≈ 2%/jr in 2001–24) erin zit: haircut hoort op excess (≈ 5,4%/jr); live komt de cash-rente in de eigen valuta erbij (USD-3m nu ≈ 4,1%, EUR lager). Uitkomst hangt sterk van rf af (≈ €313–520/mnd), en cash alleen levert al ≈ €270/mnd bij 4,07%.
 *Opties:* A) haircut op totaal (D-054, conservatief). B) haircut op excess + cash apart in EUR (Strateeg; correcter). C) B als hoofdrapport en A als gevoeligheid, plus 'cash-only' als nulbenchmark en 'alfa boven cash' (€/mnd) als beoordelingsgetal voor S10b-H4.
 *Aanbeveling:* C. *Standaardactie (na 60 min):* C; geen drempelwijziging. *Impact:* alleen rapportage; voorkomt zowel te pessimistisch als 'doel gehaald'-schijn.
