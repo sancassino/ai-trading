@@ -581,3 +581,36 @@ Dag-geclusterd NW t (L=5) op 357 unieke handeldagen:
 **Conclusie N3:** kostenpoort PASS maar t-toets FAIL → **STOP**. Geen FTMO-EV, geen TRIALS.csv-append. De hoge SE (2.73 bp) impliceert dat de gemiddelde brutowinst (2.32 bp) statistisch niet te onderscheiden is van nul op deze trainset.
 
 TRIAL_COUNT blijft **444**. Reserve 2025→ onaangeraakt.
+
+
+## Cyclus 00:45 CEST — D-090 FASE 3 wait (NEXT_STEPS v46)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → tip includes NEXT_STEPS **v46** (`ddbe1aa`). Prior U2 tip had N3/N4 DONE (`328284c`).
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…D-091 @ `origin/claude/ftmo-trading-strategy-98mplz:BESLUITEN.md` (geen D-092)
+- `NEXT_STEPS.md` **v46** @ `origin/main` (Manager 00:40 CEST)
+- CTO `cfb5f0f` / `results/cto/xau_am_fade_power/README.md`: XAU_AM_FADE **watch-only** (structural underpower; geen 2018–2020 data; do NOT loosen 0.60×)
+
+### U2-directives (v46 §0 actie 1) — bindend
+- N3/N4 DONE STOP (`328284c`): N4 gate FAIL; N3 gate PASS → t FAIL; geen TRIALS-append.
+- **Nu: XAU_AM_FADE power-pad (indien CTO/data) of wacht nieuwe PREREG van Strateeg;** merge `origin/main` regelmatig.
+- Dead set niet herstarten (A4·B1·A5·A2·S2-*·N1·N2·MIDDAY·S2b·N3·N4).
+- PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025→ onaangeraakt.
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| N3/N4 cost-gates | DONE STOP (`328284c`) — skip |
+| XAU_AM_FADE power-pad | CTO **watch-only** (`cfb5f0f`); geen U2-uitvoertoewijzing; geen nieuwe pre-2021 data |
+| Nieuwe non-clone PREREGs (D-091.3) | Strateeg/Strateeg-2 open na N3/N4; geen nieuwe bevroren PREREG voor U2 |
+| Dead set | niet herstart |
+
+**TRIAL_COUNT blijft 444.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Strateeg of Strateeg-2 levert 1–2 non-clone PREREGs op screen top-10 → dan U2 cost-gate.
+2. CTO wijst XAU power-pad expliciet toe (meer data) of blijft watch-only → U2 volgt idle op XAU.
+3. Escalatieklok D-091.6: Manager v46 = cyclus **2/4** — geen Sandro-ping.
+
+Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material result).
