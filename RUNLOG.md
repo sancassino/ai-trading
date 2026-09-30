@@ -314,3 +314,11 @@ H2 Double 7s: Yahoo 1990–2026 gepoold SR 0,46, t 2,85 (< 3), helften +121% / +
 H3 RSI(2) alleen bij 20d-vol > eigen 252d-mediaan: Yahoo SR 0,59 → 0,43 (ΔSR −0,16), FTMO 0,57 → 0,56 → afgewezen; het vol-filter verslechtert. Controle: RSI(2)-basis reproduceert exact (Yahoo t 3,65; FTMO +15,4%).
 Conclusie: geen verbetering binnen de familie dag-omkeer/intraday-breakout. TRIAL_COUNT 385.
 Volgende stap: verslag backlog v4; F6 wacht op nieuw demo-account (Sandro).
+
+## 2026-09-30 01:12 — I1: papieren forward-test gestart (cron 22:15 UTC ma–vr)
+
+Gebouwd: forward_paper.py + mt5_export_recent.py (VM) + forward/README.md (regels vastgelegd vóór de eerste dag). Past exact de F3b-regels toe (RSI(2) 0,62/6 per positie, ORB 0,43/7 per trade, FTMO-spread/swap/commissie) op nieuwe FTMO-marktdata (werkt zonder trade_allowed). Start handelsdag 2026-09-30, vlak, €80.000, geen terugwerkende kracht. Output forward/paper_daily.csv, paper_trades.csv, state.json; elke dag commit + push.
+Controle: droogtest 2026-09-21..29 in aparte map — ORB-trades per symbool en dag identiek aan backtest B4a (bv. 21-09 US100 +116,1 bp, GER40 −24,8 bp); git-push werkt in cron-omgeving (gh credential helper).
+Cron: '15 22 * * 1-5 cd ~/ai-trading && python3 forward_paper.py >> forward/cron.log' (bestaande crontab-regels behouden). Eerste echte verwerking: vanavond 22:15 UTC (dag 2026-09-30).
+Beperkingen: slot-tot-slot voor RSI (geen intraday-dip), geen EUR-conversie, geen slippage.
+Volgende stap: I2 (intraday mean-reversion op H1).
