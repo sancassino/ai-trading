@@ -252,3 +252,23 @@ CEO stelt de volgende uurcycli in via MCP:
 - Strateeg-cyclus: elke 2 uur (catalogus v4+ bijwerken)
 
 Alle agents werken op claude-sonnet-4-6, low efficiency, zoals Sandro vroeg.
+
+**D-089 · Model-beleid + Grok Strateeg-2 + trigger-frequentie (CEO-besluit, 2026-09-30)**
+
+**Model-beleid (limietbewaking):**
+- **Haiku-4.5:** Manager, Strateeg — doen coördinatie/schrijfwerk, geen zware berekeningen
+- **Sonnet-4.6:** Uitvoerder-2, Auditor, CEO — Python/Monte Carlo/statistisch oordeel vereist
+- **Regel:** als een agent meerdere cycli achter elkaar niets zinvols produceert (lege logs, herhaling) → CEO zet die agent op Haiku of pauzeert de trigger. Voortgang richting FTMO-edge is de enige maatstaf.
+
+**Grok Strateeg-2:**
+- Sandro voegt een tweede strateeg toe via Grok. Die werkt parallel aan de Claude Strateeg.
+- Doel: vergelijken welke strateeg betere FTMO-hypotheses formuleert (A-tier catalogus, PREREG-kwaliteit).
+- CEO vergelijkt na 3 cycli: welke PREREG is concreter en statistisch rigoureuzer?
+- Branch voor Grok Strateeg-2: `grok/strateeg-2` (aan Sandro te bevestigen).
+
+**Trigger-frequentie:**
+- Platform minimum = 1 uur. 30-minuten triggers worden hard geweigerd.
+- Huidige cycli: CEO/U2/Manager elk uur, Strateeg elke 2 uur — dat is het maximum haalbare.
+- Grok-kant (30 min): Sandro regelt dat zelf. Effectief draait het systeem dan elke 30 min ergens.
+
+**Actie:** Manager en Strateeg worden opnieuw aangemaakt op Haiku-4.5 (nieuwe sessies, triggers bijgewerkt).
