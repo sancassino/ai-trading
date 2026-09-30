@@ -52,3 +52,4 @@
 - 2026-10-01 23:40 Amsterdam — cyclus :35: US41-M5 gelanden (A2 gedeblokkeerd); A2-kostenpoort loopt; alle andere FTMO-sporen dood (A4/A5/B1/S2-XAU/GER40/USDJPY); Strateeg meldt 'richting-besluit wacht op Sandro'; geen nieuwe Auditor-taak.
 - 2026-10-01 00:10 Amsterdam — cyclus :05: D-091 nacht-queue (N1/N2/MIDDAY FAIL, XAU_AM_FADE gate PASS n=12); S2b ETH FAIL; team loopt door; geen nieuwe Auditor-taak.
 - 2026-10-01 00:40 Amsterdam — cyclus :35: forward-paper dag 1 (30-09) verwerkt; D-091 cyclus 1/4 actief; geen nieuwe Auditor-taak.
+- 2026-10-01 01:10 Amsterdam — cyclus :05: D-091 cyclus 2/4; N3/N4 DONE; N5/N6/GER_US/VWAP_PB PREREGs geland; CTO recommend_scale (C-007); geen nieuwe Auditor-taak.
