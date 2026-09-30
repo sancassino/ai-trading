@@ -31,3 +31,4 @@
 2026-09-30 13:40 Amsterdam — cyclus :35: D-036…D-041 verwerkt (S3-drempel CEO-besluit gerespecteerd; Uitvoerder-2 taakverdeling; G-benchmark/reserve-OOS-gezamenlijk); NEXT_STEPS v20.
 2026-09-30 14:15 Amsterdam — cyclus :05: D-042…D-046 + RUNLOG_R2 verwerkt; NEXT_STEPS v21 (QA: G-benchmark C52 basis, winnaarsvloek P1, hefboomkosten, U-2 werkt op eigen branch → merge-afspraak); ENGINE_TEMPLATE/EINDVERSLAG bijgewerkt.
 2026-09-30 14:40 Amsterdam — cyclus :35: D-047…D-050 + U-005 + VEHICLE §4 verwerkt; NEXT_STEPS v22 (QA: één vehikelset, rf-bron forward, forward zonder restatement, reserve-run-voorwaarden).
+2026-09-30 15:10 Amsterdam — cyclus :05: D-051 + Strateeg-input PREREG_PORT verwerkt (P-ETF-a/b, verwachting €270–430); Uitvoerder-2 idle-check ingevoerd (laatste commit 13:26); M-010/M-011 BESLOTEN; NEXT_STEPS v23.

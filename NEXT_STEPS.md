@@ -1,4 +1,4 @@
-# NEXT_STEPS v22 — Manager, 2026-09-30 14:40 Amsterdam — verwerkt D-042…D-050, RUNLOG_R2, U-005
+# NEXT_STEPS v23 — Manager, 2026-09-30 15:10 Amsterdam — verwerkt D-042…D-051, RUNLOG_R2, U-005, Strateeg-input PREREG_PORT
 
 Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
 
@@ -23,6 +23,12 @@ Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). All
 1. **D2-uitbreiding (D-044, ≤ 3 u):** (a) TR/dividend (S&P, DAX, NDX) binnen bronvoorwaarden; (b) ≥ 20 instrumenten voor C54 (NZD/SEK/NOK-FX, Bund/JGB/Gilt-proxy's, agri/energie); (c) roll-schone zilver/koper/gas; (d) **FRED vanaf Debian ophalen en committen** (rentes, goud/CPI, FX); rate-limit, eerlijke UA, niets omzeilen.
 2. **Engine (D-045):** future-model-fix (FX = spot + renteverschil; doorlopende futures zonder rf-aftrek) blijft; opnemen in engine/README + ENGINE_TEMPLATE (Manager werkt ENGINE_TEMPLATE bij: zie §V).
 3. S3/P0 en F (forward) volgens bestaande punten hieronder.
+
+## 0e. D-051 + Strateeg-input PREREG_PORT (v2.5) — Manager-akkoord
+- **Uitvoerder-2 was idle** (laatste commit 13:26 Amsterdam); CEO heeft hem gewekt + uurroutine (:25). **Manager-controle elke cyclus:** heeft `claude/uitvoerder2-r` een commit < 90 min? Zo niet → melding in VRAGEN_MANAGER (CEO wekt). Uitvoerder-2: begin elke beurt met `git fetch --all`, lees NEXT_STEPS/BESLUITEN, commit minstens per uur (ook tussenstand), zodat idle zichtbaar is.
+- **PREREG_PORT.md eerst (prioriteit 1, blokkeert forward D-050):** neem de Strateeg-punten over: 'P-ETF geen hefboom' ⟂ 'sleeves 10% vol' zijn tegenstrijdig (ongehefeld ≈ 4–7% vol). Leg vooraf vast **P-ETF-a ongehefeld** (adviesbasis/ondergrens; resultaat zoals het valt) en **P-ETF-b gehefeld** tot 10% vol (rente rf + 1,0–1,5% op geleend deel, ≤ 3×); plus rebalance maandelijks, geen trade < 1% gewichtsverschil, één valutabeleid (hedged óf ongehedged), één vehikelset (13 bp, TER 0,07%, SPX_TR). Vooraf vermelden: P-ETF-a ≈ CAGR 4–6,5% ontdekking ⇒ ≈ €270–430/mnd vóór haircut/box 3 → **onder het €400–500-doel**; niet achteraf als 'bijna gehaald' lezen. SHA vastleggen in RUNLOG_R2.
+- **Uitvoerder-1:** forward pas starten na commit PREREG_PORT; tot dan `forward/paper_daily.csv` (F3b) blijven loggen en data-snapshots (✔ append-only, ruw, tijdstempel) doorlopen.
+- VRAGEN_MANAGER: M-010/M-011 op BESLOTEN gezet.
 
 ## 0d. D-047…D-050 (bindend) + Manager-QA
 **Uitvoerder-2 (vóór de reserve-run, naast run 3; geen extra trials, alleen vehikelrapporten):** (1) `cfd_retail` (−1,5%/jr op |notional|, beide kanten, + spread; 2× S0 gevoeligheid) voor C54qa, C05, C02, C17, C52; (2) `future_rounded` (hele micro-contracten bij €80k; 16 én 6–8 instrumenten; tracking-error, aantal nul-contracten); (3) **drie portefeuilles overal naast elkaar: P-ETF** (C52 lang + C02 + C17, geen hefboom/shorts; **dit is de adviesbasis**), **P1** (bovengrens) en **P-breed** (alle sleeves gelijk); (4) EUR-perspectief incl. hedged-variant; (5) live-haircut 30–50% expliciet in elk rapport.
