@@ -65,3 +65,11 @@ nacht 4+ +8,8 bp (t 5,0); dagsegmenten ≈ 0. FTMO idem maar zwakker (nacht 2 +1
 Yahoo t 3,05 / 3,59, FTMO t 1,79 / 1,53 → afgewezen op FTMO-t (te weinig power in 5,7 jaar), terwijl het dagverlies bij
 €150/mnd-schaal beheersbaar is (2,8% / 3,6%). RSI(2) onder FTMO is dus geen schaalprobleem van nacht 3+, maar een kleine
 overnight-premie die op de korte FTMO-historie statistisch niet hard te maken is.
+
+## Update backlog v7 (2026-09-30)
+- Lange onafhankelijke intraday-data (L1) niet verkrijgbaar via een gratis, geautomatiseerd toegestane bron (Dukascopy:
+  rate-limit, bulk alleen via betaalde AWS-S3; HistData: geautomatiseerde download geblokkeerd, betaald abonnement). ORB kan
+  daardoor niet buiten 2021–26 bevestigd worden (blijft 'PIEK', t test 1,1).
+- Pre-FOMC op 1994–2026 (SPY-dagproxy): klassiek effect 1994–2011 (+34 bp, t 3,3), sinds 2012 grotendeels weg (+10 bp, t 0,9)
+  → geen betrouwbare sleeve.
+- Plafond ongewijzigd: **≈ €100–250/mnd** (in wezen de kleine RSI(2)-overnight-premie, evt. met ORB), kans op €880+ < 5%.
