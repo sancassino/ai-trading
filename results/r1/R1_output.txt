@@ -1,0 +1,31 @@
+Stap 1 — kosten per symbool in de modeluren (per kant, bp): mediane halve spread + commissie
+  EURUSD  spread 0.18 bp (half 0.09) + commissie 0.23 → per kant 0.32 bp < 0,8
+  GBPUSD  spread 0.18 bp (half 0.09) + commissie 0.19 → per kant 0.28 bp < 0,8
+  USDJPY  spread 0.19 bp (half 0.10) + commissie 0.26 → per kant 0.35 bp < 0,8
+  AUDUSD  spread 0.44 bp (half 0.22) + commissie 0.39 → per kant 0.61 bp < 0,8
+  USDCAD  spread 0.22 bp (half 0.11) + commissie 0.26 → per kant 0.37 bp < 0,8
+  USDCHF  spread 0.33 bp (half 0.17) + commissie 0.26 → per kant 0.42 bp < 0,8
+  NZDUSD  spread 0.85 bp (half 0.42) + commissie 0.43 → per kant 0.86 bp 
+  EURGBP  spread 0.47 bp (half 0.23) + commissie 0.23 → per kant 0.46 bp < 0,8
+  EURJPY  spread 0.53 bp (half 0.27) + commissie 0.23 → per kant 0.49 bp < 0,8
+  GBPJPY  spread 0.49 bp (half 0.25) + commissie 0.19 → per kant 0.44 bp < 0,8
+  AUDJPY  spread 0.61 bp (half 0.31) + commissie 0.39 → per kant 0.69 bp < 0,8
+  EURCHF  spread 0.52 bp (half 0.26) + commissie 0.23 → per kant 0.48 bp < 0,8
+  EURAUD  spread 0.45 bp (half 0.22) + commissie 0.23 → per kant 0.45 bp < 0,8
+  GBPAUD  spread 0.56 bp (half 0.28) + commissie 0.19 → per kant 0.47 bp < 0,8
+  XAUUSD  spread 0.42 bp (half 0.21) + commissie 0.11 → per kant 0.32 bp < 0,8
+
+H=3 (15 min): N 120916 (effectief 61710) | netto -1.01 bp | OOS t -30.58 | jaren+ 0/5 | SR na kosten -9.86
+   per jaar: 2022:-0.89(34158) 2023:-0.94(21384) 2024:-1.09(25381) 2025:-1.13(22896) 2026:-1.08(17097)
+   per symbool t: EURUSD:-5.8 GBPUSD:-5.3 USDJPY:-5.8 AUDUSD:-12.2 USDCAD:-4.3 USDCHF:-7.2 NZDUSD:-18.1 EURGBP:-5.7 EURJPY:-9.1 GBPJPY:-7.4 AUDJPY:-14.4 EURCHF:-4.4 EURAUD:-8.3 GBPAUD:-6.7 XAUUSD:-8.1
+   → afgewezen (OOS t < 3 of < 4/5 jaren positief)
+
+H=6 (30 min): N 80001 (effectief 47892) | netto -1.02 bp | OOS t -18.72 | jaren+ 0/5 | SR na kosten -6.24
+   per jaar: 2022:-0.70(22669) 2023:-1.05(14552) 2024:-1.13(17130) 2025:-1.10(14813) 2026:-1.33(10837)
+   per symbool t: EURUSD:-2.8 GBPUSD:-5.6 USDJPY:-4.6 AUDUSD:-8.1 USDCAD:-2.6 USDCHF:-5.4 NZDUSD:-10.5 EURGBP:-3.9 EURJPY:-4.5 GBPJPY:-4.9 AUDJPY:-8.1 EURCHF:-4.6 EURAUD:-4.5 GBPAUD:-4.7 XAUUSD:-3.6
+   → afgewezen (OOS t < 3 of < 4/5 jaren positief)
+
+H=12 (60 min): N 50191 (effectief 33129) | netto -0.96 bp | OOS t -10.44 | jaren+ 0/5 | SR na kosten -3.45
+   per jaar: 2022:-0.65(13917) 2023:-0.62(9338) 2024:-1.25(10762) 2025:-1.37(9517) 2026:-1.01(6657)
+   per symbool t: EURUSD:-0.8 GBPUSD:-2.8 USDJPY:-3.1 AUDUSD:-5.5 USDCAD:-2.5 USDCHF:-3.5 NZDUSD:-6.5 EURGBP:-2.5 EURJPY:-2.7 GBPJPY:-3.0 AUDJPY:-4.9 EURCHF:-2.0 EURAUD:-1.4 GBPAUD:-1.5 XAUUSD:-1.0
+   → afgewezen (OOS t < 3 of < 4/5 jaren positief)

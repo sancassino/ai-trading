@@ -533,3 +533,11 @@ Na R3 (dip-profiel bepaalt de vereiste SR) de frontier op de MT5-dagreeks van OR
 Beste schaal 5× (≈ 5/7 equity per trade; ≈ 21% jaarvol): historisch 2-Step €484/mnd (Scaling €513), P(netto<0) 22%, funded 94%; −50% drift €232–244 (42%); met G1-kosten (≈ −70% drift) €155–164 (50%); nul-drift (optiewaarde) €64–69 (61%).
 Interpretatie: bij een elke-dag-vlak, positief scheef profiel ligt de lat veel lager dan Q1b (SR 3–4 was het gevolg van de RSI(2)-dips). De ORB-edge zelf is ≈ €420/mnd waard boven de optiewaarde — maar precies ORB is onbevestigd buiten 2021–26 (train-t 2,9 / test-t 1,1, 'PIEK', kostengevoelig). Daarom krijgt de lange-data-toets (L2, DATA_REQUEST_SANDRO.md) nu prioriteit; en nieuwe sleeves moeten 'dagelijks vlak + positief scheef' zijn.
 Volgende stap: R1 (FX-ML).
+
+## 2026-09-30 08:23 — R1: machine learning op FX-breedte — alle 3 horizons AFGEWEZEN (bruto edge ≈ 0)
+
+Getest (PREREG_R1.md vóór berekening): r1_fx_ml.py, 14 FX-paren + XAUUSD, FTMO-M5 2021–26 (13 paren nieuw geëxporteerd), 07:00–17:00 Londen, Q4-features + cross-paar (USD-index-proxy, driehoeksafwijking EURUSD·USDJPY/EURJPY, referentiepaar-12-bar), LightGBM vaste parameters, walk-forward 6→1 mnd met purging, training op elke 4e rij.
+Stap 1 kosten per kant (halve spread + commissie): EURUSD 0,32 bp, GBPUSD 0,28, USDJPY 0,35, USDCAD 0,37, XAU 0,32, USDCHF 0,42, EURAUD 0,45, EURGBP 0,46, GBPAUD 0,47, EURCHF 0,48, EURJPY 0,49, GBPJPY 0,44, AUDUSD 0,61, AUDJPY 0,69, NZDUSD 0,86 → 14/15 onder 0,8 bp.
+Stap 2 OOS: 15 min N 120.916 (eff. 61.710), −1,01 bp/trade, t −30,6, SR −9,9; 30 min N 80.001, −1,02 bp, t −18,7; 60 min N 50.191, −0,96 bp, t −10,4; 0/5 jaar positief, alle 15 symbolen negatief.
+Conclusie: ook bij zeer lage kosten is de bruto voorspellende waarde ≈ 0; netto verlies ≈ de round-trip-kosten. TRIAL_COUNT 407.
+Volgende stap: R2 (aandelen cross-sectioneel ML).
