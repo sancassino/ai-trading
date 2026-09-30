@@ -1,0 +1,77 @@
+# FTMO-kosten alle symbolen met M5-data (2024–2026, D-086). Spread = M5-barspread (bp), bars met spread 0 = ontbrekend (aandeel in 'aandeel_spread0');
+# beste uur = NY-uur met laagste mediaan (≥ 200 bars); rondreis = mediaan + 2× commissie. Aandelen: veel spread-0-bars → mediaan onzeker (Q2 mat ≈ 2,9 bp rondreis).
+symbol;spread_med_bp;spread_p90_bp;spread_med_beste_uur_bp;beste_uur_NY;commissie_bp_per_kant;rondreis_bp;commissie_bron;aandeel_spread0
+AAPL;3.21;4.74;3.19;15;0.20;3.61;0,002%/kant (aandelen, Q2-aanname);0.00
+AMD;3.42;4.82;3.01;15;0.20;3.82;0,002%/kant (aandelen, Q2-aanname);0.81
+AMZN;3.90;4.85;3.85;15;0.20;4.30;0,002%/kant (aandelen, Q2-aanname);0.00
+ASML;2.52;4.55;2.25;15;0.20;2.92;0,002%/kant (aandelen, Q2-aanname);0.74
+AUDJPY;0.84;1.29;0.79;11;0.39;1.61;FX €2,25/lot/kant (MT5-deals);0.00
+AUDUSD;0.45;0.78;0.44;11;0.39;1.22;FX €2,25/lot/kant (MT5-deals);0.00
+AUS200cash;1.36;2.39;1.22;20;0.00;1.36;0 (indices/olie; indices bevestigd);0.00
+AVGO;3.02;3.88;2.75;15;0.20;3.42;0,002%/kant (aandelen, Q2-aanname);0.75
+AZN;6.77;9.23;6.24;15;0.20;7.17;0,002%/kant (aandelen, Q2-aanname);0.77
+BA;5.56;7.10;4.77;15;0.20;5.96;0,002%/kant (aandelen, Q2-aanname);0.75
+BABA;6.44;9.07;6.15;15;0.20;6.84;0,002%/kant (aandelen, Q2-aanname);0.00
+BAC;16.74;22.17;16.33;9;0.20;17.14;0,002%/kant (aandelen, Q2-aanname);0.00
+BRK.B;2.57;3.31;2.25;15;0.20;2.97;0,002%/kant (aandelen, Q2-aanname);0.75
+BTCUSD;0.85;3.77;0.40;10;0.20;1.25;0,002%/kant (aandelen, Q2-aanname);0.06
+CSCO;8.37;11.50;8.26;14;0.20;8.77;0,002%/kant (aandelen, Q2-aanname);0.75
+CVX;4.90;5.56;4.80;15;0.20;5.30;0,002%/kant (aandelen, Q2-aanname);0.75
+DIS;8.80;9.43;8.70;15;0.20;9.20;0,002%/kant (aandelen, Q2-aanname);0.75
+ETHUSD;7.58;17.99;7.38;18;0.20;7.98;0,002%/kant (aandelen, Q2-aanname);0.00
+EU50cash;2.96;3.48;2.38;14;0.00;2.96;0 (indices/olie; indices bevestigd);0.00
+EURAUD;0.66;0.96;0.62;5;0.23;1.11;FX €2,25/lot/kant (MT5-deals);0.00
+EURCHF;0.75;1.07;0.65;11;0.23;1.20;FX €2,25/lot/kant (MT5-deals);0.00
+EURGBP;0.59;0.85;0.58;5;0.23;1.04;FX €2,25/lot/kant (MT5-deals);0.00
+EURJPY;0.65;0.91;0.60;11;0.23;1.10;FX €2,25/lot/kant (MT5-deals);0.00
+EURUSD;0.18;0.28;0.18;18;0.23;0.63;FX €2,25/lot/kant (MT5-deals);0.27
+FDX;6.03;9.84;4.49;15;0.20;6.43;0,002%/kant (aandelen, Q2-aanname);0.74
+FRA40cash;1.98;10.14;1.94;8;0.00;1.98;0 (indices/olie; indices bevestigd);0.00
+GBPAUD;0.80;1.12;0.74;11;0.19;1.18;FX €2,25/lot/kant (MT5-deals);0.00
+GBPJPY;0.72;1.02;0.66;11;0.19;1.11;FX €2,25/lot/kant (MT5-deals);0.00
+GBPUSD;0.31;0.54;0.30;11;0.19;0.70;FX €2,25/lot/kant (MT5-deals);0.00
+GE;4.00;5.49;3.35;15;0.20;4.40;0,002%/kant (aandelen, Q2-aanname);0.75
+GER40cash;0.72;2.78;0.47;7;0.00;0.72;0 (indices/olie; indices bevestigd);0.00
+GME;40.14;47.49;39.95;14;0.20;40.54;0,002%/kant (aandelen, Q2-aanname);0.74
+GOOG;3.04;5.68;2.92;15;0.20;3.44;0,002%/kant (aandelen, Q2-aanname);0.00
+HK50cash;2.63;11.30;2.41;3;0.00;2.63;0 (indices/olie; indices bevestigd);0.00
+IBM;4.99;6.38;4.26;15;0.20;5.39;0,002%/kant (aandelen, Q2-aanname);0.75
+INTC;9.50;19.97;9.39;13;0.20;9.90;0,002%/kant (aandelen, Q2-aanname);0.75
+JNJ;4.40;5.43;3.95;15;0.20;4.80;0,002%/kant (aandelen, Q2-aanname);0.75
+JP225cash;1.51;2.56;1.46;22;0.00;1.51;0 (indices/olie; indices bevestigd);0.00
+JPM;3.35;4.07;3.00;15;0.20;3.75;0,002%/kant (aandelen, Q2-aanname);0.75
+KO;11.19;11.89;11.18;9;0.20;11.59;0,002%/kant (aandelen, Q2-aanname);0.75
+LMT;4.58;7.18;3.35;15;0.20;4.98;0,002%/kant (aandelen, Q2-aanname);0.74
+META;2.12;3.00;1.94;15;0.20;2.52;0,002%/kant (aandelen, Q2-aanname);0.00
+MSFT;2.08;2.84;1.97;15;0.20;2.48;0,002%/kant (aandelen, Q2-aanname);0.00
+MSTR;8.23;10.90;7.52;15;0.20;8.63;0,002%/kant (aandelen, Q2-aanname);0.75
+N25cash;5.62;16.57;5.60;6;0.00;5.62;0 (indices/olie; indices bevestigd);0.00
+NFLX;3.60;25.59;3.23;15;0.20;4.00;0,002%/kant (aandelen, Q2-aanname);0.06
+NKE;20.56;23.50;20.39;15;0.20;20.96;0,002%/kant (aandelen, Q2-aanname);0.75
+NVDA;4.91;7.05;4.90;12;0.20;5.31;0,002%/kant (aandelen, Q2-aanname);0.12
+NZDUSD;0.98;1.40;0.88;11;0.43;1.85;FX €2,25/lot/kant (MT5-deals);0.00
+PFE;36.55;41.44;36.40;15;0.20;36.95;0,002%/kant (aandelen, Q2-aanname);0.00
+PLTR;6.41;7.51;6.24;15;0.20;6.81;0,002%/kant (aandelen, Q2-aanname);0.77
+QCOM;6.80;8.11;6.30;15;0.20;7.20;0,002%/kant (aandelen, Q2-aanname);0.75
+RACE;10.49;18.05;9.07;15;0.20;10.89;0,002%/kant (aandelen, Q2-aanname);0.00
+RTX;6.13;7.94;5.22;15;0.20;6.53;0,002%/kant (aandelen, Q2-aanname);0.75
+SBUX;9.41;10.70;9.10;15;0.20;9.81;0,002%/kant (aandelen, Q2-aanname);0.75
+SPN35cash;4.09;5.71;3.83;14;0.00;4.09;0 (indices/olie; indices bevestigd);0.00
+T;35.31;41.20;34.93;9;0.20;35.71;0,002%/kant (aandelen, Q2-aanname);0.00
+TSLA;2.48;3.61;2.38;15;0.20;2.88;0,002%/kant (aandelen, Q2-aanname);0.00
+UK100cash;1.42;5.13;0.88;6;0.00;1.42;0 (indices/olie; indices bevestigd);0.00
+UKOILcash;2.71;7.36;2.67;0;0.00;2.71;0 (indices/olie; indices bevestigd);0.00
+US100cash;0.66;1.09;0.46;13;0.00;0.66;0 (indices/olie; indices bevestigd);0.00
+US2000cash;3.49;5.11;3.22;15;0.00;3.49;0 (indices/olie; indices bevestigd);0.00
+US30cash;0.45;0.63;0.39;13;0.00;0.45;0 (indices/olie; indices bevestigd);0.00
+US500cash;0.78;1.19;0.65;12;0.00;0.78;0 (indices/olie; indices bevestigd);0.00
+USDCAD;0.29;0.44;0.22;5;0.26;0.80;FX €2,25/lot/kant (MT5-deals);0.00
+USDCHF;0.50;0.77;0.44;5;0.26;1.01;FX €2,25/lot/kant (MT5-deals);0.00
+USDJPY;0.27;0.49;0.26;13;0.26;0.78;FX €2,25/lot/kant (MT5-deals);0.00
+USOILcash;3.34;8.55;2.82;0;0.00;3.34;0 (indices/olie; indices bevestigd);0.00
+V;3.19;4.46;2.97;15;0.20;3.59;0,002%/kant (aandelen, Q2-aanname);0.00
+WMT;8.96;11.95;8.91;15;0.20;9.36;0,002%/kant (aandelen, Q2-aanname);0.05
+XAGUSD;4.92;8.38;4.24;11;0.07;5.07;€2,00/lot/kant (aangenomen);0.00
+XAUUSD;0.72;1.08;0.68;4;0.05;0.83;€2,00/lot/kant (MT5-deals);0.00
+XOM;6.01;6.66;5.94;15;0.20;6.41;0,002%/kant (aandelen, Q2-aanname);0.75
+ZM;11.58;15.21;10.89;15;0.20;11.98;0,002%/kant (aandelen, Q2-aanname);0.00
