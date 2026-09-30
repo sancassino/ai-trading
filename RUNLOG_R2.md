@@ -548,3 +548,36 @@ Scripts: `scripts/n1_cost_gate_train.py`, `n2_cost_gate_train.py`, `s2_midday_vw
 3. Escalatieklok D-091.6: na D-091 nacht-queue = cyclus 1 met 1 gate-PASS zonder power — geen Sandro-ping.
 
 Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material result).
+
+
+## Cyclus 22:25 UTC (2026-09-30) — N3/N4 cost-gate (PREREG e39e9c6)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` (NEXT_STEPS v45). PREREGs N3+N4 gecommit door Strateeg (`579a3e5` op `origin/claude/trusting-faraday-34tsmg`), ingebed in branch als `e39e9c6` **vóór enig resultaat**.
+
+**Scripts:** `scripts/n3_cost_gate_train.py`, `scripts/n4_cost_gate_train.py`. Data: `data/m5gz/US100cash.csv.gz` en `data/m5gz/XAUUSD.csv.gz` (XAUUSD, niet XAUUSDcash — PREREG noemt XAUUSDcash maar enige aanwezige bestand is XAUUSD.csv.gz). Train: 2021-01-01…2023-12-31. Reserve 2025→ **niet aangeraakt**.
+
+### Kostenpoort-resultaten
+
+| Sleeve | N | mean bruto | gate (3×RT) | Uitkomst |
+|--------|---|-----------|-------------|---------|
+| N3 US100 Close-Drive (RT 0.60 bp) | 357 | +2.3245 bp | 1.80 bp | **PASS** |
+| N4 XAU Pre-NY Breakout (RT 0.83 bp) | 701 | +1.1561 bp | 2.49 bp | **FAIL → STOP** |
+
+**N4 STOP:** mean bruto 1.1561 bp < gate 2.49 bp → geen trial, geen ftmo_ev. Resultaten in `results/R2/n4_prep/`.
+
+**N3 PASS:** mean bruto 2.3245 bp ≥ gate 1.80 bp → door naar t-test + ftmo_ev. Resultaten in `results/R2/n3_prep/`.
+
+### Volgende stap (N3)
+- Dag-geclusterd Newey-West t-toets (bruto_bp, L=5) op N=357 trades
+- ftmo_ev op dagrendement-reeks (PREREG: auto_scale, restart=True)
+- Indien t ≥ drempel én ftmo_ev positief: TRIALS.csv append (TRIAL_COUNT 444→445)
+- PREREG vóór uitbreiding naar OOS of live — **nog niet gedaan**
+
+### N3 t-test uitkomst
+Dag-geclusterd NW t (L=5) op 357 unieke handeldagen:
+- mu = 2.3245 bp, SE_NW = 2.7250 bp → **t = 0.853**
+- p (one-tail) ≈ 0.197 → FAIL; ruimschoots boven BH-drempel (q=0.10, TRIAL_COUNT~444)
+
+**Conclusie N3:** kostenpoort PASS maar t-toets FAIL → **STOP**. Geen FTMO-EV, geen TRIALS.csv-append. De hoge SE (2.73 bp) impliceert dat de gemiddelde brutowinst (2.32 bp) statistisch niet te onderscheiden is van nul op deze trainset.
+
+TRIAL_COUNT blijft **444**. Reserve 2025→ onaangeraakt.
