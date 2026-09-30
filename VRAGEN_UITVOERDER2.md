@@ -37,3 +37,4 @@ D-085 §2 geeft richting: FTMO-EV als maatstaf, FTMO-compatible strategiefamilie
 3. Kortetermijntrend op FTMO-indices (dagslot tot volgende dag, lage swap door korte houdduur)
 4. Bestaande C02/C17 op FTMO maar geschaald voor dagverlies-beheer
 **Standaardactie:** wachten op NEXT_STEPS v33+ of CEO-instructie; geen nieuwe catalogusruns zonder richting.
+**Update (cyclus 20:25 UTC):** NEXT_STEPS v36 + Strateeg PREREGs geven richting: A4=C17 ✅, A5=FX-ORB (EURUSD M5 aanwezig), B1=TSMOM-mix FX. R2-008 → **BESLOTEN**.

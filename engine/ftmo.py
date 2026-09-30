@@ -1,273 +1,323 @@
-"""engine/ftmo.py — FTMO-EV module (D-085/D-086).
+"""Monte Carlo FTMO-EV simulator (D-085 / FASE 3).
 
-Rekent voor een dagelijkse overschot-rendements-reeks:
-  p_phase1, p_funded, ev_per_attempt (€), breach_live, payout_per_month_given_funded
+Vectorized block-bootstrap over daily return paths. Aligns with
+`q1_frontier.py` (numpy paths, restart-on-breach, fee refund) and
+`ftmo_economics.py` / `mc_daily_ftmo.py` (2-Step rules).
 
-FTMO 2-Step (regels per 30-09-2026, aanname fee €540, split 80%, account €80.000):
-  Fase 1: doel +10% op startkapitaal, max dagverlies 5% van startkapitaal (op balance 00:00),
-          max totaalverlies 10% statisch, ≥ 4 handelsdagen, geen tijdslimiet.
-  Fase 2: doel +5%, overige regels identiek.
-  Funded: 12 maanden papier; maandelijks: als equity > startkapitaal → uitbetaling (equity − start) × split;
-          balance teruggeslagen naar start.
-  Fee-restitutie: bij de eerste uitbetaling wordt de fee terugbetaald.
+Rules (FTMO 2-Step, static; unverified amounts marked as assumptions):
+  - Phase 1 profit target +10%, phase 2 +5%, each min ``min_days`` trading days
+  - Max daily loss: ``max_daily_loss`` of *initial* account (static), measured
+    on equity including floating P&L (intraday trough via ``daily_drawdowns``,
+    else close-to-close loss as proxy — see ``ftmo_economics`` caveat)
+  - Max loss: ``max_dd`` of *initial* account (static floor at 1 - max_dd)
+  - Funded: monthly payout of profit above start × ``split`` (default 80%);
+    challenge ``fee`` refunded on first payout (assumption)
+  - On breach: new fee + restart phase 1 (models ongoing attempts over horizon)
 
-Bootstrap: blok-bootstrap op dagrendementen (standaard bloklengte 21, ~1 handelsmaand).
-  Serie kan korter zijn (2015→ voor C54qa); power-caveat bij < 15 jaar.
+Returns dict with at least:
+  p_pass_1, p_pass_2, p_survive, exp_payout_monthly, net_ev
 
-Publieke API:
-  ftmo_ev(daily_total_rets, *, account, fee, split, phase1, phase2, block, n_sims, seed) -> dict
-  ev_from_series(path, *, start_date, ...) -> dict   (leest date;excess;total CSV)
-  ev_shortlist(series_dir, rules, ...) -> list[dict] (batch over sleeves)
-
-Benadering: dagverlies gemeten op slot-tot-slot (geen intraday low); floating equity = dagrendement
-toegepast op equity bij dagstart.
+Smoke test:
+  python -m engine.ftmo
+  python -m engine.ftmo --csv results/f/F1_RSI2_swapcorr_daily.csv --scale 1.0
 """
 from __future__ import annotations
-import os
-import random
-import math
+
+import argparse
+import csv
+import sys
+
 import numpy as np
-from datetime import date
 
-# ── FTMO-standaardparameters (aannames; FTMO-website 30-09-2026, niet gegarandeerd) ──
-FTMO_ACCOUNT   = 80_000.0   # EUR
-FTMO_FEE       = 540.0      # EUR (aanname, niet bevestigd)
-FTMO_SPLIT     = 0.80       # winstsplit funded
-FTMO_PHASE1    = 0.10       # winstdoel fase 1
-FTMO_PHASE2    = 0.05       # winstdoel fase 2
-FTMO_DAY_LOSS  = 0.05       # max dagverlies (balance 00:00 - 5% van startkapitaal)
-FTMO_MAX_LOSS  = 0.10       # statisch max totaalverlies
-FTMO_MIN_DAYS  = 4          # min handelsdagen per fase
-FTMO_BLOCK     = 21         # bootstrap-bloklengte (dagelijks; ~1 maand)
-
-
-def _run_phase(rets_iter: "generator", target: float | None, account: float,
-               day_loss_frac: float, max_loss_frac: float, min_days: int,
-               max_days: int) -> tuple[str, float]:
-    """Simuleer één FTMO-fase.  Retourneert ('pass'|'fail', eindequity_frac_van_startkapitaal)."""
-    eq = 1.0               # fractie van startkapitaal
-    balance_start = 1.0   # dagstart-balance (teruggeslagen naar 1 na elke dag, zie FTMO-regels)
-    days = 0
-    while days < max_days:
-        r = next(rets_iter)
-        days += 1
-        day_loss = max(0.0, balance_start - eq * (1 + r))  # verlies t.o.v. balance_start
-        eq *= 1 + r
-        if day_loss >= day_loss_frac or eq <= 1 - max_loss_frac:
-            return "fail", eq
-        balance_start = eq  # volgende dag begint met huidige equity als balance
-        if target is not None and eq >= 1 + target and days >= min_days:
-            return "pass", eq
-    return "timeout" if target is not None else "done", eq
+# Defaults match D-083 / D-085 assumptions (€80k, fee €540 unverified, 80% split)
+DEFAULT_FEE = 540.0
+DEFAULT_ACCOUNT = 80_000.0
+DEFAULT_SPLIT = 0.8
+DEFAULT_PHASE1 = 0.10
+DEFAULT_PHASE2 = 0.05
+DEFAULT_DAILY_LOSS = 0.05
+DEFAULT_MAX_DD = 0.10
+DEFAULT_MIN_DAYS = 4
+DEFAULT_HORIZON = 504   # ~24 trading months
+DEFAULT_BLOCK = 21      # ~1 calendar month
+DEFAULT_PATHS = 20_000
+DEFAULT_LIVE_MONTHS = 12
 
 
-def _run_funded(rets_iter: "generator", account: float, fee: float, split: float,
-                day_loss_frac: float, max_loss_frac: float,
-                live_months: int, days_per_month: int) -> tuple[float, float, bool]:
-    """Simuleer funded-fase.  Retourneert (gross_payout, fee_restitutie, breached)."""
-    eq = 1.0
-    total_payout = 0.0
-    fee_restored = False
-    for _ in range(live_months):
-        balance_start_month = eq
-        breached_month = False
-        for _ in range(days_per_month):
-            r = next(rets_iter)
-            day_loss = max(0.0, eq - eq * (1 + r))  # slot-tot-slot benadering
-            eq *= 1 + r
-            if eq - balance_start_month < -day_loss_frac or eq < 1 - max_loss_frac:
-                breached_month = True
-                break
-        if breached_month:
-            return total_payout * account, (fee if fee_restored else 0.0), True
-        if eq > 1.0:
-            payout = (eq - 1.0) * split * account
-            total_payout += eq - 1.0
-            if not fee_restored and payout > 0:
-                fee_restored = True
-            eq = 1.0
-    return total_payout * account, (fee if fee_restored else 0.0), False
+def load_daily_equity_csv(path: str, account: float = DEFAULT_ACCOUNT):
+    """Load (returns, drawdowns) from an MT5-style daily equity CSV
+    (columns: start_balance, min_equity, end_equity — same as q1_frontier).
+
+    ``drawdowns[i]`` = max(0, (start_balance - min_equity) / account) so that
+    floating P&L troughs count toward the 5% daily-loss rule.
+    """
+    rows = [r for r in csv.DictReader(open(path, encoding="utf-8-sig"), delimiter=";") if r.get("date") or r.get("end_equity")]
+    r, d, prev = [], [], account
+    for x in rows:
+        sb = float(x.get("start_balance", prev))
+        mn = float(x.get("min_equity", x["end_equity"]))
+        en = float(x["end_equity"])
+        r.append(en / prev - 1.0)
+        d.append(max(0.0, (sb - mn) / account))
+        prev = en
+    return np.asarray(r, float), np.asarray(d, float)
 
 
 def ftmo_ev(
-    daily_total_rets: np.ndarray,
+    daily_returns,
+    fee: float = DEFAULT_FEE,
+    account: float = DEFAULT_ACCOUNT,
+    split: float = DEFAULT_SPLIT,
+    phase1_target: float = DEFAULT_PHASE1,
+    phase2_target: float = DEFAULT_PHASE2,
+    max_daily_loss: float = DEFAULT_DAILY_LOSS,
+    max_dd: float = DEFAULT_MAX_DD,
+    min_days: int = DEFAULT_MIN_DAYS,
     *,
-    account: float = FTMO_ACCOUNT,
-    fee: float = FTMO_FEE,
-    split: float = FTMO_SPLIT,
-    phase1: float = FTMO_PHASE1,
-    phase2: float = FTMO_PHASE2,
-    day_loss: float = FTMO_DAY_LOSS,
-    max_loss: float = FTMO_MAX_LOSS,
-    min_days: int = FTMO_MIN_DAYS,
-    block: int = FTMO_BLOCK,
-    n_sims: int = 10_000,
-    seed: int = 42,
-    max_months: int = 24,
-    live_months: int = 12,
-    days_per_month: int = 21,
-) -> dict:
-    """Bereken FTMO-EV voor een numpy array van dagelijkse total-return rendementen.
+    daily_drawdowns=None,
+    n_paths: int = DEFAULT_PATHS,
+    horizon: int = DEFAULT_HORIZON,
+    block: int = DEFAULT_BLOCK,
+    live_months: int = DEFAULT_LIVE_MONTHS,
+    scale: float = 1.0,
+    seed: int = 7,
+    restart: bool = True,
+):
+    """Monte Carlo FTMO-EV simulator.
 
     Parameters
     ----------
-    daily_total_rets : dagelijkse totaalrendementen (inclusief rf/swap/kosten).
-    account          : accountgrootte in EUR.
-    fee              : FTMO-challenge-fee in EUR (aanname).
-    split            : winstsplit (funded).
-    phase1 / phase2  : winstdoelen fase 1 / 2.
-    day_loss         : max dagverlies als fractie van startkapitaal.
-    max_loss         : statisch max totaalverlies (fractie).
-    min_days         : min handelsdagen per fase.
-    block            : bootstrap-bloklengte (dagen).
-    n_sims           : aantal simulaties.
-    seed             : random seed.
-    max_months       : max duur per fase (maanden; praktische bovengrens).
-    live_months      : duur funded-fase (maanden).
-    days_per_month   : handelsdagen per maand in de simulatie.
+    daily_returns : array-like
+        Fractional day-over-day equity returns (close-to-close).
+    fee, account, split : float
+        Challenge fee (€), account size (€), profit split to trader (0–1).
+    phase1_target, phase2_target : float
+        Profit targets as fraction of account start (0.10 / 0.05).
+    max_daily_loss, max_dd : float
+        Static limits as fraction of *initial* account (0.05 / 0.10).
+        Daily loss includes floating P&L when ``daily_drawdowns`` is given.
+    min_days : int
+        Minimum trading days in a phase before a pass counts.
+    daily_drawdowns : array-like or None
+        Intraday max loss as fraction of *initial* account (same length as
+        returns). If None, proxy = max(0, −r) × equity_frac (close-only).
+    n_paths, horizon, block : int
+        Bootstrap paths, trading days per path, contiguous block length.
+    live_months : int
+        Funded window used for ``p_survive`` (≈ ``live_months * block`` days).
+    scale : float
+        Multiplier on returns (and drawdowns) — position-size knob.
+    seed : int
+        RNG seed for reproducibility.
+    restart : bool
+        If True (default), breach → new fee + phase 1 restart (q1-style EV).
+        If False, path ends on first breach (single-attempt EV).
 
     Returns
     -------
-    dict met: p_phase1, p_funded, ev_per_attempt (€; na aftrek fee),
-              payout_per_month_given_funded (€/mnd bruto), breach_live,
-              months_to_funded (mediaan), n_days (invoer), years (invoer).
+    dict
+        p_pass_1 : float
+            P(ever pass phase 1) over the horizon.
+        p_pass_2 : float
+            P(ever get funded = pass phase 1+2).
+        p_survive : float
+            P(no breach in first ``live_months`` of funded | funded).
+            NaN if no path reached funded.
+        exp_payout_monthly : float
+            Expected trader payout €/month over the horizon (cash incl. fee
+            refund, fees not subtracted) = mean(cash) / (horizon / block).
+        net_ev : float
+            Expected net € over the full horizon = mean(cash − fees).
+            Divide by (horizon / block) for €/month net.
+
+        Extra diagnostics (stable, documented): attempts_mean, p_net_loss,
+        breach12_given_funded, first_pay_months_med, horizon_months.
     """
-    x = np.asarray(daily_total_rets, dtype=float)
-    n = len(x)
-    if n < block:
-        return {k: float("nan") for k in
-                ("p_phase1", "p_funded", "ev_per_attempt", "payout_per_month_given_funded",
-                 "breach_live", "months_to_funded", "n_days", "years")}
+    r = np.asarray(daily_returns, dtype=float).ravel()
+    if r.size < 2:
+        raise ValueError("daily_returns needs at least 2 observations")
+    if daily_drawdowns is None:
+        # Close-only proxy: loss fraction of initial ≈ max(0,−r) × eq_frac,
+        # applied inside the loop (eq-dependent). Pre-store raw negative r.
+        d = None
+    else:
+        d = np.asarray(daily_drawdowns, dtype=float).ravel()
+        if d.size != r.size:
+            raise ValueError("daily_drawdowns must match daily_returns length")
 
-    rng = random.Random(seed)
-    max_days = max_months * days_per_month
+    rng = np.random.default_rng(seed)
+    n = r.size
+    n_blocks = horizon // block + 1
+    starts = rng.integers(0, n, size=(n_paths, n_blocks))
+    idx = (starts[:, :, None] + np.arange(block)[None, None, :]).reshape(n_paths, -1)[:, :horizon] % n
+    R = r[idx] * scale
+    D = None if d is None else d[idx] * scale
 
-    def _stream():
-        while True:
-            s = rng.randrange(n)
-            for i in range(block):
-                yield float(x[(s + i) % n])
+    floor = 1.0 - max_dd
+    phase = np.ones(n_paths, dtype=int)          # 1, 2, 3=funded
+    eq = np.ones(n_paths, dtype=float)           # fraction of initial
+    days_in = np.zeros(n_paths, dtype=int)
+    fees = np.full(n_paths, fee, dtype=float)
+    cash = np.zeros(n_paths, dtype=float)
+    refunded = np.zeros(n_paths, dtype=bool)
+    attempts = np.ones(n_paths, dtype=float)
+    passed1 = np.zeros(n_paths, dtype=bool)
+    funded_ever = np.zeros(n_paths, dtype=bool)
+    funded_day = np.full(n_paths, -1, dtype=int)
+    breach_live = np.zeros(n_paths, dtype=bool)
+    first_pay = np.full(n_paths, -1, dtype=int)
+    since_pay = np.zeros(n_paths, dtype=int)
+    live_days = live_months * block
+    active = np.ones(n_paths, dtype=bool)        # False after terminal breach if not restart
 
-    p1_count = 0
-    funded_count = 0
-    breach_count = 0
-    payouts = []
-    months_to_funded_list = []
-    ev_list = []
-
-    for _ in range(n_sims):
-        st = _stream()
-        status1, _ = _run_phase(st, phase1, account, day_loss, max_loss, min_days, max_days)
-        if status1 != "pass":
-            ev_list.append(-fee)
-            continue
-        p1_count += 1
-        status2, _ = _run_phase(st, phase2, account, day_loss, max_loss, min_days, max_days)
-        if status2 != "pass":
-            ev_list.append(-fee)
-            continue
-        funded_count += 1
-
-        gross, fee_back, breached = _run_funded(
-            st, account, fee, split, day_loss, max_loss, live_months, days_per_month)
-        months_to_funded_list.append(
-            (max_months + max_months) * 0.5)  # benadering; fijnere tracking via losse teller
-        payouts.append(gross)
-        if breached:
-            breach_count += 1
-            ev_list.append(gross + fee_back - fee)
+    for day in range(horizon):
+        rr = R[:, day]
+        # Daily loss as fraction of *initial* account
+        if D is None:
+            # Proxy: loss from day-start equity, scaled to initial (= eq_frac × (−r)+)
+            dd = np.maximum(0.0, -rr) * eq
         else:
-            ev_list.append(gross + fee_back - fee)
+            dd = D[:, day]
 
-    n_funded = funded_count or 1
-    ev = float(np.mean(ev_list)) if ev_list else float("nan")
-    ppm = float(np.mean(payouts) / live_months) if payouts else 0.0
-    breach_live = breach_count / n_funded if funded_count else float("nan")
+        # Breach on trough before applying close, and on close through floor
+        breach = active & ((dd >= max_daily_loss) | (eq - dd <= floor))
+        eq = np.where(active, eq * (1.0 + rr), eq)
+        breach |= active & (eq <= floor)
+
+        days_in = np.where(active, days_in + 1, days_in)
+
+        was_funded = phase == 3
+        in_live_window = (funded_day >= 0) & (day - funded_day < live_days)
+        breach_live |= breach & was_funded & in_live_window
+
+        if restart:
+            fees += fee * breach
+            attempts += breach
+            phase[breach] = 1
+            eq[breach] = 1.0
+            days_in[breach] = 0
+            refunded[breach] = False
+            since_pay[breach] = 0
+            # funded_ever / funded_day kept (ever-funded stats)
+        else:
+            active &= ~breach
+            # freeze breached paths
+            eq = np.where(breach, eq, eq)
+
+        ok = active & ~breach
+        p1 = ok & (phase == 1) & (eq >= 1.0 + phase1_target) & (days_in >= min_days)
+        phase[p1] = 2
+        eq[p1] = 1.0
+        days_in[p1] = 0
+        passed1 |= p1 | (phase >= 2)
+
+        p2 = ok & (phase == 2) & (eq >= 1.0 + phase2_target) & (days_in >= min_days) & ~p1
+        phase[p2] = 3
+        eq[p2] = 1.0
+        days_in[p2] = 0
+        since_pay[p2] = 0
+        newly = p2 & ~funded_ever
+        funded_ever |= p2
+        funded_day[newly] = day
+        passed1 |= p2
+
+        f = ok & (phase == 3) & ~p2
+        since_pay[f] += 1
+        pay = f & (since_pay >= block) & (eq > 1.0)
+        amount = np.where(pay, (eq - 1.0) * account * split, 0.0)
+        cash += amount
+        ref = pay & ~refunded
+        cash += np.where(ref, fee, 0.0)
+        refunded |= ref
+        first_pay[(first_pay < 0) & pay] = day
+        eq[pay] = 1.0
+        since_pay[pay] = 0
+
+    horizon_months = horizon / block
+    net = cash - fees
+    fp = first_pay[first_pay >= 0]
+    if funded_ever.any():
+        p_survive = float((~breach_live)[funded_ever].mean())
+        breach12 = float(breach_live[funded_ever].mean())
+    else:
+        p_survive = float("nan")
+        breach12 = float("nan")
 
     return {
-        "p_phase1": p1_count / n_sims,
-        "p_funded": funded_count / n_sims,
-        "ev_per_attempt": ev,
-        "payout_per_month_given_funded": ppm,
-        "breach_live": breach_live,
-        "months_to_funded": float(np.median(months_to_funded_list)) if months_to_funded_list else float("nan"),
-        "n_days": n,
-        "years": n / 252.0,
+        "p_pass_1": float(passed1.mean()),
+        "p_pass_2": float(funded_ever.mean()),
+        "p_survive": p_survive,
+        "exp_payout_monthly": float(cash.mean() / horizon_months),
+        "net_ev": float(net.mean()),
+        # diagnostics
+        "net_ev_monthly": float(net.mean() / horizon_months),
+        "attempts_mean": float(attempts.mean()),
+        "p_net_loss": float((net < 0).mean()),
+        "breach12_given_funded": breach12,
+        "first_pay_months_med": float(np.median(fp) / block) if len(fp) else float("nan"),
+        "horizon_months": float(horizon_months),
+        "fee": float(fee),
+        "account": float(account),
+        "split": float(split),
+        "scale": float(scale),
+        "n_paths": int(n_paths),
+        "restart": bool(restart),
     }
 
 
-def ev_from_series(
-    path: str,
-    *,
-    col: str = "total",
-    start_date: date | None = None,
-    end_date: date | None = None,
-    **kw,
-) -> dict:
-    """Laad een date;excess;total CSV en bereken FTMO-EV op de total-return kolom."""
-    dates, excess, total = [], [], []
-    with open(path) as f:
-        header = f.readline().strip().split(";")
-        ci = header.index(col)
-        for line in f:
-            parts = line.strip().split(";")
-            if not parts[0][:4].isdigit():
-                continue
-            d = date.fromisoformat(parts[0])
-            if start_date and d < start_date:
-                continue
-            if end_date and d > end_date:
-                continue
-            dates.append(d)
-            total.append(float(parts[ci]))
-
-    rets = np.array(total, dtype=float)
-    result = ftmo_ev(rets, **kw)
-    result["start"] = str(dates[0]) if dates else None
-    result["end"]   = str(dates[-1]) if dates else None
-    return result
+def _synthetic_returns(n: int = 504, mu: float = 0.0008, sigma: float = 0.008, seed: int = 0):
+    """Mild positive-drift Gaussian days for smoke tests (not a real edge)."""
+    rng = np.random.default_rng(seed)
+    return rng.normal(mu, sigma, size=n)
 
 
-def ev_shortlist(
-    series_dir: str,
-    rules: list[str],
-    vehicle: str = "cfd",
-    variant: str | None = None,
-    *,
-    start_date: date | None = None,
-    **kw,
-) -> list[dict]:
-    """Bereken FTMO-EV voor een lijst van regels vanuit de series-map.
+def _fmt(out: dict) -> str:
+    lines = [
+        f"p_pass_1={out['p_pass_1']*100:.1f}%  p_pass_2={out['p_pass_2']*100:.1f}%  "
+        f"p_survive={out['p_survive']*100:.1f}%" if np.isfinite(out["p_survive"]) else
+        f"p_pass_1={out['p_pass_1']*100:.1f}%  p_pass_2={out['p_pass_2']*100:.1f}%  p_survive=nan",
+        f"exp_payout_monthly=€{out['exp_payout_monthly']:,.0f}  "
+        f"net_ev=€{out['net_ev']:,.0f}  net_ev_monthly=€{out['net_ev_monthly']:,.0f}",
+        f"attempts_mean={out['attempts_mean']:.2f}  p_net_loss={out['p_net_loss']*100:.1f}%  "
+        f"first_pay_months_med={out['first_pay_months_med']}",
+    ]
+    return "\n".join(lines)
 
-    rules: bijv. ["C02_faber", "C52_allweather", "C17_fomc_cycle"]
-    variant: als None, zoekt __basis__ en alle varianten automatisch.
-    """
-    results = []
-    for rule in rules:
-        found = [f for f in os.listdir(series_dir)
-                 if f.startswith(rule + "__")
-                 and f.endswith(f"__{vehicle}.csv")
-                 and (variant is None or f"__{variant}__" in f)]
-        for fname in sorted(found):
-            path = os.path.join(series_dir, fname)
-            r = ev_from_series(path, start_date=start_date, **kw)
-            parts = fname.replace(".csv", "").split("__")
-            r["rule"] = parts[0] if len(parts) > 0 else fname
-            r["variant"] = parts[1] if len(parts) > 1 else "basis"
-            r["vehicle"] = parts[2] if len(parts) > 2 else vehicle
-            results.append(r)
-    return results
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description="FTMO-EV Monte Carlo (engine/ftmo.py)")
+    ap.add_argument("--csv", default=None, help="daily equity CSV (start_balance;min_equity;end_equity)")
+    ap.add_argument("--scale", type=float, default=1.0)
+    ap.add_argument("--fee", type=float, default=DEFAULT_FEE)
+    ap.add_argument("--account", type=float, default=DEFAULT_ACCOUNT)
+    ap.add_argument("--split", type=float, default=DEFAULT_SPLIT)
+    ap.add_argument("--paths", type=int, default=5000, help="paths (default 5000 for smoke; API default 20000)")
+    ap.add_argument("--horizon", type=int, default=DEFAULT_HORIZON)
+    ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--no-restart", action="store_true")
+    a = ap.parse_args(argv)
+
+    if a.csv:
+        rets, dd = load_daily_equity_csv(a.csv, a.account)
+        print(f"loaded {a.csv}: {len(rets)} days, mean {rets.mean()*1e4:+.2f} bp/day")
+        out = ftmo_ev(
+            rets, fee=a.fee, account=a.account, split=a.split,
+            daily_drawdowns=dd, n_paths=a.paths, horizon=a.horizon,
+            scale=a.scale, seed=a.seed, restart=not a.no_restart,
+        )
+    else:
+        rets = _synthetic_returns()
+        print(f"synthetic returns: {len(rets)} days, mean {rets.mean()*1e4:+.2f} bp/day, "
+              f"vol {rets.std()*np.sqrt(252)*100:.1f}%/yr")
+        out = ftmo_ev(
+            rets, fee=a.fee, account=a.account, split=a.split,
+            n_paths=a.paths, horizon=a.horizon, scale=a.scale, seed=a.seed,
+            restart=not a.no_restart,
+        )
+    print(_fmt(out))
+    print("dict keys:", sorted(out))
+    return out
 
 
 if __name__ == "__main__":
-    import sys, json
-    if len(sys.argv) < 2:
-        print("Gebruik: python -m engine.ftmo <series.csv> [--start YYYY-MM-DD]")
-        sys.exit(1)
-    path = sys.argv[1]
-    start = None
-    if "--start" in sys.argv:
-        idx = sys.argv.index("--start")
-        start = date.fromisoformat(sys.argv[idx + 1])
-    res = ev_from_series(path, start_date=start)
-    print(json.dumps(res, indent=2))
+    main(sys.argv[1:])

@@ -160,3 +160,64 @@ Alle shortlist-sleeves gedraaid met vehikel `cfd` (FTMO-kosten: spread + swap), 
 
 **Conclusie FTMO-pivot voor Sandro:**
 De ETF-catalogus heeft beperkte waarde voor FTMO. Van de 10 beoordeelde sleeves zijn 3 instrumenteel niet uitvoerbaar (bond-leg) en 4 hebben negatieve cfd-EV. De drie kansrijke (C02, C16, C17) zijn maandelijkse trend/seizoen-regels op indices, maar hun FTMO-EV is bootstrap-gevoelig en gebaseerd op in-sample data. Volgende stap (D-085 §2): focus op FTMO-specifieke strategieën met kortere houdduur en lagere swap-impact (intraday, ORB-achtig, FX-carry intraday).
+
+
+## 2026-09-30 (uurcyclus 20:25 UTC ≈ 22:25 Amsterdam) — review CTO engine/ftmo.py; run 10 (restart-model); A4=FOMC-C17
+
+**Verwerkt:** NEXT_STEPS v36 (D-087 actie 1, prio 1): review engine/ftmo.py van origin/grok/cto-1, dan A4=FOMC C17 per PREREG_FTMO_C17.md.
+
+### Review CTO engine/ftmo.py (D-087 actie 1)
+
+**(a) FTMO-regels correct?**
+- Fase 1/2 doelen (+10%/+5%): correcte drempels; equity reset naar 1.0 bij fase-overgang (FTMO start elke fase op startkapitaal).
+- Max dagverlies 5% van initieel account (statisch): correct. dd = max(0, -rr) * eq_before geeft dagverlies als fractie van initieel, consistent met FTMO statische regel.
+- Max totaalverlies 10% statisch (floor = 0.90): correct, eq <= floor check.
+- Intraday breach: optioneel via daily_drawdowns; zonder: slot-tot-slot benadering (bewust gedocumenteerd).
+- Funded reset maandelijks, fee-restitutie bij eerste payout: correct.
+- Min handelsdagen: correct.
+
+**(b) Discrepanties t.o.v. vorige engine/ftmo.py:**
+1. **Architectuur (bewuste keuze):** CTO gebruikt restart=True — bij breach opnieuw fee + fase 1 over 504 dagen (~24 mnd horizon). Mijn versie modelleerde enkele poging (ev_per_attempt). Restart-model is realistischer.
+2. **Vectorisatie (verbetering):** numpy-arrays over alle n_paths; mijn versie: Python-generators (100-1000x langzamer).
+3. **Output-metrics:** CTO: net_ev_monthly (netto/mnd over horizon), net_ev (totaal). Mijn versie: ev_per_attempt. Beide correct; CTO-metriek past beter bij een lopend FTMO-programma.
+4. **daily_drawdowns (verbetering):** CTO ondersteunt intraday min-equity. Mijn versie: slot-tot-slot enkel. Voor intraday (A5 FX-ORB) is dit kritischer.
+
+**Aantoonbare fout gevonden?** Nee. CTO-implementatie is correct en superieur.
+**Besluit:** engine/ftmo.py vervangen door CTO-versie (gedaan per D-087: geen eigen implementatie).
+
+**(c) Eerste sleeves:** A4=C17 FOMC (al gedraaid in run 9/10), A5=FX-intradag (EURUSD M5 aanwezig; GBPUSD/USDJPY M5 wachten op Uitvoerder-1). Dan B1=TSMOM-mix FX.
+
+### Run 10 (results/R2/run10_ftmo_ev.md) — restart-model metrics
+
+Shortlist opnieuw beoordeeld: CTO engine/ftmo.py (restart=True, horizon=504d, 10k paden, blok 21d).
+
+Vergelijking metriek run 9 (ev_per_attempt) vs run 10 (net_ev_monthly, 24-mnd horizon):
+- C02: R9 EUR2099/poging → R10 EUR58/mnd
+- C17: R9 EUR2071/poging → R10 EUR84/mnd
+- C16: R9 EUR2117/poging → R10 EUR86/mnd
+- C44: R9 EUR3443/poging → R10 EUR131/mnd
+Het verschil is correct: run 10 deelt EV over 24 mnd inclusief kosten van herhaalde mislukkingen.
+
+| Sleeve | SR(cfd) | p_pass_2 | net_ev/mnd | p_survive | Oordeel |
+|--------|---------|---------|-----------|---------|---------|
+| C44_krediet basis | 0.582 | 0.676 | EUR131 | 0.731 | KANSRIJK (N=17jr, !) |
+| C16_halloween basis | 0.332 | 0.623 | EUR86 | 0.624 | KANSRIJK (seizoen, decay-risico) |
+| C17_fomc_cycle basis | 0.372 | 0.596 | EUR84 | 0.642 | KANSRIJK (A4-kandidaat) |
+| C02_faber basis | 0.335 | 0.502 | EUR58 | 0.753 | POSITIEF |
+| Overige 6 sleeves | — | 0.0-0.10 | EUR-17..-24 | — | neg. EV of niet-uitvoerbaar |
+
+Caveats: in-sample ontdekkingsset; C44 N=17jr; C16 decay-risico; geen FTMO-claim zonder forward >=6 mnd.
+
+### A4 = FOMC C17 (PREREG_FTMO_C17.md, V-CAT1)
+
+PREREG op claude/trusting-faraday-34tsmg. V-CAT1 definitie (FOMC even-weken cyclus) is de default per PREREG; geen blokkade.
+
+Kostenpoort (PREREG par. 4): US500cash spread 0.78 bp RT + swap 1.36 bp/nacht.
+C17 houdt ~5 nachten per blok van 6 handelsdagen; ~6 blokken/jaar = ~45 bp/jaar kosten (~0.46%/jaar).
+Bruto CAGR op cfd (SR 0.37, vol 14%): ~5%/jaar. Verhouding 5%/0.46% = 11x >> 3x drempel. KOSTENPOORT GEHAALD.
+
+FTMO-EV run 10: p_pass_2=0.596, net_ev/mnd=EUR84, p_survive=0.642. Positief.
+Conclusie A4: C17 is een FTMO-kandidaat op basis van in-sample data. Geen extra trial (C17 al geregistreerd). Wacht op forward-papier voor FTMO-mechaniek validatie.
+
+Volgende A-tier: A5=FX-intradag EURUSD London-open ORB (EURUSD M5 aanwezig; run kan starten); GBPUSD/USDJPY wachten op Uitvoerder-1 M5-data.
+R2-008 status: vraag beantwoord door NEXT_STEPS v36 + Strateeg PREREGs. BESLOTEN.
