@@ -910,3 +910,18 @@ Gemerged en gemarkeerd. Tot het CEO-besluit over M-013: (1) geen nieuwe eigen-ka
 CEO-besluiten gelezen: D-083 Doel v3 = FTMO-€80k (eigen-kapitaal-lijn geparkeerd), D-084 reserve-run geschorst, D-085 FASE 3 FTMO-EV, D-086 taken. Uitvoerder-1: ETF-forward laat ik lopen (papier, geen hoofdspoor); nieuwe prioriteit FTMO-instrumenten + tijdvariabele swaps + spreads per uur.
 Nieuw: mt5_symbol_snapshot.py (VM) + ftmo_snapshot.sh (Debian, cron ma–vr 21:30 UTC) → data/ftmo_specs/<datum>.csv voor alle 166 symbolen uit SymbolList_FTMO.csv: swap_mode, swap long/short (ruw), 3-daagse rollover, bid/ask, spread (punten en bp), point, contract, tick-waarde, valuta, en swap in %/jr (mode 1 = punten → % notional; mode 5 = rente %/jr direct, crypto). Eerste snapshot 30-09 19:17Z: 136 symbolen mode 1, 30 mode 5; alle bid/ask gevuld.
 **Bevinding:** swaps zijn tijdvariabel, zelfs binnen een dag: US500.cash long −104,21 punten (≈ −4,95%/jr, 30-09 ≈ 09:40Z) → −157,55 (≈ −7,47%/jr, 19:17Z); short −62,05 → −8,68. Het constante-swap-model in COSTS_FTMO/engine is dus een grove benadering; met de dagelijkse historie kan het cfd-kostenmodel voortaan de swap per datum gebruiken (volgende stap zodra er een paar weken historie is; tot dan +50%-gevoeligheid). Spreads per uur voor alle M5-symbolen volgt.
+
+## 2026-09-30 — D-087/D-088 verwerkt; NEXT_STEPS v35; archief/eigen_kapitaal/INDEX.md aangemaakt — Manager
+
+**D-087/D-088 gelezen** (branch `claude/ftmo-trading-strategy-98mplz:BESLUITEN.md`).
+
+**NEXT_STEPS v35:** Fase 3 FTMO-EV-acties bovenaan verwerkt. Reserve-run D-084 expliciet geschorst vermeld. Forward ETF-papier als passief gemarkeerd. Eigen-kapitaal-stukken verwijzen naar archief/eigen_kapitaal/.
+
+**archief/eigen_kapitaal/INDEX.md aangemaakt:** lijst van geparkte bestanden (ALLOCATIE_V1/V1.x, VERWACHTING.md, VEHICLE_ANALYSE.md, S10b, PREREG_PORT/PORT2/PORT3/PORT4, forward-portefeuilles, NL-retail-kosten). Geen bestanden verplaatst (git-history bewaard).
+
+**Manager-QA deze cyclus:**
+1. Uitvoerder-2 laatste commit: 2026-09-30 18:27 UTC (branch `claude/uitvoerder2-r`). Tijd verstreken ≈ 1 uur → nog binnen de 2-uurgrens; geen VRAGEN_MANAGER-actie vereist.
+2. TRIALS.csv: niet aanwezig in main (staat op uitvoerder2-r branch); geen append-schending detecteerbaar vanuit main.
+3. PREREG vs resultaat: C7_ev_tabel.csv gecommit in dezelfde commit als NEXT_STEPS v26 (14:36 UTC) — geen directe PREREG-voorafgaand commit voor die run in main zichtbaar, maar PREREG_C7.md staat in repo (was al eerder gecommit op uitvoerder2-r). Geen blokkade; vermeld voor Uitvoerder-2.
+
+**Volgende cyclus-acties:** wacht op Uitvoerder-2-review van engine/ftmo.py; als commit > 2 uur uitblijft → VRAGEN_MANAGER openen.
