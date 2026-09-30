@@ -968,3 +968,8 @@ v38: B1 (TSMOM-mix FX, D1) prio 1 bij Uitvoerder-2; A2 Stocks-in-Play ORB wacht 
 
 B1 kostenpoort FAIL (`18c7996`). A4 blijft dood. Prio: A2-PREREG (Strateeg) + M5-snapshot U-006 A/Debian (Uitvoerder-2); A5 parallel zodra M5. Geen nieuwe overnight maand-sleeves. CTO-opdracht.
 
+
+## 2026-09-30 20:45 — U-006 optie A (NEXT_STEPS v39): FTMO-M5-momentopname van 24 symbolen in data/m5gz/ (96 MB gzip) — deblokkeert A5/S2-intradag
+
+Uitgevoerd door Uitvoerder-1 (data staat alleen op Debian; v39 noemde Uitvoerder-2/Debian). data/m5gz/: 14 FX-paren (EURUSD, GBPUSD, USDJPY, AUDUSD, USDCAD, USDCHF, NZDUSD, EURGBP, EURJPY, GBPJPY, AUDJPY, EURCHF, EURAUD, GBPAUD), XAUUSD, XAGUSD, 8 indices (US500, US100, US30, GER40, UK100, JP225, AUS200, EU50) — gzip van de originele CSV (identieke inhoud), 2021-01 → 2026-09-29, servertijd (NY + 7 u), spread in punten × point.
+Integriteit: CHECKSUMS.sha256 (gz) geverifieerd; CHECKSUMS_bron_csv.sha256 (ongecomprimeerd) — steekproef EURUSD uitgepakt = bron (SHA-256 ac7d326d…). README.md met laadfunctie (load_gz) of uitpakken naar data/m5 voor b4_sim.load; licentie: FTMO-platformdata, alleen intern (privé-repo); niet dagelijks bijgewerkt. Reserve 2025-01→ zit in de data — alleen gebruiken zoals PREREG/CEO toestaat. Aandelen-M5 (A2) op verzoek (≈ 40 MB).
