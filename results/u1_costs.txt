@@ -1,0 +1,9 @@
+symbool      sessies  spread OR-venster (bp)  spread slot (bp)  rondreis ORB ≈ (bp)  poort ≤ 1,0 bp
+US2000cash      1418                    2.12              2.12                 2.12  nee
+EU50cash        1283                    3.15              3.08                 3.12  nee
+FRA40cash       1286                    1.37              1.37                 1.37  nee
+N25cash          904                    4.01              4.00                 4.00  nee
+SPN35cash        845                    6.49              6.50                 6.50  nee
+JP225cash       1304                    1.78              1.78                 1.78  nee
+AUS200cash      1157                    1.55              1.55                 1.55  nee
+HK50cash        1226                    2.38              2.31                 2.35  nee

@@ -606,3 +606,10 @@ ORB SR 0,91 (skew +1,51), RSI(2) SR 0,49 (skew +0,56), corr −0,03 → de mix h
 Maar de FTMO-uitkomst daalt (historisch, conservatieve dip = som): ORB alleen €484/mnd (P<0 22%) → 0,25 RSI €171 (43%) → 0,5 RSI −€22 → RSI alleen −€53. Optimistische dip-grens (max van de dips): 0,25 RSI €333 (32%), 0,5 RSI −€2. ORB −50% drift: €232 alleen vs €21 met 0,25 RSI; ORB-drift 0: €64 vs −€11.
 Conclusie: de meegedragen zwevende dips van RSI(2) (overnight, negatief-scheve staart) raken de 5%-daggrens bij de hoge schaal die de first-passage-mechaniek beloont; diversificatie-SR weegt daar niet tegen op. Bevestigt R3: onder FTMO telt het dip-profiel meer dan SR. Aanbeveling: als er een challenge komt, dan ORB alleen (en alleen na S3 'bevestigd + blijvend'); RSI(2) niet combineren. Forward-paper blijft F3b volgen (ongewijzigd, pre-geregistreerd).
 Volgende stap: wachtrij v15.1 leeg op S3 (wacht op data) en Q6 → forward-onderhoud; */10-checks.
+
+## 2026-09-30 09:25 — U1 kostenpoort (geen trial): geen van 8 niet-geselecteerde indices haalt ≤ 1,0 bp → U1-test vervalt
+
+Standaardactie U-002: M5-export 2021–26 voor US2000, EU50, FRA40, N25, SPN35, JP225, AUS200, HK50 (data/m5, checksums toegevoegd) + mediane spread in het ORB-venster en aan de sluiting (u1_costs.py, results/u1_costs.txt).
+Rondreis ≈ (bp): FRA40 1,37 · AUS200 1,55 · JP225 1,78 · US2000 2,12 · HK50 2,35 · EU50 3,12 · N25 4,00 · SPN35 6,50. Poort ≤ 1,0 bp (≈ ⅓ van de ORB-bruto 2,5–3 bp): 0/8 → volgens de standaardactie geen U1-test, TRIAL_COUNT blijft 414.
+Betekenis: ORB is op FTMO alleen economisch te handelen op US500/US100/US30/GER40 (0,45–0,78 bp); bevestiging in de breedte is met FTMO-kosten niet mogelijk → S3 (lange data) blijft de enige bevestigingsroute.
+Open: U2/U3 wachten op besluit (VRAGEN_UITVOERDER.md); S3 wacht op data/long_m1 (A-01); forward-paper start vanavond 22:15 UTC.
