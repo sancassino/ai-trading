@@ -422,3 +422,27 @@ Bron: `origin/claude/trusting-faraday-34tsmg` (`d5143a2` / merge `…19:54 UTC`)
 
 **Volgende (niet gokken):** wacht Manager/CTO op (i) US41-M5 voor A2, of (ii) andere bevroren PREREG met beschikbare data. Strateeg-2 S2-* (XAU/GER40/USOIL) hebben M5gz-symbolen — alleen starten als NEXT_STEPS/BESLUITEN dat expliciet aan Uitvoerder-2 toewijst (nu: “parallel met A5 zodra M5”, eigenaar Strateeg-2 voor PREREG).
 
+## 2026-09-30 23:20 CEST — D-090 FASE 3 cyclus: US41 m5gz merge + A2 kostenpoort FAIL
+
+**Branch:** `claude/uitvoerder2-r`. **Verwerkt:** `git fetch --all`; tip was `ce5abdc`. BESLUITEN via `origin/claude/upbeat-dirac-g2810q` (eindigt D-086; D-087…D-090 via NEXT_STEPS). `NEXT_STEPS.md` v41 @ `origin/main` (post-A5/S2: prio **US41 m5gz → A2**; A4/B1/A5 + S2-XAU/GER40/USDJPY dood).
+
+### P1 — `engine/ftmo.py`
+already_done (`HEAD` blob == `origin/grok/cto-1` = `ac7abef6`). Geen herimplementatie (D-087).
+
+### Merge
+`origin/main` → deze branch: **US41 + BTC/ETH/olie** in `data/m5gz/` (69 symbolen, v41 commits `c01212a`/`779eeec`). Deblokkeert A2.
+
+### Coverage (PREREG §8 stap 2, geen P&L)
+- Alle 41 US41-namen aanwezig in `data/m5gz/`.
+- `earnings.csv`: ~164 events/jaar 2021–24 × 41 namen (Yahoo limit=40/sym → ~4/jaar).
+- Details: `results/R2/a2_prep/coverage_a2.csv`.
+
+### A2 kostenpoort (PREREG_FTMO_A2 §3, variant b)
+- Script: `results/R2/a2_prep/a2_cost_gate.py` (laadt m5gz rechtstreeks; geen 2025-bars).
+- N=**365** train trades; mean bruto **+3.77 bp** < 3× trade-gewogen mean RT **26.74 bp** (tabel mean RT 8.91 bp).
+- Median bruto −23.78 bp; mean zonder top-5% winnaars −25.88 bp (D-012 staart FAIL informatief).
+- **FAIL → STOP.** Geen `ftmo_ev()`, geen test-2024. TRIALS append `stop:kostenpoort`. **TRIAL_COUNT blijft 444.**
+- Artefacten: `results/R2/a2_prep/cost_gate_a2_train.{md,json,csv}`, `formal_gate_a2.md`.
+
+### Volgende
+A4/B1/A5/A2 dood (kostenpoort). S2 BTC/USOIL wachten op Strateeg-2 PREREG + expliciete U2-toewijzing (M5gz nu aanwezig). Geen nieuwe overnight maand-sleeves. Vragen → Manager; eindbesluit → CTO. Reserve 2025→ onaangeraakt.
