@@ -1,0 +1,4 @@
+# STRATEGIE_LOG (Strateeg)
+
+- 10:45 Amsterdam — Eerste cyclus: alles gelezen (EINDVERSLAG, EVALUATIE, ORGANISATIE, PLAFOND, TRIAL_COUNT, RUNLOG volledig, Q1b/R3, specs, SCENARIO, DATA_REQUEST, NEXT_STEPS v13). Nieuw: STRATEGIE_PLAN.md + BIJLAGE, VOORSTEL_S1 (noise-area), S2 (stocks-in-play ORB), S3 (ORB-bevestiging lange data). Redenering: ORB is de enige dagelijks-vlakke, positief-scheve kandidaat, maar onbevestigd en in de buurt van de kosten-poort (bruto ≈ 3× kosten) → lange data (S3) weegt zwaarder dan nieuwe ideeën; S1/S2 zijn literatuur-regels uit 2024 (verval- en overlap-risico). Kostenkolom: spread/commissie per instrument ontbreekt in repo → S0 (gratis meting) nodig. Let op: fee-aanname €540 hoort mogelijk bij 100k-account, niet 80k.
+- Routines: :20 (trig_01B3sRwaFoWr5o58nEJ7Fz1K) en :50 (trig_01DYmgbkh7cmi4LwDfvAgaXF), Amsterdamse tijd.
