@@ -65,7 +65,20 @@ def update_yahoo(path):
     if new:
         with open(path, "a") as f:
             f.write("\n".join(new) + "\n")
+        snapshot(os.path.basename(path)[:-4], new)
     return len(new)
+
+
+def snapshot(name, rows):
+    """QA-3 (v22): per downloaddag de toegevoegde ruwe regels + UTC-tijdstempel bewaren (append-only, nooit herschreven)."""
+    os.makedirs("forward/data_snapshots", exist_ok=True)
+    p = f"forward/data_snapshots/{date.today().isoformat()}.csv"
+    first = not os.path.exists(p)
+    with open(p, "a") as f:
+        if first:
+            f.write("reeks;date;open;high;low;close;adjclose;volume;download_utc\n")
+        ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        f.writelines(f"{name};{r};{ts}\n" for r in rows)
 
 
 def update_treasury():
@@ -85,6 +98,7 @@ def update_treasury():
         if new:
             with open(p, "a") as f:
                 f.write("\n".join(new) + "\n")
+            snapshot(name, new)
             n += len(new)
     return n
 
