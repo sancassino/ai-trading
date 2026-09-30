@@ -1,0 +1,10 @@
+    (a) IBS-H1 US500cash: N 616, +0.93 bp
+    (a) IBS-H1 US100cash: N 562, +3.97 bp
+    (a) IBS-H1 GER40cash: N 768, -1.24 bp
+(a) IBS-H1         N  1946 | +0.95 bp | t train +0.96 (N 936) | t test +0.22 (N 1010) | jaren+ 3/6 | schaal voor €150/mnd 0.69× notional/trade → slechtste dag 2.77% | afgewezen
+    per jaar (bp, N): 2021:-3.3(292) 2022:+2.9(285) 2023:+4.7(359) 2024:-2.1(362) 2025:-0.2(391) 2026:+4.5(257)
+    (b) RSI(2)-H1 US500cash: N 286, +0.10 bp
+    (b) RSI(2)-H1 US100cash: N 261, +2.11 bp
+    (b) RSI(2)-H1 GER40cash: N 332, -5.03 bp
+(b) RSI(2)-H1      N   879 | -1.24 bp | t train -1.13 (N 436) | t test +0.13 (N 443) | jaren+ 2/6 | schaal voor €150/mnd inf× notional/trade → slechtste dag nan% | afgewezen
+    per jaar (bp, N): 2021:-0.0(131) 2022:-2.5(142) 2023:-5.2(163) 2024:-3.4(154) 2025:+3.2(194) 2026:+0.4(95)

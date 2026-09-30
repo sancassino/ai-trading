@@ -322,3 +322,11 @@ Controle: droogtest 2026-09-21..29 in aparte map — ORB-trades per symbool en d
 Cron: '15 22 * * 1-5 cd ~/ai-trading && python3 forward_paper.py >> forward/cron.log' (bestaande crontab-regels behouden). Eerste echte verwerking: vanavond 22:15 UTC (dag 2026-09-30).
 Beperkingen: slot-tot-slot voor RSI (geen intraday-dip), geen EUR-conversie, geen slippage.
 Volgende stap: I2 (intraday mean-reversion op H1).
+
+## 2026-09-30 01:14 — I2: intraday mean-reversion op H1 — beide AFGEWEZEN
+
+Getest (PREREG_I2.md vóór berekening): i2_intraday_mr.py, FTMO-M5 → H1 (serveruren), US500/US100/GER40, alleen binnen de cash-sessie, geen overnight, spread instap-bar.
+(a) IBS-H1 < 0,2 boven SMA200(H1), uitstap na 4 H1-bars/sessie-einde: N 1.946, +0,95 bp, t train +0,96 / test +0,22, 3/6 jaar+ (US100 +4,0 bp, US500 +0,9, GER40 −1,2). Dagverlies bij €150/mnd-schaal 2,8% (conform), maar geen edge.
+(b) RSI(2)-H1 < 10, uitstap > 65/sessie-einde: N 879, −1,24 bp, t −1,13 / +0,13, 2/6 jaar+.
+Conclusie: intraday omkeer lost de dagverlies-bottleneck op maar heeft na kosten geen edge → beide afgewezen. De dag-RSI(2)-edge verdwijnt als de positie niet overnight mag blijven. TRIAL_COUNT 387.
+Volgende stap: I3 (event-drift FOMC/CPI/NFP) — eerst datalijst met bron.
