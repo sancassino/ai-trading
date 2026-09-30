@@ -418,3 +418,8 @@ Resultaat MT5: max 1 nacht SR 0,47 (CI −0,23–1,15), €36/mnd bij 1/6; schaa
 Beslisregel kern (SR ≥ 0,5 én dagverlies < 4% bij ≥ €100/mnd): NIET gehaald. Cache toegevoegd aan e1_rsi2_ftmo.eod_spread_frac (snelheid, geen uitkomstwijziging).
 Conclusie: de korte-houdduur-kern van RSI(2) is in MT5 met FTMO-kosten te zwak. Enige FTMO-conforme kandidaat blijft F3b (RSI(2) oorspronkelijk + ORB, ORB onbevestigd).
 Volgende stap: N2 (DATA_REQUEST_SANDRO.md), N3 (definitieve PLAFOND/SCENARIO), N4 (forward).
+
+## 2026-09-30 04:26 — N2: DATA_REQUEST_SANDRO.md (lange minuutdata, 3 opties)
+
+Opgeleverd: DATA_REQUEST_SANDRO.md in gewone taal. Opties: (B, aanbevolen) HistData handmatig downloaden — SPX/USD, NSX/USD, GRX/EUR, XAU/USD, ASCII M1, jaarbestanden 2011–2025 + maanden 2026, ≈ 100 bestanden → data/long_m1/; (C) Dukascopy-S3 'Requester Pays' met AWS-account, geschatte kosten < $1–5, levert ook US30; (A) demo-account op een andere MT5-server (bv. MetaQuotes-Demo) — niet zelf te verifiëren omdat daarvoor een account op naam van Sandro nodig is; veel demo-servers hebben voor indices maar enkele jaren.
+Volgende stap: N3 (definitieve PLAFOND/SCENARIO-update).
