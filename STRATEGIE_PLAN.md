@@ -140,6 +140,27 @@ SR 0,94 is de gunstigste fase/uitvoering; realistisch ≈ 0,85 (fasemediaan) of 
 
 ---
 
+## UPDATE 2026-09-30 ~00:00 (v4.2) — FTMO-programma vrijwel uitgeput: A2 kostenpoort FAIL
+
+**A2 US41 SIP-ORB (`bba5c0c`, Uitvoerder-2):** mean bruto +3.77 bp vs drempel 3 × 26.74 bp = 80.2 bp (n=365 trades, train 2021–23). FORMEEL GESTOPT. TRIAL_COUNT blijft 444.
+
+**Conclusie na A4+B1+A5+A2+S2-XAU/GER40/USDJPY = alle FAIL op kostenpoort:**
+
+Alle geteste FTMO-intradag-sleeves hebben de kostenpoort niet gehaald. Patroon:
+- Overnight (A4 C17, B1 TSMOM-FX): gedood door swap (≥ −8 bp/trade bij 5 nachten houdduur).
+- Intradag met hoge spread-universe (A2 US41 aandelen): gemiddelde RT ≈ 26 bp per trade — bruto-edge van ≈ 3–4 bp is zelfs op mean-basis 7× te klein.
+- Intradag FX (A5 London-ORB, U3): spread + commissie ≥ spread-threshold, kosten-poort FAIL.
+- S2 XAU/GER40/USDJPY: kostenpoort FAIL (MT5-M5 snapshot).
+
+**Resterende FTMO-kandidaten:**
+1. **A1 ORB index (intradag, swap=0):** enige overlevende met t 1,81 op FTMO-data. **Geblokkeerd op lange data** (S3: SPX/NSX/GRX/XAU 2011–2020 via HistData of Dukascopy). Sandro-ping over HistData-optie B (€15) is uitstaand maar zonder reactie. Dit is de hoogste-waarde-actie voor het FTMO-programma.
+2. **S2-BTC / S2-USOIL (Strateeg-2):** M5 nu beschikbaar (v41), wachten op Strateeg-2 run. Kans op doorgang onbekend (geen prior).
+3. **GS01 gap-aligned long-only ORB (Grok Strateeg-1):** research-kandidaat, index M5 beschikbaar; onderscheidend van A1 (gap-filter, long-only).
+
+**Implicatie voor FTMO-programma:** tenzij A1 ORB structurele edge heeft op lange data (S3) EN de kostendekking haalt, is het FTMO-traject moeilijk te sluiten met een positieve FTMO-EV. Eigen-kapitaalpad (gearchiveerd) had P-ETF-a SR ≈ 0,85 realistisch, maar dat vehikel is buiten scope. **Geen nieuwe overnight sleeves voorstellen.** TRIAL_COUNT 444; BH-FDR q=0.10 drempel bij N=444 ≈ 10,4 significante trials verwacht bij nulhypothese — alle tot nu toe gefaalde sleeves zijn correct geteld.
+
+---
+
 ## UPDATE 20:55 (v3.6) — PORT3/PORT4 (Uitvoerder-1) beoordeeld met mijn vooraf vastgelegde regel → `ALLOCATIE_V1_3.md`
 **Cijfers (2001–24, model B, één simulator):** L0 inst SR 0,86/DD 11,1%/153 trades/€268 jr; **L1 drempel 1%: SR 0,91/DD 11,3%/57 trades/€116 jr**; **L4 lite: SR 0,80/DD 15,2%/18 trades/€27 jr, 2021–24 SR 0,25 vs 0,42**. **Toepassing V1.2-regel:** lite faalt op 3 van 4 criteria (ΔSR −0,06 net onder −0,05; DD 15,2% > 1,3×11,1% = 14,4%; ΔSR 2021–24 −0,17) → **niet voorgesteld; L0 blijft referentie**. **L1 haalt G1 (V1.1)**: ΔSR +0,05, besparing ≈ €12,7/mnd (net boven €12-grens). **V1.3-kandidaat (voorstel aan CEO): P-ETF-a met 1%-drempel.** Kanttekening: SR-stijging 0,86→0,91 is ruis (SE ≈ 0,1–0,2), niet meenemen; kiesrisico 7+ forward-portefeuilles → keuze pas na ≥ 3 mnd forward + prior/BH-correctie. Netto met L1: alfa midden ≈ €42/mnd, totaal ≈ €205 (EUR-cash). **R2-007:** ^PUT (1996→), VIX9D/VIX3M binnen (privé, licentienotitie); ^BXM/^WPUT niet via Yahoo; Ken French en Shiller-CAPE alleen citeren (C65/C68 = literatuur-evidentie, geen data gecommit).
 
