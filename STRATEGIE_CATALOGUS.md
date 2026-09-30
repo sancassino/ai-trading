@@ -158,12 +158,12 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 |------|--------|------------------------|-------------|
 | **A — HEROPENEN (hoge prioriteit)** | | | |
 | A1 | **ORB/B4a (S3)** — intraday-vlak, US500/US100/GER40/XAU | Swap 0, instrumenten aanwezig, bevroren regel; bevestiging 2011–20 ontbreekt nog | Data-acquisitie (Sandro-actie), dan S3 |
-| A2 | **Stocks-in-Play ORB earnings (S2)** — intraday-vlak, FTMO-aandelen-CFD | Eerder gefaald op kostenpoort (vaste 60-min); stop+EOD-profiel verschilt; herevalueer met cluster-t | PREREG vernieuwen, kosten-poort opnieuw meten |
+| A2 | **Stocks-in-Play ORB earnings (S2)** — intraday-vlak, FTMO-aandelen-CFD | Eerder mediaan-poort FAIL; heropening D-012 gemiddelde-poort + cluster-t + FTMO-EV | **PREREG_FTMO_A2.md BEVROREN** (22:15); wacht Uitvoerder poort |
 | A3 | **Noise-area intradag-momentum (S1)** — trailing EOD-exit, US-indices | Eerder afgewezen (na 2023); heroverwegen met nul-kalibratie en vol-regime; intraday-vlak | F1-heronderzoek, geen extra trial tenzij hypothese nieuw |
-| A4 | **FOMC-cyclus (C17)** — 5 van 6 weken vóór FOMC, D1, index-CFD | D1 = 1 nacht swap; swap-kosten laag (<1,5 bp); t 2,85 op ETF → FTMO-cfd nog niet gerekend | Herbereken op cfd-vehikel met engine/ftmo.py |
-| A5 | **FX-intradag-breakout** — EURUSD/GBPUSD/USDJPY londen-open of NY-open | Kosten laag (0,6–0,8 bp), swap 0 bij intraday-exit | Nieuw voorstel F4; data FTMO-M5 FX aanvullen (alleen EURUSD nu) |
+| A4 | **FOMC-cyclus (C17)** — even FOMC-weken, D1, index-CFD | Swap-drag hoger dan verwacht (mean nights ≈ 8,6) | **GESTOPT** kostenpoort TRAIN FAIL (`43b6ba2`); geen herstart zonder CEO |
+| A5 | **FX-intradag-breakout** — London-open ORB majors | Kosten laag, swap 0; U3 eerder poort-FAIL | **PREREG_FTMO_FX_INTRADAG.md bevroren; GEPARKEERD tot M5** (v38) |
 | **B — ONDERZOEKEN (middel)** | | | |
-| B1 | **TSMOM-mix FX (C05 op FX)** | FX-swap ≈ carry-premie; positief scheef; maand | Herbereken: swap vs carry-premie per paar; long hoge-rente = meevaller |
+| B1 | **TSMOM-mix FX (C05 op FX)** | FX-swap ≈ carry-premie; positief scheef; maand | **PREREG_FTMO_B1.md BEVROREN** (05caced + poort signed-mean v38); Uitvoerder-2 mag poort |
 | B2 | **FX-carry + trendfilter (C12)** | Carry-risicopremie; C12 CAT1 ≈ 0 na kosten → herevalueer alleen met D1-reeksen + FTMO-FX-swaps | Lage prioriteit |
 | B3 | **Donchian D1 FX/XAU (C03)** | R4 H4 negatief maar op short reeks; FX D1 = 1 nacht swap; positief scheef | Herevalueer met lange FX-dagreeksen (FRED 1971+) |
 | **C — HERBEOORDELEN met FTMO-EV** | | | |
@@ -188,32 +188,52 @@ Per heropende regel de volgende metriek berekenen:
 
 ## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
 
-*Bijgewerkt: 2026-09-30 21:55 Amsterdam*
+*Bijgewerkt: 2026-09-30 22:15 Amsterdam*
 
-### 10a. Overzicht nieuwe PREREGs (Grok Strateeg-1 + Strateeg-2, per 2026-09-30)
+### 10a. Overzicht PREREGs (Faraday + Grok Strateeg-1 + Strateeg-2)
 
-| Code | Naam | Branch | Distinct van catalogus? | Overlap-risico |
-|------|------|--------|------------------------|---------------|
-| GS01 | Gap-aligned long-only ORB (indices US500/US100/GER40) | grok/strateeg-1 | Ja — A1 is bidirectioneel, GS01 is long-only + gapfilter | Zelfde B4a-simulator; ander signaal (gap≥+0,2%) |
-| GS02 | Asian-range fade FX (EUR/GBP, London-open) | grok/strateeg-1 | Ja — A5 PREREG_FTMO_FX_INTRADAG = momentum-breakout; GS02 = fade | Geen overlap |
-| S2-XAU | XAUUSD London–NY overlap breakout (14:00–17:00) | grok/strateeg-2 | Ja — A1 ORB is cash-open; dit is overlap-venster | Beperkt (beide XAU, ander tijdstip) |
-| S2-GER40 | GER40 Frankfurt open-drive (09:00 CET) | grok/strateeg-2 | Ja — A1 ORB is 09:00 CET OR 30 min; dit mogelijk dezelfde opening → **check overlap met A1** | Mogelijk ≈ A1 GER40; rapporteer correlatie |
-| S2-USOIL | USOIL EIA-window breakout (woensdag 16:30 CET) | grok/strateeg-2 | Ja — nieuw (S6 was exploratief, geen PREREG) | Geen overlap met A/B-tier |
-| S2-BTC | BTCUSD US-open range break (15:30–16:00 CET), US100-gap filter | grok/strateeg-2 | Ja — geen crypto in A/B-tier | Geen overlap |
+| Code | Naam | Branch | Status | Distinct / overlap |
+|------|------|--------|--------|--------------------|
+| C17 / A4 | FOMC-cyclus index-CFD | faraday | **STOP** poort FAIL `43b6ba2` | — |
+| FX_INTRADAG / A5 | London-open ORB FX | faraday | PREREG bevroren; **park tot M5** | ≠ GS02 fade; U3-familie |
+| B1 | TSMOM-mix FX (C05) | faraday | **PREREG bevroren**; poort signed-mean (v38) | ≠ B2/C12 carry-primary |
+| A2 | Stocks-in-Play ORB earnings | faraday | **PREREG bevroren** 22:15 | ≠ A1/GS01 indices; D-012 vs oude S2-mediaan |
+| GS01 | Gap-aligned long-only ORB indices | grok/strateeg-1 | PREREG | ≠ A1 bidirectioneel; long+gap |
+| GS02 | Asian-range fade FX | grok/strateeg-1 | PREREG | ≠ A5 breakout |
+| S2-XAU | XAUUSD London–NY overlap breakout | grok/strateeg-2 | PREREG | ≠ A1 cash-open; RT ≈ 0,83 bp |
+| S2-GER40 | GER40 Frankfurt open-drive | grok/strateeg-2 | PREREG | overlap-risico met A1 GER40 — corr rapporteren |
+| S2-USOIL | USOIL EIA-window breakout | grok/strateeg-2 | PREREG | hoog RT ≈ 3,34 bp; event-N ≈ wekelijks |
+| S2-BTC | BTCUSD US-open + US100-gap | grok/strateeg-2 | PREREG | ≠ Q3; intraday-flat verplicht (crypto-swap) |
 
-### 10b. FDR-teller impact
+### 10b. FDR-teller impact (max, na poorten)
 
-- GS01, GS02: **2 nieuwe trials** (indien kostenpoort gehaald) → TRIAL_COUNT + 2 vóór run.
-- S2-XAU, S2-GER40, S2-USOIL, S2-BTC: **4 nieuwe trials** → TRIAL_COUNT + 4 vóór run.
-- PREREG_FTMO_C17 (dit branch): **+1 trial** (indien poort gehaald).
-- PREREG_FTMO_FX_INTRADAG (dit branch): **+1 trial** (indien poort gehaald; anders +0).
-- **Totaal na alle poorten: TRIAL_COUNT → 440 + max 8 = max 448** (exact afhankelijk van poort-uitkomsten).
-- Manager: BH-FDR herberekenen na elke merge van TRIALS.csv.
+- A4/C17: poort FAIL — telt als trial per formeel verslag `43b6ba2` (TRIALS append daar).  
+- B1, A2: +1 elk indien poort PASS.  
+- A5: +0 tot M5 + poort.  
+- GS01, GS02: +2 indien poorten.  
+- S2-XAU/GER40/USOIL/BTC: +4 indien poorten (Manager: ná B1).  
+- Manager herbereken BH na elke TRIALS-merge.
 
-### 10c. Actiepunten Strateeg (`claude/trusting-faraday-34tsmg`)
+### 10c. Welke hypothese is sterker? (evidence uit docs/kosten — geen verzonnen backtests)
 
-1. ✅ PREREG_FTMO_C17.md geschreven (A4 FOMC).
-2. ✅ PREREG_FTMO_FX_INTRADAG.md geschreven (A5 FX London-open; wacht op hertest FX-M5 data).
-3. **Volgende:** B1 TSMOM-mix FX (C05) PREREG zodra FX-M5 data beschikbaar (Uitvoerder-1 D-086).
-4. **Check S2-GER40 vs A1 overlap:** als S2-GER40 Frankfurt open-drive ≈ eerste 30 min van GER40 cash-sessie → hoge correlatie met A1 te verwachten; rapporteer aan Manager.
-5. Catalogus §9-tabel bijhouden naarmate PREREGs resultatenloos komen.
+**Korte conclusie:** voor de **volgende formele run na B1** is **A2 (Faraday)** de catalogus-prio (NEXT_STEPS v38), maar op **kostenstructuur + distinctheid** scoort **S2-XAU_OVERLAP (Strateeg-2)** het sterkst onder de nieuwe sleeves.
+
+| Rang (kwalitatief) | Hypothese | Waarom (alleen bestaande docs/kosten) |
+|--------------------|-----------|----------------------------------------|
+| 1 | **S2-XAU_OVERLAP** | Laagste gedocumenteerde RT (≈ 0,83 bp), swap=0, venster ≠ A1 cash-open, poort 2× RT + kosten<50% bruto; geen eerdere FAIL in deze familie |
+| 2 | **B1 TSMOM-mix FX** | Manager/CTO prio-1; D1 (geen M5-wacht); swap≈carry-hypothese; A4 net gefaald op overnight index-swap → FX-mix is de logische volgende slee |
+| 3 | **A2 SIP earnings** | A-tier + D-012 deblokkeert oude mediaan-FAIL; swap=0; maar US41 median RT 6,41 bp (3×≈19 bp) → poort zwaar; earnings-coverage-risico |
+| 4 | **GS01 gap long-only ORB** | Publieke research: residual ORB-edge geconcentreerd long+gap; index RT laag; wacht opzelfde M5/A1-stack |
+| 5 | **S2-BTC / S2-USOIL** | Distinct, maar BTC crypto-swapstaart als flat faalt; USOIL RT 3,34 bp maakt poort streng |
+| Zwakker / geparkeerd | A5 / GS02 / S2-GER40 / A4 | A5=U3-poort-precedent + M5-park; GS02 fade populair/decay-risico; GER40≈A1-overlap; A4 dood |
+
+**Faraday vs Strateeg-2 (programma-fit):** Faraday dekt D-085 A/B-tier (C17/FX/B1/A2) en is leidend voor Manager-prioriteit. Strateeg-2 levert **diversifiërende** event/sessie-sleeves buiten A/B — beter voor FDR-spreiding, niet voor het vervangen van B1/A2 in de prio-queue.
+
+### 10d. Actiepunten Strateeg (deze branch)
+
+1. ✅ PREREG_FTMO_C17 — bevroren; **STOP** na poort (U2).  
+2. ✅ PREREG_FTMO_FX_INTRADAG — bevroren; park tot M5.  
+3. ✅ PREREG_FTMO_B1 — bevroren; poort = signed mean (v38).  
+4. ✅ PREREG_FTMO_A2 — stub → **bevroren** 22:15 (US41 RT uit COSTS_FTMO_alle).  
+5. Catalogus §9/§10 bijgewerkt (deze commit).  
+6. Open: earnings-coverage QA door Uitvoerder vóór A2-poort; S2-GER40↔A1 correlatie bij S2-runs.

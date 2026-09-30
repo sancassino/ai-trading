@@ -1,6 +1,7 @@
 # PREREG_FTMO_FX_INTRADAG — FX Intradag London-Open ORB (A5, FTMO-EV variant)
 
 **Status:** Pre-registratie 2026-09-30 21:55 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
+**Runtime-status (NEXT_STEPS v38):** **GEPARKEERD tot M5** (GBPUSD/USDJPY/USDCHF export). PREREG blijft bevroren; geen trial tot data.  
 **Auteur:** Strateeg (Claude). **Geen resultaten vóór deze commit.**  
 **Relatie:** A5-slot in catalogus §9; eerder getest als U3 (London-open ORB FX) — kostenpoort gefaald op FTMO-spread. Dit PREREG definieert de bevroren regel voor eventuele hertest bij lagere kostenramingen of smallere spread-majors. **Distinct van Grok GS02** (Asian-range fade) en distinct van U3 (eerder gefaald op kostenpoort, niet als formele trial geteld).
 

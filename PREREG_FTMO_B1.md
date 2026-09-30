@@ -1,6 +1,6 @@
 # PREREG_FTMO_B1 — TSMOM-mix op FX (C05-FX) — FTMO-EV
 
-**Status:** Pre-registratie 2026-09-30 22:08 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
+**Status:** Pre-registratie 2026-09-30 22:08 Europe/Amsterdam (poort-amend 22:15: signed mean, NEXT_STEPS v38), branch `claude/trusting-faraday-34tsmg`.  
 **Auteur:** Strateeg (Grok). **Geen resultaten vóór deze commit.**  
 **Tier:** B1 (STRATEGIE_CATALOGUS §9). Post-A4 prio (NEXT_STEPS v37 / Manager `beb2a3b`).  
 **Relatie:** C05 uit `PREREG_CAT1.md`, **alleen** op FTMO-FX-majors (geen indices/goud). **≠ B2/C12** (carry-primary + trendfilter).  
@@ -40,9 +40,9 @@ NZDUSD **uit** (rondreis 1,85 bp in `COSTS_FTMO.csv`; CAT1-precedent). Alle zes 
 
 Bron: `COSTS_FTMO.csv`. Annualized cross-check: `data/swap_specs_fx.csv` (informatief; trial gebruikt bp/nacht-tabel hierboven).
 
-**Kosten-poort (vóór trial telt — gratis op train):**  
-Mediaan |maand-bruto| over pair-maanden op train ≥ **3×** (rondreis + |swap × nachten in hold| voor de genomen kant).  
-Hold ≈ 20–23 kalendernachten per maand. Indien poort FAIL → **STOP**, append TRIALS als stop:kostenpoort, geen verdere analyse.
+**Kosten-poort (vóór trial telt — gratis op train; NEXT_STEPS v38 / Strateeg-2):**  
+**Getekend gemiddelde** maand-bruto (niet mediaan |maand-bruto|) over pair-maanden op train ≥ **3×** gemiddelde (rondreis + swap×nachten voor de genomen kant) over diezelfde pair-maanden.  
+Hold ≈ 20–23 kalendernachten per maand. Mediaan |bruto| blijft informatief. Indien poort FAIL → **STOP**, append TRIALS als stop:kostenpoort, geen verdere analyse.
 
 ---
 
@@ -104,5 +104,5 @@ Hold ≈ 20–23 kalendernachten per maand. Indien poort FAIL → **STOP**, appe
 4. Geen 2025-data. Geen parameterwijziging na zien.
 
 ---
-**Bevroren:** 2026-09-30 22:08 CEST — post-A4 prio B1 (groepchat / NEXT_STEPS v37).  
+**Bevroren:** 2026-09-30 22:08 CEST — post-A4 prio B1; poort-clarificatie 22:15 CEST (signed mean, v38).  
 **Auteur:** Strateeg (`claude/trusting-faraday-34tsmg`)

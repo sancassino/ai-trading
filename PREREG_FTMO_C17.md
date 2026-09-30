@@ -1,7 +1,8 @@
 # PREREG_FTMO_C17 — FOMC-cyclus D1 op index-CFD (FTMO-EV variant)
 
 **Status:** Pre-registratie 2026-09-30 21:55 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen resultaten vóór deze commit.**  
+**Uitkomst (Uitvoerder-2, `43b6ba2`, 22:04 CEST):** **FORMEEL GESTOPT** — kostenpoort TRAIN FAIL (median bruto 20,79 bp < 3× median cost 45,12 bp). Geen herstart zonder CEO-besluit (NEXT_STEPS v38).  
+**Auteur:** Strateeg (Claude). Resultaten pas ná freeze-SHA; gate-run landde op `claude/uitvoerder2-r`.  
 **Relatie:** C17 FOMC-cyclus eerder getest via ETF-vehikel (t 2,85, SR 0,52); dit herhaalt de bevroren C17-regel op cfd-vehikel met FTMO-EV als maatstaf. **Geen nieuwe hypothese; hertest op FTMO-instrument.**
 
 ---

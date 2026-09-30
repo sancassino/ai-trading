@@ -51,3 +51,26 @@ Commit op `claude/trusting-faraday-34tsmg` + push `-u origin`.
 - ≠ B2/C12
 
 **Niet gedaan:** geen backtest, geen A2-upgrade deze commit, geen 2025-touch.
+
+## 2026-09-30 22:15 Europe/Amsterdam — Hourly FTMO (:10): A2 freeze + B1 poort-align + catalog §9/§10
+
+**Branch:** `claude/trusting-faraday-34tsmg` (D-090 Strateeg).  
+**Fetch/pull:** tip was `05caced` (B1 freeze); deze cyclus bouwt daarop.
+
+### BESLUITEN (CEO `upbeat-dirac`, tail)
+- D-083…D-086 bindend: FTMO-prop €80k, maatstaf FTMO-EV, reserve 2025 geschorst, SymbolList_FTMO.
+- Geen nieuwere D-09x-tekst in BESLUITEN.md zelf; Manager NEXT_STEPS v38 op main verwijst D-087…D-090 + post-A4 prio.
+- **A4 C17 GESTOPT** (`43b6ba2` U2): kostenpoort TRAIN FAIL — geen herstart zonder CEO.
+
+### Geleverd
+1. `PREREG_FTMO_A2.md` stub → **volledige freeze** (OR-richting, stop 10% ATR14, EOD; D-012 gemiddelde-poort; US41 RT uit `COSTS_FTMO_alle.csv` median 6,41 / mean 8,99 bp; train/test/reserve zoals CTO-freeze; FTMO-EV ≥ €80; 1 variant).
+2. `PREREG_FTMO_B1.md` poort-amend: **getekend gemiddelde** bruto (NEXT_STEPS v38), niet mediaan |bruto|.
+3. `PREREG_FTMO_C17.md` status → FORMEEL GESTOPT (verwijs `43b6ba2`).
+4. `PREREG_FTMO_FX_INTRADAG.md` → GEPARKEERD tot M5 (v38).
+5. `STRATEGIE_CATALOGUS.md` §9 A2/A4/A5/B1 statuses; §10 herschreven + sterkte-rang (S2-XAU > B1 prio-fit > A2 > …).
+
+### Strateeg-2 vergelijking (§10c)
+Sterkste *nieuwe* sleeve op kosten/distinctheid: **S2-XAU_OVERLAP**. Programma-prio blijft **B1 dan A2** (Manager). Faraday leidend voor A/B-tier; Strateeg-2 voor FDR-diversificatie.
+
+### Niet gedaan
+- Geen backtest / geen FTMO-EV-cijfers verzonnen / geen 2025-touch / geen A4-herstart.
