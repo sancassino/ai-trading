@@ -321,3 +321,35 @@ Bron: `origin/claude/trusting-faraday-34tsmg` (`d5143a2` / merge `…19:54 UTC`)
 
 **Volgende cyclus (als deblokkeerd):** A4 kostenpoort op train (gratis) → zo ja formele trial + TRIALS-append; daarna A5 zodra M5 EURUSD op branch.
 
+## 2026-09-30 (uurcyclus ~22:05 Amsterdam) — D-090 A4 FORMEEL (amend 5fc3fb9)
+
+**Branch:** `claude/uitvoerder2-r`. **Engine:** `engine/ftmo.py` = CTO blob `f13a5d11` (ongewijzigd).
+
+### Strateeg amend geland
+- Bron SHA: `5fc3fb9c09812b141934c48c2e5b110eb5268fe9` (`CTO-deblokker: freeze train 2021–2023, test=2024, reserve 2025 untouched`)
+- Files: `PREREG_FTMO_C17.md`, `PREREG_FTMO_FX_INTRADAG.md` → checkout op deze branch.
+- **Freeze bevestigd:** Train 2021-01-01…2023-12-31; Test 2024-01-01…2024-12-31; Reserve 2025-01-01→ ONAANGERAAKT.
+
+### Data-prep (A4 D1)
+- `data/fomc_dates.csv` aangemaakt (265 data; federalreserve via bestaande bronnen).
+- `data/daily/US500cash.csv` + `US100cash.csv` uit `data/ftmo_d1ohlc_US500_US100.txt`.
+- `data/daily/GER40cash.csv` = DAX-proxy (geen FTMO GER40 D1); kosten via COSTS_FTMO GER40cash.
+- A5 geparkeerd (M5 ontbreekt) — geen run.
+
+### Kostenpoort TRAIN (formele poort)
+- Script `scripts/a4_cost_gate_c17_train.py`; artefacts `results/R2/a4_prep/cost_gate_c17_train.*`.
+- N=221 trades (3 symbolen, entry&exit in 2021–2023). Reserve 2025 niet gelezen voor gate.
+- Pooled median bruto **20.79 bp** vs 3× median cost **45.12 bp** (cost=RT+nights×swap; mean nights 8.63).
+- **Verdict: FAIL** → PREREG §4 **STOP, telt als trial, geen verdere analyse** (geen test-t, geen `ftmo_ev()`).
+- Secundair ≈15 bp-parenthese: PASS — niet gebruikt als overrule van 3×-regel.
+
+### TRIALS / teller
+- `catalogus/TRIALS.csv` append: `C17_fomc_cycle` / `FTMO_A4_basis` / `stop: kostenpoort…`
+- `TRIAL_COUNT.md`: +1 → **443**.
+- Formeel verslag: `results/R2/a4_prep/formal_trial_c17.md`.
+
+### Blockers / next
+- A4 formeel afgesloten op kostenpoort (FAIL). Geen A-tier.
+- A5 blijft geparkeerd tot M5 + eventuele latere CTO-vrijgave.
+- Volgende: wacht Manager/Strateeg op post-A4 prioriteit (andere A-tier of B1); reserve 2025 onaangeraakt laten.
+

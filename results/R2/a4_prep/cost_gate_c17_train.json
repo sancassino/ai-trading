@@ -1,0 +1,58 @@
+{
+  "label": "A4_C17_cost_gate_TRAIN_PRE_trial",
+  "train_window": "2021-01-01..2023-12-31",
+  "hard_cap": "2024-12-31",
+  "reserve_2025": "ONAANGERAAKT",
+  "n_trades_total": 221,
+  "per_symbol": {
+    "US500cash": {
+      "n_trades": 74,
+      "median_bruto_bp": 14.548401988895288,
+      "median_cost_bp": 11.66,
+      "median_netto_bp": 2.8884019888952874,
+      "threshold_3x_median_cost_bp": 34.980000000000004,
+      "gate_median_bruto_ge_3x_cost": false,
+      "mean_nights": 8.554054054054054,
+      "rt_bp": 0.78,
+      "swap_long_bp": 1.36,
+      "median_cost_sens50_bp": 17.1
+    },
+    "US100cash": {
+      "n_trades": 74,
+      "median_bruto_bp": -10.94120879290006,
+      "median_cost_bp": 16.259999999999998,
+      "median_netto_bp": -27.201208792900058,
+      "threshold_3x_median_cost_bp": 48.779999999999994,
+      "gate_median_bruto_ge_3x_cost": false,
+      "mean_nights": 8.554054054054054,
+      "rt_bp": 0.66,
+      "swap_long_bp": 1.95,
+      "median_cost_sens50_bp": 24.06
+    },
+    "GER40cash": {
+      "n_trades": 73,
+      "median_bruto_bp": 55.312991349123486,
+      "median_cost_bp": 15.040000000000001,
+      "median_netto_bp": 38.48299134912349,
+      "threshold_3x_median_cost_bp": 45.120000000000005,
+      "gate_median_bruto_ge_3x_cost": true,
+      "mean_nights": 8.794520547945206,
+      "rt_bp": 0.72,
+      "swap_long_bp": 1.79,
+      "median_cost_sens50_bp": 22.2
+    }
+  },
+  "pooled": {
+    "median_bruto_bp": 20.788323368337025,
+    "median_cost_bp_incl_swap": 15.040000000000001,
+    "median_netto_bp": 7.732518095926459,
+    "threshold_3x_median_cost_bp": 45.120000000000005,
+    "prereg_approx_abs_threshold_bp": 15.0,
+    "gate_median_bruto_ge_3x_cost": false,
+    "gate_median_bruto_ge_15bp": true,
+    "gate_sens_swap_plus50pct": false,
+    "mean_nights": 8.633484162895927
+  },
+  "verdict": "FAIL",
+  "note": "PRE-trial cost-gate only. Formal trial blocked until Strateeg amends PREREG test window to \u22642024 / heel 2024."
+}

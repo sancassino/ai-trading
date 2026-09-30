@@ -49,8 +49,10 @@
 
 ## 4. Train/test en beslisregel
 
-- **Train:** 2021–2023 (3 jaar, ≈ 19 FOMC-cycli × 3 symbolen = ≈ 57 entries).
-- **Test:** 2024–2026 (2+ jaar, ≈ 13 cycli × 3 = ≈ 39 entries).
+- **Train:** 2021-01-01 … 2023-12-31 (bevroren 2021–2023; 3 jaar, ≈ 19 FOMC-cycli × 3 symbolen = ≈ 57 entries).
+- **Test:** 2024-01-01 … 2024-12-31 (volledig kalenderjaar 2024; discovery/test-plafond ≤ 2024-12-31).
+- **Reserve:** 2025-01-01 → **ONAANGERAAKT / UNTOUCHED** (niet openen, niet gebruiken; D-084 reserve geschorst).
+- **Resolutie D-030 vs D-084:** oudere venstertaal (test doorlopend voorbij 2024, D-030-achtig) conflicteert met D-084 (reserve geschorst). Dit amendement krimpt het testvenster tot 2024 zodat de 2025-reserve bevroren blijft. **Geen CEO 2025-vrijgave nodig** voor dit amendement.
 - **Beslisregel (vooraf):**
   - Netto dag-geclusterd t (Newey-West, train) ≥ 2,5 EN test-t ≥ 1,5 EN FTMO-EV ≥ €150/poging → **bevestigd, opnemen in A-tier**
   - t < 1 of netto ≤ 0 → **verworpen**
