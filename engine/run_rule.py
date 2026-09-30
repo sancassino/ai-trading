@@ -145,6 +145,11 @@ def rf_on(dates):
     if _RF is None:
         pts = [(date.fromisoformat(l.split(",")[0]), float(l.split(",")[1])) for l in open("data/fred/DTB3.csv")
                if l[:1].isdigit() and l.split(",")[1].strip() not in ("", ".")]
+        # FRED is vanaf onze IP's geblokkeerd: na de laatste DTB3-datum doorlopen met US Treasury 3m (data/daily/YLD_US3M.csv, officieel)
+        if os.path.exists("data/daily/YLD_US3M.csv") and pts:
+            last = pts[-1][0]
+            pts += [(date.fromisoformat(l.split(";")[0]), float(l.split(";")[4])) for l in open("data/daily/YLD_US3M.csv")
+                    if l[:1].isdigit() and date.fromisoformat(l.split(";")[0]) > last]
         _RF = ([p[0] for p in pts], [p[1] for p in pts])
     import bisect
     ks, vs = _RF
