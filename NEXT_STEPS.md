@@ -1,11 +1,75 @@
-# NEXT_STEPS v34 — Manager, 2026-09-30 20:40 Amsterdam (inhoud v32/v33 blijft gelden) — verwerkt D-042…D-079, ALLOCATIE_V1.1, kosten NL-retail, run 7 (C66/C67)
+# NEXT_STEPS v36 — Manager, 2026-09-30 (verwerkt D-083…D-090) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
-> **⚠ 2026-09-30 20:50 — Sandro: het doel is het FTMO-€80k-account, NIET eigen kapitaal.** Doel v2 (D-032) berust op een misverstand; zie VRAGEN_MANAGER M-013 (CEO herstelt doel). Tot CEO-besluit: reserve-run 01-10 en forward-papier lopen door (kosteloos, informatief); start geen nieuwe eigen-kapitaal-onderzoeken; eigen-kapitaal-cijfers (cash-rente, UCITS, box 3) niet meer als antwoord op 'wat levert het op' gebruiken.
+> **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
+> **⚠ RESERVE-RUN (D-084) GESCHORST:** het OOS-venster 2025-01→ is schaars; we gebruiken het niet voor ETF-portefeuilles. `r2_reserve.py` blijft staan; nieuwe shortlist + vrijgave volgen alleen voor FTMO-kandidaten (CEO-besluit).
 
-Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
+> **⚠ FORWARD ETF-PAPIER:** loopt als papierreeks door (kost niets) maar is **geen hoofdspoor**. Geen nieuwe ETF-acties; Uitvoerder-1 laat de cron draaien.
 
-## 0. Coördinatie (Manager-QA op wat er ligt)
+> **⚠ TEAM (D-090):** Claude = alleen CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main.
+
+Bindend: D-083…D-090 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bevriezen.
+
+## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-090)
+
+**Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
+
+### Acties (bindend, D-087; rollen D-090)
+
+1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — review `engine/ftmo.py` (D-087 actie 1, prio 1):**
+   - `git show origin/grok/cto-1:engine/ftmo.py` lezen + vergelijken met `q1_frontier.py`, `mc_daily_ftmo.py`, `ftmo_economics.py`
+   - Rapporteer in RUNLOG_R2: (a) FTMO-regels correct? (b) discrepanties t.o.v. bestaande simulators (bewuste keuze of fout)? (c) welke catalogus-sleeves als eerste door `ftmo_ev()` jagen?
+   - Geen eigen implementatie tenzij aantoonbare fout gevonden.
+   - Daarna A-tier: A4=FOMC C17, A5=FX-intradag (PREREG's op `claude/trusting-faraday-34tsmg`); A1=ORB/S3 geblokkeerd op data → skip. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
+
+2. **Grok CTO — A-tier runs na Uitvoerder-2-feedback (D-087 actie 2):**
+   - Wacht max. 1 cyclus op Uitvoerder-2.
+   - Daarna: draai `ftmo_ev()` op A1=ORB/B4a, A4=FOMC-cyclus (C17), A5=FX-intradag-breakout met data/daily/ en data/m5/.
+   - Rapporteer FTMO-EV per rule in RUNLOG_CTO.
+
+3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — A4/A5 PREREG + B-tier (D-087 actie 3):**
+   - PREREG_FTMO_C17.md / PREREG_FTMO_FX_INTRADAG.md checken/aanvullen.
+   - Volgende: B1 TSMOM-mix FX; A2 Stocks-in-Play ORB earnings. Catalogus §9 bijhouden.
+   - Vergelijk met Strateeg-2 (`grok/strateeg-2`) na commits; rapporteer in catalogus §10.
+
+4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090):** parallel 2–3 nieuwe FTMO-hypotheses (niet al in catalogus); PREREG_S2_*.md; RUNLOG_STRATEEG2.md. CEO vergelijkt na 3 cycli.
+
+5. **Auditor (Claude, blijft) — `engine/ftmo.py` onafhankelijk valideren (D-087 actie 5):**
+   - Schrijf eigen mini-implementatie van FTMO-regels; check of Monte Carlo juiste p-waarden geeft op synthetische paden met bekende uitkomsten.
+   - Rapporteer in AUDIT_1.md. Onafhankelijkheid t.o.v. Grok-CTO blijft bindend (D-090).
+
+6. **Manager-QA elke cyclus (Grok, branch `main`):**
+   - Uitvoerder-2 commit < 2 uur geleden op `claude/uitvoerder2-r`? Zo niet → VRAGEN_MANAGER openen (`## M-[nr] — … · OPEN`).
+   - TRIALS.csv: alleen geldig als append (geen rijen gewijzigd/verwijderd).
+   - PREREG-bestanden: git log tijdvolgorde — PREREG gecommit vóór resultaat? Zo niet → blokkade.
+   - Nieuwe CEO-besluiten uit BESLUITEN.md → NEXT_STEPS (versie bump); niemand wacht > 60 min (standaardactie).
+
+### Model-beleid (D-089)
+- Haiku-klasse: Manager, Strateeg (coördinatie/schrijfwerk).
+- Sonnet-klasse: Uitvoerder-2, Auditor, CEO (Python/MC/statistisch oordeel).
+- Regel: meerdere lege cycli → CEO zet agent omlaag of pauzeert trigger. Enige maatstaf = voortgang FTMO-edge.
+- Platform-minimum trigger = 1 uur; Grok dekt fijnere cadans waar nodig.
+
+### Teamcadans (D-088, herzien D-089/D-090)
+- CEO (Claude): elk uur (platform-min); beslist + BESLUITEN
+- Auditor (Claude): onafhankelijk, op verzoek / D-087
+- Manager (Grok → `main`): elke 30 min
+- Uitvoerder-2 (Grok → `claude/uitvoerder2-r`): elke 30 min
+- Strateeg (Grok → `claude/trusting-faraday-34tsmg`): elk uur
+- Strateeg-2 (Grok → `grok/strateeg-2`): elk uur
+- CTO (Grok → `grok/cto-1`): engine + A-tier runs
+
+---
+
+## 0z. Eigen-kapitaal-stukken — GEPARKEERD (D-083)
+
+De volgende onderwerpen zijn **niet langer actief**. Inhoud is bewaard in de repo; zie `archief/eigen_kapitaal/INDEX.md` voor de lijst van geparkte bestanden. Geen nieuwe acties; geen rapportage meer richting Sandro op deze onderwerpen.
+
+**Geparkeerd:** ALLOCATIE_V1/V1.1/V1.2/V1.3, VERWACHTING.md, VEHICLE_ANALYSE.md, S10b, P-ETF-portefeuilles (PREREG_PORT, PORT2, PORT3, PORT4), box-3/NL-retail-kosten, reserve-run (D-084 geschorst), forward-ETF (passief), D-032/D-033/D-035/D-055/D-060/D-061/D-070…D-082 voor zover eigen kapitaal als basis.
+
+---
+
+## 0a. Coördinatie (Manager-QA op wat er ligt)
 - **Uitvoerder-2 werkt op branch `claude/uitvoerder2-r`, niet op main** (RUNLOG_R2, results/R2, TRIAL_COUNT 427). Beide Uitvoerders: `git fetch --all`, elkaar lezen; Uitvoerder-2 merged `origin/main` minstens elk uur in zijn branch; Uitvoerder-1 merged `claude/uitvoerder2-r` in main na elke afgeronde run (fast conflict-vrij: eigen bestanden). **TRIALS.csv/TRIAL_COUNT.md:** main zegt 421, U-2-branch 427 → bij merge = aantal geldige rijen; "ongeldig, telt niet"-rijen blijven buiten BH (D-045).
 - **Manager-QA-bevindingen catalogusrun 2 (rapportage, geen blokkade):**
   1. **G-benchmark inconsistent toegepast:** C52 *basis* haalt SR 0,65 vs 60/40 0,66 (niet beter) maar staat 'door G-ontdekking'. Volgens D-038 (SR én maxDD beter) is dat een **fail op SR**; label 'door met voorbehoud: DD-voordeel, geen SR-voordeel' of CEO beslist. Rapporteer beslissing expliciet in TRIALS.csv.
