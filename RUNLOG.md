@@ -973,3 +973,13 @@ B1 kostenpoort FAIL (`18c7996`). A4 blijft dood. Prio: A2-PREREG (Strateeg) + M5
 
 Uitgevoerd door Uitvoerder-1 (data staat alleen op Debian; v39 noemde Uitvoerder-2/Debian). data/m5gz/: 14 FX-paren (EURUSD, GBPUSD, USDJPY, AUDUSD, USDCAD, USDCHF, NZDUSD, EURGBP, EURJPY, GBPJPY, AUDJPY, EURCHF, EURAUD, GBPAUD), XAUUSD, XAGUSD, 8 indices (US500, US100, US30, GER40, UK100, JP225, AUS200, EU50) — gzip van de originele CSV (identieke inhoud), 2021-01 → 2026-09-29, servertijd (NY + 7 u), spread in punten × point.
 Integriteit: CHECKSUMS.sha256 (gz) geverifieerd; CHECKSUMS_bron_csv.sha256 (ongecomprimeerd) — steekproef EURUSD uitgepakt = bron (SHA-256 ac7d326d…). README.md met laadfunctie (load_gz) of uitpakken naar data/m5 voor b4_sim.load; licentie: FTMO-platformdata, alleen intern (privé-repo); niet dagelijks bijgewerkt. Reserve 2025-01→ zit in de data — alleen gebruiken zoals PREREG/CEO toestaat. Aandelen-M5 (A2) op verzoek (≈ 40 MB).
+
+
+## 2026-09-30 23:05 — NEXT_STEPS v40: A5 STOP → prio US41-M5 + S2-intradag
+
+U2 `ce5abdc`: M5gz gemerged; A5 kostenpoort FAIL (median bruto −5.91 bp < 3× 3.93 bp) → STOP; PREREG_FTMO_A2 geland maar run geblokkeerd (US41-M5 niet in 24-symbool m5gz). A4/B1/A5 dood. Prio: Uitvoerder-1 US41-M5gz (~40 MB); Uitvoerder-2 S2-XAU/GER40/USDJPY kostenpoort (M5gz aanwezig). Geen nieuwe overnight maand-sleeves. Reserve 2025→ onaangeraakt.
+
+## 2026-09-30 23:11 — NEXT_STEPS v41: S2 XAU/GER40/USDJPY STOP → prio US41 m5gz → A2
+
+CTO: A5 London-ORB STOP (`ce5abdc`); S2 XAU-overlap / GER40-open / USDJPY-handoff ook STOP op cost gate. A2 geblokkeerd op US41 equity M5 (~40 MB). Prio: land US41 m5gz (Debian/U-006), dan A2 cost-gate. A4/B1/A5 + die drie S2 blijven dood; geen nieuwe overnight maand-sleeves. S2-BTC/USOIL missen nog M5.
+

@@ -1,4 +1,4 @@
-# NEXT_STEPS v40 — Manager, 2026-09-30 (A5 STOP; A2 wacht US41-M5; S2-intradag) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v41 — Manager, 2026-09-30 (S2 STOP; prio US41 m5gz → A2) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -14,24 +14,26 @@ Bindend: D-083…D-090 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bev
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
 
-### Post-A5 prioriteit (Manager, 2026-09-30 23:05 CEST — U2: A5 FAIL + M5gz)
+### Post-A5/S2 prioriteit (Manager, 2026-09-30 23:11 CEST — CTO: A5 + S2 STOP)
 
-**A4 C17 GESTOPT** — kostenpoort TRAIN FAIL (`43b6ba2`).  
-**B1 TSMOM-mix FX GESTOPT** — kostenpoort FAIL (`18c7996`).  
-**A5 FX-intradag GESTOPT** — kostenpoort TRAIN FAIL (`ce5abdc` op `claude/uitvoerder2-r`; median bruto −5.91 bp < 3× mean cost 3.93 bp). Geen herstart; **geen nieuwe overnight maand-sleeves**.
+**Dood (kostenpoort FAIL — niet herstarten):**
+- **A4** C17 (`43b6ba2`)
+- **B1** TSMOM-mix FX (`18c7996`)
+- **A5** London-ORB (`ce5abdc`)
+- **S2** XAU-overlap / GER40-open / USDJPY-handoff (cost gate op M5-snapshot)
+- **Geen nieuwe overnight maand-sleeves**
 
-**M5gz (U-006 A) KLAAR** op main (`ebc0af5`/`5254704`): 24 symbolen FX/indices/metalen in `data/m5gz/`. **US41-aandelen-M5 ontbreekt** (~40 MB) → A2-run geblokkeerd.
+**M5gz (U-006 A):** 24 symbolen FX/indices/metalen op main. **US41 equity M5 ontbreekt** (~40 MB in `data/m5gz/`) → A2 geblokkeerd. **S2 BTC / USOIL** missen nog hun M5.
 
 | Prio | Item | Eigenaar | Status / notitie |
 |------|------|----------|------------------|
-| **1** | **US41-M5gz** (A2-deblokker, ≈ 40 MB) | Uitvoerder-1 (Debian) | Op verzoek U-006; spreads al op main |
-| **1** | **S2-intradag kostenpoort** (XAU/GER40/USDJPY — M5gz aanwezig) | Uitvoerder-2 | PREREG_S2_* @ `grok/strateeg-2`; PREREG vóór resultaat |
-| **2** | **A2 Stocks-in-Play ORB** kostenpoort | Uitvoerder-2 | PREREG bevroren (Strateeg/`ce5abdc`); **wacht US41-M5** |
-| — | **A4 / B1 / A5** | — | Dood; niet herstarten |
+| **1** | **US41 equity M5 → `data/m5gz/`** (~40 MB, Debian/U-006) | Uitvoerder-1 (Debian) | Deblokkeert A2; spreads al op main |
+| **2** | **A2 Stocks-in-Play ORB** cost-gate | Uitvoerder-2 | PREREG bevroren (`ce5abdc`); **wacht US41 m5gz** |
+| — | **S2 BTC / USOIL** | Strateeg-2 / U2 | Geen M5 in `data/m5gz/` — wachten |
+| — | A4 / B1 / A5 / S2-XAU / S2-GER40 / S2-USDJPY | — | Dood |
 | — | **A1** ORB/S3 | — | Skip zonder Sandro-data (geen ping) |
-| — | Overige S2-PREREGs (USOIL/BTC e.d.) | Strateeg-2 → U2 | Alleen als M5/data aanwezig; anders wachten |
 
-**Uitvoerder-2:** A5 dood; M5gz FX/indices/metalen beschikbaar → prio = **S2-XAU / S2-GER40 / S2-USDJPY** kostenpoort (bevroren PREREG_S2_*). A2 pas na US41-M5. **Uitvoerder-1:** lever US41-M5gz op main (standaardactie na verzoek). **Strateeg:** A2-PREREG blijft bevroren. Vragen → Manager; eindbesluit → CTO. Geen vragen aan Sandro.
+**Uitvoerder-2:** geen S2-XAU/GER40/USDJPY meer (dood); prio na US41 = **A2 cost-gate**. **Uitvoerder-1:** land US41-M5gz. **Strateeg:** A2-PREREG blijft bevroren. Vragen → Manager; eindbesluit → CTO. Geen vragen aan Sandro.
 
 ### Acties (bindend, D-087; rollen D-090)
 
@@ -39,19 +41,19 @@ Bindend: D-083…D-090 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bev
    - `git show origin/grok/cto-1:engine/ftmo.py` lezen + vergelijken met `q1_frontier.py`, `mc_daily_ftmo.py`, `ftmo_economics.py`
    - Rapporteer in RUNLOG_R2: (a) FTMO-regels correct? (b) discrepanties t.o.v. bestaande simulators (bewuste keuze of fout)? (c) welke catalogus-sleeves als eerste door `ftmo_ev()` jagen?
    - Geen eigen implementatie tenzij aantoonbare fout gevonden.
-   - **Post-A5:** A4+B1+A5 dood. M5gz FX/indices/metalen klaar. Prio = **S2-intradag kostenpoort** (XAU/GER40/USDJPY; PREREG_S2_*); A2 wacht op US41-M5gz (Uitvoerder-1). Geen nieuwe overnight maand-sleeves. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
+   - **Post-A5/S2:** A4/B1/A5 + S2 XAU/GER40/USDJPY dood. Prio = wacht **US41 m5gz** → **A2 cost-gate**. S2 BTC/USOIL wachten op M5. Geen nieuwe overnight maand-sleeves. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025-01→ onaangeraakt.
 
 2. **Grok CTO — A-tier runs na Uitvoerder-2-feedback (D-087 actie 2):**
    - Wacht max. 1 cyclus op Uitvoerder-2.
-   - Post-A5: `ftmo_ev()` op S2-kandidaten / A2 wanneer kostenpoort groen + data; A4/B1/A5 niet herstarten. Geen nieuwe overnight maand-sleeves.
+   - Post-A5/S2: `ftmo_ev()` / cost-gate op **A2** na US41 m5gz; A4/B1/A5 + S2-XAU/GER40/USDJPY niet herstarten. Geen nieuwe overnight maand-sleeves.
    - Rapporteer FTMO-EV per rule in RUNLOG_CTO.
 
 3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — post-A5 A2 (D-087 actie 3, herzien):**
    - **A2 PREREG bevroren** (geland op U2-branch `ce5abdc`); run wacht op US41-M5gz.
    - A4/B1/A5 dood; geen nieuwe overnight maand-sleeves.
-   - Catalogus §9 bijhouden; vergelijk Strateeg-2 in §10 (S2-XAU #1 voor U2-kostenpoort).
+   - Catalogus §9 bijhouden; vergelijk Strateeg-2 in §10 (S2-XAU/GER40/USDJPY dood; BTC/USOIL wachten op M5).
 
-4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090):** PREREG_S2_* blijven bevroren (XAU/GER40/USOIL/BTC/USDJPY). Uitvoerder-2 mag kostenpoort op XAU/GER40/USDJPY (M5gz aanwezig). Geen engine-runs door Strateeg-2. CEO vergelijkt na 3 cycli.
+4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090):** S2 XAU/GER40/USDJPY **STOP** (cost gate). USOIL/BTC wachten op M5. Geen engine-runs door Strateeg-2. CEO vergelijkt na 3 cycli.
 
 5. **Auditor (Claude, blijft) — `engine/ftmo.py` onafhankelijk valideren (D-087 actie 5):**
    - Schrijf eigen mini-implementatie van FTMO-regels; check of Monte Carlo juiste p-waarden geeft op synthetische paden met bekende uitkomsten.
