@@ -1,0 +1,6 @@
+BTCUSD: mediaan spread 2.9 bp, P90 5.5 bp
+ETHUSD: mediaan spread 9.4 bp, P90 16.7 bp
+(a) H1-momentum long: N 8710 | netto -7.0 bp | bruto +1.5 vs kosten 8.5 bp | t train -3.61 | t test -2.94 | jaren+ 0/6 | DSR 0.00 → afgewezen
+    per jaar (bp, N): 2021:-6.1(1399) 2022:-13.5(1459) 2023:-5.5(1629) 2024:-5.1(1600) 2025:-10.1(1478) 2026:-0.5(1145)
+(b) omkeer na 3σ-uur: N 1393 | netto -7.9 bp | bruto +0.1 vs kosten 8.0 bp | t train +0.37 | t test -2.75 | jaren+ 2/6 | DSR 0.00 → afgewezen
+    per jaar (bp, N): 2021:+8.4(173) 2022:+14.3(261) 2023:-11.6(253) 2024:-8.0(259) 2025:-40.1(255) 2026:-4.9(192)

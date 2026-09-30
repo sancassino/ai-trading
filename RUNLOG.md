@@ -474,3 +474,11 @@ Na fix — kwaliteit: mediaan |gap| eventdagen 3,80% vs 0,62% overige dagen; 73%
 (b) fade: N 623, netto +6,3 bp, t +1,08 / −0,30, 3/6 jaar+ → afgewezen.
 Conclusie: kosten zijn hier klein t.o.v. de beweging (bruto 6× kosten), maar de spreiding per event is zo groot dat er geen significante edge is. TRIAL_COUNT 396.
 Volgende stap: Q3 (crypto intraday).
+
+## 2026-09-30 06:36 — Q3: crypto intraday BTC/ETH — beide AFGEWEZEN
+
+Getest (PREREG_Q3.md vóór berekening): q3_crypto.py, FTMO-M5 BTCUSD/ETHUSD 2021–26 (nieuw geëxporteerd, ≈ 100k bars/jr), H1 per serveruur, geen positie over servermiddernacht (geen −30%/jr-swap), spread uit de data (mediaan BTC 2,9 bp, ETH 9,4 bp; P90 5,5 / 16,7 bp) + 0,01%/kant commissie (aanname).
+(a) H1-momentum long (24h-rendement > 0 én > SMA48, max 6 uur): N 8.710, bruto +1,5 bp vs kosten 8,5 bp → netto −7,0 bp, t train −3,61 / test −2,94, 0/6 jaar+.
+(b) omkeer na 3σ-uurbeweging (4 uur): N 1.393, bruto +0,1 vs kosten 8,0 bp → netto −7,9 bp, t +0,37 / −2,75, 2/6 jaar+.
+Conclusie: bruto ≈ 0; FTMO-crypto-kosten (spread + commissie) maken intraday crypto kansloos. TRIAL_COUNT 398.
+Volgende stap: Q4 (machine learning met walk-forward).

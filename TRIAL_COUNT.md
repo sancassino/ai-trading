@@ -47,3 +47,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | K1 RSI(2) max 1 nacht / max 2 nachten | 2 | 391 |
 | 2026-09-30 | J2 (US100 gap-continuatie, XAU ORB Londen, GER40 ORB + US-filter) | 3 | 394 |
 | 2026-09-30 | Q2 earnings-gap continuatie / fade | 2 | 396 |
+| 2026-09-30 | Q3 crypto intraday (H1-momentum, 3σ-omkeer) | 2 | 398 |
