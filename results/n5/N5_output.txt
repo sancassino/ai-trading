@@ -1,0 +1,20 @@
+(1) RSI-definitie: klassieke Wilder-seed vs b2_sim.rsi2 (seed = eerste verandering) — verschil na opwarming:
+    max |Δ RSI| vanaf bar 10: 4.70e-02 (Wilder n=2 vergeet de seed na enkele bars)
+(2) Trade-voor-trade, oorspronkelijke uitstap (RSI>70), FTMO-D1 2021–2026, vs e1-logica:
+  US500cash                          mijn   55 | ref   55 | gelijk   55 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+  US100cash                          mijn   46 | ref   46 | gelijk   46 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+  US30cash                           mijn   54 | ref   54 | gelijk   54 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+  GER40cash                          mijn   45 | ref   45 | gelijk   45 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+  UK100cash                          mijn   45 | ref   45 | gelijk   45 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+  XAUUSD                             mijn   32 | ref   32 | gelijk   32 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+(3) Max 1 nacht, Yahoo (SPY/QQQ/GLD/DAX/N225), bruto (zonder kosten) vs k1-logica:
+  SPY                                mijn  461 | ref  461 | gelijk  461 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+  QQQ                                mijn  398 | ref  398 | gelijk  398 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+  GLD                                mijn  283 | ref  283 | gelijk  283 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+  DAX                                mijn  475 | ref  475 | gelijk  475 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+  N225                               mijn  405 | ref  405 | gelijk  405 (100.0%) | rendement-afwijking 0 | alleen mijn 0 | alleen ref 0
+(4) Swap: FTMO swap_rollover3days = 5 (vrijdag, zie mt5_swap_specs/SymbolInfoDump). Python rekent kalendernachten:
+    vrijdag→maandag = 3 nachten in beide methoden; totaal per trade identiek, alleen het boekmoment verschilt.
+(5) EA RSI2Sleeve: CopyBuffer(h, 0, 1, 1) en iClose(s, D1, 1) → uitsluitend de laatst afgesloten D1-bar (bar 1).
+(6) Stop-fills: b4_sim vult stops op de stopprijs of de slechtere bar-open (gaps); MT5-tester vult op de exacte
+    stopprijs zonder slippage → beide optimistisch bij snelle markten; G1 (+1 punt slippage) kwantificeert dit.

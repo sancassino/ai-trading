@@ -434,3 +434,13 @@ Volgende stap: N4 (forward-onderhoud), daarna steady-state.
 
 N4: forward/paper_daily.csv bestaat nog niet — correct: de eerste echte handelsdag (2026-09-30) wordt pas vanavond om 22:15 UTC verwerkt (na de US-slot); controle nu 04:27 UTC. Cron aanwezig: dagelijks 22:15 UTC (forward_paper.py) en maandag 22:45 UTC (forward_week.py, eerste weekrapport 2026-10-05). Eventuele gaten worden in het weekrapport gemeld.
 STEADY-STATE (stopregel supervisor, backlog v8): N1–N4 klaar; de kern (RSI(2) max 1–2 nachten) haalde in MT5 SR < 0,5. Geen nieuwe hypothesen meer (TRIAL_COUNT blijft 394). Alleen nog: (a) papieren forward-test dagelijks, (b) wekelijks verslag, (c) opnieuw werken zodra Sandro lange data levert (DATA_REQUEST_SANDRO.md → L2/L3b) of zelf een nieuw idee met regels aanlevert. Uurlijkse NEXT_STEPS-check blijft actief.
+
+## 2026-09-30 04:29 — N5: onafhankelijke code-audit van de kern — 100% trade-overeenkomst
+
+Uitgevoerd (PREREG_N5.md vóór berekening): audit_n5.py, zelfstandige herimplementatie (klassieke Wilder-RSI, eigen SMA, eigen trade-logica; eigen simulators alleen geïmporteerd om te vergelijken).
+(1) RSI-seedverschil (klassiek vs b2_sim): max 0,047 RSI-punt vanaf bar 10 → geen signaaleffect.
+(2) Oorspronkelijke uitstap, FTMO-D1 2021–26: 55/46/54/45/45/32 trades (US500/US100/US30/GER40/UK100/XAU) — 100% gelijk, 0 rendementsafwijkingen.
+(3) Max 1 nacht, Yahoo: SPY 461, QQQ 398, GLD 283, DAX 475, N225 405 trades — 100% gelijk, 0 afwijkingen.
+(4) Swap: FTMO rollover3days = vrijdag; Python telt kalendernachten → zelfde totaal per trade. (5) EA gebruikt alleen bar 1 (afgesloten). (6) Stop-fills optimistisch (exacte prijs in MT5-tester; b4_sim stopprijs of slechtere open) — gekwantificeerd in G1.
+Conclusie: geen lookahead/off-by-one gevonden; PLAFOND ongewijzigd.
+Volgende stap: N6 (reproduce.sh).
