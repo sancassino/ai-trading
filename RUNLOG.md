@@ -695,3 +695,10 @@ fetch_daily.py: Yahoo chart-API met eerlijke User-Agent (geen browser-imitatie, 
 D3-QA (d3_qa_daily.py → data/DATA_CATALOGUS.md, CHECKSUMS_daily.sha256): geen dubbele datums; weinig gaten > 7 d (N225 3, FX 2); OHLC-inconsistenties alleen bij futures/FX (Yahoo-artefacten, 7–441 dagen; slot bruikbaar, OHLC met voorzichtigheid); sprongen > 20% alleen bij VIX/IRX/aardgas/WTI (echt of rol; WTI 1 dag ≤ 0 = april 2020).
 Overlap met FTMO 2022–26 (slot-op-slot): SPX↔US500 corr 0,999 (niveau 0,02%), NDX↔US100 0,999, DAX↔GER40 0,992, GOLD_F↔XAUUSD 0,913 (future vs spot, slottijd). 
 Volgende stap: R0 (engine volgens ENGINE_TEMPLATE).
+
+## 2026-09-30 10:50 — R0: gemeenschappelijke engine (engine/run_rule.py) gebouwd en gevalideerd op B2b-replicatie
+
+Volgens ENGINE_TEMPLATE.md: één engine voor alle catalogusregels (catalogus/<id>.py met RULE-dict + positions(df, params); positie ná slot t, geen lookahead), één kostenmodel (COSTS_FTMO.csv rondreis per wijziging + swap per kalendernacht; instrumenten zonder FTMO-meting via U1-spreads, swap dan indexgemiddelde — vermeld), identieke output (netto SR + 90%-CI, t dag/Newey-West/blok-bootstrap, H1/H2, +50% spread, skew, dagverlies max/P99, maxDD, corr met ORB/RSI(2)-sleeves, bull/bear-regime SPX>SMA200, per jaar, per instrument), ontdekking ≤ 2024 en reserve-OOS 2025-01→ alleen met --reserve (gelogd), catalogus/TRIALS.csv met Benjamini-Hochberg-q herberekend over alle rijen.
+Kleine fix: COSTS_FTMO.csv had een puntkomma in een tekstveld (commissie_bron) → vervangen door komma.
+Validatie (replicatie, geen nieuwe trial): RSI(2)-dip boven SMA200 op SPX, NDX, DAX, FTSE, N225, GOLD_F 1990–2024 met FTMO-kosten: SR 0,52 (CI 0,28…0,80), t dag 3,12 / NW 3,21 / bootstrap 3,50, H1 3,00 / H2 1,39, +50% spread 3,15, skew −0,97, max dagverlies 3,75%; per instrument SPX 4,22, NDX 3,48, DAX −0,31, FTSE 1,70, N225 0,12, goud 0,65 — consistent met B2b (t 3,65; SPX 4,0, NDX 3,7). Corr met RSI2-sleeve 0,75, ORB −0,02; SPX>SMA200 +2,08 bp/dag, daaronder −2,44.
+Klaar voor R1 zodra STRATEGIE_CATALOGUS.md v1 (Strateeg) bestaat.
