@@ -77,6 +77,46 @@ CEO: haircut-definitie definitief (excess, cash apart, alfa-boven-cash = beoorde
 **Run 7:** **C66 VRP-proxy (evidentie, geen trial):** VIX 19,5 vs realized 15,5 ⇒ VRP +4,1 vol-punten, positief in 84% van 419 maanden (1990–2024); variantieswap-proxy SR 1,66, **scheefheid −4,7, slechtste maand −5,7 (aug 2008) ≈ 18 maanden winst, maxDD 42% bij 5% vaste notional (9% bij 1%), corr met SPX-maand +0,53** — echte premie met zware linkerstaart; proxy optimistisch (geen spreads/marge); €/mnd pas met PutWrite-data + 30–60% haircut. **C67 landenrotatie: afgewezen** (ΔSR −0,07, NW-t −0,97) zoals verwacht. C65 (FF-licentie), C68 (CAPE) en PutWrite-substitutie wachten op data (D-081: ^PUT/^BXM via Yahoo privé, FF alleen na gebruiksvoorwaarden, CAPE-proxy prijsgebaseerd als licentie onduidelijk).
 **D-080:** kosten ≈ ½ van de alfa → **V1.2 geleverd (`ALLOCATIE_V1_2.md`)**: P-ETF-lite exact gedefinieerd voor PREREG_PORT3 (4 ETF's; sleeve A kwartaal; Faber op SPX alleen; drempel 2%), varianten L0–L6 (drempel, kwartaal, 1 indexsignaal, lite = L1+L2+L3, zonder overlay, drempel 1/5%), vooraf vastgelegde beslisregel (lite alleen bij ΔSR ≥ −0,05, maxDD ≤ 20% én ≤ 1,3× referentie, besparing ≥ €15/mnd, geen tekenomslag), kanttekeningen (SPX als proxy voor wereld-UCITS; kwartaalherweging vergroot drift-afwijking). **Mijn schatting:** lite ≈ 25–40 trades/jr ⇒ kosten ≈ €15–20/mnd ⇒ alfa boven cash ≈ €45–50, totaal ≈ €210 — verbetering in netto-verhouding, geen doorbraak.
 
+## UPDATE 2026-09-30 21:10 (v4.0) — KOERSCORRECTIE CEO D-083..D-086: pivot naar FTMO-prop €80k
+
+**Sandro verduidelijkte: het doel is altijd FTMO €80k (prop account), niet eigen kapitaal.** D-032 (eigen kapitaal) berustte op een misverstand. D-083 vervangt Doel v2 met Doel v3: FTMO-prop €80k, ambitie €800–900/mnd uitbetaald, alle FTMO-regels (5% dagverlies, 10% statisch). Eigen-kapitaalwerk geparkeerd in `archief/eigen_kapitaal/` (ALLOCATIE_V1.x, VERWACHTING.md, VEHICLE_ANALYSE, S10b — bewaard voor kennishergebruik). Reserve-run (D-084) geschorst; forward-ETF draait kosteloos door als papierreeks.
+
+**Mijn taken (D-086 Strateeg):**
+1. **Plan v4** (dit document, nu): FTMO-pivot; catalogus herordenen op FTMO-uitvoerbaarheid.
+2. **S10-FTMO** (variant van S10b voor prop): nieuwe H-poorten met FTMO-EV als maatstaf; reactiveren zodra eerste FTMO-kandidaten resultatenloos zijn.
+3. **Herordening catalogus** (zie §3 hieronder): FTMO-uitvoerbaarheid = eerste filter (cfd-kosten + swap + dagverliesregel); swapvrij en intraday-vlak krijgen voorrang.
+
+**Waardevol uit de eigen-kapitaalfase (meenemen):**
+- Engine-methodiek: BH-FDR, dag-geclusterd t, nul-kalibratie, PREREG-vóór-resultaat (alle tools intact)
+- D2/D2b dagdata (1927–2026, 87+ reeksen) — indices en FX ook in FTMO-universum
+- FTMO-EV-module: `ftmo_economics.py` / `mc_daily_ftmo.py` / Q1b bestaan al (Uitvoerder-2 bouwt `engine/ftmo.py`)
+- Kostentabel §2 dit document: gemeten spreads/swaps (cfd-vehikel blijft de maatstaf)
+- Nul-kalibratie-bevinding: C02/C52 = DD-filter, geen alfa — nuttig als reminder dat structuurwinst ≠ ORB-edge
+
+**Maatstaf nieuw:** FTMO-EV = P(slagen fase 1 + 2) × P(funded overleven) × E[uitbetaling/mnd] − fee/pogingen, netto. SR is secundair (helpt als proxy, maar FTMO-mechanica beslist). Verboden: schaal > 4% dagverliesrisico als aanbeveling (alleen bovengrens, D-016/D-085).
+
+**Instrumentuniversum:** FTMO-lijst (SymbolList_FTMO.csv): indices, FX, goud/zilver/olie, aandelen-CFD, crypto; geen UCITS/ETF/obligaties-futures tenzij FTMO heeft. Kosten = cfd-vehikel (S0-spread/commissie + FTMO-swap per nacht, long/short apart, +50%-gevoeligheid; tabel §2 geldt).
+
+**Zoekrichting (nieuw, CEO D-085 §5):**
+- Dagelijks-vlak of laag-swap profiel, positief scheef of lage DD, SR ≥ 0,8 na FTMO-kosten
+- Combinaties: ORB-achtig intraday (fase 1-overlap), kortingsgedreven shorts, FX-intraday, event-strategieën (earnings, FOMC-cyclus), vol-getarget multi-asset op CFD
+- Herzie wat in fase 1 faalde (ORB-verval, kostenpoort) **met de nieuwe methodiek** (cluster-t, nul-kalibratie, regimes) — verval na 2023 kan regime zijn, niet structureel
+
+**Stand heropende sporen (FTMO-kandidaten):**
+| Code | Naam | FTMO-compatibel? | Status | Prioriteit |
+|------|------|-----------------|--------|-----------|
+| S3 | ORB OOS 2011–20 | Ja (intraday-vlak, cfd) | GEPARKEERD (data ontbreekt) | 1 |
+| S2 | Stocks-in-Play ORB earnings | Ja (FTMO-aandelen-CFD) | GEFAALD kostenpoort — herevalueer met stop/EOD-profiel + cluster-t | 2 |
+| S1 | Noise-area intradag-momentum | Ja (intraday, US-indices) | AFGEWEZEN na 2023 — herevalueer regimes + nul-kalibratie | 3 |
+| C17 | FOMC-cyclus D1 | Ja (index-CFD, laag-swap D1) | t 2,85 in ETF-vehikel; FTMO-cfd nog niet | 4 |
+| C05 | TSMOM-mix | FTMO-swap probleem | Matig — swap doodt het | laag |
+| C02 | Faber (D1 DD-filter) | Ja (als risicobeheer, niet alfa) | DD-filter in portefeuille-context; geen FTMO-trial | — |
+
+**Nieuwe FTMO-sporen (D-085):**
+- **F1 — ORB-verval-heronderzoek (geen trial):** ORB 2021–26 t 1,81 (dag-geclusterd); 2021–23 vs 2024–26-uitsplitsing; vol-regime-test (S9-uitkomst: vol verklaart het niet direct); nul-kalibratie op FTMO-M5 2021–26 om regime-BB te scheiden van toeval. **Output:** baseline voor nieuwe S3-lezing + verwacht FTMO-EV als 2011–20 bevestigd.
+- **F2 — engine/ftmo.py** (Uitvoerder-2 bouwt): 5%-dagverlies op floating equity, 10% statisch, winstdoelen, min. handelsdagen, winstsplit-aanname €540/€80k. Wanneer gereed: herbereken alle catalogus-sleeves op FTMO-EV.
+- **F3 — catalogus herbeoordeling cfd-FTMO** (§3b hieronder): welke van de 69 regels halen de poort op cfd-kosten + swap + FTMO-EV ≥ 0?
+
 ## UPDATE 20:55 (v3.6) — PORT3/PORT4 (Uitvoerder-1) beoordeeld met mijn vooraf vastgelegde regel → `ALLOCATIE_V1_3.md`
 **Cijfers (2001–24, model B, één simulator):** L0 inst SR 0,86/DD 11,1%/153 trades/€268 jr; **L1 drempel 1%: SR 0,91/DD 11,3%/57 trades/€116 jr**; **L4 lite: SR 0,80/DD 15,2%/18 trades/€27 jr, 2021–24 SR 0,25 vs 0,42**. **Toepassing V1.2-regel:** lite faalt op 3 van 4 criteria (ΔSR −0,06 net onder −0,05; DD 15,2% > 1,3×11,1% = 14,4%; ΔSR 2021–24 −0,17) → **niet voorgesteld; L0 blijft referentie**. **L1 haalt G1 (V1.1)**: ΔSR +0,05, besparing ≈ €12,7/mnd (net boven €12-grens). **V1.3-kandidaat (voorstel aan CEO): P-ETF-a met 1%-drempel.** Kanttekening: SR-stijging 0,86→0,91 is ruis (SE ≈ 0,1–0,2), niet meenemen; kiesrisico 7+ forward-portefeuilles → keuze pas na ≥ 3 mnd forward + prior/BH-correctie. Netto met L1: alfa midden ≈ €42/mnd, totaal ≈ €205 (EUR-cash). **R2-007:** ^PUT (1996→), VIX9D/VIX3M binnen (privé, licentienotitie); ^BXM/^WPUT niet via Yahoo; Ken French en Shiller-CAPE alleen citeren (C65/C68 = literatuur-evidentie, geen data gecommit).
 
@@ -127,5 +167,35 @@ Mijn advies: **B eerst** (gratis, genoeg voor SPX/NSX/GRX/XAU); D alleen als B t
 - Futures-props (Topstep: 90%, weekly payouts, trailing HWM-drawdown; Apex: 100% eerste $25k dan 90%, EOD-trailing; alleen CME-futures): zelfde index-intraday-strategie, exchange-data/geen CFD-swap, maar trailing drawdown is strenger dan statisch. Niet doorgerekend; voorstel: Q1b-simulatie met trailing-DD als gratis analyse-taak (S0b).
 - **Eigen kapitaal:** zonder first-passage-regels is de lat ≈ SR 0,9 bij 15% vol voor ≈ €1.000/mnd op €80k (SR × vol × kapitaal), maar met DD 15–25% en zonder fee/split. FTMO's regels verhogen de vereiste SR voor negatief-scheef profiel naar 3–4 (R3) — voor positief-scheef ≈ 1. Dus: het profiel bepaalt of FTMO überhaupt zin heeft; bij SR < 0,7 is FTMO niet beter dan eigen geld. Of €80k eigen kapitaal bestaat/gewenst is: Sandro.
 
-## 6. Nu bij Manager/Uitvoerder neerleggen
-Actief bij Manager/Uitvoerder (v14): S0, S1, S2, S3 (S3 wacht op Sandro-data; M-001). Volgorde: S0 (gratis, nu) → S2 (data aanwezig, direct) → S1 (M5 aanwezig) → S3 zodra Sandro data kiest. S4–S8 in reserve (≥ 3 klaar: S1, S2, S3 + S0).
+## 3b. Catalogus-herordening op FTMO-uitvoerbaarheid (v4.0, D-086)
+
+FTMO-poortcriterium voor elke catalogusregel: (1) instrument beschikbaar op FTMO, (2) intraday-vlak **of** bruto-carry > swap-kosten per nacht, (3) kosten-poort bruto ≥ 3× (spread+commissie) intraday of ≥ 3× (spread+commissie+swap) overnight.
+
+| Tier | Regels | Reden |
+|------|--------|-------|
+| **A — heropenen** (intraday-vlak, FTMO-instrumenten) | ORB/B4a (S3), Noise-area/S1, Stocks-in-Play/S2, FOMC-cyclus C17 (D1), FX-intraday-momentum | Swap ≈ 0, instrumenten aanwezig, bewezen structurele oorzaak |
+| **B — onderzoeken** (overnight maar laag-swap of FX-carry) | TSMOM-mix C05 op FX (swap ≈ carry), FX-carry+trend C12 op FX-majors, Donchian D1 FX/XAU | FX-swaps ≈ carry-spread; positief scheef; lange data |
+| **C — herbeoordelen met FTMO-EV** (ontdekt op ETF-vehikel) | C02 Faber-als-overlay, C17 FOMC, C55 DAA | Na engine/ftmo.py: swap-last vs FTMO-EV herrekenen |
+| **D — schrappen (FTMO-onuitvoerbaar)** | C52/C51/C53/C54/C58/C59/C60/C61 all-weather/volmanaged/inverse | UCITS-only, obligatiefutures niet op FTMO, swap 5–8%/jr doodt het |
+
+**Prioriteitsvolgorde Fase 3:**
+1. `engine/ftmo.py` gereed (Uitvoerder-2 bouwt; poort voor alle verdere berekeningen)
+2. S3 OOS-data (Sandro-keuze; hoogste informatiewaarde)
+3. F1 ORB-verval-heronderzoek op FTMO-M5 (geen trial, baselinebepaling)
+4. S2 herstart (earnings-ORB, stop+EOD-profiel, cluster-t; FTMO-aandelen-data aanwezig)
+5. C17 FOMC-cyclus op cfd-vehikel (herbereken SR; t 2,85 was ETF)
+6. FX-intradag (GBP/JPY/AUD intraday-ORB of breakout; data uitbreiden via Uitvoerder-1)
+
+**S10-FTMO-variant (reactiveren zodra ≥1 kandidaat met positief FTMO-EV):**
+H-poorten FTMO-variant: H1 structuurrobuustheid (cluster-t, regimes, nul-kalibratie), H2 SR ≥ 0,8 na cfd-kosten, H3 reserve-OOS 2025→ positief teken, H4 FTMO-EV ≥ €400/mnd netto bij 1–2%-dagverliesrisico, H5 uitvoerbaarheid (1 trade/dag/symbool, FTMO-maximum), H6 forward-paper ≥ 3 mnd, H7 Auditor pass, H8 gefaseerde start (sim ≥ 6 mnd, geen echte FTMO-aankoop zonder Sandro).
+
+## 6. Acties bij Manager/Uitvoerder (v4.0, na D-086)
+
+**Uitvoerder-2 (nu):** `engine/ftmo.py` bouwen; catalogus-sleeves herbeoordelen op cfd+FTMO-EV; geen ETF-werk meer.  
+**Uitvoerder-1 (nu):** FTMO-M5/D1 actueel houden; FX-swaps bijhouden; spreads per uur uitbreiden naar GBP/JPY/AUD; forward-ETF laten doorlopen (kost niets).  
+**Auditor:** hertarget op FTMO-pipeline (cfd-vehikel, Q1b/FTMO-simulator, ORB/B4a-resultaten, reserve-hygiëne).  
+**Strateeg:** S10-FTMO-variant uitwerken zodra FTMO-EV gereed is; VOORSTEL_F1.md (ORB-verval-heronderzoek) schrijven als eerste nieuwe taak.
+
+**Niet meer actief:**  
+ALLOCATIE_V1.x, S10b (eigen kapitaal), reserve-run ETF-portefeuilles, P-ETF-forward als hoofdspoor.  
+Forward-papier ETF draait als stille papertrading mee (kost niets, informatief voor later).
