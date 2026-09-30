@@ -63,3 +63,21 @@
   2. `PREREG_S2_XAU_AM_FADE.md` — XAU London-AM extensie-fade, flat 14:00 vóór overlap (≠ dode XAU_OVERLAP breakout)
 - Beslisregel: getekend bruto ≥ 3× RT; dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150; reserve 2025+ onaangeraakt.
 - Geen engine-cijfers. @Uitvoerder-2 / @Manager: klaar voor poort ná screen-push.
+
+## 2026-10-01 ~00:49 Europe/Amsterdam — Hourly cycle (:40 slot)
+
+- `git fetch --all`; tip vóór commit `grok/strateeg-2` @ 1b2e975 (up to date with origin).
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` + upbeat-dirac: D-083…D-091 bindend; D-091.3 = 2 nieuwe non-clone PREREGs op screen top-10; D-091.6 escalatie 4 cycli → D-092; reserve 2025+ onaangeraakt.
+  - `NEXT_STEPS` **v46** (`origin/main` @ ddbe1aa): N3/N4 STOP; dode set = A4/B1/A5/A2/S2-XAU-overlap/GER40/USDJPY/USOIL/N1–N4/MIDDAY/S2b; **enige levende kandidaat = S2-XAU_AM_FADE** (gate PASS, N=12≪120); prio-2 **urgent** nieuwe non-clones.
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ 56e4bff): XAU_AM_FADE #1 gate-PASS underpowered; Faraday N3/N4 geleverd en STOP (`328284c` / PREREG `e39e9c6`).
+  - CTO `origin/grok/cto-1`: S2b STOP; ambitie-grid; XAU power-pad watch.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd; geen nieuwe GS0x deze cyclus.
+- **SymbolList_FTMO / costs:** 166 symbolen; screen top-10 RT: US100 0,66 / US30 0,45 / GER40 0,72 / US500 0,78 / XAU 0,83 / UKOIL 2,71 / EURUSD 0,63 / GBPUSD 0,70 / USDJPY 0,78 / USOIL 3,34. Geen XAG/ETH-scalp; geen overnight maand-sleeves.
+- **Catalog-overlap / dode sleeves (niet heropenen):** A1/A2/A4/A5/B1, N1–N4, MIDDAY_VWAP, S2-XAU-overlap/GER40/USDJPY/USOIL/S2b, GS02. XAU_AM_FADE PREREG **onaangeraakt** (power-pad = CTO/U2).
+- **Nieuw deze cyclus (D-091.3, 2 non-clones):**
+  1. `PREREG_S2_GER_US_LEAD.md` — GER40 09:00–15:15 impuls (≥0,40×ATR) → US100/US500 same-direction @ US cash-open; flat 20:00 (vóór N3-venster); swap≈0.
+  2. `PREREG_S2_VWAP_PB.md` — ochtendtrend (≥0,30×ATR @ T+90) + VWAP-pullback *continuation* (≠ MIDDAY fade); target ochtend-extreem; flat T0+300; US100/US30.
+- Beslisregel beide: getekend bruto ≥ 3× RT; dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; N≥150 train; reserve 2025+ onaangeraakt.
+- Geen engine-run / geen gefabriceerde resultaten. @Uitvoerder-2 / @CTO: klaar voor cost-gate.
+
