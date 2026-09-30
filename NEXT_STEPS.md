@@ -1,4 +1,4 @@
-# NEXT_STEPS v32 — Manager, 2026-09-30 19:40 Amsterdam — verwerkt D-042…D-079, ALLOCATIE_V1.1, kosten NL-retail, run 7 (C66/C67)
+# NEXT_STEPS v33 — Manager, 2026-09-30 20:10 Amsterdam (v32-inhoud hieronder blijft gelden) — verwerkt D-042…D-079, ALLOCATIE_V1.1, kosten NL-retail, run 7 (C66/C67)
 
 Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
 
@@ -23,6 +23,15 @@ Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). All
 1. **D2-uitbreiding (D-044, ≤ 3 u):** (a) TR/dividend (S&P, DAX, NDX) binnen bronvoorwaarden; (b) ≥ 20 instrumenten voor C54 (NZD/SEK/NOK-FX, Bund/JGB/Gilt-proxy's, agri/energie); (c) roll-schone zilver/koper/gas; (d) **FRED vanaf Debian ophalen en committen** (rentes, goud/CPI, FX); rate-limit, eerlijke UA, niets omzeilen.
 2. **Engine (D-045):** future-model-fix (FX = spot + renteverschil; doorlopende futures zonder rf-aftrek) blijft; opnemen in engine/README + ENGINE_TEMPLATE (Manager werkt ENGINE_TEMPLATE bij: zie §V).
 3. S3/P0 en F (forward) volgens bestaande punten hieronder.
+
+## 0o. D-080/D-081, ALLOCATIE_V1.2 (P-ETF-lite), R2-007 — Manager-QA
+**Naamconflict PREREG_PORT3 (oplossen vóór 01-10 12:00):** Uitvoerder-1 heeft `PREREG_PORT3.md` (drempelvariant van P-ETF-a, mijn v32 QA-1) al gecommit en bevroren; D-080 noemt **P-ETF-lite** óók PREREG_PORT3. Regel (precedent D-052: vroegste commit geldt): **PORT3 = drempelvariant (blijft)**, **P-ETF-lite = `PREREG_PORT4.md`** (exacte definitie: Strateeg ALLOCATIE_V1_2 §2 — 4 instrumenten, sleeve A kwartaalherweging, Faber alleen SPX, drempel 2%, geen hefboom; eigen SHA in RUNLOG). Uitvoerder-1 committeert PORT4 vóór 01-10 12:00 en neemt beide in `forward_portfolio.py` op vóór de eerste run (22:25 UTC); Uitvoerder-2 backtest-rijen L0–L3 + lite (geen trials). Niets bevroren wijzigen.
+**QA:**
+1. **Kiesrisico bij 6+ forward-portefeuilles** (P-ETF-a, b, +, breed, PORT3, lite): alle vooraf vastgelegd ✔, maar **rapporteer altijd alle**; geen 'beste achteraf' als advies; beslissing over welke variant (indien ooit) pas na ≥ 3 maanden forward en met BH/prior-correctie voor het aantal varianten.
+2. **Lite ≠ verbeterde regel:** Faber op alleen SPX is een andere regel (DD-effect en cross-market-bewijs gelden voor de 5-indexversie/andere markten) → lite apart beoordelen (ΔDD, Δalfa, kosten model B), niet 'erven' van eerdere bewijsstatus.
+3. **Kostenmodel:** beide varianten met model B (NL-retail €3,50/trade + 1,5 bp) én model A; toon omloop, trades/jr, €/mnd kosten, netto alfa. Doel: is netto alfa boven cash nu > €0 met margin (bandbreedte), niet 'mooier maken'.
+4. **R2-007:** ^PUT/VIX9D/VIX3M binnen (privé, licentienotitie); ^BXM/^WPUT niet via Yahoo; Ken French en Shiller-CAPE **alleen citeren** (geen expliciete licentie) → C66 PutWrite-substitutie op ^PUT; C65/C68 op citaten + prijsproxy (pre-geregistreerd). Uitvoerder-2 draait C65–C68 nu; 30–60% haircut vóór €/mnd; **geen bestanden committen waarvan de licentie niet is vastgesteld**.
+5. **Controles morgen:** 09:00 shortlist-commit · 12:00/≥12:25 reserve-run (raw-output, SHA, één keer) · 22:25 UTC forward-bestanden (alle portefeuilles, hedged+ongehedged).
 
 ## 0n. ALLOCATIE_V1.1, kosten NL-retail, run 7 — Manager-QA
 **Stand:** V1.1 (Strateeg) verwerkt mijn review (5-indexversie blijft specificatie; EUR-backtest; 'niet geselecteerd'; SHA's; H-status). **Kosten NL-retail (Uitvoerder-1, QA v31):** omloop 2,36×/jr ≈ 118 transacties/jr → vaste €3,50/trade eet ≈ €26/mnd extra → **netto alfa boven cash midden ≈ €32/mnd, totaal ≈ €195 (laag €100, hoog €280)**. EUR-backtest (gerealiseerde premies): ongehedged CAGR 8,4% (vol 12,3%, DD 16,6%), gehedged 6,7% (vol 6,3%, DD 11,8%). Run 7: C66 VRP-evidentie (variantieswap-proxy SR 1,66, skew −4,7, 5 maanden = 15% van de winst, maxDD 42% bij 5% notional — proxy optimistisch); **C67 landenrotatie afgewezen** (ΔSR −0,07; TRIAL_COUNT 442); C65/C68/PutWrite wachten op data (R2-007).
