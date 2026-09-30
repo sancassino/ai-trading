@@ -1,0 +1,7 @@
+datum;familie;portefeuille;prereg;sha256_prereg;fase;periode;netto_SR;maxDD;opmerking
+2026-09-30;portefeuilles;P-ETF-a;PREREG_PORT.md;9f17d335a33d892c6fa86362d7cf0648658e606e4a5d09a49bb1835d404f9787;ontdekking;2001-04→2024-12;0.94;0.112;adviesbasis; geen trial (geen nieuw signaal)
+2026-09-30;portefeuilles;P-ETF-b;PREREG_PORT.md;9f17d335a33d892c6fa86362d7cf0648658e606e4a5d09a49bb1835d404f9787;ontdekking;2001-07→2024-12;0.79;0.200;hefboom onbevestigd (broker)
+2026-09-30;portefeuilles;P1;PREREG_PORT.md;9f17d335a33d892c6fa86362d7cf0648658e606e4a5d09a49bb1835d404f9787;ontdekking;2001-07→2024-12;0.79;0.159;bovengrens
+2026-09-30;portefeuilles;P-breed;PREREG_PORT.md;9f17d335a33d892c6fa86362d7cf0648658e606e4a5d09a49bb1835d404f9787;ontdekking;2003-07→2024-12;0.70;0.174;tegen winnaarsvloek
+2026-09-30;portefeuilles;P-ETF+;PREREG_PORT2.md;b1a2f3f2713539617708bfddad2ed0c7ef41b1059a82c06c2ba4cc5f2ccdfabf;ontdekking;2005-04→2024-12;0.89;0.108;extra rij reserve-run
+2026-09-30;portefeuilles;P-breed-2;PREREG_PORT2.md;b1a2f3f2713539617708bfddad2ed0c7ef41b1059a82c06c2ba4cc5f2ccdfabf;ontdekking;2008-08→2024-12;0.73;0.160;informatief
