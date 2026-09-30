@@ -1,0 +1,6 @@
+MIDDAY_VWAP
+N=3
+mean_bruto=-66.2022956921248
+mean_rt=0.45
+gate=1.35
+result=FAIL

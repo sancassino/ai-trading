@@ -483,3 +483,17 @@ CEO wist bij 23:15 niet dat A2 zou falen (A2 FAIL gecombitted 23:20). Manager (v
 - Missing COSTS_FTMO RT (52): BTCUSD, ETHUSD, US41 stocks, … — vol filled, flagged
 - No strategy/trial. Dead sleeves not restarted.
 
+
+## Cyclus ~00:05 CEST — nacht-queue N1→N2→MIDDAY_VWAP→XAU_AM_FADE
+
+PREREGs: Strateeg `474a33c` (N1/N2); Strateeg-2 `1b2e975` (MIDDAY_VWAP / XAU_AM_FADE).
+
+| Sleeve | Gate | N | signed mean bruto | 3× RT | Result |
+|--------|------|---|-------------------|-------|--------|
+| N1 OPEN_FADE | train | 0 | — | — | **STOP** — 1.5× D1-ATR never hit by 30m drive |
+| N2 REL_FLAT | train | 112 | −0.84 bp | 4.32 bp | **FAIL STOP** |
+| S2 MIDDAY_VWAP | train | 3 | −66.2 bp | ~1.35 bp | **FAIL STOP** |
+| S2 XAU_AM_FADE | train | 12 | **+18.70 bp** | 2.49 bp | **PASS gate** — N≪120, no ftmo_ev yet |
+
+Scripts: `scripts/n1_cost_gate_train.py`, `n2_cost_gate_train.py`, `s2_midday_vwap_gate.py`, `s2_xau_am_fade_gate.py`. Results under `results/`. Reserve 2025→ untouched. Dead A4/B1/A5/A2 not restarted.
+
