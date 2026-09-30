@@ -44,3 +44,5 @@
 2026-09-30 20:10 Amsterdam — cyclus :05: D-080/D-081, ALLOCATIE_V1.2 (P-ETF-lite), R2-007 verwerkt; NEXT_STEPS v33 (PREREG_PORT3-naamconflict → lite = PORT4, kiesrisico 6+ portefeuilles, lite ≠ bewezen regel, licentie-discipline).
 2026-09-30 20:40 Amsterdam — cyclus :35: ALLOCATIE_V1.3 (lite niet geselecteerd, D1 beste kosten/SR), PORT3/4-uitkomst, run 8 (EM/USD) verwerkt; NEXT_STEPS v34 (winnaarsvloek D1, simulator-SR, reserve-run-scope, forward-volledigheid).
 2026-09-30 20:50 Amsterdam — Sandro: doel = FTMO-€80k, niet eigen kapitaal (Doel v2 misverstand). M-013 (URGENT) voor CEO; NEXT_STEPS/EINDVERSLAG gemarkeerd.
+
+- 2026-09-30 21:05 Amsterdam — cyclus :05 (na pauze Sandro): D-082…D-086 verwerkt (FTMO-koerscorrectie, Auditor D-082/H7, M-013 BESLOTEN); NEXT_STEPS v35 (FTMO-doel hersteld, eigen-kapitaal-cijfers informatief, §0a Manager-QA koerscorrectie, Uitvoerder-2 FTMO-focus na reserve-run); VRAGEN_MANAGER M-013 → BESLOTEN (D-083…D-086); reserve-run 01-10 12:00 en forward 22:25 UTC lopen ongewijzigd door.

@@ -38,16 +38,6 @@ Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046, D-082…D-086 (C
   5. **Reserve-OOS-power:** 1,75 jr → SR-SE ≈ 0,75; 'pass' is nauwelijks informatief; CI verplicht.
   6. **Kapitaal-check:** alleen relevant in eigen-kapitaal-context (nu informatief gelabeld).
 
-## 0. Coördinatie (Manager-QA op wat er ligt)
-- **Uitvoerder-2 werkt op branch `claude/uitvoerder2-r`, niet op main** (RUNLOG_R2, results/R2, TRIAL_COUNT 427). Beide Uitvoerders: `git fetch --all`, elkaar lezen; Uitvoerder-2 merged `origin/main` minstens elk uur in zijn branch; Uitvoerder-1 merged `claude/uitvoerder2-r` in main na elke afgeronde run (fast conflict-vrij: eigen bestanden). **TRIALS.csv/TRIAL_COUNT.md:** main zegt 421, U-2-branch 427 → bij merge = aantal geldige rijen; "ongeldig, telt niet"-rijen blijven buiten BH (D-045).
-- **Manager-QA-bevindingen catalogusrun 2 (rapportage, geen blokkade):**
-  1. **G-benchmark inconsistent toegepast:** C52 *basis* haalt SR 0,65 vs 60/40 0,66 (niet beter) maar staat 'door G-ontdekking'. Volgens D-038 (SR én maxDD beter) is dat een **fail op SR**; label 'door met voorbehoud: DD-voordeel, geen SR-voordeel' of CEO beslist. Rapporteer beslissing expliciet in TRIALS.csv.
-  2. **C54 qa is post-hoc gekozen na zien van basis** (beide tellen als trial ✔). Behandel C54 basis niet als bewijs (artefacten: WTI<0, FX-pegs); alleen qa telt, en dan nog met winnaarsvloek-korting.
-  3. **Winnaarsvloek P1:** sleeves gekozen na zien van ontdekkingsdata; SR 0,84 is een bovengrens. Rapporteer ook **P-ETF** (zonder futures/hefboom; Strateeg H5: micro-futures onuitvoerbaar bij €80k voor indices/goud) als eerlijke ondergrens en **P-ETF met 13 bp rondreis**.
-  4. **Hefboom ≤ 3× tegen rf + 1,5% (D-042)** i.p.v. gratis rf; kosten per vehikel; herrekenen vóór iets over CAGR wordt gezegd.
-  5. **Reserve-OOS-power:** 1,75 jr → SR-standaardfout ≈ 0,75; een 'pass' is nauwelijks informatief. Rapporteer puntschatting + CI (D-042), en zeg vooraf dat forward-paper (F) het echte bewijs levert.
-  6. **Kapitaal-check doel:** met 2020s-SR ≈ 0,5 ≈ 5% CAGR bij 10% vol = ≈ €330/mnd bruto vóór belasting → onder de €400-drempel; nooit 'ontdekking-CAGR' als verwachting labelen.
-
 ## 0b. Direct (Uitvoerder-2, uiterlijk 01-10 12:00, D-042)
 1. **Portefeuilleregel vooraf committen** (PREREG_PORT.md): sleeves elk 10% vol, gelijk gewogen, geen optimalisatie, hefboom ≤ 3× tegen rf + 1,5%, kosten per vehikel; commit (SHA in RUNLOG) vóór enige reserve-run.
 2. **Run 3 (PREREG vóór resultaat):** C04, C13, C16, C29, C33, C43–C45, C24 + catalogus v1.1-nieuwkomers (trend/vol-managed/dual-momentum).
