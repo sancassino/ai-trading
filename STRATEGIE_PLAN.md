@@ -4,6 +4,13 @@
 
 Eerlijk vooraf: met 404 trials, kosten-muur en ~5,7 jr data is de kans dat hieruit €800–900/mnd via FTMO komt **klein (mijn schatting ≤ 10%)**. Dit plan maximaliseert de kans per uur Uitvoerder-tijd; het belooft niets. Details/bronnen: `STRATEGIE_BIJLAGE.md`.
 
+## UPDATE 11:25 Amsterdam (v1.2) — uitslagen en koers
+- **S1 afgewezen** (alle 4; train +2,2 bp t 2,2, test +0,7 t 0,9, OOS 2025–26 +0,3 bp; corr ORB 0,52). **S2 gestopt op kostenpoort** (alle 4; let op: Uitvoerder vond dat het paper alleen in de richting van de eerste kaars handelt — mijn voorstel noemde beide kanten; bron-check door Uitvoerder was hier dus nodig en juist). S0: kosten gemeten (indices 0,45–0,78 bp, FX-majors 0,63–1,22, XAU 0,83). Q7: ORB+RSI(2) verlaagt de FTMO-uitkomst → ORB alleen.
+- **Patroon:** ORB en S1 zijn sterk in 2021–23 (vooral 2022), ≈ 0 in 2024–26. Twee lezingen: (a) vervallen/gearbitreerd, (b) volatiliteitsregime-effect. S3 (2011–20) scheidt dit **alleen** als het regime-label vooraf vastligt → S9. Trap 1 hangt aan S3.
+- **Ik heb geen sterke nieuwe signaal-kandidaat** en verzin er geen bij (D-013). Geschrapt volgens D-009: S4, S5, S7; S6 alleen exploratief. Ik stel nu twee *niet-signaal*-voorstellen voor: **S8** (decay-bewuste FTMO-EV van ORB; gratis, geen trial) en **S9** (vol-regime-diagnose + één bevroren toets op S3-data, vóór de data wordt geopend in PREREG_S3 op te nemen).
+- **Compliance-kanttekening bij D-013:** 'weinig trades/lage vol/alleen fase 1 halen en uitbetaling minimaliseren' of hoge schaal om optiewaarde te pakken is gokgedrag / misbruik van de fee-structuur (R3: nul-edge al +€216/mnd door vol alleen). Ik stel dat **niet** voor; S8 rapporteert zulke schalen alleen als bovengrens.
+- Sandro: geen verzoeken meer (D-014). §4 hierboven (data-opties) blijft als passieve referentie; A-01/A-02 lopen via de CEO.
+
 ## 1. Gap-analyse (wat is níet onderzocht)
 - **Instrumenten:** FX-majors/crosses zijn nauwelijks getest (alleen EURUSD: carry-seizoen/ORB/ML-idee; geen GBP/JPY/AUD/CHF/CAD-intraday; R1 ligt open). Energie (USOIL/UKOIL/NATGAS) alleen pairs + ORB-1; koper/platina/zilver ≈ niets. Indices buiten US/GER: RSI/ORB-breedte F5 negatief (AUS, HK, JP, EU, FRA, SPN, N25) — afgedaan. US2000 en DXY geen data.
 - **Strategietypes:** (i) *intraday momentum met volatiliteitsbanden + trailing stop* (Noise-area) — niet getest, ORB is het enige aanverwante; (ii) *ORB op 'stocks in play'* (Q2 testte vaste 60-min-houdduur, geen stop/EOD-structuur); (iii) D1-breakout met trailing op FX/goud (positief scheef) — alleen als R4 gepland; (iv) flow-events (FX-fix, expiraties) — niets; (v) hedging-flow/laatste-30-min **voorwaardelijk** op dagbeweging — B4b was onvoorwaardelijk.
