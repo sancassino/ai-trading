@@ -680,3 +680,11 @@ S1(a) 2,19 → 2,05. K1 max 1/2 nachten Yahoo 3,05 → 3,01 / 3,59 → 3,30; FTM
 B2b RSI(2) Yahoo 1990–2026 was al een gepoolde dagreeks: 3,65 → NW 3,80 / bootstrap 3,99 → overleeft. F3b 2,14 → NW 2,29 / bootstrap 2,35. Forward: nog geen data.
 **Correctie:** in de RUNLOG-entries S9-stap-1 en U2 stond 'ORB-B4a 5 symbolen'; het bestand bevat 7 (ook EURUSD en UK100). Cijfers kloppen, label niet. N8 gebruikte expliciet de 4 S3-symbolen (klopt). Noot toegevoegd aan TRIAL_COUNT.md.
 Volgende stap: U2b (MT5-reconciliatie ORB-sizing, D-019).
+
+## 2026-09-30 10:27 — U2b: MT5-reconciliatie ORB-sizing — Python-uitkomst bevestigd in de tester; optiewaarde-aandeel ≈ ⅓, edge onbevestigd
+
+ORBSleeve.mq5 uitgebreid met RiskPct/MaxLevPos (standaard 0 = oud gedrag). Twee tester-runs 2021–26, 7 symbolen, €80k EUR, Model=1 (results/u2/U2b_*). Dagverlies relatief aan het saldo van die dag (de tester compoundt; eerste berekening met vaste €80k-noemer gaf ten onrechte 10–20% dips — gecorrigeerd en gemeld). Alle bedragen 'onder aanname fee €540/€80k'; nooit als verwachting lezen zonder de labels hieronder (D-019).
+(1) Vaste notional 1/7 × 4: SR 0,91, skew +1,51, jaarvol 17,5%, max dagverlies 4,57% (1 dag > 4% → buiten de S8-grens) → historisch €509/mnd (P<0 21%), −50% drift €269, **nul-drift/optiewaarde €105**. Binnen de toegestane schaal (dip < 4%, S8): ≈ €150–300/mnd.
+(2) Vast risico 0,5%/trade (≤ 4× per positie): SR 0,85, skew +1,40, jaarvol 33,7%, max dagverlies 3,50% (P99 3,32%) → historisch €1.136/mnd (P<0 9%), −50% drift €715, **nul-drift/optiewaarde €389** (≈ ⅓). Python-U2 gaf €1.095 / €388 → reconciliatie OK.
+Risico's die de tester niet toont: bij kleine OR-breedte zeer grote posities (US500 mediaan 61 lots, max 271 = 4×-plafond) → slippage/marge/FTMO-positielimieten; 34% jaarvol is agressief (niet verboden, wel dicht bij 'gokgedrag'-grens — Manager/CEO oordeelt).
+Status: alleen techniek-voorbereiding. Zonder S3 'bevestigd + blijvend' geen kandidaat. Geen challenge, geen echte trades.

@@ -12,6 +12,8 @@ CTrade trade;
 input string SymbolList = "US500.cash,US100.cash,US30.cash,XAUUSD,GER40.cash,UK100.cash,EURUSD";
 input double LegFrac    = 0.142857;   // notional per trade as fraction of equity
 input int    RangeMin   = 30;
+input double RiskPct    = 0.0;        // >0: risico per trade als fractie van equity (verlies bij stop = OR-breedte); 0 = LegFrac-notional
+input double MaxLevPos  = 4.0;        // max notional per positie als veelvoud van equity (alleen bij RiskPct > 0)
 input ulong  MagicNumber = 20260931;
 input string DiagBestandsnaam = "ORBSleeve_output.csv";
 
@@ -118,13 +120,17 @@ void Session(int k, datetime now, datetime &op, datetime &cl)
    else { op = d0 + 10 * 3600 + shift; cl = d0 + 18 * 3600 + 30 * 60 + shift; }
   }
 
-double Lots(string s)
+double Lots(string s, double width)
   {
    double price = SymbolInfoDouble(s, SYMBOL_ASK);
    double tv = SymbolInfoDouble(s, SYMBOL_TRADE_TICK_VALUE), ts = SymbolInfoDouble(s, SYMBOL_TRADE_TICK_SIZE);
    if(price <= 0 || tv <= 0 || ts <= 0) return 0;
    double step = SymbolInfoDouble(s, SYMBOL_VOLUME_STEP), mn = SymbolInfoDouble(s, SYMBOL_VOLUME_MIN), mx = SymbolInfoDouble(s, SYMBOL_VOLUME_MAX);
-   double lots = MathFloor(AccountInfoDouble(ACCOUNT_EQUITY) * LegFrac / (price * tv / ts) / step) * step;
+   double eq = AccountInfoDouble(ACCOUNT_EQUITY);
+   double lotsN = eq * LegFrac / (price * tv / ts);
+   if(RiskPct > 0 && width > 0)
+      lotsN = MathMin(eq * RiskPct / (width * tv / ts), eq * MaxLevPos / (price * tv / ts));
+   double lots = MathFloor(lotsN / step) * step;
    return lots < mn ? 0 : MathMin(mx, lots);
   }
 
@@ -194,7 +200,7 @@ void Handle(int k)
       double hi = r[0].high, lo = r[0].low;
       for(int i = 1; i < n; i++) { hi = MathMax(hi, r[i].high); lo = MathMin(lo, r[i].low); }
       orHi[k] = hi; orLo[k] = lo;
-      double lots = Lots(s);
+      double lots = Lots(s, hi - lo);
       if(lots <= 0 || hi <= lo) { stage[k] = 3; return; }
       double ask = SymbolInfoDouble(s, SYMBOL_ASK), bid = SymbolInfoDouble(s, SYMBOL_BID);
       bool ok = true;

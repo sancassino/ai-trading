@@ -1,0 +1,9 @@
+U2b MT5 (2021–26, 7 symbolen, €80k EUR, compounding in de tester; dip relatief aan het saldo van die dag). 'Onder aanname fee €540/€80k'.
+vaste notional 1/7 × 4: SR +0.91 | skew +1.51 | jaarvol 17.5% | max dagverlies 4.57% (P99 2.61%, dagen > 4%: 1, > 5%: 0)
+    historisch               → €509/mnd, P(netto<0) 21%, funded 91%
+    −50% drift               → €269/mnd, P(netto<0) 40%, funded 80%
+    nul-drift (optiewaarde)  → €105/mnd, P(netto<0) 59%, funded 67%
+vast risico 0,5%/trade (≤ 4×/positie): SR +0.85 | skew +1.40 | jaarvol 33.7% | max dagverlies 3.50% (P99 3.32%, dagen > 4%: 0, > 5%: 0)
+    historisch               → €1,136/mnd, P(netto<0) 9%, funded 100%
+    −50% drift               → €715/mnd, P(netto<0) 20%, funded 99%
+    nul-drift (optiewaarde)  → €389/mnd, P(netto<0) 34%, funded 98%

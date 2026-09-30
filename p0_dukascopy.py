@@ -39,6 +39,29 @@ class Stop(Exception):
 
 
 _fails = 0
+_date_tries = 0
+inst_ok_probe = None
+
+
+def _date_tries_inc():
+    global _date_tries
+    _date_tries += 1
+
+
+def _reset_date():
+    global _date_tries
+    _date_tries = 0
+
+
+def control_ok(inst):
+    """bekende goede datum (2015-01-05) opvragen: lukt dat, dan is de feed bereikbaar en ontbreekt alleen de gevraagde datum."""
+    time.sleep(PAUSE)
+    try:
+        url = f"{BASE}/{inst}/2015/00/05/BID_candles_min_1.bi5"
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60) as r:
+            return len(r.read()) > 0
+    except Exception:
+        return False
 
 
 def fetch(inst, d):
@@ -46,6 +69,7 @@ def fetch(inst, d):
     global _fails
     url = f"{BASE}/{inst}/{d.year}/{d.month - 1:02d}/{d.day:02d}/BID_candles_min_1.bi5"
     wait = 60
+    _reset_date()
     while True:
         time.sleep(PAUSE)
         try:
@@ -57,6 +81,12 @@ def fetch(inst, d):
                 _fails = 0
                 return None
             if e.code in (429, 503):
+                _date_tries_inc()
+                if e.code == 503 and _date_tries >= 3:
+                    if control_ok(inst):
+                        log(f"  503 ×3 bij {inst} {d}, controledatum OK → datum zonder data")
+                        _reset_date(); _fails = 0
+                        return None
                 _fails += 1
                 if _fails >= 6:
                     raise Stop(f"{e.code} zes keer op rij bij {url}")
@@ -68,6 +98,7 @@ def fetch(inst, d):
             raise
         except (urllib.error.URLError, TimeoutError) as e:
             _fails += 1
+            log(f"  netwerkfout bij {inst} {d}: {e}; wacht {wait} s (poging {_fails})")
             if _fails >= 6:
                 raise Stop(f"netwerkfout zes keer op rij: {e}")
             time.sleep(wait); wait = min(wait * 2, 900)
