@@ -20,6 +20,7 @@ Returns dict with at least:
 Smoke test:
   python -m engine.ftmo
   python -m engine.ftmo --csv results/f/F1_RSI2_swapcorr_daily.csv --scale 1.0
+  python -m engine.ftmo --csv results/f/F2_ORB_daily.csv --recommend-scale
 """
 from __future__ import annotations
 
@@ -286,6 +287,116 @@ def ftmo_ev(
     }
 
 
+
+def trades_bp_to_daily(
+    dates,
+    signed_bp,
+    *,
+    risk_frac_per_unit_bp: float | None = None,
+    target_vol_daily: float | None = None,
+):
+    """Convert per-trade signed P&L in bp into a dense daily return series.
+
+    Same-day trades are summed. Flat calendar days (incl. weekends) are 0.
+    Default mapping: 1 bp trade P&L → 1e-4 fractional equity move (unit notional).
+
+    Returns
+    -------
+    daily_returns : np.ndarray
+    day_index : np.ndarray of datetime64[D]
+    """
+    d = np.asarray(dates, dtype="datetime64[D]")
+    bp = np.asarray(signed_bp, dtype=float).ravel()
+    if d.size != bp.size:
+        raise ValueError("dates and signed_bp must have the same length")
+    if d.size == 0:
+        return np.zeros(0, float), np.asarray([], dtype="datetime64[D]")
+
+    unit = 1e-4 if risk_frac_per_unit_bp is None else float(risk_frac_per_unit_bp)
+    order = np.argsort(d)
+    d, bp = d[order], bp[order]
+    uniq, starts = np.unique(d, return_index=True)
+    day_bp = np.add.reduceat(bp, starts)
+    all_days = np.arange(uniq[0], uniq[-1] + np.timedelta64(1, "D"), dtype="datetime64[D]")
+    rets = np.zeros(all_days.size, float)
+    rets[np.searchsorted(all_days, uniq)] = day_bp * unit
+    if target_vol_daily is not None and rets.std() > 0:
+        rets = rets * (float(target_vol_daily) / float(rets.std()))
+    return rets, all_days
+
+
+def recommend_scale(
+    daily_returns,
+    daily_drawdowns=None,
+    *,
+    p95_daily_loss: float = 0.02,
+    max_daily_loss_cap: float = 0.04,
+    account: float = DEFAULT_ACCOUNT,
+    n_paths: int = 3_000,
+    horizon: int = DEFAULT_HORIZON,
+    seed: int = 7,
+    hi: float = 20.0,
+):
+    """Largest scale with empirical p95 daily loss ≤ ``p95_daily_loss``
+    and max daily loss ≤ ``max_daily_loss_cap`` (fraction of initial).
+
+    Loss basis: ``daily_drawdowns`` if provided, else ``max(0, −r)``
+    (close-only proxy, same family as ``ftmo_ev`` without troughs).
+
+    Returns dict: scale, p95_daily_loss, max_daily_loss, binding
+    ("p95"|"max"|"flat"), plus selected ``ftmo_ev`` fields at that scale.
+    """
+    r = np.asarray(daily_returns, dtype=float).ravel()
+    if r.size < 2:
+        raise ValueError("daily_returns needs at least 2 observations")
+    if daily_drawdowns is None:
+        base_loss = np.maximum(0.0, -r)
+    else:
+        base_loss = np.asarray(daily_drawdowns, dtype=float).ravel()
+        if base_loss.size != r.size:
+            raise ValueError("daily_drawdowns must match daily_returns length")
+
+    base_p95 = float(np.quantile(base_loss, 0.95))
+    base_mx = float(base_loss.max())
+    if base_p95 <= 0 and base_mx <= 0:
+        scale = 1.0
+        binding = "flat"
+    else:
+        room_p95 = (p95_daily_loss / base_p95) if base_p95 > 0 else hi
+        room_max = (max_daily_loss_cap / base_mx) if base_mx > 0 else hi
+        if room_p95 <= room_max:
+            scale, binding = float(min(room_p95, hi)), "p95"
+        else:
+            scale, binding = float(min(room_max, hi)), "max"
+
+    p95 = float(np.quantile(base_loss * scale, 0.95))
+    mx = float((base_loss * scale).max())
+    ev = ftmo_ev(
+        r,
+        account=account,
+        daily_drawdowns=None if daily_drawdowns is None else daily_drawdowns,
+        n_paths=n_paths,
+        horizon=horizon,
+        scale=scale,
+        seed=seed,
+    )
+    return {
+        "scale": float(scale),
+        "p95_daily_loss": p95,
+        "max_daily_loss": mx,
+        "binding": binding,
+        "target_p95": float(p95_daily_loss),
+        "target_max": float(max_daily_loss_cap),
+        "p_pass_2": ev["p_pass_2"],
+        "p_survive": ev["p_survive"],
+        "net_ev_monthly": ev["net_ev_monthly"],
+        "exp_payout_monthly": ev["exp_payout_monthly"],
+        "attempts_mean": ev["attempts_mean"],
+        "n_paths": int(n_paths),
+    }
+
+
+
 def _synthetic_returns(n: int = 504, mu: float = 0.0008, sigma: float = 0.008, seed: int = 0):
     """Mild positive-drift Gaussian days for smoke tests (not a real edge)."""
     rng = np.random.default_rng(seed)
@@ -321,25 +432,40 @@ def main(argv=None):
     ap.add_argument("--horizon", type=int, default=DEFAULT_HORIZON)
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--no-restart", action="store_true")
+    ap.add_argument("--recommend-scale", action="store_true",
+                    help="print recommend_scale() (p95≤2% / max≤4%) then ftmo_ev at that scale")
+    ap.add_argument("--p95-loss", type=float, default=0.02)
+    ap.add_argument("--max-loss-cap", type=float, default=0.04)
     a = ap.parse_args(argv)
 
+    dd = None
     if a.csv:
         rets, dd = load_daily_equity_csv(a.csv, a.account)
         print(f"loaded {a.csv}: {len(rets)} days, mean {rets.mean()*1e4:+.2f} bp/day")
-        out = ftmo_ev(
-            rets, fee=a.fee, account=a.account, split=a.split,
-            daily_drawdowns=dd, n_paths=a.paths, horizon=a.horizon,
-            scale=a.scale, seed=a.seed, restart=not a.no_restart,
-        )
     else:
         rets = _synthetic_returns()
         print(f"synthetic returns: {len(rets)} days, mean {rets.mean()*1e4:+.2f} bp/day, "
               f"vol {rets.std()*np.sqrt(252)*100:.1f}%/yr")
-        out = ftmo_ev(
-            rets, fee=a.fee, account=a.account, split=a.split,
-            n_paths=a.paths, horizon=a.horizon, scale=a.scale, seed=a.seed,
-            restart=not a.no_restart,
+
+    scale = a.scale
+    if a.recommend_scale:
+        rec = recommend_scale(
+            rets, dd, p95_daily_loss=a.p95_loss, max_daily_loss_cap=a.max_loss_cap,
+            account=a.account, n_paths=a.paths, horizon=a.horizon, seed=a.seed,
         )
+        scale = rec["scale"]
+        print(
+            f"recommend_scale: scale={rec['scale']:.3f} binding={rec['binding']} "
+            f"p95={rec['p95_daily_loss']*100:.2f}% max={rec['max_daily_loss']*100:.2f}% "
+            f"→ net_ev_monthly=€{rec['net_ev_monthly']:,.0f} p_pass_2={rec['p_pass_2']*100:.1f}% "
+            f"p_survive={rec['p_survive']}"
+        )
+
+    out = ftmo_ev(
+        rets, fee=a.fee, account=a.account, split=a.split,
+        daily_drawdowns=dd, n_paths=a.paths, horizon=a.horizon,
+        scale=scale, seed=a.seed, restart=not a.no_restart,
+    )
     print(_fmt(out))
     print("dict keys:", sorted(out))
     return out

@@ -1,6 +1,6 @@
 # CTO_AUDIT — ORB / S3 + post-A4/B1 FTMO redirect
 
-**Status:** updated 2026-10-01 ~00:36 Europe/Amsterdam (CTO wake; §3e N3/N4 assign + XAU power-pad).  
+**Status:** updated 2026-10-01 ~01:05 Europe/Amsterdam (CTO wake; §3f N5/N6/GER_US/VWAP_PB assign + engine recommend_scale).  
 **Branch:** `grok/cto-1`. **No reserve 2025-01→ opened. No new TRIALS. No fabricated backtests.**  
 **Engine:** `engine/ftmo.py` blob `ac7abef6` (p_survive right-censor; U2 re-validated PASS @ `18c7996`).
 
@@ -77,7 +77,7 @@
 
 | Priority | Item | Owner | Note |
 |---|---|---|---|
-| **1** | **N3 then N4 cost-gates** (train 2021–23) | U2 | C-006 — PREREGs landed on `grok/cto-1`. |
+| **1** | **N6→GER_US_LEAD→VWAP_PB cost-gates** (train 2021–23) | U2 | C-007 — N5 CTO FAIL STOP; rest pending. |
 | **2** | Non-clone research (more D-091.3) | Strateeg + Strateeg-2 | After N3/N4 gates; XAU_AM needs *new* mechanism if power required. |
 | **3** | Multi-sleeve `ftmo_ev` on Phase-1 survivors only | CTO | Inventory path; not new discovery. |
 | — | XAU_AM_FADE | — | Gate PASS N=12; **watch-only** (power-pad §3e). |
@@ -173,12 +173,38 @@ Report-only sensitivity (train): 0.45×→N=24; 0.60×→12; 0.75×→2. ext/ATR
 | ORB F2 / A1 / S3 | parked / profile only |
 
 
+
+## 3f. N5/N6/GER_US_LEAD/VWAP_PB assign + engine helpers (2026-10-01 ~01:05 CEST)
+
+**v46:** N3 t-FAIL STOP; N4 gate FAIL STOP. XAU_AM_FADE still watch-only (N≪120). D-091 cyclus 2/4 complete; new PREREGs = cyclus 3 material.
+
+**C-007:** U2 runs cost-gates only, order **N6 → GER_US_LEAD → VWAP_PB** (N5 already STOP). Gates per PREREG (4.20 / 3×TW-RT / 3×TW-RT) +50% RT stress; FAIL→STOP no trial; no 2025+ in decisions. Dead set adds N3/N4/N5.
+
+**N5 CTO gate (`scripts/n5_gap_fill_cost_gate_train.py`, `results/cto/n5_gap_fill_prep/`):** N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. Gap-fill fade under 0.30% filter is not FTMO-viable on train.
+
+**Engine (`engine/ftmo.py`):**
+- `trades_bp_to_daily(dates, signed_bp)` — trade bp → dense daily returns for `ftmo_ev`.
+- `recommend_scale(...)` — largest scale with empirical p95 daily loss ≤ 2% and max ≤ 4%; returns EV diagnostics.
+- CLI: `python -m engine.ftmo --csv … --recommend-scale`.
+- Smoke F2 ORB: scale≈2.82 (max-binds) → net_ev_monthly≈€299 — consistent with §1 table.
+
+**Kill / alive board (post C-007):**
+
+| Sleeve | Status |
+|---|---|
+| A4 / B1 / A5 / A2 / S2-* / N1–N5 / MIDDAY / S2b | **DEAD** |
+| XAU_AM_FADE | **WATCH-ONLY** |
+| N6 / GER_US_LEAD / VWAP_PB | **ALIVE — cost-gate pending (U2)** |
+| ORB F2 / A1 / S3 | parked / profile only |
+
+
 ## 4. Engine notes
 
 - `ftmo_ev` API stable; U2 P1 PASS on censor fix.  
 - ORB grid above: informational reassessment of published F2 series — **not** a PREREG trial; do not append TRIALS.  
 - S2 cost-gate scripts: `scripts/s2_{xau,ger40,usdjpy,btc,usoil}_cost_gate_train.py`.  
-- Next: research unblock (new PREREGs) or multi-sleeve survivor `ftmo_ev` — not more ORB clones.
+- `recommend_scale` / `trades_bp_to_daily` landed (C-007).
+- Next: U2 N5–VWAP_PB gates; wire first gate-PASS sleeve through `trades_bp_to_daily` → `recommend_scale` → `ftmo_ev`.
 
 ---
 
@@ -186,6 +212,7 @@ Report-only sensitivity (train): 0.45×→N=24; 0.60×→12; 0.75×→2. ext/ATR
 
 - PREREG: `PREREG_S3.md`, `PREREG_FTMO_A2.md`, `PREREG_FTMO_B1.md`, `PREREG_FTMO_C17.md`, `PREREG_S2_XAU_OVERLAP.md`, `PREREG_S2_GER40_OPEN.md`, `PREREG_S2_USDJPY_HANDOFF.md`  
 - Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,a2,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy,btc,usoil}_prep/`, `results/cto/s2b_btc_eth_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`, `results/cto/ambition_sr_skew_grid.json`  
-- Decisions: C-001…**C-006** (N3/N4 U2 cost-gates; XAU_AM_FADE watch-only)
+- Decisions: C-001…**C-007** (N5/N6/GER_US/VWAP_PB U2 cost-gates; engine recommend_scale)
 - Power-pad: `results/cto/xau_am_fade_power/`, `scripts/xau_am_fade_power_diag.py`
-- New PREREGs: `PREREG_FTMO_N3_US100_CLOSE.md`, `PREREG_FTMO_N4_XAU_PRENY.md`
+- New PREREGs: `PREREG_FTMO_N5_GAP_FILL.md`, `PREREG_FTMO_N6_GER40_CLOSE.md`, `PREREG_S2_GER_US_LEAD.md`, `PREREG_S2_VWAP_PB.md`
+- Engine helpers: `trades_bp_to_daily`, `recommend_scale` in `engine/ftmo.py`

@@ -291,3 +291,42 @@ git add PREREG_FTMO_N3_US100_CLOSE.md PREREG_FTMO_N4_XAU_PRENY.md scripts/xau_am
 git commit -m "CTO: land N3/N4 + C-006 U2 cost-gates; XAU_AM_FADE power-pad watch-only"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~01:05 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No formal PREREG trial claimed.**
+
+### Team snapshot (since CTO tip `cfb5f0f`)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v46** — N3/N4 STOP; XAU_AM_FADE only prior gate-PASS (underpowered); D-091 cyclus 2/4 |
+| U2 `4965797` / `328284c` | N3 t-FAIL STOP; N4 FAIL STOP; idle waiting new PREREG |
+| Strateeg `cb786f1` | **PREREG N5 gap-fill** + **N6 GER40 close** (D-091.3) |
+| Strateeg-2 `d68caab` | **PREREG GER_US_LEAD** + **VWAP_PB** |
+| CEO | D-091 cyclus 2/4 @ `c78a10a`; no D-092 yet |
+
+Merged `origin/main` (v46) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **Landed** `PREREG_FTMO_N5_GAP_FILL.md`, `PREREG_FTMO_N6_GER40_CLOSE.md`, `PREREG_S2_GER_US_LEAD.md`, `PREREG_S2_VWAP_PB.md`.
+2. **N5 cost-gate** TRAIN 2021–2023 (`scripts/n5_gap_fill_cost_gate_train.py`): N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. Artefacts `results/cto/n5_gap_fill_prep/`.
+3. **C-007** closed: N5 STOP; U2 assigned remaining cost-gates **N6 → GER_US_LEAD → VWAP_PB**. Dead set += N3/N4/N5. XAU_AM_FADE watch-only unchanged.
+4. **`engine/ftmo.py`:** `trades_bp_to_daily` + `recommend_scale` + CLI `--recommend-scale`. Smoke F2 ORB scale≈2.82 → ~€299/m (audit-consistent).
+5. Docs: `VRAGEN_CTO.md` C-007, `CTO_AUDIT.md` §3f, this log.
+
+### Remaining blockers
+
+1. U2 must execute N6→GER_US_LEAD→VWAP_PB cost-gates (PREREGs + m5gz present).
+2. Still no power-PASS sleeve; D-091 cyclus 3 in progress — D-092 if cyclus 4 ends without kostenpoort+power.
+3. A1/S3 still parked on `data/long_m1/` (no Sandro ping).
+
+### Git
+
+```
+git add engine/ftmo.py scripts/n5_gap_fill_cost_gate_train.py results/cto/n5_gap_fill_prep/ PREREG_FTMO_N5_GAP_FILL.md PREREG_FTMO_N6_GER40_CLOSE.md PREREG_S2_GER_US_LEAD.md PREREG_S2_VWAP_PB.md VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: N5 gap-fill FAIL + land N6/GER_US/VWAP_PB; ftmo recommend_scale (C-007)"
+git push origin grok/cto-1
+```

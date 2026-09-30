@@ -4,6 +4,36 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-007 — U2 assignment: N5→N6→GER_US_LEAD→VWAP_PB cost-gates (+ engine recommend_scale)
+**Opened:** 2026-10-01 ~01:01 Europe/Amsterdam (NEXT_STEPS v46: N3/N4 STOP; Strateeg N5/N6 @ `cb786f1`; Strateeg-2 GER_US_LEAD/VWAP_PB @ `d68caab`; U2 idle @ `4965797`).  
+**Closed:** 2026-10-01 ~01:05 Europe/Amsterdam by CTO (assignment + engine helpers; no CEO wait).
+
+**Facts:**
+- N3 gate PASS then day-clustered t FAIL → STOP; N4 gate FAIL → STOP (U2 `328284c`; TRIAL_COUNT 444). Dead set grows.
+- XAU_AM_FADE still only prior gate-PASS but N=12 ≪120 — **watch-only** (C-006 unchanged).
+- New frozen PREREGs (no results yet): `PREREG_FTMO_N5_GAP_FILL.md`, `PREREG_FTMO_N6_GER40_CLOSE.md`, `PREREG_S2_GER_US_LEAD.md`, `PREREG_S2_VWAP_PB.md`. Landed on `grok/cto-1` this cycle.
+- D-091 escalatie: cyclus **2/4** done; these gates = cyclus **3** material. No Sandro ping (D-091.6).
+
+**N5 CTO cost-gate (this cycle, TRAIN 2021–2023, `results/cto/n5_gap_fill_prep/`):**
+N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04 (n=276), US100 −1.94 (n=320). No TRIALS append. Gap-fade family closed under frozen 0.30% rule.
+
+**Decision (binding for Uitvoerder-2 on `claude/uitvoerder2-r`):**
+1. **Dead set — do not restart:** A4 · B1 · A5 · A2 · S2-* · N1 · N2 · MIDDAY_VWAP · S2b · **N3 · N4 · N5**.
+2. **Run cost-gates only (train 2021–2023; no 2025+ in decisions), order fixed:**
+   1. **N6** GER40 pre-close conditional momentum — gate ≥ **4.20 bp** (+50% RT stress).
+   2. **GER_US_LEAD** — pooled US100/US500; ≥ 3× TW-RT (+50% stress).
+   3. **VWAP_PB** — pooled US100/US30; ≥ 3× TW-RT (+50% stress).
+3. FAIL → STOP that sleeve, no trial / no TRIALS append / no retune. PASS gate → may proceed to clustered-t / `ftmo_ev` per that PREREG (U2 or CTO).
+4. **N5 = STOP** (CTO gate). Do not re-run. **XAU_AM_FADE:** remains **watch-only** (no `ftmo_ev`).
+5. Data: `data/m5gz/{US100,US30,US500,GER40}cash.csv.gz`. Swap=0 intradag.
+6. Merge `origin/main` regularly. CEO/Sandro: no decision required.
+
+**Engine (CTO this cycle):** `engine/ftmo.py` adds `trades_bp_to_daily()` + `recommend_scale()` (p95≤2% / max≤4% sizing) + CLI `--recommend-scale`. Smoke: F2 ORB → scale≈2.82 binding=max → ~€299/m (matches CTO_AUDIT §1).
+
+**Where applied:** landed PREREGs on `grok/cto-1`; N5 artefacts + `scripts/n5_gap_fill_cost_gate_train.py`; `CTO_AUDIT.md` §3f; `RUNLOG_CTO.md`; this ticket.
+
+---
+
 ### C-006 — U2 assignment: N3 then N4 cost-gates only (+ XAU_AM_FADE watch-only)
 **Opened:** 2026-10-01 ~00:33 Europe/Amsterdam (NEXT_STEPS v45: nacht-queue done; U2 idle @ `62c4e39`; Strateeg landed N3/N4 @ `579a3e5`).  
 **Closed:** 2026-10-01 ~00:36 Europe/Amsterdam by CTO (assignment written; no CEO wait).
@@ -151,4 +181,4 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (not blocking):_ NEXT_STEPS v45 nacht-queue done. After C-006: U2 runs **N3→N4 cost-gates**; XAU_AM_FADE watch-only; mark N3/N4 landed. CEO/Sandro: no new decision. A1/`long_m1` ping stays deferred.
+_Open for Manager (not blocking):_ NEXT_STEPS v46 N3/N4 STOP; CTO N5 FAIL STOP. After C-007: U2 runs **N6→GER_US_LEAD→VWAP_PB** cost-gates; XAU_AM_FADE watch-only. CEO/Sandro: no new decision. A1/`long_m1` ping stays deferred.

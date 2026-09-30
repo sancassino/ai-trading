@@ -1,0 +1,26 @@
+{
+  "prereg": "PREREG_FTMO_N5_GAP_FILL.md",
+  "window": "2021-01-01..2023-12-31",
+  "reserve_2025": "untouched",
+  "n": 596,
+  "mean_bruto_bp": -3.8382667407008535,
+  "mean_netto_bp": -4.484575465533067,
+  "tw_rt_bp": 0.6463087248322148,
+  "gate_fixed_bp": 1.95,
+  "gate_3x_rt": 1.9389261744966444,
+  "gate_3x_rt_stress50": 2.9083892617449667,
+  "pass_fixed": false,
+  "pass_stress50": false,
+  "stop_rate": 0.0,
+  "verdict": "FAIL_STOP",
+  "by_sym": {
+    "US500cash": {
+      "n": 276,
+      "mean_bruto_bp": -6.043016476423411
+    },
+    "US100cash": {
+      "n": 320,
+      "mean_bruto_bp": -1.9366700936401462
+    }
+  }
+}
