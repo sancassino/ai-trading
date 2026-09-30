@@ -518,3 +518,11 @@ Beste netto €/mnd (beste schaal): reeks A historisch: 2-Step −€21, Scaling
 Vereiste SR: 2-Step €500 ≈ 3,0, €900 ≈ 4,0; 2-Step+Scaling €500 ≈ 2,9, €900 ≈ 3,8; 1-Step > 4 voor beide (strengere dag-/trailing-regels).
 Conclusie: de realistische lat is SR ≈ 3 (voor ≈ €500) tot ≈ 4 (voor ≈ €900) na kosten, op 2-Step (+Scaling). Kanttekening: fee €540 niet geverifieerd; kapitaalgroei van de Scaling Plan niet gemodelleerd (conservatief).
 Volgende stap: backlog v12 verder volgen (Q2–Q5 gedaan; zie verslag v11); wachten op supervisor-refill of VOORSTEL.
+
+## 2026-09-30 07:56 — R3: rendementsvorm — dip-profiel en optiewaarde domineren; nul-edge al positief bij 'schone' dips
+
+Uitgevoerd (PREREG_R3.md vóór berekening): r3_shape.py; synthetische reeksen 10% jaarvol, 5 vormen, dagdip = 1,2 × dagverlies (geen meegedragen zwevend verlies), Q1b-simulatie 2-Step en 2-Step+Scaling.
+Beste netto €/mnd (2-Step) bij SR 1 / 1,5 / 2 / 3 / 4: normaal €876 / 1.343 / 1.883 / 3.185 / 4.759; positief scheef (+1,5) €1.228 / 1.838 / 2.558 / 4.220 / 5.996; negatief scheef (−1,5) €509 / 815 / 1.174 / 2.043 / 3.079; dikke staarten €781 …; vol-clustering €785 …. Vereiste SR €900: normaal 1,0; neg. scheef 1,6; pos. scheef < 1.
+EXTRA controle (buiten prereg): nul-edge SR 0 geeft al netto €216/mnd (normaal, schaal 2,5 = 25% jaarvol, P(netto<0) 40%), €379 (pos. scheef, 30% vol), €69 (neg. scheef); SR 0,5 → €500 / €744 / €259; SR 1 → €876 / €1.228 / €509.
+Interpretatie: (1) onder de FTMO-mechaniek (fee €540 als begrensd verlies, ongelimiteerde uitbetaling) heeft hoge vol optiewaarde — ook zonder edge (loterij-effect; echte traders hebben door kosten negatieve drift, en FTMO verbiedt gokgedrag). (2) De vereiste SR hangt sterk af van het dip-profiel: Q1b (SR 3–4) gebruikte de echte dips van RSI(2)+ORB met meegedragen zwevend verlies (dips ≈ 9σ van de dagvol); strategieën die elke dag vlak gaan met strakke stops hebben het 'schone' profiel. (3) Positieve scheefheid helpt (+€350/mnd bij gelijke SR), negatieve (RSI(2)-achtig) kost ≈ €370/mnd.
+Volgende stap: extra (geen trial) — Q1-frontier voor ORB alleen (MT5-reeks, dagelijks vlak, positief scheef), dan R1 (FX-ML).

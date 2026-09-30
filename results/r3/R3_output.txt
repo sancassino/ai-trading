@@ -1,0 +1,16 @@
+normaal         (skew -0.01) | 2step: SR1:€876 SR1.5:€1,343 SR2:€1,883 SR3:€3,185 SR4:€4,759 → €500 SR <1, €900 SR 1.0 | scaling: SR1:€914 SR1.5:€1,409 SR2:€1,989 SR3:€3,370 SR4:€4,992 → €500 SR <1, €900 SR <1 
+pos. scheef     (skew +1.51) | 2step: SR1:€1,228 SR1.5:€1,838 SR2:€2,558 SR3:€4,220 SR4:€5,996 → €500 SR <1, €900 SR <1 | scaling: SR1:€1,281 SR1.5:€1,936 SR2:€2,721 SR3:€4,567 SR4:€6,562 → €500 SR <1, €900 SR <1 
+neg. scheef     (skew -1.51) | 2step: SR1:€509 SR1.5:€815 SR2:€1,174 SR3:€2,043 SR4:€3,079 → €500 SR <1, €900 SR 1.6 | scaling: SR1:€530 SR1.5:€850 SR2:€1,221 SR3:€2,097 SR4:€3,158 → €500 SR <1, €900 SR 1.6 
+dikke staarten  (skew -0.64) | 2step: SR1:€781 SR1.5:€1,233 SR2:€1,772 SR3:€3,031 SR4:€4,464 → €500 SR <1, €900 SR 1.1 | scaling: SR1:€802 SR1.5:€1,268 SR2:€1,827 SR3:€3,137 SR4:€4,635 → €500 SR <1, €900 SR 1.1 
+vol-clustering  (skew +0.01) | 2step: SR1:€785 SR1.5:€1,237 SR2:€1,794 SR3:€3,147 SR4:€4,704 → €500 SR <1, €900 SR 1.1 | scaling: SR1:€820 SR1.5:€1,300 SR2:€1,873 SR3:€3,287 SR4:€4,944 → €500 SR <1, €900 SR 1.1 
+
+EXTRA: nul-edge-controle (2-Step), beste schaal uit 0,3–3:
+  normaal      SR 0.0: beste t 2.50 (jaarvol 25%) → netto €216/mnd, P(netto<0) 40%, funded 94%
+  normaal      SR 0.5: beste t 2.50 (jaarvol 25%) → netto €500/mnd, P(netto<0) 21%, funded 98%
+  normaal      SR 1.0: beste t 2.50 (jaarvol 25%) → netto €876/mnd, P(netto<0) 9%, funded 100%
+  pos. scheef  SR 0.0: beste t 3.00 (jaarvol 30%) → netto €379/mnd, P(netto<0) 33%, funded 97%
+  pos. scheef  SR 0.5: beste t 3.00 (jaarvol 30%) → netto €744/mnd, P(netto<0) 16%, funded 99%
+  pos. scheef  SR 1.0: beste t 3.00 (jaarvol 30%) → netto €1,228/mnd, P(netto<0) 6%, funded 100%
+  neg. scheef  SR 0.0: beste t 2.00 (jaarvol 20%) → netto €69/mnd, P(netto<0) 53%, funded 85%
+  neg. scheef  SR 0.5: beste t 2.00 (jaarvol 20%) → netto €259/mnd, P(netto<0) 34%, funded 95%
+  neg. scheef  SR 1.0: beste t 2.00 (jaarvol 20%) → netto €509/mnd, P(netto<0) 18%, funded 98%
