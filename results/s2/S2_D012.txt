@@ -1,0 +1,5 @@
+S2 herbeoordeling volgens D-012 (poort = gemiddeld bruto train ≥ 8,7 bp én gemiddelde zonder top-5% winnaars > 0)
+(a) gem. +21.2 bp | mediaan -53.2 | zonder top-5% -25.7 | winst/verlies 245.0/129.6 bp, winkans 40% | staartbijdrage top-5% 215% → poort STOP
+(b) gem. +3.8 bp | mediaan -23.8 | zonder top-5% -25.9 | winst/verlies 376.6/29.6 bp, winkans 8% | staartbijdrage top-5% 750% → poort STOP
+(c) gem. +29.5 bp | mediaan -20.5 | zonder top-5% -13.2 | winst/verlies 442.4/26.8 bp, winkans 12% | staartbijdrage top-5% 143% → poort STOP
+(d) gem. -0.7 bp | mediaan -23.5 | zonder top-5% -25.6 | winst/verlies 305.8/29.7 bp, winkans 9% | staartbijdrage top-5% nan% → poort STOP

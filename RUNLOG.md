@@ -613,3 +613,12 @@ Standaardactie U-002: M5-export 2021–26 voor US2000, EU50, FRA40, N25, SPN35, 
 Rondreis ≈ (bp): FRA40 1,37 · AUS200 1,55 · JP225 1,78 · US2000 2,12 · HK50 2,35 · EU50 3,12 · N25 4,00 · SPN35 6,50. Poort ≤ 1,0 bp (≈ ⅓ van de ORB-bruto 2,5–3 bp): 0/8 → volgens de standaardactie geen U1-test, TRIAL_COUNT blijft 414.
 Betekenis: ORB is op FTMO alleen economisch te handelen op US500/US100/US30/GER40 (0,45–0,78 bp); bevestiging in de breedte is met FTMO-kosten niet mogelijk → S3 (lange data) blijft de enige bevestigingsroute.
 Open: U2/U3 wachten op besluit (VRAGEN_UITVOERDER.md); S3 wacht op data/long_m1 (A-01); forward-paper start vanavond 22:15 UTC.
+
+## 2026-09-30 09:38 — S2 herbeoordeeld volgens D-012 (gemiddelde-poort + staartvoorwaarde): alle 4 varianten nog steeds STOP
+
+CEO-besluit D-012 (antwoord op U-001): poort = gemiddeld bruto train ≥ 8,7 bp én gemiddelde zonder top-5% winnaars > 0. Zelfde trades als S2 (results/s2/S2_D012.txt):
+(a) OR-stop: gem. +21,2 bp maar zonder top-5% −25,7 (top-5% draagt 215% van de winst) → STOP
+(b) 10% ATR: gem. +3,8 → STOP
+(c) alleen long: gem. +29,5 maar zonder top-5% −13,2 (143%) → STOP
+(d) uit 12:00: gem. −0,7 → STOP
+Winkans 8–40%, winst/verlies 245/130 tot 442/27 bp. Conclusie ongewijzigd: S2 gestopt, geen trial (TRIAL_COUNT 414). De test-helft (2024–26) was bovendien in alle varianten negatief.
