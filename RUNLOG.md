@@ -925,3 +925,9 @@ Nieuw: mt5_symbol_snapshot.py (VM) + ftmo_snapshot.sh (Debian, cron ma–vr 21:3
 3. PREREG vs resultaat: C7_ev_tabel.csv gecommit in dezelfde commit als NEXT_STEPS v26 (14:36 UTC) — geen directe PREREG-voorafgaand commit voor die run in main zichtbaar, maar PREREG_C7.md staat in repo (was al eerder gecommit op uitvoerder2-r). Geen blokkade; vermeld voor Uitvoerder-2.
 
 **Volgende cyclus-acties:** wacht op Uitvoerder-2-review van engine/ftmo.py; als commit > 2 uur uitblijft → VRAGEN_MANAGER openen.
+
+## 2026-09-30 19:32 — D-086: spreads per uur voor alle 74 FTMO-symbolen met M5-data (COSTS_FTMO_alle*.csv)
+
+M5-barspread 2024–26 per symbool en per NY-uur (mediaan/P90), beste uur (≥ 200 bars), commissie waar bekend (FX €2,25/lot/kant, XAU/XAG €2/lot, indices/olie 0, aandelen 0,002%/kant aanname, crypto onbekend) → rondreis-bp. Bars met spread 0 = ontbrekend (bij ≈ 20 aandelen 74–81% → mediaan onzeker; Q2 mat ≈ 2,9 bp).
+Goedkoopst (rondreis, bp): US30 0,45 · EURUSD 0,63 · US100 0,66 · GBPUSD 0,70 · GER40 0,72 · US500 0,78 · USDJPY 0,78 · USDCAD 0,80 · XAU 0,83 · USDCHF 1,01 · EUR-crosses 1,0–1,2 · BTC 1,25 (commissie onbekend) · AUS200 1,36 · UK100 1,42 · JP225 1,51. Duurder: FRA40 2,0 · HK50 2,6 · olie 2,7–3,3 · EU50 3,0 · US2000 3,5 · SPN35 4,1 · XAG 5,1 · N25 5,6 · ETH 8,0; aandelen 2,5 (MSFT/META) … 40 bp.
+Beste uur US-indices 12–13u NY (0,39–0,65 bp), GER40 07u NY (0,47). Grote P90-staarten bij GER40 (2,8), UK100 (5,1), FRA40 (10,1), HK50 (11,3) → uur-afhankelijke kosten tellen voor intraday-regels. Kostenbasis FASE 3 samen met data/ftmo_specs (dagelijkse swaps).
