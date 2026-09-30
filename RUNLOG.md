@@ -555,3 +555,9 @@ Getest (PREREG_R4.md vóór berekening): r4_breakout.py, EURUSD, GBPUSD, USDJPY,
 Resultaat: N 1.821, netto −3,1 bp/trade (bruto −2,0), t train −1,82 / test +0,18, trade-skew +3,42 (gewenste vorm), dagreeks SR −0,75, skew +0,09, jaarvol 3,2%, max dagdip 1,13%; per jaar 2021 −4,7%, 2022 +2,0%, 2023 −5,6%, 2024 −3,9%, 2025 −3,0%, 2026 +1,1%. Per symbool alleen XAU positief (+18 bp, t 1,3). Q1b-frontier: −€23/mnd.
 Conclusie: het profiel is positief scheef, maar zonder edge — trendvolgen op FX-H4 verliest in 2021–26. TRIAL_COUNT 410.
 Volgende stap: R5 (STANDPUNT_SUPERVISOR.md).
+
+## 2026-09-30 08:44 — R5: STANDPUNT_SUPERVISOR.md (één pagina, gewone taal) + verslag backlog v13
+
+Opgeleverd: STANDPUNT_SUPERVISOR.md. Kern: ± 410 varianten in ± 25 families; kosten-muur (spread 0,3 bp FX … 8 bp crypto, overnight-financiering 5–8%/jr indices/aandelen, 30% crypto); vereiste SR onder FTMO-mechaniek ± 3/± 4 (€500/€900) bij meegedragen verliezen, ± 1 bij dagelijks vlak + positief scheef (deels loterij-effect); enige kandidaat met dat profiel = ORB (SR ± 0,9, positief scheef; historisch ± €480–510/mnd, realistisch ± €150–160, onbevestigd buiten 2021–26). R1–R4 geen enkele sleeve SR ≥ 1,5. Beslisregel: stoppen of doel bijstellen; enige uitzondering = lange minuutdata leveren om ORB te toetsen (DATA_REQUEST_SANDRO.md); papieren forward loopt door.
+Backlog v13 afgerond: R1 (FX-ML) afgewezen, R2 (aandelen-ML) afgewezen, R3 (vorm) inzicht, extra ORB-frontier, R4 (breakout FX) afgewezen, R5 standpunt. TRIAL_COUNT 410.
+Volgende stap: wachten op nieuwe NEXT_STEPS / beslissing Sandro (check elke 10 min).
