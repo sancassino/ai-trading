@@ -42,6 +42,27 @@ Kolommen: date;open;high;low;close;adjclose;volume (6 sign. cijfers). Checksums:
 | EWZ | 2000-07-14 | 2026-09-21 | 6585 | 0 | 0 | 0 | 0 | 0 | 2 |
 | FTSE | 1984-01-03 | 2026-09-29 | 10797 | 0 | 0 | 0 | 0 | 0 | 0 |
 | FVX_5Y | 1962-01-02 | 2026-09-29 | 16173 | 0 | 0 | 0 | 0 | 0 | 16 |
+| FXBIS_AUD | 1971-01-04 | 2026-09-22 | 14155 | 0 | 1 | 0 | 14155 | 0 | 1 |
+| FXBIS_BRL | 1984-12-03 | 2026-09-22 | 10608 | 0 | 1 | 0 | 10608 | 0 | 0 |
+| FXBIS_CAD | 1945-01-01 | 2026-09-22 | 21108 | 0 | 0 | 0 | 21108 | 0 | 0 |
+| FXBIS_CHF | 1953-09-01 | 2026-09-22 | 18873 | 0 | 1 | 0 | 18873 | 0 | 0 |
+| FXBIS_CLP | 1982-08-09 | 2026-09-22 | 11003 | 0 | 0 | 0 | 11003 | 0 | 1 |
+| FXBIS_CNY | 1981-01-02 | 2026-09-22 | 11551 | 0 | 1 | 0 | 11551 | 0 | 2 |
+| FXBIS_EUR | 1974-06-28 | 2026-09-22 | 13306 | 0 | 0 | 0 | 13306 | 0 | 0 |
+| FXBIS_GBP | 1953-08-10 | 2026-09-22 | 18883 | 0 | 1 | 0 | 18883 | 0 | 0 |
+| FXBIS_HKD | 1981-01-02 | 2026-09-22 | 11619 | 0 | 0 | 0 | 11619 | 0 | 0 |
+| FXBIS_IDR | 1988-01-01 | 2026-09-22 | 9937 | 0 | 0 | 0 | 9937 | 0 | 3 |
+| FXBIS_INR | 1973-01-02 | 2026-09-22 | 13605 | 0 | 0 | 0 | 13605 | 0 | 0 |
+| FXBIS_JPY | 1969-12-01 | 2026-09-22 | 14432 | 0 | 1 | 0 | 14432 | 0 | 0 |
+| FXBIS_KRW | 1964-05-04 | 2026-09-22 | 16536 | 0 | 0 | 0 | 16536 | 0 | 2 |
+| FXBIS_MXN | 1954-04-19 | 2026-09-22 | 18503 | 0 | 0 | 0 | 18503 | 0 | 11 |
+| FXBIS_NOK | 1953-12-14 | 2026-09-22 | 18783 | 0 | 1 | 0 | 18783 | 0 | 0 |
+| FXBIS_SEK | 1953-09-01 | 2026-09-22 | 18872 | 0 | 1 | 0 | 18872 | 0 | 0 |
+| FXBIS_SGD | 1981-01-02 | 2026-09-22 | 11618 | 0 | 0 | 0 | 11618 | 0 | 0 |
+| FXBIS_THB | 1981-01-02 | 2026-09-22 | 11538 | 0 | 1 | 0 | 11538 | 0 | 1 |
+| FXBIS_TRY | 1950-01-02 | 2026-09-22 | 19467 | 0 | 1 | 0 | 19467 | 0 | 8 |
+| FXBIS_TWD | 1983-10-03 | 2026-09-22 | 10595 | 0 | 4 | 0 | 10595 | 0 | 0 |
+| FXBIS_ZAR | 1970-01-02 | 2026-09-22 | 14340 | 0 | 1 | 0 | 14340 | 0 | 1 |
 | FX_AUDUSD | 1971-01-04 | 2026-09-28 | 13970 | 0 | 1 | 0 | 13970 | 0 | 0 |
 | FX_EURUSD | 1999-01-04 | 2026-09-28 | 6956 | 0 | 0 | 0 | 6956 | 0 | 0 |
 | FX_GBPUSD | 1971-01-04 | 2026-09-28 | 13977 | 0 | 1 | 0 | 13977 | 0 | 0 |
@@ -98,11 +119,21 @@ Kolommen: date;open;high;low;close;adjclose;volume (6 sign. cijfers). Checksums:
 | TWII | 1997-07-02 | 2026-09-21 | 7162 | 0 | 29 | 0 | 0 | 0 | 0 |
 | TYX_30Y | 1977-02-15 | 2026-09-29 | 12431 | 0 | 0 | 0 | 0 | 0 | 3 |
 | UNG | 2007-04-18 | 2026-09-29 | 4894 | 0 | 0 | 0 | 0 | 0 | 1 |
+| USDBRL | 2003-12-01 | 2026-09-20 | 5499 | 0 | 2 | 248 | 0 | 0 | 1 |
 | USDCAD | 2003-09-16 | 2026-09-28 | 5991 | 0 | 0 | 114 | 0 | 0 | 0 |
 | USDCHF | 2003-09-16 | 2026-09-28 | 5989 | 0 | 0 | 103 | 0 | 0 | 0 |
+| USDCNY | 2001-06-24 | 2026-09-20 | 6319 | 0 | 1 | 334 | 0 | 0 | 0 |
+| USDHKD | 2001-07-15 | 2026-09-20 | 6375 | 0 | 3 | 115 | 0 | 0 | 0 |
+| USDIDR | 2001-06-27 | 2026-09-20 | 6371 | 0 | 3 | 517 | 0 | 0 | 8 |
+| USDINR | 2003-12-01 | 2026-09-20 | 5914 | 0 | 1 | 240 | 0 | 0 | 0 |
 | USDJPY | 1996-10-30 | 2026-09-28 | 7757 | 0 | 2 | 277 | 0 | 0 | 0 |
+| USDKRW | 2003-12-01 | 2026-09-20 | 5915 | 0 | 1 | 450 | 0 | 0 | 0 |
+| USDMXN | 2003-12-01 | 2026-09-20 | 5938 | 0 | 0 | 27 | 0 | 0 | 0 |
 | USDNOK | 2001-07-15 | 2026-09-28 | 6382 | 0 | 3 | 96 | 0 | 0 | 2 |
 | USDSEK | 2001-07-15 | 2026-09-28 | 6382 | 0 | 3 | 97 | 0 | 0 | 0 |
+| USDSGD | 2003-12-01 | 2026-09-20 | 5929 | 0 | 0 | 223 | 0 | 0 | 0 |
+| USDTWD | 2004-03-24 | 2026-09-20 | 5422 | 0 | 2 | 726 | 0 | 0 | 4 |
+| USDZAR | 2003-12-01 | 2026-09-20 | 5931 | 0 | 0 | 93 | 0 | 0 | 2 |
 | USMV | 2011-10-20 | 2026-09-21 | 3750 | 0 | 0 | 0 | 0 | 0 | 0 |
 | USO | 2006-04-10 | 2026-09-29 | 5150 | 0 | 0 | 0 | 0 | 0 | 2 |
 | VIX | 1990-01-02 | 2026-09-29 | 9255 | 0 | 0 | 0 | 0 | 0 | 152 |
@@ -147,17 +178,10 @@ Kolommen: date;open;high;low;close;adjclose;volume (6 sign. cijfers). Checksums:
 
 NB: Yahoo-indices zijn cash-indexslotkoersen; futures (GC=F e.d.) zijn doorlopende front-month-reeksen (rolsprongen mogelijk); FX (=X) vanaf 1996/2003. Dagen zonder OHLC (alleen slot) komen vooral voor in vroege jaren.
 
-**D2b (S11 §4 / D-066/D-068, 2026-09-30) — per bron met licentie:**
-- **Rang 1 — World Bank Commodity Price Data (Pink Sheet), CC BY 4.0 (bronvermelding: World Bank):** 87 maandreeksen in `data/monthly/` (WB_* prijzen, WBIDX_*
-  indices; nominaal USD; 1960→; bron-xlsx 'Updated on September 02, 2026', SHA-256 9fdcfa8a…; checksums in data/CHECKSUMS_monthly.sha256).
-- **Rang 3 — officiële korte rentes (vrij met bronvermelding):** Bank of England Bank Rate (1975→) en SONIA (1997→) dagelijks; Swiss National Bank (zimoma):
-  CHF-Libor 3m (1989–2021), SARON (1999→), JPY TONA (1992→), EG3M (1992→) maandelijks; Bank of Canada Valet 3m T-bill (2000→). **Niet gelukt:** RBA
-  (403 Access Denied — niet omzeild), HKMA HIBOR (502, twee pogingen). JPY kort ook via MoF-JGB 1j (jgbcme, 1974→) als proxy.
-- **Extra onafhankelijke aandelenmarkten (Yahoo, eerlijke UA; repo is privé):** AXJO (1992→), TSX (1979→), SMI (1990→), OMXS30 (2008→), KOSPI (1996→),
-  TWII (1997→), BVSP (1993→), MXX (1991→), IBEX (1993→), AEX (1992→), BEL20 (1991→), STI (1987→), SENSEX (1997→), NIFTY (2007→), JKSE (1990→) — prijsindices
-  (dividend genegeerd, vermeld); land-ETF's EWA/EWC/EWL/EWS (1996→), EWY/EWZ (2000→) = total return via adjclose.
-- **Factor-ETF's (korte N, label):** MTUM, QUAL, VLUE (2013→), USMV (2011→). Ken French-factoren (rang 2) nog niet: licentiecheck eerst (D-068).
-- **Niet bewaard (D-068):** ICE-BofA-kredietreeksen via FRED; geen scraping van betaalde indexaanbieders (MSCI e.d.).
+**R2-006 (EM-FX, 2026-09-30):** BIS WS_XRU dagkoersen (publiek; bronvermelding BIS), **lokale valuta per USD**: FXBIS_BRL (1984→), MXN (1954→), IDR (1988→),
+INR (1973→), KRW (1964→), TWD (1983→), SGD/HKD/CNY/THB (1981→), CLP (1982→), ZAR (1970→), TRY (1950→), AUD (1971→), CAD (1945→), CHF/SEK/NOK/GBP (1953→),
+JPY (1969→), EUR (1974→; vóór 1999 BIS-synthetisch). Let op: GBP bevat 348 weekenddagen (BIS-invulling) — bij gebruik filteren op werkdagen.
+Yahoo =X-EM-FX (USDBRL, MXN, IDR, INR, KRW, TWD, SGD, ZAR, HKD, CNY; 2001–2004→) als korte dagelijkse aanvulling.
 
 ## D1 — Dukascopy-intraday `data/long_m1/` (lokaal, niet in repo)
 Zie results/p0/p0_log.txt; SPX 2011 niet op de feed; 2012→ loopt. Wordt bijgewerkt zodra jaren compleet zijn.

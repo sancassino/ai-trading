@@ -834,3 +834,24 @@ Rang 3 — officiële korte rentes: BoE Bank Rate (1975→, dagelijks), SONIA (1
 Extra onafhankelijke markten voor S11 (Yahoo, eerlijke UA; repo privé bevestigd via gh): AXJO 1992→, TSX 1979→, SMI 1990→, STI 1987→, BEL20 1991→, MXX 1991→, JKSE 1990→, AEX 1992→, IBEX 1993→, BVSP 1993→, KOSPI 1996→, TWII 1997→, SENSEX 1997→, OMXS30 2008→, NIFTY 2007→ (prijsindices); land-ETF's EWA/EWC/EWL/EWS/EWY/EWZ (TR). Factor-ETF's MTUM/QUAL/VLUE/USMV met label 'korte N'. Ken French (rang 2) wacht op licentiecheck. ICE-BofA via FRED niet bewaard.
 QA (DATA_CATALOGUS.md): geen dubbele datums/gaten in de nieuwe indexreeksen; negatieve CHF/JPY-rentes echt. data/daily nu 130 reeksen; worden vanavond door de dagelijkse update aangevuld (21-09 → 29-09).
 Voor S11 (Uitvoerder-2): onafhankelijke markten voor C02 zijn nu FTSE, CAC, HSI + (vooraf te kiezen) AXJO, TSX, SMI, STI, BEL20, AEX, IBEX, … — lijst moet in hun PREREG vóór resultaat.
+
+## 2026-09-30 15:46 — R2-006: EM-FX binnen bronvoorwaarden — BIS-dagkoersen 21 valuta's (tot 1945→) + Yahoo-aanvulling
+
+BIS Statistics API WS_XRU (publiek, bronvermelding BIS; eerlijke UA): lokale valuta per USD, dagelijks: BRL 1984→, MXN 1954→, IDR 1988→, INR 1973→, KRW 1964→, TWD 1983→, SGD/HKD/CNY/THB 1981→, CLP 1982→, ZAR 1970→, TRY 1950→, AUD 1971→, CAD 1945→, CHF/SEK/NOK/GBP 1953→, JPY 1969→, EUR 1974→ (vóór 1999 BIS-synthetisch) → data/daily/FXBIS_*. Sanity: laatste koersen plausibel (EUR 0,872/USD, JPY 157,2, BRL 5,12); GBP heeft 348 weekenddagen (BIS-invulling) → bij gebruik op werkdagen filteren (vermeld). Daarnaast Yahoo =X (2001–2004→) voor 10 EM-paren. Hiermee kan Uitvoerder-2 EM-indices (BVSP, MXX, JKSE, SENSEX, KOSPI, TWII, STI, …) in USD omrekenen/lokale-valuta-labels zetten (run 6). DATA_CATALOGUS bijgewerkt; QA opnieuw gedraaid.
+
+## 2026-09-30 15:48 — v28 QA-2 (Uitvoerder-1 pakte dit op): P-ETF-a met C02 vervangen door aandelen-B&H + frontier per periode — C02 levert DD-bescherming, geen SR in 2011–24
+
+qa_c02_bh.py → results/port/QA_C02_BH_frontier.md (ontdekking ≤ 2024, reserve niet aangeraakt, geen trial). B&H = dezelfde 5 indices (etf, 13 bp/TER 0,07%/SPX_TR), zelfde 1/σ-weging als PREREG_PORT; frontier vol 5–12%, hefboom ≤ 2× tegen rf + 1,5% ('onbevestigd (broker)'), maandelijks. €/mnd = alfa (excess t.o.v. USD-cash ≈ EUR-gehedged) × 50–70% + EUR-cash (€STR 2,44% ≈ €163).
+Ongehefeld — met C02 vs met B&H: 2001–24 SR 0,94 vs 0,79, maxDD 11,2% vs 19,2%, alfa 5,7% vs 5,9%/jr; 2011–24 SR 0,83 vs **0,85**, alfa 5,1% vs 6,1%; 2021–24 SR 0,53 vs 0,46, alfa 3,3% vs 3,5%.
+→ C02 verbetert P-ETF-a via DD (−8 pp), niet via alfa; na 2010 zelfs licht negatief op SR/alfa — consistent met run 5 ('DD-filter, geen alfa').
+Frontier binnen DD-budget (maxDD ≤ 20%): met C02 vol 9% (hefboom ≈ 1,6×) → 2001–24 totaal €401–496/mnd, 2011–24 €378–464, **2021–24 €242–274**; met B&H vol 8% (≈ 1,3×) → €387–476 / €398–492 / €287–337 (vol 9% overschrijdt het budget in 2001–24/2011–24).
+Eerlijke ondergrens (recentste regime 2021–24, ongehefeld): alfa €112–162/mnd + EUR-cash €163 ≈ €275–325/mnd totaal — onder het €400–500-doel; het doel wordt alleen gehaald met hefboom én de 2001–24/2011–24-SR.
+
+## 2026-09-30 16:14 — D-075 (Uitvoerder-1): echte exposures P-ETF-a + gerealiseerde excess per decennium + Monte-Carlo — p(totaal ≥ €400) ≈ 0,4–5% (parameter), 12–13% (incl. 10-jr-toeval)
+
+qa_exposures_mc.py → results/port/QA_exposures_MC.md (geen trial; ontdekking ≤ 2024; premies = VERWACHTING.md v1, Strateeg, web-claims).
+(1) Gemiddelde exposure P-ETF-a (exact uit 1/σ-gewichten × sleeve-posities, positie van gisteren): 2001–24 aandelen 0,40 · obligaties 0,29 · goud 0,11 · cash 0,20; 2011–24 0,43/0,33/0,13/0,11; 2021–24 0,45/0,26/0,13/0,16 (Strateeg-aanname 0,45/0,31/0,12/0,12 — dichtbij).
+(2) Gerealiseerde excess t.o.v. USD-cash per decennium (%/jr): aandelen (SPX_TR) 1990s +12,4 | 2000s −3,5 | 2010s +12,8 | 2020–24 +11,5; obligaties (BOND10_SYN) +3,1 | +4,1 | +3,5 | −4,0; goud (GOLD_F) n.v.t. | +16,1 | +3,1 | +11,6 — tegen forward-midden +2,0 / +1,0 / −0,25 → backtest = bull-premies.
+(3) Premie-verwachting met echte exposures (kosten −0,20%/jr aangenomen): alfa laag/midden/hoog ≈ −€34 / €58 / €144 per mnd; totaal met EUR-cash (€STR 2,44%) €128 / €220 / €306; met USD-cash (4,07%) €237 / €329 / €415.
+(4) Monte-Carlo (200k; premies ~ N(midden, SE), EUR-cash vast): p(totaal ≥ €400) 0,4% (SE 2%) … 3,8–5% (SE 3% / corr 0,3); incl. gerealiseerd 10-jr-gemiddelde (portefeuillevol 6,1%) 12–13%; p(alfa ≥ €287) ≤ 1,7% (parameter) resp. 7–8%. Mediaan totaal ≈ €220–224/mnd.
+Conclusie: bevestigt D-073 — met deze allocatie en premie-verwachtingen is ≥ €400 totaal onwaarschijnlijk (≈ 5%, of ≈ 12% als geluk over 10 jaar meetelt).
