@@ -50,3 +50,8 @@ futures-/CFD-afgeleid); de OR geldt dan op het cash-openingsuur, zoals bij FTMO.
   (10 jaar: 91/21/0% resp. 97/39/0% bevestigd.) Kanttekening: 'effect op 2021–26-niveau' neemt het steekproefgemiddelde als waarheid
   (winnaarsvloek → optimistisch); de halvering is het realistischer scenario. Label 'blijvend' vs 'vervallen' hangt alleen af van de
   vaste FTMO-referentie (nu: blijvend-voorwaarden vervuld).
+
+## TERUGGEDRAAID (NEXT_STEPS v18, M-009 ingetrokken; D-006/D-023: S3-drempels vast) — 2026-09-30 ≈ 10:48Z, data/long_m1/ nog steeds leeg
+- De aanpassing 'eenzijdig t ≥ 2,0' hierboven is **ingetrokken**. Geldend is weer: **bevestigd = dag-geclusterd t ≥ 2,5** plus alle overige eisen
+  (ongewijzigd). Het power-annex blijft als informatie staan: bij een effect op 2021–26-niveau ≈ 88% kans op 'bevestigd', bij een gehalveerd
+  effect ≈ 18% (dan meestal 'onbeslist').
