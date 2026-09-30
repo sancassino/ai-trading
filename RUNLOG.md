@@ -742,3 +742,14 @@ Taakverdeling (kickoff Uitvoerder-2): catalogusruns, C02-QA en portefeuille ligg
 ## 2026-09-30 11:44 — Engine: vehikel-standaarden volgens VEHICLE_ANALYSE v1 + total-return-proxy (geen trial)
 
 Tot engine/vehicles.csv (Strateeg) er is: etf = 13 bp rondreis (IBKR 0,05% per kant + ≈ 3 bp spread), TER 0,07%/jr, long-only, cash-rente DTB3 op niet-belegd; future = 1 bp + rol 4×0,5 bp, overschotrendement + rf; cfd = S0 + FTMO-swap (ongewijzigd). Voor etf/future wordt waar mogelijk total return gebruikt (SPX → SPX_TR vanaf 1988; DAX is al een performance-index; overige prijsindex, dividend genegeerd — vermeld in engine/README). Regressietest B2b (cfd) ongewijzigd OK (t_NW 3,21, SR 0,52).
+
+## 2026-09-30 12:22 — D-044 data-uitbreiding + D-045 engine-README + merge Uitvoerder-2 in main
+
+Merge claude/uitvoerder2-r → main (catalogusrun 2, engine-uitbreiding van Uitvoerder-2; één conflict in een gegenereerd resultaatbestand → versie U-2); pycache uit git + .gitignore; regressietest B2b OK (t_NW 3,21, SR 0,52). TRIAL_COUNT volgens U-2: 427 (TRIALS.csv 25 rijen incl. ongeldige 'telt niet'-rijen buiten BH).
+D-044 (data, 96 reeksen in data/daily, 34 MB):
+(a) total return: SPX_TR (1988→), DAX al performance-index; NDX-TR niet vrij beschikbaar → prijsindex (vermeld).
+(b) C54-universum: USDSEK, USDNOK, EURGBP, EURJPY, EURCHF; 12 agri/energie/metaal-futures (CORN, WHEAT, SOY, COFFEE, SUGAR, COTTON, CATTLE, HEATOIL, GASOLINE, BRENT, PLAT, PALL); obligatieproxy's BUND_ETF, GILT_ETF, BWX, EMB; RSP.
+(c) roll-inclusieve ETF's: CPER, UNG, USO, PPLT, DBA.
+(d) FRED ook vanaf Debian geblokkeerd (verbinding direct geweigerd; API vraagt account → niet gebruikt). Vervangen door officiële openbare bronnen (fetch_official.py): US Treasury 3m/2j/10j/30j (1990→), MoF Japan 10j (1986→), Bank of England 10j gilt (1982→), Bundesbank 10j (1997→), BLS CPI-U (1913→). QA in DATA_CATALOGUS.md (negatieve DE/JP-rentes en grote %-sprongen bij rentes ≈ 0 zijn echt).
+D-045: future-model-fix van Uitvoerder-2 gedocumenteerd in engine/README (niet terugdraaien).
+Volgende: D-050 forward-papier voor P-ETF/P1/P-breed zodra PREREG_PORT.md (Uitvoerder-2) gecommit is.
