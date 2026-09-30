@@ -15,6 +15,10 @@ SERIES = {  # naam: Yahoo-ticker
     "DXY": "DX-Y.NYB", "GOLD_F": "GC=F", "SILVER_F": "SI=F", "WTI_F": "CL=F", "COPPER_F": "HG=F", "NATGAS_F": "NG=F",
     "XLB": "XLB", "XLE": "XLE", "XLF": "XLF", "XLI": "XLI", "XLK": "XLK", "XLP": "XLP", "XLU": "XLU", "XLV": "XLV", "XLY": "XLY",
     "SPY": "SPY", "TLT": "TLT", "EURUSD": "EURUSD=X", "USDJPY": "JPY=X", "GBPUSD": "GBPUSD=X",
+    # uitbreiding v19: total return, obligaties/krediet, internationaal, grondstoffen, meer FX
+    "SPX_TR": "^SP500TR", "NDX_TR": "^XNDX", "IEF": "IEF", "SHY": "SHY", "LQD": "LQD", "HYG": "HYG", "TIP": "TIP", "AGG": "AGG",
+    "EFA": "EFA", "EEM": "EEM", "IWM": "IWM", "GLD": "GLD", "SLV": "SLV", "DBC": "DBC", "VNQ": "VNQ",
+    "AUDUSD": "AUDUSD=X", "USDCAD": "CAD=X", "USDCHF": "CHF=X", "NZDUSD": "NZDUSD=X", "FVX_5Y": "^FVX", "TYX_30Y": "^TYX",
 }
 
 
