@@ -826,3 +826,11 @@ D1/P0: Dukascopy verbreekt weer steeds de verbinding (2012-04-13, poging 5); dow
 ## 2026-09-30 14:53 — P0: Dukascopy-downloader netjes gestopt (throttling) — herstart over 1 u met 60 s pauze
 
 14:50Z: 503 zes keer op rij bij USA500IDXUSD 2012-04-13 (ook de controledatum faalde → feed-throttling, geen ontbrekende datum). Stand: SPX 2011 niet op de feed, 2012: 89 handelsdagen binnen (jan–half april). Tempo met 30 s pauze ≈ 0,5–1 dag/min door wachttijden bij fouten. Herstart gepland om ≈ 15:55Z met 60 s tussen verzoeken (hervatbaar, niets omzeild). Verwachting eerlijk: SPX 2012–2020 via deze feed kost dagen; S3 blijft laagste prioriteit (D-032) tot de data compleet is.
+
+## 2026-09-30 15:20 — D2b (S11 §4, D-066/D-068): Pink Sheet, lokale korte rentes, 15 extra indexmarkten — per bron met licentie
+
+Rang 1 — World Bank Pink Sheet (CC BY 4.0, bronvermelding World Bank): 87 maandreeksen (WB_* prijzen, WBIDX_* indices; 1960→) in data/monthly/ + CHECKSUMS_monthly.sha256; bron-xlsx van 02-09-2026 (SHA-256 9fdcfa8a…).
+Rang 3 — officiële korte rentes: BoE Bank Rate (1975→, dagelijks), SONIA (1997→); SNB zimoma: CHF-Libor 3m (1989–2021), SARON (1999→), JPY TONA (1992→), EG3M (1992→) maandelijks; Bank of Canada 3m T-bill (2000→). Niet gelukt: RBA (403 Access Denied, niet omzeild), HKMA HIBOR (502, 2×). Eerder al: €STR/Euribor (ECB), US Treasury, MoF JGB (1j als JPY-proxy), BoE 10j, Bundesbank 10j.
+Extra onafhankelijke markten voor S11 (Yahoo, eerlijke UA; repo privé bevestigd via gh): AXJO 1992→, TSX 1979→, SMI 1990→, STI 1987→, BEL20 1991→, MXX 1991→, JKSE 1990→, AEX 1992→, IBEX 1993→, BVSP 1993→, KOSPI 1996→, TWII 1997→, SENSEX 1997→, OMXS30 2008→, NIFTY 2007→ (prijsindices); land-ETF's EWA/EWC/EWL/EWS/EWY/EWZ (TR). Factor-ETF's MTUM/QUAL/VLUE/USMV met label 'korte N'. Ken French (rang 2) wacht op licentiecheck. ICE-BofA via FRED niet bewaard.
+QA (DATA_CATALOGUS.md): geen dubbele datums/gaten in de nieuwe indexreeksen; negatieve CHF/JPY-rentes echt. data/daily nu 130 reeksen; worden vanavond door de dagelijkse update aangevuld (21-09 → 29-09).
+Voor S11 (Uitvoerder-2): onafhankelijke markten voor C02 zijn nu FTSE, CAC, HSI + (vooraf te kiezen) AXJO, TSX, SMI, STI, BEL20, AEX, IBEX, … — lijst moet in hun PREREG vóór resultaat.
