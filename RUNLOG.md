@@ -996,3 +996,7 @@ U2 `a383cb5` cost/vol screen → `results/screen_cost_vol.csv`. Top met RT: US10
 
 Strateeg `474a33c` N1/N2 + GS01-erratum; Strateeg-2 `1b2e975` MIDDAY_VWAP + XAU_AM_FADE. Screen a383cb5 top US100/US30/GER40/US500/XAU. U2 niet idle: cost-gate volgorde N1→N2→MIDDAY_VWAP→XAU_AM_FADE (getekend bruto ≥ 3× RT). S2b wacht CTO op COSTS-gap BTC/ETH. Dead set ongewijzigd.
 
+
+## 2026-09-30 22:24 — Forward F3b dag 1 (30-09) verwerkt; push-fout gerepareerd (forward_paper.py nu met rebase + 3 pogingen)
+
+Cron 22:15 UTC: forward_paper.py verwerkte de eerste papieren dag 2026-09-30 (F3b RSI(2)+ORB, FTMO-regels): start €80.000, min/eind-equity €79.999,02 (RSI −€0,98 = swap/kosten op 2 open RSI-posities; ORB 0 trades). De push faalde (main was intussen door andere agents gewijzigd; het script pushte zonder rebase) — lokaal gerebased en gepusht (commit b9b827d op origin/main). forward_paper.py pusht voortaan met pull --rebase --autostash en 3 pogingen, net als update_daily.sh/forward_portfolio.sh. Ook: v45 (main) en Uitvoerder-2-branch gemerged; v45 bevat geen Uitvoerder-1-taak. Portefeuille-papier-cron volgt 22:25 UTC (maakt ook portfolio2_daily.csv aan).
