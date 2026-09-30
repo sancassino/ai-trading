@@ -29,7 +29,7 @@ Formaat per vraag: **ID — titel** · datum · status (OPEN / BESLOTEN / VERVAL
 *Context:* Agent werkt 10-min-cyclus maar pakt nieuwe NEXT_STEPS pas op als hij vrij is (nu nog bezig met oude R-taken). *Aanbeveling:* houden. *Standaardactie:* houden.
 
 ---
-**M-008 — Na S1: is de ORB-bevestiging (A-01, 45 min Sandro) nog de moeite waard?** · 2026-09-30 11:03 · OPEN
+**M-008 — Na S1: is de ORB-bevestiging (A-01, 45 min Sandro) nog de moeite waard?** · 2026-09-30 11:03 · BESLOTEN (D-011, CEO: optie C)
 *Context:* S1 (ORB-verwant, corr 0,52) is met 4 varianten afgewezen; sterk in 2021–23 (train t 2,2–3,4), daarna weg (test t 0,4–1,1; OOS 2025–26 ≈ 0; 2026 negatief). Dat is hetzelfde patroon als ORB (train-t 2,9 / test-t 1,1): **een effect dat na publicatie (2024) vervaagt**. Zelfs als S3 een effect op 2011–20 bevestigt, is het **niet handelbaar** als het in 2024–26 weg is. Uitkomsten S3: (i) bevestigd én blijvend → levensvatbaar (kans laag, ≈ 15–20%); (ii) bevestigd maar vervallen → historisch, niet handelbaar; (iii) niet bevestigd → afgewezen. Alleen (i) redt het doel; (ii)/(iii) leiden tot stoppen/pauze.
 *Opties:* (A) A-01 aanhouden (S3 blijft het beslissende bewijs); (B) A-01 verlagen naar 'optioneel', S3 alleen als data toevallig komt; (C) A-01 aanhouden maar **PREREG_S3 uitbreiden met een decay-toets** (jaar-per-jaar bp 2011–2026, gestapeld met FTMO-data; 'bevestigd' vereist ook effect ≥ 0,9 bp in 2021–26 én 2024–26 ≥ 0 — anders 'vervallen').
 *Aanbeveling:* C (kleine wijziging, veel meer informatie). *Standaardactie:* C; S3 blijft voorbereid; A-01 blijft OPEN maar niet blokkerend. *Impact:* 0 extra werk Sandro; Uitvoerder ± 20 min extra in PREREG_S3.
