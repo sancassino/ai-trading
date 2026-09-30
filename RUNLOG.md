@@ -731,3 +731,10 @@ C02 Faber: min t 3,14, SR 0,32, H1 2,01 / H2 2,59, 84% 5j+, BH-q 0,003 → **doo
 C17 FOMC-cyclus: t 2,85 (bootstrap 3,05), SR 0,52, BH-q 0,006, benchmark beter (SR 0,52 vs 0,26; DD 42% vs 73%) → afgewezen op t-lat (min(NW, bootstrap) < 3).
 C01, C03, C05, C07, C12: afgewezen (t ≤ 1,3). 
 D-037: C02 is een ontdekkingsresultaat, geen kandidaat; reserve-OOS pas in de gezamenlijke run na catalogusrun 2 (D-038). Volgende: C02-QA per vehikel (etf/future) en tegen B&H, D2-uitbreiding (total-return-indices).
+
+## 2026-09-30 11:20 — D2-uitbreiding (61 reeksen) + engine-README/regressietest voor Uitvoerder-2; FRED onbereikbaar vanaf cloud-IP's
+
+Nieuw in data/daily (Yahoo, eerlijke UA, 3 s/verzoek): SPX_TR (1988→), IEF/SHY/LQD/HYG/TIP/AGG, EFA/EEM/IWM, GLD/SLV/DBC/VNQ, AUDUSD/USDCAD/USDCHF/NZDUSD (2003→), FVX 5j (1962→), TYX 30j (1977→). Totaal 61 reeksen (25 MB), QA opnieuw gedraaid (DATA_CATALOGUS.md, CHECKSUMS_daily.sha256).
+Niet gelukt: NDX total return (^XNDX HTTP 422); FRED geeft vanaf Debian én VM time-outs (vermoedelijk blokkade van cloud-IP's) → DGS10/DGS2/T10Y2Y/BAA10Y/DTWEXBGS ontbreken; niet omzeild. Bestaande data/fred (DTB3, FX, 3m-rentes tot 2026-09) blijft bruikbaar.
+Engine: engine/README.md (gebruik, kostenmodel per vehikel, gates) en engine/test_b2b.py (regressietest: t_NW 3,21, SR 0,52 → OK) voor Uitvoerder-2 (D-039).
+Taakverdeling (kickoff Uitvoerder-2): catalogusruns, C02-QA en portefeuille liggen bij Uitvoerder-2; ik doe D (data), F (forward), S3, MT5 en engine-basis.
