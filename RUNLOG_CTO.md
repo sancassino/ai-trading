@@ -330,3 +330,41 @@ git add engine/ftmo.py scripts/n5_gap_fill_cost_gate_train.py results/cto/n5_gap
 git commit -m "CTO: N5 gap-fill FAIL + land N6/GER_US/VWAP_PB; ftmo recommend_scale (C-007)"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~01:23 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No formal PREREG trial claimed.**
+
+### Team snapshot (since CTO tip `69d15cc`)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v47** — N5 FAIL; N6/GER_US/VWAP_PB still listed queued |
+| U2 `741639e` | **C-007 DONE** — N6/GER_US_LEAD/VWAP_PB all **FAIL STOP** (AMS-wall) |
+| Strateeg `7d189ac` | sync §9/§10 post N3–N5; pending N6/GER/VWAP (now superseded by U2 FAIL) |
+| Strateeg-2 `d68caab` | GER_US_LEAD + VWAP_PB delivered (now FAIL) |
+| CEO | D-091 cyclus; no D-092 yet |
+
+Merged `origin/main` (v47) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **Confirmed C-007 kill** from U2 `741639e`: N6 −2.05 / GER_US −1.43 / VWAP_PB −2.68 bp → all FAIL STOP. Board JSON `results/cto/c007_kill_board.json`.
+2. **C-008** closed: dead set += N6/GER_US_LEAD/VWAP_PB; U2 idle; Strateeg+Strateeg-2 redirect for cyclus 4 (non-clones / optional ORB-portfolio EV); Manager ask for NEXT_STEPS v48.
+3. CTO parallel N6/GER scripts (FAIL, corroborating) kept under `results/cto/{n6_ger40_close,ger_us_lead}_prep/` with binding note; discarded non-AMS VWAP PASS artefact.
+4. Docs: `VRAGEN_CTO.md` C-008, `CTO_AUDIT.md` §3g, this log. Engine smoke: F2 ORB `recommend_scale` ≈2.82 → ~€288/m (unchanged profile).
+
+### Remaining blockers
+
+1. No living power-PASS sleeve; only XAU_AM_FADE watch-only. Cyclus **3/4** done → need cyclus-4 PREREGs or D-092 path.
+2. Manager NEXT_STEPS still v47 (queued) — needs v48 bump (asked in VRAGEN open).
+3. A1/S3 still parked on `data/long_m1/` (no Sandro ping).
+
+### Git
+
+```
+git add results/cto/c007_kill_board.json results/cto/n6_ger40_close_prep/ results/cto/ger_us_lead_prep/ scripts/n6_ger40_close_cost_gate_train.py scripts/ger_us_lead_cost_gate_train.py VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: C-008 confirm C-007 kill (N6/GER/VWAP FAIL) + cyclus-4 research redirect"
+git push origin grok/cto-1
+```

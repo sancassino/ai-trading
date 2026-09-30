@@ -1,0 +1,36 @@
+{
+  "asof": "2026-10-01T01:24:22+02:00",
+  "binding": "U2 commit 741639e (C-007 execution)",
+  "m5_tz_convention": "Amsterdam wall clock on m5gz timestamps (N3/N4/C-007 U2)",
+  "reserve_2025": "untouched",
+  "trials_appended": false,
+  "gates": {
+    "N6_GER40_CLOSE": {
+      "N": 251,
+      "mean_bruto_bp": -2.0482,
+      "gate_bp": 4.2,
+      "outcome": "FAIL_STOP"
+    },
+    "GER_US_LEAD": {
+      "N": 314,
+      "mean_bruto_bp": -1.4318,
+      "gate_bp": 2.16,
+      "outcome": "FAIL_STOP"
+    },
+    "VWAP_PB": {
+      "N": 179,
+      "mean_bruto_bp": -2.6819,
+      "gate_bp": 1.6386,
+      "outcome": "FAIL_STOP"
+    }
+  },
+  "alive": {
+    "XAU_AM_FADE": "WATCH_ONLY gate PASS N=12 <<120 no ftmo_ev"
+  },
+  "dead_add": [
+    "N6",
+    "GER_US_LEAD",
+    "VWAP_PB"
+  ],
+  "d091_cycle": "3/4 material complete (no kostenpoort+power PASS); cycle 4 next then D-092 path"
+}

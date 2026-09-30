@@ -4,6 +4,31 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-008 — Confirm C-007 kill (N6/GER_US/VWAP_PB FAIL) + research redirect cyclus 4
+**Opened:** 2026-10-01 ~01:25 Europe/Amsterdam (U2 `741639e` completed C-007; Manager still on NEXT_STEPS v47 queued).  
+**Closed:** 2026-10-01 ~01:28 Europe/Amsterdam by CTO (technical co-founder; facts on U2 branch — no CEO wait).
+
+**Facts (no reserve 2025→; no TRIALS append — all three FAIL before formal trial):**
+- **Binding authority:** Uitvoerder-2 @ `741639e` (AMS-wall m5gz convention, same as N3/N4). Artefacts under `results/R2/{n6,ger_us_lead,vwap_pb}_prep/`.
+- **N6** GER40 Close: N=251, mean bruto **−2.05 bp** < 4.20 → **FAIL STOP**.
+- **GER_US_LEAD**: N=314, mean bruto **−1.43 bp** < 2.16 → **FAIL STOP**.
+- **VWAP_PB**: N=179, mean bruto **−2.68 bp** < 1.64 → **FAIL STOP**.
+- CTO parallel (NY-7h shift on N6/GER) also FAIL; VWAP under wrong TZ discarded — **do not cite CTO VWAP PASS**. Board = U2.
+- XAU_AM_FADE remains only prior gate-PASS (N≪120, watch-only). D-091 cyclus **3/4** complete without kostenpoort+power. No D-092 yet (needs cyclus 4 empty).
+
+**Decision (binding until BESLUITEN says otherwise):**
+1. **Dead set += N6 · GER_US_LEAD · VWAP_PB** — do not restart / no retune / no clones of these mechanisms.
+2. **U2:** idle OK until a *new* frozen PREREG lands with m5gz/D1 data and distinct mechanism. Do not re-run any STOP sleeve. XAU_AM_FADE stays watch-only (no `ftmo_ev`).
+3. **Strateeg + Strateeg-2 (cyclus 4 / D-091.3):** queue empty. Priority = mechanically distinct hypotheses with *ex-ante* expected bruto ≫ 3× RT. Prefer: (a) event/calendar rules with in-repo calendars, (b) cross-asset RV / inventory imbalance *not* VWAP-fade or GER→US lead clones, (c) multi-sleeve packaging of *existing* Phase-1 survivors (ORB F2 family) under `ftmo_ev` + `recommend_scale` — honest baseline, not a new overnight TSMOM. No session-ORB/breakout clones; no gap-fill / close-drive / VWAP-PB variants.
+4. **Manager:** bump NEXT_STEPS — C-007 done all FAIL; board = research unblock + optional ORB-portfolio EV; D-091 cyclus 3/4 noted.
+5. **CEO / Sandro:** no decision this cycle. A1/`long_m1` ping stays deferred. D-092 only after cyclus 4 per D-091.6.
+
+**TZ convention (ops):** m5gz timestamps = **Amsterdam wall clock** for cost-gates (U2 N3/N4/C-007). CTO scripts that apply NY−7h shift are non-binding for gates.
+
+**Where applied:** `results/cto/c007_kill_board.json`, `CTO_AUDIT.md` §3g, `RUNLOG_CTO.md`, this ticket.
+
+---
+
 ### C-007 — U2 assignment: N5→N6→GER_US_LEAD→VWAP_PB cost-gates (+ engine recommend_scale)
 **Opened:** 2026-10-01 ~01:01 Europe/Amsterdam (NEXT_STEPS v46: N3/N4 STOP; Strateeg N5/N6 @ `cb786f1`; Strateeg-2 GER_US_LEAD/VWAP_PB @ `d68caab`; U2 idle @ `4965797`).  
 **Closed:** 2026-10-01 ~01:05 Europe/Amsterdam by CTO (assignment + engine helpers; no CEO wait).
@@ -181,4 +206,4 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (not blocking):_ NEXT_STEPS v46 N3/N4 STOP; CTO N5 FAIL STOP. After C-007: U2 runs **N6→GER_US_LEAD→VWAP_PB** cost-gates; XAU_AM_FADE watch-only. CEO/Sandro: no new decision. A1/`long_m1` ping stays deferred.
+_Open for Manager (not blocking):_ NEXT_STEPS v47 still shows N6/GER/VWAP **queued** — please bump to v48: U2 `741639e` **all FAIL STOP** (C-008). Alive = XAU_AM_FADE watch-only only. Strateeg queue empty → cyclus 4 research. CEO/Sandro: no new decision. A1/`long_m1` ping stays deferred.

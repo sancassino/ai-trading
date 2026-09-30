@@ -198,13 +198,38 @@ Report-only sensitivity (train): 0.45×→N=24; 0.60×→12; 0.75×→2. ext/ATR
 | ORB F2 / A1 / S3 | parked / profile only |
 
 
+
+
+## 3g. C-007 complete — N6/GER_US_LEAD/VWAP_PB FAIL (2026-10-01 ~01:28 CEST)
+
+**Binding:** U2 `741639e` (AMS-wall m5gz). CTO parallel N6/GER also FAIL; do not use any non-AMS VWAP figure.
+
+| Sleeve | N | mean bruto | gate | Uitkomst |
+|---|---:|---:|---:|---|
+| N6 GER40 Close | 251 | −2.05 bp | 4.20 bp | **FAIL STOP** |
+| GER_US_LEAD | 314 | −1.43 bp | 2.16 bp | **FAIL STOP** |
+| VWAP_PB | 179 | −2.68 bp | 1.64 bp | **FAIL STOP** |
+
+No TRIALS append. D-091 cyclus **3/4** done without kostenpoort+power PASS.
+
+**Kill / alive board (post C-008):**
+
+| Sleeve | Status |
+|---|---|
+| A4 / B1 / A5 / A2 / S2-* / N1–N6 / MIDDAY / S2b / GER_US_LEAD / VWAP_PB | **DEAD** |
+| XAU_AM_FADE | **WATCH-ONLY** (only prior gate-PASS; N≪120) |
+| ORB F2 / A1 / S3 | parked / profile only (~€288–299/m at recommend_scale; ≪ €800–900) |
+
+**Ops:** m5gz cost-gates use **Amsterdam wall clock** timestamps (U2 convention). Research redirect → Strateeg cyclus 4 (C-008). Artefact: `results/cto/c007_kill_board.json`.
+
+
 ## 4. Engine notes
 
 - `ftmo_ev` API stable; U2 P1 PASS on censor fix.  
 - ORB grid above: informational reassessment of published F2 series — **not** a PREREG trial; do not append TRIALS.  
 - S2 cost-gate scripts: `scripts/s2_{xau,ger40,usdjpy,btc,usoil}_cost_gate_train.py`.  
 - `recommend_scale` / `trades_bp_to_daily` landed (C-007).
-- Next: U2 N5–VWAP_PB gates; wire first gate-PASS sleeve through `trades_bp_to_daily` → `recommend_scale` → `ftmo_ev`.
+- Next: Strateeg cyclus-4 non-clones; optional ORB F2 multi-sleeve under `recommend_scale` (honest baseline ≪ ambition).
 
 ---
 
@@ -212,7 +237,7 @@ Report-only sensitivity (train): 0.45×→N=24; 0.60×→12; 0.75×→2. ext/ATR
 
 - PREREG: `PREREG_S3.md`, `PREREG_FTMO_A2.md`, `PREREG_FTMO_B1.md`, `PREREG_FTMO_C17.md`, `PREREG_S2_XAU_OVERLAP.md`, `PREREG_S2_GER40_OPEN.md`, `PREREG_S2_USDJPY_HANDOFF.md`  
 - Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,a2,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy,btc,usoil}_prep/`, `results/cto/s2b_btc_eth_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`, `results/cto/ambition_sr_skew_grid.json`  
-- Decisions: C-001…**C-007** (N5/N6/GER_US/VWAP_PB U2 cost-gates; engine recommend_scale)
+- Decisions: C-001…**C-008** (C-007 kill confirmed; research redirect cyclus 4)
 - Power-pad: `results/cto/xau_am_fade_power/`, `scripts/xau_am_fade_power_diag.py`
 - New PREREGs: `PREREG_FTMO_N5_GAP_FILL.md`, `PREREG_FTMO_N6_GER40_CLOSE.md`, `PREREG_S2_GER_US_LEAD.md`, `PREREG_S2_VWAP_PB.md`
 - Engine helpers: `trades_bp_to_daily`, `recommend_scale` in `engine/ftmo.py`

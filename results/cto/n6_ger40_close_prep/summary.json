@@ -1,0 +1,25 @@
+{
+  "prereg": "PREREG_FTMO_N6_GER40_CLOSE.md",
+  "window": "2021-01-01..2023-12-31",
+  "reserve_2025": "untouched",
+  "n": 237,
+  "mean_bruto_bp": -0.2692388614815368,
+  "mean_netto_bp": -1.6692388614815363,
+  "tw_rt_bp": 1.4,
+  "gate_fixed_bp": 4.2,
+  "gate_3x_rt": 4.199999999999999,
+  "gate_3x_rt_stress50": 6.3,
+  "pass_fixed": false,
+  "pass_stress50": false,
+  "stop_rate": 0.0,
+  "long_n": 115,
+  "short_n": 122,
+  "note_m5_2021": "GER40 m5gz sparse in 2021 (dense from ~2022); train uses available anchors only",
+  "verdict": "FAIL_STOP",
+  "binding_authority": "U2 C-007 @ 741639e (AMS-wall m5gz); CTO parallel also FAIL",
+  "u2_ref": {
+    "n6": "N=251 mean=-2.05 FAIL",
+    "ger_us": "N=314 mean=-1.43 FAIL",
+    "vwap_pb": "N=179 mean=-2.68 FAIL"
+  }
+}

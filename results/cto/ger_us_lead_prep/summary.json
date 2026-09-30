@@ -1,0 +1,32 @@
+{
+  "prereg": "PREREG_S2_GER_US_LEAD.md",
+  "window": "2021-01-01..2023-12-31",
+  "reserve_2025": "untouched",
+  "n": 324,
+  "mean_bruto_bp": 0.4033469964341959,
+  "mean_netto_bp": -0.316653003565804,
+  "tw_rt_bp": 0.7200000000000001,
+  "gate_3x_rt": 2.16,
+  "gate_3x_rt_stress50": 3.24,
+  "pass_3x": false,
+  "pass_stress50": false,
+  "stop_rate": 0.16358024691358025,
+  "target_rate": 0.037037037037037035,
+  "by_sym": {
+    "US100cash": {
+      "n": 162,
+      "mean_bruto_bp": 0.17202249039855802
+    },
+    "US500cash": {
+      "n": 162,
+      "mean_bruto_bp": 0.6346715024698303
+    }
+  },
+  "verdict": "FAIL_STOP",
+  "binding_authority": "U2 C-007 @ 741639e (AMS-wall m5gz); CTO parallel also FAIL",
+  "u2_ref": {
+    "n6": "N=251 mean=-2.05 FAIL",
+    "ger_us": "N=314 mean=-1.43 FAIL",
+    "vwap_pb": "N=179 mean=-2.68 FAIL"
+  }
+}
