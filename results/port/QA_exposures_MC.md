@@ -29,17 +29,25 @@ Strateeg-aanname (VERWACHTING §2): aandelen 0,45 · obligaties 0,31 · goud 0,1
 | 2021–24 | midden | +0.92% | €61 | €224 | €333 |
 | 2021–24 | hoog | +2.32% | €154 | €317 | €426 |
 
-## 4. Monte-Carlo (exposures 2001–24 en 2021–24; premies ~ N(midden, SE); EUR-cash vast op €STR)
+## 4. Monte-Carlo — prior-afhankelijk (v30 QA-1): p(≥ €400) onder twee priors naast elkaar; EUR-cash vast op €STR
 
-| exposures | variant | p(totaal ≥ €400) | p(alfa ≥ €287) | mediaan totaal €/mnd | 5–95% totaal |
-|---|---|---|---|---|---|
-| 2001–24 | parameteronzekerheid, SE 2% | 0.4% | 0.0% | €220 | €109–332 |
-| 2001–24 | parameteronzekerheid, SE 3% | 3.8% | 1.2% | €220 | €53–387 |
-| 2001–24 | SE 2,5%, corr 0,3 | 3.9% | 1.2% | €221 | €53–388 |
-| 2001–24 | SE 2,5% + gerealiseerd 10-jr-gemiddelde (vol 6,1%) | 12.0% | 6.7% | €220 | €-33–472 |
-| 2021–24 | parameteronzekerheid, SE 2% | 0.7% | 0.1% | €224 | €107–341 |
-| 2021–24 | parameteronzekerheid, SE 3% | 4.9% | 1.7% | €224 | €48–399 |
-| 2021–24 | SE 2,5%, corr 0,3 | 5.0% | 1.7% | €224 | €48–400 |
-| 2021–24 | SE 2,5% + gerealiseerd 10-jr-gemiddelde (vol 6,1%) | 13.0% | 7.5% | €224 | €-34–481 |
+| prior | exposures | variant | p(totaal ≥ €400) | p(alfa ≥ €287) | mediaan totaal €/mnd | 5–95% totaal |
+|---|---|---|---|---|---|---|
+| VERWACHTING-midden (waardering, CAPE ≈ 41) | 2001–24 | parameter, SE 2% | 0.4% | 0.0% | €220 | €109–332 |
+| VERWACHTING-midden (waardering, CAPE ≈ 41) | 2001–24 | parameter, SE 3% | 3.8% | 1.2% | €220 | €53–387 |
+| VERWACHTING-midden (waardering, CAPE ≈ 41) | 2001–24 | SE 2,5%, corr 0,3 | 3.9% | 1.2% | €221 | €53–388 |
+| VERWACHTING-midden (waardering, CAPE ≈ 41) | 2001–24 | SE 2,5% + 10-jr-toeval (vol 6,1%) | 12.0% | 6.7% | €220 | €-33–472 |
+| VERWACHTING-midden (waardering, CAPE ≈ 41) | 2021–24 | parameter, SE 2% | 0.7% | 0.1% | €224 | €107–341 |
+| VERWACHTING-midden (waardering, CAPE ≈ 41) | 2021–24 | parameter, SE 3% | 4.9% | 1.7% | €224 | €48–399 |
+| VERWACHTING-midden (waardering, CAPE ≈ 41) | 2021–24 | SE 2,5%, corr 0,3 | 5.0% | 1.7% | €224 | €48–400 |
+| VERWACHTING-midden (waardering, CAPE ≈ 41) | 2021–24 | SE 2,5% + 10-jr-toeval (vol 6,1%) | 13.0% | 7.5% | €224 | €-34–481 |
+| historisch lange termijn (geen waarderingscorrectie) | 2001–24 | parameter, SE 2% | 6.2% | 1.1% | €296 | €185–407 |
+| historisch lange termijn (geen waarderingscorrectie) | 2001–24 | parameter, SE 3% | 15.4% | 6.5% | €297 | €129–464 |
+| historisch lange termijn (geen waarderingscorrectie) | 2001–24 | SE 2,5%, corr 0,3 | 15.4% | 6.6% | €297 | €129–464 |
+| historisch lange termijn (geen waarderingscorrectie) | 2001–24 | SE 2,5% + 10-jr-toeval (vol 6,1%) | 25.0% | 15.9% | €296 | €43–550 |
+| historisch lange termijn (geen waarderingscorrectie) | 2021–24 | parameter, SE 2% | 9.8% | 2.3% | €308 | €191–425 |
+| historisch lange termijn (geen waarderingscorrectie) | 2021–24 | parameter, SE 3% | 19.3% | 9.2% | €308 | €133–483 |
+| historisch lange termijn (geen waarderingscorrectie) | 2021–24 | SE 2,5%, corr 0,3 | 19.5% | 9.3% | €308 | €133–483 |
+| historisch lange termijn (geen waarderingscorrectie) | 2021–24 | SE 2,5% + 10-jr-toeval (vol 6,1%) | 27.7% | 18.3% | €308 | €50–566 |
 
-Lezing: exposures en premies zijn de enige invoer; het resultaat is zo goed als de premie-aannames (web-claims, VERWACHTING.md). Geen haircut toegepast (premies zijn al forward-verwachtingen, geen backtest).
+**Label: prior-afhankelijk** — geen enkel getal is 'de' kans. Lezing: exposures en premies zijn de enige invoer; het resultaat is zo goed als de premie-aannames (web-claims, VERWACHTING.md). Geen haircut toegepast (premies zijn al forward-verwachtingen, geen backtest).

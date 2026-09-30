@@ -14,6 +14,9 @@ from engine.run_rule import load_daily, rf_on
 
 DISC = date(2024, 12, 31)
 PREMIE = {"aandelen": (0.0, 2.0, 4.3), "obligaties": (-0.5, 1.0, 1.8), "goud": (-1.5, -0.25, 1.0)}   # VERWACHTING.md v1
+# v30 QA-1: tweede prior = historische langetermijnpremies zonder waarderingscorrectie (UBS/DMS-orde; aandelen 4,3–4,7, obligaties 1,2, goud 0–1)
+PRIORS = {"VERWACHTING-midden (waardering, CAPE ≈ 41)": {"aandelen": 2.0, "obligaties": 1.0, "goud": -0.25},
+          "historisch lange termijn (geen waarderingscorrectie)": {"aandelen": 4.5, "obligaties": 1.2, "goud": 0.5}}
 COST = 0.20   # %/jr: TER 0,07% + herweging/omloop (≈ 13 bp × omloop) — aanname
 ESTR = float(open("data/daily/YLD_ESTR.csv").read().strip().splitlines()[-1].split(";")[4])
 USD3M = 4.07
@@ -93,20 +96,22 @@ for lbl in ("2001–24", "2021–24"):
         a = 80000 * ex / 100 / 12
         lines.append(f"| {lbl} | {sc} | {ex:+.2f}% | €{a:,.0f} | €{a + 80000*ESTR/100/12:,.0f} | €{a + 80000*USD3M/100/12:,.0f} |")
 rng = np.random.default_rng(75); N = 200000
-lines += ["", "## 4. Monte-Carlo (exposures 2001–24 en 2021–24; premies ~ N(midden, SE); EUR-cash vast op €STR)", "",
-          "| exposures | variant | p(totaal ≥ €400) | p(alfa ≥ €287) | mediaan totaal €/mnd | 5–95% totaal |", "|---|---|---|---|---|---|"]
-for lbl in ("2001–24", "2021–24"):
-    for vname, se, rho, horizon_noise in (("parameteronzekerheid, SE 2%", 2.0, 0.0, False), ("parameteronzekerheid, SE 3%", 3.0, 0.0, False),
-                                          ("SE 2,5%, corr 0,3", 2.5, 0.3, False), ("SE 2,5% + gerealiseerd 10-jr-gemiddelde (vol 6,1%)", 2.5, 0.0, True)):
-        C = np.full((3, 3), rho); np.fill_diagonal(C, 1.0); L = np.linalg.cholesky(C * se ** 2)
-        mu = np.array([PREMIE[k][1] for k in ("aandelen", "obligaties", "goud")])
-        prem = mu + rng.standard_normal((N, 3)) @ L.T
-        ex = prem @ np.array([E[lbl][k] for k in ("aandelen", "obligaties", "goud")]) - COST
-        if horizon_noise:
-            ex = ex + rng.standard_normal(N) * 6.1 / math.sqrt(10)
-        alfa = 80000 * ex / 100 / 12; tot = alfa + 80000 * ESTR / 100 / 12
-        lines.append(f"| {lbl} | {vname} | {np.mean(tot >= 400)*100:.1f}% | {np.mean(alfa >= 287)*100:.1f}% | €{np.median(tot):,.0f} | €{np.percentile(tot,5):,.0f}–{np.percentile(tot,95):,.0f} |")
-lines += ["", "Lezing: exposures en premies zijn de enige invoer; het resultaat is zo goed als de premie-aannames (web-claims, VERWACHTING.md). "
+lines += ["", "## 4. Monte-Carlo — prior-afhankelijk (v30 QA-1): p(≥ €400) onder twee priors naast elkaar; EUR-cash vast op €STR", "",
+          "| prior | exposures | variant | p(totaal ≥ €400) | p(alfa ≥ €287) | mediaan totaal €/mnd | 5–95% totaal |", "|---|---|---|---|---|---|---|"]
+for pname, pr in PRIORS.items():
+    for lbl in ("2001–24", "2021–24"):
+        for vname, se, rho, horizon_noise in (("parameter, SE 2%", 2.0, 0.0, False), ("parameter, SE 3%", 3.0, 0.0, False),
+                                              ("SE 2,5%, corr 0,3", 2.5, 0.3, False), ("SE 2,5% + 10-jr-toeval (vol 6,1%)", 2.5, 0.0, True)):
+            C = np.full((3, 3), rho); np.fill_diagonal(C, 1.0); L = np.linalg.cholesky(C * se ** 2)
+            mu = np.array([pr[k] for k in ("aandelen", "obligaties", "goud")])
+            prem = mu + rng.standard_normal((N, 3)) @ L.T
+            ex = prem @ np.array([E[lbl][k] for k in ("aandelen", "obligaties", "goud")]) - COST
+            if horizon_noise:
+                ex = ex + rng.standard_normal(N) * 6.1 / math.sqrt(10)
+            alfa = 80000 * ex / 100 / 12; tot = alfa + 80000 * ESTR / 100 / 12
+            lines.append(f"| {pname} | {lbl} | {vname} | {np.mean(tot >= 400)*100:.1f}% | {np.mean(alfa >= 287)*100:.1f}% | €{np.median(tot):,.0f} | "
+                         f"€{np.percentile(tot,5):,.0f}–{np.percentile(tot,95):,.0f} |")
+lines += ["", "**Label: prior-afhankelijk** — geen enkel getal is 'de' kans. Lezing: exposures en premies zijn de enige invoer; het resultaat is zo goed als de premie-aannames (web-claims, VERWACHTING.md). "
           "Geen haircut toegepast (premies zijn al forward-verwachtingen, geen backtest)."]
 open("results/port/QA_exposures_MC.md", "w").write("\n".join(lines) + "\n")
 print("\n".join(lines))
