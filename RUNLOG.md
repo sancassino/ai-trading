@@ -983,3 +983,7 @@ U2 `ce5abdc`: M5gz gemerged; A5 kostenpoort FAIL (median bruto −5.91 bp < 3× 
 
 CTO: A5 London-ORB STOP (`ce5abdc`); S2 XAU-overlap / GER40-open / USDJPY-handoff ook STOP op cost gate. A2 geblokkeerd op US41 equity M5 (~40 MB). Prio: land US41 m5gz (Debian/U-006), dan A2 cost-gate. A4/B1/A5 + die drie S2 blijven dood; geen nieuwe overnight maand-sleeves. S2-BTC/USOIL missen nog M5.
 
+
+## 2026-09-30 21:15 — v41 prio 1: US41-aandelen-M5 + BTC/ETH/olie in data/m5gz/ — deblokkeert A2 en S2-BTC/USOIL
+
+data/m5gz/ uitgebreid van 24 naar 69 symbolen (≈ 159 MB gzip): alle 41 US-aandelen uit universe_us41.txt (A2 Stocks-in-Play ORB) + BTCUSD, ETHUSD, USOILcash, UKOILcash (S2). Zelfde formaat en periode (2021-01 → 2026-09-29, servertijd NY + 7 u), checksums (gz + ongecomprimeerde bron) voor alle 69 opnieuw berekend en geverifieerd. README aangevuld met aandelen-caveats: FTMO-aandelen openen vanaf 2024 om 09:35 ET en sommige hebben een uur-offset (Q2: sessie = alle bars van de NY-datum); veel aandelen-bars hebben spread 0 = ontbrekend (spreads per uur staan in COSTS_FTMO_alle*.csv). Reserve 2025-01→ zit in de data; alleen gebruiken zoals PREREG/CEO toestaat.
