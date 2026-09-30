@@ -24,3 +24,20 @@ Faber beat B&H op DD in vrijwel elke markt met een grote bear (hoge kans op ≥ 
 **Niet doen:** ICE-credit via FRED bewaren; scrapen van betaalde indexaanbieders (MSCI factor-/country-indices); alles achter botchecks.
 ## 5. Aandachtspunten voor de reserve-run (morgen)
 Hindsight-labeling blijft: C52-lang/C02/P-ETF+ zijn na ontdekking gekozen; run 4 gaf 0/5 diversifiers → de reserve-uitkomst (1,75 jr, SR-SE ≈ 0,75) kan alleen *grove* tekenfouten vangen. Vooraf opschrijven wat 'falen' is: gepoold excess < 0 over het venster **én** onderkant van het 90%-BI < −1,0 SR → 'verdacht'; anders 'niet informatief'. (Lezing vastgelegd vóór de run.)
+
+---
+# ERRATUM + ADDENDUM (2026-09-30 17:40 Amsterdam) — na Manager-QA (NEXT_STEPS v27 §0i) en D2b (15 extra markten)
+**Erratum (mijn fout):** ik noemde DAX en N225 'onafhankelijk'. C02 is ontdekt op SPX, NDX, DJI, **DAX, N225** (PREREG_CAT1); die twee zijn dus in-sample en tellen **niet** mee; de Manager heeft gelijk. Correct: onafhankelijk zijn alleen markten buiten die vijf. Ook juist: de tijdsoverlap (ontdekking ≤ 2024) blijft — dit toetst 'andere markt', niet 'andere tijd'.
+## Voorstel voor de markt-lijst (vooraf vastleggen in de PREREG; niet op resultaat selecteren)
+Met D2b zijn er genoeg markten voor een zinvolle toets. **Regio-clusters** (voor de geclusterde bootstrap; binnen een regio corr 0,7–0,9):
+- **Primair (ontwikkeld, betrouwbare lokale rente of valuta-stabiel), ≥ 20 jr:** Europa: FTSE (1984), CAC (1990), AEX (1992), SMI (1990), IBEX (1993), BEL20 (1991) · Noord-Amerika: TSX (1979) · Azië-Pacific: HSI (1986), STI (1987), AXJO (1992), KOSPI (1996), TWII (1997).
+- **Secundair (opkomend; alleen in USD met USD-rf, gelabeld):** BVSP, MXX, JKSE, SENSEX. **Reden:** hoge nominale inflatie/rente in de jaren 90 (BRL tot 1994, MXN tot 1996) — lokale-valuta-SMA zonder lokale rf is daar een artefact; **BVSP vóór 1995 en MXX vóór 1997 uitsluiten** (of alleen USD).
+- **Informatief (< 20 jr):** STOXX50 (2007), NIFTY (2007), OMXS30 (2008).
+- **In-sample (tonen, telt niet mee):** DAX, N225, SPX/NDX/DJI/RUT/SPY.
+## Beslisregel bij n = 12 primaire markten (vervangt S11 §2.7; vooraf)
+- **Gepoold** ΔSR t.o.v. B&H met **regio-geclusterde** blokbootstrap (clusters: Europa, N-Amerika, Azië-Pacific, [LatAm/EM apart]); nul-gekalibreerde p ≤ 0,10.
+- **Tekentelling:** netto SR(excess) > 0 in ≥ 8 van 12 én ΔmaxDD < 0 in ≥ 9 van 12 (een eenzijdige binomiaaltoets onder H0 'pure DD-mechanica' geeft p ≈ 0,19/0,07 bij kans 0,5 — **daarom wordt de nul-kalibratie, niet de tekentelling, leidend**).
+- **Labels:** 'gerepliceerd' (beide criteria); **'niet gerepliceerd op SR, alleen DD-beschermend'**; **'onvoldoende power'** als het 90%-BI van gepoold ΔSR nul én +0,3 omvat. Geen label 'edge bevestigd' uit één run; en **pre-1990** (FTSE, TSX, HSI, STI) apart rapporteren als 'andere tijd'-indicatie.
+- Rapporteer altijd **aandelenpoot** apart van obligatie-/goudpoot (regionale C52 is geen onafhankelijke test van de timing).
+## Verwachting (herzien)
+Met 12 markten stijgt de power, maar de markten zijn niet onafhankelijk (wereldwijde crises); ik verwacht DD-reductie in ≥ 10/12 en een gepoolde ΔSR ≈ 0 ± 0,15 (nul-gekalibreerde p ≈ 0,15–0,4) → label 'alleen DD-beschermend' of 'onvoldoende power'. Dat is een bruikbaar, eerlijk antwoord voor S10b-H1/H2.
