@@ -339,3 +339,10 @@ Datakwaliteit (eerlijk): de verificatie is onbetrouwbaar — 2021-02..09 niet te
 (b) Post-nieuws-momentum NFP/CPI (richting eerste 5 min, 30 min vasthouden, 2× spread): N 223, +0,5 bp, t +0,21 → afgewezen.
 Conclusie: pre-FOMC is een klein, echt maar zwakker wordend effect (8×/jaar, ≈ 2%/jr bij 100% notional); met overnight-risico op FOMC-dagen. Geen zelfstandige route naar het doel; mogelijk kleine diversificatie. TRIAL_COUNT 389.
 Volgende stap: I4 (SCENARIO_RAPPORT voor Sandro) en I5 (RSI(2)-regimecheck).
+
+## 2026-09-30 01:17 — I5: robuustheid RSI(2) op FTMO per regime — niet afhankelijk van één jaar
+
+Getest (PREREG_I5.md vóór berekening): i5_rsi2_regime.py op de E1-FTMO-reeks (6 symbolen gepoold).
+Resultaat: volledig SR 0,57; per jaar 2021 +1,13 (+5,4%), 2022 −0,77 (−2,4%), 2023 +0,03 (0,0%), 2024 +1,10 (+4,5%), 2025 +0,61 (+3,3%), 2026 tot nu +0,92 (+3,9%). Excl. beste jaar (2021) SR 0,45 ≥ 0,4 → eis gehaald. Rollende 12-mnd SR −0,8 (begin 2023) … +1,3 (medio 2026). Per volregime (US500 20d-vol-tercielen): laag +0,83, midden −0,08, hoog +1,06.
+Conclusie: de RSI(2)-edge is niet één-jaar-gedreven, maar klein en wisselend (2022/2023 zwak). TRIAL_COUNT ongewijzigd (geen nieuwe regels).
+Volgende stap: I4 (SCENARIO_RAPPORT voor Sandro).
