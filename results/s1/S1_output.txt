@@ -1,0 +1,28 @@
+
+Variant (a) stap 30 min, VWAP ja, σ 14 d: N 5357 | poort train: bruto +2.72 bp vs 3× kosten 1.59 bp → DOOR
+   netto bp/trade: train +2.18 (t +2.20, N 2431) | test +0.68 (t +0.87, N 2926) | OOS 2025-01…2026-09 +0.31 (t +0.28, N 1802) | +50% spread test t +0.52
+   per jaar: 2021:+1.6(309) 2022:+3.3(1043) 2023:+1.2(1079) 2024:+1.3(1124) 2025:+1.6(1005) 2026:-1.3(797) → 5/6 positief
+   per symbool (netto bp / t): US500cash:+1.7/+1.4 US100cash:+4.4/+2.5 US30cash:-0.4/-0.5 GER40cash:+0.4/+0.3
+   dagreeks (paper-sizing/4): SR +0.57 | skew +2.30 | jaarvol 9.1% | max dagdip 3.05% | corr met ORB +0.52
+   → AFGEWEZEN
+
+Variant (b) stap 60 min, VWAP ja, σ 14 d: N 3714 | poort train: bruto +4.85 bp vs 3× kosten 1.59 bp → DOOR
+   netto bp/trade: train +4.32 (t +3.39, N 1682) | test +0.38 (t +0.35, N 2032) | OOS 2025-01…2026-09 +0.04 (t +0.03, N 1239) | +50% spread test t +0.10
+   per jaar: 2021:+0.5(229) 2022:+7.2(718) 2023:+2.7(735) 2024:+0.9(793) 2025:+2.8(681) 2026:-3.3(558) → 5/6 positief
+   per symbool (netto bp / t): US500cash:+2.7/+1.7 US100cash:+6.1/+2.6 US30cash:-0.9/-0.8 GER40cash:+1.6/+1.1
+   dagreeks (paper-sizing/4): SR +0.63 | skew +2.24 | jaarvol 8.4% | max dagdip 2.23% | corr met ORB +0.49
+   → AFGEWEZEN
+
+Variant (c) stap 30 min, VWAP nee, σ 14 d: N 4649 | poort train: bruto +3.05 bp vs 3× kosten 1.62 bp → DOOR
+   netto bp/trade: train +2.51 (t +2.24, N 2165) | test +0.89 (t +0.97, N 2484) | OOS 2025-01…2026-09 +0.44 (t +0.34, N 1541) | +50% spread test t +0.67
+   per jaar: 2021:+1.8(266) 2022:+3.8(933) 2023:+1.4(966) 2024:+1.6(943) 2025:+1.9(859) 2026:-1.4(682) → 5/6 positief
+   per symbool (netto bp / t): US500cash:+1.9/+1.4 US100cash:+5.3/+2.6 US30cash:-0.4/-0.4 GER40cash:+0.5/+0.4
+   dagreeks (paper-sizing/4): SR +0.61 | skew +2.30 | jaarvol 9.1% | max dagdip 3.05% | corr met ORB +0.52
+   → AFGEWEZEN
+
+Variant (d) stap 30 min, VWAP ja, σ 28 d: N 5123 | poort train: bruto +1.90 bp vs 3× kosten 1.61 bp → DOOR
+   netto bp/trade: train +1.36 (t +1.29, N 2308) | test +1.01 (t +1.13, N 2815) | OOS 2025-01…2026-09 +0.83 (t +0.64, N 1723) | +50% spread test t +0.82
+   per jaar: 2021:+1.5(281) 2022:+2.6(994) 2023:+0.1(1033) 2024:+1.3(1092) 2025:+2.4(984) 2026:-1.2(739) → 5/6 positief
+   per symbool (netto bp / t): US500cash:+1.7/+1.2 US100cash:+4.1/+2.2 US30cash:-0.7/-0.6 GER40cash:+0.1/+0.1
+   dagreeks (paper-sizing/4): SR +0.44 | skew +2.65 | jaarvol 9.6% | max dagdip 3.52% | corr met ORB +0.52
+   → AFGEWEZEN

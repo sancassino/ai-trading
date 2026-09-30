@@ -54,3 +54,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | R1 FX-ML (15 symbolen, 3 horizons) | 3 | 407 |
 | 2026-09-30 | R2 aandelen-ML cross-sectioneel (2 targets) | 2 | 409 |
 | 2026-09-30 | R4 Donchian 20/10 + ATR-trailing H4 (FX/goud) | 1 | 410 |
+| 2026-09-30 | S1 noise-area intraday-momentum (4 varianten, alle door kostenpoort) | 4 | 414 |
