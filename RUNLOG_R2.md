@@ -690,3 +690,40 @@ Vragen → Manager; eindbesluit → CTO. **Material for Manager/CTO** (queue dra
 3. Escalatieklok D-091.6: prior v47/v49 = **3/4** → deze wait-only cyclus = **4/4**. Geen kostenpoort+power PASS in 4 cycli → pad naar CEO D-092 (herzien plan). Geen Sandro-richtingvraag (D-091.6).
 
 Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG-result); **clock 4/4 note for Manager/CEO** (not Sandro-ping).
+
+
+## Cyclus 01:52–01:54 CEST — D-090 FASE 3 IB_FADE cost-gate (NEXT_STEPS v50 unblock)
+
+**Branch:** `claude/uitvoerder2-r`. Prior tip wait `ebfbd40` (merged NEXT_STEPS **v50**) + RUNLOG `b7a12f2` (escalatie 4/4 idle).  
+**Gelezen deze cyclus:**
+- `NEXT_STEPS.md` **v50** @ `origin/main` — U2 IDLE until cyclus-4 non-clone PREREG; dead set niet herstarten; XAU watch-only
+- Strateeg-2 tip `48249ad`: **PREREG_S2_IB_FADE.md** bevroren (US30/US100 IB extreme fade) — v50 unblock
+- PREREG geland op U2 vóór resultaat: commit `e106d50`
+
+### U2-directives (v50 + PREREG) — uitgevoerd
+- Alleen **IB_FADE** train kostenpoort 2021–2023. Geen inventie andere sleeves. Dead set niet herstart. XAU geen power-pad.
+- m5gz = Amsterdam wall clock (zelfde conventie als C-007 / VWAP_PB).
+- FAIL → STOP, geen TRIALS-append (C-007 / PREREG §2). Reserve 2025→ onaangeraakt.
+
+### Kostenpoort-resultaat (train 2021–2023)
+
+| Sleeve | N | mean bruto | TW-RT | gate (3×TW-RT) | Uitkomst |
+|--------|---|------------|-------|----------------|----------|
+| S2 IB_FADE (US30+US100) | 42 | **−3.54 bp** | 0.54 bp | 1.62 bp | **FAIL STOP** |
+
+By-symbol (informatief): US30 N=24 mean −0.90 bp (gate 1.35); US100 N=18 mean −7.06 bp (gate 1.98).  
+Exit mix: stop 24 / target 15 / time 3. Sides balanced 21/21. Date span 2021-03-05…2023-12-15 (geen 2025+).
+
+Script: `scripts/s2_ib_fade_gate.py`. Artifacts: `results/R2/ib_fade_prep/`.
+
+**FAIL → STOP.** Geen clustered-t, geen `ftmo_ev`, geen TRIALS-append. **TRIAL_COUNT blijft 444.**
+
+### Dead set (nu + IB_FADE)
+A4 · B1 · A5 · A2 · S2-* · N1–N6 · MIDDAY_VWAP · S2b · GER_US_LEAD · VWAP_PB · **IB_FADE**. XAU_AM_FADE blijft watch-only (N≪120, geen power-pad).
+
+### Next / escalatie
+1. Cyclus-4 PREREG IB_FADE DONE FAIL — U2 idle tot volgende Strateeg/Strateeg-2 non-clone PREREG of CTO assign.
+2. Escalatieklok D-091.6: reeds **4/4** (v50). Geen kostenpoort+power PASS → pad CEO D-092 blijft relevant. Geen Sandro-ping (D-091.6).
+3. XAU_AM_FADE: niet losser; geen pre-2021 zonder CTO.
+
+Vragen → Manager; eindbesluit → CTO. **Material for Manager/CTO** (gate completed FAIL); quiet to Sandro.
