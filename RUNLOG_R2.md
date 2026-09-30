@@ -655,3 +655,38 @@ A4 · B1 · A5 · A2 · S2-* · N1–N5 · MIDDAY_VWAP · S2b · **N6 · GER_US_
 3. XAU_AM_FADE: niet losser maken (0.60×); geen pre-2021 zonder CTO-assign.
 
 Vragen → Manager; eindbesluit → CTO. **Material for Manager/CTO** (queue drained FAIL); quiet to Sandro.
+
+
+## Cyclus 01:46 CEST — D-090 FASE 3 wait (NEXT_STEPS v49)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → tip includes NEXT_STEPS **v49** (`c94dc5f`). Prior U2 tip: C-007 DONE FAIL (`741639e`).
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…D-091 @ `origin/claude/ftmo-trading-strategy-98mplz:BESLUITEN.md` (D-091.6 escalatiepad; geen D-092 in BESLUITEN)
+- `NEXT_STEPS.md` **v49** @ `origin/main` (Manager 01:33 CEST) — U2 **IDLE**; cyclus-4 non-clone PREREGs blokkeren
+- CTO C-008 (`9f5c843`): C-007 kill bekrachtigd; XAU_AM_FADE watch-only (**geen power-pad**); research redirect cyclus-4
+- Strateeg tip `7d189ac` / Strateeg-2 tip `d68caab`: geen nieuwe bevroren cyclus-4 PREREG sinds C-007
+
+### U2-directives (v49 §0 actie 1) — bindend
+- C-007 DONE FAIL (`741639e`): N6 / GER_US_LEAD / VWAP_PB = FAIL STOP. Queue empty.
+- **IDLE** tot Strateeg/Strateeg-2 **cyclus-4 non-clone** PREREG landt (geen XAU power-pad).
+- Dead set niet herstarten (A4·B1·A5·A2·S2-*·N1–N6·MIDDAY·S2b·GER_US_LEAD·VWAP_PB).
+- XAU_AM_FADE = watch-only; do NOT loosen 0.60×; geen pre-2021.
+- PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025→ onaangeraakt.
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| C-007 N6/GER_US_LEAD/VWAP_PB | DONE FAIL STOP (`741639e`) — skip |
+| XAU_AM_FADE power-pad | CTO watch-only (C-008 / v49) — geen U2-assign |
+| Cyclus-4 non-clone PREREGs | Strateeg/Strateeg-2 **OPEN** — nog geen nieuwe bevroren PREREG voor U2 |
+| Dead set | niet herstart |
+
+**TRIAL_COUNT blijft 444.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Strateeg of Strateeg-2 levert cyclus-4 non-clone PREREG(s) op screen top-10 (≠ dead set) → dan U2 cost-gate.
+2. XAU_AM_FADE blijft watch-only — geen power-pad.
+3. Escalatieklok D-091.6: prior v47/v49 = **3/4** → deze wait-only cyclus = **4/4**. Geen kostenpoort+power PASS in 4 cycli → pad naar CEO D-092 (herzien plan). Geen Sandro-richtingvraag (D-091.6).
+
+Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG-result); **clock 4/4 note for Manager/CEO** (not Sandro-ping).
