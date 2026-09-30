@@ -50,3 +50,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | Q3 crypto intraday (H1-momentum, 3σ-omkeer) | 2 | 398 |
 | 2026-09-30 | Q4 ML LightGBM walk-forward (3 horizons) | 3 | 401 |
 | 2026-09-30 | VOORSTEL_H-H1 maandeinde-herbalancering | 1 | 402 |
+| 2026-09-30 | VOORSTEL_H-H2 pre-feestdag, H3 RSI(2) bij VIX>20 | 2 | 404 |

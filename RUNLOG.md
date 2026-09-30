@@ -502,3 +502,11 @@ Getest (PREREG_H1.md vóór berekening): h1_monthend.py. Op het slot van de 5e l
 Resultaat: SPY 2002–2026 N 290, +35,8 bp/trade, t +2,76 (160/290 positief); 2002–2013 +57,4 bp (t 2,71), 2014–2026 +16,4 bp (t 1,05). FTMO US500 2021–26 (FTMO-swaps) N 69, +22,0 bp, t 1,01, totaal +15 pp bij 100% notional.
 Conclusie: t < 3 → afgewezen; bekend flow-effect maar afnemend na publicatie/2014. TRIAL_COUNT 402.
 Volgende stap: H2 (pre-feestdag) en H3 (RSI(2)-overnight bij VIX > 20).
+
+## 2026-09-30 06:50 — VOORSTEL_H-H2/H3: pre-feestdag en RSI(2) bij hoge VIX — beide AFGEWEZEN
+
+Getest (PREREG_H2H3.md vóór berekening): h2h3.py.
+H2 pre-feestdag (long SPY op de laatste handelsdag vóór een US-beursfeestdag, 1993–2026): N 264, +7,9 bp, t +1,33; 1993–2009 +11,0 bp (t 0,97), 2010–2026 +5,8 bp (t 0,91) → afgewezen.
+H3 RSI(2) max 1 nacht (Yahoo SPY/QQQ/GLD/DAX/N225, 1998–2026) alleen bij VIX > 20: N 720, +5,7 bp, t +1,58 vs ongefilterd N 1.801, +5,9 bp, t +3,21 (VIX ≤ 20: +6,1 bp) → VIX-filter voegt niets toe → afgewezen.
+Conclusie: de overnight-omkeerpremie is even groot bij lage en hoge VIX; geen verbetering. TRIAL_COUNT 404.
+Volgende stap: verslag backlog v11 + VOORSTEL H; wachten op supervisor-refill (check elke 10 min).
