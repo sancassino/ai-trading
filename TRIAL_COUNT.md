@@ -44,3 +44,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | G3-H2 Double 7s, G3-H3 RSI(2) hoog-vol | 2 | 385 |
 | 2026-09-30 | I2 intraday mean-reversion H1 (IBS, RSI2) | 2 | 387 |
 | 2026-09-30 | I3 event-drift (pre-FOMC, post-nieuws) | 2 | 389 |
+| 2026-09-30 | K1 RSI(2) max 1 nacht / max 2 nachten | 2 | 391 |

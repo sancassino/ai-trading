@@ -58,3 +58,10 @@ De uitvoerder pauzeert nieuw onderzoek (portefeuilleregel) en blijft elk uur con
   tot fase 1, EV ≈ −€11/poging (nul-drift −€536).
 - **Bijgesteld plafond onder FTMO-regels (MT5): ≈ €200–250/mnd; een challenge is met deze edge economisch niet zinvol
   (te traag om +10% te halen). Kans op ≥ €880/mnd: < 5%.**
+
+## Update K1 (2026-09-30): waar zit de RSI(2)-edge?
+Bijna volledig in de **nachten** (slot → volgende open), niet overdag: Yahoo nacht 1 +9,3 bp (t 4,2), nacht 2 +10,4 bp (t 4,3),
+nacht 4+ +8,8 bp (t 5,0); dagsegmenten ≈ 0. FTMO idem maar zwakker (nacht 2 +11,4 bp, t 2,9). Varianten max 1 / max 2 nachten:
+Yahoo t 3,05 / 3,59, FTMO t 1,79 / 1,53 → afgewezen op FTMO-t (te weinig power in 5,7 jaar), terwijl het dagverlies bij
+€150/mnd-schaal beheersbaar is (2,8% / 3,6%). RSI(2) onder FTMO is dus geen schaalprobleem van nacht 3+, maar een kleine
+overnight-premie die op de korte FTMO-historie statistisch niet hard te maken is.

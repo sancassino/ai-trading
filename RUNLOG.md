@@ -362,3 +362,11 @@ J3: bij ware SR 0,66 (realistische kosten) is t ≥ 2 pas na ≈ 9,2 jaar forwar
 J1: slechtste historische FOMC-event −94 bp → pre-FOMC-notional 1,06× equity (US500/US100 gelijk). F3b alleen: SR 1,03, ≈ €225/mnd, slechtste dag 3,80%; F3b + pre-FOMC: SR 1,34, ≈ €361/mnd, slechtste dag 3,80%. Kanttekening: in-sample, pre-FOMC-effect event-t 2,35 en afnemend (2024–26 +13 bp), intraday-dip op FOMC-dag vóór 14:00 niet gemodelleerd.
 Conclusie: combinatie oogt beter maar rust op een klein, zwakker wordend effect; niet als bewezen beschouwen. TRIAL_COUNT ongewijzigd.
 Volgende stap: verslag backlog v5; J2 (nieuwe hypothese-batch) alleen als de supervisor dat wil gezien 389 trials.
+
+## 2026-09-30 01:32 — K1: RSI(2)-edge zit in de nachten; max-1/2-nachten-varianten afgewezen op FTMO-t
+
+Getest (PREREG_K1.md vóór berekening): k1_nights.py. Ontleding van de oorspronkelijke RSI(2)-trades in nacht k (slot → open) en dag k (open → slot).
+Yahoo 1990–2026 (SPY, QQQ, GLD, DAX, N225): nacht 1 +9,3 bp (t 4,15), dag 1 −1,7; nacht 2 +10,4 (t 4,25), dag 2 +1,1; nacht 3 +4,0 (t 1,52), dag 3 +4,8; nacht 4+ +8,8 (t 4,97), dag 4+ +3,4. FTMO 2021–26: nacht 1 +6,4 (t 1,28), nacht 2 +11,4 (t 2,89), nacht 3 +0,1, nacht 4+ +5,2 (t 1,74); dagen ≈ 0.
+Varianten: (a) max 1 nacht — Yahoo N 2.022, +5,3 bp, t 3,05; FTMO N 472, +6,4 bp, t 1,79; dagverlies bij €150/mnd 2,76%. (b) max 2 nachten — Yahoo +14,5 bp, t 3,59; FTMO +11,8 bp, t 1,53; dagverlies 3,61%. Beide afgewezen (FTMO-t < 2,5).
+Conclusie: RSI(2) is in essentie een overnight-premie na uitverkoop; korte houdduur maakt het FTMO-dagverlies beheersbaar, maar de FTMO-historie (5,7 jr) heeft te weinig power om het te bevestigen. PLAFOND_RAPPORT bijgewerkt. TRIAL_COUNT 391.
+Volgende stap: K2 (power-analyse + vooraf vastgelegde beslisregel forward-test).
