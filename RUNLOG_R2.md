@@ -614,3 +614,44 @@ TRIAL_COUNT blijft **444**. Reserve 2025→ onaangeraakt.
 3. Escalatieklok D-091.6: Manager v46 = cyclus **2/4** — geen Sandro-ping.
 
 Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material result).
+
+
+## Cyclus 01:15–01:24 CEST — D-090 FASE 3 C-007 cost-gates (NEXT_STEPS v47)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → tip includes NEXT_STEPS **v47** (`5031372`: N5 FAIL STOP; N6/GER_US_LEAD/VWAP_PB queued C-007).
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…D-091 @ `origin/claude/ftmo-trading-strategy-98mplz` / NEXT_STEPS v47 (geen D-092)
+- `NEXT_STEPS.md` **v47** @ `origin/main` (Manager 01:15 CEST) — U2 prio 1 = N6 → GER_US_LEAD → VWAP_PB
+- PREREGs on main (vóór resultaat): `PREREG_FTMO_N6_GER40_CLOSE.md`, `PREREG_S2_GER_US_LEAD.md`, `PREREG_S2_VWAP_PB.md`
+
+### U2-directives (v47 §0 actie 1) — uitgevoerd
+Order vast: **N6 → GER_US_LEAD → VWAP_PB** cost-gates only (train 2021–2023; reserve 2025→ onaangeraakt). FAIL→STOP, geen TRIALS/retune. N5 niet herdraaid. XAU_AM_FADE watch-only. Dead set niet herstart. m5gz = Amsterdam wall clock (zelfde conventie als N3/N4).
+
+### Kostenpoort-resultaten (train 2021–2023)
+
+| Sleeve | N | mean bruto | gate | Uitkomst |
+|--------|---|------------|------|----------|
+| N6 GER40 Pre-Close (RT 1.40 bp PREREG) | 251 | **−2.05 bp** | 4.20 bp | **FAIL STOP** |
+| S2 GER_US_LEAD (TW-RT 0.72 bp) | 314 | **−1.43 bp** | 2.16 bp | **FAIL STOP** |
+| S2 VWAP_PB (TW-RT 0.55 bp) | 179 | **−2.68 bp** | 1.64 bp | **FAIL STOP** |
+
+Scripts: `scripts/n6_cost_gate_train.py`, `scripts/s2_ger_us_lead_gate.py`, `scripts/s2_vwap_pb_gate.py`.
+Artifacts: `results/R2/n6_prep/`, `results/R2/ger_us_lead_prep/`, `results/R2/vwap_pb_prep/`.
+
+**Geen PASS** → geen clustered-t, geen `ftmo_ev`, geen TRIALS-append. **TRIAL_COUNT blijft 444.**
+
+### By-symbol (informatief)
+- GER_US_LEAD: US100 N=157 mean −2.03 bp; US500 N=157 mean −0.84 bp
+- VWAP_PB: US100 N=82 mean −1.82 bp; US30 N=97 mean −3.41 bp
+- N6: GER40 2021 M5 sparse → trades vooral 2022–23 (N=251 OK)
+
+### Dead set (nu ook C-007)
+A4 · B1 · A5 · A2 · S2-* · N1–N5 · MIDDAY_VWAP · S2b · **N6 · GER_US_LEAD · VWAP_PB**. XAU_AM_FADE = enige eerdere gate-PASS (N=12≪120, watch-only).
+
+### Next / escalatie
+1. C-007 queue leeg — U2 idle tot nieuwe Strateeg PREREG of CTO XAU power-pad assign.
+2. Escalatieklok D-091.6: Manager v47 = cyclus **3/4**; C-007 triple-FAIL = materiaal voor Manager/CTO (geen Sandro-richtingvraag; D-091.6).
+3. XAU_AM_FADE: niet losser maken (0.60×); geen pre-2021 zonder CTO-assign.
+
+Vragen → Manager; eindbesluit → CTO. **Material for Manager/CTO** (queue drained FAIL); quiet to Sandro.
