@@ -30,3 +30,6 @@ Nieuwe rolverdeling: zie ORGANISATIE.md (Manager/Strateeg/Uitvoerder/Auditor). M
 
 ## Aanvulling 2026-09-30 10:43
 Vragen aan Sandro gaan niet meer rechtstreeks: Manager schrijft ze in VRAGEN_MANAGER.md, CEO beslist in BESLUITEN.md. Standaardactie na 60 min. Manager meldt Sandro alleen nog korte statusregels.
+
+## Chat met Sandro (website)
+Zie CHAT_PROTOCOL.md en chatweb/README.md. Elke rol leest elke cyclus als eerste stap `chat/inbox.txt` op zijn eigen branch en antwoordt in `chat/outbox.txt`. Manager-routines zijn aangepast; CEO en Strateeg voegen de chat-stap zelf toe (Sandro geeft hen de opdracht).
