@@ -25,8 +25,8 @@
 
 ## Ritme
 - Uitvoerder: */10-check, werkt continu.
-- Manager: uurlijks (routine, momenteel **gepauzeerd** op verzoek van Sandro; hervatten kan met één opdracht).
-- Strateeg: uurlijks (eigen routine in zijn chat) + op verzoek.
+- Manager: elke 30 min (twee routines: :05 en :35 Amsterdam; routines kunnen niet vaker dan 1×/uur).
+- Strateeg: elke 30 min (twee routines :20 en :50 Amsterdam in zijn eigen chat) + op verzoek. Bij geen nieuws: één logregel, geen actie.
 
 ## Regels (voor iedereen)
 - PREREG vóór resultaat; TRIAL_COUNT bijwerken; t ≥ 3 in train én test (families met veel kandidaten t ≥ 3,5); geen grids.
