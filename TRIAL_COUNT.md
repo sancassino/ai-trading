@@ -60,3 +60,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | CAT1 catalogusrun 1 (C01, C02, C03, C05, C07, C12, C17; D-037) | 7 | 421 |
 | 2026-09-30 | R2/CAT2: C51 (1), C52 (2 varianten), C53 (1), C54 (basis + qa = 2; eerdere 2 rijen ongeldig door future-model-fout, tellen niet) | 6 | 427 |
 | 2026-09-30 | R3/CAT3: C04, C16, C29, C33, C43, C44, C45, C55 (1 variant elk; vehikelrapporten cfd_retail zonder trial) | 8 | 435 |
+| 2026-09-30 | R4/CAT4: C57, C58, C59, C60, C61 (v1.2-diversifiers; screen/frontier/decompositie zonder trial) | 5 | 440 |
