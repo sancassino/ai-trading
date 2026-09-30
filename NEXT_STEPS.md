@@ -1,26 +1,19 @@
-# NEXT_STEPS / BACKLOG v7 — supervisor, 2026-09-30 04:16 Amsterdam
+# NEXT_STEPS / BACKLOG v8 — supervisor, 2026-09-30 05:16 Amsterdam
 
-Regel blijft: pre-registratie vóór resultaat, push na elke taak, nooit wachten. Je rondt mijn backlogs in ~20 min af terwijl ik elk uur ververs → **deze backlog bevat bewust zwaar, tijdrovend werk (data-engineering, uren)**.
+## Beoordeling
+- L1 correct afgebroken: rate-limit/paywall **niet** omzeild — goed. Gevolg: ORB (2010–2020) en pre-FOMC-intraday (L2/L3b) kunnen **zonder nieuwe data niet bevestigd worden**. Status daarom: ORB = 'onbevestigd, 5,7 jr, piek', pre-FOMC = 'klassiek effect tot 2011, sindsdien ≈ 0 (2012–26 t 0,88; 2021–26 t 0,07)' → **geen sleeve**. Alleen RSI(2)-overnight overleeft (Yahoo 30 jr t 3,0–3,6; FTMO te weinig power).
+- Werkende kern nu: **RSI(2), max 1–2 nachten** (Yahoo t 3,05/3,59; FTMO t 1,79/1,53; dagverlies 2,8–3,6% bij €150/mnd). Dat is klein (≈ €100–200/mnd) maar het is de enige statistisch verdedigbare sleeve.
+- Ik stel een **stopregel tegen eindeloos mijnen** in (394 trials): zie 'Steady-state' onderaan.
 
-## Beoordeling (kritisch)
-- Sterk: K1 (RSI(2) = overnight-premie, nachten 1–2 dragen; Yahoo t 3,0–3,6, FTMO t 1,5–1,8 → te weinig power), K2 (forward = foutdetector; stopregels vooraf), I4 SCENARIO_RAPPORT, J2 afgewezen, pre-FOMC eerlijk als 'event-t 2,35, afnemend'.
-- **Kernprobleem is nu statistische power, niet meer ideeën:** alle intraday-/event-resultaten (ORB, pre-FOMC, K1) rusten op FTMO-data 2021–26 (5,7 jaar; ORB train-t 2,9 / test-t 1,1). Nog meer hypothesen op dezelfde 5,7 jaar = meer ruis (394 trials, DSR ≈ 0,3). Forward-test duurt 9–18 jaar voor bewijs (K2). **Dus: onafhankelijke, langere intraday-data zoeken en bestaande regels daarop bevestigen — GEEN nieuwe trials.**
-- Dus geen J2-achtige batches meer tot L1–L3 klaar zijn. Vooraf vastgelegde regels ongewijzigd toepassen telt niet als nieuwe trial.
+## BACKLOG (prioriteit 1 = eerst; geen afhankelijkheid van Sandro)
 
-## BACKLOG (prioriteit 1 = eerst)
+**N1 — MT5-bevestiging van de kern: RSI(2) met max 2 nachten (en aparte run max 1 nacht).** Pas RSI2Sleeve.mq5 aan (input MaxNights = 1|2, exit op de open van nacht MaxNights); regels/symbolen/swap identiek aan F1. Reconcilieer met k1_nights.py (trades ± 10%, maandcorrelatie ≥ 0,9, totaal binnen 25%). Daarna dag-equity-analyse (officieel + streng) en schaal = grootste t met slechtste FTMO-dagverlies < 4% → rapporteer SR (CI), €/mnd op €80k (met G1-kosten), DD. Beslisregel kern: MT5-SR ≥ 0,5 én dagverlies < 4% bij ≥ €100/mnd. Verwacht: SR 0,5–0,8, €100–180/mnd.
 
-**L1 — Lange intraday-historie (bron onafhankelijk van FTMO).** Haal M1 (of M5) 2010–2026 voor US500, US100, US30, GER40, XAUUSD, EURUSD van **Dukascopy** (gratis; bv. `dukascopy-node`/`duka`, index-CFD-symbolen USA500IDX, USATECHIDX, USA30IDX, DEUIDX) — of, als dat niet werkt vanaf de VM, een andere gratis lange bron (Stooq/Alpha Vantage/Kibot-sample; noteer de bron, kwaliteitscontrole: gaten, sessietijden, tijdzone, DST). Sla op in `data/long_m5/` (git-ignore, 135 MB-regel) en documenteer download-script + checksum in `data/README`. Kwaliteitsrapport per symbool (bars/dag, gaten, spread-proxy). Als gratis data niet bruikbaar is: zeg dat en stop L2–L4 op dat pad.
+**N2 — Datastop netjes opleveren: `DATA_REQUEST_SANDRO.md`.** Beschrijf voor een niet-technisch persoon in ≤ 10 regels per optie de goedkoopste route om lange intraday-data te krijgen: (A) op de VM in MT5 'File → Open an Account' → server MetaQuotes-Demo (of een ander broker-demo met lange indexhistorie) aanmaken en de inlog delen — test zelf eerst met Python of zo'n server ≥ 10 jaar M1 voor US500/US100/GER40/XAU heeft (kijk welke publieke demo-servers dat bieden; noteer bron/voorwaarden; geen omzeiling van beperkingen); (B) HistData handmatig downloaden (exacte URL's/bestandsnamen SPXUSD/NSXUSD/GRXEUR/XAUUSD, maanden) en in data/long_m1/ zetten; (C) Dukascopy-S3 met AWS-account (kostenraming). Geef aan wat je per optie kunt bevestigen en wat het oplevert (ORB 2010–2020; pre-FOMC intraday).
 
-**L2 — Bevestig ORB (B4a-regels ONGEWIJZIGD) op 2010–2020 (buiten FTMO-steekproef).** Zelfde regel: 30-min opening range, stop-orders, exit sessie-einde, 1/7 notional, kosten: realistische spread per symbool per periode (Dukascopy-spreadproxy of vaste bp: US-indices 0,8/1,0 bp, GER40 1,5, XAU 2,0 bp per kant + 1 bp slippage-aanname). Beslisregel (vooraf): op de 3 robuuste symbolen (US500, US100, GER40) én gepoold t ≥ 3 over 2010–2020, teken positief in ≥ 8/11 jaar, bp/trade ≥ 50% van FTMO (0,9 bp). Faalt dit → ORB-poot definitief afgewezen (het was al 'PIEK'); PLAFOND opnieuw zonder ORB.
+**N3 — Definitieve PLAFOND- en SCENARIO-update.** Herbereken met de kern (RSI2 max 2 nachten) zonder ORB en zonder pre-FOMC; toon apart: 'kern' vs 'kern + ORB (onbevestigd)'. Tabel: SR (CI), €/mnd @80k, realistische kosten, verliesskans 12 mnd, FTMO-dagverlies, challenge-EV, benodigd eigen kapitaal voor €880/mnd. Eén pagina, gewone taal, bovenaan de kernconclusie.
 
-**L3 — Bevestig pre-FOMC en RSI(2)-nachten op lange data.** (a) Pre-FOMC (slot dag−1 → 14:00 ET, regel ongewijzigd) 2010–2020 (~85 events) met Dukascopy en op Yahoo-daily-proxy 1994–2026 (SPY open/close rond FOMC; FOMC-datums federalreserve.gov, alle jaren); (b) K1-nachtontleding is al op Yahoo gedaan → herhaal op Dukascopy-CFD-serie 2010–2026 voor US500/US100/GER40 (nacht 1–2). Beslisregel: event-t ≥ 2,5 over ≥ 120 events, en 2010–2020 effect ≥ 50% van 2021–26. Verwacht: pre-FOMC bestond vooral 1994–2011 (Lucca–Moench), afgenomen daarna.
+**N4 — Forward-test onderhoud (L5).** Maandagverslag `forward/weekrapport.md`; controleer cron-gaten en dat de eerste echte dag (2026-09-30) is verwerkt (`forward/paper_daily.csv` bestond bij mijn check nog niet — bevestig en meld).
 
-**L4 — Herbereken de portefeuille op de langste gemeenschappelijke steekproef.** Alleen sleeves die L2/L3 overleven (vooraf lijst: RSI(2)-overnight, ORB, pre-FOMC): gecombineerde SR, DSR (N=394; herbereken), correlaties, FTMO-dagverlies-check op dagreeks, €/mnd op €80k met realistische kosten (G1). Vergelijk 2010–2020 vs 2021–26 en rapporteer wat het plafond wordt. Update PLAFOND_RAPPORT en SCENARIO_RAPPORT.
-
-**L5 — Forward-test onderhoud + wekelijks verslag.** Elke maandag in `forward/weekrapport.md`: dagen, hypothetische P&L, SR-schatting met CI, kosten (ORB bp/trade), dagverlies/DD-alarm volgens K2-regels. Controleer dat cron gedraaid heeft (gaten in `paper_daily.csv` = melden).
-
-## Reserve (alleen na L1–L4; telt wél als nieuwe trials)
-M1 shortlist van max 2 nieuwe hypothesen, pre-geregistreerd, direct op **2010–2026-lange data** getest (dan is t ≥ 3 met veel hogere power haalbaar): bv. overnight-premie na uitverkoop op FX-majors/goud, pre-NFP-drift. M2 ETF-/index-vergelijking van kosten van hefboom (SPY-op-marge vs CFD) voor SCENARIO_RAPPORT.
-
-## Portefeuilleregel
-Overleeft ≥ 1 sleeve L2/L3 met t ≥ 3 (resp. 2,5) over lange data → ik schrijf een MT5-/schaalopdracht en een aangepast plafond. Overleeft niets → PLAFOND_RAPPORT definitief ≈ €100–250/mnd (alleen RSI(2)-overnight), Sandro beslist.
+## Steady-state (stopregel tegen data-mining)
+Zijn N1–N4 klaar en is de kern-SR ≥ 0,5 óf < 0,5: **stop met nieuwe hypothesen.** Alleen (a) forward-test dagelijks, (b) wekelijks verslag, (c) opnieuw werken zodra Sandro nieuwe data levert (L2/L3b) of zelf een nieuw idee met regels aanlevert. Schrijf dat in RUNLOG als 'steady-state'. Dit voorkomt dat nog 100 trials het DSR nul maken; ik vul de backlog dan alleen aan bij nieuwe data of nieuwe input van Sandro.
