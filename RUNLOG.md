@@ -482,3 +482,11 @@ Getest (PREREG_Q3.md vóór berekening): q3_crypto.py, FTMO-M5 BTCUSD/ETHUSD 202
 (b) omkeer na 3σ-uurbeweging (4 uur): N 1.393, bruto +0,1 vs kosten 8,0 bp → netto −7,9 bp, t +0,37 / −2,75, 2/6 jaar+.
 Conclusie: bruto ≈ 0; FTMO-crypto-kosten (spread + commissie) maken intraday crypto kansloos. TRIAL_COUNT 398.
 Volgende stap: Q4 (machine learning met walk-forward).
+
+## 2026-09-30 06:48 — Q4: machine learning (LightGBM, walk-forward) — alle 3 horizons AFGEWEZEN
+
+Getest (PREREG_Q4.md vóór berekening): q4_ml.py (venv), FTMO-M5 US500/US100/GER40/XAU, alleen sessiebars; 14 features (rendementen 1/3/12/48 bars, range/ATR, afstand dag-hoog/laag, tijd-van-de-dag, dag-van-week, gap, RSI2/RSI14, cross-index 12 bars) + symbool; LightGBM vaste parameters; maandelijkse walk-forward (6 mnd train → 1 mnd test, 2022-01..2026-09) met purging; handelen bij voorspelling ≥ p95 / ≤ p5 van train, houden = horizon, kosten spread + commissie. Model-varianten: 3 (horizons).
+Resultaat OOS: 15 min N 20.861, −0,66 bp/trade, t −3,67, 0/5 jaar+; 30 min N 12.766, −1,16 bp, t −3,80, 0/5; 60 min N 6.964, −0,00 bp, t −0,01, 4/5 (±0). Belangrijkste features: gap, r48, tijd-van-de-dag, afstand tot dag-hoog/laag, cross-index.
+Permutatietest niet uitgevoerd (alleen bij OOS-t ≥ 3, conform prereg).
+Conclusie: het model vindt structuur, maar de voorspelde bewegingen zijn kleiner dan de spread → na kosten geen edge. TRIAL_COUNT 401.
+Volgende stap: Q5 (portefeuille) — geen nieuwe sleeves uit Q2–Q4.
