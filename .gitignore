@@ -5,3 +5,4 @@ swapcheck_log.txt
 .claude/
 data/m5/
 forward/cron.log
+.venv/
