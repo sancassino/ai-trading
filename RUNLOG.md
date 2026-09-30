@@ -715,3 +715,10 @@ C12 carry + trendfilter FX: +0,09 | +0,01 | n.v.t./+0,09 | 20%
 C17 FOMC-cyclus (even weken) 5 indices: +2,85 (bootstrap 3,05) | +0,52 | +2,15/+2,01 | 100% (skew +0,46)
 **Methodefout (van mij):** PREREG_CAT1 definieerde de kostenpoort als bruto ≥ 3× (spread + financiering); het bindende ENGINE_TEMPLATE zegt rondreiskosten (financiering zit al in netto). Onder mijn definitie faalt de poort voor alle 7 (TRIALS.csv staat nu zo); onder het template halen alle 7 de poort en haalt alleen C02 Faber G-ontdekking (BH-q ≈ 0,003). Pas ná de run opgemerkt → niet zelf gekozen; vraag U-004 aan CEO (standaardactie: template geldt, 7 trials, C02 naar reserve-OOS).
 Overige waarnemingen: tijdreeksmomentum over FX/grondstoffen/indices levert na FTMO-financiering niets op (C01/C05/C07 ≈ 0); FX-carry met trendfilter ≈ 0 sinds 1999; FOMC-cyclus is sterk op US-indices (SPX 2,81, NDX 3,03) maar net onder de lat.
+
+## 2026-09-30 11:13 — S3-drempel definitief bevroren (D-036): eenzijdig dag-geclusterd t ≥ 2,0 — SHA-256 vastgelegd
+
+PREREG_S3.md en s3_run.py terug naar t ≥ 2,0 (D-029/D-036; mijn terugdraaiing volgens v18 is door de CEO ongeldig verklaard). data/long_m1/ was leeg (0 bestanden) op het moment van vastleggen. Overige eisen ongewijzigd.
+SHA-256 PREREG_S3.md: bfd755b827c31fbf22896e7cefaf2f5ea900afdd3ada53002462272e5deb1a19
+SHA-256 s3_run.py: 11283dcc1e6f31f6186fa9cd559e9fb3970bb8b0ab01b8b8b6c06d7daeff7c3f
+Niemand wijzigt deze bestanden hierna.
