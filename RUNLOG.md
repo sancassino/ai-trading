@@ -786,3 +786,14 @@ P-ETF-b (≤ 2×, rf + 1,5%): SR 0,79, vol 10,0%, CAGR 9,4%, maxDD 20,0%, gem. h
 P1 (bovengrens): SR 0,79, vol 10,3%, CAGR 9,6%, maxDD 15,9%, hefboom 2,10 → ≈ €639/mnd
 P-breed: SR 0,70, vol 9,4%, CAGR 8,0%, maxDD 17,4% → ≈ €534/mnd
 **Eerlijke lezing:** P-ETF-a ligt boven de vooraf vastgelegde verwachting (4–6,5%) — CAGR bevat de rente op cash (≈ 2%/jr gemiddeld 2001–24); sleeves zijn ná het zien van de ontdekkingsdata gekozen (winnaarsvloek), dus dit is een bovengrens. Na 30–50% live-haircut: ≈ €250–340/mnd voor P-ETF-a — onder het €400–500-doel, zoals vooraf gezegd. P1 wijkt af van de R2-cijfers (SR 0,84 → 0,79) door maandelijkse i.p.v. dagelijkse herweging, nieuwe vehikelkosten en de financieringsopslag.
+
+## 2026-09-30 13:44 — QA v24-1/2 (Uitvoerder-1 pakte dit op): decompositie P-ETF-a — SR 0,94 komt uit diversificatie + obligatiebull; 2021–24 nog SR 0,53
+
+qa_petf.py → results/port/QA_PETF_decompositie.md (ontdekking ≤ 2024, reserve niet aangeraakt, geen trial).
+Basis: SR 0,94, vol 6,1%, CAGR 7,4% = excess ≈ 5,7% + cash ≈ 1,7%/jr, maxDD 11,2%.
+Per periode: 2001–10 SR 1,09 (CAGR 8,6%, DD 7,0%) | 2011–20 SR 0,97 | **2021–24 SR 0,53** (excess 3,3%/jr, DD 10,2%) → dalend.
+Zonder obligatiepoot (C52 = SPY + goud): SR 0,79, CAGR 7,9%, maxDD 16,9% → de synthetische 10j-Treasury (D 8, rentedaling 2001–20) verhoogt de SR en halveert de DD, maar niet het rendement.
+C02 op prijsindex i.p.v. SPX_TR: SR 0,92 (dividend-proxy nauwelijks van belang). Alleen C52 lang: SR 0,81 / DD 15,3%; alleen C02 (1928→): SR 0,47 / DD 51% → de combinatie (lage correlatie) levert de sprong naar 0,94.
+Bijdrage per activum in C52 lang (vóór kasrente): SPY +2,31%/jr (SR 0,56; gewicht 0,25), BOND10_SYN +2,05% (0,53; 0,52), goud +2,25% (0,61; 0,20) — gespreid, geen enkele poot draagt alles.
+Haircut (M-012, beide getoond): A op totaal 30–50% → €246–344/mnd; B op excess → **alfa boven cash €188–264/mnd** + cash apart (USD-3m nu 4,25% ≈ €283/mnd; EUR-geldmarkt lager — ESTR nog ophalen). Nulbenchmark cash-only ≈ €283/mnd (USD) → het beoordelingsgetal is de alfa boven cash.
+Conclusie: 0,94 is geen uitgangspunt voor verwachtingen; realistischer is de 2011–24-waarde (0,83) of lager (2020s 0,53) mét haircut.
