@@ -141,3 +141,47 @@ C49 equal-risk over sleeves met rollende 60d-correlatie; C50 drawdown-gedreven s
 PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen ≈ **+€21** · regio-rotatie ≈ **+€9** · CAPE-regel ≈ **€0** · (FX-carry/commodity: geschrapt) ⇒ **≈ +€55/mnd** ⇒ midden-totaal ≈ €240 → **≈ €295** (EUR-cash), nog steeds < €400 en met extra staartrisico (VRP, factor-crashes). Hefboom helpt pas bij excess/eenheid > 1,5% (opslag). **Conclusie:** met de klassieke drie + deze zes komt het doel (€400–500) niet in zicht zonder hefboom/staartrisico buiten het DD-budget; de extra premies zijn elk ≈ €10–30/mnd.
 ## 8. Wat ik wél zou draaien (volgorde, één PREREG per premie, dezelfde gates + staarttest)
 (a) **C65 Factor-evidentie (geen trial):** FF-factoren 1963→ en industry-portfolio's: decay per decennium, corr met markt, crisis-gedrag, premie na 30%-haircut. (b) **C66 VRP-proxy:** VIX vs realized vol 1990→ (D2: VIX, SPX): VRP-verdeling per regime/jaar, *geen* optie-P&L-claim uit VIX alleen; optie-indexreeksen (^PUT/^BXM via Yahoo, privé-repo) alleen met licentie-notitie; staarttest: worst-month, DD-duur, corr in crises; **vervolgens één regel:** 25% van aandelenbeta vervangen door PutWrite-proxy in P-ETF-a en ΔSR/ΔDD/ΔmaxDD rapporteren. (c) **C67 Landenrotatie C07** op 12 primaire D2b-markten (één trial). (d) **C68 CAPE-multiplier** pre-geregistreerd, decennia-test, verwacht ≈ 0. Verwachte uitkomst: 0–1 van 4 voegt iets toe buiten ruis.
+
+## 9. FTMO-uitvoerbaarheidsherordening (v3, 2026-09-30 21:15 Amsterdam — D-086 FTMO-pivot)
+
+**Koerscorrectie D-083:** maatstaf = FTMO-EV (niet SR of €/mnd boven cash); vehikel = `cfd` (FTMO-spread + commissie + swap, geen UCITS/ETF). Catalogus hieronder ingedeeld op uitvoerbaarheid binnen een FTMO-prop-account van €80k.
+
+### 9a. FTMO-poortcriterium (geldt voor elke catalogusregel)
+1. **Instrument aanwezig op FTMO** (SymbolList_FTMO.csv: indices, FX, goud/zilver/olie, aandelen-CFD, crypto)
+2. **Kostenprofiel:** dagelijks-vlak (intraday-exit, swap = 0) **OF** bruto-carry > swap-kosten per nacht cfd (indices long 5–8%/jr → nauwelijks haalbaar, FX long hoge-rentecurrency = meevaller)
+3. **Poort:** gemiddelde bruto ≥ 3× (spread+commissie intraday) of ≥ 3× (spread+commissie+swap overnight); anders stop zonder trial
+4. **FTMO-mechanica:** 5%-dagverliesregel op floating equity; positief-scheef profiel overschrijdt grens zelden; negatief-scheef (VRP-achtig) risico op dagruin is hoog
+
+### 9b. Herindeling catalogus (v3)
+
+| Tier | Regels | Reden FTMO-uitvoerbaar? | Actiestatus |
+|------|--------|------------------------|-------------|
+| **A — HEROPENEN (hoge prioriteit)** | | | |
+| A1 | **ORB/B4a (S3)** — intraday-vlak, US500/US100/GER40/XAU | Swap 0, instrumenten aanwezig, bevroren regel; bevestiging 2011–20 ontbreekt nog | Data-acquisitie (Sandro-actie), dan S3 |
+| A2 | **Stocks-in-Play ORB earnings (S2)** — intraday-vlak, FTMO-aandelen-CFD | Eerder gefaald op kostenpoort (vaste 60-min); stop+EOD-profiel verschilt; herevalueer met cluster-t | PREREG vernieuwen, kosten-poort opnieuw meten |
+| A3 | **Noise-area intradag-momentum (S1)** — trailing EOD-exit, US-indices | Eerder afgewezen (na 2023); heroverwegen met nul-kalibratie en vol-regime; intraday-vlak | F1-heronderzoek, geen extra trial tenzij hypothese nieuw |
+| A4 | **FOMC-cyclus (C17)** — 5 van 6 weken vóór FOMC, D1, index-CFD | D1 = 1 nacht swap; swap-kosten laag (<1,5 bp); t 2,85 op ETF → FTMO-cfd nog niet gerekend | Herbereken op cfd-vehikel met engine/ftmo.py |
+| A5 | **FX-intradag-breakout** — EURUSD/GBPUSD/USDJPY londen-open of NY-open | Kosten laag (0,6–0,8 bp), swap 0 bij intraday-exit | Nieuw voorstel F4; data FTMO-M5 FX aanvullen (alleen EURUSD nu) |
+| **B — ONDERZOEKEN (middel)** | | | |
+| B1 | **TSMOM-mix FX (C05 op FX)** | FX-swap ≈ carry-premie; positief scheef; maand | Herbereken: swap vs carry-premie per paar; long hoge-rente = meevaller |
+| B2 | **FX-carry + trendfilter (C12)** | Carry-risicopremie; C12 CAT1 ≈ 0 na kosten → herevalueer alleen met D1-reeksen + FTMO-FX-swaps | Lage prioriteit |
+| B3 | **Donchian D1 FX/XAU (C03)** | R4 H4 negatief maar op short reeks; FX D1 = 1 nacht swap; positief scheef | Herevalueer met lange FX-dagreeksen (FRED 1971+) |
+| **C — HERBEOORDELEN met FTMO-EV** | | | |
+| C1 | **C02 Faber (D1 DD-filter, 1 nacht swap)** | Als overlay (long/flat), swap ≈ 1–2,3 bp/nacht → 5–8%/jr drag op long; nuttig als risicobeheer maar geen FTMO-trial | Geen trial; als portefeuille-overlay in FTMO-context herbeoordelen |
+| C2 | **C55 DAA** | Weinig trades; swap-drag als in positie | Na engine/ftmo.py eventueel herbeoordelen |
+| C3 | **C17 uitstellen van D1 naar intradag** | Maak er intraday-vlak van (ORB-achtig) | Exploratief; geen trial zonder PREREG |
+| **D — SCHRAPPEN (FTMO-onuitvoerbaar)** | | | |
+| D1 | C52 all-weather / C51 vol-managed / C53 dual-momentum / C54 Carver | UCITS-only; obligatiefutures niet op FTMO; long-index-swap 5–8%/jr doodt het | Geparkeerd in archief/eigen_kapitaal |
+| D2 | C58 goud-trend / C59 grondstoffen-trend / C60 obligatie-duurtiming / C61 inverse-ETF | UCITS-only | Idem |
+| D3 | Factorpremies C63 / CAPE C68 / landenrotatie C67 | UCITS-only; niet FTMO-verhandelbaar | Literatuurevidentie blijft; geen FTMO-run |
+| D4 | C64 managed-futures UCITS | Geen FTMO-instrument | Watch-list eigen kapitaal later |
+
+### 9c. FTMO-EV-baseline (na engine/ftmo.py gereed)
+Per heropende regel de volgende metriek berekenen:
+- `P(fase1_pass)`: kans op +10% vóór −10% (monte-carlo op dagreeks)
+- `P(fase2_pass | fase1_pass)`: idem +5% vóór −5%
+- `P(account_survive_12m | funded)`: overleven zonder dagverliesregel of statisch verlies
+- `E[uitbetaling/mnd]`: over de overlevende jaren, na winstsplit 80%
+- `FTMO_EV_netto`: voorgaande min fee/pogingen
+
+**Doel: FTMO-EV ≥ €400/mnd bij realistisch risico (≤ 2% dagverlies als het fout gaat).** Schaal > 4% dagverlies-risico wordt alleen als bovengrens gerapporteerd (D-016/D-085).
