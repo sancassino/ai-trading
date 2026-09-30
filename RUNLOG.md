@@ -992,3 +992,7 @@ data/m5gz/ uitgebreid van 24 naar 69 symbolen (≈ 159 MB gzip): alle 41 US-aand
 
 U2 `a383cb5` cost/vol screen → `results/screen_cost_vol.csv`. Top met RT: US100/US30/GER40/US500/XAU. Prio: Strateeg (dan S2) non-clone daily-flat PREREGs op dat universum; U2 idle tot PREREG. A-tier dead set ongewijzigd. Ops-approvals bij CTO, niet Sandro.
 
+## 2026-09-30 23:57 — NEXT_STEPS v44: nacht-queue N1/N2 + S2 VWAP/XAU_AM → U2
+
+Strateeg `474a33c` N1/N2 + GS01-erratum; Strateeg-2 `1b2e975` MIDDAY_VWAP + XAU_AM_FADE. Screen a383cb5 top US100/US30/GER40/US500/XAU. U2 niet idle: cost-gate volgorde N1→N2→MIDDAY_VWAP→XAU_AM_FADE (getekend bruto ≥ 3× RT). S2b wacht CTO op COSTS-gap BTC/ETH. Dead set ongewijzigd.
+
