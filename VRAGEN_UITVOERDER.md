@@ -42,3 +42,4 @@ let op: bij ≈ 20 aandelen is 74–81% van de M5-bars spread 0 = ontbrekend →
 (C) niets committen; Uitvoerder-1 draait A5-runs op Debian voor Uitvoerder-2 (op PREREG + script uit de repo).
 **Standaardactie (na 60 min):** A — eenmalige gz-momentopname van die 24 symbolen in `data/m5gz/` (niet dagelijks bijgewerkt), laadbaar met `b4_sim.load`-formaat
 (zelfde kolommen). Aandelen-M5 (A2) alleen op verzoek (≈ 40 MB extra).
+**Afgehandeld (Manager 23:05):** optie A uitgevoerd op main (`ebc0af5`/`5254704`, 24 symbolen). A5 daarna FAIL (`ce5abdc`). **Vervolg-verzoek (standaardactie):** Uitvoerder-1 levert US41-aandelen-M5gz (~40 MB) in `data/m5gz/` + checksums — deblokkeert A2 (NEXT_STEPS v40).
