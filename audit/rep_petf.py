@@ -11,9 +11,6 @@ START_C52, END = 2001, pd.Timestamp("2024-12-31")
 def rf_series(kind="dtb3"):
     if kind == "dtb3":
         s = rf_daily_pct()
-        ext = load("YLD_US3M", "close")
-        ext = ext[ext.index > s.index[-1]]
-        s = pd.concat([s, ext])
     elif kind == "irx":
         s = load("IRX_3M", "close")
     elif kind == "us3m":
@@ -69,7 +66,7 @@ def c02_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, signal_price_tr=False):
 
 def c52_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, bond="syn", assets=("SPY", "BOND", "GOLD"), scale_cap=1.0, tgt=0.08, quirk=False):
     px = {"SPY": load("SPY", "adjclose"), "GOLD": load("GOLD_F", "close")}
-    px["BOND"] = own_bond() if bond in ("syn", "own") else load("IEF", "adjclose")
+    px["BOND"] = own_bond() if bond in ("syn", "own") else (own_bond(6.0, 50.0) if bond == "own6" else load("IEF", "adjclose"))
     if bond == "file":
         px["BOND"] = load("BOND10_SYN", "adjclose", "data/derived")
     px = {k: px[k] for k in assets}
@@ -89,7 +86,7 @@ def c52_sleeve(rf, lag=0, rt_bp=RT_BP, ter=TER, bond="syn", assets=("SPY", "BOND
         if d not in meidx or k < 61: continue
         win = R.iloc[k - 59:k + 1]      # 60 rendementen t/m slot van d (geen toekomst)
         av = [c for c in win.columns if not win[c].isna().any()]
-        if len(av) < (2 if quirk else 3): continue
+        if len(av) < (2 if quirk else min(3, len(px))): continue
         win = win[av]
         sd = win.std(ddof=1) * np.sqrt(252); iv = 1 / sd; w = iv / iv.sum()
         cov = win.cov() * 252; sp = float(np.sqrt(w.values @ cov.values @ w.values))
@@ -151,7 +148,22 @@ def run(label, kind="dtb3", **kw):
     s = stats(xa, tot); print(f"{label:38s} start {s['start']} n {s['n']} SR {s['SR']:.3f} vol {s['vol']*100:.2f}% CAGR {s['CAGR']*100:.2f}% maxDD {s['maxDD']*100:.2f}%")
     return xa, tot, w, X, c02, c52, s
 
-if __name__ == "__main__":
+def _main():
     run("A. schoon (ffill-kalender), eigen bond", bond="own")
     run("B. engine-quirk (asset-drop), eigen bond", bond="own", quirk=True)
     run("C. engine-quirk, bond uit data/derived", bond="file", quirk=True)
+
+def sens():
+    print("--- gevoeligheden (alle met eigen code; 'schoon' = zonder asset-drop-quirk) ---")
+    run("S0 schoon basis", bond="own")
+    run("S1 signaal-/gewichtsuitvoering +1 dag (lag=1)", bond="own", lag=1)
+    run("S2 lag=2", bond="own", lag=2)
+    run("S3 rf = ^IRX (3m T-bill, bond-equiv)", kind="irx", bond="own")
+    run("S4 rf = US Treasury 3m par yield", kind="us3m", bond="own")
+    run("S5 kosten 2x (26 bp, TER 0,14%)", bond="own", rt=26.0, ter=0.0014)
+    run("S6 kosten 0 (bruto)", bond="own", rt=0.0, ter=0.0)
+    run("S7 bond: IEF echt (vanaf 2002-08), schoon", bond="ief")
+    run("S8 bond: duur 6/C 50 i.p.v. 8/80", bond="own6")
+
+if __name__ == "__main__":
+    _main(); sens()
