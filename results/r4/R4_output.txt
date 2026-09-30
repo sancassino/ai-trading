@@ -1,0 +1,6 @@
+R4 Donchian 20/10 + 3×ATR-trailing (H4), 7 symbolen: N 1821 | netto -3.1 bp/trade (bruto -2.0) | t train -1.82 (N 967) | t test +0.18 (N 854) | trade-skew +3.42
+   dagreeks: SR -0.75 | skew +0.09 | jaarvol 3.2% | max dagdip 1.13% | per jaar 2021:-4.7% 2022:+2.0% 2023:-5.6% 2024:-3.9% 2025:-3.0% 2026:+1.1%
+   per symbool (bp, t): EURUSD:-9/-2.0 GBPUSD:-10/-1.9 USDJPY:+2/+0.2 USDCAD:-9/-2.0 USDCHF:-6/-0.9 XAUUSD:+18/+1.3 GBPJPY:-4/-0.6
+   → AFGEWEZEN (t ≥ 3 train én test, dag-skew > 0, dag-SR ≥ 1,0)
+   Q1b-frontier 2step: beste schaal 0.5× → netto €-23/mnd, P(netto<0) 100%, funded 0%
+   Q1b-frontier scaling: beste schaal 0.5× → netto €-23/mnd, P(netto<0) 100%, funded 0%

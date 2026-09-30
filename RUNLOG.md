@@ -548,3 +548,10 @@ Getest (PREREG_R2.md vóór berekening): r2_stocks_ml.py, 41 US-aandelen FTMO-M5
 Resultaat: (a) 60 min N 46.069, +0,22 bp/trade, OOS t +0,42, 2/5 jaar+, SR na kosten +0,12; (b) tot sessieslot N 15.107, −0,65 bp, t −0,35, 2/5 jaar+, SR −0,09. Jaren wisselen sterk (2025 +7,8/+8,7 bp, 2026 −8,0/−11,3 bp).
 Conclusie: geen stabiele cross-sectionele intraday-voorspelbaarheid na kosten. TRIAL_COUNT 409.
 Volgende stap: R4 (positief-scheve breakout met trailing stop op kosten-lage FX/goud).
+
+## 2026-09-30 08:44 — R4: positief-scheve breakout (Donchian 20/10 + 3×ATR-trailing, H4) op FX/goud — AFGEWEZEN
+
+Getest (PREREG_R4.md vóór berekening): r4_breakout.py, EURUSD, GBPUSD, USDJPY, USDCAD, USDCHF, XAUUSD, GBPJPY (kosten < 0,45 bp/kant), H4 servertijd, gelijk-risico-sizing (ATR%), kosten spread + commissie + huidige FTMO-swap per nacht (data/swap_specs_fx.csv).
+Resultaat: N 1.821, netto −3,1 bp/trade (bruto −2,0), t train −1,82 / test +0,18, trade-skew +3,42 (gewenste vorm), dagreeks SR −0,75, skew +0,09, jaarvol 3,2%, max dagdip 1,13%; per jaar 2021 −4,7%, 2022 +2,0%, 2023 −5,6%, 2024 −3,9%, 2025 −3,0%, 2026 +1,1%. Per symbool alleen XAU positief (+18 bp, t 1,3). Q1b-frontier: −€23/mnd.
+Conclusie: het profiel is positief scheef, maar zonder edge — trendvolgen op FX-H4 verliest in 2021–26. TRIAL_COUNT 410.
+Volgende stap: R5 (STANDPUNT_SUPERVISOR.md).
