@@ -1,0 +1,18 @@
+# VOORSTEL S10b — Go/no-go-kader voor EIGEN KAPITAAL (vervangt S10-FTMO; pre-commit, geen trial)
+(D-032. Echte-geldstappen, rekeningopening en vehikelkeuze blijven altijd bij Sandro; dit kader zegt alleen wanneer het team mag *adviseren* om te beginnen.)
+
+1. **Logica.** Bij eigen kapitaal is er geen first-passage-optiewaarde: verwachte waarde = SR × vol × kapitaal − kosten − belasting, met DD-tolerantie als harde rand. Daarom zijn de poorten: bewijslengte, benchmark, reserve-OOS, uitvoerbaarheid per vehikel, forward, audit — en een **gefaseerde start** (kleine inleg eerst).
+2. **Wat €400–500/mnd vraagt (aanname-rekenregel, onzeker).** €450/mnd = €5.400/jr = 6,75% op €80k; plus box 3 indicatief ≈ €446/jr (VEHICLE_ANALYSE §4, onbevestigd) → ≈ 7,3% bruto-na-kosten. Bij 10% jaarvol is dat excess-SR + cash-rente ≈ 0,7; als ongebruikt kapitaal 3% rente oplevert, volstaat excess-SR ≈ 0,4–0,45 (rente + 4% excess). **Live-haircut:** web-bronnen (WEB_LEERLOG) en eigen ORB-ervaring wijzen op 30–50% lager dan backtest → backtest-SR moet ≈ 0,6–0,9 zijn voor €450/mnd. Catalogusrun 1: beste enkelvoudige netto-SR 0,32–0,52 (C02, C17) — **nog niet genoeg; een portefeuille van sleeves is nodig** (PROGRAMMA_FASE2).
+3. **Kader (alle voorwaarden vooraf; drempels worden na het zien van resultaten niet aangepast):**
+   - **H1 Bewijs:** ≥ 20 jr ontdekkingsdata, min(NW, bootstrap)-t ≥ 3 *of* BH-q ≤ 0,10 over de catalogus, ≥ 60% 5-jaarsvensters positief, beide helften positief, niet gedragen door één decennium (ex-beste-decennium SR ≥ 50% van totaal).
+   - **H2 Benchmark (D-038):** netto-SR én maxDD/Calmar beter dan buy-and-hold van dezelfde reeks, **per vehikel** (ETF/future/CFD), met vehikel-kosten uit `vehicles.csv`; portefeuille ook vs 60/40.
+   - **H3 Reserve-OOS:** één keer, gezamenlijke run (D-038), teken gelijk en SR ≥ 50% van ontdekkings-SR; faalt → geen advies, regel terug naar catalogus.
+   - **H4 Verwachting netto:** portefeuille-SR backtest × 0,6 (haircut) bij een door Sandro gekozen DD-budget (default p95-DD ≤ 20%) geeft ≥ €400/mnd na kosten en box-3; zo niet → doel bijstellen is Sandro's besluit, niet het onze.
+   - **H5 Uitvoerbaarheid:** vehikel beschikbaar voor NL-retail (UCITS/future/CFD), granulariteit ok (geen contract > 25% van kapitaal), retail-kosten geverifieerd bij de gekozen broker (nu niet: VEHICLE §5), valuta-beleid vastgelegd, box-3-check door fiscalist.
+   - **H6 Forward-papier:** ≥ 3 mnd op dagdata, gedrag binnen tracking-band (kosten, slippage, signaal) t.o.v. engine; geen alarm.
+   - **H7 Audit (D-005):** onafhankelijke Auditor herimplementeert en repliceert (lookahead, dividend/total-return, survivorship, roll) vóór advies.
+   - **H8 Gefaseerde start (advies aan Sandro, niet aan het team):** ≤ 25% van het kapitaal de eerste 6 mnd; opschalen alleen als live-tracking binnen band; nooit hefboom boven vooraf gekozen vol-doel.
+4. **Data/vehikel.** Dagdata (D2) en `vehicles.csv`; niets nieuws.
+5. **Verwachting.** Nu: H1 alleen C02 (en C17 net onder); H2 C02 ja op CFD-basis; H3–H8 open. Kans dat alle acht ooit gehaald worden voor ≥ €400/mnd: ≈ 15–25% (CEO 20–30% voor €400–500; ik iets lager door live-haircut en 421 trials). €800–900: ≈ 3–5%.
+6. **Beslisregel.** Go-advies = H1–H8 alle waar. Tussenstanden: 'sleeve goedgekeurd voor portefeuille' = H1+H2. Drempels vast.
+7. **Falen.** Te streng → we adviseren nooit (acceptabel: het echte geld staat op het spel, een gemist kans kost minder dan een vals-positief); te los → 421 trials en 97%-beta-achtige regels (C02) kunnen marktbeta zijn met een DD-filter i.p.v. alpha — H2 (benchmark) en H1 (decennia) zijn daarvoor bedoeld.
