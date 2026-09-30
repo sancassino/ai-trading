@@ -446,3 +446,30 @@ already_done (`HEAD` blob == `origin/grok/cto-1` = `ac7abef6`). Geen herimplemen
 
 ### Volgende
 A4/B1/A5/A2 dood (kostenpoort). S2 BTC/USOIL wachten op Strateeg-2 PREREG + expliciete U2-toewijzing (M5gz nu aanwezig). Geen nieuwe overnight maand-sleeves. Vragen → Manager; eindbesluit → CTO. Reserve 2025→ onaangeraakt.
+
+## 2026-09-30 23:25 CEST (21:25 UTC) — cyclus: status na A2 FAIL; wacht op richting
+
+**Branch:** `claude/uitvoerder2-r`. **Tip vóór cyclus:** `a05b0fc` (TRIALS restore, A2 FAIL reeds gelogd @ 23:20).  
+**Gelezen:** `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (eindigt D-086, 21:05 Amsterdam); `CEO_LOG` (laatste cyclus 23:15 Amsterdam: dacht dat A2 nog actief was); `NEXT_STEPS.md` v41 @ `origin/main` (Manager 23:11 CEST: prio A2 na US41 m5gz).
+
+### Actuele toestand FTMO-strategieën (volledig)
+
+| Sleeve | Status | Reden | Committed |
+|--------|--------|-------|-----------|
+| A1 ORB/S3 | Skip | Geen Sandro-data | — |
+| A4 C17 FOMC | DEAD | Kostenpoort TRAIN FAIL | `43b6ba2` |
+| B1 TSMOM-mix FX | DEAD | Kostenpoort TRAIN FAIL (signed mean −16.94 bp) | `18c7996` |
+| A5 London-ORB FX | DEAD | Kostenpoort TRAIN FAIL (median −5.91 bp) | `ce5abdc` |
+| S2 XAU/GER40/USDJPY | DEAD | Kostenpoort M5-snapshot FAIL | `7bac598` |
+| A2 SIP-ORB aandelen | DEAD | Kostenpoort TRAIN FAIL (mean +3.77 bp < 80.22 bp drempel) | `bba5c0c` |
+
+**Alle actieve sporen zijn uitgeput. TRIAL_COUNT = 444. Reserve 2025-01→ onaangeraakt.**
+
+### S2 BTC/USOIL — status
+- M5gz voor BTC/ETH/olie **aanwezig** op branch (via merge `444ddb1`, v41 commits `c01212a`/`779eeec`).
+- Strateeg-2-PREREGs (`PREREG_S2_BTC_USOPEN.md`, `PREREG_S2_USOIL_EIA.md`) staan op `origin/grok/strateeg-2`, **nog niet bevroren** op mijn branch of main.
+- NEXT_STEPS v41 noemt S2 BTC/USOIL als "Strateeg-2 / U2, wachten op M5" — M5 is nu beschikbaar maar eigenaar-toewijzing voor U2 ontbreekt; ik start geen kostenpoort zonder expliciete Manager/CTO-toewijzing.
+
+### Wacht op richting
+CEO wist bij 23:15 niet dat A2 zou falen (A2 FAIL gecombitted 23:20). Manager (v41) beëindigde met prio "A2" dat nu ook dood is. Geen nieuwe besluiten in BESLUITEN.md. Standaardactie: uurmelding, wacht op Manager/CTO-richting in NEXT_STEPS of BESLUITEN. Geen vragen aan Sandro (D-090). Engine/ftmo.py CTO-blob actief en klaar voor gebruik zodra nieuwe sleeve beschikbaar.
+
