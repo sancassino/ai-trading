@@ -89,3 +89,24 @@ Uitsplitsing per activum/decennium/zonder obligatie (Uitvoerder-1): SR 0,94 = ex
 **Conclusie voor Sandro/S10b:** C02 herbenoemd naar **DD-filter (risicobeheer)**; het rendement/DD-frontier leunt op precies die DD-reductie, maar 'SR 0,47 alfa' uit de VS-ontdekking repliceert niet als edge op andere markten. C52 = structureel goed, maar regime-afhankelijk.
 **Vragen/aanvragen:** EM-markten (BVSP, MXX, JKSE, SENSEX) niet gedraaid: FX-reeksen (BRL/MXN/IDR/INR) ontbreken → aanvraag aan Uitvoerder-1 (R2-006); run 6 dan mogelijk.
 **Reserve-run-plan (D-065):** `r2_reserve.py` uitvoeren op **01-10 12:00 Amsterdam** = 10:00 UTC; de uurroutine vuurt op :25 → **eerste cyclus ≥ 10:25 UTC** draait hem (RESERVE_RELEASED=1 --confirm-once), tenzij ik eerder een technische reden meld. Shortlist zoals D-065 (C52, C02, C17, C54qa, C55, C44, C16, C33 + P-ETF-a/b, P1, P-breed, P-ETF+ + C57 informatief); PREREG_PORT2 P-breed-2 als extra rij. 'Falen' (S11 §5): gepoold excess < 0 én onderkant 90%-BI < −1,0 SR → 'verdacht', anders 'niet informatief'. Volgende: run 6 (prio-4-resten C06, C08, C23, C28, C31, C46, C47) met PREREG vóór resultaat.
+
+## 2026-09-30 (uurcyclus 16:25 UTC ≈ 18:25 Amsterdam) — run 6 (D-071): plateau + lange-historie-toets; geen trials
+**Verwerkt:** D-070 (herlabeling: C02 = DD-filter/risicobeheer, P-ETF-a = risk-managed allocation, geen bewezen alfa), D-071 (run 6-volgorde), D-072…D-076 (premie-verwachting ≈ €240/mnd totaal, hefboom helpt niet; MC p(≥ €400) — Uitvoerder-1 heeft `results/port/QA_exposures_MC.md`; catalogus v2-premies wacht op de Strateeg). `PREREG_CAT6.md` gecommit vóór het resultaat (geen trial). C52-module kreeg parameters `win/tgt/gold_mult` (defaults = bevroren regel; reproductie SR 0,78 bevestigd).
+### 1. Plateau (`results/R2/run6_plateau.md`) — geen vlijmscherpe pieken
+- **C02, SMA 8/10/12 mnd:** buitenland gepoold ΔSR +0,11/+0,10/+0,08 (teken gelijk), ΔmaxDD −29/−28/−25 pp, ΔmaxDD < 0 in 12/12 voor alle vensters; SPX-SR 0,31/0,36/0,35 (basis 0,36 vs buren 0,33 → geen piek); vijf ontdekkingsindices SR 0,38/0,41/0,39.
+- **C52 lang** (basis SR 0,78): venster 30/90: 0,76/0,76; target 10%/12%: 0,79/0,80 (cap ≤ 1× → nauwelijks effect, DD 16,7–16,8%); goud ×0,5/×1,5: 0,77/0,76 → **plateau** (alle binnen ±0,03). **C52 basis** (0,65): 0,62–0,67 → **plateau**. De hoge SR is dus geen parameterpiek.
+### 2. Lange-historie (maandfrequentie, 1976→2024, Pink Sheet goud/grondstoffen + TNX-obligatie; `results/R2/run6_longhist.md`)
+| periode | RP 3 activa SR / maxDD | 60/40 SR / maxDD | (RP 4 activa) | SPX B&H SR |
+|---|---|---|---|---|
+| 1976–79 | +0,46 / 5% | −0,25 / 12% | +0,90 / 3% | −0,12 |
+| 1980s | +0,17 / 11% | +0,39 / 18% | −0,38 | +0,31 |
+| 1990s | +0,25 / 7% | +0,94 / 9% | +0,17 | +0,96 |
+| 2000s | +0,81 / 11% | +0,03 / 29% | +0,87 | −0,15 |
+| 2010s | +1,20 / 7% | +1,37 / 7% | +0,92 | +1,04 |
+| 2020–24 | +0,47 / 14% | +0,50 / 20% | +0,46 | +0,70 |
+| 2022 | −10,7% | −16,5% | −8,5% | −18,2% |
+| **1976–2024** | **+0,51 / 14%** | **+0,51 / 29%** | +0,38 / 15% | +0,46 / 51% |
+**Lezing (eerlijk):** over 48 jaar heeft risicopariteit **dezelfde SR als 60/40 (0,51 vs 0,51)** maar de **halve maxDD (14% vs 29%)** en lager CAGR (7,7% vs 9,4%); het SR-voordeel van +0,3 in 2001–24 is niet structureel: RP wint in de jaren 70 en 2000s (rente/inflatie-schok, aandelenbear), verliest duidelijk in de aandelenbull 1980s/1990s (SR 0,17/0,25 vs 0,39/0,94). Dat bevestigt D-070: de structuur is **DD-beheersing**, geen SR-alfa; de 2001–24-ontdekking (SR 0,78–0,94) leunt op twee regimes. Vier activa met grondstoffen verbetert de jaren 70 maar niet de 80s/90s; over de hele periode SR 0,38 (slechter dan 3 activa). 2022 is pijnlijk voor iedereen (RP −8,5…−10,7%, 60/40 −16,5%).
+**Caveats:** SPX vóór 1988 zonder dividend (onderschat 60/40 en SPX in de jaren 70/80 → verbetert de relatieve positie van RP; de kloof in de jaren 80 zou met dividend verder ten nadele van RP uitvallen); Pink Sheet = maandgemiddelde (vlakt vol af, autocorrelatie); goud pas vanaf 1973 vrij; synthetische obligatie (D=8); maandelijkse i.p.v. dagelijkse herweging.
+**Consequentie voor verwachting/frontier:** de backtest-alfa boven 60/40 van P-ETF-a moet als regime-afhankelijk worden gelezen; beter houdbaar: 'zelfde SR als 60/40, halve DD, bij lagere vol' → past bij D-072/D-073 (verwachting ≈ €240/mnd totaal).
+**Volgende:** (1) reserve-run 01-10 10:00 UTC (eerste cyclus ≥ 10:25 UTC); (2) EM-toets zodra FX beschikbaar (R2-006); (3) diversifier-screen op D2b en D-074-premies zodra Strateeg-catalogus v2 er is (PREREG per premie vóór resultaat); prio-4-resten vervallen tenzij tijd over (D-071.4).

@@ -49,10 +49,10 @@ def load_market(m):
     return dict(name=m, dates=d, c=c, r=r, rfd=rfd, rflabel=lab)
 def month_end_idx(dates):
     ym = np.array([x.year * 12 + x.month for x in dates]); return list(np.where(np.r_[ym[1:] != ym[:-1], True])[0])
-def faber(r, rfd, rebal, ter=TER):
+def faber(r, rfd, rebal, ter=TER, nwin=10):
     n = len(r); P = np.cumprod(1 + r); pos = np.zeros(n)
-    for j in range(9, len(rebal)):
-        i = rebal[j]; nxt = rebal[j + 1] if j + 1 < len(rebal) else n; pos[i:nxt] = 1.0 if P[i] > P[rebal[j - 9:j + 1]].mean() else 0.0
+    for j in range(nwin - 1, len(rebal)):
+        i = rebal[j]; nxt = rebal[j + 1] if j + 1 < len(rebal) else n; pos[i:nxt] = 1.0 if P[i] > P[rebal[j - nwin + 1:j + 1]].mean() else 0.0
     pp = np.r_[0.0, pos[:-1]]; turn = np.abs(pos - np.r_[0.0, pos[:-1]])
     x = pp * (r - rfd) - turn * RT_HALF - pp * ter / 252
     return x, pos
