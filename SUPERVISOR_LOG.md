@@ -23,3 +23,4 @@
 - 2026-09-30 11:00 — Chat-website gebouwd (chatweb/, CHAT_PROTOCOL.md). Mijn 2 routines uitgebreid met chat-stap; CEO/Strateeg-routines kan ik niet wijzigen (alleen vanuit hun eigen chat) → Sandro plakt een korte opdracht in hun chats.
 - 2026-09-30 11:03 — Sandro: chat-plan gepauzeerd. Chat-stap uit mijn 2 routines gehaald; chatweb + CHAT_PROTOCOL naar archief/chat_plan/. CEO/Strateeg-routines waren niet gewijzigd (kon ik niet) → niets terug te draaien. Werk gaat door zoals voorheen.
 - 2026-09-30 11:03 — Trigger :05. S1 afgewezen (4/4; verdwijnt na 2023, corr ORB 0,52 → patroon 'vervalt na publicatie'). M-008 aan CEO: waarde S3 daalt, decay-toets toegevoegd (standaardactie C). NEXT_STEPS v15.1. Chat-plan verwijderd op verzoek Sandro.
+- 2026-09-30 11:06 — :05 gefired; geen nieuwe commits (main laatst S1 08:55Z; CEO/Strateeg geen nieuws sinds 08:50/08:51Z). Agent bezig met S2; wachtrij: S2, S3-voorb., Q6, Q7.
