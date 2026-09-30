@@ -281,3 +281,15 @@ Sandro's besluit: Claude = diep nadenken (CEO + Auditor), Grok = snelle uitvoeri
 - Auditor blijft op Claude: onafhankelijkheid vereist (kan CTO's eigen werk niet auditen)
 - `GROK_CTO_INSTRUCTIE.md` staat op main: volledige kickoff-prompts voor alle nieuwe Grok-agents
 - CEO-model wordt verhoogd door Sandro (naar Opus of hogere Sonnet)
+
+**D-091 · Zoekrichting na uitputting A/S2-sporen (CEO, in overleg met CTO-log C-004, 2026-10-01 00:05)**
+
+Stand: A4/B1/A5/A2/S2-XAU/GER40/USDJPY/USOIL dood op kostenpoort (Auditor AUDIT_2 bevestigt onafhankelijk). Enige sleeve met echte bruto-edge: **S2-BTC US-open, mean bruto +22,9 bp, kosten/stress PASS, alleen FAIL op power (N=132 < 150)**. Patroon: kosten (1–3 bp RT + swap) eten edges van <10 bp; alleen instrumenten met hoge volatiliteit t.o.v. kosten kunnen slagen.
+
+1. **S2b BTC+ETH gepoold (Strateeg-2, eerst):** nieuwe PREREG, regel van S2-BTC ongewijzigd bevroren, ETH erbij als tweede instrument (M5 staat in data/m5gz), drempel N ≥ 150 gepoold. Geen wijziging van de S2-BTC-PREREG zelf (post-hoc drempel verschuiven is verboden). PREREG-commit vóór enig resultaat; CTO draait gate; bij PASS door naar t-test + `ftmo_ev()`.
+2. **Kosten/volatiliteit-screen (Uitvoerder-2, nu niet meer idle):** over alle 69 symbolen in data/m5gz: RT-kosten (COSTS_FTMO) gedeeld door mediaan dagrange en door mediaan intraday-range (2021–2024-12). Geen strategie, geen resultaten, reserve onaangeroerd. Output `results/screen_cost_vol.csv`, gerangschikt. Deze ranglijst bepaalt het universum voor nieuwe hypotheses.
+3. **Strateeg en Strateeg-2 (elk 2 nieuwe, niet-kloon PREREGs):** alleen op instrumenten uit top-10 van de screen; poort-eis vooraf: verwachte bruto ≥ 3× RT-kosten haalbaar volgens mechanisme. Liever 1–3 uur houdtijd of dag-breakouts dan korte scalps; geen overnight maandsleeves. Geen klonen van dode sleeves.
+4. **CTO — ambitie-kalibratie:** bereken met `ftmo_ev()` de minimale Sharpe (dagelijks, σ-schaal als vrije variabele) waarvoor net_ev ≥ €800/mnd bij fee €540 en split 80%; rapporteer tabel SR × skew. Dit is de doelmaat voor alle kandidaten ("SR-drempel"), geen aparte vraag aan Sandro.
+5. **Reserve-hygiëne GS01:** "test 2024–26" overlapt met reserve 2025+. Test = alleen 2024 tot CEO-vrijgave. Strateeg past GS01 aan met een erratum-commit vóór elke run.
+6. **Escalatiepad (geen vraag aan Sandro):** als na 4 cycli geen enkele sleeve de kostenpoort + power haalt, schrijft CEO D-092 met herzien plan (bv. andere prop-regels/kleinere account/stoppen). Sandro beslist alleen over definitief stoppen.
+7. **Tokenbeleid:** alle agents loggen alleen in bestanden; chat-output max één regel.
