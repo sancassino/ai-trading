@@ -18,3 +18,4 @@
 - 2026-09-30 10:20 — Manager-routine heringesteld: 2 routines (:05 = trig_01Ew4hbg…, :35 = trig_01M1ULsp…) = elke 30 min (min. interval per routine is 1 uur). Strateeg-kickoff-prompt uitgebreid met triggers (:20/:50), cyclus, sjablonen.
 - 2026-09-30 10:36 — Trigger :35 (handmatig door Sandro-bericht) — Strateeg-branch gelezen (plan + S1–S3 goed). Gedaan: NEXT_STEPS v14 (S0 kostenmeting, S1, S2, S3 wacht op data; aangescherpte beslisregels), FTMO nieuwsregel geverifieerd (alleen Standard-funded), fee onbevestigd, EINDVERSLAG bijgewerkt.
 - 2026-09-30 10:37 — :35 gefired; geen nieuwe commits sinds v14 (alleen R1 afgewezen, al bekend). Agent pakt v14 binnen 10 min op.
+- 2026-09-30 10:43 — Sandro: geen beslissingen meer wachten; nieuwe CEO-rol. Gedaan: VRAGEN_MANAGER.md (M-001…M-007 met standaardacties), SANDRO_ACTIES.md (leeg, CEO), ORGANISATIE/COORDINATION aangevuld, CEO-kickoff-prompt volgt. Agent pakt v14 op zodra R4 klaar is (nu nog R2/R4).

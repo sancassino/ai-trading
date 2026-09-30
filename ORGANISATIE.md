@@ -33,3 +33,11 @@
 - Geen omzeilen van beperkingen van websites/APIs; geen gokgedrag/loterijconstructies (FTMO-voorwaarden); geen echte-geld-acties zonder Sandro.
 - Elk resultaat: SR na kosten, correlatie met bestaande sleeves, dip-profiel (dagverlies/dip), scheefheid.
 - Doel-lat (Q1/Q1b/R3): elke-dag-vlak + positief-scheef → SR ≈ 1 nodig; overnight/negatief-scheef → SR 3–4. Zoek daarom dagelijks-vlakke, positief-scheve, kosten-lage strategieën.
+
+
+## Aanvulling 2026-09-30 10:43 — CEO-rol en beslissingsproces
+- **CEO (nieuwe Claude-chat, eigen branch)** beslist over alles wat de Manager/Strateeg/Uitvoerder aan vragen, blokkades en trade-offs hebben, met als mandaat: sneller, slimmer, beter. Sandro beslist niet meer mee, tenzij de CEO iets in \`SANDRO_ACTIES.md\` zet (handmatige acties, geld, accounts, juridisch).
+- **Bestanden:** \`VRAGEN_MANAGER.md\` (Manager), \`VRAGEN_STRATEEG.md\` (Strateeg), \`VRAGEN_UITVOERDER.md\` (Uitvoerder, in RUNLOG-branch main) → CEO beantwoordt in \`BESLUITEN.md\` en beheert \`SANDRO_ACTIES.md\`. IDs: M-nnn, S-nnn, U-nnn; besluit-ID D-nnn met verwijzing.
+- **Nooit wachten:** elke vraag heeft een *standaardactie*; na 60 minuten zonder besluit voert de vragensteller die uit en gaat door. Een besluit kan een standaardactie later terugdraaien.
+- **Ritme (Amsterdam):** Manager :05/:35 · CEO :10/:40 · Strateeg :20/:50 · Uitvoerder */10.
+- **Harde grenzen (CEO mag niet zelf):** echt geld/betalingen, echte accounts of trades, accounts op Sandro's naam aanmaken, omzeilen van ToS/beperkingen van sites/APIs, FTMO-voorwaarden schenden. Dit gaat via \`SANDRO_ACTIES.md\`. Projectniveau-beslissingen (stoppen/doel wijzigen) mag de CEO nemen, maar hij **meldt** ze aan Sandro (geen toestemming vragen); Sandro kan altijd overrulen.

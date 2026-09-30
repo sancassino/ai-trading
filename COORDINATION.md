@@ -27,3 +27,6 @@ Steady-state is opgeheven op verzoek van Sandro. Uitvoerder controleert NEXT_STE
 
 ## Aanvulling 2026-09-30 10:15
 Nieuwe rolverdeling: zie ORGANISATIE.md (Manager/Strateeg/Uitvoerder/Auditor). Manager-uurroutine gepauzeerd op verzoek van Sandro. Uitvoerder blijft */10 checken (alle remote branches).
+
+## Aanvulling 2026-09-30 10:43
+Vragen aan Sandro gaan niet meer rechtstreeks: Manager schrijft ze in VRAGEN_MANAGER.md, CEO beslist in BESLUITEN.md. Standaardactie na 60 min. Manager meldt Sandro alleen nog korte statusregels.
