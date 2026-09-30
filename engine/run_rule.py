@@ -119,7 +119,7 @@ def net_returns(df, pos, spread_mult=1.0):
 # ---------- vehikels (D-038) ----------
 VEHICLE_DEFAULT = {  # rt_bp = rondreis per eenheid wijziging; ter = %/jr op |positie|; short/cash/financiering-semantiek
     "cfd": {"rt_bp": None, "ter": 0.0, "short": True, "cash_rate": False, "model": "cfd"},
-    "etf": {"rt_bp": 3.0, "ter": 0.10, "short": False, "cash_rate": True, "model": "etf"},
+    "etf": {"rt_bp": 13.0, "ter": 0.07, "short": False, "cash_rate": True, "model": "etf"},   # VEHICLE_ANALYSE v1: 0,05%/kant commissie + ≈ 3 bp spread; TER 0,07%
     "future": {"rt_bp": 1.0, "ter": 0.0, "short": True, "cash_rate": True, "model": "future", "roll_bp": 0.5, "rolls": 4},
 }
 
@@ -132,6 +132,7 @@ def vehicles():
     return v
 
 
+TR_PROXY = {"SPX": "SPX_TR"}   # DAX = performance-index (al total return); overige: prijsindex (dividend genegeerd, vermeld)
 _RF = None
 
 
@@ -158,6 +159,13 @@ def net_returns_vehicle(df, pos, spread_mult, veh):
     if not V["short"]:
         pos = np.maximum(pos, 0.0)
     c = df["close"]; r = np.r_[0.0, c[1:] / c[:-1] - 1]
+    tr = TR_PROXY.get(df["name"])
+    if tr and os.path.exists(f"data/daily/{tr}.csv"):     # total return i.p.v. prijsindex waar beschikbaar (ETF acc / future)
+        t = load_daily(tr, "adjclose"); tmap = dict(zip(t["date"], t["close"]))
+        for i in range(1, len(c)):
+            a, b = tmap.get(df["date"][i - 1]), tmap.get(df["date"][i])
+            if a and b:
+                r[i] = b / a - 1
     p_prev = np.r_[0.0, pos[:-1]]
     turn = np.abs(np.diff(np.r_[0.0, pos]))
     cost = turn * (V["rt_bp"] / 2) * 1e-4 * spread_mult
