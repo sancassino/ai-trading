@@ -1,17 +1,24 @@
-# EINDVERSLAG (Manager, 2026-09-30 18:10) — voor Sandro
+# EINDVERSLAG (Manager, 2026-09-30 19:10) — voor Sandro, in gewone taal
 
-## Doel v2 (Sandro via CEO D-032)
-Echt eigen kapitaal €80k · ambitie €800–900/mnd · **€400–500/mnd is ook succes** bij een robuuste edge (≥ 20 jaar backtest, weinig gaps, realistische kosten, benchmark-eis vs buy-and-hold). Alleen Sandro beslist over stoppen/bevriezen/geld/echte trades.
-**Kans (CEO D-035, onzeker):** robuuste €400–500/mnd ≈ 20–30%; €800–900 ≈ 5%.
+**Dit is geen beleggingsadvies.** Alleen jij beslist over stoppen, geld en echte trades. Er is nog niets uitgevoerd met echt geld.
 
-## Stand (kort)
-1. **FTMO-pad (fase 1):** 414+ varianten, vrijwel alles afgewezen na kosten; ORB dag-geclusterd t 1,81; S3 (2011–20) loopt via Dukascopy-feed zonder mens (drempel: eenzijdig dag-geclusterd t ≥ 2,0, bevroren).
-2. **Fase 2 (catalogus op 20–50 jaar dagdata):** 34 dagreeksen (1927–2026) in de repo, engine gebouwd; **catalogusrun 1 (7 regels): alleen C02 (Faber SMA-10m op 5 indices) haalt de ontdekkings-gate** (min t 3,14; SR 0,32; BH-q ≈ 0,003; skew −0,61, maxDD 54%, dagverlies 13%) → naar shortlist; QA-eisen (benchmark, total return, cash-rente, uitvoering) lopen. TSMOM/carry/cross-asset-momentum ≈ 0 na kosten; C17 (FOMC-cyclus) net niet (t 2,85–3,05).
-2b. **Catalogusrun 2 (Uitvoerder-2):** door de ontdekkingspoort: all-weather (C52; SR 0,65–0,79, maxDD ≈ 15% vs 31% bij 60/40), Carver-trend over 16 instrumenten (C54, alleen via futures; bij €80k deels onuitvoerbaar), Faber via ETF (C02; SR 0,47). Eerste kandidaat-portefeuille P1 (ontdekking 2001–2024): SR 0,84, CAGR 10,7%, maxDD 15,6% vs 60/40 SR 0,49 — **nog geen bewijs**: sleeves gekozen na zien van de data, obligatie-bull 1981–2020, 2020s-SR ≈ 0,5 (≈ 5% CAGR bij 10% vol, krap onder €400/mnd). Reserve-OOS (1,75 jr, lage power) pas na regime-stress en vooraf vastgelegde portefeuilleregel (uiterlijk 01-10 12:00).
-2c. **Verwachting (eerlijk, ontdekking + haircut 30–50% op excess):** ongehefelde ETF-portefeuille P-ETF-a ≈ **€350–430/mnd totaal**, waarvan cash ≈ €160 (EUR) — **alfa boven cash ≈ €190–260/mnd** (vóór box 3). Cash alleen: ≈ €160 (EUR) tot ≈ €280 (USD-rente 4,25%). SR 0,94 in ontdekking, 2021–24 slechts 0,53 (obligatiebull-effect). **Tussenresultaat (D-070/D-072, Strateeg-VERWACHTING v1):** premie-gebaseerd (niet backtest) ligt de ongehefelde ETF-portefeuille op ≈ **€140–340/mnd totaal (midden ≈ €240)**, waarvan cash ≈ €163 → **toegevoegde waarde boven cash midden ≈ €79/mnd**; de backtest (≈ €380 alfa) was grotendeels een gerealiseerde bull-premie (obligaties/goud 2001–24). Het project levert vooral **lager risico per rendement** (DD-filter, 1/σ-weging), geen aangetoonde alfa. Dit is een uitkomst, geen stopadvies; alleen Sandro beslist. **Run 5 (cross-market, 12 buitenlandse markten): Faber (C02) is een risicobeheerder, geen aangetoonde alfa** (DD-reductie −28 pp in 12/12, maar even groot op geschudde nulpaden; ΔSR +0,10, p = 0,46). All-weather (C52) is beter dan 60/40 door structuur (risicopariteit, goud-/obligatiebull), geen timing-alfa. Gevolg: de verwachting voor P-ETF-a wordt herrekend met C02 als DD-filter; SR 0,94 is een bovengrens. Frontier (DD-budget ≤ 20%): met ≈ 1,6× hefboom (broker-kosten onbevestigd) €406–504/mnd totaal (haircut 50–30%); zonder hefboom €375–412 bij haircut 30%. Run 4: geen extra diversifier gevonden. Reserve-run 01-10 12:00 (weinig power); forward-papier start 01-10.
-3. **Nieuwe werkstromen:** V (vehikel-analyse voor eigen kapitaal in NL/EU: UCITS-ETF/micro-futures/CFD; box 3 alleen benoemd) en catalogus-klassen voor eigen kapitaal (vol-managed index, risk-parity, dual momentum, Carver-forecasts, DAA).
-4. **Web-leren (CEO/Strateeg, D-034):** web = claim, geen bewijs; alleen na replicatie op eigen data. Inzichten: prop-slaagkans 5–14%; SG Trend CAGR ≈ 5%, SR ≈ 0,34 sinds 2000 → verwachting bescheiden, diversificatie is de hefboom.
-5. **Onbevestigd:** FTMO-fee €540 (niet meer beslissend), box-3-effect (vast ≈ €37/mnd bij €80k volgens indicatieve rekenregel, geen advies), retail-broker-kosten.
+## 1. Waar staan we? (het korte antwoord)
+- **Eerste doel (FTMO-challenge, dagelijks handelen):** na kosten gaf bijna niets een betrouwbaar voordeel (≈ 440 varianten getest). Daarom is het doel op jouw verzoek verlegd naar **eigen kapitaal €80k** met langzame, gespreide strategieën getest op 20–100 jaar data.
+- **Wat het project nu heeft gevonden:** een *risicogestuurde, gespreide allocatie* (aandelen, obligaties, goud, met een trendfilter) in gewone UCITS-ETF's. In 48 jaar geeft die **hetzelfde rendement per risico als een gewone 60/40-portefeuille, maar met de helft van de maximale daling (14% i.p.v. 29%)**. Het trendfilter (Faber) beschermt tegen dalingen, maar **levert geen bewezen extra rendement** (getest op 12 buitenlandse markten, tegen geschudde nulpaden).
+- **Verwachting (op langetermijnpremies, niet op de backtest):** circa **€240 per maand totaal** op €80k (bandbreedte €140–340), waarvan circa **€163 gewoon rente op cash (EUR)**. Wat de strategie *boven cash* toevoegt: circa **€60–80 per maand** (bandbreedte −€34…+€144), vóór belasting (box 3) en kosten. Het oorspronkelijke doel €800–900 is buiten beeld; **€400–500 totaal haalt deze aanpak vrijwel zeker niet** (kans ≈ 5%; afhankelijk van aannames 0,4–28%). De backtest liet meer zien (circa €380 boven cash), maar dat was vooral geluk met obligaties en goud in 2001–2024.
+- **Wat het wél oplevert:** een goed gedocumenteerde, getoetste allocatie met lage daling, en een eerlijke kostenbeschrijving; de specificatie staat in `ALLOCATIE_V1.md` (Strateeg/Manager).
 
-## Team en ritme
-Manager :05/:35 · CEO :10/:40 · Strateeg :20/:50 · Uitvoerder */10 (werkstromen D/R/F). Weekrapport maandag (eerste 2026-10-05).
+## 2. Wat loopt er nu
+- **Reserve-toets 1 oktober 12:00:** eenmalige controle op de nog niet gebruikte data 2025→ (alleen grove fouten zijn te vangen; te weinig data voor meer).
+- **Papier-forward** start 1 oktober 22:25 UTC: dagelijks de allocatie op papier volgen (3 maanden minimaal), zodat we echte out-of-sample cijfers krijgen.
+- **Premie-lijn (run 7):** factor-ETF's, optie-premie (put-writing), landenrotatie, waarderings-timing; elk verwacht ≈ €10–30/mnd extra, met haircut 30–60%.
+- **Team-ritme:** Manager :05/:35 · CEO :10/:40 (straks minder vaak) · Strateeg :20/:50 · Uitvoerders continu. Weekrapport maandag (eerste 2026-10-05).
+
+## 3. Wat jij (later) moet beslissen — niets dringends
+1. Welk doel of tussendoel, en welke maximale daling je accepteert (nu: standaard ≤ 20%).
+2. Of €80k hiervoor bedoeld is, of dat cash/geldmarkt (≈ €163/mnd, nagenoeg zonder risico) voldoende is.
+3. Valuta (EUR/USD), broker, en een fiscalist voor box 3 — **alles nog onbevestigd** (TER/ISIN, kosten, belasting).
+Vóór een echte stap: reserve-toets, ≥ 3 maanden forward-papier, onafhankelijke controle (Auditor), gefaseerde start.
+
+## 4. Onzekerheden in één zin
+Sleeves zijn gekozen nadat de data bekend was; 441 trials; de verwachting hangt aan aannames over rente, waardering en goud; box 3, broker-kosten en TER's zijn niet geverifieerd.

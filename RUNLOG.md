@@ -855,3 +855,18 @@ qa_exposures_mc.py → results/port/QA_exposures_MC.md (geen trial; ontdekking �
 (3) Premie-verwachting met echte exposures (kosten −0,20%/jr aangenomen): alfa laag/midden/hoog ≈ −€34 / €58 / €144 per mnd; totaal met EUR-cash (€STR 2,44%) €128 / €220 / €306; met USD-cash (4,07%) €237 / €329 / €415.
 (4) Monte-Carlo (200k; premies ~ N(midden, SE), EUR-cash vast): p(totaal ≥ €400) 0,4% (SE 2%) … 3,8–5% (SE 3% / corr 0,3); incl. gerealiseerd 10-jr-gemiddelde (portefeuillevol 6,1%) 12–13%; p(alfa ≥ €287) ≤ 1,7% (parameter) resp. 7–8%. Mediaan totaal ≈ €220–224/mnd.
 Conclusie: bevestigt D-073 — met deze allocatie en premie-verwachtingen is ≥ €400 totaal onwaarschijnlijk (≈ 5%, of ≈ 12% als geluk over 10 jaar meetelt).
+
+## 2026-09-30 16:45 — v30 QA-1: Monte-Carlo prior-afhankelijk — p(totaal ≥ €400) 0,4–13% (waarderingsprior) vs 6–28% (historische prior); v30 punt 7 D2b/R2-006 afgerond
+
+qa_exposures_mc.py uitgebreid (geen trial): twee priors naast elkaar, exposures 2001–24 en 2021–24 (echte P-ETF-a-gewichten), EUR-cash vast op €STR 2,44%, kosten −0,20%/jr.
+Prior A — VERWACHTING-midden (waarderingscorrectie, CAPE ≈ 41; aandelen 2,0 / obligaties 1,0 / goud −0,25%): mediaan totaal €220–224/mnd; p(≥ €400) 0,4–5% (parameter, SE 2–3%), 12–13% incl. 10-jr-toeval; p(alfa ≥ €287) ≤ 1,7% resp. 7–8%.
+Prior B — historische lange termijn zonder waarderingscorrectie (4,5 / 1,2 / 0,5%): mediaan totaal €296–308/mnd; p(≥ €400) 6–20% (parameter), 25–28% incl. 10-jr-toeval; p(alfa ≥ €287) 1–9% resp. 16–18%.
+Label: **prior-afhankelijk** — geen enkel getal is 'de' kans; de belangrijkste onzekerheid is of de huidige waardering de aandelenpremie drukt.
+v30 punt 7: D2b en R2-006 afgerond (licenties per bron in RUNLOG/DATA_CATALOGUS); HKMA HIBOR derde poging HTTP 500 → definitief niet beschikbaar via deze route (niet omzeild); HKD-proxy: USDHKD-peg + US-rente (vermeld).
+
+## 2026-09-30 17:15 — v31 QA-2/3 (Uitvoerder-1): kosten/omloop P-ETF-a — NL-retail-vaste kosten eten ≈ €26/mnd extra (≈ ½ van de verwachte alfa); EUR-backtest hele allocatie
+
+qa_costs_eur.py → results/port/QA_kosten_EUR.md (geen trial; ontdekking ≤ 2024).
+Kosten/omloop (PREREG_PORT: maandelijks herwegen zonder drempel; 8 ETF's: SPY, 10j-obligatie, goud + 5 indices van C02): gemiddeld 2002–24 omloop 2,36× kapitaal/jr, ≈ 118 transacties/jr. Model A (engine: 6,5 bp per eenheid omloop) ≈ €122/jr (0,15%); model B (NL-retail €3,50 vast per transactie, web-claim €3–3,75, + 1,5 bp spread) ≈ €440/jr (0,55%); TER (0,07/0,10/0,12%, web-claims) ≈ €58/jr. Totaal A+TER ≈ €15/mnd (zit al in backtest/forward), B+TER ≈ €42/mnd → **≈ €26/mnd extra bij NL-retail-tarieven**, tegenover een premie-gebaseerde alfa boven cash van midden ≈ €58/mnd (D-075). Een drempelregel (bv. < 1% gewichtsverschil niet handelen) of minder instrumenten zou dit sterk verlagen, maar is een **andere regel** → alleen als vooraf vastgelegde gevoeligheid (voor ALLOCATIE_V1.1 / Strateeg).
+Analysefout eerst gemaakt en hersteld: posities op niet-handelsdagen (JP/DE-feestdagen) werden als 0 gelezen → neppe in/uit-transacties (omloop 3,86× → 2,36× na correctie).
+EUR-backtest hele P-ETF-a (backtest = gerealiseerde premies, vóór haircut/box 3): 2004–24 ongehedged CAGR 8,4% (vol 12,3%, maxDD 16,6%) ≈ €558/mnd, boven EUR-cash €472; gehedged 6,7% (vol 6,3%, DD 11,8%) ≈ €446, boven cash €361. 2021–24: ongehedged 11,1% (dollar sterk), gehedged 5,0% ≈ €335 totaal, €226 boven cash. Ongehedged hangt sterk van EURUSD af (vol ×2).
