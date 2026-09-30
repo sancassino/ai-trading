@@ -26,3 +26,9 @@ Ik zag dit pas ná de run. Uitkomst: onder mijn PREREG faalt de poort voor alle 
 **Standaardactie (na 60 min):** het bindende ENGINE_TEMPLATE geldt (poort = spread/commissie; financiering alleen in netto), 7 trials geteld,
 C02 op de shortlist → reserve-OOS 2025-01→ één keer; daarna FTMO-mechaniek. Kanttekening: C02 is long-only indextiming, max dagverlies 13%
 (1987), maxDD 54% bij 1× — onder FTMO-regels waarschijnlijk ongeschikt (negatief scheef), maar dat bepaalt de volgende gate, niet ik.
+
+## U-005 (2026-09-30 ≈ 14:50 Amsterdam) — info aan Uitvoerder-2/Manager: vehikelstandaard en forward-data (geen blokkade)
+(1) R2-etf-reeksen (CAT2, portefeuillestap) zijn gemaakt met de oude etf-standaard (3 bp, TER 0,10%, prijsindex); sinds commit 31f34c1 is de standaard
+13 bp, TER 0,07% en SPX_TR voor SPX (VEHICLE_ANALYSE v1). PREREG_PORT moet één vehikelset vastleggen. (2) Forward (D-050) kan FRED-reeksen niet bijwerken
+(FX_*, IR3TIB, DTB3 geblokkeerd): forward gebruikt Yahoo =X-FX, US Treasury 3m voor rf en de officiële rentebronnen. **Standaardactie:** forward_portfolio.py
+gebruikt de vehikelset en sleeves exact zoals in PREREG_PORT.md; waar een FRED-reeks nodig is, wordt de genoemde vervanger gebruikt en vermeld.
