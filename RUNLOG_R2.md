@@ -514,3 +514,37 @@ Scripts: `scripts/n1_cost_gate_train.py`, `n2_cost_gate_train.py`, `s2_midday_vw
 **Not started:** S2b BTC+ETH (CTO + COSTS RT-gap); dead A4/B1/A5/A2 not restarted. TRIAL_COUNT remains 444 (poort-fails). Reserve 2025→ untouched.
 
 **Next for U2:** idle until Manager/CTO assign (S2b bridge, XAU power path, or new PREREG). Strateeg note: N1 D1-ATR×1.5 looks mis-scaled for 30m drive (max \|drive\|/ATR ≈ 0.3–0.9 on train).
+
+
+## Cyclus 00:15 CEST — D-090 FASE 3 wait (NEXT_STEPS v45)
+
+**Branch:** `claude/uitvoerder2-r`. Tip vóór cyclus: `bdd6edb`. Merged `origin/main` → tip includes NEXT_STEPS **v45** (`34c41e6`).
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…D-091 @ `origin/claude/ftmo-trading-strategy-98mplz:BESLUITEN.md` / CEO_LOG (laatste: D-091 uitgevoerd; geen D-092)
+- `NEXT_STEPS.md` **v45** @ `origin/main` (Manager 00:14 CEST)
+
+### U2-directives (v45 §0 actie 1) — bindend
+- Nacht-queue DONE (`8c7a8e1`): N1/N2/MIDDAY STOP; XAU_AM_FADE gate PASS N=12≪120.
+- Screen DONE (`a383cb5`). S2b STOP (CTO `18a266a`).
+- **Nu: wacht toewijzing XAU power-pad of nieuwe PREREG van Strateeg;** merge `origin/main` regelmatig.
+- Dead set niet herstarten (A4·B1·A5·A2·S2-overlap/GER40/USDJPY/USOIL·N1·N2·MIDDAY·S2b).
+- PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025→ onaangeraakt.
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| P1 engine/ftmo.py validatie | already_done (blob sync + a/b/c in eerdere cycli) |
+| A4/A5/A2/B1 | DEAD (kostenpoort) — skip |
+| XAU_AM_FADE power-pad | Prio 1 v45 eigenaar CTO/U2, maar U2-actie = **wacht toewijzing**; geen nieuwe data/N-pad gecommit door CTO deze cyclus |
+| Nieuwe non-clone PREREGs (D-091.3) | Strateeg/Strateeg-2 open; geen nieuwe bevroren PREREG voor U2 sinds nacht-queue |
+| S2b BTC+ETH | STOP (CTO) — niet herstarten |
+
+**TRIAL_COUNT blijft 444.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Strateeg of Strateeg-2 levert 1–2 non-clone PREREGs op screen top-10 → dan U2 cost-gate.
+2. CTO/Manager wijst XAU_AM_FADE power-pad expliciet toe (meer data/N≥120; PREREG ongewijzigd) → dan U2 uitvoert.
+3. Escalatieklok D-091.6: na D-091 nacht-queue = cyclus 1 met 1 gate-PASS zonder power — geen Sandro-ping.
+
+Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material result).
