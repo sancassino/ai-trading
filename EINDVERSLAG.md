@@ -1,4 +1,4 @@
-# EINDVERSLAG (Manager, 2026-09-30 13:07) — voor Sandro
+# EINDVERSLAG (Manager, 2026-09-30 14:15) — voor Sandro
 
 ## Doel v2 (Sandro via CEO D-032)
 Echt eigen kapitaal €80k · ambitie €800–900/mnd · **€400–500/mnd is ook succes** bij een robuuste edge (≥ 20 jaar backtest, weinig gaps, realistische kosten, benchmark-eis vs buy-and-hold). Alleen Sandro beslist over stoppen/bevriezen/geld/echte trades.
@@ -7,6 +7,7 @@ Echt eigen kapitaal €80k · ambitie €800–900/mnd · **€400–500/mnd is 
 ## Stand (kort)
 1. **FTMO-pad (fase 1):** 414+ varianten, vrijwel alles afgewezen na kosten; ORB dag-geclusterd t 1,81; S3 (2011–20) loopt via Dukascopy-feed zonder mens (drempel: eenzijdig dag-geclusterd t ≥ 2,0, bevroren).
 2. **Fase 2 (catalogus op 20–50 jaar dagdata):** 34 dagreeksen (1927–2026) in de repo, engine gebouwd; **catalogusrun 1 (7 regels): alleen C02 (Faber SMA-10m op 5 indices) haalt de ontdekkings-gate** (min t 3,14; SR 0,32; BH-q ≈ 0,003; skew −0,61, maxDD 54%, dagverlies 13%) → naar shortlist; QA-eisen (benchmark, total return, cash-rente, uitvoering) lopen. TSMOM/carry/cross-asset-momentum ≈ 0 na kosten; C17 (FOMC-cyclus) net niet (t 2,85–3,05).
+2b. **Catalogusrun 2 (Uitvoerder-2):** door de ontdekkingspoort: all-weather (C52; SR 0,65–0,79, maxDD ≈ 15% vs 31% bij 60/40), Carver-trend over 16 instrumenten (C54, alleen via futures; bij €80k deels onuitvoerbaar), Faber via ETF (C02; SR 0,47). Eerste kandidaat-portefeuille P1 (ontdekking 2001–2024): SR 0,84, CAGR 10,7%, maxDD 15,6% vs 60/40 SR 0,49 — **nog geen bewijs**: sleeves gekozen na zien van de data, obligatie-bull 1981–2020, 2020s-SR ≈ 0,5 (≈ 5% CAGR bij 10% vol, krap onder €400/mnd). Reserve-OOS (1,75 jr, lage power) pas na regime-stress en vooraf vastgelegde portefeuilleregel (uiterlijk 01-10 12:00).
 3. **Nieuwe werkstromen:** V (vehikel-analyse voor eigen kapitaal in NL/EU: UCITS-ETF/micro-futures/CFD; box 3 alleen benoemd) en catalogus-klassen voor eigen kapitaal (vol-managed index, risk-parity, dual momentum, Carver-forecasts, DAA).
 4. **Web-leren (CEO/Strateeg, D-034):** web = claim, geen bewijs; alleen na replicatie op eigen data. Inzichten: prop-slaagkans 5–14%; SG Trend CAGR ≈ 5%, SR ≈ 0,34 sinds 2000 → verwachting bescheiden, diversificatie is de hefboom.
 5. **Onbevestigd:** FTMO-fee €540 (niet meer beslissend), box-3-effect (vast ≈ €37/mnd bij €80k volgens indicatieve rekenregel, geen advies), retail-broker-kosten.

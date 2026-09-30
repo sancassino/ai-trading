@@ -19,3 +19,9 @@ Kolommen: `datum, regel-id, variant, dataset, ontdekking/reserve, netto SR, t_ge
 
 ## 6. Werkwijze
 Strateeg levert per week 3–5 catalogusregels als bundel (één PREREG-sjabloon); Uitvoerder draait ze in één batch met dezelfde engine; Manager toetst QA (lookahead, kosten, clustering) en meldt blokkades schriftelijk; CEO beslist over prioriteit/gates.
+
+
+## Wijziging 2026-09-30 (D-038/D-045, Manager)
+- G-benchmark: netto SR én maxDD/Calmar beter dan buy-and-hold/60-40 van dezelfde reeks per vehikel; FTMO-dagverlies niet meer verplicht.
+- Vehikel `future`: FX = spot + renteverschil, doorlopende futures zonder rf-aftrek, index/obligatie r − rf. SR/t voor etf/future op overschotrendement (x − rf).
+- Reserve-OOS: één gezamenlijke run na bevroren shortlist en vooraf gecommitte portefeuilleregel, vrijgave CEO. Ongeldige TRIALS-rijen ('telt niet') blijven buiten BH.
