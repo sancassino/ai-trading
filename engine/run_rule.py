@@ -174,7 +174,14 @@ def net_returns_vehicle(df, pos, spread_mult, veh, cap=True):
         cash = np.clip(1 - np.abs(p_prev), 0, 1) * rf if (V["cash_rate"] and cap) else 0.0   # cap=False: kasrente op portefeuilleniveau (aggregatie 'som')
         fin = ter - cash
     else:  # future: overschotrendement + rente op het volledige kapitaal
-        gross = p_prev * (r - rf)
+        nm = df["name"]
+        if nm.startswith("FX_"):      # R2-fix: FX-future verdient het renteverschil (base − quote) bovenop spot; geen −rf
+            diff = (rate_on(nm[3:6], df["date"]) - rate_on(nm[6:9], df["date"])) / 100 / 365 * nights
+            gross = p_prev * (r + diff)
+        elif nm.endswith("_F"):       # R2-fix: doorlopende futures-prijsreeks is al overschotrendement (rol/carry zit in de prijs) → geen −rf
+            gross = p_prev * r
+        else:                         # index/obligatie (adjclose = total return): overschot = r − rf
+            gross = p_prev * (r - rf)
         roll = np.abs(p_prev) * V.get("roll_bp", 0.5) * V.get("rolls", 4) * 1e-4 / 365 * nights
         fin = roll - (rf if cap else 0.0)
     return gross - cost - fin, turn, gross, cost, fin
@@ -289,6 +296,11 @@ def run(rule_id, reserve=False, vehicle=None):
         gross_turn_days = len(days)
         sr = x.mean() / x.std() * math.sqrt(252) if x.std() > 0 else float("nan")
         tb, sr_ci = boot(x)
+        if not reserve:   # R2: dagreeks per regel/variant/vehikel voor de portefeuillestap (overschot en totaal)
+            os.makedirs("results/R2/series", exist_ok=True)
+            with open(f"results/R2/series/{R['id']}__{vname}__{veh}.csv", "w") as f:
+                f.write("date;excess;total\n")
+                f.writelines(f"{d};{a:.8f};{b:.8f}\n" for d, a, b in zip(days, x, x_tot))
         h = len(x) // 2
         eq = np.cumprod(1 + x_tot); dd = float(np.max(1 - eq / np.maximum.accumulate(eq)))
         sk = float(((x - x.mean()) ** 3).mean() / x.std() ** 3) if x.std() > 0 else float("nan")

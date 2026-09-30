@@ -58,3 +58,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 
 **Noot N7 (2026-09-30):** dag-geclusterde t-waarden van kernresultaten staan in RESULTATEN_GECLUSTERD.md; ORB-B4a (7 symbolen) 2,93 → 1,81, S3-set 3,73 → 2,90; B2b (dagreeks) overleeft (NW 3,80).
 | 2026-09-30 | CAT1 catalogusrun 1 (C01, C02, C03, C05, C07, C12, C17; D-037) | 7 | 421 |
+| 2026-09-30 | R2/CAT2: C51 (1), C52 (2 varianten), C53 (1), C54 (basis + qa = 2; eerdere 2 rijen ongeldig door future-model-fout, tellen niet) | 6 | 427 |

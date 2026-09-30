@@ -6,7 +6,7 @@ RULE = {"id": "C54_carver", "naam": "Carver-forecastcombinatie: EWMAC(8,32/16,64
                          "SPX", "NDX", "DAX", "N225", "FTSE", "BOND10_SYN"],
         "benchmark": {"naam": "60/40 SPX/BOND10_SYN", "gewichten": {"SPX": 0.6, "BOND10_SYN": 0.4}},
         "mechanisme": "Trend (onder-reactie, hedgers) en carry (risicopremie) over veel weinig-gecorreleerde markten; diversificatie is de hefboom.",
-        "bron": "Carver (2015) 'Systematic Trading'; Hurst–Ooi–Pedersen (2017); Koijen e.a. (2018)", "varianten": {"basis": {}}}
+        "bron": "Carver (2015) 'Systematic Trading'; Hurst–Ooi–Pedersen (2017); Koijen e.a. (2018)", "varianten": {"basis": {}, "qa": {"start_jaar": 1990, "excl": ["WTI_F"]}}}   # run 0 = "basis" (alles, vanaf 1971) — zie RUNLOG_R2: data-QA-afwijking
 SCAL = {(8, 32): 5.3, (16, 64): 3.75, (32, 128): 2.65, (64, 256): 1.87}
 def ema(x, span):
     a = 2 / (span + 1); out = np.empty(len(x)); out[0] = x[0]
@@ -14,6 +14,8 @@ def ema(x, span):
         out[i] = out[i - 1] + a * ((x[i] if np.isfinite(x[i]) else out[i - 1]) - out[i - 1])
     return out
 def positions(df, p):
+    if df["name"] in p.get("excl", []):
+        return np.zeros(len(df["date"]))
     c = df["close"]; n = len(c)
     r = np.r_[0.0, c[1:] / c[:-1] - 1]; var = np.empty(n); var[0] = 1e-4
     for i in range(1, n):
