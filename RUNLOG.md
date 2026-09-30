@@ -776,3 +776,13 @@ QA-3 lookahead/herschrijving: update_daily.py voegt alleen nieuwe datums toe (be
 
 Op last van de CEO (D-052; Uitvoerder-2 idle, had geen PREREG_PORT): portefeuilleregel vastgelegd vóór forward-papier en reserve-run. Sleeves: C52 lang/basis (etf), C02 (etf), C17 (future), C54 qa/basis (future). Portefeuilles: P-ETF = C52L + C02 (a: ongehefeld, 1/σ; b: gehefeld naar 10% vol, ≤ 2×, rf + 1,5% op geleend deel); P1 = C54Q + C52L + C02 + C17 (sleeves 10% vol, gelijk, portefeuille 10%, ≤ 3×); P-breed = alle 5 G-ontdekking-rijen gelijk. Herweging maandelijks (eerste handelsdag), σ = 60 d vertraagd, herwegingskosten per vehikel, één vehikelset (etf 13 bp/TER 0,07%/SPX_TR; future R2-fix), EUR ongehedged (hoofd) + gehedged, rf DTB3→Treasury 3m. Vooraf vastgelegd: P-ETF-a ≈ CAGR 4–6,5% ⇒ ≈ €270–430/mnd vóór haircut/box 3 = onder het €400–500-doel. Forward start 2026-10-01.
 SHA-256 PREREG_PORT.md: 9f17d335a33d892c6fa86362d7cf0648658e606e4a5d09a49bb1835d404f9787
+
+## 2026-09-30 13:18 — D-050: forward-papier portefeuilles klaar (cron 22:25 UTC, start 2026-10-01) + ontdekkings-backtest volgens PREREG_PORT (geen trial)
+
+forward_portfolio.py = PREREG_PORT §2–4 exact: sleeves via engine/forward.py (huidige vehikelset: etf 13 bp/TER 0,07%/SPX_TR; future R2-fix), maandelijkse herweging, σ 60 d vertraagd, herwegingskosten, rf + 1,5% op geleend etf-deel, EUR ongehedged/gehedged. Dagelijks: forward/portfolio_daily.csv (append-only vanaf 2026-10-01; eerder gelogde dagen worden herberekend, afwijking > 1 bp → forward/portfolio_tracking.log). Cron ma–vr 22:25 UTC (na data-update 22:05 en F3b 22:15). extend_fx.py vult FX_* (FRED) aan met Yahoo =X (werkdagen, append-only, snapshot); BOND10_SYN wordt dagelijks herbouwd.
+Ontdekkingsset (≤ 2024, reserve niet gerapporteerd; results/port/PORT_backtest.md) — USD, vóór live-haircut 30–50% en box 3:
+P-ETF-a (ongehefeld, 2001→): SR 0,94, vol 6,1%, CAGR 7,4% (EUR 7,3%), maxDD 11,2% → ≈ €491/mnd bruto op €80k
+P-ETF-b (≤ 2×, rf + 1,5%): SR 0,79, vol 10,0%, CAGR 9,4%, maxDD 20,0%, gem. hefboom 1,69 → ≈ €628/mnd
+P1 (bovengrens): SR 0,79, vol 10,3%, CAGR 9,6%, maxDD 15,9%, hefboom 2,10 → ≈ €639/mnd
+P-breed: SR 0,70, vol 9,4%, CAGR 8,0%, maxDD 17,4% → ≈ €534/mnd
+**Eerlijke lezing:** P-ETF-a ligt boven de vooraf vastgelegde verwachting (4–6,5%) — CAGR bevat de rente op cash (≈ 2%/jr gemiddeld 2001–24); sleeves zijn ná het zien van de ontdekkingsdata gekozen (winnaarsvloek), dus dit is een bovengrens. Na 30–50% live-haircut: ≈ €250–340/mnd voor P-ETF-a — onder het €400–500-doel, zoals vooraf gezegd. P1 wijkt af van de R2-cijfers (SR 0,84 → 0,79) door maandelijkse i.p.v. dagelijkse herweging, nieuwe vehikelkosten en de financieringsopslag.
