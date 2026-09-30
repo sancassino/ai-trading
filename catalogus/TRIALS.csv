@@ -1,16 +1,16 @@
 datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
-2026-09-30;rep_b2b_rsi2;basis;D2 (replicatie, telt niet als nieuwe trial);ontdekking;0.520;3.211;0.000661;0.0029;door G-ontdekking
-2026-09-30;C01_tsmom12;basis;D2 [cfd];ontdekking;-0.012;-0.118;0.547148;0.5471;afgewezen
-2026-09-30;C02_faber;basis;D2 [cfd];ontdekking;0.318;3.140;0.000844;0.0029;door G-ontdekking
-2026-09-30;C03_donchian;basis;D2 [cfd];ontdekking;0.134;0.971;0.165844;0.2019;afgewezen
-2026-09-30;C05_tsmom_mix;basis;D2 [cfd];ontdekking;0.129;1.270;0.102069;0.1361;afgewezen
-2026-09-30;C07_xmom;basis;D2 [cfd];ontdekking;0.002;0.024;0.490413;0.5086;afgewezen
-2026-09-30;C12_carry_trend;basis;D2 [cfd];ontdekking;0.012;0.092;0.463344;0.4990;afgewezen
-2026-09-30;C17_fomc_cycle;basis;D2 [cfd];ontdekking;0.520;2.850;0.002189;0.0044;afgewezen
-2026-09-30;C51_volmanaged;basis;D2 [etf];ontdekking;0.314;2.827;0.002347;0.0044;afgewezen
-2026-09-30;C52_allweather;basis;D2 [etf];ontdekking;0.651;3.030;0.001224;0.0029;door G-ontdekking
+2026-09-30;rep_b2b_rsi2;basis;D2 (replicatie, telt niet als nieuwe trial);ontdekking;0.520;3.211;0.000661;0.0030;door G-ontdekking
+2026-09-30;C01_tsmom12;basis;D2 [cfd];ontdekking;-0.012;-0.118;0.547148;0.5667;afgewezen
+2026-09-30;C02_faber;basis;D2 [cfd];ontdekking;0.318;3.140;0.000844;0.0030;door G-ontdekking
+2026-09-30;C03_donchian;basis;D2 [cfd];ontdekking;0.134;0.971;0.165844;0.2091;afgewezen
+2026-09-30;C05_tsmom_mix;basis;D2 [cfd];ontdekking;0.129;1.270;0.102069;0.1410;afgewezen
+2026-09-30;C07_xmom;basis;D2 [cfd];ontdekking;0.002;0.024;0.490413;0.5267;afgewezen
+2026-09-30;C12_carry_trend;basis;D2 [cfd];ontdekking;0.012;0.092;0.463344;0.5168;afgewezen
+2026-09-30;C17_fomc_cycle;basis;D2 [cfd];ontdekking;0.520;2.850;0.002189;0.0045;afgewezen
+2026-09-30;C51_volmanaged;basis;D2 [etf];ontdekking;0.314;2.827;0.002347;0.0045;afgewezen
+2026-09-30;C52_allweather;basis;D2 [etf];ontdekking;0.651;3.030;0.001224;0.0030;door G-ontdekking
 2026-09-30;C52_allweather;lang;D2 [etf];ontdekking;0.786;3.828;0.000065;0.0006;door G-ontdekking
-2026-09-30;C53_gem;basis;D2 [etf];ontdekking;0.558;2.827;0.002350;0.0044;afgewezen
+2026-09-30;C53_gem;basis;D2 [etf];ontdekking;0.558;2.827;0.002350;0.0045;afgewezen
 2026-09-30;C54_carver;basis;D2 [future];ontdekking;0.439;4.149;;;"ongeldig: future-model FX/grondstof fout (tooling, herrun na engine-fix; telt niet)"
 2026-09-30;C54_carver;qa;D2 [future];ontdekking;0.422;2.450;;;"ongeldig: future-model FX/grondstof fout (tooling, herrun na engine-fix; telt niet)"
 2026-09-30;C51_volmanaged;basis;D2 [future];ontdekking-vehikelrapport;0.321;2.891;;;vehikelrapport (geen extra trial); benchmark beter
@@ -24,14 +24,14 @@ datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
 2026-09-30;C54_carver;basis;D2 [future];ontdekking;0.467;4.425;0.000005;0.0001;door G-ontdekking
 2026-09-30;C54_carver;qa;D2 [future];ontdekking;0.573;3.317;0.000456;0.0026;door G-ontdekking
 2026-09-30;C05_tsmom_mix;basis;D2 [future];ontdekking-vehikelrapport;0.412;4.017;;;vehikelrapport (geen extra trial); benchmark beter
-2026-09-30;C04_ema;basis;D2 [future];ontdekking;0.311;1.808;0.035301;0.0520;afgewezen
+2026-09-30;C04_ema;basis;D2 [future];ontdekking;0.311;1.808;0.035301;0.0539;afgewezen
 2026-09-30;C16_halloween;basis;D2 [etf];ontdekking;0.409;3.894;0.000049;0.0006;door G-ontdekking
-2026-09-30;C29_bollinger_fx;basis;D2 [future];ontdekking;0.368;1.967;0.024607;0.0405;afgewezen
+2026-09-30;C29_bollinger_fx;basis;D2 [future];ontdekking;0.368;1.967;0.024607;0.0420;afgewezen
 2026-09-30;C33_trend_lowvol;basis;D2 [future];ontdekking;0.374;3.636;0.000138;0.0010;door G-ontdekking
-2026-09-30;C43_rente_signaal;basis;D2 [future];ontdekking;0.159;1.006;0.157088;0.1999;afgewezen
-2026-09-30;C44_krediet;basis;D2 [etf];ontdekking;0.742;3.174;0.000752;0.0029;door G-ontdekking
-2026-09-30;C45_rentecurve;basis;D2 [etf];ontdekking;0.376;3.064;0.001092;0.0029;door G-ontdekking
-2026-09-30;C55_daa;basis;D2 [etf];ontdekking;0.635;3.050;0.001142;0.0029;door G-ontdekking
+2026-09-30;C43_rente_signaal;basis;D2 [future];ontdekking;0.159;1.006;0.157088;0.2071;afgewezen
+2026-09-30;C44_krediet;basis;D2 [etf];ontdekking;0.742;3.174;0.000752;0.0030;door G-ontdekking
+2026-09-30;C45_rentecurve;basis;D2 [etf];ontdekking;0.376;3.064;0.001092;0.0030;door G-ontdekking
+2026-09-30;C55_daa;basis;D2 [etf];ontdekking;0.635;3.050;0.001142;0.0030;door G-ontdekking
 2026-09-30;C54_carver;basis;D2 [cfd_retail];ontdekking-vehikelrapport;0.320;3.053;;;vehikelrapport (geen extra trial); benchmark beter
 2026-09-30;C54_carver;qa;D2 [cfd_retail];ontdekking-vehikelrapport;0.368;2.133;;;vehikelrapport (geen extra trial); benchmark niet beter
 2026-09-30;C54_carver;basis;D2 [cfd_retail_hi];ontdekking-vehikelrapport;0.211;2.027;;;vehikelrapport (geen extra trial); benchmark beter
@@ -46,9 +46,10 @@ datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
 2026-09-30;C52_allweather;lang;D2 [cfd_retail];ontdekking-vehikelrapport;0.623;3.035;;;vehikelrapport (geen extra trial); benchmark beter
 2026-09-30;C52_allweather;basis;D2 [cfd_retail_hi];ontdekking-vehikelrapport;0.292;1.362;;;vehikelrapport (geen extra trial); benchmark niet beter
 2026-09-30;C52_allweather;lang;D2 [cfd_retail_hi];ontdekking-vehikelrapport;0.470;2.287;;;vehikelrapport (geen extra trial); benchmark beter
-2026-09-30;C57_gtaa;basis;D2 [etf];ontdekking;0.638;3.107;0.000946;0.0029;door G-ontdekking
-2026-09-30;C58_goudtrend;basis;D2 [etf];ontdekking;0.400;1.818;0.034558;0.0520;afgewezen
-2026-09-30;C59_grondstoftrend;basis;D2 [etf];ontdekking;0.177;0.757;0.224483;0.2619;afgewezen
-2026-09-30;C60_bondtiming;basis;D2 [etf];ontdekking;0.263;1.766;0.038735;0.0542;afgewezen
-2026-09-30;C61_ls_inverse;basis;D2 [etf_inverse];ontdekking;0.214;2.143;0.016068;0.0281;afgewezen
-2026-09-30;S11_crossmarket_C02;basis;D2b [etf, 12 markten];ontdekking;0.299;;0.459000;0.4990;niet gerepliceerd op SR, alleen DD-beschermend
+2026-09-30;C57_gtaa;basis;D2 [etf];ontdekking;0.638;3.107;0.000946;0.0030;door G-ontdekking
+2026-09-30;C58_goudtrend;basis;D2 [etf];ontdekking;0.400;1.818;0.034558;0.0539;afgewezen
+2026-09-30;C59_grondstoftrend;basis;D2 [etf];ontdekking;0.177;0.757;0.224483;0.2713;afgewezen
+2026-09-30;C60_bondtiming;basis;D2 [etf];ontdekking;0.263;1.766;0.038735;0.0562;afgewezen
+2026-09-30;C61_ls_inverse;basis;D2 [etf_inverse];ontdekking;0.214;2.143;0.016068;0.0291;afgewezen
+2026-09-30;S11_crossmarket_C02;basis;D2b [etf, 12 markten];ontdekking;0.299;;0.459000;0.5168;niet gerepliceerd op SR, alleen DD-beschermend
+2026-09-30;C67_landenrotatie;basis;D2b [etf, 12 markten USD];ontdekking;0.120;-0.970;0.833869;0.8339;afgewezen

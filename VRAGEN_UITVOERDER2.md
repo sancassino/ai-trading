@@ -25,3 +25,6 @@ Run 4 (C57–C61): alleen C57 (Faber-GTAA) haalt G-ontdekking (t 3,11; SR 0,64) 
 ## R2-006 (2026-09-30, cyclus 15:25 UTC) — FX-reeksen voor EM-markten (run 6 / S11-secundair)
 Voor BVSP, MXX, JKSE, SENSEX (secundair in S11) ontbreken USD-wisselkoersen (BRL, MXN, IDR, INR) in D2; zonder FX is alleen lokale-valuta-toets mogelijk, en die is in de jaren 90 een inflatie-artefact. **Aanvraag Uitvoerder-1:** Yahoo =X (USDBRL, USDMXN, USDIDR, USDINR) en lokale korte rentes indien via officiële bron. **Standaardactie:** EM blijft ongedraaid; geen wachten.
 **Reserve-run:** gepland 01-10 10:00 UTC (eerste uurcyclus ≥ 10:25 UTC) volgens D-065; melden als technisch uitstel nodig is.
+
+## R2-007 (2026-09-30, cyclus 17:25 UTC) — data voor C65/C68/PutWrite-substitutie (run 7)
+Nodig (Uitvoerder-1, binnen bronvoorwaarden, eerlijke UA, rate-limit, privé-repo): (a) **^PUT (CBOE PutWrite), ^BXM (BuyWrite)** dagreeksen via Yahoo (PREREG_CAT7 §2b staat klaar); (b) **Ken French-factoren** (alleen evidentie) — licentietekst eerst controleren; (c) **CAPE/Shiller** of een vrije alternatieve waarderingsreeks (licentie!). **Standaardactie:** C65/C68/PutWrite blijven ongedraaid tot de data er is; geen wachten (EM, reserve-run gaan door).

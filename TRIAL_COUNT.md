@@ -62,3 +62,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | R3/CAT3: C04, C16, C29, C33, C43, C44, C45, C55 (1 variant elk; vehikelrapporten cfd_retail zonder trial) | 8 | 435 |
 | 2026-09-30 | R4/CAT4: C57, C58, C59, C60, C61 (v1.2-diversifiers; screen/frontier/decompositie zonder trial) | 5 | 440 |
 | 2026-09-30 | R5/CAT5: S11 cross-market-replicatie C02 (één familie, 12 markten; regionale C52 informatief zonder trial) | 1 | 441 |
+| 2026-09-30 | R7/CAT7: C67 landenrotatie (C66 VRP-proxy = evidentie zonder trial; C65/C68/PutWrite wachten op data) | 1 | 442 |
