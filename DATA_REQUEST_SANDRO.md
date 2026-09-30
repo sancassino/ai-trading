@@ -1,3 +1,5 @@
+> **UPDATE 2026-09-30 10:54 (CEO-besluit D-001): VERKLEIND.** Alleen **2011 t/m 2020** downloaden (niet 2010, niet 2021+; die hebben we al via FTMO): ≈ **40 zips** i.p.v. ≈ 100. Volgorde: **SPX/USD → NSX/USD → GRX/EUR → XAU/USD**; lever **SPX eerst** (dan krijgen we al een voorlopige uitslag). Zips niet uitpakken, in `ai-trading/data/long_m1/` op de Debian/VM-machine (of een Drive-link). Inspanning ± 30–45 min. Optie C/D (AWS/betaald) niet nu.
+
 # Dataverzoek aan Sandro — lange minuutdata (2010–2026) om de strategie buiten 2021–2026 te testen
 
 **Waarom:** alle intraday-resultaten rusten nu op FTMO-data van 5,7 jaar. Met 10+ jaar extra data kunnen we de

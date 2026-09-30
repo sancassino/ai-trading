@@ -1,29 +1,21 @@
-# EINDVERSLAG (opgeschoond 2026-09-30 10:15) — voor Sandro
+# EINDVERSLAG (Manager, 2026-09-30 10:54) — voor Sandro
 
-## Stand in 6 regels
-1. **Doel:** ≈ €800–900/mnd uit FTMO €80k, aantoonbaar en binnen de regels.
-2. **Getest:** ~404 vooraf-vastgelegde varianten (indices, aandelen, FX-carry, crypto, ML, events, seizoenen). Vrijwel alles afgewezen na kosten.
-3. **Enige kandidaat:** RSI(2)-overnight + ORB (opening-range-breakout): SR ≈ 0,5–0,95, ≈ €225/mnd (≈ €150 na realistische kosten); **ORB is onbevestigd** buiten 2021–26.
-4. **Onder de echte FTMO-mechaniek** (fees, herstarts, dagregel, payout) is de vereiste SR **≈ 3–4** voor €500–900/mnd bij het RSI(2)-dipprofiel, maar **≈ 1** voor een elke-dag-vlak, positief-scheve strategie (ORB-achtig, R3).
-5. **ORB alleen:** historisch ≈ €484–513/mnd, met realistische kosten ≈ €155–164 — hangt volledig af van bevestiging op lange data (ontbreekt; zie `DATA_REQUEST_SANDRO.md`).
-6. **Kosten** (spread/commissie/swap) zijn de muur: voorspelbare bewegingen zijn kleiner dan de spread (ML-test).
+## Stand in 7 regels
+1. **Doel (ambitie):** ≈ €800–900/mnd uit FTMO €80k, aantoonbaar en binnen de regels. Realistische kans (CEO/Strateeg): **≤ 10%**.
+2. **Getest:** ~404 vooraf-vastgelegde varianten; vrijwel alles afgewezen na kosten. Nieuw sinds ochtend: FX-ML, aandelen-ML, H4-breakout FX/goud (R1/R2/R4) — afgewezen.
+3. **Enige overlevende richting:** ORB (dagelijks-vlak, positief scheef): historisch ≈ €484–513/mnd (2021–26), ≈ €155–164 met realistische kosten — **onbevestigd** buiten 2021–26. RSI(2) is negatief-scheef en kost onder FTMO-regels te veel.
+4. **FTMO-mechaniek:** vereiste Sharpe ≈ 1 voor elke-dag-vlak + positief-scheef; ≈ 3–4 voor overnight/negatief-scheef. Fee €540/€80k is **onbevestigd** → alle geld-uitkomsten 'onder aanname'.
+5. **Kosten gemeten (S0):** rondreis intraday: indices 0,45–0,78 bp, FX-majors 0,63–1,22, goud 0,83; olie/zilver duur.
+6. **Team:** Manager + Strateeg + **CEO** (beslist; Sandro hoeft niet meer te beslissen) + Uitvoerder. Ritme: Manager :05/:35, CEO :10/:40, Strateeg :20/:50, Uitvoerder */10.
+7. **Wachtrij:** S1 noise-area-momentum → S2 earnings-ORB → S3 ORB-bevestiging (wacht op data).
 
-## Organisatie (nieuw, 30-09 10:20)
-Zie `ORGANISATIE.md` en `EVALUATIE_TOT_NU.md`: Manager (deze chat) + nieuwe **Strateeg** (aparte chat, prompt in `STRATEEG_KICKOFF_PROMPT.md`) + Uitvoerder (Debian) + optioneel Auditor. Manager draait elke 30 min (routines :05/:35), Strateeg elke 30 min (:20/:50).
+## Succes in trappen (CEO D-003)
+Trap 1 **ORB bevestigd** op 2011–20 · Trap 2 ≥ 1 dagelijks-vlakke, positief-scheve sleeve met netto SR ≥ 0,8 · Trap 3 ≥ €300/mnd onder FTMO-mechaniek → pas dan besluit over echte evaluatie. €800–900 alleen bij twee onafhankelijke sleeves in Trap 2.
 
-## Wat ik van jou nodig heb
-- De Strateeg-chat starten met de prompt uit `STRATEEG_KICKOFF_PROMPT.md`.
-- Optioneel maar waardevol: lange minuutdata (HistData/Dukascopy, zie `DATA_REQUEST_SANDRO.md`) → ORB bevestigen/afwijzen.
-- Geen Free Trial nodig.
+## Stopcriteria (CEO D-004)
+Stop/pauze als S3 verworpen/onbeslist én S1+S2 falen; óf **vr 3 okt 12:00** zonder lange data en zonder positieve S1/S2 → bevriezen op forward-paper. Elke 24 u evaluatie hier.
 
-Archief van eerdere banners: `archief/`.
-
-## Update 2026-09-30 10:36 — Strateeg draait
-- Strateeg leverde `STRATEGIE_PLAN.md`, `STRATEGIE_BIJLAGE.md`, `VOORSTEL_S1–S3` (branch `claude/trusting-faraday-34tsmg`). Zijn eerlijke kans op €800–900/mnd via FTMO: **≤ 10%**. Enige dagelijks-vlakke, positief-scheve richting = ORB; die is onbevestigd en zit op ≈ 3× kosten.
-- Wachtrij (v14): S0 kostenmeting (nu), S1 noise-area-momentum, S2 earnings-ORB, S3 ORB-bevestiging (wacht op data).
-- **FTMO geverifieerd (Manager):** nieuwsregel geldt alleen voor Standard-**funded**; Swing en evaluatie geen beperking. **Fee €540/€80k blijft onbevestigd** (pagina's tonen het niet) — kijk zelf op de bestelpagina van FTMO en meld me bedrag + beschikbare accountgroottes.
-
-## Beslissingen/acties voor jou
-1. **Lange data voor ORB (aanbevolen: HistData, gratis, ≈ 1 uur klikken)** — zie `DATA_REQUEST_SANDRO.md`; het weegt zwaarder dan tien nieuwe ideeën. Ja/nee?
-2. **FTMO-fee en accountgroottes** controleren op de bestelpagina (€80k bestaat?).
-3. Verder niets.
+## Wat alleen jij kunt (van de CEO, `SANDRO_ACTIES.md`)
+- **A-01 (hoog, 30–45 min):** HistData **alleen 2011–2020** downloaden: SPX/USD → NSX/USD → GRX/EUR → XAU/USD (≈ 40 zips, niet uitpakken, in `data/long_m1/` op de Debian/VM of Drive-link). Stappen: `DATA_REQUEST_SANDRO.md`. SPX eerst geeft al een voorlopige uitslag.
+- **A-02 (laag, 2 min):** FTMO-bestelpagina: prijs + accountgroottes (bestaat €80k?).
+Verder niets.
