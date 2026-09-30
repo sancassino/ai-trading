@@ -1,4 +1,4 @@
-# NEXT_STEPS v25 — Manager, 2026-09-30 16:10 Amsterdam — verwerkt D-042…D-059, decompositie P-ETF-a, EUR-geldmarkt, Strateeg v2.7
+# NEXT_STEPS v26 — Manager, 2026-09-30 16:40 Amsterdam — verwerkt D-042…D-064, run 4, frontier, PREREG_PORT2
 
 Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
 
@@ -23,6 +23,17 @@ Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). All
 1. **D2-uitbreiding (D-044, ≤ 3 u):** (a) TR/dividend (S&P, DAX, NDX) binnen bronvoorwaarden; (b) ≥ 20 instrumenten voor C54 (NZD/SEK/NOK-FX, Bund/JGB/Gilt-proxy's, agri/energie); (c) roll-schone zilver/koper/gas; (d) **FRED vanaf Debian ophalen en committen** (rentes, goud/CPI, FX); rate-limit, eerlijke UA, niets omzeilen.
 2. **Engine (D-045):** future-model-fix (FX = spot + renteverschil; doorlopende futures zonder rf-aftrek) blijft; opnemen in engine/README + ENGINE_TEMPLATE (Manager werkt ENGINE_TEMPLATE bij: zie §V).
 3. S3/P0 en F (forward) volgens bestaande punten hieronder.
+
+## 0h. D-060…D-064 + run 4/frontier — Manager-QA (bindend voor uitvoering)
+**Stand:** run 4 (C57–C61; TRIAL_COUNT 440): geen nieuwe sleeve slaagt voor poort + benchmark + diversifier-screen (0 van 5). C57 Faber-GTAA haalt G-ontdekking maar niet SR-benchmark → **informatief** in de reserve-run. Decompositie: obligatiebron (synthetisch/IEF/TLT) doet er niet toe; **SR 0,94 = ontdekkingscijfer, 2021–24 = 0,53**. Frontier (DD-budget maxDD ≤ 20%, p95 ≤ 25%, D-062): vol 9% (hefboom ≈ 1,6×) → alfa €244–341 + EUR-cash €163 = **€406–504/mnd** (haircut 50–30%); zonder hefboom €375–412 bij haircut 30%; P-ETF+ niet beter. PREREG_PORT2 (SHA b1a2f3f2…) staat.
+**Manager-QA (geen trials):**
+1. **Frontier is ontdekkingsdata:** de 9%-vol/1,6×-uitkomst wordt door de 2021–24-SR (≈ 0,5) bijna gehalveerd en het maxDD-budget is dan niet meer gegarandeerd. Voeg toe: frontier ook op **2011–2024** en **2021–24** apart; **p95-DD-methode** (bootstrap? blokgrootte? aantal paden) vastleggen in het rapport; 2022-DD van P-ETF-b (−18,5% bij 1× vol-doel) naast het budget zetten.
+2. **Hefboom bij eigen kapitaal:** 'margin-lening tegen rf + 1,5%' is een aanname; beschikbaarheid/kosten/margin-calls (ETF in NL/EU-broker, forced liquidation in 2020/2022-type gap) niet gemeten → in elk €-getal met hefboom expliciet 'onbevestigd (broker)', en de **portefeuille zonder hefboom is de adviesbasis** (D-047); hefboomvariant alleen als 'optie/bovengrens'.
+3. **Reserve-run integriteit (01-10 09:00/12:00):** (a) shortlist-bestand committen om 09:00 met SHA (individueel: C52, C02, C17, C54qa, C55, C44, C16, C33; + C57 informatief; portefeuilles: PREREG_PORT (4) + P-ETF+); (b) `r2_reserve.py` SHA vastleggen vóór vrijgave; (c) uitvoeren **één keer**, output onveranderd committen (raw), CI + teken-criterium; (d) niemand kijkt naar 2025→ voordien; (e) P-ETF+ en P-breed-2 tellen mee als extra rijen (geen selectie).
+4. **Trial-boekhouding:** TRIAL_COUNT 440 (U-2-branch) vs main: Uitvoerder-1 merged `claude/uitvoerder2-r` → main vóór 09:00 en meldt de gemeenschappelijke stand; PREREG_PORT2/portefeuille-backtests = geen trials maar in BH-familie 'portefeuilles' noteren.
+5. **Uitvoerder-1 (D):** D2-uitbreiding af vóór 09:00 of status melden (RUNLOG); forward-papier 01-10 start controleren (bestand `forward/portfolio_daily.csv` bestaat na 22:25 UTC; meld gaten).
+6. **Run 5 (Uitvoerder-2):** prio-4-resten (C06, C08, C23, C28, C31, C46, C47) met PREREG vóór resultaat; sleeves die na 09:00 slagen wachten op nieuwe forward-periode (D-064), niet 2025→ hergebruiken.
+7. **Strateeg:** C61 uitkomst = negatief (geen inverse-ETF-sleeve); C64 (managed-futures-UCITS) watch-list; volgende gap-analyse: wat levert de doelvariant (€400–500 totaal) op zonder hefboom? Alleen via ≥ 1 echte diversifier, die met huidige data niet gevonden is.
 
 ## 0g. D-055…D-059 (bindend) + Manager-QA — tijdlijn reserve-run
 **Tijdlijn:** shortlist bevroren **01-10 09:00**, één gezamenlijke reserve-run **01-10 12:00 Amsterdam** (individueel + de vier PREREG_PORT-portefeuilles; PREREG_PORT blijft bevroren; nieuwe sleeves → P2/PREREG_PORT2 ná de run). Forward-papier start 01-10 (cron 22:25 UTC). Rapportage reserve-run met CI (SR-SE ≈ 0,75): pass/fail alleen op teken + niet-significant-afwijkend.

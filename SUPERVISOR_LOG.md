@@ -34,3 +34,4 @@
 2026-09-30 15:10 Amsterdam — cyclus :05: D-051 + Strateeg-input PREREG_PORT verwerkt (P-ETF-a/b, verwachting €270–430); Uitvoerder-2 idle-check ingevoerd (laatste commit 13:26); M-010/M-011 BESLOTEN; NEXT_STEPS v23.
 2026-09-30 15:40 Amsterdam — cyclus :35: D-052..D-054, PREREG_PORT (bevroren), run 3 (435 trials), Strateeg v2.6 verwerkt; NEXT_STEPS v24 (SR-0,94-decompositie, haircut-definitie → M-012, labels run 3, P-breed-v2 apart); Uitvoerder-2 weer actief.
 2026-09-30 16:10 Amsterdam — cyclus :05: D-055…D-059 + decompositie P-ETF-a + EUR-geldmarkt verwerkt; NEXT_STEPS v25 (tijdlijn reserve-run 01-10 09:00/12:00, valuta-consistentie, D-056 afmaken); M-012 BESLOTEN; EINDVERSLAG met totaal én alfa boven cash.
+2026-09-30 16:40 Amsterdam — cyclus :35: D-060…D-064, run 4 (0 diversifiers), frontier, PREREG_PORT2 verwerkt; NEXT_STEPS v26 (frontier op 2011–24/2021–24, hefboom onbevestigd, reserve-run-integriteit, trial-merge).
