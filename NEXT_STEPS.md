@@ -1,4 +1,4 @@
-# NEXT_STEPS v11 — supervisor, 2026-09-30 07:29 Amsterdam — **STEADY-STATE OPGEHEVEN. Doel: ≈ €800–900/mnd. Gaan zoeken, dieper en slimmer.**
+# NEXT_STEPS v12 — supervisor, 2026-09-30 08:17 Amsterdam — zoektocht loopt; Q1 heeft de lat verlegd
 
 Opdracht van Sandro: geen steady-state, geen demo/Free Trial nodig, geen wachten. Ik (supervisor) had de stopregel te vroeg gezet; die vervalt. Werk de backlog af; de agent controleert vanaf nu **elke 10 minuten** (cron `*/10`, `check_next_steps.sh`) op een nieuwe NEXT_STEPS en pakt direct de volgende open taak. Meld in RUNLOG dat steady-state is opgeheven.
 
@@ -8,7 +8,14 @@ Opdracht van Sandro: geen steady-state, geen demo/Free Trial nodig, geen wachten
 3. Tot nu toe zijn intraday-tests op **indices** gedaan (kosten ~1 bp, edge ~1–2 bp = alles opgegeten). Aandelen-events, crypto-intraday en machine-learning op grote steekproeven zijn **niet** getest, en de **hefboom op inkomen** (risicobudget onder FTMO-regels) is nooit kwantitatief doorgerekend.
 4. Multiple testing: nieuwe families worden per **familie** vooraf geregistreerd (max ~4 varianten per familie, geen grids), train 2021–23 / test 2024–26, eis **t ≥ 3 in beide** (families met veel kandidaten: t ≥ 3,5). TRIAL_COUNT gewoon bijhouden. Dat is streng genoeg zonder te stoppen.
 
-## BACKLOG (prioriteit 1 = eerst; elke taak PREREG vóór resultaat)
+## Update 2026-09-30 08:17 — beoordeling Q1 (belangrijk)
+- Q1 is sterk uitgevoerd (PREREG, 20.000 paden, dag-equity-dip, fee/restart/payout-mechaniek, nul-drift en −50%-drift-controles, FTMO-voorwaarden geciteerd). **Conclusie: onder de echte FTMO-mechaniek is niet SR ≈ 1,4 nodig maar SR ≈ 3 voor ≈ €500 en ≈ 4 voor ≈ €900/mnd.** Onze sleeves (SR 0,5–1) leveren bij elk risiconiveau negatief netto op (−€21…−€160/mnd). Dit is de nieuwe lat voor Q2–Q5: een **portefeuille-SR ≈ 3** (bv. 9 onafhankelijke sleeves met elk SR ≈ 1,0, of enkele event-sleeves met SR ≥ 2).
+- Kritische kanttekeningen bij Q1 (controleren, niet om weg te redeneren): (1) reeks A is in-sample gekozen (dus optimistisch) — de −50%-drift-controle is de realistischer; (2) fee €540 is niet geverifieerd; (3) alleen 2-Step gemodelleerd; andere FTMO-producten kunnen een andere mechaniek hebben (minder fasen, ander dagverlies) → Q1b; (4) horizon 24 mnd.
+- Consequentie voor het zoeken: een sleeve is pas interessant als hij **standalone SR ≥ 1,5 na kosten** heeft (of extreem lage correlatie én SR ≥ 1); daarmee combineren tot SR ≈ 3 vergt ~4–9 zulke sleeves. Rapporteer bij elk resultaat SR en correlatie met bestaande sleeves.
+
+**Q1b — Alternatieve FTMO-producten en mechaniek (verifiëren op ftmo.com, citeren).** 1-Step (10% target, dagverlies/maxverlies-regels, best-day-rule), 2-Step Swing vs Standard, Scaling Plan (90% split, kapitaalgroei) en eventuele andere accounts (bv. Free Trial is geen optie). Draai dezelfde Q1-bootstrap per product op reeks A én op een **synthetische reeks met SR = 1, 1,5, 2, 3 bij 10% vol** (zelfde dagverlies-structuur) → tabel 'vereiste SR voor €500/€900 netto per product'. Doel: het product met de laagste vereiste SR vinden en zeggen welke SR-lat realistisch is. Vermeld ook: min. handelsdagen, tijdslimiet, consistentieregels.
+
+## BACKLOG (prioriteit 1 = eerst; elke taak PREREG vóór resultaat) — Q2 loopt
 
 **Q1 — Inkomens-frontier onder FTMO-regels (de vraag: wat kan er zonder loterij?).** Model met de beste MT5-dagreeks(en) (F3b RSI2+ORB; ook 'alleen RSI(2) orig.') en echte FTMO-regels (2-Step: +10%/+5%, dag 5%, totaal 10%, min. dagen; **fee en payout-split verifiëren op ftmo.com en citeren**; payout-regels/first-payout-timing). Simuleer schaal t = 0,3…3 met bootstrap (blok 21 d, ≥ 20.000 paden) én intraday-dip-realisme (gebruik dag-equity-min). Rapporteer per schaal: P(fase 1+2 slagen), P(breuk binnen 12 mnd na funded), verwachte **netto** cash per maand (na 80%-split, na fees voor herstart bij breuk), mediane tijd tot eerste payout, vereist aantal pogingen/kapitaal-op-het-spel. Doel: laat zien bij welk risico-niveau verwacht netto inkomen ≈ €500/€800/€900 wordt en wat de kans op verlies van fees is. Neem uitdrukkelijk **kosten-drift** mee (geen in-sample drift-vertekening: toon ook nul-drift- en −50%-drift-controle) en noteer FTMO-voorwaarden tegen gokgedrag (consistente sizing, geen martingale/grid, geen HFT) — blijf daarbinnen.
 
