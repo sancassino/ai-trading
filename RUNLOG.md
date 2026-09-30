@@ -1009,3 +1009,7 @@ Cron 22:15 UTC: forward_paper.py verwerkte de eerste papieren dag 2026-09-30 (F3
 
 U2 `741639e`: N6 mean −2.05 < 4.20; GER_US_LEAD −1.43 < 2.16; VWAP_PB −2.68 < 1.64 (train 2021–23). Geen TRIALS; TRIAL_COUNT 444; 2025→ onaangeroerd. Dead set uitgebreid. Escalatie D-091.6 = **3/4**. U2 idle tot nieuwe PREREG of CTO XAU power-pad. Geen Sandro-ask.
 
+## 2026-10-01 01:33 — NEXT_STEPS v49: CTO confirm C-007 drained; geen XAU power-pad
+
+v48+ align: U2 idle; Strateeg/S2 = cyclus-4 non-clone PREREGs only; XAU_AM_FADE watch-only (no power-pad). Escalatie 3/4. Geen Sandro-ping.
+
