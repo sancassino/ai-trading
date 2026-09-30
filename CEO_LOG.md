@@ -40,3 +40,4 @@
 21:56 Amsterdam — Grok Strateeg-2 actief (3 PREREGs), Auditor deel 2 klaar, Strateeg v4.2; geen open vragen, geen besluit nodig
 22:26 Amsterdam — geen besluit nodig; actief: CTO (p_survive fix), U2 (A4 cost-gate FAIL → stop), Strateeg (B1/A2), Manager v38; geen open vragen
 22:56 Amsterdam — geen besluit nodig; M5-data op main deblokkeert A5/S2, A5 cost-gate FAIL, A2 in PREREG, Grok S2/CTO actief; geen open vragen
+23:26 Amsterdam — AUDIT_2: 4 Grok-PREREGs 5/5 PASS, A4/A5/B1 FAIL onafhankelijk bevestigd; alle FTMO-sleeves gestopt (A2 ook FAIL); richting-besluit wacht op Sandro
