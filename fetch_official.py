@@ -91,3 +91,55 @@ if __name__ == "__main__":
             f()
         except Exception as e:
             print(f"{f.__name__}: FOUT {e}", flush=True)
+
+
+# ---------- D2b (S11 §4 rang 3): lokale korte rentes voor cross-market-replicatie ----------
+def boe_short():
+    for code, name in (("IUDBEDR", "YLD_UK_BANKRATE"), ("IUDSOIA", "YLD_UK_SONIA")):
+        txt = get(f"https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&SeriesCodes={code}"
+                  f"&Datefrom=01/Jan/1970&Dateto=now&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N")
+        rows = [(datetime.strptime(r["DATE"], "%d %b %Y").date(), float(r[code])) for r in csv.DictReader(io.StringIO(txt)) if r.get(code)]
+        write(name, rows, f"Bank of England database, {code}")
+
+
+def snb():
+    txt = get("https://data.snb.ch/api/cube/zimoma/data/csv/en")
+    want = {"3M0": "YLD_CHF_LIBOR3M", "SARON": "YLD_CHF_SARON", "TONA": "YLD_JPY_TONA", "EG3M": "YLD_CHF_EG3M"}
+    pts = {k: [] for k in want}
+    for r in csv.reader(io.StringIO(txt), delimiter=";"):
+        if len(r) == 3 and r[1] in want and r[2]:
+            y, m = map(int, r[0].split("-")); pts[r[1]].append((date(y, m, 1), float(r[2])))
+    for k, n in want.items():
+        write(n, pts[k], f"Swiss National Bank data portal, cube zimoma, {k} (maandwaarde; datum = 1e van de maand)")
+
+
+def boc():
+    txt = get("https://www.bankofcanada.ca/valet/observations/V80691303/csv")
+    rows = []
+    started = False
+    for r in csv.reader(io.StringIO(txt)):
+        if r and r[0] == "date":
+            started = True; continue
+        if started and len(r) > 1 and r[1]:
+            rows.append((date.fromisoformat(r[0]), float(r[1])))
+    write("YLD_CAD_TBILL3M", rows, "Bank of Canada Valet, V80691303 (3-month treasury bill)")
+
+
+def hkma():
+    rows, off = [], 0
+    while True:
+        res = json.loads(get(f"https://api.hkma.gov.hk/public/market-data-and-statistics/monthly-statistical-bulletin/er-ir/hk-interbank-ir-daily?pagesize=1000&offset={off}"))
+        recs = res["result"]["records"]
+        rows += [(date.fromisoformat(x["end_of_day"]), float(x["ir_3m"])) for x in recs if x.get("ir_3m") not in (None, "")]
+        if len(recs) < 1000:
+            break
+        off += 1000
+    write("YLD_HKD_HIBOR3M", rows, "Hong Kong Monetary Authority API, HIBOR 3m (daily)")
+
+
+def d2b():
+    for f in (boe_short, snb, boc, hkma):
+        try:
+            f()
+        except Exception as e:
+            print(f"{f.__name__}: FOUT {e}", flush=True)

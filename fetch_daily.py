@@ -25,6 +25,10 @@ SERIES = {  # naam: Yahoo-ticker
     "HEATOIL_F": "HO=F", "GASOLINE_F": "RB=F", "BRENT_F": "BZ=F", "PLAT_F": "PL=F", "PALL_F": "PA=F",
     "CPER": "CPER", "UNG": "UNG", "USO": "USO", "PPLT": "PPLT", "DBA": "DBA",
     "BUND_ETF": "EXX6.DE", "GILT_ETF": "IGLT.L", "BWX": "BWX", "EMB": "EMB", "SPX_EQW": "RSP",
+    # D2b (S11/D-066): extra onafhankelijke aandelenmarkten + factor-ETF's (korte N, label)
+    "AXJO": "^AXJO", "TSX": "^GSPTSE", "SMI": "^SSMI", "OMXS30": "^OMX", "KOSPI": "^KS11", "TWII": "^TWII", "BVSP": "^BVSP",
+    "MXX": "^MXX", "IBEX": "^IBEX", "AEX": "^AEX", "BEL20": "^BFX", "STI": "^STI", "SENSEX": "^BSESN", "NIFTY": "^NSEI", "JKSE": "^JKSE",
+    "MTUM": "MTUM", "QUAL": "QUAL", "USMV": "USMV", "VLUE": "VLUE", "EWA": "EWA", "EWC": "EWC", "EWL": "EWL", "EWS": "EWS", "EWY": "EWY", "EWZ": "EWZ",
 }
 
 
