@@ -14,3 +14,11 @@ TRIAL_COUNT 389. Niets benadert Sharpe 1,41 (nodig voor €880/mnd). J2 (nieuwe 
 trials is elke nieuwe batch vooral data-mining-risico; uitvoerbaar op verzoek van de supervisor.
 
 **Nodig van Sandro:** beslissing over het doel (SCENARIO_RAPPORT.md) en eventueel een nieuwe FTMO Free Trial voor een echte demo-test.
+
+## Aanvulling backlog v6 (K1, K2, J2)
+| Taak | Uitkomst |
+|---|---|
+| K1 RSI(2) per houdnacht | Edge zit in de **nachten** (Yahoo nacht 1/2 ≈ +9–10 bp, t ≈ 4; dagen ≈ 0). Max-1/2-nachten: Yahoo t 3,05/3,59, FTMO t 1,79/1,53 → afgewezen (te weinig FTMO-power); dagverlies wel beheersbaar (2,8%/3,6%). |
+| K2 power + beslisregel | 80% kans op t ≥ 2 pas na ≈ 9 jaar (SR 0,95) tot ≈ 18 jaar (SR 0,66). Beslisregel forward-test vastgelegd in forward/README.md. |
+| J2 3 hypothesen | US100 gap-continuatie, XAU ORB Londen, GER40 ORB + US-filter: alle afgewezen. |
+TRIAL_COUNT 394.
