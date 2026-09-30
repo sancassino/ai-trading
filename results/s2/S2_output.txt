@@ -1,0 +1,26 @@
+
+Variant (a): N 735 (train 365, test 370) | poort: mediaan-bruto train -53.2 bp (gemiddeld +21.2; kosten gem. 1.5) → STOP (geen trial)
+   netto bp/trade: train +19.8 (t +1.29) | test -5.5 (t -0.50) | +50% spread test t -0.69 | trade-skew +3.32 | winkans 37%
+   per jaar: 2021:+66.1(89) 2022:-1.9(138) 2023:+11.6(138) 2024:+3.2(133) 2025:-13.2(141) 2026:-6.3(96) → 3/6 positief | trade-dagen/jaar: 2021:58 2022:77 2023:75 2024:78 2025:76 2026:56
+   dagreeks (1% risico, ≤ 4×, max 5): SR -0.17 | skew +2.38 | jaarvol 17.1% | slechtste dag -5.36% | corr ORB +0.05
+   → AFGEWEZEN (poort; overige cijfers informatief)
+
+Variant (b): N 735 (train 365, test 370) | poort: mediaan-bruto train -23.8 bp (gemiddeld +3.8; kosten gem. 1.5) → STOP (geen trial)
+   netto bp/trade: train +2.2 (t +0.23) | test -21.7 (t -6.63) | +50% spread test t -7.23 | trade-skew +13.87 | winkans 6%
+   per jaar: 2021:+37.9(89) 2022:-1.1(138) 2023:-17.4(138) 2024:-13.7(133) 2025:-16.6(141) 2026:-40.4(96) → 1/6 positief | trade-dagen/jaar: 2021:58 2022:77 2023:75 2024:78 2025:76 2026:56
+   dagreeks (1% risico, ≤ 4×, max 5): SR -2.34 | skew +4.13 | jaarvol 25.7% | slechtste dag -5.86% | corr ORB +0.01
+   → AFGEWEZEN (poort; overige cijfers informatief)
+
+Variant (c): N 353 (train 175, test 178) | poort: mediaan-bruto train -20.5 bp (gemiddeld +29.5; kosten gem. 1.5) → STOP (geen trial)
+   netto bp/trade: train +28.0 (t +1.43) | test -25.0 (t -6.23) | +50% spread test t -6.72 | trade-skew +11.48 | winkans 7%
+   per jaar: 2021:+102.4(36) 2022:+22.1(72) 2023:-5.7(67) 2024:-12.1(66) 2025:-28.0(60) 2026:-37.8(52) → 2/6 positief | trade-dagen/jaar: 2021:26 2022:54 2023:49 2024:50 2025:46 2026:37
+   dagreeks (1% risico, ≤ 4×, max 5): SR -1.07 | skew +6.78 | jaarvol 19.3% | slechtste dag -4.99% | corr ORB +0.02
+   → AFGEWEZEN (poort; overige cijfers informatief)
+
+Variant (d): N 724 (train 359, test 365) | poort: mediaan-bruto train -23.5 bp (gemiddeld -0.7; kosten gem. 1.5) → STOP (geen trial)
+   netto bp/trade: train -2.2 (t -0.32) | test -22.6 (t -8.02) | +50% spread test t -8.68 | trade-skew +7.76 | winkans 6%
+   per jaar: 2021:+29.2(87) 2022:-3.7(136) 2023:-20.9(136) 2024:-13.1(131) 2025:-19.4(139) 2026:-40.5(95) → 1/6 positief | trade-dagen/jaar: 2021:57 2022:77 2023:75 2024:77 2025:75 2026:55
+   dagreeks (1% risico, ≤ 4×, max 5): SR -2.55 | skew +3.97 | jaarvol 24.4% | slechtste dag -5.86% | corr ORB -0.00
+   → AFGEWEZEN (poort; overige cijfers informatief)
+
+[exited with code 0]

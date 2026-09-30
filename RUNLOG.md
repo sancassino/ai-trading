@@ -582,3 +582,12 @@ S1b (PREREG_S1.md vóór berekening; s1_noise.py, FTMO-M5 2021–26, US500/US100
 Per symbool: alleen US100 t ≈ 2,2–2,6; US30 negatief. 2026 in alle varianten negatief.
 Conclusie: zelfde beeld als ORB (corr 0,5): klein positief in 2021–23, verdwijnt na publicatie/in 2024–26; nergens t ≥ 3,5. Profiel is wel gunstig (positief scheef, dagelijks vlak). TRIAL_COUNT 414.
 Volgende stap: S2 (Stocks-in-Play ORB op earnings-dagen).
+
+## 2026-09-30 09:13 — S2: Stocks-in-Play ORB op earnings-dagen — kosten-poort FAALT in alle 4 varianten (geen trial)
+
+Regel geverifieerd uit het volledige paper (SFI RP 24-98, open-access kopie St. Gallen-repository): OR = eerste 5-min-kaars, **alleen in de richting van die kaars** (afwijking van VOORSTEL_S2, dat beide kanten noemde), stop 10% ATR14, uit op sessie-einde. PREREG_S2.md vóór berekening; s2_sip_orb.py, 41 US-aandelen, earnings-dagen uit earnings.csv (735 trades 2021–26).
+Poort (D-010: mediaan-bruto train ≥ 8,7 bp): (a) OR-stop −53,2 bp (gemiddeld +21,2); (b) 10% ATR −23,8 (gem. +3,8); (c) long −20,5 (gem. +29,5); (d) uit 12:00 −23,5 (gem. −0,7) → alle STOP, TRIAL_COUNT blijft 414.
+Informatief (geen beslissing): netto test 2024–26 negatief in alle varianten ((a) −5,5 bp t −0,5; (b) −21,7 t −6,6; (c) −25,0; (d) −22,6); alleen 2021 sterk positief; 56–78 trade-dagen/jaar; corr ORB ≈ 0.
+Kanttekening: de 10%-ATR-stop is op M5-resolutie erg krap (winkans 6%; stop in de instapbar telt conservatief als geraakt) — het paper gebruikte 1-min-data. Vraag U-001 (mediaan vs gemiddelde poort) is door D-010 beantwoord: mediaan.
+Ook: S1-beslisregel vroeg (v15.1/D-006) een dag-geclusterde t; S1 gebruikte per-trade-t, maar faalde al ruim (test-t ≤ 1,1); clustering over positief gecorreleerde indices verlaagt t alleen verder.
+Volgende stap: S3-voorbereiding.

@@ -7,3 +7,5 @@ data/m5/
 forward/cron.log
 .venv/
 data/m5_vol/
+data/long_m1/
+data/long_m5/
