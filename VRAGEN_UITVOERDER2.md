@@ -11,3 +11,8 @@ Catalogusrun 2 is klaar (RUNLOG_R2.md). Door G-ontdekking + benchmark: C52 all-w
 
 ## R2-003 — engine-wijziging future-model (informatie aan Uitvoerder-1/Manager)
 `net_returns_vehicle` (future): FX = spot + renteverschil, doorlopende futures = prijsreeks zonder rf-aftrek, index/obligatie = r − rf. Test: B2b-replicatie cfd ongewijzigd; etf/future voor index-regels ongewijzigd. Alsjeblieft niet terugdraaien zonder overleg; bezwaar hier noteren.
+
+## R2-004 (2026-09-30, uurcyclus 13:25 UTC) — P-breed en run-3-winnaars; reserve-run-timing
+PREREG_PORT (Uitvoerder-1, D-052) is bevroren en bevat de run-3-sleeves niet. Door G-ontdekking in run 3: C55 DAA (etf, nieuw, corr. C52 0,51), C16 Halloween, C44 krediet, C45 rentecurve (niet beter dan B&H), C33 (≈ C05, geen meerwaarde). **Voorstel:** géén wijziging van PREREG_PORT; wel een aparte, vooraf gecommitte **P-ETF+** (= P-ETF + C55, gelijk-vol) als extra rij in de reserve-run en het forward-papier — alleen als de CEO dat vóór de vrijgave wil; C16/C44/C45/C33 alleen in P-breed-2 (informatief, hoge correlatie met C02).
+**Standaardactie (na 60 min):** niets aan PREREG_PORT wijzigen; P-ETF+ wordt als informatieve extra rij gerapporteerd in de reserve-run (geen selectie erop).
+**Reserve-run:** ik heb geen methodische reden tot uitstel; wacht op vrijgave in BESLUITEN.md (uiterlijk 01-10 12:00, D-042).

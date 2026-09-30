@@ -63,3 +63,11 @@ def cash_12m(dates, i):
     """gemiddelde risicovrije rente over de 252 dagen tot en met dates[i], als 12m-rendement (fractie)."""
     from engine.run_rule import rf_on
     return float(np.mean(rf_on(dates[max(0, i - 251):i + 1])) / 100)
+
+
+def series_on(name, dates, field="close"):
+    """waarde van reeks `name` (data/daily) op elke datum, laatste bekende waarde (geen lookahead); NaN vóór de start."""
+    from engine.run_rule import load_daily
+    d = load_daily(name, field); ks = np.array(d["date"], dtype="datetime64[D]")
+    j = np.searchsorted(ks, np.array(dates, dtype="datetime64[D]"), side="right") - 1
+    return np.where(j >= 0, np.asarray(d["close"])[np.clip(j, 0, None)], np.nan)

@@ -124,6 +124,9 @@ VEHICLE_DEFAULT = {  # rt_bp = rondreis per eenheid wijziging; ter = %/jr op |po
     "cfd": {"rt_bp": None, "ter": 0.0, "short": True, "cash_rate": False, "model": "cfd"},
     "etf": {"rt_bp": 13.0, "ter": 0.07, "short": False, "cash_rate": True, "model": "etf"},   # VEHICLE_ANALYSE v1: 0,05%/kant commissie + ≈ 3 bp spread; TER 0,07%
     "future": {"rt_bp": 1.0, "ter": 0.0, "short": True, "cash_rate": True, "model": "future", "roll_bp": 0.5, "rolls": 4},
+    # D-047 (R2): retail-CFD = future-semantiek (spot + carry/benchmark-financiering) − fee% × |notional| (beide kanten) − spread (S0 × s0mult; onbekend → 3 bp)
+    "cfd_retail": {"rt_bp": None, "ter": 0.0, "short": True, "cash_rate": True, "model": "future", "roll_bp": 0.0, "rolls": 0, "fee_pct": 1.5, "s0mult": 1.0},
+    "cfd_retail_hi": {"rt_bp": None, "ter": 0.0, "short": True, "cash_rate": True, "model": "future", "roll_bp": 0.0, "rolls": 0, "fee_pct": 2.5, "s0mult": 2.0},
 }
 
 
@@ -178,7 +181,8 @@ def net_returns_vehicle(df, pos, spread_mult, veh, cap=True):
                 r[i] = b / a - 1
     p_prev = np.r_[0.0, pos[:-1]]
     turn = np.abs(np.diff(np.r_[0.0, pos]))
-    cost = turn * (V["rt_bp"] / 2) * 1e-4 * spread_mult
+    rtbp = V["rt_bp"] if V["rt_bp"] is not None else RT.get(COST_MAP.get(df["name"]), 3.0) * V.get("s0mult", 1.0)
+    cost = turn * (rtbp / 2) * 1e-4 * spread_mult
     nights = np.r_[0, [(b - a).days for a, b in zip(df["date"][:-1], df["date"][1:])]]
     rf = rf_on(df["date"]) / 100 / 365 * nights
     ter = np.abs(p_prev) * V["ter"] / 100 / 365 * nights
@@ -188,14 +192,17 @@ def net_returns_vehicle(df, pos, spread_mult, veh, cap=True):
         fin = ter - cash
     else:  # future: overschotrendement + rente op het volledige kapitaal
         nm = df["name"]
-        if nm.startswith("FX_"):      # R2-fix: FX-future verdient het renteverschil (base − quote) bovenop spot; geen −rf
-            diff = (rate_on(nm[3:6], df["date"]) - rate_on(nm[6:9], df["date"])) / 100 / 365 * nights
+        fxc = len(nm) == 6 and nm.isalpha() and nm.isupper()      # R3: kruisen als EURGBP (Yahoo =X)
+        if nm.startswith("FX_") or fxc:      # R2-fix: FX-future verdient het renteverschil (base − quote) bovenop spot; geen −rf
+            b0 = 3 if nm.startswith("FX_") else 0
+            diff = (rate_on(nm[b0:b0 + 3], df["date"]) - rate_on(nm[b0 + 3:b0 + 6], df["date"])) / 100 / 365 * nights
             gross = p_prev * (r + diff)
         elif nm.endswith("_F"):       # R2-fix: doorlopende futures-prijsreeks is al overschotrendement (rol/carry zit in de prijs) → geen −rf
             gross = p_prev * r
         else:                         # index/obligatie (adjclose = total return): overschot = r − rf
             gross = p_prev * (r - rf)
         roll = np.abs(p_prev) * V.get("roll_bp", 0.5) * V.get("rolls", 4) * 1e-4 / 365 * nights
+        roll = roll + np.abs(p_prev) * V.get("fee_pct", 0.0) / 100 / 365 * nights          # cfd_retail: financieringsopslag op |notional|
         fin = roll - (rf if cap else 0.0)
     return gross - cost - fin, turn, gross, cost, fin
 
