@@ -143,3 +143,21 @@ def d2b():
             f()
         except Exception as e:
             print(f"{f.__name__}: FOUT {e}", flush=True)
+
+
+def bis_fx():
+    """R2-006: BIS WS_XRU dagkoersen (lokale valuta per USD; publiek, bronvermelding BIS). Lange EM-FX voor lokale-valuta-indices."""
+    areas = {"BR": "BRL", "MX": "MXN", "ID": "IDR", "IN": "INR", "KR": "KRW", "TW": "TWD", "SG": "SGD", "ZA": "ZAR", "HK": "HKD",
+             "CN": "CNY", "TH": "THB", "CL": "CLP", "TR": "TRY", "AU": "AUD", "CA": "CAD", "CH": "CHF", "SE": "SEK", "NO": "NOK",
+             "JP": "JPY", "GB": "GBP", "XM": "EUR"}
+    for a, c in areas.items():
+        try:
+            txt = get(f"https://stats.bis.org/api/v1/data/WS_XRU/D.{a}.{c}.A?format=csv")
+            rows = []
+            for r in csv.DictReader(io.StringIO(txt)):
+                v = r.get("OBS_VALUE")
+                if v and v != "NaN":
+                    rows.append((date.fromisoformat(r["TIME_PERIOD"]), float(v)))
+            write(f"FXBIS_{c}", rows, f"BIS WS_XRU D.{a}.{c}.A ({c} per USD, dagelijks; bronvermelding BIS)")
+        except Exception as e:
+            print(f"BIS {c}: FOUT {e}", flush=True)

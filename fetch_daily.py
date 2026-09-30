@@ -28,6 +28,9 @@ SERIES = {  # naam: Yahoo-ticker
     # D2b (S11/D-066): extra onafhankelijke aandelenmarkten + factor-ETF's (korte N, label)
     "AXJO": "^AXJO", "TSX": "^GSPTSE", "SMI": "^SSMI", "OMXS30": "^OMX", "KOSPI": "^KS11", "TWII": "^TWII", "BVSP": "^BVSP",
     "MXX": "^MXX", "IBEX": "^IBEX", "AEX": "^AEX", "BEL20": "^BFX", "STI": "^STI", "SENSEX": "^BSESN", "NIFTY": "^NSEI", "JKSE": "^JKSE",
+    # R2-006: EM-FX (lokale valuta per USD) voor EM-indices
+    "USDBRL": "BRL=X", "USDMXN": "MXN=X", "USDIDR": "IDR=X", "USDINR": "INR=X", "USDKRW": "KRW=X", "USDTWD": "TWD=X", "USDSGD": "SGD=X",
+    "USDZAR": "ZAR=X", "USDHKD": "HKD=X", "USDAUD_INV": "AUD=X", "USDCNY": "CNY=X",
     "MTUM": "MTUM", "QUAL": "QUAL", "USMV": "USMV", "VLUE": "VLUE", "EWA": "EWA", "EWC": "EWC", "EWL": "EWL", "EWS": "EWS", "EWY": "EWY", "EWZ": "EWZ",
 }
 
