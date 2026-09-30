@@ -541,3 +541,10 @@ Stap 1 kosten per kant (halve spread + commissie): EURUSD 0,32 bp, GBPUSD 0,28, 
 Stap 2 OOS: 15 min N 120.916 (eff. 61.710), −1,01 bp/trade, t −30,6, SR −9,9; 30 min N 80.001, −1,02 bp, t −18,7; 60 min N 50.191, −0,96 bp, t −10,4; 0/5 jaar positief, alle 15 symbolen negatief.
 Conclusie: ook bij zeer lage kosten is de bruto voorspellende waarde ≈ 0; netto verlies ≈ de round-trip-kosten. TRIAL_COUNT 407.
 Volgende stap: R2 (aandelen cross-sectioneel ML).
+
+## 2026-09-30 08:41 — R2: machine learning cross-sectioneel op 41 aandelen — beide targets AFGEWEZEN
+
+Getest (PREREG_R2.md vóór berekening): r2_stocks_ml.py, 41 US-aandelen FTMO-M5 2021–26 (kwartier-raster), features Q4 + relatieve sterkte t.o.v. US500 (12-bar, dag-tot-nu) + cross-sectionele rang 12-bar + earnings-nabijheid + symbool; LightGBM vaste parameters, walk-forward 6→1 mnd; targets eindigen binnen dezelfde dag (geen purging nodig).
+Resultaat: (a) 60 min N 46.069, +0,22 bp/trade, OOS t +0,42, 2/5 jaar+, SR na kosten +0,12; (b) tot sessieslot N 15.107, −0,65 bp, t −0,35, 2/5 jaar+, SR −0,09. Jaren wisselen sterk (2025 +7,8/+8,7 bp, 2026 −8,0/−11,3 bp).
+Conclusie: geen stabiele cross-sectionele intraday-voorspelbaarheid na kosten. TRIAL_COUNT 409.
+Volgende stap: R4 (positief-scheve breakout met trailing stop op kosten-lage FX/goud).

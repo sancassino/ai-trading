@@ -52,3 +52,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | VOORSTEL_H-H1 maandeinde-herbalancering | 1 | 402 |
 | 2026-09-30 | VOORSTEL_H-H2 pre-feestdag, H3 RSI(2) bij VIX>20 | 2 | 404 |
 | 2026-09-30 | R1 FX-ML (15 symbolen, 3 horizons) | 3 | 407 |
+| 2026-09-30 | R2 aandelen-ML cross-sectioneel (2 targets) | 2 | 409 |
