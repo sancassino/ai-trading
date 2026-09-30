@@ -490,3 +490,8 @@ Resultaat OOS: 15 min N 20.861, −0,66 bp/trade, t −3,67, 0/5 jaar+; 30 min N
 Permutatietest niet uitgevoerd (alleen bij OOS-t ≥ 3, conform prereg).
 Conclusie: het model vindt structuur, maar de voorspelde bewegingen zijn kleiner dan de spread → na kosten geen edge. TRIAL_COUNT 401.
 Volgende stap: Q5 (portefeuille) — geen nieuwe sleeves uit Q2–Q4.
+
+## 2026-09-30 06:49 — Q5: portefeuille — geen nieuwe sleeves; plafond = Q1 reeks A
+
+Q2 (earnings), Q3 (crypto) en Q4 (ML) haalden geen enkele hun vooraf gestelde regel → de portefeuille blijft de zwakke basis RSI(2)+ORB (F3b). De frontier daarvan is Q1 reeks A: bij geen enkele schaal positief verwacht netto inkomen (beste ≈ −€21/mnd), en €500 / €900 per maand vereist onder de echte FTMO-mechaniek een Sharpe van ≈ 3 / ≈ 4. Geen herberekening nodig (identieke reeks).
+Volgende stap: backlog v11 leeg → VOORSTEL_H.md (≥ 3 nieuwe hypothesen met economische logica) en de best onderbouwde uitvoeren.
