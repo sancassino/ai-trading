@@ -987,3 +987,8 @@ CTO: A5 London-ORB STOP (`ce5abdc`); S2 XAU-overlap / GER40-open / USDJPY-handof
 ## 2026-09-30 21:15 — v41 prio 1: US41-aandelen-M5 + BTC/ETH/olie in data/m5gz/ — deblokkeert A2 en S2-BTC/USOIL
 
 data/m5gz/ uitgebreid van 24 naar 69 symbolen (≈ 159 MB gzip): alle 41 US-aandelen uit universe_us41.txt (A2 Stocks-in-Play ORB) + BTCUSD, ETHUSD, USOILcash, UKOILcash (S2). Zelfde formaat en periode (2021-01 → 2026-09-29, servertijd NY + 7 u), checksums (gz + ongecomprimeerde bron) voor alle 69 opnieuw berekend en geverifieerd. README aangevuld met aandelen-caveats: FTMO-aandelen openen vanaf 2024 om 09:35 ET en sommige hebben een uur-offset (Q2: sessie = alle bars van de NY-datum); veel aandelen-bars hebben spread 0 = ontbrekend (spreads per uur staan in COSTS_FTMO_alle*.csv). Reserve 2025-01→ zit in de data; alleen gebruiken zoals PREREG/CEO toestaat.
+
+## 2026-09-30 23:55 — NEXT_STEPS v43: screen klaar → Strateeg PREREGs (CTO)
+
+U2 `a383cb5` cost/vol screen → `results/screen_cost_vol.csv`. Top met RT: US100/US30/GER40/US500/XAU. Prio: Strateeg (dan S2) non-clone daily-flat PREREGs op dat universum; U2 idle tot PREREG. A-tier dead set ongewijzigd. Ops-approvals bij CTO, niet Sandro.
+

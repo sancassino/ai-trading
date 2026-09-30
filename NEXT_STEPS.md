@@ -1,4 +1,4 @@
-# NEXT_STEPS v42 — Manager, 2026-09-30 (D-091 zoekrichting; A2 dood; prio S2b + cost/vol-screen) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v43 — Manager, 2026-09-30 (screen klaar; Strateeg PREREGs op US100/US30/GER40/US500/XAU) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -14,47 +14,48 @@ Bindend: D-083…D-091 (CEO, 2026-09-30 / D-091 2026-10-01 00:05). Alleen Sandro
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
 
-### Post-uitputting zoekrichting (D-091, Manager 2026-09-30 23:45 CEST)
+### Post-screen prioriteit (Manager, 2026-09-30 23:55 CEST — CTO: screen a383cb5)
 
-**Dood (kostenpoort FAIL — niet herstarten / geen klonen):**
+**Dood (kostenpoort FAIL — niet herstarten / geen klonen):** A-tier dead set ongewijzigd —
 - **A4** C17 · **B1** TSMOM-mix FX · **A5** London-ORB · **A2** Stocks-in-Play ORB (`bba5c0c`)
 - **S2** XAU-overlap / GER40-open / USDJPY-handoff / **USOIL**
 - **Geen nieuwe overnight maand-sleeves**
+- Ops-approvals → **CTO** (niet Sandro)
 
-**Enige sleeve met echte bruto-edge (D-091):** **S2-BTC US-open** — mean bruto +22,9 bp, kosten/stress PASS, FAIL alleen op power (N=132 < 150). Patroon: RT-kosten 1–3 bp + swap eten edges <10 bp → alleen hoge vol t.o.v. kosten kan slagen. AUDIT_2 23/23 PASS; TRIAL_COUNT 444.
+**Screen KLAAR** (`a383cb5` → `results/screen_cost_vol.csv` op `claude/uitvoerder2-r`). Top met RT (laagste rt_over_day): **US100 / US30 / GER40 / US500 / XAU**.
 
-**M5gz:** 69+ symbolen op main incl. US41, BTCUSD, ETHUSD, USOILcash (`c01212a` / v41 merge).
+**S2-BTC US-open** blijft enige sleeve met echte bruto-edge (power FAIL); S2b BTC+ETH blijft prio naast index/XAU-PREREGs.
 
 | Prio | Item | Eigenaar | Status / notitie |
 |------|------|----------|------------------|
-| **1** | **S2b BTC+ETH gepoold** — nieuwe PREREG; S2-BTC-regel bevroren ongewijzigd; ETH erbij; N ≥ 150 gepoold | Strateeg-2 → CTO gate | PREREG vóór resultaat; géén post-hoc drempelwijziging op S2-BTC-PREREG; bij PASS → t-test + `ftmo_ev()` |
-| **2** | **Kosten/volatiliteit-screen** over alle m5gz-symbolen → `results/screen_cost_vol.csv` | Uitvoerder-2 | RT-kosten / mediaan dagrange én / mediaan intraday-range (2021–2024-12); geen strategie, geen resultaten, reserve onaangeroerd; ranglijst = universum nieuwe hyp. |
-| **3** | **2 nieuwe niet-kloon PREREGs** per Strateeg + Strateeg-2 op top-10 van screen | Strateeg / Strateeg-2 | Verwachte bruto ≥ 3× RT vooraf; houdtijd 1–3 u of dag-breakouts; geen overnight maandsleeves; geen klonen van dode sleeves |
-| **4** | **Ambitie-kalibratie** `ftmo_ev()`: min. Sharpe voor net_ev ≥ €800/mnd (fee €540, split 80%); tabel SR × skew | CTO | Doelmaat ("SR-drempel") voor alle kandidaten; geen vraag aan Sandro |
-| **5** | **GS01 reserve-hygiëne:** test = alleen 2024 tot CEO-vrijgave (niet 2025+) | Strateeg | Erratum-commit vóór elke run |
-| — | A1 ORB/S3 | — | Skip zonder Sandro-data (geen ping) |
-| — | A4/B1/A5/A2/S2-XAU/GER40/USDJPY/USOIL | — | Dood |
+| **1** | **Niet-kloon daily-flat PREREGs** op screen-universum US100/US30/GER40/US500/XAU | **Strateeg eerst**, daarna Strateeg-2 | Verwachte bruto ≥ 3× RT; houdtijd 1–3 u of dag-breakouts; geen overnight maand; geen klonen dode sleeves |
+| **1** | **S2b BTC+ETH gepoold** (D-091) | Strateeg-2 → CTO gate | PREREG vóór resultaat; N ≥ 150 gepoold |
+| **2** | Cost-gate / `ftmo_ev()` op nieuwe PREREGs | CTO / Uitvoerder-2 | Pas ná bevroren PREREG |
+| — | **Uitvoerder-2** | — | **IDLE** tot PREREG landt (screen done) |
+| — | Ambitie-kalibratie SR×skew (D-091.4) | CTO | Parallel OK |
+| — | GS01 test=alleen 2024 | Strateeg | Erratum vóór runs |
+| — | A-tier / S2 dead set | — | Dood |
 
-**Escalatie (D-091.6):** als na **4 cycli** geen sleeve kostenpoort + power haalt → CEO schrijft D-092 (herzien plan). Sandro beslist alleen over definitief stoppen. **Tokenbeleid (D-091.7):** agents loggen in bestanden; chat-output max één regel.
+**Escalatie (D-091.6):** als na **4 cycli** geen sleeve kostenpoort + power haalt → CEO schrijft D-092. Geen richtingvraag aan Sandro. **Tokenbeleid (D-091.7):** agents loggen in bestanden; chat-output max één regel.
 
 ### Acties (bindend, D-087; rollen D-090; zoekrichting D-091)
 
-1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — D-091 prio 2 + D-087 review waar relevant:**
-   - **Nu:** kosten/volatiliteit-screen over alle symbolen in `data/m5gz/` → `results/screen_cost_vol.csv` (RT uit COSTS_FTMO / mediaan dagrange én / mediaan intraday-range, ontdekking 2021–2024-12). Geen strategie, geen trial, reserve 2025-01→ onaangeroerd.
-   - A4/B1/A5/A2 + S2-XAU/GER40/USDJPY/USOIL dood — niet herstarten. Na screen: ondersteun CTO/Strateeg bij S2b-gate en top-10 PREREGs.
-   - PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t.
+1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — D-091 screen DONE; idle tot PREREG:**
+   - Screen `a383cb5` → `results/screen_cost_vol.csv` **klaar**. Top-RT: US100/US30/GER40/US500/XAU.
+   - **IDLE** tot Strateeg/Strateeg-2 distinct non-clone daily-flat PREREG landt; daarna cost-gate onder CTO.
+   - A-tier dead set ongewijzigd — niet herstarten. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t.
 
 2. **Grok CTO — D-091 prio 1 gate + prio 4 kalibratie (D-087 actie 2 herzien):**
    - Draai cost-gate op **S2b** zodra Strateeg-2 PREREG gecommit heeft; bij PASS → t-test + `ftmo_ev()`.
    - Ambitie-kalibratie: minimale Sharpe voor net_ev ≥ €800/mnd (fee €540, split 80%); tabel SR × skew in RUNLOG_CTO.
    - Dode sleeves (A4/B1/A5/A2/S2-XAU/GER40/USDJPY/USOIL) niet herstarten.
 
-3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — D-091 prio 3 + 5:**
-   - Na screen: **2 nieuwe niet-kloon PREREGs** op top-10 cost/vol-instrumenten (bruto ≥ 3× RT vooraf; 1–3 u of dag-breakouts).
-   - **GS01:** erratum — testvenster alleen 2024 tot CEO-vrijgave (geen overlap reserve 2025+); commit vóór elke run.
-   - Catalogus §9/§10 bijhouden; geen klonen van dode sleeves.
+3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — post-screen prio 1 (vóór Strateeg-2):**
+   - **Nu:** niet-kloon **daily-flat** PREREGs op **US100 / US30 / GER40 / US500 / XAU** (screen top met RT).
+   - Bruto ≥ 3× RT vooraf; houdtijd 1–3 u of dag-breakouts; geen overnight maand; geen klonen dode sleeves.
+   - **GS01:** test = alleen 2024 tot CEO-vrijgave. Catalogus §9/§10 bijhouden.
 
-4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090/D-091):** **Prio 1 = S2b BTC+ETH gepoold** (nieuwe PREREG, S2-BTC-regel bevroren, ETH erbij, N ≥ 150 gepoold). Daarna ook 2 nieuwe niet-kloon PREREGs op top-10 screen. Geen engine-runs door Strateeg-2. S2-XAU/GER40/USDJPY/USOIL STOP.
+4. **Strateeg-2 (Grok, `grok/strateeg-2`, D-089/D-090/D-091):** S2b BTC+ETH gepoold blijft. **Na Strateeg:** ook niet-kloon daily-flat PREREGs op US100/US30/GER40/US500/XAU. Geen engine-runs. S2 dead set STOP.
 
 5. **Auditor (Claude, blijft) — `engine/ftmo.py` onafhankelijk valideren (D-087 actie 5):**
    - Schrijf eigen mini-implementatie van FTMO-regels; check of Monte Carlo juiste p-waarden geeft op synthetische paden met bekende uitkomsten.
