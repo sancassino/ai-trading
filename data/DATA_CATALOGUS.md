@@ -16,6 +16,7 @@ Kolommen: date;open;high;low;close;adjclose;volume (6 sign. cijfers). Checksums:
 | BWX | 2007-10-11 | 2026-09-29 | 4771 | 0 | 0 | 0 | 0 | 0 | 0 |
 | CAC40 | 1990-03-01 | 2026-09-29 | 9291 | 0 | 0 | 0 | 0 | 0 | 0 |
 | CATTLE_F | 2001-03-01 | 2026-09-29 | 6411 | 0 | 1 | 244 | 0 | 0 | 0 |
+| CBOE_PUT | 1996-08-02 | 2026-09-21 | 7574 | 0 | 0 | 0 | 0 | 0 | 2 |
 | COFFEE_F | 2000-01-03 | 2026-09-29 | 6704 | 0 | 0 | 719 | 0 | 0 | 0 |
 | COPPER_F | 2000-08-30 | 2026-09-29 | 6549 | 0 | 0 | 300 | 0 | 0 | 1 |
 | CORN_F | 2000-07-17 | 2026-09-29 | 6556 | 0 | 2 | 831 | 0 | 0 | 1 |
@@ -137,6 +138,8 @@ Kolommen: date;open;high;low;close;adjclose;volume (6 sign. cijfers). Checksums:
 | USMV | 2011-10-20 | 2026-09-21 | 3750 | 0 | 0 | 0 | 0 | 0 | 0 |
 | USO | 2006-04-10 | 2026-09-29 | 5150 | 0 | 0 | 0 | 0 | 0 | 2 |
 | VIX | 1990-01-02 | 2026-09-29 | 9255 | 0 | 0 | 0 | 0 | 0 | 152 |
+| VIX3M | 2006-07-17 | 2026-09-21 | 5077 | 0 | 0 | 0 | 0 | 0 | 34 |
+| VIX9D | 2011-01-03 | 2026-09-21 | 3952 | 0 | 0 | 0 | 0 | 0 | 336 |
 | VLUE | 2013-04-18 | 2026-09-21 | 3377 | 0 | 0 | 0 | 0 | 0 | 0 |
 | VNQ | 2004-09-29 | 2026-09-29 | 5535 | 0 | 0 | 0 | 0 | 0 | 0 |
 | WHEAT_F | 2000-07-17 | 2026-09-29 | 6568 | 0 | 1 | 835 | 0 | 0 | 1 |
@@ -178,10 +181,11 @@ Kolommen: date;open;high;low;close;adjclose;volume (6 sign. cijfers). Checksums:
 
 NB: Yahoo-indices zijn cash-indexslotkoersen; futures (GC=F e.d.) zijn doorlopende front-month-reeksen (rolsprongen mogelijk); FX (=X) vanaf 1996/2003. Dagen zonder OHLC (alleen slot) komen vooral voor in vroege jaren.
 
-**R2-006 (EM-FX, 2026-09-30):** BIS WS_XRU dagkoersen (publiek; bronvermelding BIS), **lokale valuta per USD**: FXBIS_BRL (1984→), MXN (1954→), IDR (1988→),
-INR (1973→), KRW (1964→), TWD (1983→), SGD/HKD/CNY/THB (1981→), CLP (1982→), ZAR (1970→), TRY (1950→), AUD (1971→), CAD (1945→), CHF/SEK/NOK/GBP (1953→),
-JPY (1969→), EUR (1974→; vóór 1999 BIS-synthetisch). Let op: GBP bevat 348 weekenddagen (BIS-invulling) — bij gebruik filteren op werkdagen.
-Yahoo =X-EM-FX (USDBRL, MXN, IDR, INR, KRW, TWD, SGD, ZAR, HKD, CNY; 2001–2004→) als korte dagelijkse aanvulling.
+**R2-007 (2026-09-30):** CBOE_PUT (^PUT, Cboe S&P 500 PutWrite, 1996→), VIX9D (2011→), VIX3M (2006→) via Yahoo — **privé-repo; Cboe-indexdata alleen voor
+eigen onderzoek, niet herverspreiden** (licentienotitie). Niet beschikbaar via Yahoo: ^BXM (lege reeks), ^WPUT/^BXMD/^PPUT (HTTP 422) — niet elders gezocht via omwegen.
+**Ken French Data Library:** pagina vermeldt alleen 'Copyright Eugene F. Fama and Kenneth R. French', geen licentie → **alleen citeren, geen bestanden gecommit** (v32/D-068).
+**Shiller CAPE (ie_data.xls):** geen expliciete licentie; Yale-pagina vanaf onze IP's niet bereikbaar (ECONNREFUSED) → **alleen citeren, niets gecommit**; geen
+derde-partij-kopieën (shillerdata.com e.d.) gebruikt.
 
 ## D1 — Dukascopy-intraday `data/long_m1/` (lokaal, niet in repo)
 Zie results/p0/p0_log.txt; SPX 2011 niet op de feed; 2012→ loopt. Wordt bijgewerkt zodra jaren compleet zijn.
