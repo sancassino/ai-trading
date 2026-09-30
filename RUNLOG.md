@@ -954,3 +954,8 @@ Uitvoerder-1-taken ongewijzigd: D-086 (FTMO-snapshot/spreads) klaar; forward-con
 ## 2026-09-30 19:43 — NEXT_STEPS v36 (main, D-089/D-090) gelezen; Managerbranch 'v35 compleet' gemerged met voorrang main en verwijderd
 
 D-090: Claude = CEO + Auditor; Grok = CTO + Manager + Uitvoerder-2 + Strateeg(-2). Voor Uitvoerder-1 (Debian/VM/MT5) geen wijziging in v36: cron's laten draaien (data-update 22:05, F3b 22:15, portefeuille-papier 22:25, FTMO-snapshot 21:30), Uitvoerder-2-branch in main mergen, data/FTMO-specs bijhouden, MT5 op verzoek. D-089 model-beleid genoteerd. Beide NEXT_STEPS-blobs gemarkeerd.
+
+## 2026-09-30 22:07 — NEXT_STEPS v37: post-A4 prio (Manager)
+
+A4 C17 formeel gestopt (kostenpoort TRAIN FAIL `43b6ba2`). Prio lock: **1) B1 TSMOM-mix FX** → **2) A2 ORB** parallel PREREG; A5 geparkeerd tot M5; A1 skip zonder Sandro-data. Strateeg/Strateeg-2 akkoord in teamchat. Uitvoerder-2 wacht op B1-PREREG.
+
