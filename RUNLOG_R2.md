@@ -124,3 +124,39 @@ Uitsplitsing per activum/decennium/zonder obligatie (Uitvoerder-1): SR 0,94 = ex
 **Reserve-run:** nog steeds 01-10 10:00 UTC (eerste cyclus ≥ 10:25 UTC); `r2_reserve.py` geblokkeerd tot dan. P-ETF-lite (PREREG_PORT4) en P-ETF+ (PREREG_PORT2) zijn aan Uitvoerder-1's forward gekoppeld; ik neem P-ETF-lite als **extra informatieve rij** in de reserve-run mee indien `forward_portfolio.py` de reeks levert (anders vermelden).
 
 **r2_reserve.py bijgewerkt:** portefeuilles nu uit `all_portfolios(1)` + `all_portfolios(2)` (P-ETF-a/b, P1, P-breed, P-ETF+, P-breed-2); P-ETF-lite (port4.py) zit niet in die functie → niet in de reserve-run, expliciet vermelden in het reserve-rapport. Guard getest (geblokkeerd), reserve niet gerapporteerd.
+
+## 2026-09-30 (uurcyclus 19:25 UTC ≈ 21:25 Amsterdam) — KOERSCORRECTIE D-083…D-086: FTMO-pivot; reserve-run geschorst; run 9 (FTMO-EV)
+
+**Verwerkt:** D-083 (doel v3 = FTMO-prop €80k, niet eigen kapitaal), D-084 (**reserve-run geschorst** — D-065/D-057 ingetrokken; reserve-venster 2025-01→ NIET verbrand op ETF-portefeuilles die voor FTMO irrelevant zijn; r2_reserve.py staat, maar NIET uitgevoerd), D-085 (bouw `engine/ftmo.py`, herbeoordeel catalogus-sleeves op cfd + FTMO-EV), D-086 (Uitvoerder-2: geen ETF-werk meer; FTMO-EV is voortaan de meetlat).
+
+**`engine/ftmo.py` gebouwd (nieuw module):**
+- API: `ftmo_ev(daily_total_rets, ...)` → p_phase1, p_funded, ev_per_attempt, payout_per_month_given_funded, breach_live
+- Blok-bootstrap (blok 21 dagen), 10k sims by default
+- FTMO-regels: 5% dagverlies op balance-00:00 (slot-tot-slot benadering), 10% statisch max, fase 1 +10%, fase 2 +5%, ≥ 4 handelsdagen, 80% winstsplit, fee €540 (aanname)
+- `ev_from_series(path)` en `ev_shortlist(dir, rules)` als hulpfuncties
+- Regressietest: `python -m engine.ftmo results/R2/series/C02_faber__basis__cfd_retail.csv` → p_funded 65%, EV €4686/poging (cfd_retail-vehikel)
+
+**Run 9 (`results/R2/run9_ftmo_ev.md`) — FTMO-EV herbeoordeling shortlist (geen trial):**
+Alle shortlist-sleeves gedraaid met vehikel `cfd` (FTMO-kosten: spread + swap), daarna FTMO-EV berekend (5k sims, blok 21d, account €80k).
+
+| Sleeve | SR(cfd) | maxDD | P99-dgloss | EV@auto | p_fund | €/mnd | FTMO-instrument | Oordeel |
+|--------|---------|-------|-----------|---------|--------|-------|----------------|---------|
+| C02_faber basis | 0.34 | 24% | 1.9% | €2099 | 44.5% | €457 | ✅ indices CFD | KANSRIJK |
+| C17_fomc_cycle | 0.37 | 23% | 2.5% | €2071 | 42.1% | €481 | ✅ SPX CFD | KANSRIJK (kort N) |
+| C44_krediet | 0.58 | 24% | 2.5% | €3443 | 58.8% | €528 | ⚠️ SPY-proxy | INTERESSANT (N=17jr) |
+| C16_halloween | 0.33 | 33% | 2.2% | €2117 | 42.4% | €487 | ✅ indices | KANSRIJK (seizoen) |
+| C52_allweather lang | 0.33 | 16% | 1.0% | €231 | 19.8% | €285 | ❌ bond-leg | NIET UITVOERBAAR |
+| C52_allweather basis | 0.47 | 7% | 0.5% | €-493 | 1.9% | €170 | ❌ IEF ETF | NIET UITVOERBAAR |
+| C55_daa | 0.53 | 3% | 0.3% | €-540 | 0% | €0 | ❌ ETFs | NIET UITVOERBAAR |
+| C54_carver basis | -0.01 | 22% | 0.8% | €-465 | 3.4% | €150 | ⚠️ FX+goud | AFGEWEZEN (neg. SR) |
+| C54_carver qa | -0.41 | 19% | 0.7% | €-540 | 0% | €59 | ✅ FX+goud | AFGEWEZEN (neg. SR) |
+| C33_trend_lowvol | -0.01 | 16% | 0.5% | €-536 | 0.2% | €183 | ✅ SPX | AFGEWEZEN (neg. SR) |
+
+**Lezing:**
+- Swap-kosten (1.36 bp/nacht long-index) eten maandelijkse trend-strategieën significant op: SR daalt ~0.4-0.8 pp tov etf-vehikel.
+- C52/C55 zijn instrumenteel niet uitvoerbaar op FTMO (vereisen obligatie-ETFs of bond-futures).
+- Drie sleeves houden positieve FTMO-EV: C02 (€2099), C17 (€2071), C16 (€2117). EV €2000–3500/poging bij fee €540 betekent positieve verwachtingswaarde, maar brede CI vanwege bootstrap-onzekerheid en korte out-of-sample.
+- **Kritische caveat:** alle EV-getallen zijn gebaseerd op de ontdekkingsset (in-sample). Echte FTMO-EV na haircut 50% op SR → EV richting nul of negatief. Pas na forward ≥ 6 mnd een FTMO-claim.
+
+**Conclusie FTMO-pivot voor Sandro:**
+De ETF-catalogus heeft beperkte waarde voor FTMO. Van de 10 beoordeelde sleeves zijn 3 instrumenteel niet uitvoerbaar (bond-leg) en 4 hebben negatieve cfd-EV. De drie kansrijke (C02, C16, C17) zijn maandelijkse trend/seizoen-regels op indices, maar hun FTMO-EV is bootstrap-gevoelig en gebaseerd op in-sample data. Volgende stap (D-085 §2): focus op FTMO-specifieke strategieën met kortere houdduur en lagere swap-impact (intraday, ORB-achtig, FX-carry intraday).
