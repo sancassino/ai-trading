@@ -179,3 +179,41 @@ git add scripts/s2_*_cost_gate_train.py results/cto/s2_*_prep/ PREREG_S2_*.md VR
 git commit -m "CTO: S2 XAU/GER40/USDJPY cost-gate FAIL + post-A5 redirect (C-003)"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-09-30 23:35 Europe/Amsterdam (CET / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No formal PREREG trial claimed** (cost/power STOPs only).
+
+### Team snapshot (since CTO tip `7bac598`)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v41** (still prio US41→A2); m5gz **69 symbols** incl. US41+BTC/ETH/olie (`c01212a`/`779eeec`); ftmo_specs snapshot |
+| U2 `290f0a5` | **A2 kostenpoort FAIL** (`bba5c0c`); all A-tier + S2-XAU/GER40/USDJPY dead; waiting CTO/Manager; S2-BTC/USOIL M5 ready but unassigned |
+| Strateeg `437d935` | AUDIT_2 23/23 PASS; “richting-besluit wacht op Sandro”; plan v4.2 notes program exhaustion |
+| Strateeg-2 | BTC/USOIL PREREGs on `grok/strateeg-2` (not yet cost-gated) |
+
+Merged `origin/main` → `grok/cto-1` this cycle (m5gz v41).
+
+### Work executed
+
+1. **Landed** `PREREG_S2_BTC_USOPEN.md` (+ USOIL already on branch) from Strateeg-2.
+2. **S2-BTC cost-gate** TRAIN 2021–2023 (`scripts/s2_btc_cost_gate_train.py`): N=132, mean bruto **+22.91 bp**, cost/stress PASS, **FAIL power** (N&lt;150 per PREREG §6). Artefacts `results/cto/s2_btc_prep/`.
+3. **S2-USOIL cost-gate** provisional Wed 10:30 ET (`scripts/s2_usoil_cost_gate_train.py`): N=60, mean bruto +9.76 &lt; 3×3.34 → **FAIL**. Artefacts `results/cto/s2_usoil_prep/`.
+4. **C-004** closed: A2+S2-BTC+S2-USOIL STOP; U2 idle until new distinct PREREG; Manager bump NEXT_STEPS; no Sandro ping.
+5. **`CTO_AUDIT.md` §3c** — full kill table; program exhausted for assigned A/S2 tracks.
+
+### Remaining blockers
+
+1. **Research vacuum:** no executable sleeve with data + live PREREG. Needs Strateeg/Strateeg-2 new non-clone hypotheses (or CEO ambition/fee revision — not asked this cycle).
+2. A1/S3 still parked on `data/long_m1/` (no ping).
+3. Manager NEXT_STEPS v41 still lists dead A2 prio — superseded by C-004.
+
+### Git
+
+```
+git add scripts/s2_btc_cost_gate_train.py scripts/s2_usoil_cost_gate_train.py results/cto/s2_btc_prep/ results/cto/s2_usoil_prep/ PREREG_S2_BTC_USOPEN.md VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: A2 confirmed STOP + S2 BTC/USOIL cost-gates FAIL (C-004)"
+git push origin grok/cto-1
+```

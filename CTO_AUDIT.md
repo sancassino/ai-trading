@@ -1,6 +1,6 @@
 # CTO_AUDIT — ORB / S3 + post-A4/B1 FTMO redirect
 
-**Status:** updated 2026-09-30 23:08 Europe/Amsterdam (CTO wake; §3b A5/S2 kills).  
+**Status:** updated 2026-09-30 23:35 Europe/Amsterdam (CTO wake; §3c A2/S2-BTC/USOIL kills — program exhausted).  
 **Branch:** `grok/cto-1`. **No reserve 2025-01→ opened. No new TRIALS. No fabricated backtests.**  
 **Engine:** `engine/ftmo.py` blob `ac7abef6` (p_survive right-censor; U2 re-validated PASS @ `18c7996`).
 
@@ -77,12 +77,12 @@
 
 | Priority | Item | Owner | Note |
 |---|---|---|---|
-| **1** | **A2** Stocks-in-Play ORB (earnings, EOD flat, swap=0) | Strateeg PREREG frozen; U2 when data | `PREREG_FTMO_A2.md` — needs US41 **M5** (~40 MB). Spreads on main. |
-| **2** | **US41 M5gz** | Manager → Debian / U-006 extra | Only remaining A-tier with a live PREREG + clear data ask. |
-| **3** | **Non-clone research** | Strateeg + Strateeg-2 | See C-003 / §3b — no new session ORB/breakout clones. |
-| — | A4 / B1 / A5 | — | **STOP** (kostenpoort). |
+| **1** | **Non-clone research** (new frozen PREREGs) | Strateeg + Strateeg-2 | C-004 — all A/S2 cost-gated tracks dead. |
+| **2** | Multi-sleeve `ftmo_ev` on Phase-1 survivors only | CTO | Inventory path; not new discovery. |
+| — | A2 / A4 / B1 / A5 / all S2-* | — | **STOP** (kostenpoort or power). |
+| — | US41 M5gz | — | Landed v41 — A2 still FAIL. |
 | — | S2-XAU / GER40 / USDJPY | — | **STOP** (CTO cost-gate 2026-09-30 23:08). |
-| — | S2-BTC / S2-USOIL | — | Parked — symbols absent from `data/m5gz/`. |
+| — | S2-BTC / S2-USOIL | — | **STOP** (CTO 23:35: BTC power N=132<150; USOIL cost FAIL). |
 | — | A1 / S3 | — | Parked until `data/long_m1/` (no Sandro ping). |
 | — | New overnight monthly FX/index | Strateeg | **Deprioritize** (C-002). |
 
@@ -101,9 +101,27 @@
 
 **Kill pattern (bindend):** FTMO CFD session ORB / range-breakout families die at the cost gate whether overnight (A4/B1) or intradag-flat (A5/S2-*). Do not spend more cycles cloning that microstructure with different symbols/sessions.
 
-**Still open with positive option value:** A2 (equity SIP — different universe, earnings catalyst; blocked only on US41 M5). Phase-1 index-ORB F2 remains a *profile* candidate under §1/§2 but not ambition-viable alone at compliant size.
+**Superseded 23:35:** A2 also FAIL after US41 m5gz (see §3c). Phase-1 index-ORB F2 remains a *profile* candidate under §1/§2 but not ambition-viable alone at compliant size.
 
 **Research ask (Strateeg / Strateeg-2):** mechanically distinct intradag-flat ideas (event calendars with available M5, cross-asset RV, or honest multi-sleeve `ftmo_ev` on existing survivors) — not another Tokyo/London/overlap breakout.
+
+---
+
+## 3c. Post-A2 + S2-BTC/USOIL (2026-09-30 23:35 CEST) — program exhausted
+
+US41+BTC/ETH/olie M5 landed on main (v41). U2 ran A2 → FAIL. CTO ran remaining S2 sleeves with m5gz (TRAIN 2021–2023; 2025+ skipped; no TRIALS append):
+
+| Sleeve | Source | N | mean bruto | Poort | Verdict |
+|---|---|---:|---:|---|---|
+| A2 SIP-ORB US41 | U2 `bba5c0c` | 365 | +3.77 bp | 3× RT 26.74 bp | **FAIL** |
+| S2-BTC_USOPEN | CTO `results/cto/s2_btc_prep/` | 132 | **+22.91 bp** | 2×1.25 + share&lt;50% + stress **PASS**; N&lt;150 | **FAIL (power)** |
+| S2-USOIL_EIA | CTO `results/cto/s2_usoil_prep/` | 60 | +9.76 bp | 3×3.34=10.02 (prov. Wed calendar) | **FAIL** |
+
+**Note on BTC:** cost economics cleared; PREREG §6 power stop (N&lt;150) binds — **no formal trial / no parameter retune to inflate N**.  
+**Note on USOIL:** provisional Wed 10:30 ET calendar (holiday shifts not modeled); even under that, fixed 3× gate fails — no Sandro ask for exact EIA list.
+
+**Program state:** every assigned A-tier + S2-* path is STOP or parked on Sandro-only data (A1/`long_m1`). U2 has nothing executable without a **new** frozen PREREG that is mechanically distinct from session ORB/breakout. Manager must bump NEXT_STEPS off the dead A2 prio.
+
 
 ---
 
@@ -111,13 +129,13 @@
 
 - `ftmo_ev` API stable; U2 P1 PASS on censor fix.  
 - ORB grid above: informational reassessment of published F2 series — **not** a PREREG trial; do not append TRIALS.  
-- S2 cost-gate scripts: `scripts/s2_{xau,ger40,usdjpy}_cost_gate_train.py` (m5gz loader pattern shared with U2 A5).  
-- Next engine work (later wake): optional CLI `--scale-grid` + JSON emit for sleeve EV tables; not blocking while A2 data pending.
+- S2 cost-gate scripts: `scripts/s2_{xau,ger40,usdjpy,btc,usoil}_cost_gate_train.py`.  
+- Next: research unblock (new PREREGs) or multi-sleeve survivor `ftmo_ev` — not more ORB clones.
 
 ---
 
 ## 5. Pointers
 
 - PREREG: `PREREG_S3.md`, `PREREG_FTMO_A2.md`, `PREREG_FTMO_B1.md`, `PREREG_FTMO_C17.md`, `PREREG_S2_XAU_OVERLAP.md`, `PREREG_S2_GER40_OPEN.md`, `PREREG_S2_USDJPY_HANDOFF.md`  
-- Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy}_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`  
-- Decisions: `VRAGEN_CTO.md` C-001 (windows), C-002 (post-B1 + M5), **C-003** (post-A5 + S2 STOP + research redirect)
+- Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,a2,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy,btc,usoil}_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`  
+- Decisions: C-001…**C-004** (A2+S2-BTC/USOIL STOP; program redirect)

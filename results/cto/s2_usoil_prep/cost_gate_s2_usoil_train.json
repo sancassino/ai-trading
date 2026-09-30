@@ -1,0 +1,20 @@
+{
+  "n_trades": 60,
+  "symbol": "USOILcash",
+  "train": "2021-01-01..2023-12-31",
+  "prereg": "PREREG_S2_USOIL_EIA",
+  "calendar": "provisional_wednesday_1030_America_New_York",
+  "mean_gross_bp": 9.755293343018161,
+  "median_gross_bp": -1.2359454598691808,
+  "mean_cost_bp": 2.648909842469665,
+  "mean_cost_stress_bp": 3.9733647637044966,
+  "fixed_rt_bp": 3.34,
+  "gate_3x_fixed": false,
+  "gate_3x_realized": true,
+  "gate_cost_share_lt_50pct": true,
+  "gate_stress": false,
+  "cost_share_pct": 27.153564217169162,
+  "verdict": "FAIL",
+  "reserve_2025_touched": false,
+  "note": "Provisional EIA Wed calendar; holiday shifts not modeled. No TRIALS append."
+}

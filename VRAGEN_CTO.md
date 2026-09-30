@@ -4,6 +4,29 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-004 — Post-A2 STOP + S2-BTC/USOIL FAIL + program exhausted
+**Opened:** 2026-09-30 23:20–23:25 Europe/Amsterdam (U2 A2 kostenpoort FAIL @ `bba5c0c`; U2 waiting on CTO/Manager direction; m5gz v41 has BTC/USOIL).  
+**Closed:** 2026-09-30 23:35 Europe/Amsterdam by CTO (technical co-founder; executable m5gz path — no CEO wait).
+
+**Facts (no reserve 2025→; no TRIALS append — poort/power FAIL before formal trial):**
+- **A2** SIP-ORB US41: U2 STOP — mean bruto +3.77 bp < 3× trade-weighted RT 26.74 bp (n=365; `bba5c0c`).
+- **S2-BTC_USOPEN** (CTO this cycle, TRAIN 2021–2023): N=**132**, mean bruto **+22.91 bp**, cost share ~19%, fixed 2×1.25 + stress **PASS**, but PREREG §6 **N&lt;150 → STOP without trial** (`results/cto/s2_btc_prep/`).
+- **S2-USOIL_EIA** (CTO, provisional Wed 10:30 ET calendar): N=60, mean bruto +9.76 bp < 3×3.34=10.02 bp → **FAIL** (`results/cto/s2_usoil_prep/`). Holiday shifts not modeled; fail stands without exact EIA list ask.
+- Prior STOPs unchanged: A4/B1/A5 + S2-XAU/GER40/USDJPY.
+
+**Decision (binding until BESLUITEN says otherwise):**
+1. **A2 = STOP** — confirm U2; no restart / no `ftmo_ev` without CEO rule amend.
+2. **S2-BTC = STOP** at power gate (not cost). Do **not** retune filters to inflate N; do not formal-trial.
+3. **S2-USOIL = STOP** at kostenpoort (provisional calendar sufficient for FAIL).
+4. **U2 next:** no executable A/S2 sleeve remains. Idle with hourly status OK until a *new* frozen PREREG lands that (a) has data on `data/m5gz/` or D1, (b) is **mechanically distinct** from session ORB/breakout (C-003), (c) pre-registers cost/power gates. Do not re-run any STOP sleeve.
+5. **Strateeg + Strateeg-2:** priority = new distinct hypotheses (cross-asset RV flat, inventory of Phase-1 survivors as multi-sleeve under `ftmo_ev`, non-ORB event rules with calendars already in-repo). No more symbol-swapped ORB clones. GS01/GS02 only if Auditor-PASS integrity is kept and rule is not an A5/S2 clone.
+6. **Manager:** bump NEXT_STEPS — remove dead A2/US41 prio; board = research unblock + optional survivor-portfolio EV.
+7. **CEO / Sandro:** no decision required this cycle unless revising €800–900 ambition after full A/S2 kill table. A1/`long_m1` remains the only Sandro-data ask — **no new ping**.
+
+**Where applied:** `CTO_AUDIT.md` §3c, `RUNLOG_CTO.md` (23:35 wake), artefacts `results/cto/s2_{btc,usoil}_prep/`, this ticket.
+
+---
+
 ### C-003 — Post-A5 STOP + S2 m5gz cost-gates FAIL + research redirect
 **Opened:** 2026-09-30 22:50 Europe/Amsterdam (U2 A5 kostenpoort FAIL @ `ce5abdc`; M5gz landed U-006).  
 **Closed:** 2026-09-30 23:08 Europe/Amsterdam by CTO (technical co-founder; executable path available without CEO wait).
@@ -76,4 +99,4 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (not blocking U2):_ (1) land US41 M5gz (~40 MB) for A2 — only remaining A-tier with data path; (2) bump NEXT_STEPS: A5+S2-XAU/GER40/USDJPY STOP; research ≠ new ORB clones. CEO: no decision required unless revising €800–900 ambition or fee €540 after portfolio of kills.
+_Open for Manager (not blocking):_ bump NEXT_STEPS off dead A2 — **all A-tier + S2-* STOP** (C-004); board = non-clone research + optional multi-sleeve survivor `ftmo_ev`. CEO/Sandro: no new decision required unless revising €800–900 ambition / fee €540 after full kill table. A1/`long_m1` ping stays deferred.

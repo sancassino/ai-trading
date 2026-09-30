@@ -1,0 +1,21 @@
+{
+  "n_trades": 132,
+  "symbol": "BTCUSD",
+  "train": "2021-01-01..2023-12-31",
+  "prereg": "PREREG_S2_BTC_USOPEN",
+  "mean_gross_bp": 22.909771644618687,
+  "median_gross_bp": -37.538968551003165,
+  "mean_cost_bp": 4.369519204502803,
+  "mean_cost_stress_bp": 6.354278806754203,
+  "fixed_rt_bp": 1.25,
+  "gate_2x_fixed_1_25": true,
+  "gate_2x_realized": true,
+  "gate_cost_share_lt_50pct": true,
+  "gate_stress_2x": true,
+  "gate_stress_share_lt_50pct": true,
+  "power_n_ge_150": false,
+  "cost_share_pct": 19.072731375431086,
+  "verdict": "FAIL",
+  "reserve_2025_touched": false,
+  "note": "CTO wake cost-gate; formal trial/TRIALS only if PASS under PREREG discipline"
+}
