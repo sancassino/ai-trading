@@ -125,6 +125,8 @@ VEHICLE_DEFAULT = {  # rt_bp = rondreis per eenheid wijziging; ter = %/jr op |po
     "etf": {"rt_bp": 13.0, "ter": 0.07, "short": False, "cash_rate": True, "model": "etf"},   # VEHICLE_ANALYSE v1: 0,05%/kant commissie + ≈ 3 bp spread; TER 0,07%
     "future": {"rt_bp": 1.0, "ter": 0.0, "short": True, "cash_rate": True, "model": "future", "roll_bp": 0.5, "rolls": 4},
     # D-047 (R2): retail-CFD = future-semantiek (spot + carry/benchmark-financiering) − fee% × |notional| (beide kanten) − spread (S0 × s0mult; onbekend → 3 bp)
+    # R4 (C61): inverse-ETF (dagelijks gereset, swap): short toegestaan, TER 0,50% op het short-deel; totaal = p·r + rf·(1 − lang-deel) (kapitaal verdient rf, lang deel is belegd)
+    "etf_inverse": {"rt_bp": 13.0, "ter": 0.07, "ter_short": 0.50, "short": True, "cash_rate": True, "model": "etf", "inverse": True},
     "cfd_retail": {"rt_bp": None, "ter": 0.0, "short": True, "cash_rate": True, "model": "future", "roll_bp": 0.0, "rolls": 0, "fee_pct": 1.5, "s0mult": 1.0},
     "cfd_retail_hi": {"rt_bp": None, "ter": 0.0, "short": True, "cash_rate": True, "model": "future", "roll_bp": 0.0, "rolls": 0, "fee_pct": 2.5, "s0mult": 2.0},
 }
@@ -186,9 +188,11 @@ def net_returns_vehicle(df, pos, spread_mult, veh, cap=True):
     nights = np.r_[0, [(b - a).days for a, b in zip(df["date"][:-1], df["date"][1:])]]
     rf = rf_on(df["date"]) / 100 / 365 * nights
     ter = np.abs(p_prev) * V["ter"] / 100 / 365 * nights
+    if V.get("inverse"):
+        ter = (np.maximum(p_prev, 0) * V["ter"] + np.maximum(-p_prev, 0) * V["ter_short"]) / 100 / 365 * nights
     if V["model"] == "etf":
         gross = p_prev * r
-        cash = np.clip(1 - np.abs(p_prev), 0, 1) * rf if (V["cash_rate"] and cap) else 0.0   # cap=False: kasrente op portefeuilleniveau (aggregatie 'som')
+        cash = np.clip(1 - (np.maximum(p_prev, 0) if V.get("inverse") else np.abs(p_prev)), 0, 1) * rf if (V["cash_rate"] and cap) else 0.0   # cap=False: kasrente op portefeuilleniveau (aggregatie 'som')
         fin = ter - cash
     else:  # future: overschotrendement + rente op het volledige kapitaal
         nm = df["name"]
