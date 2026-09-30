@@ -396,3 +396,11 @@ Geprobeerd (volgens NEXT_STEPS v7):
 Conclusie: geen gratis, geautomatiseerd bruikbare lange intraday-bron → L1 geblokkeerd; L2 (ORB 2010–2020) en L4 (portefeuille op lange steekproef) gestopt op dit pad, zoals de opdracht voorschrijft.
 Opties voor Sandro: (1) AWS-account voor Dukascopy S3 (kosten naar schatting enkele dollars), (2) HistData handmatig downloaden (≈ 80 jaar-/maandbestanden SPX/NSX/GRX/XAU/EURUSD, ASCII M1) en in data/long_m1/ zetten, (3) betaalde bron.
 Volgende stap: L3(a) pre-FOMC op Yahoo-dagproxy 1994–2026 en L5 (forward-weekrapport).
+
+## 2026-09-30 03:15 — L3(a): pre-FOMC op 1994–2026 (SPY-dagproxy) — formeel geslaagd, inhoudelijk: effect sinds 2012 grotendeels weg
+
+Getest (PREREG_L3.md vóór berekening): l3_prefomc_long.py; FOMC-datums 1994–2020 van federalreserve.gov/monetarypolicy/fomchistorical{YYYY}.htm (219 datums, parser gecorrigeerd voor 'Jan/Feb 31-1'-koppen; fomc_dates_1994_2020.txt) + 2021–26 (events.csv).
+Slot(d−1)→slot(FOMC), SPY: 1994–2026 N 264, +22,9 bp, t +3,03 (baseline +4,2 bp); 1994–2011 +33,7 bp (t 3,28); 2012–2026 +9,8 bp (t 0,88); 2010–2020 +15,9 bp (t 1,21); 2021–2026 +1,4 bp (t 0,07). Open→slot FOMC-dag: 1994–2011 +22,3 bp (t 2,43), 2012–2026 −0,6 bp.
+Beslisregel formeel gehaald (t ≥ 2,5, N ≥ 120, 2010–20 ≥ 50% van 2021–26), maar het tweede criterium is ontaard (2021–26-dagproxy ≈ 0). Inhoudelijk: klassiek Lucca–Moench-effect bevestigd voor 1994–2011, sindsdien grotendeels verdwenen; de +26,7 bp uit I3 zit alleen in het venster tot 14:00 ET, dat dagdata niet kunnen isoleren. L3(b) (nachtontleding op Dukascopy) vervalt door L1-blokkade.
+Conclusie: pre-FOMC niet als betrouwbare sleeve behandelen.
+Volgende stap: L5 (forward-weekrapport).

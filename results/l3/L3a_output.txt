@@ -1,0 +1,14 @@
+L3(a) pre-FOMC, SPY-dagproxy:
+ slot(d−1)→slot(FOMC):
+  1994–2026                    N 264 |  +22.9 bp | t +3.03 | baseline +4.2 bp | positief 145/264
+  1994–2011                    N 145 |  +33.7 bp | t +3.28 | baseline +4.2 bp | positief 86/145
+  2012–2026                    N 119 |   +9.8 bp | t +0.88 | baseline +4.2 bp | positief 59/119
+  2010–2020                    N  89 |  +15.9 bp | t +1.21 | baseline +4.2 bp | positief 47/89
+  2021–2026                    N  46 |   +1.4 bp | t +0.07 | baseline +4.2 bp | positief 21/46
+ open→slot (FOMC-dag):
+  1994–2026                    N 264 |  +12.0 bp | t +1.84 | baseline +0.4 bp | positief 138/264
+  1994–2011                    N 145 |  +22.3 bp | t +2.43 | baseline +0.4 bp | positief 86/145
+  2012–2026                    N 119 |   -0.6 bp | t -0.07 | baseline +0.4 bp | positief 52/119
+  2010–2020                    N  89 |   +8.5 bp | t +0.86 | baseline +0.4 bp | positief 42/89
+  2021–2026                    N  46 |  -14.2 bp | t -0.84 | baseline +0.4 bp | positief 20/46
+Beslisregel (slot→slot): t +3.03 (≥ 2,5), N 264 (≥ 120), 2010–20 +15.9 bp vs 50% van 2021–26 (+0.7 bp) → GESLAAGD
