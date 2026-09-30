@@ -66,5 +66,4 @@ datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
 2026-09-30;C17_fomc_cycle;FTMO_A4_basis;FTMO D1 US500cash/US100cash/GER40cash train2021-23 (PREREG_FTMO_C17 amend 5fc3fb9);kostenpoort;;;;stop: kostenpoort (median bruto 20.79 bp < 3× cost 45.12 bp; geen verdere analyse; reserve 2025 onaangeraakt)
 2026-09-30;C05_tsmom_mix_FX;FTMO_B1_basis;FTMO D1 FX6 (EUR/GBP/JPY/AUD/CAD/CHF) train2021-23 (PREREG_FTMO_B1 @05caced/fcaf8bc);kostenpoort;;;;stop: kostenpoort (signed mean bruto -16.94 bp < 3× cost 36.05 bp; n=216 pair-months; geen verdere analyse; reserve 2025 onaangeraakt)
 2026-09-30;FX_london_orb_intradag;FTMO_A5_basis;FTMO M5gz EUR/GBP/JPY/CHF train2021-23 (PREREG_FTMO_FX_INTRADAG);kostenpoort;;;;stop: kostenpoort (median bruto -5.91 bp < 3× mean cost 3.93 bp; n=3106; geen TRIAL_COUNT per PREREG §5; reserve 2025 onaangeraakt)
-
 2026-09-30;US41_stocks_in_play_orb;FTMO_A2_basis;FTMO M5gz US41 earnings train2021-23 (PREREG_FTMO_A2 @6aaa6238);kostenpoort;;;;stop: kostenpoort (mean bruto +3.77 bp < 3× trade-weighted mean RT 26.74 bp; n=365; median bruto -23.78 bp; geen TRIAL_COUNT per PREREG §3; reserve 2025 onaangeraakt)
