@@ -41,3 +41,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | F4 plateau-buren (niet selecteerbaar: 8 RSI + 5 ORB) | 13 | 364 |
 | 2026-09-30 | F5 breedte (8 RSI + 8 ORB + 2 IBS) | 18 | 382 |
 | 2026-09-30 | G3-H1 NR7-ORB | 1 | 383 |
+| 2026-09-30 | G3-H2 Double 7s, G3-H3 RSI(2) hoog-vol | 2 | 385 |

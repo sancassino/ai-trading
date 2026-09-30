@@ -306,3 +306,11 @@ Getest (VOORSTEL_F.md, H1 vóór berekening vastgelegd): g3_nr7orb.py, B4a-ORB a
 Resultaat: N 1.389, +3,61 bp/trade (2,1× B4a: +1,73), t train +2,36 / test +0,89, 4/6 jaar+, DSR 0,38. Per symbool: US500 +10,4 bp, US100 +9,4, US30 +4,4, GER40 +1,8, XAU +0,4, UK100 −0,8, EURUSD −0,7. Per jaar: 2022 +14,5 bp draagt het resultaat; 2024 −1,0.
 Conclusie: kostenvoordeel (≥ 2× bp) gehaald, maar t ≥ 3 in train én test niet → afgewezen. TRIAL_COUNT 383.
 Volgende stap: H2 (Double 7s) en H3 (RSI(2) in hoog-vol-regime).
+
+## 2026-09-30 00:02 — G3-H2/H3: Double 7s en RSI(2)-hoog-vol — beide AFGEWEZEN
+
+Getest (VOORSTEL_F.md vóór berekening): g3_h2h3.py.
+H2 Double 7s: Yahoo 1990–2026 gepoold SR 0,46, t 2,85 (< 3), helften +121% / +48%, DSR 0,44; FTMO 2021–26 SR 0,59, +23,5%. → afgewezen (t < 3, DSR < 0,5).
+H3 RSI(2) alleen bij 20d-vol > eigen 252d-mediaan: Yahoo SR 0,59 → 0,43 (ΔSR −0,16), FTMO 0,57 → 0,56 → afgewezen; het vol-filter verslechtert. Controle: RSI(2)-basis reproduceert exact (Yahoo t 3,65; FTMO +15,4%).
+Conclusie: geen verbetering binnen de familie dag-omkeer/intraday-breakout. TRIAL_COUNT 385.
+Volgende stap: verslag backlog v4; F6 wacht op nieuw demo-account (Sandro).

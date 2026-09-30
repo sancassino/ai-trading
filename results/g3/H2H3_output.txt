@@ -1,0 +1,10 @@
+H2 Double 7s:
+  Yahoo 1990–2026 gepoold        SR +0.46 t +2.85 | 1995–2010 +120.8% | 2011–26 +47.9% | totaal +189.9% | DSR385 0.44
+  FTMO 2021–26 gepoold (6)       SR +0.59 t +1.42 | 1995–2010 +0.0% | 2011–26 +23.5% | totaal +23.5% | DSR385 0.06
+  → H2 afgewezen
+H3 RSI(2) in hoog-vol-regime vs RSI(2):
+  Yahoo RSI(2) basis             SR +0.59 t +3.65 | 1995–2010 +95.2% | 2011–26 +37.8% | totaal +160.0% | DSR385 0.73
+  Yahoo RSI(2) hoog-vol          SR +0.43 t +2.66 | 1995–2010 +46.1% | 2011–26 +15.3% | totaal +66.9% | DSR385 0.36
+  FTMO RSI(2) basis              SR +0.57 t +1.39 | 1995–2010 +0.0% | 2011–26 +15.4% | totaal +15.4% | DSR385 0.06
+  FTMO RSI(2) hoog-vol           SR +0.56 t +1.35 | 1995–2010 +0.0% | 2011–26 +10.7% | totaal +10.7% | DSR385 0.06
+  → H3 ΔSR Yahoo -0.16, FTMO -0.02 → afgewezen
