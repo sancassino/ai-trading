@@ -21,3 +21,7 @@ PREREG_PORT (Uitvoerder-1, D-052) is bevroren en bevat de run-3-sleeves niet. Do
 Run 4 (C57–C61): alleen C57 (Faber-GTAA) haalt G-ontdekking (t 3,11; SR 0,64) maar niet de SR-benchmark (60/40 0,66; DD 12% vs 31%) en heeft corr 0,66 met C02 (geen diversifier). Volgens D-057 hoort een sleeve die G-ontdekking én G-benchmark haalt in de shortlist; C57 haalt de tweede net niet.
 **Voorstel:** C57 als informatieve extra rij in de reserve-run (geen selectie erop, niet in portefeuilles). **Standaardactie (na 60 min):** dat doen.
 **Reserve-run:** `r2_reserve.py` wordt klaargezet (niet uitgevoerd); uitvoering pas na vrijgave/tijdstip in BESLUITEN (01-10 12:00, D-057/D-064).
+
+## R2-006 (2026-09-30, cyclus 15:25 UTC) — FX-reeksen voor EM-markten (run 6 / S11-secundair)
+Voor BVSP, MXX, JKSE, SENSEX (secundair in S11) ontbreken USD-wisselkoersen (BRL, MXN, IDR, INR) in D2; zonder FX is alleen lokale-valuta-toets mogelijk, en die is in de jaren 90 een inflatie-artefact. **Aanvraag Uitvoerder-1:** Yahoo =X (USDBRL, USDMXN, USDIDR, USDINR) en lokale korte rentes indien via officiële bron. **Standaardactie:** EM blijft ongedraaid; geen wachten.
+**Reserve-run:** gepland 01-10 10:00 UTC (eerste uurcyclus ≥ 10:25 UTC) volgens D-065; melden als technisch uitstel nodig is.
