@@ -117,6 +117,29 @@ CEO: haircut-definitie definitief (excess, cash apart, alfa-boven-cash = beoorde
 - **F2 — engine/ftmo.py** (Uitvoerder-2 bouwt): 5%-dagverlies op floating equity, 10% statisch, winstdoelen, min. handelsdagen, winstsplit-aanname €540/€80k. Wanneer gereed: herbereken alle catalogus-sleeves op FTMO-EV.
 - **F3 — catalogus herbeoordeling cfd-FTMO** (§3b hieronder): welke van de 69 regels halen de poort op cfd-kosten + swap + FTMO-EV ≥ 0?
 
+## UPDATE 2026-09-30 22:00 (v4.1) — AUDIT_1 deel 1 verwerkt
+
+**Auditor (commit 2645d31) publiceerde AUDIT_1 met 5 TWIJFEL, 2 FAIL (klein), rest PASS.** Dit betreft het eigen-kapitaalpad (P-ETF-a) dat nu gearchiveerd is, maar drie bevindingen zijn actiegevoelig:
+
+**1. FAIL 2i — forward-papier laatste-rij-bug (ACTIEPUNT — Uitvoerder-1):**
+`catalogus/_common.py:12` (`np.r_[..., True]`) behandelt de laatste (incomplete) dag als maandeinde → forward-log wordt systematisch −0,4 tot −1,3 bp/dag te laag geboekt. Moet gerepareerd vóór de 3-maanden-papierperiode als bewijs telt. **Actie Uitvoerder-1: fix en push.** Zolang dit niet gefixed is, weerspiegelt de forward-log niet de werkelijke strategie-uitkomst.
+
+**2. TWIJFEL 2h — reserve niet zuiver:**
+`trend-research.md` (24-09) gebruikte 2026-data voor hypothesevorming (trend op SP500/Nasdaq/DAX/Dow + goud/obligaties). D-031 ("reserve door niemand aangeraakt") is daarmee te sterk. Reserve-run al GESUSPENDED (D-084), maar de conclusie bij hervatting moet dit vermelden: de eenmalige reserve-toets is formeel minder sterk dan gepresenteerd. **CEO te noteren bij reserve-beslissing.**
+
+**3. TWIJFEL 2b + 3d — SR en DSR:**
+SR 0,94 is de gunstigste fase/uitvoering; realistisch ≈ 0,85 (fasemediaan) of 0,88 (+1 dag uitvoering). DSR = 0,78 bij N=440. Dit geldt voor P-ETF-a dat nu gearchiveerd is; FTMO-pad gebruikt FTMO-EV als maatstaf, niet SR.
+
+**Overige bevindingen (laag prioriteit voor FTMO-pad):**
+- FAIL 2e: C52 kalender-gap +0,006 SR quirk — C52 gearchiveerd, geen actie nodig.
+- TWIJFEL 3f: C02 = DD-filter, geen bewezen alfa (p=0,46 nul-kalibratie) — reeds verwerkt in catalogus §9 Tier C.
+- PASS 3b: BH-FDR methodiek correct; TRIAL_COUNT 440 klopt.
+- PASS 3a, 3c: BH en t-waarden intact; dag-geclusterd t was al gecorrigeerd.
+
+**Auditor deel 2 (FTMO/cfd-retarget, ORB/B4a-audit, Q1b/ftmo_economics) NIET gedaan — sessie gepauzeerd door Sandro.** Herstart alleen op aanwijzing van Sandro.
+
+---
+
 ## UPDATE 20:55 (v3.6) — PORT3/PORT4 (Uitvoerder-1) beoordeeld met mijn vooraf vastgelegde regel → `ALLOCATIE_V1_3.md`
 **Cijfers (2001–24, model B, één simulator):** L0 inst SR 0,86/DD 11,1%/153 trades/€268 jr; **L1 drempel 1%: SR 0,91/DD 11,3%/57 trades/€116 jr**; **L4 lite: SR 0,80/DD 15,2%/18 trades/€27 jr, 2021–24 SR 0,25 vs 0,42**. **Toepassing V1.2-regel:** lite faalt op 3 van 4 criteria (ΔSR −0,06 net onder −0,05; DD 15,2% > 1,3×11,1% = 14,4%; ΔSR 2021–24 −0,17) → **niet voorgesteld; L0 blijft referentie**. **L1 haalt G1 (V1.1)**: ΔSR +0,05, besparing ≈ €12,7/mnd (net boven €12-grens). **V1.3-kandidaat (voorstel aan CEO): P-ETF-a met 1%-drempel.** Kanttekening: SR-stijging 0,86→0,91 is ruis (SE ≈ 0,1–0,2), niet meenemen; kiesrisico 7+ forward-portefeuilles → keuze pas na ≥ 3 mnd forward + prior/BH-correctie. Netto met L1: alfa midden ≈ €42/mnd, totaal ≈ €205 (EUR-cash). **R2-007:** ^PUT (1996→), VIX9D/VIX3M binnen (privé, licentienotitie); ^BXM/^WPUT niet via Yahoo; Ken French en Shiller-CAPE alleen citeren (C65/C68 = literatuur-evidentie, geen data gecommit).
 
