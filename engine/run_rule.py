@@ -21,6 +21,8 @@ TRIALS = "catalogus/TRIALS.csv"
 # D2-reeks → FTMO-instrument voor kosten (COSTS_FTMO.csv) en swap
 COST_MAP = {"SPX": "US500cash", "SPY": "US500cash", "NDX": "US100cash", "NASDAQ_COMP": "US100cash", "DJI": "US30cash", "DAX": "GER40cash",
             "GOLD_F": "XAUUSD", "SILVER_F": "XAGUSD", "WTI_F": "USOILcash", "EURUSD": "EURUSD", "GBPUSD": "GBPUSD", "USDJPY": "USDJPY",
+            "FX_EURUSD": "EURUSD", "FX_GBPUSD": "GBPUSD", "FX_USDJPY": "USDJPY", "FX_AUDUSD": "AUDUSD", "FX_USDCAD": "USDCAD",
+            "FX_USDCHF": "USDCHF", "FX_NZDUSD": "NZDUSD",
             "FTSE": "UK100cash", "N225": "JP225cash", "STOXX50": "EU50cash", "CAC40": "FRA40cash", "HSI": "HK50cash", "RUT": "US2000cash"}
 EXTRA_RT_BP = {"UK100cash": 3.88, "JP225cash": 1.78, "EU50cash": 3.12, "FRA40cash": 1.37, "HK50cash": 2.35, "US2000cash": 2.12}  # S0-live / U1
 
@@ -51,6 +53,52 @@ def _costs():
 
 
 RT, SWL, SWS = _costs()
+RATE_ID = {"USD": "IR3TIB01USM156N", "EUR": "IR3TIB01EZM156N", "GBP": "IR3TIB01GBM156N", "JPY": "IR3TIB01JPM156N", "AUD": "IR3TIB01AUM156N",
+           "CAD": "IR3TIB01CAM156N", "CHF": "IR3TIB01CHM156N", "NZD": "IR3TIB01NZM156N"}
+_RATES = {}
+
+
+def rate_series(ccy):
+    """3m-interbankrente (%/jr), maandelijks → per datum (laatste bekende maand; publicatie ≈ 1 mnd later → 1 maand vertraging)."""
+    if ccy not in _RATES:
+        pts = []
+        for line in open(f"data/fred/{RATE_ID[ccy]}.csv"):
+            f = line.strip().split(",")
+            if f[0][:1].isdigit() and f[1] not in ("", "."):
+                y, m, _ = map(int, f[0].split("-")); m += 1
+                if m > 12:
+                    y, m = y + 1, 1
+                pts.append((date(y, m, 1), float(f[1])))
+        _RATES[ccy] = pts
+    return _RATES[ccy]
+
+
+def rate_on(ccy, dates):
+    pts = rate_series(ccy); ks = [p[0] for p in pts]; import bisect
+    out = np.full(len(dates), np.nan)
+    for i, d in enumerate(dates):
+        j = bisect.bisect_right(ks, d) - 1
+        if j >= 0:
+            out[i] = pts[j][1]
+    return out
+
+
+def _fx_markup(inst):
+    # FTMO: long_pct = diff − m, short_pct = −diff − m → m = −(long_pct + short_pct)/2 (in %/jr); uit swap-bp per nacht terugrekenen
+    lp, sp = -SWL[inst] * 365 / 100, -SWS[inst] * 365 / 100      # SWL/SWS zijn kosten-bp → ontvangst-%/jr
+    return -(lp + sp) / 2
+
+
+def financing(df, inst, p_prev, nights):
+    """financieringskosten per dag (fractie). FX: historisch renteverschil − opslag (opslag geijkt op FTMO-specs van nu);
+    overige: huidige FTMO-swap in bp per nacht, constant (sjabloon-aanname, vermeld)."""
+    if df["name"].startswith("FX_"):
+        base, quote = df["name"][3:6], df["name"][6:9]
+        diff = rate_on(base, df["date"]) - rate_on(quote, df["date"])          # %/jr, NaN als een rente ontbreekt
+        m = _fx_markup(inst)
+        recv = np.where(p_prev > 0, p_prev * (diff - m), -p_prev * (-diff - m))  # ontvangst in %/jr
+        return -recv / 100 / 365 * nights
+    return np.where(p_prev > 0, p_prev * SWL[inst], -p_prev * SWS[inst]) * nights * 1e-4
 
 
 def net_returns(df, pos, spread_mult=1.0):
@@ -63,8 +111,9 @@ def net_returns(df, pos, spread_mult=1.0):
     turn = np.abs(np.diff(np.r_[0.0, pos]))                      # wijziging op slot t
     cost = turn * (RT[inst] / 2) * 1e-4 * spread_mult            # halve rondreis per eenheid wijziging
     nights = np.r_[0, [(b - a).days for a, b in zip(df["date"][:-1], df["date"][1:])]]
-    swap = np.where(p_prev > 0, p_prev * SWL[inst], -p_prev * SWS[inst]) * nights * 1e-4
-    return p_prev * r - cost - swap, turn
+    swap = financing(df, inst, p_prev, nights)
+    gross = p_prev * r
+    return gross - cost - swap, turn, gross, cost, swap
 
 
 # ---------- statistiek ----------
@@ -121,17 +170,23 @@ def run(rule_id, reserve=False):
     rows = []
     for vname, params in R["varianten"].items():
         port, port50, ntr = {}, {}, 0
-        per_inst = {}
+        per_inst, comp = {}, {"gross": 0.0, "cost": 0.0, "swap": 0.0}
+        mp = R.get("max_pos", 1.0)
+        if hasattr(mod, "positions_all"):
+            allpos = mod.positions_all(data, params)
+        else:
+            allpos = {n: mod.positions(df, params) for n, df in data.items()}
         for n, df in data.items():
-            pos = np.clip(np.asarray(mod.positions(df, params), float), -1, 1)
+            pos = np.clip(np.nan_to_num(np.asarray(allpos[n], float)), -mp, mp)
             for mult, tgt in ((1.0, port), (1.5, port50)):
-                net, turn = net_returns(df, pos, mult)
-                keep = [(d, v) for d, v in zip(df["date"], net) if (d >= RESERVE_START) == reserve and d.year >= R.get("start_jaar", 1900)]
-                for d, v in keep:
+                net, turn, gross, cost, swap = net_returns(df, pos, mult)
+                ok = np.isfinite(net) & np.array([(d >= RESERVE_START) == reserve and d.year >= R.get("start_jaar", 1900) and
+                                                   (reserve or d <= DISCOVERY_END) for d in df["date"]])
+                for d, v in zip(df["date"][ok], net[ok]):
                     tgt.setdefault(d, []).append(v)
                 if mult == 1.0:
-                    sel = np.array([(d >= RESERVE_START) == reserve for d in df["date"]])
-                    ntr += int((turn[sel] > 0).sum()); per_inst[n] = np.array([v for _, v in keep])
+                    ntr += int((turn[ok] > 0).sum()); per_inst[n] = net[ok]
+                    comp["gross"] += float(gross[ok].sum()); comp["cost"] += float(cost[ok].sum()); comp["swap"] += float(np.nansum(swap[ok]))
         days = sorted(port)
         x = np.array([np.mean(port[d]) for d in days]); x50 = np.array([np.mean(port50[d]) for d in days])
         gross_turn_days = len(days)
@@ -150,18 +205,27 @@ def run(rule_id, reserve=False):
             corr[k] = float(np.corrcoef([x[days.index(d)] for d in cd], [s[d] for d in cd])[0, 1]) if len(cd) > 50 else float("nan")
         bull = [v for d, v in zip(days, x) if spx_bull.get(d) is True]; bear = [v for d, v in zip(days, x) if spx_bull.get(d) is False]
         t_day = t_plain(x); t_n = t_nw(x)
+        # 5-jaarsvensters (kalender, niet-overlappend vanaf het eerste volledige jaar)
+        yrs_all = sorted(yr); win = [yrs_all[i:i + 5] for i in range(0, len(yrs_all) - 4, 5)]
+        w5 = [sum(sum(yr[y]) for y in w) > 0 for w in win]
+        frac5 = float(np.mean(w5)) if w5 else float("nan")
+        cost_total = comp["cost"] + comp["swap"]
+        gate_cost = comp["gross"] >= 3 * cost_total if cost_total > 0 else comp["gross"] > 0
         res = {"variant": vname, "dagen": len(x), "trades": ntr, "netto_bp_dag": x.mean() * 1e4, "SR": sr, "SR_CI90": sr_ci,
                "t_dag": t_day, "t_NW": t_n, "t_boot": tb, "t_H1": t_plain(x[:h]), "t_H2": t_plain(x[h:]), "t_50pct_spread": t_nw(x50),
                "skew": sk, "max_dagverlies": float(-x.min()), "P99_dagverlies": float(-np.percentile(x, 1)), "maxDD": dd,
                "corr": corr, "bull_bp": np.mean(bull) * 1e4 if bull else float("nan"), "bear_bp": np.mean(bear) * 1e4 if bear else float("nan"),
                "per_jaar": {y: float(np.sum(v)) for y, v in sorted(yr.items())},
-               "per_instrument_t": {n: t_plain(v) for n, v in per_inst.items()}}
+               "per_instrument_t": {n: t_plain(v) for n, v in per_inst.items()}, "frac_5j_pos": frac5, "gate_kosten": gate_cost,
+               "bruto_som": comp["gross"], "kosten_som": comp["cost"], "swap_som": comp["swap"]}
         rows.append(res)
         t_gate = min(res["t_NW"], res["t_boot"])
-        gate = (t_gate >= 3 and res["t_H1"] > 0 and res["t_H2"] > 0 and (ntr >= 500 or R.get("events", False) and ntr >= 100))
+        gate = (gate_cost and t_gate >= 3 and res["t_H1"] > 0 and res["t_H2"] > 0 and sr >= 0.3 and frac5 >= 0.6
+                and (ntr >= 500 or R.get("events", False) and ntr >= 100 or R.get("laag_omloop", False)))
+        beslis = ("stop: kostenpoort (geen trial)" if not gate_cost else ("door G-ontdekking" if gate else "afgewezen"))
         with open(TRIALS, "a") as f:
             f.write(f"{date.today()};{R['id']};{vname};{R.get('dataset', 'D2')};{'reserve' if reserve else 'ontdekking'};"
-                    f"{sr:.3f};{t_gate:.3f};{p_one_sided(t_gate):.6f};;{'door G-ontdekking' if gate else 'afgewezen'}\n")
+                    f"{sr:.3f};{t_gate:.3f};{p_one_sided(t_gate):.6f};;{beslis}\n")
         lines += [f"## variant {vname} {params}",
                   f"- {'RESERVE 2025-01→' if reserve else 'ontdekking ≤ 2024'}: {len(x)} dagen, {ntr} positie-wijzigingen, netto {x.mean()*1e4:+.2f} bp/dag, SR {sr:+.2f} (90%-CI {sr_ci[0]:+.2f}…{sr_ci[1]:+.2f})",
                   f"- t: dag {t_day:+.2f} | Newey-West {t_n:+.2f} | blok-bootstrap {tb:+.2f} | H1 {res['t_H1']:+.2f} | H2 {res['t_H2']:+.2f} | +50% spread (NW) {res['t_50pct_spread']:+.2f}",
@@ -169,7 +233,9 @@ def run(rule_id, reserve=False):
                   f"- corr: " + ", ".join(f"{k} {v:+.2f}" for k, v in corr.items()) + f" | SPX > SMA200: {res['bull_bp']:+.2f} bp/dag, daaronder {res['bear_bp']:+.2f}",
                   "- per instrument t: " + ", ".join(f"{k} {v:+.2f}" for k, v in res["per_instrument_t"].items()),
                   "- per jaar (%): " + " ".join(f"{y}:{v*100:+.1f}" for y, v in res["per_jaar"].items()),
-                  f"- G-ontdekking (min(NW, bootstrap) ≥ 3, beide helften +, N ≥ 500): {'DOOR' if gate else 'afgewezen'}", ""]
+                  f"- kosten: bruto {comp['gross']*100:+.1f}% | spread/commissie {comp['cost']*100:.1f}% | financiering {comp['swap']*100:+.1f}% (som over instrument-dagen) → kostenpoort {'DOOR' if gate_cost else 'FAALT'}",
+                  f"- 5-jaarsvensters positief: {frac5*100:.0f}% ({sum(w5)}/{len(w5)})",
+                  f"- beslissing: {beslis} (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)", ""]
     recompute_fdr()
     open(f"{out_dir}/{'reserve' if reserve else 'ontdekking'}.md", "w").write("\n".join(lines))
     print("\n".join(lines))
