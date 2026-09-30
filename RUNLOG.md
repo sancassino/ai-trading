@@ -591,3 +591,10 @@ Informatief (geen beslissing): netto test 2024–26 negatief in alle varianten (
 Kanttekening: de 10%-ATR-stop is op M5-resolutie erg krap (winkans 6%; stop in de instapbar telt conservatief als geraakt) — het paper gebruikte 1-min-data. Vraag U-001 (mediaan vs gemiddelde poort) is door D-010 beantwoord: mediaan.
 Ook: S1-beslisregel vroeg (v15.1/D-006) een dag-geclusterde t; S1 gebruikte per-trade-t, maar faalde al ruim (test-t ≤ 1,1); clustering over positief gecorreleerde indices verlaagt t alleen verder.
 Volgende stap: S3-voorbereiding.
+
+## 2026-09-30 09:13 — S3-voorbereiding klaar: PREREG_S3, HistData-parser, run_s3.sh, parser-test GESLAAGD
+
+PREREG_S3.md (vóór data): bevroren b4_sim.run_orb op SPX→US500, NSX→US100, GRX→GER40, XAU 2011–2020; kosten = FTMO-spread 2021–26 per tijdstip; beslisregel D-006/M-008 (dag-geclusterde t ≥ 2,5, beide helften +, ≥ 0,9 bp, ≥ 2/3 indices +; verworpen t < 1 of ≤ 0,5 bp; labels 'bevestigd + blijvend' / 'bevestigd maar vervallen' / 'onbeslist' / 'verworpen'); jaar-per-jaar 2011–2026 gestapeld; voorlopige uitslag met alleen SPX.
+s3_histdata.py: zips uit data/long_m1 → EST (UTC−5, geen DST) → servertijd (NY + 7 u) → M5, rapporteert 24-uurs quotes (dan OR op cash-open). s3_run.py: beslisregel + labels. run_s3.sh: checksums → parser → test (results/s3/).
+s3_test_parser.py: FTMO-M5 2021–23 van US500 en GER40 omgezet naar een synthetisch HistData-M1-zip (EST, 24-uurs) en teruggeparsed: ORB-trades US500 565/565 en GER40 512/512 bruto identiek, inclusief de DST-mismatchweken maart 2022 (10/10 per symbool). data/long_m1/ bestaat nog niet (wacht op Sandro, A-01).
+Volgende stap: Q7 (portefeuille ORB+RSI(2) onder FTMO-regels, geen trial).
