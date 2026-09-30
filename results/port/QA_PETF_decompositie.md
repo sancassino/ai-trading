@@ -26,3 +26,5 @@
 - **B — haircut op excess + cash apart:** excess 30–50% korting → 2.8–4.0%/jr = €188–264/mnd **alfa boven cash**; plus cash in eigen valuta: bij USD-3m nu 4.25% ≈ €283/mnd (EUR-geldmarkt is lager; ESTR niet in de repo — nog op te halen).
 - **Nulbenchmark cash-only:** ≈ €283/mnd (USD-3m nu) — elk resultaat eerst hiermee vergelijken.
 - Lezing: het beoordelingsgetal is de **alfa boven cash**; de totale €/mnd hangt sterk van het renteniveau af.
+
+**Aanvulling (ECB, officieel):** €STR nu 2.44% → cash-only in EUR ≈ €163/mnd; P-ETF-a in EUR-perspectief (optie B) = alfa boven cash €188–264/mnd + EUR-cash ≈ €163/mnd. Reeksen: data/daily/YLD_ESTR (2019→), YLD_EURIBOR3M (1994→, maandgemiddelde).

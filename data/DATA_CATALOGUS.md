@@ -124,5 +124,7 @@ USO (olie, 2006→), PPLT (platina, 2010→), DBA (agri, 2007→) — de ETF dra
 (a) total return: SPX_TR (1988→); DAX is al een performance-index; NDX-TR niet vrij beschikbaar (Yahoo ^XNDX 422) → prijsindex, dividend genegeerd (vermeld).
 Let op: rendementsreeksen van yields (YLD_*) zijn niveaus in %, geen prijzen — regels moeten ze als signaal of via duratie-benadering gebruiken.
 
+**EUR-geldmarkt (ECB Data Portal, officieel, openbaar):** YLD_ESTR (€STR dagelijks, 2019-10→), YLD_EURIBOR3M (maandgemiddelde, 1994→).
+
 ## D1 — Dukascopy-intraday `data/long_m1/` (lokaal, niet in repo)
 Zie results/p0/p0_log.txt; SPX 2011 niet op de feed; 2012→ loopt. Wordt bijgewerkt zodra jaren compleet zijn.
