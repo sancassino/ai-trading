@@ -46,3 +46,4 @@
 2026-09-30 20:50 Amsterdam — Sandro: doel = FTMO-€80k, niet eigen kapitaal (Doel v2 misverstand). M-013 (URGENT) voor CEO; NEXT_STEPS/EINDVERSLAG gemarkeerd.
 
 - 2026-09-30 21:05 Amsterdam — cyclus :05 (na pauze Sandro): D-082…D-086 verwerkt (FTMO-koerscorrectie, Auditor D-082/H7, M-013 BESLOTEN); NEXT_STEPS v35 (FTMO-doel hersteld, eigen-kapitaal-cijfers informatief, §0a Manager-QA koerscorrectie, Uitvoerder-2 FTMO-focus na reserve-run); VRAGEN_MANAGER M-013 → BESLOTEN (D-083…D-086); reserve-run 01-10 12:00 en forward 22:25 UTC lopen ongewijzigd door.
+- 2026-09-30 22:10 Amsterdam — cyclus :05 (trigger na pauze): D-089/D-090 verwerkt: Manager-rol overgedragen aan Grok (deze Claude-sessie = CEO + Auditor per D-090); AUDIT_1.md geschreven (engine/ftmo.py onafhankelijk gevalideerd — FTMO-regels correct, 3 kanttekeningen zonder blokkade); Manager-trigger op deze sessie kan door Sandro worden uitgeschakeld.
