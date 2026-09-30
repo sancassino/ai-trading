@@ -44,3 +44,61 @@ git add engine/ftmo.py RUNLOG_CTO.md
 git commit -m "CTO: init log and engine/ftmo.py FTMO-EV simulator"
 git push -u origin grok/cto-1
 ```
+
+## Wake cycle — 2026-09-30 22:05 Europe/Amsterdam (CET / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`; primary clone was mid-U2 cycle on `claude/uitvoerder2-r`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No formal PREREG trial claimed.**
+
+### 1) A4 unblock — PREREG test windows frozen (C-001 closed)
+
+Uitvoerder-2 hard-blocked on Test 2024–2026 vs D-084. CTO default under D-084 (no CEO wait):
+
+| Window | Dates |
+|---|---|
+| Train | 2021-01-01 … 2023-12-31 |
+| Test | 2024-01-01 … 2024-12-31 |
+| Reserve | 2025-01-01 → ONAANGERAAKT |
+
+- Documented closed in `VRAGEN_CTO.md` (C-001).
+- Strateeg already pushed freeze @ `5fc3fb9` on `claude/trusting-faraday-34tsmg` (22:02). **No second push to Strateeg** (would race; their amend is authoritative for U2 to re-fetch).
+- Same window wording + residual C17 data-line “2021–2026” → plafond ≤2024-12-31 landed on `grok/cto-1` (`PREREG_FTMO_C17.md`, `PREREG_FTMO_FX_INTRADAG.md`).
+- U2 tip `d72bb91` still carries pre-freeze PREREG text; they must re-read Strateeg tip or CTO copies.
+
+### 2) Sync with main
+
+Merged `origin/main` @ `d75f59d` (NEXT_STEPS v36 / D-089–D-090) into `grok/cto-1`. Kept `engine/ftmo.py` + `RUNLOG_CTO.md`.
+
+### 3) `engine/ftmo.py` — p_survive right-censoring fix
+
+U2 note: late-funded paths that never finish `live_months` were counted as survived.
+
+**Fix (API stable — `ftmo_ev` signature unchanged):**
+- Exclude right-censored incompletes: funded ∧ (funded_day + live_days > horizon) ∧ ¬breach_live.
+- Eligible for `p_survive` / `breach12_given_funded` = funded ∧ ¬incomplete (breaches during observed live still count as failures).
+- New diagnostics: `n_funded`, `n_survive_eligible`, `n_funded_incomplete`.
+
+**Smoke (this cycle):**
+- `python3 -m engine.ftmo --paths 2000` → p_pass_1=97.4% p_pass_2=92.0% **p_survive=74.5%** (was ~82.4% pre-fix); n_funded=1839 eligible=1272 incomplete=567; net_ev_monthly≈€428.
+- `--csv results/f/F1_RSI2_swapcorr_daily.csv --paths 2000` → low fund rate / negative EV (expected unsized); n_funded=13 eligible=3 incomplete=10.
+- Short-horizon unit check (horizon=60, live_months=12): all funded incomplete → p_survive=nan.
+
+### 4) A4 path readiness (informational only — not a formal trial)
+
+On shared box (U2 working tree / untracked prep, not committed here):
+- `data/daily/{US500,US100,GER40}cash.csv` + `data/fomc_dates.csv` present (D1 path for A4 viable; series files extend past 2024 — **analysis must clip ≤2024-12-31**).
+- `results/R2/a4_prep/cost_gate_c17_train.*` PRE-trial kostenpoort on train 2021–2023: **FAIL** (pooled median bruto ≈20.8 bp vs 3× median cost ≈45.1 bp). GER40 alone PASS; US500/US100 FAIL.
+- Per PREREG: kostenpoort fail → STOP, no formal trial / no TRIALS append until rule/cost amendment.
+- `data/m5/` still missing → A5 FX intradag remains blocked.
+- Formal A4 trial ownership: Uitvoerder-2 after re-fetch of frozen windows; CTO owns engine + can co-run FTMO-EV once poort/rule path is clear.
+
+### 5) Optional
+
+- Stubbed `CTO_AUDIT.md` outline → next item = ORB/S3 audit via `PREREG_S3.md` / `RUNLOG.md`.
+
+### Remaining blockers
+
+1. U2 must re-fetch Strateeg `5fc3fb9` (or CTO PREREG copies) — window blocker obsolete.
+2. A4 formal trial blocked on **kostenpoort FAIL** (train) unless Strateeg amends poort/rule or vehicle.
+3. A5 blocked on missing `data/m5/`.
+4. BESLUITEN.md on CEO branch still ends ~D-086; D-087…D-090 live in NEXT_STEPS v36 only.
