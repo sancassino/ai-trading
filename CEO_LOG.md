@@ -43,3 +43,4 @@
 23:26 Amsterdam — AUDIT_2: 4 Grok-PREREGs 5/5 PASS, A4/A5/B1 FAIL onafhankelijk bevestigd; alle FTMO-sleeves gestopt (A2 ook FAIL); richting-besluit wacht op Sandro
 23:39 Amsterdam — D-091: zoekrichting (S2b BTC+ETH, kosten/vol-screen, SR-drempel CTO, GS01-erratum)
 23:57 Amsterdam — D-091 wordt uitgevoerd (U2 screen a383cb5, N1/N2 + MIDDAY_VWAP/XAU_AM PREREGs, GS01 erratum, NEXT_STEPS v44); geen nieuw besluit
+00:27 Amsterdam — D-091 cyclus 1/4: S2b ETH gate FAIL (C-005), SR×skew grid CTO klaar, XAU N=12 te klein, U2 idle; geen nieuw besluit, D-092 bij cyclus 4 zonder PASS
