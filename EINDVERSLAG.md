@@ -1,19 +1,15 @@
-# EINDVERSLAG (Manager, 2026-09-30 12:37) — voor Sandro
+# EINDVERSLAG (Manager, 2026-09-30 13:07) — voor Sandro
 
-**Status:** fase 2 (CEO D-027): het project loopt **weken–maanden**, alleen **Sandro** beslist over stoppen/bevriezen/pauzeren/geld/echte trades. Team: Manager · CEO · Strateeg · Uitvoerder (3 werkstromen D/R/F).
+## Doel v2 (Sandro via CEO D-032)
+Echt eigen kapitaal €80k · ambitie €800–900/mnd · **€400–500/mnd is ook succes** bij een robuuste edge (≥ 20 jaar backtest, weinig gaps, realistische kosten, benchmark-eis vs buy-and-hold). Alleen Sandro beslist over stoppen/bevriezen/geld/echte trades.
+**Kans (CEO D-035, onzeker):** robuuste €400–500/mnd ≈ 20–30%; €800–900 ≈ 5%.
 
 ## Stand (kort)
-1. **Doel:** ≈ €800–900/mnd uit FTMO €80k, aantoonbaar. CEO-kans voor het *huidige zoekpad* ≈ 2% (5–8% op ORB 'bevestigd + blijvend'); fase 2 verbreedt het zoekpad — nieuwe schatting na catalogus-run 1.
-2. **Getest:** 414+ varianten; vrijwel alles afgewezen na kosten. Kosten (S0) zijn de muur op FTMO-CFD's.
-3. **ORB:** dag-geclusterde t 2021–26 is **1,81** (train 1,67, test 0,81), niet 2,93 → het bewijs was overschat. **S3 (2011–20)** is de scheidsrechter; data komt via Dukascopy-feed (traag, loopt zonder mens).
-4. **N7 cluster-audit:** RSI(2) op lange Yahoo-dagdata overleeft (t 3,8–4,0); K1-FTMO vervalt (0,43/0,94); F3b 2,3.
-5. **FTMO-economie:** binnen FTMO-conforme schaal ORB ≈ €150–300/mnd (S8); U2-risicosizing €1.095/mnd is voor ⅓ optiewaarde en géén verwachting. Go/no-go-kader S10 (G1–G6): nu **no-go**. Fee €540/€80k onbevestigd.
-
-## Fase 2 in één alinea
-Data-lake (Dukascopy intraday + 20–50 jaar dagdata) → één engine + kostenmodel + catalogus van 30–50 regels → FDR over de hele catalogus, reserve-OOS 2025→ → sleeve-portefeuille van 5–10 kleine, ongecorreleerde edges → FTMO-mechaniek → Auditor. Mijlpalen zijn wekelijks, geen stopcriteria.
-
-## Weekrapport (maandag; eerste 2026-10-05)
-Per werkstroom: D (data-dekking), R (geteste regels/FDR/shortlist), F (forward-stand), kansinschatting CEO, blokkades. *(Volgt.)*
+1. **FTMO-pad (fase 1):** 414+ varianten, vrijwel alles afgewezen na kosten; ORB dag-geclusterd t 1,81; S3 (2011–20) loopt via Dukascopy-feed zonder mens (drempel: eenzijdig dag-geclusterd t ≥ 2,0, bevroren).
+2. **Fase 2 (catalogus op 20–50 jaar dagdata):** 34 dagreeksen (1927–2026) in de repo, engine gebouwd; **catalogusrun 1 (7 regels): alleen C02 (Faber SMA-10m op 5 indices) haalt de ontdekkings-gate** (min t 3,14; SR 0,32; BH-q ≈ 0,003; skew −0,61, maxDD 54%, dagverlies 13%) → naar shortlist; QA-eisen (benchmark, total return, cash-rente, uitvoering) lopen. TSMOM/carry/cross-asset-momentum ≈ 0 na kosten; C17 (FOMC-cyclus) net niet (t 2,85–3,05).
+3. **Nieuwe werkstromen:** V (vehikel-analyse voor eigen kapitaal in NL/EU: UCITS-ETF/micro-futures/CFD; box 3 alleen benoemd) en catalogus-klassen voor eigen kapitaal (vol-managed index, risk-parity, dual momentum, Carver-forecasts, DAA).
+4. **Web-leren (CEO/Strateeg, D-034):** web = claim, geen bewijs; alleen na replicatie op eigen data. Inzichten: prop-slaagkans 5–14%; SG Trend CAGR ≈ 5%, SR ≈ 0,34 sinds 2000 → verwachting bescheiden, diversificatie is de hefboom.
+5. **Onbevestigd:** FTMO-fee €540 (niet meer beslissend), box-3-effect (vast ≈ €37/mnd bij €80k volgens indicatieve rekenregel, geen advies), retail-broker-kosten.
 
 ## Team en ritme
-Manager :05/:35 · CEO :10/:40 · Strateeg :20/:50 · Uitvoerder */10.
+Manager :05/:35 · CEO :10/:40 · Strateeg :20/:50 · Uitvoerder */10 (werkstromen D/R/F). Weekrapport maandag (eerste 2026-10-05).

@@ -41,3 +41,7 @@
 - **Nooit wachten:** elke vraag heeft een *standaardactie*; na 60 minuten zonder besluit voert de vragensteller die uit en gaat door. Een besluit kan een standaardactie later terugdraaien.
 - **Ritme (Amsterdam):** Manager :05/:35 · CEO :10/:40 · Strateeg :20/:50 · Uitvoerder */10.
 - **Harde grenzen (CEO mag niet zelf):** echt geld/betalingen, echte accounts of trades, accounts op Sandro's naam aanmaken, omzeilen van ToS/beperkingen van sites/APIs, FTMO-voorwaarden schenden. Dit gaat via \`SANDRO_ACTIES.md\`. Projectniveau-beslissingen (stoppen/doel wijzigen) mag de CEO nemen, maar hij **meldt** ze aan Sandro (geen toestemming vragen); Sandro kan altijd overrulen.
+
+
+## Aanvulling 2026-09-30 13:07 — CEO_MANDAAT bindend (D-031)
+Rolverdeling volgens `CEO_MANDAAT.md` (CEO-branch): alleen Sandro beslist over stoppen/bevriezen/geld/echte trades; CEO beslist operationeel/strategisch; Manager = uitvoerend COO + QA (mag schriftelijk blokkeren op methodische gronden, wijzigt/verscherpt/vertraagt geen CEO-besluiten); Strateeg = richting/catalogus/voorstellen; Uitvoerder = werkstromen D/R/F. Programma: `PROGRAMMA_FASE2.md`.

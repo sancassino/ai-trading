@@ -35,7 +35,7 @@ Formaat per vraag: **ID — titel** · datum · status (OPEN / BESLOTEN / VERVAL
 *Aanbeveling:* C (kleine wijziging, veel meer informatie). *Standaardactie:* C; S3 blijft voorbereid; A-01 blijft OPEN maar niet blokkerend. *Impact:* 0 extra werk Sandro; Uitvoerder ± 20 min extra in PREREG_S3.
 
 ---
-**M-009 — Power van de S3-beslisregel: t ≥ 2,5 is te streng voor één bevroren hypothese (voorstel: eenzijdig t ≥ 2,0)** · 2026-09-30 12:07 · INGETROKKEN door Manager (2026-09-30 12:37): CEO-besluit D-023 (drempels S3 vast) en D-026 gelden
+**M-009 — Power van de S3-beslisregel: t ≥ 2,5 is te streng voor één bevroren hypothese (voorstel: eenzijdig t ≥ 2,0)** · 2026-09-30 12:07 · BESLOTEN (D-029, CEO: optie C — eenzijdig dag-geclusterd t ≥ 2,0, definitief)
 *Context:* S9-diagnose: ORB 2021–26 is dag-geclusterd t **1,81** (train 1,67 / test 0,81), niet 2,93. Zelfs als het effect echt en even groot blijft, verwacht je op 10 jaar S3-data t ≈ 1,81 × √(10/5,7) ≈ **2,4** → kans op t ≥ 2,5 ≈ **45%** (power te laag); 'onbeslist' wordt dan de meest waarschijnlijke uitkomst bij een echt effect. Voor één vooraf gekozen, richtinggebonden hypothese (prior: positief effect) is een **eenzijdige toets t ≥ 2,0** (p ≈ 2,3%) verdedigbaar en levert ≈ 70% power.
 *Opties:* (A) t ≥ 2,5 aanhouden; (B) eenzijdig t ≥ 2,0 (dag-geclusterd) **plus** de overige eisen ongewijzigd (beide helften +, ≥ 0,9 bp/trade, ≥ 2/3 indices +, 'blijvend' = 2024–26 ≥ 0); (C) B + power-annex (simulatie) in PREREG_S3.
 *Aanbeveling:* C. *Standaardactie:* C (PREREG_S3 wordt **vóór** het openen van `data/long_m1/` aangepast; CEO kan terugdraaien). *Impact:* 30 min Uitvoerder; voorkomt dat een echt effect als 'onbeslist' eindigt.
@@ -51,3 +51,7 @@ Formaat per vraag: **ID — titel** · datum · status (OPEN / BESLOTEN / VERVAL
 
 **M-011 — Compliance-oordeel U2 risico-sizing (op verzoek CEO/Uitvoerder)** · 2026-09-30 12:37 · OPEN
 *Oordeel Manager:* 0,5% risico/trade, ≤ 4× notional, max dagverlies 3,5% (P99 3,3%), ≈ 34% jaarvol is **consistent** (vast risico per trade), geen martingale/grid/HFT → formeel niet verboden. **Maar**: ± ⅓ van de opbrengst is optiewaarde (nul-drift €389), posities tot 271 lots (US500), slippage/marge onbekend, en FTMO's exacte 'risk/position size'-voorwaarden zijn niet volledig geverifieerd (geciteerd: alleen daglimieten/nieuws). **Advies:** alleen als simulatie/informatief; nooit als basis voor een challenge; vóór enige echte stap: voorwaarden-check + Auditor (D-005). *Standaardactie:* zo laten staan.
+
+
+---
+**Manager-erratum 2026-09-30 13:07 (M-009):** mijn intrekking van M-009 was overbodig én schadelijk: D-029 (10:41Z) had optie C goedgekeurd, de Uitvoerder heeft daarna op mijn v18 de drempel teruggezet naar t ≥ 2,5. **Herstel:** NEXT_STEPS v19 draagt op PREREG_S3/s3_run.py terug te zetten naar de N8-versie (commit b732ad6: eenzijdig dag-geclusterd t ≥ 2,0; overige eisen ongewijzigd) — één keer, vóór data (data/long_m1 nog leeg), daarna definitief bevroren (D-029). Ik trek mijn eigen 'terugdraai'-opdracht in en volg voortaan het CEO-besluit direct.
