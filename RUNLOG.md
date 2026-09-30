@@ -444,3 +444,10 @@ Uitgevoerd (PREREG_N5.md vóór berekening): audit_n5.py, zelfstandige herimplem
 (4) Swap: FTMO rollover3days = vrijdag; Python telt kalendernachten → zelfde totaal per trade. (5) EA gebruikt alleen bar 1 (afgesloten). (6) Stop-fills optimistisch (exacte prijs in MT5-tester; b4_sim stopprijs of slechtere open) — gekwantificeerd in G1.
 Conclusie: geen lookahead/off-by-one gevonden; PLAFOND ongewijzigd.
 Volgende stap: N6 (reproduce.sh).
+
+## 2026-09-30 04:30 — N6: reproduce.sh — 6/6 kernresultaten reproduceren
+
+Opgeleverd: reproduce.sh (≈ 50 s, geen VM nodig) + data/CHECKSUMS.sha256 (208 gecommitte databestanden) + data/CHECKSUMS_m5_lokaal.sha256 (M5-export, niet in git; alleen informatief).
+Controles en uitkomst: checksums ruwe data PASS; B2 RSI(2) Yahoo 1.381 trades, t 3,65 PASS; K1 Yahoo max 1/2 nachten t +3,05/+3,59 PASS; N5-audit 11/11 vergelijkingen 100% PASS; F3b SR 0,95, slechtste dag 3,80% PASS; N3 plafondtabel SR 0,49/€84 en 0,48/€99 PASS. Resultaat: 6 geslaagd, 0 mislukt (results/n5/N6_reproduce_output.txt).
+Beperking: MT5-uitkomsten worden uit de gecommitte tester-exports (results/f/) herberekend, niet opnieuw in MT5 gedraaid; data/m5 moet bij een schone checkout opnieuw geëxporteerd worden (mt5_export_m5.py).
+Volgende stap: steady-state (forward-test + weekrapport); opnieuw werken bij nieuwe data of input van Sandro.
