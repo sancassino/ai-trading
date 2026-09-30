@@ -64,3 +64,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | R5/CAT5: S11 cross-market-replicatie C02 (één familie, 12 markten; regionale C52 informatief zonder trial) | 1 | 441 |
 | 2026-09-30 | R7/CAT7: C67 landenrotatie (C66 VRP-proxy = evidentie zonder trial; C65/C68/PutWrite wachten op data) | 1 | 442 |
 | 2026-09-30 | A4/PREREG_FTMO_C17 amend 5fc3fb9: C17 FOMC op FTMO-index-CFD (kostenpoort STOP, 1 variant) | 1 | 443 |
+| 2026-09-30 | B1/PREREG_FTMO_B1: C05 TSMOM-mix FX6 (kostenpoort STOP, signed-mean poort, 1 variant) | 1 | 444 |

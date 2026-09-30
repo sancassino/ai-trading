@@ -64,3 +64,4 @@ datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
 2026-09-30;C16_halloween;basis;D2 [cfd];ontdekking-vehikelrapport;0.296;2.827;;;vehikelrapport (geen extra trial); benchmark beter
 2026-09-30;C44_krediet;basis;D2 [cfd];ontdekking-vehikelrapport;0.569;2.435;;;vehikelrapport (geen extra trial); benchmark beter
 2026-09-30;C17_fomc_cycle;FTMO_A4_basis;FTMO D1 US500cash/US100cash/GER40cash train2021-23 (PREREG_FTMO_C17 amend 5fc3fb9);kostenpoort;;;;stop: kostenpoort (median bruto 20.79 bp < 3× cost 45.12 bp; geen verdere analyse; reserve 2025 onaangeraakt)
+2026-09-30;C05_tsmom_mix_FX;FTMO_B1_basis;FTMO D1 FX6 (EUR/GBP/JPY/AUD/CAD/CHF) train2021-23 (PREREG_FTMO_B1 @05caced/fcaf8bc);kostenpoort;;;;stop: kostenpoort (signed mean bruto -16.94 bp < 3× cost 36.05 bp; n=216 pair-months; geen verdere analyse; reserve 2025 onaangeraakt)

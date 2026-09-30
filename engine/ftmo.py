@@ -121,8 +121,11 @@ def ftmo_ev(
         p_pass_2 : float
             P(ever get funded = pass phase 1+2).
         p_survive : float
-            P(no breach in first ``live_months`` of funded | funded).
-            NaN if no path reached funded.
+            P(no breach in first ``live_months`` of funded | funded and
+            the full live window was observed). Paths funded so late that
+            ``live_months`` cannot finish before ``horizon`` are
+            right-censored and **excluded** (they must not count as
+            survived). NaN if no eligible funded path remains.
         exp_payout_monthly : float
             Expected trader payout €/month over the horizon (cash incl. fee
             refund, fees not subtracted) = mean(cash) / (horizon / block).
@@ -131,7 +134,8 @@ def ftmo_ev(
             Divide by (horizon / block) for €/month net.
 
         Extra diagnostics (stable, documented): attempts_mean, p_net_loss,
-        breach12_given_funded, first_pay_months_med, horizon_months.
+        breach12_given_funded, first_pay_months_med, horizon_months,
+        n_funded, n_survive_eligible, n_funded_incomplete.
     """
     r = np.asarray(daily_returns, dtype=float).ravel()
     if r.size < 2:
@@ -236,9 +240,23 @@ def ftmo_ev(
     horizon_months = horizon / block
     net = cash - fees
     fp = first_pay[first_pay >= 0]
-    if funded_ever.any():
-        p_survive = float((~breach_live)[funded_ever].mean())
-        breach12 = float(breach_live[funded_ever].mean())
+    # Right-censoring fix (U2): late-funded paths that never finish
+    # live_months must not inflate p_survive. Eligible = funded and
+    # (completed full live window OR breached during the observed live
+    # portion — a breach is definitive even if the window is short).
+    n_funded = int(funded_ever.sum())
+    incomplete = (
+        funded_ever
+        & (funded_day >= 0)
+        & (funded_day + live_days > horizon)
+        & ~breach_live
+    )
+    eligible = funded_ever & ~incomplete
+    n_eligible = int(eligible.sum())
+    n_incomplete = int(incomplete.sum())
+    if n_eligible > 0:
+        p_survive = float((~breach_live)[eligible].mean())
+        breach12 = float(breach_live[eligible].mean())
     else:
         p_survive = float("nan")
         breach12 = float("nan")
@@ -256,6 +274,9 @@ def ftmo_ev(
         "breach12_given_funded": breach12,
         "first_pay_months_med": float(np.median(fp) / block) if len(fp) else float("nan"),
         "horizon_months": float(horizon_months),
+        "n_funded": n_funded,
+        "n_survive_eligible": n_eligible,
+        "n_funded_incomplete": n_incomplete,
         "fee": float(fee),
         "account": float(account),
         "split": float(split),
@@ -272,14 +293,19 @@ def _synthetic_returns(n: int = 504, mu: float = 0.0008, sigma: float = 0.008, s
 
 
 def _fmt(out: dict) -> str:
+    surv = (
+        f"p_survive={out['p_survive']*100:.1f}%"
+        if np.isfinite(out["p_survive"])
+        else "p_survive=nan"
+    )
     lines = [
-        f"p_pass_1={out['p_pass_1']*100:.1f}%  p_pass_2={out['p_pass_2']*100:.1f}%  "
-        f"p_survive={out['p_survive']*100:.1f}%" if np.isfinite(out["p_survive"]) else
-        f"p_pass_1={out['p_pass_1']*100:.1f}%  p_pass_2={out['p_pass_2']*100:.1f}%  p_survive=nan",
+        f"p_pass_1={out['p_pass_1']*100:.1f}%  p_pass_2={out['p_pass_2']*100:.1f}%  {surv}",
         f"exp_payout_monthly=€{out['exp_payout_monthly']:,.0f}  "
         f"net_ev=€{out['net_ev']:,.0f}  net_ev_monthly=€{out['net_ev_monthly']:,.0f}",
         f"attempts_mean={out['attempts_mean']:.2f}  p_net_loss={out['p_net_loss']*100:.1f}%  "
         f"first_pay_months_med={out['first_pay_months_med']}",
+        f"n_funded={out.get('n_funded', '?')}  n_survive_eligible={out.get('n_survive_eligible', '?')}  "
+        f"n_funded_incomplete={out.get('n_funded_incomplete', '?')}",
     ]
     return "\n".join(lines)
 

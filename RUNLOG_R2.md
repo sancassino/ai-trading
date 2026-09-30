@@ -353,3 +353,40 @@ Bron: `origin/claude/trusting-faraday-34tsmg` (`d5143a2` / merge `…19:54 UTC`)
 - A5 blijft geparkeerd tot M5 + eventuele latere CTO-vrijgave.
 - Volgende: wacht Manager/Strateeg op post-A4 prioriteit (andere A-tier of B1); reserve 2025 onaangeraakt laten.
 
+
+## 2026-09-30 22:26 CEST — D-090 FASE 3 cyclus: P1 re-validatie CTO blob + B1 kostenpoort FAIL
+
+**Branch:** `claude/uitvoerder2-r`. **Verwerkt:** `git fetch --all`; tip was `43b6ba2`. BESLUITEN via `origin/claude/upbeat-dirac-g2810q` (eindigt D-086); NEXT_STEPS v38 op `origin/main` (post-A4: B1→kostenpoort; A4 gestopt; A5 tot M5; A1 skip). Geen scope verzonnen.
+
+### P1 — `engine/ftmo.py` vs `origin/grok/cto-1` (hertoets)
+
+| Bron | Tip / blob |
+|------|------------|
+| Vorige validatie op deze branch | blob `f13a5d11` |
+| Huidige CTO (`fd21313`) | blob **`ac7abef6`** — **gewijzigd** (p_survive right-censor fix) |
+| Kopie na deze cyclus | `engine/ftmo.py` = `ac7abef6` (SHA-256 `7503c3bd…`) |
+
+**(a) FTMO-regels correct?** Ja, ongewijzigd t.o.v. eerdere validatie: 2-Step +10%/+5%, min 4 handelsdagen, max dagverlies 5% (static, equity+floating via `daily_drawdowns` of close-proxy), max DD 10% static, fee €540 / split 80% aanname, restart-on-breach default (q1-stijl). Smoke: `python3 -m engine.ftmo` → keys incl. `n_funded` / `n_survive_eligible` / `n_funded_incomplete`.
+
+**(b) Discrepanties?**
+1. **Nieuw t.o.v. `f13a5d11`:** `p_survive` telt alleen funded-paden die het volledige `live_months`-venster kunnen afronden **of** binnen het geobserveerde live-deel breken; late-funded incomplete paden worden gecensureerd (niet als "survived"). Dit is een bewuste correctie (geen regelwijziging); `q1_frontier.simulate` rapporteert `breach12` over alle `funded_ever` zonder deze censor → CTO-engine is strenger/eerlijker.
+2. Overige bekende verschillen blijven (al in `6bf784c`): `ftmo_economics` = één poging / geen herstart; `mc_daily_ftmo` default account 100k, geen fee/min-4-dagen; 4-handelsdagen = bootstrap-dagen (geen CE(S)T-positie-open-check). Geen aantoonbare fout die herschrijven rechtvaardigt (D-087).
+
+**(c) Welke sleeves eerst (bijgewerkt post-A4 / NEXT_STEPS v38)?**
+1. ~~A4 C17~~ — **GESTOPT** kostenpoort (`43b6ba2`); geen herstart zonder CEO.
+2. **B1 TSMOM-mix FX** — deze cyclus (PREREG land + kostenpoort).
+3. A2 Stocks-in-Play — parallel PREREG (Strateeg); niet gestart hier.
+4. A5 FX-intradag — **GEPARKEERD tot M5**.
+5. A1 ORB/S3 — skip zonder Sandro-data.
+
+### P2 — B1 kostenpoort (PREREG vóór resultaat)
+
+- Land `PREREG_FTMO_B1.md` van `origin/claude/trusting-faraday-34tsmg` tip (blob `ea903786`, SHA-256 `8b0cc6be…`; poort = **signed mean**, v38).
+- Script: `scripts/b1_cost_gate_train.py` — C05-signaal op FX6, train 2021–2023, COSTS_FTMO constante swap, Fri→Mon via kalender-nachten; **geen 2025-peek**.
+- Uitslag TRAIN: signed mean bruto **−16.94 bp** < 3× mean cost **36.05 bp** (mean cost 12.02 bp; n=216 pair-months; ratio −1.41×). Median |bruto| 107.81 bp (info, niet poort).
+- **FAIL → STOP.** Geen `ftmo_ev()`, geen test-2024-analyse.
+- `catalogus/TRIALS.csv` append-only: `C05_tsmom_mix_FX` / `FTMO_B1_basis` / `stop: kostenpoort…`
+- `TRIAL_COUNT.md`: +1 → **444**.
+- Artefacts: `results/R2/b1_prep/cost_gate_b1_train.{md,json,csv}`.
+
+**Volgende (niet deze cyclus):** A2 wanneer PREREG dicht + spreads; A5 pas met M5; vragen → Manager; eindbesluit → CTO. Reserve 2025→ onaangeraakt.
