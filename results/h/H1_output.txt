@@ -1,0 +1,3 @@
+SPY 2002–2026: N 290 | +35.8 bp/trade | t +2.76 | positief 160/290 | 2002–2013 +57.4 bp (t +2.71, N 137) | 2014–2026 +16.4 bp (t +1.05, N 153)
+FTMO US500 2021–2026: N 69 | +22.0 bp/trade | t +1.01 | positief 37/69
+Beslisregel: t +2.76 (≥ 3), helften +, FTMO totaal +1519 bp → AFGEWEZEN

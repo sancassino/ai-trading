@@ -495,3 +495,10 @@ Volgende stap: Q5 (portefeuille) — geen nieuwe sleeves uit Q2–Q4.
 
 Q2 (earnings), Q3 (crypto) en Q4 (ML) haalden geen enkele hun vooraf gestelde regel → de portefeuille blijft de zwakke basis RSI(2)+ORB (F3b). De frontier daarvan is Q1 reeks A: bij geen enkele schaal positief verwacht netto inkomen (beste ≈ −€21/mnd), en €500 / €900 per maand vereist onder de echte FTMO-mechaniek een Sharpe van ≈ 3 / ≈ 4. Geen herberekening nodig (identieke reeks).
 Volgende stap: backlog v11 leeg → VOORSTEL_H.md (≥ 3 nieuwe hypothesen met economische logica) en de best onderbouwde uitvoeren.
+
+## 2026-09-30 06:49 — VOORSTEL_H-H1: maandeinde-herbalancering — AFGEWEZEN (t 2,76, afnemend)
+
+Getest (PREREG_H1.md vóór berekening): h1_monthend.py. Op het slot van de 5e laatste handelsdag: SPY−TLT-rendement maand-tot-dan > 0 → short SPY, < 0 → long, tot maandslot; kosten 0,02%/kant + financiering DTB3 ± 2%.
+Resultaat: SPY 2002–2026 N 290, +35,8 bp/trade, t +2,76 (160/290 positief); 2002–2013 +57,4 bp (t 2,71), 2014–2026 +16,4 bp (t 1,05). FTMO US500 2021–26 (FTMO-swaps) N 69, +22,0 bp, t 1,01, totaal +15 pp bij 100% notional.
+Conclusie: t < 3 → afgewezen; bekend flow-effect maar afnemend na publicatie/2014. TRIAL_COUNT 402.
+Volgende stap: H2 (pre-feestdag) en H3 (RSI(2)-overnight bij VIX > 20).
