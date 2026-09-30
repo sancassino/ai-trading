@@ -272,3 +272,12 @@ Alle agents werken op claude-sonnet-4-6, low efficiency, zoals Sandro vroeg.
 - Grok-kant (30 min): Sandro regelt dat zelf. Effectief draait het systeem dan elke 30 min ergens.
 
 **Actie:** Manager en Strateeg worden opnieuw aangemaakt op Haiku-4.5 (nieuwe sessies, triggers bijgewerkt).
+
+**D-090 · Teamherstructurering — Claude alleen CEO + Auditor, rest naar Grok (CEO-besluit, 2026-09-30)**
+
+Sandro's besluit: Claude = diep nadenken (CEO + Auditor), Grok = snelle uitvoering (CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2).
+
+- Claude-sessies Manager/Strateeg/Uitvoerder-2: triggers uitgeschakeld, sessies verwijderd door Sandro
+- Auditor blijft op Claude: onafhankelijkheid vereist (kan CTO's eigen werk niet auditen)
+- `GROK_CTO_INSTRUCTIE.md` staat op main: volledige kickoff-prompts voor alle nieuwe Grok-agents
+- CEO-model wordt verhoogd door Sandro (naar Opus of hogere Sonnet)
