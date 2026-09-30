@@ -4,3 +4,4 @@ mom_log_start.txt
 swapcheck_log.txt
 .claude/
 data/m5/
+forward/cron.log
