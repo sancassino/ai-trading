@@ -1,6 +1,6 @@
 # CTO_AUDIT — ORB / S3 + post-A4/B1 FTMO redirect
 
-**Status:** updated 2026-10-01 ~00:05 Europe/Amsterdam (CTO wake; §3d S2b FAIL + ambition SR×skew).  
+**Status:** updated 2026-10-01 ~00:36 Europe/Amsterdam (CTO wake; §3e N3/N4 assign + XAU power-pad).  
 **Branch:** `grok/cto-1`. **No reserve 2025-01→ opened. No new TRIALS. No fabricated backtests.**  
 **Engine:** `engine/ftmo.py` blob `ac7abef6` (p_survive right-censor; U2 re-validated PASS @ `18c7996`).
 
@@ -77,12 +77,12 @@
 
 | Priority | Item | Owner | Note |
 |---|---|---|---|
-| **1** | **Non-clone research** (new frozen PREREGs) | Strateeg + Strateeg-2 | C-004 — all A/S2 cost-gated tracks dead. |
-| **2** | Multi-sleeve `ftmo_ev` on Phase-1 survivors only | CTO | Inventory path; not new discovery. |
+| **1** | **N3 then N4 cost-gates** (train 2021–23) | U2 | C-006 — PREREGs landed on `grok/cto-1`. |
+| **2** | Non-clone research (more D-091.3) | Strateeg + Strateeg-2 | After N3/N4 gates; XAU_AM needs *new* mechanism if power required. |
+| **3** | Multi-sleeve `ftmo_ev` on Phase-1 survivors only | CTO | Inventory path; not new discovery. |
+| — | XAU_AM_FADE | — | Gate PASS N=12; **watch-only** (power-pad §3e). |
+| — | N1 / N2 / MIDDAY / S2b | — | **STOP** (nacht-queue v45). |
 | — | A2 / A4 / B1 / A5 / all S2-* | — | **STOP** (kostenpoort or power). |
-| — | US41 M5gz | — | Landed v41 — A2 still FAIL. |
-| — | S2-XAU / GER40 / USDJPY | — | **STOP** (CTO cost-gate 2026-09-30 23:08). |
-| — | S2-BTC / S2-USOIL | — | **STOP** (CTO 23:35: BTC power N=132<150; USOIL cost FAIL). |
 | — | A1 / S3 | — | Parked until `data/long_m1/` (no Sandro ping). |
 | — | New overnight monthly FX/index | Strateeg | **Deprioritize** (C-002). |
 
@@ -144,6 +144,35 @@ Implication: ORB F2 (~€40–286/m at compliant size) is far below; need higher
 **Night queue (Manager v44):** U2 owns N1 → N2 → MIDDAY_VWAP → XAU_AM_FADE. S2b closed here.
 
 ---
+
+
+## 3e. N3/N4 assign + XAU_AM_FADE power-pad (2026-10-01 ~00:36 CEST)
+
+**Nacht-queue (v45):** N1/N2/MIDDAY/S2b **STOP**. XAU_AM_FADE gate PASS (N=12, mean bruto +18.70 bp ≥ 2.49) but underpowered vs PREREG N≥120.
+
+**C-006:** U2 on `claude/uitvoerder2-r` runs **cost-gates only** — **N3 US100 close-drive first**, then **N4 XAU pre-NY**. Train 2021–2023; gates 1.80 bp / 2.49 bp +50% RT stress; FAIL→STOP no trial; no 2025+ in decisions. Dead set not restarted.
+
+**XAU_AM_FADE power-pad (diagnostic, `results/cto/xau_am_fade_power/`):**
+
+| Window | N signals | Eligible days | Note |
+|---|---:|---:|---|
+| 2018–2020 | 0 | 0 | **NO_DATA** in `data/m5gz/XAUUSD.csv.gz` (starts 2021-01-01) |
+| 2021–2023 train | **12** | 760 | hit_rate ≈ 1.6% at frozen 0.60×; matches U2 gate |
+| 2024 test | 2 | 259 | report only — not a decision |
+
+Report-only sensitivity (train): 0.45×→N=24; 0.60×→12; 0.75×→2. ext/ATR p95≈0.40 — 0.60× is extreme-tail. **Not a timezone/filter bug** (eligible windows present).  
+**Verdict:** structural underpower under frozen rule → **watch-only**. Do **not** loosen 0.60×. Ask Strateeg for a *new* PREREG with different mechanism if N≥120 is required. No `ftmo_ev` / no trial.
+
+**Kill / alive board (post C-006):**
+
+| Sleeve | Status |
+|---|---|
+| A4 / B1 / A5 / A2 / S2-* / N1 / N2 / MIDDAY / S2b | **DEAD** |
+| XAU_AM_FADE | **WATCH-ONLY** (gate PASS, N≪120) |
+| N3 US100_CLOSE / N4 XAU_PRENY | **ALIVE — cost-gate pending (U2)** |
+| ORB F2 / A1 / S3 | parked / profile only |
+
+
 ## 4. Engine notes
 
 - `ftmo_ev` API stable; U2 P1 PASS on censor fix.  
@@ -157,4 +186,6 @@ Implication: ORB F2 (~€40–286/m at compliant size) is far below; need higher
 
 - PREREG: `PREREG_S3.md`, `PREREG_FTMO_A2.md`, `PREREG_FTMO_B1.md`, `PREREG_FTMO_C17.md`, `PREREG_S2_XAU_OVERLAP.md`, `PREREG_S2_GER40_OPEN.md`, `PREREG_S2_USDJPY_HANDOFF.md`  
 - Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,a2,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy,btc,usoil}_prep/`, `results/cto/s2b_btc_eth_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`, `results/cto/ambition_sr_skew_grid.json`  
-- Decisions: C-001…**C-005** (S2b ETH STOP + COSTS_alle bridge; ambition SR×skew)
+- Decisions: C-001…**C-006** (N3/N4 U2 cost-gates; XAU_AM_FADE watch-only)
+- Power-pad: `results/cto/xau_am_fade_power/`, `scripts/xau_am_fade_power_diag.py`
+- New PREREGs: `PREREG_FTMO_N3_US100_CLOSE.md`, `PREREG_FTMO_N4_XAU_PRENY.md`

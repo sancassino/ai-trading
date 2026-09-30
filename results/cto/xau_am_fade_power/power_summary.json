@@ -1,0 +1,102 @@
+{
+  "label": "DIAGNOSTIC_ONLY_XAU_AM_FADE_POWER",
+  "frozen_rule": "0.60\u00d7ATR, 11:30, 14:00 Europe/Amsterdam \u2014 UNCHANGED",
+  "data_file": "data/m5gz/XAUUSD.csv.gz",
+  "data_span": {
+    "min": "2021-01-01 00:00:00",
+    "max": "2026-09-29 23:45:00"
+  },
+  "year_coverage": {
+    "2021": {
+      "n_bars": 70428,
+      "t0": "2021-01-01 00:00:00",
+      "t1": "2021-12-31 23:45:00"
+    },
+    "2022": {
+      "n_bars": 70089,
+      "t0": "2022-01-03 01:05:00",
+      "t1": "2022-12-30 23:45:00"
+    },
+    "2023": {
+      "n_bars": 69909,
+      "t0": "2023-01-03 01:05:00",
+      "t1": "2023-12-29 23:45:00"
+    },
+    "2024": {
+      "n_bars": 70432,
+      "t0": "2024-01-02 01:05:00",
+      "t1": "2024-12-31 23:45:00"
+    },
+    "2025": {
+      "n_bars": 70154,
+      "t0": "2025-01-02 01:05:00",
+      "t1": "2025-12-31 23:45:00"
+    },
+    "2026": {
+      "n_bars": 52212,
+      "t0": "2026-01-02 01:05:00",
+      "t1": "2026-09-29 23:45:00"
+    }
+  },
+  "windows": {
+    "2018-2020": {
+      "n_bars": 0,
+      "n_days_with_m5": 0,
+      "n_eligible_windows": 0,
+      "n_signals": 0,
+      "mean_bruto_bp": null,
+      "note": "NO_DATA"
+    },
+    "2021-2023_train": {
+      "n_bars": 210426,
+      "n_days_with_m5": 774,
+      "n_eligible_windows": 760,
+      "n_no_window": 14,
+      "n_no_ext": 748,
+      "n_signals": 12,
+      "mean_bruto_bp": 18.698748918106894,
+      "hit_rate_vs_eligible": 0.015789473684210527,
+      "note": "DIAGNOSTIC_ONLY"
+    },
+    "2024_test": {
+      "n_bars": 70432,
+      "n_days_with_m5": 259,
+      "n_eligible_windows": 259,
+      "n_no_window": 0,
+      "n_no_ext": 257,
+      "n_signals": 2,
+      "mean_bruto_bp": -34.13320915650472,
+      "hit_rate_vs_eligible": 0.007722007722007722,
+      "note": "DIAGNOSTIC_ONLY"
+    },
+    "2025plus_present_NOT_FOR_DECISION": {
+      "n_bars": 122366,
+      "n_days_with_m5": 450,
+      "n_eligible_windows": 450,
+      "n_no_window": 0,
+      "n_no_ext": 442,
+      "n_signals": 8,
+      "mean_bruto_bp": -44.77749951227116,
+      "hit_rate_vs_eligible": 0.017777777777777778,
+      "note": "DIAGNOSTIC_ONLY \u2014 2025+ not for decision"
+    }
+  },
+  "report_only_threshold_N_train_2021_2023": {
+    "0.45": 24,
+    "0.6": 12,
+    "0.75": 2
+  },
+  "ext_vs_atr_distribution_eligible_train": {
+    "p50": 0.1071328289375525,
+    "p75": 0.20564088086980298,
+    "p90": 0.3207457657136327,
+    "p95": 0.3954129076515316,
+    "p99": 0.6154743282097472,
+    "max": 0.8302929113382834,
+    "frac_ge_0.60": 0.015789473684210527,
+    "frac_ge_0.45": 0.031578947368421054,
+    "frac_ge_0.30": 0.11447368421052631,
+    "n_eligible": 760
+  },
+  "conclusion": "STRUCTURAL underpower: m5gz/XAUUSD.csv.gz starts 2021-01-01 \u2014 no 2018\u20132020. Train 2021\u20132023 N=12 under frozen 0.60\u00d7 (\u226a120). Eligible=760; hit_rate=0.015789473684210527. Not a TZ/filter bug (windows present). Watch-only; new PREREG if N\u2265120 needed. Do NOT loosen 0.60\u00d7."
+}

@@ -4,6 +4,30 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-006 — U2 assignment: N3 then N4 cost-gates only (+ XAU_AM_FADE watch-only)
+**Opened:** 2026-10-01 ~00:33 Europe/Amsterdam (NEXT_STEPS v45: nacht-queue done; U2 idle @ `62c4e39`; Strateeg landed N3/N4 @ `579a3e5`).  
+**Closed:** 2026-10-01 ~00:36 Europe/Amsterdam by CTO (assignment written; no CEO wait).
+
+**Facts:**
+- Nacht-queue STOP: N1/N2/MIDDAY/S2b. XAU_AM_FADE cost-gate **PASS** but N=12 ≪ 120 (U2 artefacts on main).
+- Strateeg D-091.3: `PREREG_FTMO_N3_US100_CLOSE.md` + `PREREG_FTMO_N4_XAU_PRENY.md` (no results yet). Landed on `grok/cto-1` this cycle.
+- CTO power-pad (`results/cto/xau_am_fade_power/`): **structural** underpower — `data/m5gz/XAUUSD.csv.gz` starts 2021-01-01 (no 2018–2020); train eligible=760 but hit_rate≈1.6% at frozen 0.60× → N=12. Report-only: even 0.45× → N=24 ≪120. Not a TZ/filter bug. **Do not loosen 0.60×. No `ftmo_ev` / no trial.**
+
+**Decision (binding for Uitvoerder-2 on `claude/uitvoerder2-r`):**
+1. **Dead set remains dead — do not restart:** A4 · B1 · A5 · A2 · S2-* · N1 · N2 · MIDDAY_VWAP · S2b.
+2. **Run cost-gates only (train 2021–2023; test/reserve untouched for decision):** **N3 first, then N4.**
+   - Data: `data/m5gz/US100cash.csv.gz`; `data/m5gz/XAUUSD.csv.gz` (repo name; PREREG may say XAUUSDcash).
+   - N3 gate: mean bruto ≥ **1.80 bp** (+50% RT stress). FAIL → STOP no trial. PASS → may proceed to clustered-t / later `ftmo_ev` per PREREG (CTO or U2).
+   - N4 gate: mean bruto ≥ **2.49 bp** (+50% RT stress). FAIL → STOP no trial. PASS → same.
+   - Swap=0 intradag. No 2025+ bars in any decision/gate.
+3. **XAU_AM_FADE:** **watch-only**. Do **not** assign formal `ftmo_ev`. Power structurally impossible under frozen rule in 2021–23 without post-hoc threshold change. Strateeg may file a *new* PREREG with different mechanism if desired.
+4. Merge `origin/main` regularly; PREREG before results; TRIALS append-only only after a legitimate PASS path that requires a formal trial (not this assignment's cost-gate step).
+5. CEO/Sandro: no decision required.
+
+**Where applied:** `PREREG_FTMO_N3_US100_CLOSE.md`, `PREREG_FTMO_N4_XAU_PRENY.md` on `grok/cto-1`; `results/cto/xau_am_fade_power/`; `CTO_AUDIT.md` §3e; `RUNLOG_CTO.md` (00:33 wake); this ticket.
+
+---
+
 ### C-005 — S2b BTC+ETH COSTS bridge + cost-gate FAIL (ETH leg)
 **Opened:** 2026-09-30 23:57 Europe/Amsterdam (NEXT_STEPS v44: CTO owns S2b after COSTS bridge; BTC/ETH absent from `COSTS_FTMO.csv`).  
 **Closed:** 2026-10-01 ~00:05 Europe/Amsterdam by CTO (executable path; no CEO wait).
@@ -127,4 +151,4 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (not blocking):_ NEXT_STEPS v44 already queues N1/N2/VWAP/XAU_AM for U2. After C-005, also mark **S2b STOP**. CEO/Sandro: no new decision — ambition calibration (CTO 00:05) shows €800/m needs ~SR≥1.0 at p95-dip≤2% (synthetic); revise ambition/fee only if CEO chooses. A1/`long_m1` ping stays deferred.
+_Open for Manager (not blocking):_ NEXT_STEPS v45 nacht-queue done. After C-006: U2 runs **N3→N4 cost-gates**; XAU_AM_FADE watch-only; mark N3/N4 landed. CEO/Sandro: no new decision. A1/`long_m1` ping stays deferred.

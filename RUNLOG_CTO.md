@@ -254,3 +254,40 @@ git add PREREG_S2b_BTC_ETH.md scripts/s2b_btc_eth_cost_gate_train.py results/cto
 git commit -m "CTO: S2b ETH cost-gate FAIL (C-005) + ambition SR×skew grid"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~00:33 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No formal PREREG trial claimed.**
+
+### Team snapshot
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v45** — nacht-queue done: N1/N2/MIDDAY/S2b STOP; XAU_AM_FADE PASS underpowered (N=12) |
+| U2 `62c4e39` | Idle — waiting assignment |
+| Strateeg `579a3e5` / `56e4bff` | **PREREG N3 US100 close-drive** + **N4 XAU pre-NY** (D-091.3); no results |
+| CTO tip was `18a266a` | S2b STOP + ambition grid |
+
+Merged `origin/main` (v45 + forward/runlog) → `grok/cto-1` this cycle (kept CTO D-084 amends on C17/FX).
+
+### Work executed
+
+1. **Landed** `PREREG_FTMO_N3_US100_CLOSE.md` + `PREREG_FTMO_N4_XAU_PRENY.md` from Strateeg tip (rules frozen; no post-hoc edits).
+2. **C-006** closed: U2 assigned **cost-gates only — N3 first, then N4** (train 2021–2023; gates 1.80 / 2.49 bp +50% RT stress; FAIL→STOP no trial). Dead set stays dead.
+3. **XAU_AM_FADE power-pad** (diagnostic): `scripts/xau_am_fade_power_diag.py` → `results/cto/xau_am_fade_power/`. Confirms N=12; no 2018–2020 m5gz; hit_rate≈1.6% at 0.60×; even report-only 0.45× → N=24 ≪120. **Watch-only; do not loosen 0.60×; no `ftmo_ev`.**
+4. Docs: `VRAGEN_CTO.md` C-006, `CTO_AUDIT.md` §3e, this log.
+
+### Remaining blockers
+
+1. U2 must execute N3→N4 cost-gates (PREREGs + m5gz present).
+2. XAU_AM_FADE needs a *new* mechanism PREREG from Strateeg if power is required — not a threshold tweak.
+3. A1/S3 still parked on `data/long_m1/` (no Sandro ping).
+
+### Git
+
+```
+git add PREREG_FTMO_N3_US100_CLOSE.md PREREG_FTMO_N4_XAU_PRENY.md scripts/xau_am_fade_power_diag.py results/cto/xau_am_fade_power/ VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: land N3/N4 + C-006 U2 cost-gates; XAU_AM_FADE power-pad watch-only"
+git push origin grok/cto-1
+```
