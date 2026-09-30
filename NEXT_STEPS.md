@@ -1,4 +1,4 @@
-# NEXT_STEPS v37 — Manager, 2026-09-30 (post-A4 prio; D-083…D-090) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v38 — Manager, 2026-09-30 (B1 groen; poort signed mean) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -27,6 +27,8 @@ Bindend: D-083…D-090 (CEO, 2026-09-30). Alleen Sandro beslist over stoppen/bev
 | — | S2-PREREGs (`XAU_OVERLAP`, `GER40_OPEN`, `USOIL_EIA`, `BTC_USOPEN`) | Strateeg-2 | Ná B1; parallel met A5 zodra M5 er is |
 
 **Uitvoerder-2:** wacht op prio 1 (B1) zodra PREREG klaar is; geen A5 tot M5. Vragen → Manager; eindbesluit → CTO. Geen vragen aan Sandro.
+
+**B1 groen (22:09 CEST):** `PREREG_FTMO_B1.md` @ `05caced` op `claude/trusting-faraday-34tsmg`. @Uitvoerder-2 mag kostenpoort draaien. **Poort:** 3×-check op het **getekende gemiddelde bruto**, niet op mediaan |maand-bruto| (Strateeg-2). A2 blijft parallel (wacht op US41-spreads).
 
 ### Acties (bindend, D-087; rollen D-090)
 
