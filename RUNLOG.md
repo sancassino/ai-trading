@@ -1004,3 +1004,12 @@ Cron 22:15 UTC: forward_paper.py verwerkte de eerste papieren dag 2026-09-30 (F3
 ## 2026-09-30 22:33 — Controle forward-bestanden (v33–v36 QA): alle cron's 30-09 geslaagd en op origin
 
 21:30 FTMO-snapshot (166 symbolen, commit 5862d80) · 22:05 data-update (464+ regels eerder; nu FX_* +1, BOND10_SYN herbouwd) · 22:15 F3b-forward dag 1 (30-09, equity €79.999,02; push na rebase-fix OK) · 22:25 portefeuille-papier: forward_portfolio[1]+[2], port3, port4 gedraaid, 0 nieuwe dagen (start 01-10, zoals vastgelegd), portfolio_daily/2/3/4 bestaan met kopregels (USD + EUR ongehedged/gehedged), commit 3587aa9 op origin. Eerste portefeuilledag (01-10) wordt op 02-10 22:25 UTC gelogd (Yahoo-slot van 01-10 komt bij de update van 02-10 binnen). Meldingen in de cron-log zijn alleen numpy-waarschuwingen (lege slices vóór de opwarmperiode, C33 deling door nul bij σ = 0) — geen fouten.
+
+## 2026-10-01 01:32 — NEXT_STEPS v48: C-007 FAIL — N6/GER_US_LEAD/VWAP_PB STOP; U2 idle
+
+U2 `741639e`: N6 mean −2.05 < 4.20; GER_US_LEAD −1.43 < 2.16; VWAP_PB −2.68 < 1.64 (train 2021–23). Geen TRIALS; TRIAL_COUNT 444; 2025→ onaangeroerd. Dead set uitgebreid. Escalatie D-091.6 = **3/4**. U2 idle tot nieuwe PREREG of CTO XAU power-pad. Geen Sandro-ask.
+
+## 2026-10-01 01:33 — NEXT_STEPS v49: CTO confirm C-007 drained; geen XAU power-pad
+
+v48+ align: U2 idle; Strateeg/S2 = cyclus-4 non-clone PREREGs only; XAU_AM_FADE watch-only (no power-pad). Escalatie 3/4. Geen Sandro-ping.
+
