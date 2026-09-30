@@ -117,7 +117,8 @@ def pipeline(rf, c02, c52, extra_cost_bp=6.5):
     """PREREG_PORT P-ETF-a: sleeves excess; weights ∝ 1/σ60 (vertraagd), maandelijks op eerste handelsdag; kost 6,5 bp × Σ|Δw|."""
     days = c02.index.intersection(c52.index).sort_values()
     nt = nights_of(days); rff = rf_fac(days, rf, nt)
-    X = pd.DataFrame({"c52": c52.reindex(days).values - rff, "c02": c02.reindex(days).values - rff}, index=days)
+    ex = lambda sl: sl - pd.Series(rf_fac(sl.index, rf, nights_of(sl.index)), index=sl.index)   # excess op de EIGEN kalender van de sleeve
+    X = pd.DataFrame({"c52": ex(c52).reindex(days).values, "c02": ex(c02).reindex(days).values}, index=days)
     first = pd.Series(days.to_period("M"), index=days)
     reb = (first != first.shift()).values
     w = np.full((len(days), 2), np.nan); cur = None; cost = np.zeros(len(days))
