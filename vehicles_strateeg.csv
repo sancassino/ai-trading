@@ -1,6 +1,6 @@
 # vehicles_strateeg.csv (Strateeg, 2026-09-30 13:40 Amsterdam) — kopieer naar engine/vehicles.csv. Bron-tag: W = web (URL in VEHICLE_ANALYSE.md), E = eigen kennis (onbevestigd), S0 = repo-meting (FTMO), A = aanname. confidence: H/M/L. roundtrip_bp = totaal voor open+sluit (spread + commissie), exclusief lopende kosten.
 vehicle;class;roundtrip_bp;ter_pct_yr;financing_long_pct_yr;financing_short_pct_yr;short_allowed;min_unit_notional_eur;fx_note;source;confidence
-etf;equity_us_ucits (CSPX/VUAA);12;0.07;0 (ongehefeld; niet-belegd = cash-rente);n.v.t.;no;~1 aandeel (~€100–700);USD-fonds: EUR/USD-vol ~7-8%/jr zonder verwacht rendement tenzij hedged (hedge-kost ≈ renteverschil USD-EUR);W(TER,comm 0.05% min €1.25 max €29 Xetra)+A(spread 2 bp → RT = 2×(5+1));M
+etf;equity_us_ucits (CSPX/VUAA);6 basis / 13 gevoeligheid;0.07;0 (ongehefeld; niet-belegd = cash-rente);n.v.t.;no;~1 aandeel (~€100–700);USD-fonds: EUR/USD-vol ~7-8%/jr zonder verwacht rendement tenzij hedged (hedge-kost ≈ renteverschil USD-EUR);W(TER; NL-retail vaste €3–3,75 per trade Curvo/Quantroutine; Xetra 0,05% min €1,25 max €29)+A(spread 2 bp); 14:30-update: realistisch 5–13 bp;M
 etf;equity_world_ucits (IWDA/VWCE);12;0.20;0;n.v.t.;no;~1 aandeel;idem;E(TER)+A;L
 etf;equity_region_ucits (EM/Europa/Japan/sector);14;0.20;0;n.v.t.;no;~1 aandeel;idem;E+A;L
 etf;gold_etc (physical);12;0.12;0;n.v.t.;no;~1 stuk;USD-goud;W(TER)+A;M
@@ -10,6 +10,6 @@ etf;cash_moneymarket_ucits;8;0.10;rente (ESTR/DTB3-proxy) − TER;n.v.t.;no;~1 a
 future;micro_equity_index (MES/MNQ);0.7;0;impliciet in prijs (overschotrendement + rf op kapitaal);impliciet;yes;€33000–€55000 per contract (MES≈$38k, MNQ≈$61k bij huidige prijzen swap_specs);USD-margin/rekening;W(forum $1.14 RT/contract)+E(multiplier)+A(1 tick spread);L
 future;micro_gold (MGC);1.0;0;impliciet;impliciet;yes;~€36000 (10 oz);USD;E+A;L
 future;roll;0.5 per roll (4×/jr);0;-;-;-;-;-;A (engine-standaard);L
-cfd;index_retail_eu;1.5;0;benchmark_rente + 1.5;-(benchmark − 1.5) (ontvangt benchmark − 1.5 op short notional, niet < 0 aangenomen);yes;deelbaar (min ~€1 per punt);EUR-rekening → conversie 3–10 bp per wissel;W(CEO-log IBKR: benchmark ± 1.5%, margin ≥ 20%)+A(spread 2× FTMO-S0 tot retail meetbaar is);L
+cfd;index_retail_eu;1.5;0;benchmark_rente + 1.0 (basis) / 1.5 / 2.5 (gevoeligheid);-(benchmark − 1.0) enz. (ontvangt benchmark − 1.5 op short notional, niet < 0 aangenomen);yes;deelbaar (min ~€1 per punt);EUR-rekening → conversie 3–10 bp per wissel;W(CEO-log IBKR: benchmark ± 1.5%, margin ≥ 20%)+A(spread 2× FTMO-S0 tot retail meetbaar is);L
 cfd;fx_major_retail_eu;1.5;0;rentedifferentiaal ± 1.5;idem;yes;deelbaar;-;A (S0 0.6–1.2 × 1.5);L
 cfd;ftmo_reference (S0);0.45–1.85 per instrument (COSTS_FTMO.csv);0;swap_specs per instrument (long 5–8%/jr indices);swap short ≈ 0–3%/jr;yes;deelbaar;-;S0;H
