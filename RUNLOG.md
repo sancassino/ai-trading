@@ -846,3 +846,12 @@ Ongehefeld — met C02 vs met B&H: 2001–24 SR 0,94 vs 0,79, maxDD 11,2% vs 19,
 → C02 verbetert P-ETF-a via DD (−8 pp), niet via alfa; na 2010 zelfs licht negatief op SR/alfa — consistent met run 5 ('DD-filter, geen alfa').
 Frontier binnen DD-budget (maxDD ≤ 20%): met C02 vol 9% (hefboom ≈ 1,6×) → 2001–24 totaal €401–496/mnd, 2011–24 €378–464, **2021–24 €242–274**; met B&H vol 8% (≈ 1,3×) → €387–476 / €398–492 / €287–337 (vol 9% overschrijdt het budget in 2001–24/2011–24).
 Eerlijke ondergrens (recentste regime 2021–24, ongehefeld): alfa €112–162/mnd + EUR-cash €163 ≈ €275–325/mnd totaal — onder het €400–500-doel; het doel wordt alleen gehaald met hefboom én de 2001–24/2011–24-SR.
+
+## 2026-09-30 16:14 — D-075 (Uitvoerder-1): echte exposures P-ETF-a + gerealiseerde excess per decennium + Monte-Carlo — p(totaal ≥ €400) ≈ 0,4–5% (parameter), 12–13% (incl. 10-jr-toeval)
+
+qa_exposures_mc.py → results/port/QA_exposures_MC.md (geen trial; ontdekking ≤ 2024; premies = VERWACHTING.md v1, Strateeg, web-claims).
+(1) Gemiddelde exposure P-ETF-a (exact uit 1/σ-gewichten × sleeve-posities, positie van gisteren): 2001–24 aandelen 0,40 · obligaties 0,29 · goud 0,11 · cash 0,20; 2011–24 0,43/0,33/0,13/0,11; 2021–24 0,45/0,26/0,13/0,16 (Strateeg-aanname 0,45/0,31/0,12/0,12 — dichtbij).
+(2) Gerealiseerde excess t.o.v. USD-cash per decennium (%/jr): aandelen (SPX_TR) 1990s +12,4 | 2000s −3,5 | 2010s +12,8 | 2020–24 +11,5; obligaties (BOND10_SYN) +3,1 | +4,1 | +3,5 | −4,0; goud (GOLD_F) n.v.t. | +16,1 | +3,1 | +11,6 — tegen forward-midden +2,0 / +1,0 / −0,25 → backtest = bull-premies.
+(3) Premie-verwachting met echte exposures (kosten −0,20%/jr aangenomen): alfa laag/midden/hoog ≈ −€34 / €58 / €144 per mnd; totaal met EUR-cash (€STR 2,44%) €128 / €220 / €306; met USD-cash (4,07%) €237 / €329 / €415.
+(4) Monte-Carlo (200k; premies ~ N(midden, SE), EUR-cash vast): p(totaal ≥ €400) 0,4% (SE 2%) … 3,8–5% (SE 3% / corr 0,3); incl. gerealiseerd 10-jr-gemiddelde (portefeuillevol 6,1%) 12–13%; p(alfa ≥ €287) ≤ 1,7% (parameter) resp. 7–8%. Mediaan totaal ≈ €220–224/mnd.
+Conclusie: bevestigt D-073 — met deze allocatie en premie-verwachtingen is ≥ €400 totaal onwaarschijnlijk (≈ 5%, of ≈ 12% als geluk over 10 jaar meetelt).

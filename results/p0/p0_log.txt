@@ -86,3 +86,12 @@
 2026-09-30 14:26:09Z   netwerkfout bij USA500IDXUSD 2012-04-13: <urlopen error [Errno 104] Connection reset by peer>; wacht 480 s (poging 4)
 2026-09-30 14:34:43Z   503 bij USA500IDXUSD 2012-04-13; wacht 900 s (poging 5)
 2026-09-30 14:50:44Z P0 GESTOPT (netjes): 503 zes keer op rij bij https://datafeed.dukascopy.com/datafeed/USA500IDXUSD/2012/03/13/BID_candles_min_1.bi5
+2026-09-30 15:53:29Z start P0 voor SPXUSD, GRXEUR, NSXUSD, XAUUSD (pauze 60.0 s, UA 'ai-trading-research/1.0 (slow, resumable; respects 429/Retry-After)')
+2026-09-30 15:54:39Z SPXUSD: deler 1000 (Dukascopy 4361.55 vs FTMO 4357.83, verschil 0.09%)
+2026-09-30 15:54:39Z SPXUSD 2011: eerste 10 werkdagen leeg/404 → jaar niet beschikbaar op de feed, overgeslagen
+2026-09-30 15:56:00Z   503 bij USA500IDXUSD 2012-04-13; wacht 60 s (poging 1)
+2026-09-30 15:59:00Z   netwerkfout bij USA500IDXUSD 2012-04-13: <urlopen error timed out>; wacht 120 s (poging 2)
+2026-09-30 16:03:23Z   503 bij USA500IDXUSD 2012-04-15; wacht 60 s (poging 1)
+2026-09-30 16:05:23Z   503 bij USA500IDXUSD 2012-04-15; wacht 120 s (poging 2)
+2026-09-30 16:09:34Z   503 bij USA500IDXUSD 2012-04-16; wacht 60 s (poging 1)
+2026-09-30 16:11:34Z   503 bij USA500IDXUSD 2012-04-16; wacht 120 s (poging 2)
