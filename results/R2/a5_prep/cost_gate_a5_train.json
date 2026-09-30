@@ -1,0 +1,21 @@
+{
+  "n_trades": 3106,
+  "symbols": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "USDCHF"
+  ],
+  "train": "2021-01-01..2023-12-31",
+  "median_gross_bp": -5.913540955030399,
+  "mean_gross_bp": 0.6245272212709767,
+  "median_cost_bp": 0.6055459866071915,
+  "mean_cost_bp": 1.3105991218581179,
+  "gate_3x_mean_cost": false,
+  "gate_3x_median_cost": false,
+  "gate_abs_2_1bp": false,
+  "threshold_3x_mean_bp": 3.9317973655743534,
+  "threshold_3x_median_bp": 1.8166379598215745,
+  "verdict": "FAIL",
+  "reserve_2025_touched": false
+}

@@ -390,3 +390,35 @@ Bron: `origin/claude/trusting-faraday-34tsmg` (`d5143a2` / merge `…19:54 UTC`)
 - Artefacts: `results/R2/b1_prep/cost_gate_b1_train.{md,json,csv}`.
 
 **Volgende (niet deze cyclus):** A2 wanneer PREREG dicht + spreads; A5 pas met M5; vragen → Manager; eindbesluit → CTO. Reserve 2025→ onaangeraakt.
+
+## 2026-09-30 22:50 CEST — D-090 FASE 3 cyclus: M5gz land + A5 kostenpoort FAIL + A2 PREREG geblokkeerd
+
+**Branch:** `claude/uitvoerder2-r`. Tip vóór cyclus: `18c7996`.  
+**Gelezen:** `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (eindigt D-086; D-087…D-090 via NEXT_STEPS); `NEXT_STEPS.md` v39 @ `origin/main` (post-B1: prio **M5-snapshot + A2-PREREG**; A4/B1 dood; A5 zodra M5; A1 skip).
+
+### Keuze (volgens NEXT_STEPS v39, geen scope verzonnen)
+1. **P1 ftmo.py-validatie** — already_done in `18c7996` (CTO blob `ac7abef6`, antwoorden a/b/c). Geen herimplementatie (D-087).
+2. **M5-snapshot (U-006 A)** — al op `origin/main` (`ebc0af5`/`5254704`, 24 symbolen in `data/m5gz/`). **Merged** in deze branch.
+3. **A5** — PREREG bestond; M5 FX nu beschikbaar → kostenpoort TRAIN.
+4. **A2** — Strateeg PREREG bevroren (`PREREG_FTMO_A2.md` @ `6aaa6238`); geland. **Run geblokkeerd:** US41 aandelen-M5 zit **niet** in de 24-symbool m5gz (README: “Aandelen-M5 (A2) op verzoek ≈ 40 MB”). Geen inventie van proxy-data.
+
+### A5 kostenpoort (PREREG vóór resultaat)
+- Script `scripts/a5_cost_gate_fx_train.py`; artefacts `results/R2/a5_prep/`.
+- N=3106 trades (4 majors, train 2021–2023, CET OR→12:00).
+- Median bruto **−5.91 bp** < 3× mean cost **3.93 bp** (mean bruto +0.62; abs ≥2.1 bp FAIL).
+- **FAIL → STOP.** Geen `ftmo_ev()`, geen test-2024.
+- `TRIALS.csv` append `FX_london_orb_intradag` / `FTMO_A5_basis` / `stop: kostenpoort…`.
+- **TRIAL_COUNT blijft 444** (PREREG §5: poort-fail telt niet mee; afwijkend van A4/B1 die wél +1 deden).
+
+### A2 status
+- `PREREG_FTMO_A2.md` geland (blob `6aaa6238`, SHA-256 `066b4583…`).
+- **Blocker → Manager:** US41 M5-gz momentopname ontbreekt; U-006 A dekte alleen FX/indices/metalen. Geen A2-kostenpoort zonder die data. Vraag: optie A-extra (~40 MB) of Debian-run door U1?
+
+### Ongewijzigd / verboden herstarts
+- A4/B1: **niet** herstart.
+- A1 ORB/S3: skip (geen Sandro-data).
+- Reserve **2025-01→ onaangeraakt**.
+- Overnight maand-sleeves: geen nieuwe.
+
+**Volgende (niet gokken):** wacht Manager/CTO op (i) US41-M5 voor A2, of (ii) andere bevroren PREREG met beschikbare data. Strateeg-2 S2-* (XAU/GER40/USOIL) hebben M5gz-symbolen — alleen starten als NEXT_STEPS/BESLUITEN dat expliciet aan Uitvoerder-2 toewijst (nu: “parallel met A5 zodra M5”, eigenaar Strateeg-2 voor PREREG).
+
