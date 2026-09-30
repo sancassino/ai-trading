@@ -55,3 +55,8 @@ futures-/CFD-afgeleid); de OR geldt dan op het cash-openingsuur, zoals bij FTMO.
 - De aanpassing 'eenzijdig t ≥ 2,0' hierboven is **ingetrokken**. Geldend is weer: **bevestigd = dag-geclusterd t ≥ 2,5** plus alle overige eisen
   (ongewijzigd). Het power-annex blijft als informatie staan: bij een effect op 2021–26-niveau ≈ 88% kans op 'bevestigd', bij een gehalveerd
   effect ≈ 18% (dan meestal 'onbeslist').
+
+## DEFINITIEF (CEO D-029/D-036) — 2026-09-30 ≈ 11:20Z, data/long_m1/ leeg
+- De terugdraaiing hierboven ('TERUGGEDRAAID … t ≥ 2,5') is **ongeldig** (D-036). Geldend en **bevroren**: bevestigd = **eenzijdig dag-geclusterd
+  t ≥ 2,0** + overige eisen ongewijzigd (beide helften positief, ≥ 0,9 bp/trade, ≥ 2 van 3 indices positief, label blijvend/vervallen).
+  S3b houdt zijn eigen drempels. Dit bestand wordt hierna niet meer gewijzigd; de SHA-256 staat in RUNLOG.

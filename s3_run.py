@@ -81,7 +81,7 @@ def main():
         yr[d.year].append(n)
     print("   jaar-per-jaar bp (2011–20 HistData, 2021–26 FTMO): " + " ".join(f"{y}:{np.mean(v)*1e4:+.1f}" for y, v in sorted(yr.items())))
     ref_mean = np.mean([n for _, _, n in ref]) * 1e4; ref_2426 = np.mean([n for d, _, n in ref if d.year >= 2024]) * 1e4
-    confirmed = t >= 2.5 and np.mean(h1) > 0 and np.mean(h2) > 0 and mean_bp >= 0.9 and pos3 >= 2
+    confirmed = t >= 2.0 and np.mean(h1) > 0 and np.mean(h2) > 0 and mean_bp >= 0.9 and pos3 >= 2
     rejected = t < 1 or mean_bp <= 0.5
     if confirmed:
         label = "BEVESTIGD + BLIJVEND" if ref_mean >= 0.9 and ref_2426 >= 0 else "BEVESTIGD MAAR VERVALLEN"
