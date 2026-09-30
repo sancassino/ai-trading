@@ -1,0 +1,12 @@
+reeks                                          2step                       scaling                         1step
+A historisch          €   -21 (t 1.00, P<0  98%, f   4%)€   -21 (t 1.00, P<0  98%, f   4%)€   -19 (t 0.75, P<0  96%, f  10%)
+synthetisch SR 1      €   -22 (t 0.30, P<0  99%, f   2%)€   -22 (t 0.30, P<0  99%, f   2%)€   -53 (t 0.30, P<0  95%, f  11%)
+synthetisch SR 1.5    €   -16 (t 0.50, P<0  74%, f  37%)€   -14 (t 0.50, P<0  74%, f  37%)€   -40 (t 0.30, P<0  84%, f  30%)
+synthetisch SR 2      €   101 (t 1.00, P<0  44%, f  92%)€   124 (t 1.00, P<0  44%, f  92%)€   -12 (t 0.30, P<0  67%, f  53%)
+synthetisch SR 3      €   481 (t 1.00, P<0  21%, f  99%)€   531 (t 1.00, P<0  20%, f  99%)€   182 (t 0.50, P<0  31%, f  97%)
+synthetisch SR 4      €   912 (t 1.00, P<0   8%, f 100%)€   993 (t 1.00, P<0   8%, f 100%)€   411 (t 0.50, P<0  15%, f 100%)
+
+Vereiste SR (lineaire interpolatie tussen de synthetische punten):
+  2step    €500: SR ≈ 3.0 | €900: SR ≈ 4.0
+  scaling  €500: SR ≈ 2.9 | €900: SR ≈ 3.8
+  1step    €500: > SR 4 of < SR 1 | €900: > SR 4 of < SR 1

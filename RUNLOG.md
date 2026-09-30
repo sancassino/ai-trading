@@ -510,3 +510,11 @@ H2 pre-feestdag (long SPY op de laatste handelsdag vóór een US-beursfeestdag, 
 H3 RSI(2) max 1 nacht (Yahoo SPY/QQQ/GLD/DAX/N225, 1998–2026) alleen bij VIX > 20: N 720, +5,7 bp, t +1,58 vs ongefilterd N 1.801, +5,9 bp, t +3,21 (VIX ≤ 20: +6,1 bp) → VIX-filter voegt niets toe → afgewezen.
 Conclusie: de overnight-omkeerpremie is even groot bij lage en hoge VIX; geen verbetering. TRIAL_COUNT 404.
 Volgende stap: verslag backlog v11 + VOORSTEL H; wachten op supervisor-refill (check elke 10 min).
+
+## 2026-09-30 06:58 — Q1b: vereiste Sharpe per FTMO-product — laagste lat 2-Step+Scaling (SR ≈ 2,9 voor €500, ≈ 3,8 voor €900)
+
+Uitgevoerd (PREREG_Q1b.md vóór berekening): q1b_products.py, 20.000 paden × 24 mnd per (product, reeks, schaal). 1-Step-regels geverifieerd op ftmo.com/en/trading-objectives: +10% één fase, dagverlies 3% t.o.v. dagstart-balance, max. verlies trailing (hoogste eerdere balance − 10%), Best Day Rule (beste dag ≤ 50% van winst op positieve dagen), 90% split, fee niet terug. 2-Step: min. 4 handelsdagen; geen tijdslimiet gevonden.
+Beste netto €/mnd (beste schaal): reeks A historisch: 2-Step −€21, Scaling −€21, 1-Step −€19. Synthetisch bij 10% vol (zelfde staart/dipstructuur): SR 1 → −€22/−€22/−€53; SR 1,5 → −€16/−€14/−€40; SR 2 → €101/€124/−€12; SR 3 → €481/€531/€182; SR 4 → €912/€993/€411 (P(netto<0) bij SR 4: 8%/8%/15%).
+Vereiste SR: 2-Step €500 ≈ 3,0, €900 ≈ 4,0; 2-Step+Scaling €500 ≈ 2,9, €900 ≈ 3,8; 1-Step > 4 voor beide (strengere dag-/trailing-regels).
+Conclusie: de realistische lat is SR ≈ 3 (voor ≈ €500) tot ≈ 4 (voor ≈ €900) na kosten, op 2-Step (+Scaling). Kanttekening: fee €540 niet geverifieerd; kapitaalgroei van de Scaling Plan niet gemodelleerd (conservatief).
+Volgende stap: backlog v12 verder volgen (Q2–Q5 gedaan; zie verslag v11); wachten op supervisor-refill of VOORSTEL.
