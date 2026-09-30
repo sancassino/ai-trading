@@ -622,3 +622,13 @@ CEO-besluit D-012 (antwoord op U-001): poort = gemiddeld bruto train ≥ 8,7 bp 
 (c) alleen long: gem. +29,5 maar zonder top-5% −13,2 (143%) → STOP
 (d) uit 12:00: gem. −0,7 → STOP
 Winkans 8–40%, winst/verlies 245/130 tot 442/27 bp. Conclusie ongewijzigd: S2 gestopt, geen trial (TRIAL_COUNT 414). De test-helft (2024–26) was bovendien in alle varianten negatief.
+
+## 2026-09-30 09:58 — S8 (geen trial): decay-bewuste FTMO-EV van ORB — €150–300/mnd bij toegestane schaal, brede banden
+
+s8_decay_ev.py op MT5-reeks F2 (ORB), Q1b-mechaniek 'onder aanname fee €540/€80k'; toegestane schaal = max dagdip < 4% (2,5× bij 1/7 per trade); hogere schalen alleen als bovengrens (optiewaarde). Band = 30× blok-bootstrap van het venster.
+(a) 2021–26: SR 0,91 → 2-Step €222/mnd (Scaling €238), P(netto<0) 37%, funded 73%, band €146…€456; bovengrens 5× €484.
+(b) 2024–26: SR 0,72 → €149 (€160), P<0 52%, band €13…€503; bovengrens €213.
+(c) 2025-01…2026-09: SR 0,94 → €259 (€278), P<0 39%, band −€21…€547.
+(d) 2021–23: SR 1,06 → €306 (€329), P<0 25%, band €69…€858; bovengrens €866.
+Conclusie: binnen FTMO-conforme schaal (geen gokgedrag) ligt de verwachting van ORB op ± €150–300/mnd met 25–50% kans op netto verlies over 2 jaar — ver onder €800–900. Het recente venster (2025–26) is niet slechter dan 2024–26 (SR 0,94), dus geen hard bewijs van verval; de onzekerheid is groot. Kostenaanname MT5 (historische FTMO-spreads).
+S2-F (v16): reeds afgehandeld in de D-012-herbeoordeling: (a) en (c) halen het gemiddelde maar niet 'zonder top-5% > 0' → STOP, geen trials (results/s2/S2_D012.txt).

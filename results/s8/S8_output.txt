@@ -1,0 +1,8 @@
+(a) 2021–26            2step    N 1487 d, SR +0.91, max dip 1.42% | toegestaan (dip<4%) schaal 2.5×: €222/mnd, P(netto<0) 37%, funded 73% | band 10–90%: €146 … €456 | bovengrens (optiewaarde) 5×: €484
+(a) 2021–26            scaling  N 1487 d, SR +0.91, max dip 1.42% | toegestaan (dip<4%) schaal 2.5×: €238/mnd, P(netto<0) 37%, funded 73% | bovengrens (optiewaarde) 5×: €513
+(b) 2024–26            2step    N 708 d, SR +0.72, max dip 1.42% | toegestaan (dip<4%) schaal 2.5×: €149/mnd, P(netto<0) 52%, funded 61% | band 10–90%: €13 … €503 | bovengrens (optiewaarde) 3×: €213
+(b) 2024–26            scaling  N 708 d, SR +0.72, max dip 1.42% | toegestaan (dip<4%) schaal 2.5×: €160/mnd, P(netto<0) 52%, funded 61% | bovengrens (optiewaarde) 3×: €228
+(c) 2025-01…2026-09    2step    N 448 d, SR +0.94, max dip 1.42% | toegestaan (dip<4%) schaal 2.5×: €259/mnd, P(netto<0) 39%, funded 73% | band 10–90%: €-21 … €547 | bovengrens (optiewaarde) 3×: €349
+(c) 2025-01…2026-09    scaling  N 448 d, SR +0.94, max dip 1.42% | toegestaan (dip<4%) schaal 2.5×: €278/mnd, P(netto<0) 39%, funded 73% | bovengrens (optiewaarde) 3×: €374
+(d) 2021–23            2step    N 779 d, SR +1.06, max dip 0.96% | toegestaan (dip<4%) schaal 2.5×: €306/mnd, P(netto<0) 25%, funded 83% | band 10–90%: €69 … €858 | bovengrens (optiewaarde) 5×: €866
+(d) 2021–23            scaling  N 779 d, SR +1.06, max dip 0.96% | toegestaan (dip<4%) schaal 2.5×: €329/mnd, P(netto<0) 25%, funded 83% | bovengrens (optiewaarde) 5×: €921

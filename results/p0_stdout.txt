@@ -1,0 +1,5 @@
+2026-09-30 09:51:16Z start P0 voor SPXUSD, NSXUSD, GRXEUR, XAUUSD (pauze 4.0 s, UA 'ai-trading-research/1.0 (slow, resumable; respects 429/Retry-After)')
+2026-09-30 09:51:31Z SPXUSD: deler 1000 (Dukascopy 4361.55 vs FTMO 4357.83, verschil 0.09%)
+2026-09-30 09:51:59Z   503 bij USA500IDXUSD 2011-01-03; wacht 60 s (poging 1)
+2026-09-30 09:53:08Z   503 bij USA500IDXUSD 2011-01-03; wacht 120 s (poging 2)
+2026-09-30 09:57:59Z start P0 voor SPXUSD, NSXUSD, GRXEUR, XAUUSD (pauze 8.0 s, UA 'ai-trading-research/1.0 (slow, resumable; respects 429/Retry-After)')
