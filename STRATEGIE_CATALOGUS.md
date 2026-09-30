@@ -1,4 +1,4 @@
-# STRATEGIE_CATALOGUS v1 (Strateeg, 2026-09-30 12:45 Amsterdam) — Fase 2, werkstroom R
+# STRATEGIE_CATALOGUS v1.1 (Strateeg, 2026-09-30 13:20 Amsterdam; v1 12:45) — Fase 2, werkstroom R
 
 Doel: 50 economisch onderbouwde regels op **één** engine/kostenmodel, getest op **lange dagdata eerst** (ontdekkingsset ≤ 2024-12), met FDR over de hele catalogus en reserve-OOS 2025-01→heden (alleen voor shortlist, één keer). Elke regel = 1 trial (+ ≤ 2 vooraf genoemde varianten). Mijn verwachtingen zijn **literatuur-ordegroottes uit geheugen, niet geverifieerd**; alleen de kostenkolom is uit de repo (S0, swap-specs).
 
@@ -98,3 +98,15 @@ C49 equal-risk over sleeves met rollende 60d-correlatie; C50 drawdown-gedreven s
 6. Beslisregel: FDR (Benjamini–Hochberg, q = 10%) over de catalogusrun; shortlist ≤ 5; per regel SR_netto ≥ 0,3, ≥ 60% van de 5-jaars-vensters > 0, beide helften > 0.
 7. Uitvoer: SR, scheefheid, max dagdip (FTMO-definitie), sleeve-correlatie, swap-aandeel in de kosten.
 8. Verwachte uitkomst en falen (1 alinea).
+
+## 4. Toevoeging v1.1 (D-032, Doel v2 = eigen kapitaal) — klassen die bij eigen kapitaal passen; benchmark-eis vs buy-and-hold (SR **en** maxDD)
+| ID | Regel (vast) | Mechanisme | Horizon | Data + licentie | Bruto vs kosten | Status |
+|---|---|---|---|---|---|---|
+| C51 | Vol-managed index: gewicht = min(1; 10%/σ21) op SPX/NDX/DAX (geen hefboom boven 1) | lage vol → hoger rendement per risico (Moreira–Muir); **C06/C32 was dood onder FTMO-kosten, niet onder ETF-kosten** | maand | Yahoo dagdata (D2, eerlijke UA; voorwaarden Yahoo: persoonlijk gebruik — controle door Manager) | ETF-TER 0,07%/jr; ΔSR +0,0–0,15 verwacht; vooral DD ↓ | **N, prio 1 (eigen kapitaal)** — heropent C32 met ETF-kostenmodel, geen nieuwe data-trial op FTMO |
+| C52 | All-weather/risicopariteit: aandelen, obligaties (TLT/IEF), goud, grondstoffen; gewicht ∝ 1/σ60, vol-target 8% | diversificatie over groeiregimes | maand | D2 (TLT 2002–, TNX/IRX rente → obligatieproxy langer), FRED | UCITS-implementeerbaar; D4 dood zonder obligaties → herdoen mét obligaties | N, prio 2 (let op: 2022 = gelijktijdig aandelen+obligaties ↓) |
+| C53 | Dual momentum (Antonacci GEM): elke maand: als US-aandelen 12m > geldmarkt → beste van US/wereld-aandelen, anders obligaties | absolute + relatieve momentum | maand | SPX/EFA-proxy (EWJ/EFA 2001–), IRX voor cash | TER; weinig trades (≈ 1–2/jr) | N, prio 2 |
+| C54 | Carver-stijl forecast-combinatie: EWMAC(8,32),(16,64),(32,128),(64,256) + carry-forecast (FX/rente) per instrument, forecast-cap ±20, vol-target 10%, ≥ 20 instrumenten (indices, FX, goud, zilver, olie, koper, rentes) | trend + carry over veel markten; diversificatie is de hefboom (WEB_LEERLOG) | dag–week | D2 + FRED (licentie: FRED vrij, Yahoo voorwaarden) | futures/CFD-implementatie; granulariteit (VEHICLE §1) | N, prio 1–2 (vervangt losse C01/C03/C05 in portefeuillevorm; C01/C05 blijven als enkelvoudige referentie) |
+| C55 | Defensive asset allocation (Keller): canary-assets (EEM, AGG-proxy) momentum → risico-aan/uit-verdeling | breadth-momentum als crash-filter | maand | D2 (EEM/ETF's) | TER | N, prio 3 |
+| C56 | Seizoen-gecorrigeerde 'cash-parkeerrente': ongebruikt kapitaal in geldmarkt (IRX-proxy) | rentebaten op reserve | — | IRX/FRED | −TER | portefeuille-mechaniek, geen trial |
+**Data-licenties (D-030.6):** FRED — vrij gebruik met bronvermelding (algemene FRED-voorwaarden; per serie kan een derde partij copyright hebben, bv. sommige OECD/ICE-reeksen → controleren per serie); Yahoo — chart-API zonder officiële licentie, voorwaarden beperken tot persoonlijk gebruik, geen herdistributie → **niet in publieke repo herpubliceren**, nu wel in privé-repo (Manager beoordeelt); Shiller (C14) — vrij beschikbaar op Yale-site voor onderzoek (ik heb de licentietekst niet gelezen) → C14 alleen na controle; Dukascopy-feed — geen robots-verbod maar voorwaarden onbekend (Uitvoerder-analyse D-018). **Niets wordt gescrapet buiten wat een voorwaarde toestaat.**
+**Herprioritering run 1 (eigen kapitaal, 8 regels):** C01, C05, C07, C12, C51, C53, C54 (+ C03 als vergelijking; C02 en C17 schuiven naar run 2). Elke regel gerapporteerd per vehikel (ETF/future/CFD, zie `VEHICLE_ANALYSE.md`) en vs buy-and-hold (SPX/60-40) op SR en maxDD.
