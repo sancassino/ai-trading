@@ -1,9 +1,42 @@
-# NEXT_STEPS v34 — Manager, 2026-09-30 20:40 Amsterdam (inhoud v32/v33 blijft gelden) — verwerkt D-042…D-079, ALLOCATIE_V1.1, kosten NL-retail, run 7 (C66/C67)
+# NEXT_STEPS v35 — Manager, 2026-09-30 21:05 Amsterdam — verwerkt D-082…D-086 (FTMO-koerscorrectie), M-013 BESLOTEN
 
-> **⚠ 2026-09-30 20:50 — Sandro: het doel is het FTMO-€80k-account, NIET eigen kapitaal.** Doel v2 (D-032) berust op een misverstand; zie VRAGEN_MANAGER M-013 (CEO herstelt doel). Tot CEO-besluit: reserve-run 01-10 en forward-papier lopen door (kosteloos, informatief); start geen nieuwe eigen-kapitaal-onderzoeken; eigen-kapitaal-cijfers (cash-rente, UCITS, box 3) niet meer als antwoord op 'wat levert het op' gebruiken.
+**Doel (hersteld, D-083): FTMO €80k prop-account.** D-032/D-035 ('eigen kapitaal') waren gebaseerd op een misverstand; het project was altijd gericht op het FTMO-account. Eigen-kapitaal-cijfers (cash-rente €163, UCITS, box 3) zijn informatief maar gelden NIET voor een prop-account.
 
+Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046, D-082…D-086 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen.
 
-Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
+**FTMO-account-context (bindend voor alle rapportage):**
+- Gesimuleerd kapitaal €80k; geen rente op cash; winstsplit (typisch 80% trader na challenge-fase)
+- Challenge: profit target 8% in ≤30 dagen (2-Step); daily loss ≤5%; max total loss ≤10%
+- Doel: **€800–900/mnd netto** (trader-aandeel); €400–500 ook succes (D-003)
+- Vereist SR ≈ 3–4 op daghandel (Q1b); eigen-kapitaal-frontier (SR 0,94) is hier niet relevant
+- Lange-data-resultaten (C02, C52, P-ETF-a) zijn **bewijs voor signalen/structuur**, NIET een allocatieadvies voor FTMO
+
+## 0a. FTMO-koerscorrectie — Manager-QA na D-082…D-086
+
+**Stand:** CEO heeft M-013 verwerkt: Doel hersteld naar FTMO €80k (D-083); eigen-kapitaal-lijn gestopt behoudens informatieve doorloop; reserve-run 01-10 en forward-papier lopen ongewijzigd door (D-084); Uitvoerder-2 richt nieuwe R-taken op FTMO-geschikte signalen (D-085); Auditor gestart (D-082, H7). Uitvoerder-1 heeft M-013 ook verwerkt ('start geen nieuw eigen-kapitaal-werk', RUNLOG v34).
+
+**Manager-QA (bindend, geen blokkade):**
+1. **Wat FTMO-relevant is gebleven uit het lange-data-werk:**
+   - ORB (S3, bevroren drempel dag-geclusterd t ≥ 2,0): de enige kandidaat met positief-scheve P&L; wacht op Dukascopy-data (2011–20); decay-toets (M-008/D-011) verplicht
+   - C17 (FOMC-dag effect): bewijs zwak na 2012; behandel als nul-kalibratie nodig vóór FTMO-gebruik
+   - C02/C52/P-ETF-a: ALLEEN als risicobeheer/structuur-bewijs; **niet** als FTMO-strategie
+   - Uitvoerder-2's run 9 (kostengevoeligheid L1 + model B): informatief voor Sandro over netto alfa, niet voor FTMO-EV
+2. **Uitvoerder-2 (FTMO-focus na reserve-run):** zodra reserve-run 01-10 klaar is, prioriteit herschikken naar FTMO-geschikte signalen: (a) ORB verbetering (sizing, tijdvenster) — pas zodra S3-data beschikbaar; (b) intraday-signalen met FTMO-mechanica (dagverlies ≤5%, positionsizing); (c) C17 nul-kalibratie (is het FOMC-effect stabiel na 2016?). Geen nieuwe eigen-kapitaal-runs tenzij CEO anders beslist.
+3. **Uitvoerder-1 (forward-bewaking):** reserve-run 01-10 12:00 en forward 22:25 UTC zijn informatief voor de lange-data-lijn (S10b-follow-up) maar NIET als FTMO-bewijs. EINDVERSLAG-update na reserve-resultaten met expliciete label 'eigen-kapitaal-context, niet FTMO'.
+4. **Strateeg:** ALLOCATIE_V1.x is eigen-kapitaal-werk; goed gedocumenteerd, maar stop verdere ontwikkeling tenzij CEO een eigen-kapitaal-lijn naast FTMO bevestigt (separaat besluit). S10b-criteria blijven informatief. Auditor (D-082, H7) lezen als: start van audit-voorbereiding; Management checkt H7-criteria.
+5. **EINDVERSLAG:** bij de volgende cyclus herformuleren als 'FTMO-project': eigen-kapitaal-getallen als 'parallel informatief' labelen; FTMO-EV (€/mnd via ORB/S3/challenge-mechanica) als hoofdrapportage.
+6. **M-013 BESLOTEN (D-083…D-086).** Doel-sectie in NEXT_STEPS werkt voortaan op FTMO-context. Eigen-kapitaal-cijfers niet als antwoord op 'wat levert het op' voor FTMO-prop.
+
+## 0. Coördinatie (Manager-QA op wat er ligt)
+- **Uitvoerder-2 werkt op branch `claude/uitvoerder2-r`, niet op main** (RUNLOG_R2, results/R2, TRIAL_COUNT 442). Beide Uitvoerders: `git fetch --all`, elkaar lezen; Uitvoerder-2 merged `origin/main` minstens elk uur; Uitvoerder-1 merged `claude/uitvoerder2-r` in main na elke afgeronde run. **TRIALS.csv/TRIAL_COUNT.md:** 442 geldige rijen (BH); "ongeldig, telt niet"-rijen buiten BH (D-045).
+- **Uitvoerder-2 idle-check:** laatste commit `claude/uitvoerder2-r` was 18:27 UTC (≈20:27 Amsterdam); dat is > 90 min geleden → controleer of hij actief is; meld bij stilte in VRAGEN_MANAGER.
+- **Manager-QA-bevindingen catalogusrun 2 (rapportage, geen blokkade):**
+  1. **G-benchmark inconsistent toegepast:** C52 *basis* haalt SR 0,65 vs 60/40 0,66 (niet beter) maar staat 'door G-ontdekking'. Volgens D-038 (SR én maxDD beter) is dat een **fail op SR**; label 'door met voorbehoud: DD-voordeel, geen SR-voordeel' of CEO beslist.
+  2. **C54 qa post-hoc:** C54 basis niet als bewijs; alleen qa, met winnaarsvloek-korting.
+  3. **Winnaarsvloek P1:** sleeves gekozen na ontdekkingsdata; SR 0,84 is bovengrens; P-ETF (13 bp) als eerlijke ondergrens.
+  4. **Hefboom ≤ 3× tegen rf + 1,5% (D-042):** kosten per vehikel; herrekenen vóór CAGR-claim.
+  5. **Reserve-OOS-power:** 1,75 jr → SR-SE ≈ 0,75; 'pass' is nauwelijks informatief; CI verplicht.
+  6. **Kapitaal-check:** alleen relevant in eigen-kapitaal-context (nu informatief gelabeld).
 
 ## 0. Coördinatie (Manager-QA op wat er ligt)
 - **Uitvoerder-2 werkt op branch `claude/uitvoerder2-r`, niet op main** (RUNLOG_R2, results/R2, TRIAL_COUNT 427). Beide Uitvoerders: `git fetch --all`, elkaar lezen; Uitvoerder-2 merged `origin/main` minstens elk uur in zijn branch; Uitvoerder-1 merged `claude/uitvoerder2-r` in main na elke afgeronde run (fast conflict-vrij: eigen bestanden). **TRIALS.csv/TRIAL_COUNT.md:** main zegt 421, U-2-branch 427 → bij merge = aantal geldige rijen; "ongeldig, telt niet"-rijen blijven buiten BH (D-045).
