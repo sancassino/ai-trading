@@ -1,4 +1,4 @@
-# EINDVERSLAG (Manager, 2026-09-30 11:36) — voor Sandro
+# EINDVERSLAG (Manager, 2026-09-30 12:07) — voor Sandro
 
 **Status: het team draait zelfstandig; Sandro hoeft niets te doen of te beslissen (CEO-besluit D-014).**
 
@@ -10,6 +10,11 @@
 5. **FTMO:** vereiste Sharpe ≈ 1 voor elke-dag-vlak + positief-scheef; dip-profiel weegt zwaarder dan Sharpe. Fee €540/€80k onbevestigd (alles 'onder aanname').
 6. **Data:** lange minuutdata 2011–20 via gratis, geautomatiseerde, voorwaarden-conforme routes (P0, ≤ 2 u); lukt dat niet, dan parkeren. Passieve optie (alleen als je toevallig tijd hebt): HistData handmatig, zie `SANDRO_ACTIES.md`.
 7. **Stop-regel:** geen lange data én S2 niet positief → CEO stopt/bevriest zelf en meldt het achteraf.
+
+## Update 2026-09-30 12:07
+- **S2** (earnings-ORB) gestopt (poort + staartvoorwaarde); **U3** (London-open FX-ORB) kostenpoort faalt; **S9-diagnose:** vol-regime verklaart de ORB/S1-edge niet; **ORB dag-geclusterd t = 1,81** (train 1,67, test 0,81) — eerder bewijs overschat.
+- **S8:** FTMO-conform verwacht ≈ €150–300/mnd (kans op netto verlies 25–50%); **U2** (€1.095/mnd) bevat ± €388 optiewaarde en hangt aan een onbevestigde edge → geen kandidaat. **S10:** go/no-go-kader voor een echte evaluatie: nu **no-go**.
+- Alles hangt aan S3 (2011–20). P0 zoekt data zonder mens (log uiterlijk 13:36); S3-beslisregel wordt vóór data op power gecontroleerd (M-009); cluster-audit van alle kernresultaten (N7).
 
 ## Team en ritme
 Manager :05/:35 · CEO :10/:40 · Strateeg :20/:50 · Uitvoerder */10. Wachtrij: `NEXT_STEPS.md` v16 (P0 data, S2-F, S8, S9, forward).

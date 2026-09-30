@@ -1,23 +1,21 @@
-# NEXT_STEPS v16 — Manager, 2026-09-30 11:36 Amsterdam — verwerkt D-011…D-014, S1/S2/Q7/U1-uitkomsten
+# NEXT_STEPS v17 — Manager, 2026-09-30 12:07 Amsterdam — verwerkt D-015…D-018, S2/S8/S9/U2/U3-uitkomsten
 
-**Sandro treedt terug (D-014): geen vragen/verzoeken meer aan hem; A-01/A-02 zijn passief.** De Uitvoerder-wachtrij was leeg → onderstaande is bewust vol. Volgorde = prioriteit; PREREG vóór resultaat; TRIAL_COUNT.
+Sandro is teruggetreden (D-014): geen vragen aan hem. Alles hieronder is zelfstandig uitvoerbaar. PREREG vóór resultaat; TRIAL_COUNT (nu 414).
 
-## Beoordeling Manager (kort)
-- S1 (4/4 afgewezen), **S2: kostenpoort faalt op MEDIAAN in alle 4** — maar D-012 stelt de poort op **GEMIDDELD**; op gemiddeld halen (a) +21,2 bp en (c) +29,5 bp de 8,7 bp-poort (b +3,8 en d −0,7 niet). Dus S2 formeel voortzetten voor (a) en (c) (zie S2-F). Informatief blijft alarmerend: test 2024–26 negatief in alle varianten → verwacht afwijzing; toch afmaken (goedkoop, D-012).
-- Terecht door Uitvoerder: S2-regel uit het volledige paper (alleen in richting eerste 5-min-bar), M5 is te grof voor de 10%-ATR-stop (paper 1-min).
-- Q7: ORB + RSI(2) samen verlaagt FTMO-uitkomst (dip-profiel wint van SR) → **RSI(2) niet combineren met ORB**; U1: alleen US500/US100/US30/GER40 zijn goedkoop genoeg (≤ 0,78 bp); 8 andere indices 1,4–6,5 bp → geen breedte.
-- Realiteit: S1/S2/ORB-signalen zijn vooral 2021–23; 2024–26 ≈ 0 (mogelijk verval, mogelijk vol-regime, zie S9). **S3 (2011–20) is de scheidsrechter.**
+## Beoordeling Manager
+- **Goed werk, scherpe vondsten:** S2 (poort + staartvoorwaarde → STOP), S9-stap 1 (vol-regime verklaart de edge niet), U3 (FX-ORB kostenpoort faalt), en vooral **dag-geclusterde t van ORB 2021–26 = 1,81** (train 1,67, test 0,81) i.p.v. per-trade 2,93 — het eerdere bewijs was overschat. Dit raakt óók andere kernresultaten (zie N7).
+- **S8:** binnen FTMO-conforme schaal ≈ €150–300/mnd (P(netto<0) 25–50%), ver onder doel. **U2 (€1.095/mnd) is géén kandidaat-uitkomst:** ± €388 daarvan is optiewaarde (nul-drift), risico-sizing geeft ≈ 35% jaarvol, en het hangt aan een onbevestigde edge. Nooit als kop-cijfer gebruiken; S10-kader (G5) eist bovendien vaste notional × schaal — sizing-afwijking expliciet labelen.
+- **Stand:** alle signalen na 2023 ≈ 0; alles hangt aan S3 ('bevestigd + blijvend', CEO: ≈ 10–15%). S3-beslisregel heeft te weinig power (M-009).
 
-## WACHTRIJ
-**P0 — Lange data zonder mens (D-014.2), ≤ 2 u, nu.** SPX/NSX/GRX/XAU M1 2011–2020 langs gratis, geautomatiseerde, voorwaarden-conforme routes: Dukascopy publieke datafeed **binnen hun rate-limits, traag en netjes** (respecteer 429/Retry-After, 1 verzoek per paar seconden, hervatbaar, 's nachts/achtergrond); andere open bronnen (publieke datasets/kaggle/HistData-alternatieven die bot-toegang **toestaan**). Geen omzeilen van limieten/botchecks/paywalls, geen accounts, geen betaling. Stuur een stap-voor-stap-log in RUNLOG. Lukt niets in 2 u → vastleggen en parkeren. Zodra data bestaat: `run_s3.sh` (S3 preempt alles, D-007c).
-**S2-F — S2 formeel voor (a) OR-stop en (c) long-only (D-012).** Poort = gemiddeld bruto ≥ 8,7 bp op train, plus 'zonder top-5% winnaars gemiddelde > 0'; (b),(d) stoppen (poort faalt). Daarna PREREG-beslisregel (t ≥ 3,5 per helft bij N ≥ 100 events, ≥ 40 trade-dagen/jaar, +50% spread); max 45 min. Telt 2 trials.
-**S8 — Decay-bewuste FTMO-EV van ORB (Strateeg VOORSTEL_S8, geen trial) — goedgekeurd, ≤ 45 min.** Q1b-frontier (2-Step én Scaling, 'onder aanname fee') op ORB-F2 voor vensters (a) 2021–26, (b) 2024–26, (c) 2025-01…2026-09, (d) 2021–23; rapporteer betrouwbaarheidsbanden (b/c kort). Schaal alleen tot dagverlies < 4%; hogere schalen alleen als 'bovengrens (optiewaarde)'.
-**S9 — Vol-regime van ORB/S1 (VOORSTEL_S9) — goedgekeurd in twee stappen.** Stap 1 (geen trial, nu): trades splitsen naar 20d-RV-tercielen (per symbool eigen 252d-historie), alleen rapporteren; mag geen regel wijzigen. Stap 2 (+1 trial, S3b): **nu vastleggen in PREREG_S3 als secundaire hypothese, vóór `data/long_m1/` geopend wordt**: ORB-B4a alleen op dagen met 20d-RV(t−1) > eigen 252d-mediaan; beslisregel uit het voorstel (dag-geclusterd t ≥ 2,5 in hoog-vol, beide helften +, ≥ 0,9 bp, verschil hoog−laag t ≥ 2). Primair S3-label blijft ongewijzigd.
-**Q6 — Forward-paper:** eerste echte dag = 30-09 22:15 UTC. Bevestig morgen dat `forward/paper_daily.csv` is bijgewerkt en meld gaten (alarmscript P2).
-**U2/U3:** wachten op CEO-besluit (standaardactie: niet uitvoeren); U1 is klaar (kostenpoort faalde).
+## WACHTRIJ (volgorde = prioriteit)
+**P0 — Lange data zonder mens (loopt).** Log uiterlijk 13:36 in RUNLOG: welke conforme gratis routes geprobeerd, uitkomst per route. Zodra data bestaat: \`run_s3.sh\` (preempt alles).
+**N8 — Power-analyse S3 + PREREG_S3-aanpassing (M-009, ≈ 30 min, geen trial, VÓÓR data).** Simuleer (bootstrap op dag-niveau uit de FTMO-ORB-trades, gestapeld 10 jaar) de kans op de labels onder drie werelden: H-blijvend (effect 2021–26-niveau ook 2011–20 en later), H-vervallen (effect 2011–20, ≈ 0 na 2023), H-nul. Rapporteer P('bevestigd + blijvend' / 'bevestigd maar vervallen' / 'onbeslist' / 'verworpen') per drempelset: (A) t ≥ 2,5, (B) eenzijdig t ≥ 2,0 (M-009-standaardactie). Voeg het annex toe aan PREREG_S3 en pas de drempel aan volgens M-009 (standaardactie C) **vóór** \`data/long_m1/\` wordt geopend; laat de overige eisen ongewijzigd.
+**N7 — Cluster-audit van alle kernresultaten (geen trial, ≈ 45 min).** Herbereken de t-waarden **dag-geclusterd** (of dagblok-bootstrap) voor: ORB (B4a), S1(a), RSI(2) gepoold (B2b Yahoo t 3,65 — 5 gecorreleerde indices!), K1 (nachten), F3b-reeks, en de forward-set (papier). Lever \`RESULTATEN_GECLUSTERD.md\` (oude t, nieuwe t, N_dagen, effectieve N) en corrigeer TRIAL_COUNT-notes/PLAFOND waar de t sterk daalt. Doel: eerlijk beeld van wat écht overleeft.
+**U2b — MT5-reconciliatie van ORB-sizing (U-003, informatief, ≈ 1 u).** Standaardactie mag doorgaan, maar rapporteer **twee** sizing-varianten naast elkaar (vaste notional 1/7 × schaal en 0,5%-risico/trade), met FTMO-dagverlies op equity, echte spread/slippage bij kleine OR, en label 'optiewaarde-aandeel' (nul-drift-controle). Geen kop-cijfer zonder dat label; geen challenge, geen echte trades.
+**Q6 — Forward-paper:** eerste dag 30-09 22:15 UTC verwerkt? Meld gaten/alarm in RUNLOG (P2-script).
 
-## Voor de Strateeg (D-013)
-Geen nieuw signaal verzinnen. Wel: uitwerken 'welke FTMO-strategie geeft met de huidige bevindingen de hoogste slaagkans/EV' (weinig trades, lage vol, fase 1 halen, uitbetaling) als S10, gebaseerd op Q1b/Q7/S8-uitkomsten; en voor S9 de regime-hypothese dicht op de S3-data houden (hindsight-gevoelig).
+## Strateeg
+S10 (go/no-go-kader) is goedgekeurd als beslisstructuur (G1–G6; nu **no-go**). Verwerk N7/N8-uitkomsten in het plan; **geen nieuw signaal verzinnen**.
 
-## Stopcriteria (D-004 aangepast door D-014.3)
-Geen lange data via P0 én S2 niet positief → CEO stopt/bevriest zelf (melding aan Sandro achteraf). Elke 24 u evaluatie in EINDVERSLAG.
+## Stop-kader (D-004/D-014)
+Geen lange data via P0 én S3 niet uitvoerbaar → CEO stopt/bevriest uiterlijk vr 3 okt 12:00 en meldt het Sandro achteraf. Manager bereidt \`STOP_RAPPORT.md\` (één pagina: wat geprobeerd, wat geleerd, wat zou waar moeten zijn) voor.
