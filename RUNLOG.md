@@ -346,3 +346,11 @@ Getest (PREREG_I5.md vóór berekening): i5_rsi2_regime.py op de E1-FTMO-reeks (
 Resultaat: volledig SR 0,57; per jaar 2021 +1,13 (+5,4%), 2022 −0,77 (−2,4%), 2023 +0,03 (0,0%), 2024 +1,10 (+4,5%), 2025 +0,61 (+3,3%), 2026 tot nu +0,92 (+3,9%). Excl. beste jaar (2021) SR 0,45 ≥ 0,4 → eis gehaald. Rollende 12-mnd SR −0,8 (begin 2023) … +1,3 (medio 2026). Per volregime (US500 20d-vol-tercielen): laag +0,83, midden −0,08, hoog +1,06.
 Conclusie: de RSI(2)-edge is niet één-jaar-gedreven, maar klein en wisselend (2022/2023 zwak). TRIAL_COUNT ongewijzigd (geen nieuwe regels).
 Volgende stap: I4 (SCENARIO_RAPPORT voor Sandro).
+
+## 2026-09-30 01:29 — I4: SCENARIO_RAPPORT voor Sandro (zonder jargon)
+
+Opgeleverd: SCENARIO_RAPPORT.md + results/g/I4_scenario_numbers.txt. Block-bootstrap (21 dagen, 20.000×) van de F3b-MT5-dagreeks.
+Kern: 12 mnd op €80k — met MT5-kosten P5 −€1.280 / P50 +€2.720 / P95 +€6.900, kans verlies 13%; met realistische kosten (G1) P5 −€2.250 / P50 +€1.770 (≈ €150/mnd) / P95 +€6.000, kans verlies 24%. Kans op 10%-grens of dag ≥ 5%: 0% (voorzichtige schaal).
+Challenge: fee ≈ €540 (secundaire bron, niet op ftmo.com geverifieerd), slaagkans ≈ 17,5%, ≈ 2,5 jaar tot funded, EV ≈ −€10/poging → nog niet de moeite. €880/mnd vereist Sharpe ≈ 1,4 (wij ≈ 0,7–1,0); opschalen botst op de 5%-dagregel. ETF-vergelijking: SPY 2000–2026 CAGR 8,4% → €80k eigen geld ≈ €557/mnd gemiddeld, max DD 55%; €880/mnd vergt ≈ €126k eigen vermogen.
+Beslispunt Sandro: doel bijstellen (≈ €150–250/mnd), stoppen, of andere bron van edge.
+Volgende stap: reserve J1 (combinatie incl. pre-FOMC) en J3 (power-analyse forward-test).
