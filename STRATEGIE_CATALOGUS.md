@@ -160,8 +160,8 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 | A1 | **ORB/B4a (S3)** — intraday-vlak, US500/US100/GER40/XAU | Swap 0, instrumenten aanwezig, bevroren regel; bevestiging 2011–20 ontbreekt nog | Data-acquisitie (Sandro-actie), dan S3 |
 | A2 | **Stocks-in-Play ORB earnings (S2)** — intraday-vlak, FTMO-aandelen-CFD | Eerder gefaald op kostenpoort (vaste 60-min); stop+EOD-profiel verschilt; herevalueer met cluster-t | PREREG vernieuwen, kosten-poort opnieuw meten |
 | A3 | **Noise-area intradag-momentum (S1)** — trailing EOD-exit, US-indices | Eerder afgewezen (na 2023); heroverwegen met nul-kalibratie en vol-regime; intraday-vlak | F1-heronderzoek, geen extra trial tenzij hypothese nieuw |
-| A4 | **FOMC-cyclus (C17)** — 5 van 6 weken vóór FOMC, D1, index-CFD | D1 = 1 nacht swap; swap-kosten laag (<1,5 bp); t 2,85 op ETF → FTMO-cfd nog niet gerekend | Herbereken op cfd-vehikel met engine/ftmo.py |
-| A5 | **FX-intradag-breakout** — EURUSD/GBPUSD/USDJPY londen-open of NY-open | Kosten laag (0,6–0,8 bp), swap 0 bij intraday-exit | Nieuw voorstel F4; data FTMO-M5 FX aanvullen (alleen EURUSD nu) |
+| A4 | **FOMC-cyclus (C17)** — 5 van 6 weken vóór FOMC, D1, index-CFD | D1 = 1 nacht swap; swap-kosten laag (<1,5 bp); t 2,85 op ETF → FTMO-cfd nog niet gerekend | **PREREG_FTMO_C17.md klaar** → engine/ftmo.py-run gereed |
+| A5 | **FX-intradag-breakout** — EURUSD/GBPUSD/USDJPY londen-open of NY-open | Kosten laag (0,6–0,8 bp), swap 0 bij intraday-exit | **PREREG_FTMO_FX_INTRADAG.md klaar** → wacht M5-data (R2-007) |
 | **B — ONDERZOEKEN (middel)** | | | |
 | B1 | **TSMOM-mix FX (C05 op FX)** | FX-swap ≈ carry-premie; positief scheef; maand | Herbereken: swap vs carry-premie per paar; long hoge-rente = meevaller |
 | B2 | **FX-carry + trendfilter (C12)** | Carry-risicopremie; C12 CAT1 ≈ 0 na kosten → herevalueer alleen met D1-reeksen + FTMO-FX-swaps | Lage prioriteit |
