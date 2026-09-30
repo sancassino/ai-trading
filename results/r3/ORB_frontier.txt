@@ -1,0 +1,9 @@
+ORB (F2, MT5): SR 0.91, jaarvol 4.3%, skew +1.51, max dagdip 1.42% bij t=1
+  historisch                               2step    beste schaal  5.0× (≈ 5/7 equity per trade): netto €484/mnd, P(netto<0) 22%, funded 94%
+  historisch                               scaling  beste schaal  5.0× (≈ 5/7 equity per trade): netto €513/mnd, P(netto<0) 22%, funded 94%
+  −50% drift                               2step    beste schaal  5.0× (≈ 5/7 equity per trade): netto €232/mnd, P(netto<0) 42%, funded 85%
+  −50% drift                               scaling  beste schaal  5.0× (≈ 5/7 equity per trade): netto €244/mnd, P(netto<0) 42%, funded 85%
+  nul-drift                                2step    beste schaal  5.0× (≈ 5/7 equity per trade): netto €64/mnd, P(netto<0) 61%, funded 73%
+  nul-drift                                scaling  beste schaal  5.0× (≈ 5/7 equity per trade): netto €69/mnd, P(netto<0) 61%, funded 73%
+  G1-kosten (≈ −1,5 bp/trade → −70% drift) 2step    beste schaal  5.0× (≈ 5/7 equity per trade): netto €155/mnd, P(netto<0) 50%, funded 80%
+  G1-kosten (≈ −1,5 bp/trade → −70% drift) scaling  beste schaal  5.0× (≈ 5/7 equity per trade): netto €164/mnd, P(netto<0) 50%, funded 80%

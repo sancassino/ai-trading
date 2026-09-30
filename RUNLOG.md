@@ -526,3 +526,10 @@ Beste netto €/mnd (2-Step) bij SR 1 / 1,5 / 2 / 3 / 4: normaal €876 / 1.343 
 EXTRA controle (buiten prereg): nul-edge SR 0 geeft al netto €216/mnd (normaal, schaal 2,5 = 25% jaarvol, P(netto<0) 40%), €379 (pos. scheef, 30% vol), €69 (neg. scheef); SR 0,5 → €500 / €744 / €259; SR 1 → €876 / €1.228 / €509.
 Interpretatie: (1) onder de FTMO-mechaniek (fee €540 als begrensd verlies, ongelimiteerde uitbetaling) heeft hoge vol optiewaarde — ook zonder edge (loterij-effect; echte traders hebben door kosten negatieve drift, en FTMO verbiedt gokgedrag). (2) De vereiste SR hangt sterk af van het dip-profiel: Q1b (SR 3–4) gebruikte de echte dips van RSI(2)+ORB met meegedragen zwevend verlies (dips ≈ 9σ van de dagvol); strategieën die elke dag vlak gaan met strakke stops hebben het 'schone' profiel. (3) Positieve scheefheid helpt (+€350/mnd bij gelijke SR), negatieve (RSI(2)-achtig) kost ≈ €370/mnd.
 Volgende stap: extra (geen trial) — Q1-frontier voor ORB alleen (MT5-reeks, dagelijks vlak, positief scheef), dan R1 (FX-ML).
+
+## 2026-09-30 07:59 — EXTRA (geen trial): Q1b-frontier voor ORB alleen — ≈ €484–513/mnd historisch, maar hangt aan onbevestigde ORB-edge
+
+Na R3 (dip-profiel bepaalt de vereiste SR) de frontier op de MT5-dagreeks van ORB alleen (F2, 1/7 per trade; elke dag vlak, stops): SR 0,91, jaarvol 4,3%, skew +1,51, max dagdip 1,42% (results/r3/ORB_frontier.txt).
+Beste schaal 5× (≈ 5/7 equity per trade; ≈ 21% jaarvol): historisch 2-Step €484/mnd (Scaling €513), P(netto<0) 22%, funded 94%; −50% drift €232–244 (42%); met G1-kosten (≈ −70% drift) €155–164 (50%); nul-drift (optiewaarde) €64–69 (61%).
+Interpretatie: bij een elke-dag-vlak, positief scheef profiel ligt de lat veel lager dan Q1b (SR 3–4 was het gevolg van de RSI(2)-dips). De ORB-edge zelf is ≈ €420/mnd waard boven de optiewaarde — maar precies ORB is onbevestigd buiten 2021–26 (train-t 2,9 / test-t 1,1, 'PIEK', kostengevoelig). Daarom krijgt de lange-data-toets (L2, DATA_REQUEST_SANDRO.md) nu prioriteit; en nieuwe sleeves moeten 'dagelijks vlak + positief scheef' zijn.
+Volgende stap: R1 (FX-ML).
