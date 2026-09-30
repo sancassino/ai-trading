@@ -870,3 +870,33 @@ qa_costs_eur.py → results/port/QA_kosten_EUR.md (geen trial; ontdekking ≤ 20
 Kosten/omloop (PREREG_PORT: maandelijks herwegen zonder drempel; 8 ETF's: SPY, 10j-obligatie, goud + 5 indices van C02): gemiddeld 2002–24 omloop 2,36× kapitaal/jr, ≈ 118 transacties/jr. Model A (engine: 6,5 bp per eenheid omloop) ≈ €122/jr (0,15%); model B (NL-retail €3,50 vast per transactie, web-claim €3–3,75, + 1,5 bp spread) ≈ €440/jr (0,55%); TER (0,07/0,10/0,12%, web-claims) ≈ €58/jr. Totaal A+TER ≈ €15/mnd (zit al in backtest/forward), B+TER ≈ €42/mnd → **≈ €26/mnd extra bij NL-retail-tarieven**, tegenover een premie-gebaseerde alfa boven cash van midden ≈ €58/mnd (D-075). Een drempelregel (bv. < 1% gewichtsverschil niet handelen) of minder instrumenten zou dit sterk verlagen, maar is een **andere regel** → alleen als vooraf vastgelegde gevoeligheid (voor ALLOCATIE_V1.1 / Strateeg).
 Analysefout eerst gemaakt en hersteld: posities op niet-handelsdagen (JP/DE-feestdagen) werden als 0 gelezen → neppe in/uit-transacties (omloop 3,86× → 2,36× na correctie).
 EUR-backtest hele P-ETF-a (backtest = gerealiseerde premies, vóór haircut/box 3): 2004–24 ongehedged CAGR 8,4% (vol 12,3%, maxDD 16,6%) ≈ €558/mnd, boven EUR-cash €472; gehedged 6,7% (vol 6,3%, DD 11,8%) ≈ €446, boven cash €361. 2021–24: ongehedged 11,1% (dollar sterk), gehedged 5,0% ≈ €335 totaal, €226 boven cash. Ongehedged hangt sterk van EURUSD af (vol ×2).
+
+## 2026-09-30 17:54 — PREREG_PORT3.md gecommit (v32 QA-1) — SHA-256 5e1648dfad70d615715c5d57166307a9fa1b6fbb9694c4f2cff635902b911972
+
+Gevoeligheidsvariant (geen trial, geen selectie): instrumentniveau-simulator met meedrijvende posities; P-ETF-a-inst (drempel 0, referentie) en P-ETF-a-D1 (handel pas bij ≥ 1% afwijking van het doel per instrument); kosten model B (NL-retail €3,50/transactie + 1,5 bp) primair, model A als gevoeligheid; TER per instrument. Forward forward/portfolio3_daily.csv vanaf 2026-10-01 (cron 22:25 UTC). PREREG_PORT/PORT2 onveranderd. Vastgelegd vóór de forward-start en de reserve-run.
+SHA-256 PREREG_PORT3.md: 5e1648dfad70d615715c5d57166307a9fa1b6fbb9694c4f2cff635902b911972
+
+## 2026-09-30 17:55 — PORT3 (v32 QA-1): drempel 1% verlaagt transacties 153 → 57/jr en kosten (model B) €268 → €116/jr; SR 0,86 → 0,91; forward vanaf 01-10
+
+port3.py (PREREG_PORT3, SHA in RUNLOG) → results/port/PORT3_backtest.md; ontdekking ≤ 2024, geen trial/selectie. Instrumentniveau-simulator (8 ETF's + cash, meedrijvende posities, doel-exposure uit P-ETF-a-gewichten × sleeve-posities, TER per instrument).
+Model B (NL-retail €3,50/transactie + 1,5 bp), 2001–24: P-ETF-a-inst (drempel 0) SR 0,86, CAGR 6,8%, maxDD 11,1%, alfa 5,1%/jr (≈ €341/mnd backtest), 153 transacties/jr, omloop 2,35×, kosten €268/jr → P-ETF-a-D1 (drempel 1%) SR 0,91, CAGR 7,1%, maxDD 11,3%, alfa 5,4%/jr (≈ €362/mnd), 57 transacties/jr, omloop 2,14×, kosten €116/jr. 2021–24: inst 0,42 → D1 0,46 (alfa €175 → €192/mnd). Model A: D1 ≈ inst (verschil vooral vaste kosten).
+Kanttekeningen: kosten-€ zijn in startkapitaal-euro's (vaste €3,50 op groeiend vermogen weegt relatief minder); inst-SR (0,86–0,90) ligt onder PREREG_PORT (0,94) door meedrijvende posities en instrument-TER; backtest = gerealiseerde premies (niet de verwachting).
+Forward: forward/portfolio3_daily.csv (P-ETF-a-inst en -D1: USD, EUR ongehedged/gehedged, transacties) vanaf 2026-10-01 via forward_portfolio.sh (cron 22:25 UTC). Cron-script robuuster gemaakt (git add per bestand, ontbrekend bestand blokkeert de commit niet meer).
+
+## 2026-09-30 17:57 — R2-007 (data voor C65/C66/C68): ^PUT/VIX9D/VIX3M binnen; ^BXM/^WPUT niet via Yahoo; Ken French en Shiller-CAPE alleen citeren (geen expliciete licentie)
+
+Yahoo (eerlijke UA; privé-repo, licentienotitie: Cboe-indexdata alleen eigen onderzoek, niet herverspreiden): CBOE_PUT (S&P 500 PutWrite, 1996-08→), VIX9D (2011→), VIX3M (2006→) in data/daily; QA gedraaid. Niet beschikbaar: ^BXM (lege reeks), ^WPUT/^BXMD/^PPUT (HTTP 422) — geen omwegen gezocht.
+Ken French Data Library: alleen 'Copyright Eugene F. Fama and Kenneth R. French', geen licentie/gebruiksvoorwaarden → volgens v32 punt 5/D-068 alleen citeren (evidentie in tekst), geen bestanden gecommit. Shiller-CAPE (ie_data.xls): geen expliciete licentie en Yale-pagina vanaf onze IP's niet bereikbaar (ECONNREFUSED) → alleen citeren, niets gecommit, geen derde-partij-kopieën.
+Gevolg voor run 7 (Uitvoerder-2): C66 PutWrite-substitutie kan met CBOE_PUT (1996→) + VIX/VIX3M; C65 (factoren) en C68 (CAPE) alleen als literatuur-evidentie tenzij de CEO anders beslist (bv. Sandro downloadt zelf voor privé-gebruik).
+
+## 2026-09-30 18:14 — PREREG_PORT4.md gecommit (P-ETF-lite, D-080/v33) — SHA-256 03c613928501165628f0fc7d075d7b49a0d0082ec0606066c4c22b62b3cf7fa3
+
+Naamconflict opgelost volgens v33: PORT3 = drempelvariant (blijft), P-ETF-lite = PREREG_PORT4. Definitie letterlijk uit ALLOCATIE_V1_2 §2 (4 instrumenten; sleeve A kwartaalherweging; Faber alleen SPX, flip uitgevoerd op de eerste handelsdag van de volgende maand; sleeves ∝ 1/σ60 maandelijks; drempel 2% buiten kwartaaldatums/flips; geen hefboom). Interpretaties die §2 openliet expliciet vastgelegd vóór enig resultaat: op flipdagen alleen het S&P-instrument volledig naar doel, overige instrumenten via de drempel. Kosten model B primair, A gevoeligheid. Forward forward/portfolio4_daily.csv vanaf 2026-10-01 (cron 22:25 UTC).
+SHA-256 PREREG_PORT4.md: 03c613928501165628f0fc7d075d7b49a0d0082ec0606066c4c22b62b3cf7fa3
+
+## 2026-09-30 18:15 — PORT4 P-ETF-lite (PREREG_PORT4): 18 transacties/jr, kosten ≈ €27/jr (B), maar SR 0,80 / maxDD 15,2% (2001–24) en 0,25 in 2021–24; forward vanaf 01-10
+
+port4.py (instrumentniveau, 4 instrumenten, kwartaalherweging sleeve A, Faber alleen SPX met uitvoering op de eerste handelsdag, drempel 2%, geen hefboom) → results/port/PORT4_backtest.md; geen trial, geen selectie.
+Model B (NL-retail): 2001–24 SR 0,80, CAGR 7,1%, maxDD 15,2%, alfa 5,3%/jr (≈ €356/mnd backtest), 18 transacties/jr, omloop 1,29×, kosten ≈ €27/jr; 2011–24 SR 0,66 (alfa €300/mnd); 2021–24 SR 0,25 (alfa €109/mnd). Model A: vrijwel gelijk (kosten €63–71/jr omdat A procentueel rekent).
+Vergelijking (PORT3, model B, 2001–24): P-ETF-a-inst SR 0,86 / DD 11,1% / 153 transacties; P-ETF-a-D1 SR 0,91 / 57 transacties. Lite bespaart ≈ €20/mnd kosten t.o.v. inst maar verliest SR en DD (vooral 2021–24) — beoordeling volgens ALLOCATIE_V1_2 §4 (L0–L6) ligt bij Uitvoerder-2; ik kies niets.
+Forward: forward/portfolio4_daily.csv vanaf 2026-10-01 via forward_portfolio.sh (cron 22:25 UTC). Nu 7 forward-portefeuilles (P-ETF-a/b, P1, P-breed, P-ETF+, P-breed-2, PORT3 inst/D1, lite) — v33 QA-1: altijd alle rapporteren.

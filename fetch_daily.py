@@ -31,6 +31,8 @@ SERIES = {  # naam: Yahoo-ticker
     # R2-006: EM-FX (lokale valuta per USD) voor EM-indices
     "USDBRL": "BRL=X", "USDMXN": "MXN=X", "USDIDR": "IDR=X", "USDINR": "INR=X", "USDKRW": "KRW=X", "USDTWD": "TWD=X", "USDSGD": "SGD=X",
     "USDZAR": "ZAR=X", "USDHKD": "HKD=X", "USDAUD_INV": "AUD=X", "USDCNY": "CNY=X",
+    # R2-007: Cboe-optiestrategie-indices (privé-repo; Cboe-indexdata: eigen onderzoek, niet herverspreiden)
+    "CBOE_PUT": "^PUT", "CBOE_BXM": "^BXM", "CBOE_WPUT": "^WPUT", "CBOE_BXMD": "^BXMD", "CBOE_PPUT": "^PPUT", "VIX9D": "^VIX9D", "VIX3M": "^VIX3M",
     "MTUM": "MTUM", "QUAL": "QUAL", "USMV": "USMV", "VLUE": "VLUE", "EWA": "EWA", "EWC": "EWC", "EWL": "EWL", "EWS": "EWS", "EWY": "EWY", "EWZ": "EWZ",
 }
 
