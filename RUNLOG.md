@@ -838,3 +838,11 @@ Voor S11 (Uitvoerder-2): onafhankelijke markten voor C02 zijn nu FTSE, CAC, HSI 
 ## 2026-09-30 15:46 — R2-006: EM-FX binnen bronvoorwaarden — BIS-dagkoersen 21 valuta's (tot 1945→) + Yahoo-aanvulling
 
 BIS Statistics API WS_XRU (publiek, bronvermelding BIS; eerlijke UA): lokale valuta per USD, dagelijks: BRL 1984→, MXN 1954→, IDR 1988→, INR 1973→, KRW 1964→, TWD 1983→, SGD/HKD/CNY/THB 1981→, CLP 1982→, ZAR 1970→, TRY 1950→, AUD 1971→, CAD 1945→, CHF/SEK/NOK/GBP 1953→, JPY 1969→, EUR 1974→ (vóór 1999 BIS-synthetisch) → data/daily/FXBIS_*. Sanity: laatste koersen plausibel (EUR 0,872/USD, JPY 157,2, BRL 5,12); GBP heeft 348 weekenddagen (BIS-invulling) → bij gebruik op werkdagen filteren (vermeld). Daarnaast Yahoo =X (2001–2004→) voor 10 EM-paren. Hiermee kan Uitvoerder-2 EM-indices (BVSP, MXX, JKSE, SENSEX, KOSPI, TWII, STI, …) in USD omrekenen/lokale-valuta-labels zetten (run 6). DATA_CATALOGUS bijgewerkt; QA opnieuw gedraaid.
+
+## 2026-09-30 15:48 — v28 QA-2 (Uitvoerder-1 pakte dit op): P-ETF-a met C02 vervangen door aandelen-B&H + frontier per periode — C02 levert DD-bescherming, geen SR in 2011–24
+
+qa_c02_bh.py → results/port/QA_C02_BH_frontier.md (ontdekking ≤ 2024, reserve niet aangeraakt, geen trial). B&H = dezelfde 5 indices (etf, 13 bp/TER 0,07%/SPX_TR), zelfde 1/σ-weging als PREREG_PORT; frontier vol 5–12%, hefboom ≤ 2× tegen rf + 1,5% ('onbevestigd (broker)'), maandelijks. €/mnd = alfa (excess t.o.v. USD-cash ≈ EUR-gehedged) × 50–70% + EUR-cash (€STR 2,44% ≈ €163).
+Ongehefeld — met C02 vs met B&H: 2001–24 SR 0,94 vs 0,79, maxDD 11,2% vs 19,2%, alfa 5,7% vs 5,9%/jr; 2011–24 SR 0,83 vs **0,85**, alfa 5,1% vs 6,1%; 2021–24 SR 0,53 vs 0,46, alfa 3,3% vs 3,5%.
+→ C02 verbetert P-ETF-a via DD (−8 pp), niet via alfa; na 2010 zelfs licht negatief op SR/alfa — consistent met run 5 ('DD-filter, geen alfa').
+Frontier binnen DD-budget (maxDD ≤ 20%): met C02 vol 9% (hefboom ≈ 1,6×) → 2001–24 totaal €401–496/mnd, 2011–24 €378–464, **2021–24 €242–274**; met B&H vol 8% (≈ 1,3×) → €387–476 / €398–492 / €287–337 (vol 9% overschrijdt het budget in 2001–24/2011–24).
+Eerlijke ondergrens (recentste regime 2021–24, ongehefeld): alfa €112–162/mnd + EUR-cash €163 ≈ €275–325/mnd totaal — onder het €400–500-doel; het doel wordt alleen gehaald met hefboom én de 2001–24/2011–24-SR.
