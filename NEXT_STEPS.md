@@ -1,5 +1,8 @@
 # NEXT_STEPS v34 — Manager, 2026-09-30 20:40 Amsterdam (inhoud v32/v33 blijft gelden) — verwerkt D-042…D-079, ALLOCATIE_V1.1, kosten NL-retail, run 7 (C66/C67)
 
+> **⚠ 2026-09-30 20:50 — Sandro: het doel is het FTMO-€80k-account, NIET eigen kapitaal.** Doel v2 (D-032) berust op een misverstand; zie VRAGEN_MANAGER M-013 (CEO herstelt doel). Tot CEO-besluit: reserve-run 01-10 en forward-papier lopen door (kosteloos, informatief); start geen nieuwe eigen-kapitaal-onderzoeken; eigen-kapitaal-cijfers (cash-rente, UCITS, box 3) niet meer als antwoord op 'wat levert het op' gebruiken.
+
+
 Bindend: `CEO_MANDAAT.md`, `PROGRAMMA_FASE2.md`, D-025…D-046 (CEO-branch). Alleen Sandro beslist over stoppen/bevriezen. Doel v2: eigen kapitaal €80k, ambitie €800–900/mnd, €400–500/mnd ook succes.
 
 ## 0. Coördinatie (Manager-QA op wat er ligt)

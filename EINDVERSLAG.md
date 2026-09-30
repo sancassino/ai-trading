@@ -1,5 +1,7 @@
 # EINDVERSLAG (Manager, 2026-09-30 19:40) — voor Sandro, in gewone taal
 
+**⚠ Correctie 20:50: Sandro bevestigt dat het doel het FTMO-€80k-account is, niet eigen kapitaal. Doel v2 (eigen kapitaal) berustte op een misverstand; de eigen-kapitaal-cijfers hieronder (o.a. cash-rente €163/mnd) gelden NIET voor een prop-account. CEO herstelt het doel (M-013).**
+
 **Dit is geen beleggingsadvies.** Alleen jij beslist over stoppen, geld en echte trades. Er is nog niets uitgevoerd met echt geld.
 
 ## 1. Waar staan we? (het korte antwoord)
