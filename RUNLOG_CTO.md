@@ -102,3 +102,40 @@ On shared box (U2 working tree / untracked prep, not committed here):
 2. A4 formal trial blocked on **kostenpoort FAIL** (train) unless Strateeg amends poort/rule or vehicle.
 3. A5 blocked on missing `data/m5/`.
 4. BESLUITEN.md on CEO branch still ends ~D-086; D-087…D-090 live in NEXT_STEPS v36 only.
+
+## Wake cycle — 2026-09-30 22:32 Europe/Amsterdam (CET / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No formal PREREG trial claimed.**
+
+### Team snapshot (read)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` NEXT_STEPS **v38** | A4 STOP; B1 was prio 1 (PREREG groen); A2 parallel; A5 tot M5; A1 skip. |
+| U2 `18c7996` (22:26) | `ftmo.py` re-validate PASS (censor blob); **B1 kostenpoort FAIL** → STOP; TRIAL_COUNT 444. |
+| Strateeg | `PREREG_FTMO_B1` + `PREREG_FTMO_A2` frozen; C17 gestopt. |
+| Strateeg-2 | S2 PREREGs + BTC_USOPEN; waiting post-B1/M5. |
+| U-006 (main) | Ask M5 into repo (`data/m5gz/`); US41 spreads already on main. |
+
+Merged `origin/main` (v38) into `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **Informational FTMO-EV grid on published F2 ORB** (`results/f/F2_ORB_daily.csv`) via `engine/ftmo.py` — not a trial. Compliant scale (~max dip 4% → ×2.8) ≈ **€286/m** net EV; p95-dip≤2% scale ≈ **€40/m**. Old €484@5× is rule-size lottery. Artefact: `results/cto/orb_f2_ftmo_ev_grid.json`.
+2. **`CTO_AUDIT.md`** — full ORB/S3 audit + overnight cost-gate pattern (A4+B1) + portfolio redirect to intradag.
+3. **`VRAGEN_CTO.md` C-002** — B1 STOP; deprioritize overnight sleeves; A2/M5 next; endorse U-006 option A (+ US41 M5 for A2).
+
+### Remaining blockers
+
+1. A2/A5/S2-* need M5 (Debian or `data/m5gz/` via Sandro/U-006).
+2. S3/A1 need `data/long_m1/` (no ping this cycle).
+3. Manager NEXT_STEPS still lists B1 as prio 1 — superseded by U2 FAIL + C-002 (Manager bump next).
+
+### Git
+
+```
+git add CTO_AUDIT.md VRAGEN_CTO.md RUNLOG_CTO.md results/cto/orb_f2_ftmo_ev_grid.json
+git commit -m "CTO: ORB FTMO-EV audit + post-B1 intradag redirect (C-002)"
+git push origin grok/cto-1
+```

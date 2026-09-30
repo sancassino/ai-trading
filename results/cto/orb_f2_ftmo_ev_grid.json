@@ -1,0 +1,100 @@
+{
+  "note": "Informational FTMO-EV reassessment of published F2 ORB daily series \u2014 NOT a PREREG trial",
+  "source_csv": "results/f/F2_ORB_daily.csv",
+  "engine": "engine/ftmo.py",
+  "when": "2026-09-30 22:30 Europe/Amsterdam",
+  "n_paths_grid": 12000,
+  "seed": 7,
+  "grid": [
+    {
+      "scale": 1.0,
+      "max_dip_pct": 1.4207999999999994,
+      "p95_dip_pct": 0.4613824999999999,
+      "p_pass_1": 0.4786666666666667,
+      "p_pass_2": 0.18425,
+      "p_survive": 1.0,
+      "net_ev_monthly": -5.178611440207101,
+      "exp_payout_monthly": 17.398263559792895,
+      "p_net_loss": 0.8496666666666667,
+      "n_funded": 2211,
+      "n_survive_eligible": 285,
+      "n_funded_incomplete": 1926
+    },
+    {
+      "scale": 1.4,
+      "max_dip_pct": 1.9891199999999991,
+      "p95_dip_pct": 0.6459354999999999,
+      "p_pass_1": 0.6665,
+      "p_pass_2": 0.4041666666666667,
+      "p_survive": 0.9836867862969005,
+      "net_ev_monthly": 40.02082042558884,
+      "exp_payout_monthly": 63.09644542558885,
+      "p_net_loss": 0.654,
+      "n_funded": 4850,
+      "n_survive_eligible": 1226,
+      "n_funded_incomplete": 3624
+    },
+    {
+      "scale": 2.0,
+      "max_dip_pct": 2.841599999999999,
+      "p95_dip_pct": 0.9227649999999998,
+      "p_pass_1": 0.8151666666666667,
+      "p_pass_2": 0.621,
+      "p_survive": 0.8864109426107643,
+      "net_ev_monthly": 137.54122168898044,
+      "exp_payout_monthly": 163.47809668898046,
+      "p_net_loss": 0.44783333333333336,
+      "n_funded": 7452,
+      "n_survive_eligible": 3363,
+      "n_funded_incomplete": 4089
+    },
+    {
+      "scale": 2.8,
+      "max_dip_pct": 3.9782399999999982,
+      "p95_dip_pct": 1.2918709999999998,
+      "p_pass_1": 0.9176666666666666,
+      "p_pass_2": 0.7903333333333333,
+      "p_survive": 0.6691017765233273,
+      "net_ev_monthly": 286.04404459432004,
+      "exp_payout_monthly": 320.3059195943201,
+      "p_net_loss": 0.3025,
+      "n_funded": 9484,
+      "n_survive_eligible": 6023,
+      "n_funded_incomplete": 3461
+    },
+    {
+      "scale": 3.5,
+      "max_dip_pct": 4.972799999999998,
+      "p95_dip_pct": 1.6148387499999997,
+      "p_pass_1": 0.9601666666666666,
+      "p_pass_2": 0.8711666666666666,
+      "p_survive": 0.4954245043213015,
+      "net_ev_monthly": 419.1623109358349,
+      "exp_payout_monthly": 463.8491859358349,
+      "p_net_loss": 0.23358333333333334,
+      "n_funded": 10454,
+      "n_survive_eligible": 7868,
+      "n_funded_incomplete": 2586
+    },
+    {
+      "scale": 5.0,
+      "max_dip_pct": 7.1039999999999965,
+      "p95_dip_pct": 2.3069124999999997,
+      "p_pass_1": 0.9919166666666667,
+      "p_pass_2": 0.9405833333333333,
+      "p_survive": 0.18111318346912733,
+      "net_ev_monthly": 502.83781033994256,
+      "exp_payout_monthly": 585.0659353399426,
+      "p_net_loss": 0.20791666666666667,
+      "n_funded": 11287,
+      "n_survive_eligible": 10187,
+      "n_funded_incomplete": 1100
+    }
+  ],
+  "half_drift_scale_2_8": {
+    "net_ev_monthly": 38.46421013880763,
+    "p_pass_2": 0.383125,
+    "p_survive": 0.9849246231155779,
+    "p_net_loss": 0.665625
+  }
+}
