@@ -1,0 +1,6 @@
+J3 power-analyse (jaren forward nodig; verwachte t na N handelsdagen):
+  SR 0.66: t≥2 na 9.2 jr, t≥1,65 na 6.2 jr | verwachte t na 60 d 0.32, 250 d 0.66, 500 d 0.93
+  SR 0.95: t≥2 na 4.4 jr, t≥1,65 na 3.0 jr | verwachte t na 60 d 0.46, 250 d 0.95, 500 d 1.34
+J1: slechtste FOMC-event -94.3 bp → notional 1.06× equity (verdeeld over US500/US100)
+  F3b alleen: SR 1.03, ≈ €225/mnd, slechtste dag 3.80%
+  F3b + pre-FOMC: SR 1.34, ≈ €361/mnd, slechtste dag 3.80%

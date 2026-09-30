@@ -354,3 +354,11 @@ Kern: 12 mnd op €80k — met MT5-kosten P5 −€1.280 / P50 +€2.720 / P95 +
 Challenge: fee ≈ €540 (secundaire bron, niet op ftmo.com geverifieerd), slaagkans ≈ 17,5%, ≈ 2,5 jaar tot funded, EV ≈ −€10/poging → nog niet de moeite. €880/mnd vereist Sharpe ≈ 1,4 (wij ≈ 0,7–1,0); opschalen botst op de 5%-dagregel. ETF-vergelijking: SPY 2000–2026 CAGR 8,4% → €80k eigen geld ≈ €557/mnd gemiddeld, max DD 55%; €880/mnd vergt ≈ €126k eigen vermogen.
 Beslispunt Sandro: doel bijstellen (≈ €150–250/mnd), stoppen, of andere bron van edge.
 Volgende stap: reserve J1 (combinatie incl. pre-FOMC) en J3 (power-analyse forward-test).
+
+## 2026-09-30 01:30 — J1+J3: pre-FOMC toevoegen (in-sample SR 1,34, ≈ €361/mnd) en power-analyse forward-test
+
+Getest (PREREG_J1J3.md vóór berekening).
+J3: bij ware SR 0,66 (realistische kosten) is t ≥ 2 pas na ≈ 9,2 jaar forward te verwachten (t ≥ 1,65 na 6,2 jr); bij SR 0,95 na 4,4 resp. 3,0 jaar. Verwachte t na 60 handelsdagen 0,3–0,5, na 250 dagen 0,7–1,0. → De papieren forward-test kan grote problemen (fouten, kosten, regimebreuk) zichtbaar maken, maar de edge binnen 1–2 jaar niet statistisch bewijzen.
+J1: slechtste historische FOMC-event −94 bp → pre-FOMC-notional 1,06× equity (US500/US100 gelijk). F3b alleen: SR 1,03, ≈ €225/mnd, slechtste dag 3,80%; F3b + pre-FOMC: SR 1,34, ≈ €361/mnd, slechtste dag 3,80%. Kanttekening: in-sample, pre-FOMC-effect event-t 2,35 en afnemend (2024–26 +13 bp), intraday-dip op FOMC-dag vóór 14:00 niet gemodelleerd.
+Conclusie: combinatie oogt beter maar rust op een klein, zwakker wordend effect; niet als bewezen beschouwen. TRIAL_COUNT ongewijzigd.
+Volgende stap: verslag backlog v5; J2 (nieuwe hypothese-batch) alleen als de supervisor dat wil gezien 389 trials.
