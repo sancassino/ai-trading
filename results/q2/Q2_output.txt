@@ -1,0 +1,5 @@
+Kwaliteitscheck: events met koersdata 166, mediaan |gap| op eventdagen 4.18% vs alle dagen 0.60%; aandeel eventdagen met |gap| > 2%: 75%
+(a) continuatie: N 124 | netto +27.6 bp | bruto +30.4 bp vs kosten 2.9 bp | t train +0.86 (N 107) | t test +2.42 (N 17) | jaren+ 5/5 | DSR 0.08 → afgewezen
+    per jaar (bp, N): 2021:+27(13) 2022:+16(50) 2023:+17(44) 2024:+72(14) 2026:+167(3)
+(b) fade: N 124 | netto -35.1 bp | bruto -32.5 bp vs kosten 2.6 bp | t train -1.72 (N 107) | t test -2.09 (N 17) | jaren+ 0/5 | DSR 0.00 → afgewezen
+    per jaar (bp, N): 2021:-89(13) 2022:-12(50) 2023:-34(44) 2024:-59(14) 2026:-81(3)

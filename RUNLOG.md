@@ -464,3 +464,13 @@ Reeks A (F3b RSI(2)+ORB), historisch: t 0,3–1,0 → funded 0–3,9% in 24 mnd,
 Extra diagnostiek (buiten prereg, gemeld): drift van A × m bij gelijk risicoprofiel → beste netto €/mnd: m 2 (SR ≈ 2,1) €125; m 3 (SR ≈ 3,1) €507; m 4 (SR ≈ 4,1) €945; m 6 (SR ≈ 6,2) €1.891.
 Conclusie: met de huidige edges levert geen enkel risiconiveau positief verwacht netto inkomen op; een challenge kost per saldo geld. Voor ≈ €500 resp. €900/mnd onder de echte FTMO-mechaniek (tijd tot doelen, fees, herstarts, dagregel) is een Sharpe van ≈ 3 resp. ≈ 4 nodig — veel hoger dan de eerdere ideaal-schatting 1,41. Dit is de lat voor Q2–Q5.
 Volgende stap: Q2 (aandelen-earnings-events).
+
+## 2026-09-30 06:32 — Q2: aandelen-earnings-gaps (continuatie/fade) — beide AFGEWEZEN
+
+Getest (PREREG_Q2.md vóór berekening): q2_earnings.py; 41 US-aandelen uit universe_stocks49 (EU-namen uitgesloten), earningsdatums+tijd via yfinance (earnings.csv, 1.142 events 2020–26; SEC EDGAR niet gebruikt: vereist contact-e-mail in User-Agent), FTMO-M5-export van 41 aandelen.
+BUGFIX (gemeld, met vóór/na): FTMO-aandelen-CFD's openen niet altijd 09:30 (AAPL vanaf 2024 09:35) en sommige symbolen hebben een uur-offset (JPM '08:35') → vaste 09:30–15:55-sessie vond maar 166 events. Na fix (sessie = alle bars van de NY-datum, eerste bar = open, laatste = slot): 859 events. Vóór fix: continuatie N 124, +27,6 bp, t 0,86/2,42; fade −35,1 bp.
+Na fix — kwaliteit: mediaan |gap| eventdagen 3,80% vs 0,62% overige dagen; 73% van de eventdagen |gap| > 2%.
+(a) continuatie: N 623, netto +15,2 bp (bruto 18,1 vs kosten 2,9), t train +1,35 / test +0,91, 4/6 jaar+, DSR 0,13 → afgewezen.
+(b) fade: N 623, netto +6,3 bp, t +1,08 / −0,30, 3/6 jaar+ → afgewezen.
+Conclusie: kosten zijn hier klein t.o.v. de beweging (bruto 6× kosten), maar de spreiding per event is zo groot dat er geen significante edge is. TRIAL_COUNT 396.
+Volgende stap: Q3 (crypto intraday).
