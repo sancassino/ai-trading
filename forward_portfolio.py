@@ -20,7 +20,13 @@ DISC_END = date(2024, 12, 31)
 OUT = "forward/portfolio_daily.csv"
 TRACK = "forward/portfolio_tracking.log"
 SLEEVES = {"S_C52L": ("C52_allweather", "lang", "etf"), "S_C52B": ("C52_allweather", "basis", "etf"), "S_C02": ("C02_faber", "basis", "etf"),
-           "S_C17": ("C17_fomc_cycle", "basis", "future"), "S_C54Q": ("C54_carver", "qa", "future"), "S_C54B": ("C54_carver", "basis", "future")}
+           "S_C17": ("C17_fomc_cycle", "basis", "future"), "S_C54Q": ("C54_carver", "qa", "future"), "S_C54B": ("C54_carver", "basis", "future"),
+           # PREREG_PORT2 (D-061)
+           "S_C55": ("C55_daa", "basis", "etf"), "S_C16": ("C16_halloween", "basis", "etf"), "S_C44": ("C44_krediet", "basis", "etf"),
+           "S_C33": ("C33_trend_lowvol", "basis", "future")}
+PORTS2 = {"P-breed-2": ["S_C02", "S_C52B", "S_C52L", "S_C54B", "S_C54Q", "S_C55", "S_C16", "S_C44", "S_C33"]}
+PETF2 = ["S_C52L", "S_C02", "S_C55"]
+OUT2 = "forward/portfolio2_daily.csv"
 HALF_RT = {"etf": 6.5e-4, "future": 0.5e-4}
 SURCHARGE = 0.015
 PORTS = {"P1": ["S_C54Q", "S_C52L", "S_C02", "S_C17"], "P-breed": ["S_C02", "S_C52B", "S_C52L", "S_C54B", "S_C54Q"]}
@@ -41,7 +47,7 @@ def sig(x, i, w=60):
     return x[i - w:i].std() * math.sqrt(252) if i >= w else np.nan
 
 
-def run_petf(S):
+def run_petf(S, PETF=PETF):
     days, X = calendar_and_x(PETF, S)
     n = len(days); nights = np.r_[0, [(b - a).days for a, b in zip(days[:-1], days[1:])]]
     rf = rf_on(days) / 100 / 365 * nights
@@ -135,13 +141,20 @@ def eur_series(days, tot):
     return r_un, tot + hedge
 
 
-def all_portfolios():
-    S = {k: series(*v) for k, v in SLEEVES.items()}
+def all_portfolios(which=1):
+    need = set(PETF) | {n for v in PORTS.values() for n in v} if which == 1 else set(PETF2) | {n for v in PORTS2.values() for n in v}
+    S = {k: series(*SLEEVES[k]) for k in need}
     out = {}
-    d, petf = run_petf(S)
-    for k, v in petf.items():
-        out[k] = (d,) + v
-    for p, names in PORTS.items():
+    if which == 1:
+        d, petf = run_petf(S)
+        for k, v in petf.items():
+            out[k] = (d,) + v
+        ports = PORTS
+    else:
+        d, petf = run_petf(S, PETF2)
+        out["P-ETF+"] = (d,) + petf["P-ETF-a"]
+        ports = PORTS2
+    for p, names in ports.items():
         d, v = run_scaled(names, S)
         out[p] = (d,) + v
     return out
@@ -154,8 +167,8 @@ def stats(days, tot, x, lo=None, hi=DISC_END):
     return dict(start=[d for d, s in zip(days, sel) if s][0], SR=e.mean() / e.std() * math.sqrt(252), vol=e.std() * math.sqrt(252), CAGR=cagr, maxDD=dd)
 
 
-def backtest():
-    P = all_portfolios()
+def backtest(which=1):
+    P = all_portfolios(which)
     lines = ["# Portefeuilles volgens PREREG_PORT — ontdekkingsset (≤ 2024-12-31); reserve niet gerapporteerd", ""]
     for p, (days, tot, x, lev) in P.items():
         st = stats(days, tot, x)
@@ -165,20 +178,21 @@ def backtest():
         lines.append(f"- **{p}** ({st['start']} → 2024-12-31): SR {st['SR']:.2f}, vol {st['vol']*100:.1f}%, CAGR USD {st['CAGR']*100:.1f}% "
                      f"(EUR ongehedged {cagr_eur*100:.1f}%), maxDD {st['maxDD']*100:.1f}%, gem. hefboom {np.nanmean(lev[m]):.2f} "
                      f"→ €{st['CAGR']*80000/12:,.0f}/mnd bruto op €80k (USD-CAGR; vóór live-haircut 30–50% en box 3)")
-    open("results/port/PORT_backtest.md", "w").write("\n".join(lines) + "\n")
+    open(f"results/port/PORT{'' if which == 1 else '2'}_backtest.md", "w").write("\n".join(lines) + "\n")
     print("\n".join(lines))
 
 
-def forward():
-    P = all_portfolios()
+def forward(which=1):
+    OUT_ = OUT if which == 1 else OUT2
+    P = all_portfolios(which)
     names = list(P)
     logged = {}
-    if os.path.exists(OUT):
-        for l in open(OUT):
+    if os.path.exists(OUT_):
+        for l in open(OUT_):
             if l[:1].isdigit():
                 f = l.strip().split(";"); logged[f[0]] = f
     else:
-        with open(OUT, "w") as fh:
+        with open(OUT_, "w") as fh:
             fh.write("date;" + ";".join(f"{p}_usd;{p}_eur;{p}_eur_hedged;{p}_hefboom" for p in names) + ";berekend_utc\n")
     rows = {}
     for p in names:
@@ -202,11 +216,12 @@ def forward():
         else:
             new.append(f"{d};{vals};{ts}")
     if new:
-        with open(OUT, "a") as fh:
+        with open(OUT_, "a") as fh:
             fh.write("\n".join(new) + "\n")
-    print(f"forward_portfolio: {len(new)} nieuwe dag(en) gelogd (vanaf {FORWARD_START}); totaal {len(logged) + len(new)}")
+    print(f"forward_portfolio[{which}]: {len(new)} nieuwe dag(en) gelogd (vanaf {FORWARD_START}); totaal {len(logged) + len(new)}")
 
 
 if __name__ == "__main__":
     os.makedirs("results/port", exist_ok=True); os.makedirs("forward", exist_ok=True)
-    backtest() if "--backtest" in sys.argv else forward()
+    for w in (1, 2):
+        backtest(w) if "--backtest" in sys.argv else forward(w)

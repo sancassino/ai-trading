@@ -28,3 +28,13 @@
 - Lezing: het beoordelingsgetal is de **alfa boven cash**; de totale €/mnd hangt sterk van het renteniveau af.
 
 **Aanvulling (ECB, officieel):** €STR nu 2.44% → cash-only in EUR ≈ €163/mnd; P-ETF-a in EUR-perspectief (optie B) = alfa boven cash €188–264/mnd + EUR-cash ≈ €163/mnd. Reeksen: data/daily/YLD_ESTR (2019→), YLD_EURIBOR3M (1994→, maandgemiddelde).
+  return hold_monthly(s * np.minimum(3.0, 0.10 / sg) * calm, month_end(df["date"]))
+
+**EUR-consistent (v25 QA-2; ontdekking ≤ 2024):** EUR-cash = €STR (2019-10→) / Euribor 3m (ervoor); excess t.o.v. EUR-cash, geannualiseerd (meetkundig).
+
+| portefeuille | periode | alfa USD (t.o.v. USD-cash) | alfa EUR gehedged (t.o.v. EUR-cash) | alfa EUR ongehedged (t.o.v. EUR-cash) | SR ongehedged | €/mnd ongehedged alfa na 30–50% haircut |
+|---|---|---|---|---|---|---|
+| P-ETF-a | 2003-12-02→2024-12-31 | 5.8%/jr | 5.5%/jr | 6.9%/jr | 0.61 | €231–324 |
+| P-ETF+ | 2005-04-01→2024-12-31 | 5.7%/jr | 5.4%/jr | 7.3%/jr | 0.64 | €244–341 |
+
+Lezing: gehedged ≈ USD-alfa (hedge ruilt USD-rente voor EUR-rente); ongehedged voegt het EURUSD-resultaat toe (vol ↑, SR ↓) — twee getallen, geen gemengde 'alfa'.
