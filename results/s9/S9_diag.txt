@@ -1,0 +1,13 @@
+
+ORB-B4a (FTMO 2021–26, 5 symbolen):
+  laag   N  3182 | +2.02 bp/trade | dag-geclusterde t +1.37
+  midden N  2288 | +1.51 bp/trade | dag-geclusterde t +0.68
+  hoog   N  2796 | +1.60 bp/trade | dag-geclusterde t +0.40
+  per jaar (laag/midden/hoog bp, N hoog): 2021:-4.7/-0.5/-2.8(83) 2022:+11.4/+8.2/+3.1(746) 2023:+1.8/+1.5/+0.6(187) 2024:+1.1/-2.1/+0.9(638) 2025:+2.9/-0.6/+6.0(630) 2026:-1.2/+2.0/-4.1(512)
+
+S1 variant (a) (FTMO 2021–26, 4 indices):
+  laag   N  2121 | +1.61 bp/trade | dag-geclusterde t +1.65
+  midden N  1318 | +0.45 bp/trade | dag-geclusterde t +1.35
+  hoog   N  1418 | +1.26 bp/trade | dag-geclusterde t +0.68
+  per jaar (laag/midden/hoog bp, N hoog): 2021:-4.2/+6.4/-5.0(28) 2022:+5.7/+3.6/+2.9(346) 2023:+1.9/-2.3/+2.7(14) 2024:+4.3/+2.4/-2.1(463) 2025:+0.3/-2.3/+7.4(301) 2026:-2.2/-0.1/-1.4(266)
+ORB-B4a 2021–26: per-trade t +2.93 (N 9249) | dag-geclusterd t +1.81 (1490 dagen) | train +1.67 | test +0.81

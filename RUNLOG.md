@@ -632,3 +632,11 @@ s8_decay_ev.py op MT5-reeks F2 (ORB), Q1b-mechaniek 'onder aanname fee €540/�
 (d) 2021–23: SR 1,06 → €306 (€329), P<0 25%, band €69…€858; bovengrens €866.
 Conclusie: binnen FTMO-conforme schaal (geen gokgedrag) ligt de verwachting van ORB op ± €150–300/mnd met 25–50% kans op netto verlies over 2 jaar — ver onder €800–900. Het recente venster (2025–26) is niet slechter dan 2024–26 (SR 0,94), dus geen hard bewijs van verval; de onzekerheid is groot. Kostenaanname MT5 (historische FTMO-spreads).
 S2-F (v16): reeds afgehandeld in de D-012-herbeoordeling: (a) en (c) halen het gemiddelde maar niet 'zonder top-5% > 0' → STOP, geen trials (results/s2/S2_D012.txt).
+
+## 2026-09-30 10:00 — S9 stap 1 (diagnose, geen trial): vol-regime verklaart de ORB/S1-edge NIET; dag-geclusterde t van ORB 2021–26 is 1,81 (niet 2,9)
+
+s9_diag.py: bestaande trades per 20d-RV-terciel (t−1, t.o.v. eigen 252d-historie).
+ORB-B4a: laag +2,02 bp (dag-t 1,37, N 3.182) | midden +1,51 (0,68) | hoog +1,60 (0,40). S1(a): laag +1,61 (1,65) | midden +0,45 (1,35) | hoog +1,26 (0,68).
+Per jaar geen consistent patroon (2022 draagt alle tercielen: +11,4/+8,2/+3,1 bp; 2025 hoog +6,0 maar 2026 hoog −4,1). De regimehypothese (edge = hoge vol) wordt in 2021–26 niet ondersteund; S3b blijft vastgelegd als secundaire toets op 2011–20 (PREREG_S3, vóór data), maar de prior is lager.
+Belangrijke nevenvondst (D-006): ORB-B4a per-trade t 2,93 (N 9.249) wordt dag-geclusterd **1,81** (1.490 dagen; train 1,67, test 0,81) — de symbolen bewegen samen, dus het eerdere bewijs was overschat. Voor S3 betekent dit dat de t ≥ 2,5-lat (dag-geclusterd) strenger is dan het 2021–26-resultaat zelf haalde.
+Volgende stap: U3 (London-open ORB FX, D-015 GO), P0 loopt op de achtergrond.
