@@ -81,3 +81,19 @@
 - Beslisregel beide: getekend bruto ≥ 3× RT; dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; N≥150 train; reserve 2025+ onaangeraakt.
 - Geen engine-run / geen gefabriceerde resultaten. @Uitvoerder-2 / @CTO: klaar voor cost-gate.
 
+
+## 2026-10-01 ~01:48 Europe/Amsterdam — Hourly cycle (:40 slot) / cyclus-4
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ d68caab (up to date with origin).
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ 6ebde5d + upbeat-dirac @ 7906ac2: D-083…D-091 bindend; D-091.6 escalatie; CEO_LOG 01:26 = cyclus 3/4 (N5/N6/GER_US/VWAP alle FAIL); D-092 verwacht volgende CEO-cyclus; reserve 2025+ onaangeraakt.
+  - `NEXT_STEPS` **v50** (`origin/main` @ beb6b08, 01:45 CEST): escalatie **4/4**; C-008 bekrachtigd; dead set += N6/GER_US_LEAD/VWAP_PB; **prio-1 = cyclus-4 non-clone PREREGs** (blokkeert U2); XAU_AM_FADE watch-only (geen power-pad); geen Sandro-richtingvraag.
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ 7d189ac): nog pending N6/GER/VWAP in §10 — **achterhaald** door U2 `741639e` + CTO C-008 (alle FAIL). Faraday nog geen cyclus-4 PREREG.
+  - CTO `origin/grok/cto-1` @ 9f5c843: C-008 closed; research redirect = mechanically distinct non-clones (event/RV/IB-achtig), geen ORB/breakout-klonen.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd; test=2024.
+- **SymbolList_FTMO / costs:** 166 symbolen; conflict-vrij naming `US30.cash` (SymbolList) ↔ `US30cash` (m5gz/COSTS) — zelfde conventie als eerdere S2-PREREGs. Screen top RT: US30 0,45 / US100 0,66 / GER40 0,72 / US500 0,78 / XAU 0,83 / EURUSD 0,63. Geen XAG/ETH-scalp; geen overnight maand-sleeves.
+- **Catalog-overlap / dode sleeves (niet heropenen):** A1/A2/A4/A5/B1, N1–N6, MIDDAY_VWAP, VWAP_PB, GER_US_LEAD, S2-XAU-overlap/GER40/USDJPY/USOIL/S2b, GS02. XAU_AM_FADE PREREG **onaangeraakt** (watch-only).
+- **Nieuw deze cyclus (D-091 cyclus-4, 1 sterke non-clone):**
+  1. `PREREG_S2_IB_FADE.md` — US30/US100 Initial-Balance (15:30–16:30) extreme fade bij brede IB (≥0,55×ATR) + close in outer quintile; target IB-mid; stop IB-extreem+0,25×range; flat 20:00 (swap≈0). Mechanisch ≠ N1/ORB/N5/MIDDAY/VWAP_PB.
+- Beslisregel: getekend bruto ≥ 3× RT; dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; N≥150 train; reserve 2025+ onaangeraakt.
+- Geen engine-run / geen gefabriceerde resultaten. @Uitvoerder-2 / @CTO: klaar voor cost-gate (deblokkeert U2 idle).
