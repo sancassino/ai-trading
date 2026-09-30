@@ -160,3 +160,74 @@ Alle shortlist-sleeves gedraaid met vehikel `cfd` (FTMO-kosten: spread + swap), 
 
 **Conclusie FTMO-pivot voor Sandro:**
 De ETF-catalogus heeft beperkte waarde voor FTMO. Van de 10 beoordeelde sleeves zijn 3 instrumenteel niet uitvoerbaar (bond-leg) en 4 hebben negatieve cfd-EV. De drie kansrijke (C02, C16, C17) zijn maandelijkse trend/seizoen-regels op indices, maar hun FTMO-EV is bootstrap-gevoelig en gebaseerd op in-sample data. Volgende stap (D-085 §2): focus op FTMO-specifieke strategieën met kortere houdduur en lagere swap-impact (intraday, ORB-achtig, FX-carry intraday).
+
+## 2026-09-30 21:45 CEST — D-090 cyclus 1 (P1): validatie `engine/ftmo.py` — géén trial
+
+**Branch:** `claude/uitvoerder2-r` (tip vóór deze commit: `675e02e6717ffaba1188993aa9b49e85a0267934`).
+**Tijd:** 2026-09-30 21:45 Europe/Amsterdam (CEST, UTC+2).
+**Geen trial, geen reserve-OOS.** Venster 2025-01-01→ is niet geopend. A1 ORB/S3 niet gedraaid (data). P2 (A4/A5) niet gestart — zie slot.
+
+### Bronnen (SHAs)
+
+| Wat | Ref | SHA |
+|---|---|---|
+| Authoritatieve engine | `origin/grok/cto-1` commit `7148ab35dd9abee275253c24ab6ccdcb59d92e0d` (2026-09-30 21:12 CEST), blob `engine/ftmo.py` | `f13a5d11fdec532d1a5ba276fa46eb1f52818870` |
+| Kopie op deze branch | `engine/ftmo.py` in `675e02e` (gebouwd in `0b1bad1`, Run 9) — **niet** de CTO-blob | `6a0b166c81dd75411dfd2ca35d35e5d0504d0e17` |
+| `q1_frontier.py` | deze branch | `e393257e4e5b4fa4cf18f2bca232ba527b7dbdf9` |
+| `mc_daily_ftmo.py` | deze branch | `6904fb8194c534c71ccec5159af9058070c469a1` |
+| `ftmo_economics.py` | deze branch | `1897f4064c61ec838dc15a42b56767e8a8223c2b` |
+| BESLUITEN.md | `origin/claude/upbeat-dirac-g2810q` | `ca25968b9c7fa95df3e530cb10282912b1f0a504` (eindigt bij D-086; D-087/D-090 staan in `origin/main` `NEXT_STEPS` / `GROK_CTO_INSTRUCTIE.md`, niet in die BESLUITEN-blob) |
+| Catalogus §9 A-tier | `origin/claude/trusting-faraday-34tsmg` `STRATEGIE_CATALOGUS.md` | commit `06ab317898ad98b48578be4f926c0c02ac3e0af9` |
+| Officiële 2-Step-regels | https://ftmo.com/en/trading-objectives/ (pagina `dateModified` 2026-09-30T09:18:15Z) | 2-Step-blok, niet het 1-Step-blok |
+
+Smoke (alleen synthetische paden, geen marktdata, geen 2025): `python` op blob `f13a5d11` — +50 bp/dag → `p_pass_1=p_pass_2=p_survive=1`, `attempts_mean=1`; −6%/dag → `p_pass_*=0`, elke dag een breuk (`attempts = horizon+1`); −4% slot (onder 5%) breekt pas op de statische 10%-vloer; intraday-dip 6% bij groen slot → breuk; +12% op dag 1 passeert fase 1 niet vóór dag 4.
+
+### (a) Zijn de FTMO-regels correct in de authoritatieve `engine/ftmo.py`?
+
+**Ja, voor FTMO Challenge 2-Step, met de benaderingen hieronder.** De CTO-module (niet de kopie op deze branch) implementeert de drempels die D-083/D-085 en ftmo.com (2-Step, 30 sep 2026) voorschrijven:
+
+- Fase 1 winstdoel **+10%**, fase 2 **+5%**, elk t.o.v. een **vers account** (`eq` terug naar 1,0 bij slagen). Regels 71–72, 208–217. Officieel: balance boven initial mét posities dicht; de sim gebruikt dagequity. Geen winstdoel in funded. Klopt.
+- **Max dagverlies 5% van het startkapitaal**, niet 5% van de actuele equity. Zonder `daily_drawdowns`: `dd = max(0, −r) × eq` (r. 176–178), dezelfde slot-tot-slot-proxy als `ftmo_economics.py` r. 29–31. Mét drawdowns: `(start_balance − min_equity) / account` (`load_daily_equity_csv` r. 60–61), zelfde definitie als `q1_frontier.py` r. 17, dus floating/intraday telt mee. Breuk als `dd >= 0.05` vóór de slotupdate (r. 182–185). Smoke: −6% en een dip van 6% breken; −4% slot niet.
+- **Max verlies 10% statisch**, vloer `floor = 1 − max_dd` = 0,90 (r. 156, 183–185). Geen trailing. Dat is 2-Step. 1-Step (3% dag, end-of-day-trailing 10%, Best Day 50%) hoort hier niet en zit er niet in. Goed (D-083 = 2-Step).
+- **Minimaal 4 dagen** vóór een fase-pass (`days_in >= min_days`, r. 208 en 214). Smoke: +12% op dag 1 wacht tot dag 4.
+- **Geen tijdslimiet in de regels**; praktisch afgekapt op `horizon=504` handelsdagen (~24 maanden). Zelfde familie als de `--max-months`-cap in `ftmo_economics.py` r. 4–5 en `mc_daily_ftmo.py` r. 112.
+- Funded: winst boven start × **split 0,80**, saldo terug naar start (r. 226–233). Fee **€540** terug bij de eerste uitbetaling (r. 229–231). Beide bedragen zijn **aannames** (D-002/D-083); ftmo.com zegt "refundable" en "up to 90%". Elk EV-getal labelen: "onder aanname fee €540 / split 80% / €80k".
+- Breuk → nieuwe fee + opnieuw fase 1 (r. 193–200). Dat is de Q1-boekhouding, geen stille afwijking.
+- Kosten/swap zitten **niet** in de module. De aanroeper moet cfd-nettorendementen aanleveren (D-085). De schaalparameter dwingt de D-016-grens (dagverlies-risico > 4% alleen als bovengrens, geen aanbeveling) niet af.
+
+**Niet "fout" maar wel onvolledig t.o.v. de letter van ftmo.com:** een handelsdag = een CE(S)T-dag waarop minstens één positie wordt geopend. De engine telt elke bootstrap-dag. Een ijle sleeve (FOMC, een paar entries) kan de 4-dagenregel te vroeg halen. Zelfde benadering in `q1_frontier.py` r. 44 en `ftmo_economics.py` r. 33; `mc_daily_ftmo.py` laat de 4-dagenregel helemaal weg.
+
+### (b) Discrepanties t.o.v. `q1_frontier.py`, `mc_daily_ftmo.py`, `ftmo_economics.py` en de gedocumenteerde regels
+
+Bewuste aansluiting: de CTO-docstring zegt q1 (paden, herstart, fee-refund) plus de 2-Step-drempels uit de andere twee. Dat klopt met de code. De getallen zijn **niet uitwisselbaar**.
+
+1. **Andere vraag.** CTO-default `restart=True`, één horizon van 504 dagen, herhaalde fee: doorlopende EV zoals `q1_frontier.simulate` (r. 45–50, `net.mean()/24`). `ftmo_economics.simulate` is één poging, elke fase max 24 maanden, daarna 12 live maanden, `ev_per_attempt = mean(payout) − fee`, geen herstart. `mc_daily_ftmo` is één poging, default 12 maanden per fase, account-default **100_000** (r. 28), succes = 12 maanden bruto/netto ≥ $1_000, **geen fee, geen min-4-dagen, geen maandelijkse uitbetaling-reset** (equity componeert, r. 94–99). Sleutels: CTO `p_pass_1` / `p_pass_2` / `p_survive` / `net_ev`; economics `p1` / `funded` / `ev_per_attempt`.
+2. **`p_survive` is rechts-gecensureerd (bug t.o.v. de eigen docstring r. 123–125).** Het venster is `live_months * block` dagen na `funded_day` (r. 170, 190), maar het pad stopt op `horizon`. Wie laat funded raakt en in de stomp niet breekt, telt als "overleefd". Bevestigd: +10 bp/dag, horizon 252, funded rond dag 145, `p_survive=1` zonder volledige 252 funded-dagen. `q1_frontier.py` r. 47 heeft hetzelfde venster (`day − funded_day <= 252`) binnen dezelfde 504 dagen. `ftmo_economics` en `mc_daily` draaien wél een aparte 12-maands live-poot ná de pass. **Niet gebruiken als P(12 mnd overleven | funded) als de pass laat in de horizon valt.**
+3. **Off-by-one t.o.v. q1:** CTO `day − funded_day < 252` (r. 190) vs q1 `<= 252` (r. 47). Eén dag.
+4. **Uitbetalingsklok = 21 dagen (`block`), niet 14.** q1-commentaar r. 58 zegt "≥ 14 dagen"; de code gebruikt `BLOCK=21` (r. 61). RUNLOG.md (2026-09-30 06:14) noemt eerste reward vanaf dag 14 (ftmo.com FAQ). CTO kopieert de 21-dagen-code. `ftmo_economics.py` r. 42–50 keert alleen op de maandgrens uit en draagt verlies over; CTO keert, zodra `since_pay >= 21`, uit op de eerstvolgende dag met `eq > 1` (r. 224–226) — vaker dan economics bij een maand die onder water eindigt.
+5. **Intraday alleen als de aanroeper `daily_drawdowns` geeft.** Zonder die reeks mist een groen slot dat intraday door de daglimiet gaat. Officiële regel is equity inclusief open P&L, swaps en commissie. Zelfde caveat als `ftmo_economics.py` r. 9–10. `mc_daily_ftmo.py` r. 59–62 is de enige die `min_equity` écht afzet tegen `balance(00:00) − 5%×initial` én tegen `0,90×initial`.
+6. **Drawdown-reeks schaalt niet mee met de gesimuleerde middernacht-equity**; hij herhaalt de historische dip × `scale`, net als q1. In de buurt van `eq≈1` (fases resetten) is dat de statische 5%-van-initial-toets. Geen extra fout t.o.v. q1.
+7. **Min-dagen ≠ "positie geopend".** Zie (a). Materieel voor A4 (weinig entries).
+8. **Schaal in q1's `load(base_scale)` vervormt de equitycurve vóór het rendement; CTO vermenigvuldigt rendement én dip lineair (`scale`).** Bij `scale=1` gelijk. De frontier-schaal `t` in `q1.simulate` is wél dezelfde lineaire knop.
+
+**Kopie op deze branch is geen validatie van de CTO-engine en mag niet voor trials.** `git diff origin/grok/cto-1 HEAD -- engine/ftmo.py` op `675e02e`: 294 / 244 regels, andere API (`p_phase1`, `ev_per_attempt`, `n_sims=10_000`, seed 42; helpers `ev_from_series` / `ev_shortlist`). `r9_ftmo_ev.py` importeert die API. Drie fouten, gereproduceerd op blob `6a0b166` (synthetisch):
+
+- **`_run_funded` r. 76–78:** dagverlies = `eq − balance_start_month < −day_loss_frac` (maandstart, niet middernacht). De variabele `day_loss` (r. 76) wordt niet gebruikt. Probe: dag +8% daarna −6% (echt dagverlies 6,48% van initial) → `breached=False`, plus fee-restitutie. De fase-loop `_run_phase` r. 54–57 is wél de slot-proxy (`balance_start` wordt elke dag bijgewerkt). Het commentaar "balance teruggeslagen naar 1 na elke dag" (r. 49) is onjuist.
+- **Split wordt niet op de uitbetaling toegepast.** r. 85: `total_payout += eq − 1.0`; r. 89 geeft dat × account terug. `split` telt alleen voor de fee-vlag (r. 84). Probe: 21× +1%/dag → gross €18.591 = 100% van de winst, niet 80% (€14.873). Run 9-EV's in deze log (C02 €2099, C17 €2071, C16 €2117, …) komen uit deze module → **niet citeren als FTMO-EV**.
+- **`months_to_funded` is een constante.** r. 173–174: `(max_months+max_months)*0.5`. Probe: mediaan altijd 24,0.
+
+BESLUITEN D-086 zei "bouw engine/ftmo.py". NEXT_STEPS v35 / D-087 zegt: CTO-bestand is de engine, geen eigen implementatie tenzij een aantoonbare fout. De aantoonbare fouten zitten in de branch-kopie, niet in een reden om de CTO-logica te herschrijven. **Dit commit wijzigt `engine/ftmo.py` niet** (geen geïntende wijziging; `r9_ftmo_ev.py` hangt aan de kapotte API). Authoritatieve blob voor de volgende trial: `f13a5d11` op `origin/grok/cto-1`. Herstel = die blob terugzetten en de aanroepers omzetten, apart van deze validatie.
+
+### (c) Welke A-tier sleeves eerst?
+
+Bron: `STRATEGIE_CATALOGUS.md` §9 (`06ab317`) en de PREREG's op `claude/trusting-faraday-34tsmg`. D-tier (C52, C54, C55, UCITS) niet draaien — §9 schrapt ze voor FTMO. C02 is §9 C1: geen trial, alleen overlay.
+
+1. **Eerst A4 — FOMC-cyclus C17**, zodra §1a bevroren is. `PREREG_FTMO_C17.md`: V-CAT1 (long op even FOMC-weken 0/2/4/6; niet de pre-FOMC D−5…D−1-draft), US500cash+US100cash, vehikel cfd, swap long 1,36 / 1,95 bp/nacht (`COSTS_FTMO.csv`), kostenpoort vóór trial, dag-geclusterde t, reserve dicht. **Nu niet draaien:** de PREREG zegt zelf "draait pas na freeze van OPEN-punt §1a" (twee regeldefinities). Default in het bestand is V-CAT1, maar de statusregel blokkeert tot CEO/Manager dat bevriest. Daarna pas `ftmo_ev()` op de **CTO-blob**, met intraday-drawdown als die er is, en de 4-handelsdagen-caveat expliciet (D1-hold is ijl).
+2. **Daarna A5 — FX-intradag London-open, EURUSD alleen.** `PREREG_FTMO_FX_INTRADAG.md` is op de regel bevroren (08:00–08:30 Amsterdam, vaste 50-pip stop, flat 17:00, swap 0, rondreis 0,63 bp, poort ≥ ~1,89 bp). Eén trial; NY-open is alleen een gevoeligheidsrij. GBPUSD/USDJPY wachten op M5 (OPEN §1a: contractspec USDJPY). Niet starten in deze cyclus.
+3. **Niet nu:** A1 ORB/B4a (S3, lange data — overgeslagen), A2 stocks-in-play (stub, OPEN), A3 noise-area (geen extra trial zonder nieuwe hypothese), B1/B2/B3.
+
+Schaal in beide runs: p95 dagverlies ≤ 2% als kandidaat; > 4% alleen als bovengrens rapporteren (D-016/D-085). PREREG-commit blijft vóór elk resultaat. TRIALS append-only. Ontdekking ≤ 2024-12-31.
+
+### P2
+
+**Niet gestart.** P1 is inhoudelijk klaar, maar een trial op de branch-kopie zou foute EV's opleveren, en A4-§1a is nog OPEN. Volgende cyclus: CTO-blob `f13a5d11` op deze branch beschikbaar maken zonder de logica te verzinnen, daarna A4 alleen als §1a dicht is.
