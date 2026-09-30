@@ -1,5 +1,8 @@
 # SCENARIO_RAPPORT — wat levert de beste strategie realistisch op? (voor Sandro, 2026-09-30)
 
+> **Definitieve stand (2026-09-30): zie PLAFOND_DEFINITIEF.md** — kern RSI(2) in MT5 SR ≈ 0,5, ≈ €50–150/mnd; ORB-variant ≈ €146–225/mnd maar onbevestigd buiten 2021–26.
+
+
 In gewone taal. Alle cijfers voor een FTMO-account van **€80.000**, op basis van de beste strategie die we hebben gevonden en
 in MetaTrader 5 hebben nagebouwd (een combinatie van "koop na een scherpe daling" op indices en "volg de uitbraak na het
 eerste half uur"), zo ingesteld dat de dagelijkse verliesgrens van FTMO niet wordt geraakt.

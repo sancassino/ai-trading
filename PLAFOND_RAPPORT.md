@@ -1,5 +1,8 @@
 # PLAFOND_RAPPORT — wat is maximaal haalbaar onder FTMO-regels? (2026-09-29)
 
+> **Definitieve stand (2026-09-30): zie PLAFOND_DEFINITIEF.md** — kern RSI(2) in MT5 SR ≈ 0,5, ≈ €50–150/mnd; ORB-variant ≈ €146–225/mnd maar onbevestigd buiten 2021–26.
+
+
 Opgesteld volgens de portefeuille-beslisregel in NEXT_STEPS (backlog v2): na C1–C6 (+ reserve D1–D4 en validatie E1/E3)
 haalt geen enkele **op FTMO-data gevalideerde** sleeve of combinatie een gedeflateerde Sharpe ≥ 0,5.
 Totaal ≈ 348 geteste varianten (TRIAL_COUNT.md), alle met pre-registratie sinds ronde 2.
