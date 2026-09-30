@@ -1,0 +1,9 @@
+K2 power-analyse (jaarlijkse Sharpe s; SE van geschatte SR ≈ 1/√T):
+  ware SR 0.95: 80% kans op t ≥ 2 na 8.9 jaar (2,255 handelsdagen)
+     kans op geschatte SR < 0 (verkeerde conclusie) na 3/6/12/24 mnd: 32% / 25% / 17% / 9%
+  ware SR 0.66: 80% kans op t ≥ 2 na 18.5 jaar (4,671 handelsdagen)
+     kans op geschatte SR < 0 (verkeerde conclusie) na 3/6/12/24 mnd: 37% / 32% / 25% / 18%
+  ware SR 0.60: 80% kans op t ≥ 2 na 22.4 jaar (5,652 handelsdagen)
+     kans op geschatte SR < 0 (verkeerde conclusie) na 3/6/12/24 mnd: 38% / 34% / 27% / 20%
+  25e percentiel van de geschatte SR na 6 mnd bij ware SR 0.66: -0.29
+  25e percentiel van de geschatte SR na 12 mnd bij ware SR 0.66: -0.01

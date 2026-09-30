@@ -10,3 +10,13 @@
 - Beperkingen: slot-tot-slot (geen intraday-dip voor RSI), geen EUR-conversie, geen slippage.
 - Verwachting (supervisor): na ≥ 60 handelsdagen een eerste, nog ruisige indicatie.
 - Controle vóór start: droogtest 2026-09-21..29 in een aparte map; ORB-trades per symbool identiek aan backtest B4a.
+
+## Vooraf vastgelegde beslisregel (K2, 2026-09-30 — vóór de eerste forward-dag)
+Power (zie results/k1/K2_power.txt): bij ware SR 0,66 duurt 80% kans op t ≥ 2 ≈ 18 jaar; de kans dat de geschatte SR na
+6 / 12 maanden < 0 is ondanks een echte edge is ≈ 32% / 25%. De forward-test kan de edge dus niet snel bewijzen; hij
+dient om fouten, kostenverrassingen en regimebreuken te vangen. Regels:
+1. **Harde review (direct):** papieren dagverlies ≥ 4% of drawdown ≥ 8% → code/kosten/regime controleren vóór doorgaan.
+2. **Na 6 maanden (≈ 2027-03-31):** stoppen als de geschatte jaarlijkse SR < −0,29 (25e percentiel bij ware SR 0,66).
+3. **Na 12 maanden (≈ 2027-09-30):** stoppen als de geschatte SR < 0; doorgaan en MT5-demo/challenge heroverwegen als SR ≥ 0,66.
+4. **ORB-kostencontrole na 6 maanden:** gemiddeld < −1,0 bp/trade (≈ 900 trades) → kosten/slippage onderzoeken (backtest +1,7 bp).
+5. Elk forward-verslag vermeldt: slot-tot-slot (geen intraday-dip), geen slippage → papieren resultaat is optimistisch.

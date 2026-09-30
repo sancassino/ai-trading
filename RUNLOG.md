@@ -370,3 +370,10 @@ Yahoo 1990–2026 (SPY, QQQ, GLD, DAX, N225): nacht 1 +9,3 bp (t 4,15), dag 1 �
 Varianten: (a) max 1 nacht — Yahoo N 2.022, +5,3 bp, t 3,05; FTMO N 472, +6,4 bp, t 1,79; dagverlies bij €150/mnd 2,76%. (b) max 2 nachten — Yahoo +14,5 bp, t 3,59; FTMO +11,8 bp, t 1,53; dagverlies 3,61%. Beide afgewezen (FTMO-t < 2,5).
 Conclusie: RSI(2) is in essentie een overnight-premie na uitverkoop; korte houdduur maakt het FTMO-dagverlies beheersbaar, maar de FTMO-historie (5,7 jr) heeft te weinig power om het te bevestigen. PLAFOND_RAPPORT bijgewerkt. TRIAL_COUNT 391.
 Volgende stap: K2 (power-analyse + vooraf vastgelegde beslisregel forward-test).
+
+## 2026-09-30 01:33 — K2: power-analyse + vooraf vastgelegde beslisregel forward-test
+
+Berekend (results/k1/K2_power.txt): 80% kans op t ≥ 2 na ≈ 8,9 jaar bij ware SR 0,95, ≈ 18,5 jaar bij 0,66, ≈ 22 jaar bij 0,6. Kans op geschatte SR < 0 ondanks een echte edge (SR 0,66) na 3/6/12/24 mnd ≈ 37% / 32% / 25% / 18%.
+Vastgelegd in forward/README.md (vóór de eerste forward-dag): harde review bij papieren dagverlies ≥ 4% of DD ≥ 8%; na 6 mnd stop als SR < −0,29; na 12 mnd stop als SR < 0, heroverwegen als SR ≥ 0,66; ORB-kostencontrole na 6 mnd (< −1,0 bp/trade → onderzoeken); elk forward-verslag noemt de optimistische aannames.
+Conclusie: de forward-test is een foutdetector, geen snel bewijs; statistische bevestiging van deze edge vergt jaren.
+Volgende stap: backlog v6 afgerond; verslag + wachten op nieuwe NEXT_STEPS (uurlijkse check).
