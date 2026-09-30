@@ -1,4 +1,4 @@
-# NEXT_STEPS v45 — Manager, 2026-10-01 00:14 CEST (nacht-queue uitslag: N1/N2/MIDDAY STOP; XAU PASS N≪120; S2b STOP) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v46 — Manager, 2026-10-01 00:40 CEST (N3/N4 STOP; XAU_AM_FADE nog underpowered) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -8,7 +8,7 @@
 
 > **⚠ TEAM (D-090):** Claude = alleen CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main.
 
-> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…D-091 op `claude/ftmo-trading-strategy-98mplz` (CEO_LOG 00:15). Geen D-092 nog (alleen escalatiepad in D-091.6).
+> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…D-091 op `claude/ftmo-trading-strategy-98mplz` (CEO_LOG 00:27 = cyclus 1/4). Geen D-092 nog (alleen escalatiepad in D-091.6).
 
 Bindend: D-083…D-091 (CEO, 2026-09-30 / D-091 2026-10-01 00:05). Alleen Sandro beslist over stoppen/bevriezen. Geen richtingvraag aan Sandro (D-091.6).
 
@@ -16,13 +16,13 @@ Bindend: D-083…D-091 (CEO, 2026-09-30 / D-091 2026-10-01 00:05). Alleen Sandro
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
 
-### Nacht-queue uitslag (Manager, 2026-10-01 00:14 CEST — U2 `8c7a8e1` / CTO `18a266a`)
+### Cyclus-uitslag (Manager, 2026-10-01 00:40 CEST — U2 `328284c` N3/N4; nacht-queue was `8c7a8e1`)
 
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b**. Geen overnight maand-sleeves. Ops-approvals → **CTO** (niet Sandro).
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4**. Geen overnight maand-sleeves. Ops-approvals → **CTO** (niet Sandro).
 
 **Screen KLAAR** (`a383cb5`): top RT = US100/US30/GER40/US500/XAU.
 
-**Cost-gate uitslag (signed mean bruto ≥ 3× RT; train; reserve 2025+ onaangeroerd):**
+**Cost-gate / t-uitslag (signed mean bruto ≥ 3× RT; train; reserve 2025+ onaangeroerd; TRIAL_COUNT blijft 444):**
 
 | Sleeve | N | mean bruto | gate 3×RT | Uitkomst |
 |--------|---|------------|-----------|----------|
@@ -31,35 +31,37 @@ Bindend: D-083…D-091 (CEO, 2026-09-30 / D-091 2026-10-01 00:05). Alleen Sandro
 | S2 MIDDAY_VWAP | 3 | −66.2 bp | ~1.35 bp | **FAIL STOP** |
 | S2 XAU_AM_FADE | 12 | **+18.70 bp** | 2.49 bp | **PASS gate** — N≪120 → geen `ftmo_ev`/geen trial-claim |
 | S2b BTC+ETH | — | BTC PASS / ETH FAIL | — | **STOP** (CTO `18a266a`, PREREG §4.4) |
+| N3 US100 Close-Drive | 357 | +2.32 bp | 1.80 bp | **gate PASS → t FAIL STOP** (NW t=0.853, p≈0.197; PREREG `e39e9c6` vóór resultaat) |
+| N4 XAU Pre-NY | 701 | +1.16 bp | 2.49 bp | **FAIL STOP** (PREREG `e39e9c6`) |
 
 **GS01:** test alleen 2024 (erratum `474a33c`).
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | XAU_AM_FADE power-pad (meer data/N≥120; PREREG ongewijzigd; geen post-hoc drempel) | CTO / U2 | Gate PASS; underpowered |
-| **2** | Nieuwe non-clone PREREGs op screen top-10 (D-091.3) | Strateeg / Strateeg-2 | Open na N1/N2/MIDDAY dood |
+| **1** | XAU_AM_FADE power-pad (meer data/N≥120; PREREG ongewijzigd; geen post-hoc drempel) | CTO / U2 | Gate PASS; underpowered — enige levende kandidaat |
+| **2** | Nieuwe non-clone PREREGs op screen top-10 (D-091.3) | Strateeg / Strateeg-2 | **Urgent** — N3/N4 ook dood; geen klonen |
 | **3** | Ambitie-kalibratie SR×skew | CTO | Gedaan (`ambition_sr_skew_grid.json`; ~SR≥1.0 @ p95-dip≤2%) |
-| — | Dead set (incl. N1/N2/MIDDAY/S2b) | — | Dood |
+| — | Dead set (incl. N1–N4 / MIDDAY / S2b) | — | Dood |
 
-**Escalatie (D-091.6):** 4 cycli zonder kostenpoort+power → CEO D-092. Geen richtingvraag aan Sandro. (Na D-091: nacht-queue = cyclus 1 met 1 gate-PASS zonder power.)
+**Escalatie (D-091.6):** 4 cycli zonder kostenpoort+power → CEO D-092. Geen richtingvraag aan Sandro. Stand: cyclus **2/4** (nacht-queue = 1 met 1 gate-PASS zonder power; N3/N4 = 2, beide STOP; nog geen power-PASS).
 
 ### Acties (bindend, D-087; rollen D-090; zoekrichting D-091)
 
-1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — nacht-queue DONE:**
-   - Cost-gates N1→N2→MIDDAY→XAU klaar (`8c7a8e1`). Screen klaar (`a383cb5`).
-   - Nu: wacht toewijzing XAU power-pad of nieuwe PREREG van Strateeg; merge `origin/main` regelmatig.
+1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — N3/N4 DONE STOP (`328284c`):**
+   - N4 gate FAIL STOP; N3 gate PASS maar dag-geclusterd t FAIL → STOP. Geen TRIALS-append. PREREG `e39e9c6` vóór resultaat ✔.
+   - Nu: XAU_AM_FADE power-pad (indien CTO/data) of wacht nieuwe PREREG van Strateeg; merge `origin/main` regelmatig.
    - Dead set niet herstarten. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t.
 
 2. **Grok CTO — S2b DONE STOP; XAU power + ambitie:**
    - S2b STOP (`18a266a`). Ambitie-grid geleverd.
    - Volgende: XAU_AM_FADE power-pad (geen `ftmo_ev` tot N-eis) of support nieuwe PREREGs.
-   - Dode sleeves niet herstarten.
+   - Dode sleeves niet herstarten (nu ook N3/N4).
 
-3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — N1/N2 STOP; lever 1–2 nieuwe non-clones (D-091.3):**
-   - Alleen top-10 screen; verwachte bruto ≥ 3× RT vooraf; geen klonen dode sleeves; geen overnight maand.
-   - N1-notitie: D1-ATR×1.5 lijkt mis-geschaald voor 30m drive (max |drive|/ATR ≈ 0.3–0.9) — niet herstarten zonder nieuw mechanisme.
+3. **Strateeg (Grok, `claude/trusting-faraday-34tsmg`) — N3/N4 geleverd en STOP; lever 1–2 nieuwe non-clones (D-091.3):**
+   - Alleen top-10 screen; verwachte bruto ≥ 3× RT vooraf; geen klonen dode sleeves (incl. N3 close-drive / N4 pre-NY); geen overnight maand.
+   - N3-notitie: gate haalbaar maar SE te hoog (t=0.85) — geen herstart zonder ander mechanisme/edge.
 
-4. **Strateeg-2 (Grok, `grok/strateeg-2`):** MIDDAY STOP; XAU gate PASS underpowered; S2b STOP. Lever 1–2 nieuwe non-clones (D-091.3). Geen engine-runs.
+4. **Strateeg-2 (Grok, `grok/strateeg-2`):** MIDDAY STOP; XAU gate PASS underpowered; S2b STOP; N4 STOP. Lever 1–2 nieuwe non-clones (D-091.3). Geen engine-runs.
 
 5. **Auditor (Claude, blijft) — `engine/ftmo.py` onafhankelijk valideren (D-087 actie 5):**
    - Schrijf eigen mini-implementatie van FTMO-regels; check of Monte Carlo juiste p-waarden geeft op synthetische paden met bekende uitkomsten.
