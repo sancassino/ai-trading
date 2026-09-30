@@ -893,3 +893,10 @@ Gevolg voor run 7 (Uitvoerder-2): C66 PutWrite-substitutie kan met CBOE_PUT (199
 
 Naamconflict opgelost volgens v33: PORT3 = drempelvariant (blijft), P-ETF-lite = PREREG_PORT4. Definitie letterlijk uit ALLOCATIE_V1_2 §2 (4 instrumenten; sleeve A kwartaalherweging; Faber alleen SPX, flip uitgevoerd op de eerste handelsdag van de volgende maand; sleeves ∝ 1/σ60 maandelijks; drempel 2% buiten kwartaaldatums/flips; geen hefboom). Interpretaties die §2 openliet expliciet vastgelegd vóór enig resultaat: op flipdagen alleen het S&P-instrument volledig naar doel, overige instrumenten via de drempel. Kosten model B primair, A gevoeligheid. Forward forward/portfolio4_daily.csv vanaf 2026-10-01 (cron 22:25 UTC).
 SHA-256 PREREG_PORT4.md: 03c613928501165628f0fc7d075d7b49a0d0082ec0606066c4c22b62b3cf7fa3
+
+## 2026-09-30 18:15 — PORT4 P-ETF-lite (PREREG_PORT4): 18 transacties/jr, kosten ≈ €27/jr (B), maar SR 0,80 / maxDD 15,2% (2001–24) en 0,25 in 2021–24; forward vanaf 01-10
+
+port4.py (instrumentniveau, 4 instrumenten, kwartaalherweging sleeve A, Faber alleen SPX met uitvoering op de eerste handelsdag, drempel 2%, geen hefboom) → results/port/PORT4_backtest.md; geen trial, geen selectie.
+Model B (NL-retail): 2001–24 SR 0,80, CAGR 7,1%, maxDD 15,2%, alfa 5,3%/jr (≈ €356/mnd backtest), 18 transacties/jr, omloop 1,29×, kosten ≈ €27/jr; 2011–24 SR 0,66 (alfa €300/mnd); 2021–24 SR 0,25 (alfa €109/mnd). Model A: vrijwel gelijk (kosten €63–71/jr omdat A procentueel rekent).
+Vergelijking (PORT3, model B, 2001–24): P-ETF-a-inst SR 0,86 / DD 11,1% / 153 transacties; P-ETF-a-D1 SR 0,91 / 57 transacties. Lite bespaart ≈ €20/mnd kosten t.o.v. inst maar verliest SR en DD (vooral 2021–24) — beoordeling volgens ALLOCATIE_V1_2 §4 (L0–L6) ligt bij Uitvoerder-2; ik kies niets.
+Forward: forward/portfolio4_daily.csv vanaf 2026-10-01 via forward_portfolio.sh (cron 22:25 UTC). Nu 7 forward-portefeuilles (P-ETF-a/b, P1, P-breed, P-ETF+, P-breed-2, PORT3 inst/D1, lite) — v33 QA-1: altijd alle rapporteren.

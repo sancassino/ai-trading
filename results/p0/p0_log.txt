@@ -120,3 +120,4 @@
 2026-09-30 18:00:22Z   netwerkfout bij USA500IDXUSD 2012-05-16: <urlopen error [Errno 104] Connection reset by peer>; wacht 60 s (poging 1)
 2026-09-30 18:06:56Z   503 bij USA500IDXUSD 2012-05-20; wacht 60 s (poging 1)
 2026-09-30 18:11:14Z   netwerkfout bij USA500IDXUSD 2012-05-21: <urlopen error timed out>; wacht 60 s (poging 1)
+2026-09-30 18:15:00Z   503 bij USA500IDXUSD 2012-05-22; wacht 60 s (poging 1)
