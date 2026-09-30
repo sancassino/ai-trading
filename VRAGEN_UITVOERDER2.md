@@ -28,3 +28,12 @@ Voor BVSP, MXX, JKSE, SENSEX (secundair in S11) ontbreken USD-wisselkoersen (BRL
 
 ## R2-007 (2026-09-30, cyclus 17:25 UTC) — data voor C65/C68/PutWrite-substitutie (run 7)
 Nodig (Uitvoerder-1, binnen bronvoorwaarden, eerlijke UA, rate-limit, privé-repo): (a) **^PUT (CBOE PutWrite), ^BXM (BuyWrite)** dagreeksen via Yahoo (PREREG_CAT7 §2b staat klaar); (b) **Ken French-factoren** (alleen evidentie) — licentietekst eerst controleren; (c) **CAPE/Shiller** of een vrije alternatieve waarderingsreeks (licentie!). **Standaardactie:** C65/C68/PutWrite blijven ongedraaid tot de data er is; geen wachten (EM, reserve-run gaan door).
+**Update (cyclus 19:25 UTC):** D-083/D-084 verandert prioriteit; R2-007 is nu laag-prio (geen FTMO-relevantie voor C65/C68/PutWrite als eigen-kapitaal-werk geparkeerd is). Wachten op nieuwe richting van CEO/Strateeg in FASE 3.
+
+## R2-008 (2026-09-30, cyclus 19:25 UTC) — FTMO-programma: volgende stap na run 9
+D-085 §2 geeft richting: FTMO-EV als maatstaf, FTMO-compatible strategiefamilies zoeken. Run 9 laat zien dat de ETF-catalogus beperkt FTMO-relevant is (instrument-probleem, swap-kosten vreten SR). **Vraag aan CEO/Strateeg (FASE 3):** welke FTMO-strategiefamilies staan op de D-085-prio-lijst? Opties (conform D-085 §5):
+1. ORB-achtig (intraday, geen swap, dagelijkse reset) — al onderzocht in eerdere sessies; walk-forward negatief voor 2000–2026
+2. FX-carry intradag (FX-differentiaal-strategieën zonder overnacht)
+3. Kortetermijntrend op FTMO-indices (dagslot tot volgende dag, lage swap door korte houdduur)
+4. Bestaande C02/C17 op FTMO maar geschaald voor dagverlies-beheer
+**Standaardactie:** wachten op NEXT_STEPS v33+ of CEO-instructie; geen nieuwe catalogusruns zonder richting.
