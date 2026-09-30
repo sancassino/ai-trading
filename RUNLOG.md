@@ -570,3 +570,15 @@ Swap per nacht (bp, kosten; negatief = ontvangen): indices long 1,4–2,3 / shor
 Bestanden: COSTS_FTMO.csv, COSTS_FTMO_per_uur.csv (mediaan/P90 per NY-uur), data/swap_specs_17.csv, mt5_export_m5_vol.py; tick_volume voor alle 17 in data/m5_vol/ (gitignored, time;tick_volume); USOIL/UKOIL M5 nieuw in data/m5/.
 Kosten-poort-vuistregel: bruto ≥ 3× rondreis → indices ≥ 1,4–2,4 bp/trade, FX-majors ≥ 1,9–2,4 bp, XAU ≥ 2,5 bp.
 Volgende stap: S1 (noise-area intraday-momentum).
+
+## 2026-09-30 08:55 — S1: noise-area intraday-momentum (Zarattini–Aziz–Barbon) — alle 4 varianten AFGEWEZEN
+
+S1a: regel geverifieerd uit het volledige paper (open-access kopie, repository Universiteit St. Gallen; SSRN gaf 403, niet omzeild): σ = gemiddelde |slot_HH:MM/open−1| over 14 dagen per tijdstip, UB/LB = max/min(open, vorig slot)×(1±σ), beslissen alleen op :00/:30 vanaf 30 min na open, trailing stop max(UB,VWAP)/min(LB,VWAP), omkeren, alles dicht bij sluiting, sizing min(4, 2%/σ_dag). Samenvatting Strateeg klopte.
+S1b (PREREG_S1.md vóór berekening; s1_noise.py, FTMO-M5 2021–26, US500/US100/US30/GER40, VWAP met tick_volume):
+(a) basis: poort DOOR (bruto 2,72 bp vs 1,59); netto train +2,18 bp t 2,20 | test +0,68 t 0,87 | OOS 2025-01…2026-09 +0,31 t 0,28 | +50% spread t 0,52 | 5/6 jaar+ | dag-SR 0,57, skew +2,30, dagdip 3,05%, corr ORB 0,52.
+(b) elk uur: train +4,32 t 3,39 | test +0,38 t 0,35 | OOS +0,04 | SR 0,63.
+(c) zonder VWAP: train +2,51 t 2,24 | test +0,89 t 0,97 | OOS +0,44 | SR 0,61.
+(d) σ 28 d: train +1,36 t 1,29 | test +1,01 t 1,13 | OOS +0,83 | SR 0,44.
+Per symbool: alleen US100 t ≈ 2,2–2,6; US30 negatief. 2026 in alle varianten negatief.
+Conclusie: zelfde beeld als ORB (corr 0,5): klein positief in 2021–23, verdwijnt na publicatie/in 2024–26; nergens t ≥ 3,5. Profiel is wel gunstig (positief scheef, dagelijks vlak). TRIAL_COUNT 414.
+Volgende stap: S2 (Stocks-in-Play ORB op earnings-dagen).
