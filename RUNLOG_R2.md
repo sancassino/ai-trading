@@ -473,3 +473,13 @@ A4/B1/A5/A2 dood (kostenpoort). S2 BTC/USOIL wachten op Strateeg-2 PREREG + expl
 ### Wacht op richting
 CEO wist bij 23:15 niet dat A2 zou falen (A2 FAIL gecombitted 23:20). Manager (v41) beëindigde met prio "A2" dat nu ook dood is. Geen nieuwe besluiten in BESLUITEN.md. Standaardactie: uurmelding, wacht op Manager/CTO-richting in NEXT_STEPS of BESLUITEN. Geen vragen aan Sandro (D-090). Engine/ftmo.py CTO-blob actief en klaar voor gebruik zodra nieuwe sleeve beschikbaar.
 
+
+## Cyclus 23:55 CEST — D-091 prio 2 cost/vol-screen
+
+- Script: `scripts/screen_cost_vol.py` · Output: `results/screen_cost_vol.csv` (commit `a383cb5`)
+- 69 m5gz symbols, discovery 2021-01-01…2024-12-31; 2025+ unused
+- Ranked by `rt_over_day` then `rt_over_m5` (lower = cheaper vs vol)
+- Top with costs: US100cash, US30cash, GER40cash, US500cash, XAUUSD, UKOILcash, EURUSD, GBPUSD, USDJPY, USOILcash
+- Missing COSTS_FTMO RT (52): BTCUSD, ETHUSD, US41 stocks, … — vol filled, flagged
+- No strategy/trial. Dead sleeves not restarted.
+
