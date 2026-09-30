@@ -83,6 +83,7 @@ Familie = 1 trial (twee varianten samen; rapporteer beide, beslis op (a)).
 - **U3 (eerder gefaald):** U3 was dezelfde family maar werd gestopt op kostenpoort zonder formele trial. Dit is het PREREG voor een hertest indien data/spreads gunstiger zijn. Indien opnieuw gefaald → niet opnieuw openen.
 - **GS01 (gap-aligned index ORB):** DISTINCT — GS01 is index, dit is FX.
 
+
 ---
 
 ## CTO amend note (2026-09-30 22:05 Europe/Amsterdam)

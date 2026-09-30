@@ -72,6 +72,7 @@
   3. Kosten-poort: kans groot dat het al op de poort valt.
   4. N te klein voor dag-geclusterde t ≥ 2,5.
 
+
 ---
 
 ## CTO amend note (2026-09-30 22:05 Europe/Amsterdam)
