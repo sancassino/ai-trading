@@ -1,0 +1,56 @@
+=== C01_tsmom12
+- ontdekking ≤ 2024: 24868 dagen, 5941 positie-wijzigingen, netto -0.04 bp/dag, SR -0.01 (90%-CI -0.19…+0.16)
+- t: dag -0.12 | Newey-West -0.12 | blok-bootstrap -0.12 | H1 -0.61 | H2 +0.91 | +50% spread (NW) -0.13
+- skew -0.66 | max dagverlies 7.63% (P99 1.50%) | maxDD 64.4% (1× notional)
+- per instrument t: FX_EURUSD -1.02, FX_GBPUSD -0.18, FX_USDJPY +1.00, FX_AUDUSD -0.09, FX_USDCAD -0.43, FX_USDCHF -2.63, GOLD_F +1.04, SILVER_F -0.57, SPX +0.33, NDX +1.67, DAX +0.18, N225 +0.50
+- kosten: bruto +1651.4% | spread/commissie 10.0% | financiering +1609.5% (som over instrument-dagen) → kostenpoort FAALT
+- 5-jaarsvensters positief: 47% (9/19)
+- beslissing: stop: kostenpoort (geen trial) (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C02_faber
+- ontdekking ≤ 2024: 24868 dagen, 427 positie-wijzigingen, netto +1.48 bp/dag, SR +0.32 (90%-CI +0.14…+0.49)
+- t: dag +3.16 | Newey-West +3.15 | blok-bootstrap +3.14 | H1 +2.01 | H2 +2.59 | +50% spread (NW) +3.14
+- skew -0.61 | max dagverlies 12.98% (P99 2.16%) | maxDD 54.0% (1× notional)
+- per instrument t: SPX +2.75, NDX +2.48, DJI +0.35, DAX +1.70, N225 +1.10
+- kosten: bruto +2090.8% | spread/commissie 2.0% | financiering +1158.9% (som over instrument-dagen) → kostenpoort FAALT
+- 5-jaarsvensters positief: 84% (16/19)
+- beslissing: stop: kostenpoort (geen trial) (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C03_donchian
+- ontdekking ≤ 2024: 13604 dagen, 2930 positie-wijzigingen, netto +0.23 bp/dag, SR +0.13 (90%-CI -0.07…+0.36)
+- t: dag +0.99 | Newey-West +0.97 | blok-bootstrap +1.00 | H1 +3.17 | H2 -1.21 | +50% spread (NW) +0.93
+- skew -0.25 | max dagverlies 3.60% (P99 0.81%) | maxDD 38.3% (1× notional)
+- per instrument t: FX_EURUSD +0.94, FX_GBPUSD +1.87, FX_USDJPY -0.15, FX_AUDUSD -0.02, FX_USDCAD -0.09, FX_USDCHF -1.40, GOLD_F -1.15
+- kosten: bruto +275.3% | spread/commissie 12.8% | financiering +263.8% (som over instrument-dagen) → kostenpoort FAALT
+- 5-jaarsvensters positief: 60% (6/10)
+- beslissing: stop: kostenpoort (geen trial) (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C05_tsmom_mix
+- ontdekking ≤ 2024: 24868 dagen, 6022 positie-wijzigingen, netto +0.33 bp/dag, SR +0.13 (90%-CI -0.03…+0.29)
+- t: dag +1.29 | Newey-West +1.27 | blok-bootstrap +1.27 | H1 +0.98 | H2 +0.89 | +50% spread (NW) +1.25
+- skew +0.11 | max dagverlies 6.18% (P99 1.20%) | maxDD 38.7% (1× notional)
+- per instrument t: FX_EURUSD +0.75, FX_GBPUSD +1.20, FX_USDJPY +0.03, FX_AUDUSD +0.92, FX_USDCAD -0.73, FX_USDCHF -1.47, GOLD_F +0.64, SILVER_F -1.23, SPX +0.79, NDX +0.73, DAX +0.49, N225 +0.90
+- kosten: bruto +1332.4% | spread/commissie 17.0% | financiering +1066.2% (som over instrument-dagen) → kostenpoort FAALT
+- 5-jaarsvensters positief: 58% (11/19)
+- beslissing: stop: kostenpoort (geen trial) (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C07_xmom
+- ontdekking ≤ 2024: 24868 dagen, 1191 positie-wijzigingen, netto +0.00 bp/dag, SR +0.00 (90%-CI -0.16…+0.17)
+- t: dag +0.02 | Newey-West +0.02 | blok-bootstrap +0.02 | H1 -0.75 | H2 +0.27 | +50% spread (NW) +0.01
+- skew -1.41 | max dagverlies 6.32% (P99 0.86%) | maxDD 41.4% (1× notional)
+- per instrument t: FX_EURUSD -0.67, FX_GBPUSD -0.86, FX_USDJPY -0.26, FX_AUDUSD -0.94, FX_USDCAD -0.87, FX_USDCHF -2.38, GOLD_F +1.20, SILVER_F +0.12, SPX +0.49, NDX +1.39, DAX -0.20, N225 +0.00
+- kosten: bruto +1166.8% | spread/commissie 7.6% | financiering +1079.6% (som over instrument-dagen) → kostenpoort FAALT
+- 5-jaarsvensters positief: 21% (4/19)
+- beslissing: stop: kostenpoort (geen trial) (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C12_carry_trend
+- ontdekking ≤ 2024: 13547 dagen, 456 positie-wijzigingen, netto +0.01 bp/dag, SR +0.01 (90%-CI -0.20…+0.22)
+- t: dag +0.09 | Newey-West +0.09 | blok-bootstrap +0.10 | H1 +nan | H2 +0.09 | +50% spread (NW) +0.08
+- skew -0.77 | max dagverlies 1.72% (P99 0.47%) | maxDD 19.0% (1× notional)
+- per instrument t: FX_EURUSD +1.44, FX_GBPUSD +0.12, FX_USDJPY +1.01, FX_AUDUSD -0.46, FX_USDCAD -1.20, FX_USDCHF -0.58
+- kosten: bruto +71.4% | spread/commissie 2.0% | financiering +60.9% (som over instrument-dagen) → kostenpoort FAALT
+- 5-jaarsvensters positief: 20% (2/10)
+- beslissing: stop: kostenpoort (geen trial) (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)
+=== C17_fomc_cycle
+- ontdekking ≤ 2024: 8066 dagen, 7531 positie-wijzigingen, netto +2.77 bp/dag, SR +0.52 (90%-CI +0.24…+0.80)
+- t: dag +2.94 | Newey-West +2.85 | blok-bootstrap +3.05 | H1 +2.15 | H2 +2.01 | +50% spread (NW) +2.81
+- skew +0.46 | max dagverlies 9.03% (P99 2.54%) | maxDD 41.7% (1× notional)
+- per instrument t: SPX +2.81, NDX +3.03, DJI +1.78, DAX +2.24, N225 +0.32
+- kosten: bruto +1701.1% | spread/commissie 33.0% | financiering +664.8% (som over instrument-dagen) → kostenpoort FAALT
+- 5-jaarsvensters positief: 100% (6/6)
+- beslissing: stop: kostenpoort (geen trial) (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)

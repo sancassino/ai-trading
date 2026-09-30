@@ -17,3 +17,12 @@ U2 (RUNLOG): ORB met 0,5% risico per trade haalt in de FTMO-simulatie €1.095/m
 is onbevestigd (dag-geclusterd t 1,81). Een MT5-reconciliatie (EA met risico-sizing, echte spreads/slippage bij kleine OR) kost ± 1 u en
 geen trial. **Standaardactie (na 60 min):** MT5-reconciliatie uitvoeren (geen trial, informatief), zodat bij een positieve S3-uitslag direct
 bekend is of de sizing in MT5 standhoudt. Geen challenge, geen echte trades.
+
+## U-004 (2026-09-30 ≈ 13:25 Amsterdam) — CAT1-kostenpoort: mijn PREREG wijkt af van het bindende ENGINE_TEMPLATE (mijn fout)
+PREREG_CAT1 definieerde de kostenpoort als bruto ≥ 3× (spread + **financiering**); ENGINE_TEMPLATE §4 zegt bruto ≥ 3× **rondreiskosten**. Financiering
+zit al in het netto-rendement; mijn definitie telt die dubbel en wijst élke lang-gerichte regel af (bruto ≈ beta, financiering ≈ 5–8%/jr).
+Ik zag dit pas ná de run. Uitkomst: onder mijn PREREG faalt de poort voor alle 7 (geen trials); onder het template halen alle 7 de poort
+(7 trials → 421) en haalt **C02 Faber** G-ontdekking (min t 3,14; H1 2,01 / H2 2,59; SR 0,32; 84% 5j-vensters +; BH-q ≈ 0,003) — C17 net niet (NW 2,85).
+**Standaardactie (na 60 min):** het bindende ENGINE_TEMPLATE geldt (poort = spread/commissie; financiering alleen in netto), 7 trials geteld,
+C02 op de shortlist → reserve-OOS 2025-01→ één keer; daarna FTMO-mechaniek. Kanttekening: C02 is long-only indextiming, max dagverlies 13%
+(1987), maxDD 54% bij 1× — onder FTMO-regels waarschijnlijk ongeschikt (negatief scheef), maar dat bepaalt de volgende gate, niet ik.

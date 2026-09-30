@@ -702,3 +702,16 @@ Volgens ENGINE_TEMPLATE.md: één engine voor alle catalogusregels (catalogus/<i
 Kleine fix: COSTS_FTMO.csv had een puntkomma in een tekstveld (commissie_bron) → vervangen door komma.
 Validatie (replicatie, geen nieuwe trial): RSI(2)-dip boven SMA200 op SPX, NDX, DAX, FTSE, N225, GOLD_F 1990–2024 met FTMO-kosten: SR 0,52 (CI 0,28…0,80), t dag 3,12 / NW 3,21 / bootstrap 3,50, H1 3,00 / H2 1,39, +50% spread 3,15, skew −0,97, max dagverlies 3,75%; per instrument SPX 4,22, NDX 3,48, DAX −0,31, FTSE 1,70, N225 0,12, goud 0,65 — consistent met B2b (t 3,65; SPX 4,0, NDX 3,7). Corr met RSI2-sleeve 0,75, ORB −0,02; SPX>SMA200 +2,08 bp/dag, daaronder −2,44.
 Klaar voor R1 zodra STRATEGIE_CATALOGUS.md v1 (Strateeg) bestaat.
+
+## 2026-09-30 10:55 — R1/CAT1: catalogusrun 1 (7 regels) — uitkomst hangt aan een kostenpoort-definitie die ik fout heb vastgelegd; U-004 aan CEO
+
+PREREG_CAT1.md vóór berekening; engine/run_rule.py; D2 1927–2024 (ontdekking), reserve 2025→ onaangeraakt. Resultaten (min(NW, bootstrap) t | SR | H1/H2 | 5j-vensters +):
+C01 TSMOM 12m U12: −0,12 | −0,01 | −0,61/+0,91 | 47%
+C02 Faber SMA-10m 5 indices: **+3,14** | +0,32 | +2,01/+2,59 | 84% (skew −0,61, max dagverlies 12,98%, maxDD 54%)
+C03 Donchian 55/20 FX+goud: +0,97 | +0,13 | +3,17/−1,21 | 60%
+C05 TSMOM-mix 1/3/12m: +1,27 | +0,13 | +0,98/+0,89 | 58%
+C07 cross-asset-momentum 12-1: +0,02 | +0,00 | −0,75/+0,27 | 21%
+C12 carry + trendfilter FX: +0,09 | +0,01 | n.v.t./+0,09 | 20%
+C17 FOMC-cyclus (even weken) 5 indices: +2,85 (bootstrap 3,05) | +0,52 | +2,15/+2,01 | 100% (skew +0,46)
+**Methodefout (van mij):** PREREG_CAT1 definieerde de kostenpoort als bruto ≥ 3× (spread + financiering); het bindende ENGINE_TEMPLATE zegt rondreiskosten (financiering zit al in netto). Onder mijn definitie faalt de poort voor alle 7 (TRIALS.csv staat nu zo); onder het template halen alle 7 de poort en haalt alleen C02 Faber G-ontdekking (BH-q ≈ 0,003). Pas ná de run opgemerkt → niet zelf gekozen; vraag U-004 aan CEO (standaardactie: template geldt, 7 trials, C02 naar reserve-OOS).
+Overige waarnemingen: tijdreeksmomentum over FX/grondstoffen/indices levert na FTMO-financiering niets op (C01/C05/C07 ≈ 0); FX-carry met trendfilter ≈ 0 sinds 1999; FOMC-cyclus is sterk op US-indices (SPX 2,81, NDX 3,03) maar net onder de lat.
