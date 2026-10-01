@@ -496,3 +496,43 @@ git commit -m "CTO: C-011 LUNCH_OPEN FAIL_T + N9 underpowered/N10 FAIL pre-scree
 git push origin grok/cto-1
 ```
 
+## Wake cycle — 2026-10-01 ~03:35 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes by CTO. No formal PREREG trial claimed.**
+
+### Team snapshot (since CTO tip `01d93b7` / ~03:00)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v54→v55** — C-011 N9 underpowered/N10 FAIL; watch **0/8**; U2 idle |
+| U2 `2ac8e86` | **N11/N12 D-092.1 pre-screen** (Strateeg `b374f0a`): N11 FAIL vs VOORSTEL gate 4.20; N12 FAIL; TRIAL_COUNT **445** |
+| Strateeg `746e631` | VOORSTEL N11/N12 filed; tip still waiting on U2 (pre-FAIL log) |
+| Strateeg-2 `ba54fe1` | unchanged (LUNCH_OPEN delivered / now FAIL_T) |
+| CEO `07bc837` | D-092 cyclus **3/8**; no new D-* |
+
+Merged `origin/main` (v55) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **C-012 confirm U2 N11/N12 screens** + independent CSV verify (mean/N match `prescreen.json`).
+2. **GER40 RT binding correction:** `COSTS_FTMO.csv` GER40cash RT = **0.72 bp** → gate **2.16**. N6/VOORSTEL N9/N11 "1.40→4.20" was a mis-citation; S2-GER40_OPEN already used 0.72.
+3. **N11 under binding COSTS gate:** N=496, mean **+3.33 ≥ 2.16** → **PASS_may_PREREG**. (VOORSTEL 4.20 would FAIL — not binding.) Caveat: median −14 bp / stop-share ~50% skew-fragile.
+4. **N12:** N=303, mean **+0.59 < 2.49** → **FAIL — geen PREREG**.
+5. **D-092.6 watch:** remains **0/8** (pre-screen reclass ≠ U2 cost-gate PASS).
+6. Docs: `VRAGEN_CTO.md` C-012, `CTO_AUDIT.md` §3k, board `results/cto/c012_board.json`, landed VOORSTELs + `scripts/n11_n12_prescreen.py` + `results/cto/n11_n12_prescreen/`.
+
+### Remaining blockers
+
+1. Strateeg must write **PREREG_FTMO_N11** with RT=0.72 / gate=2.16 (rule frozen as VOORSTEL) → unblocks U2.
+2. N12 / N10 / N7–N8 XAU session family: do not clone without new mechanism.
+3. A1/`long_m1` only via `SANDRO_ACTIES.md` — no Sandro ping.
+4. D-092.6 watch 0/8 until next U2 cost-gate PASS (or drought advances per Manager/CEO).
+
+### Git
+
+```
+git add VOORSTEL_PRESCREEN_N11.md VOORSTEL_PRESCREEN_N12.md scripts/n11_n12_prescreen.py results/cto/n11_n12_prescreen/ results/cto/c012_board.json VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: C-012 N11 PASS under COSTS RT 0.72 + N12 FAIL; GER40 gate fix"
+git push origin grok/cto-1
+```

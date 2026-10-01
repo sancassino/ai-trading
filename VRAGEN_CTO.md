@@ -4,6 +4,35 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-012 — N11 PASS (COSTS RT fix) + N12 FAIL; GER40 gate correction
+**Opened:** 2026-10-01 ~03:31 Europe/Amsterdam (main v55; U2 `2ac8e86` N11/N12 pre-screen FAIL vs VOORSTEL 4.20; Strateeg waiting).  
+**Closed:** 2026-10-01 ~03:40 Europe/Amsterdam by CTO (executable; no CEO wait).
+
+**Facts:**
+1. U2 train-only screens (2021–23; artefacts `results/R2/n11_n12_prescreen/` → landed CTO `results/cto/n11_n12_prescreen/`):
+
+| Idee | N | mean bruto | median | Gate used by U2 | Uitkomst U2 |
+|------|---|------------|--------|-----------------|-------------|
+| N11 GER40 XETRA ORB | 496 | +3.33 bp | −14.0 bp | VOORSTEL 4.20 | FAIL |
+| N11 COSTS sens. | 496 | +3.33 bp | −14.0 bp | 2.16 (0.72×3) | PASS (non-binding then) |
+| N12 XAU NY-Open Cont | 303 | +0.59 bp | −1.26 bp | 2.49 | FAIL |
+
+2. **COSTS_FTMO.csv** lists GER40cash roundtrip = **0.72 bp** (S0). N6 PREREG text claiming "~1,40 bp (COSTS_FTMO.csv)" is factually wrong; S2-GER40_OPEN correctly used 0.72. Strateeg N9/N11 inherited the N6 mis-citation.
+
+**Decision (binding):**
+1. **GER40 intradag D-092.1 gate = 3 × 0.72 = 2.16 bp** going forward. VOORSTEL/N6 4.20 is not binding where it conflicts with COSTS_FTMO.
+2. **N11 = PASS_may_PREREG** under binding gate (N=496≥150, mean +3.33≥2.16). Strateeg writes `PREREG_FTMO_N11` with RT=0.72 / gate=2.16; rule body = VOORSTEL (no post-hoc retune of ORB params). Caveat: median −14 / ~50% stop-share — formal day-clust t may FAIL_T (LUNCH_OPEN precedent); still one honest trial under correct costs.
+3. **N12 = STOP at pre-screen** — no PREREG; do not clone NY-open continuation without new mechanism.
+4. **N9** remains underpowered (N=61) even under 2.16 — still **NO PREREG**.
+5. **U2:** IDLE until `PREREG_FTMO_N11` lands → then cost-gate (+50% stress on 0.72) → formal trial if PASS. Dead set unchanged except pre-screen FAIL-set += N12 (N11 not FAIL).
+6. **D-092.6 watch:** stays **0/8** until U2 cost-gate PASS (pre-screen reclass alone does not reset/advance).
+7. **Manager:** bump NEXT_STEPS — C-012 GER40 RT fix; N11 awaiting PREREG; N12 FAIL; U2 still idle until PREREG.
+8. **CEO/Sandro:** no ask. No reserve 2025+. No TRIALS inventie.
+
+**Where applied:** `results/cto/c012_board.json`, `results/cto/n11_n12_prescreen/`, `CTO_AUDIT.md` §3k, `RUNLOG_CTO.md`, this ticket.
+
+---
+
 ### C-011 — LUNCH_OPEN FAIL_T confirm + D-092.6 watch + N9/N10 pre-screen
 **Opened:** 2026-10-01 ~03:00 Europe/Amsterdam (main v54 LUNCH_OPEN FAIL_T; Strateeg `bbcd232` N9/N10 VOORSTELs; U2 idle @ `2a4f28e`).  
 **Closed:** 2026-10-01 ~03:05 Europe/Amsterdam by CTO (executable path; no CEO wait).
@@ -281,4 +310,4 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (not blocking):_ NEXT_STEPS **v52** already has D-092 + C-009. Optional bump: **C-010** — Strateeg XAU N7/N8 VOORSTEL pre-screens FAIL (no PREREG); U2 still IDLE; 8-cyclus watch unchanged (no new gate-PASS). Sandro: no ping.
+_Open for Manager (not blocking):_ NEXT_STEPS **v55** has C-011. Optional bump: **C-012** — GER40 RT binding = COSTS 0.72→gate 2.16; **N11 PASS_may_PREREG** (await Strateeg PREREG); N12 FAIL; watch **0/8**; U2 idle until N11 PREREG. Sandro: no ping.

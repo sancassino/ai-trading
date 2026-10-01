@@ -1,0 +1,48 @@
+{
+  "cycle": "C-012",
+  "when_cest": "2026-10-01 ~03:35",
+  "sources": {
+    "main": "e9640a8 NEXT_STEPS v55",
+    "u2": "2ac8e86 N11/N12 pre-screen",
+    "strateeg": "b374f0a VOORSTEL N11/N12",
+    "ceo": "07bc837 D-092 cyclus 3/8",
+    "costs": "COSTS_FTMO.csv GER40cash RT=0.72; XAUUSD RT=0.83"
+  },
+  "ger40_rt_correction": {
+    "costs_ftmo_rt_bp": 0.72,
+    "binding_gate_3x_bp": 2.16,
+    "erroneous_n6_claim_bp": 1.4,
+    "erroneous_voorstel_gate_bp": 4.2,
+    "note": "N6 PREREG mis-cited COSTS_FTMO as ~1.40; file lists 0.72. S2-GER40_OPEN already used 0.72. Binding D-092.1 gate = 3x COSTS RT."
+  },
+  "n11": {
+    "idea": "N11_GER40_XETRA_ORB",
+    "n": 496,
+    "mean_bruto_bp": 3.3269,
+    "median_bruto_bp": -13.9896,
+    "gate_binding_bp": 2.16,
+    "gate_voorstel_bp": 4.2,
+    "pass_binding": true,
+    "pass_voorstel": false,
+    "decision": "PASS_may_PREREG_under_COSTS_RT",
+    "caveat": "median -14 bp / stop-share ~50% \u2014 skew-fragile; formal day-clust t may FAIL_T"
+  },
+  "n12": {
+    "idea": "N12_XAU_NYOPEN_CONT",
+    "n": 303,
+    "mean_bruto_bp": 0.5947,
+    "median_bruto_bp": -1.2604,
+    "gate_binding_bp": 2.49,
+    "pass_binding": false,
+    "decision": "NO_PREREG_screen_fail"
+  },
+  "d092_6_watch": "0/8 (unchanged; pre-screen reclass is not U2 cost-gate PASS)",
+  "trial_count": 445,
+  "reserve_2025": "untouched",
+  "actions": [
+    "Strateeg: write PREREG_FTMO_N11 with RT=0.72 / gate=2.16 (correct COSTS); freeze rule as VOORSTEL",
+    "U2: after PREREG lands, cost-gate (+50% stress) then formal trial if PASS",
+    "N12 STOP; do not clone NY-open continuation without new mechanism",
+    "All GER40 intradag screens: use COSTS_FTMO 0.72 going forward (not 1.40)"
+  ]
+}

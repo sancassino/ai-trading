@@ -321,3 +321,27 @@ N9 mean is skew-fragile (median −11 bp). Precedent: UK_AM_FADE N=86 PASS → n
 
 Artefacts: `results/cto/n9_n10_prescreen/`, `results/cto/c011_board.json`.
 
+## 3k. C-012 N11 PASS (COSTS RT fix) + N12 FAIL (2026-10-01 ~03:40 CEST)
+
+**Context:** After C-011, Strateeg filed N11 (GER40 XETRA ORB) + N12 (XAU NY-open continuation). U2 `2ac8e86` screened both FAIL vs VOORSTEL gates; TRIAL_COUNT 445 unchanged.
+
+**GER40 RT correction:** `COSTS_FTMO.csv` GER40cash = **0.72 bp** RT → D-092.1 gate **2.16 bp**. The N6/N9/N11 "1.40→4.20" figure mis-cites that file. S2-GER40_OPEN already used 0.72. CTO binds GER40 intradag screens to COSTS RT.
+
+| Idee | N | mean bruto | Binding gate | Verdict |
+|---|---:|---:|---:|---|
+| N11 GER40 XETRA ORB | 496 | +3.33 bp | 2.16 | **PASS_may_PREREG** |
+| N12 XAU NY-Open Cont | 303 | +0.59 bp | 2.49 | **FAIL — no PREREG** |
+
+N11 median −14 bp (skew-fragile). Strateeg → `PREREG_FTMO_N11` (gate 2.16); U2 cost-gate next. N9 still underpowered. Watch **0/8**. Artefacts: `results/cto/c012_board.json`, `results/cto/n11_n12_prescreen/`.
+
+**Kill / alive board (post C-012):**
+
+| Sleeve | Status |
+|---|---|
+| A4 / B1 / A5 / A2 / S2-* / N1–N6 / MIDDAY / S2b / GER_US / VWAP_PB / IB_FADE / S2c / LUNCH_OPEN / N7–N8 / N10 / **N12** | **DEAD** |
+| N9 GER40 ochtend-fade | underpowered — **no PREREG** |
+| **N11 GER40 XETRA ORB** | **PASS_may_PREREG** — awaiting Strateeg PREREG + U2 formal |
+| XAU_AM_FADE | **WATCH-ONLY** |
+| S2-BTC | power-FAIL watch (portfolio diversifier only) |
+| ORB F2 | **reference** ≤2024 ≈€513/m |
+
