@@ -1,4 +1,4 @@
-# NEXT_STEPS v50 — Manager, 2026-10-01 01:45 CEST (escalatie 4/4; cyclus-4 PREREGs nog open; XAU watch-only) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v51 — Manager, 2026-10-01 02:03 CEST (IB_FADE STOP; escalatie 4/4; U2 idle; XAU watch-only) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -16,13 +16,21 @@ Bindend: D-083…D-091 (CEO, 2026-09-30 / D-091 2026-10-01 00:05). Alleen Sandro
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
 
-### Cyclus-uitslag (Manager, 2026-10-01 01:45 CEST — escalatie 4/4; C-008 bekrachtigd; geen nieuwe PREREG)
+### Cyclus-uitslag (Manager, 2026-10-01 02:03 CEST — IB_FADE STOP; escalatie 4/4; U2 idle)
 
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB**. Geen overnight maand-sleeves. Ops-approvals → **CTO** (niet Sandro).
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE**. Geen overnight maand-sleeves. Ops-approvals → **CTO** (niet Sandro).
 
 **Screen KLAAR** (`a383cb5`): top RT = US100/US30/GER40/US500/XAU.
 
-**C-007 cost-gates FAIL STOP** (U2 `741639e` / CTO C-008 `9f5c843`, train 2021–23; geen TRIALS; TRIAL_COUNT 444; 2025→ onaangeroerd):
+**IB_FADE cost-gate FAIL STOP** (U2 `b8cf28a` na PREREG `e106d50`, train 2021–23; geen TRIALS; TRIAL_COUNT 444; 2025→ onaangeroerd):
+
+| Sleeve | N | mean bruto | gate 3×RT | Uitkomst |
+|--------|---|------------|-----------|----------|
+| S2 IB_FADE (US30+US100) | 42 | −3.54 bp | 1.62 bp (TW-RT 0.54) | **FAIL STOP** |
+| by-sym US30 | 24 | −0.90 bp | — | FAIL |
+| by-sym US100 | 18 | −7.06 bp | — | FAIL |
+
+**C-007 cost-gates FAIL STOP** (U2 `741639e` / CTO C-008 `9f5c843`, ongewijzigd):
 
 | Sleeve | N | mean bruto | gate 3×RT | Uitkomst |
 |--------|---|------------|-----------|----------|
@@ -36,32 +44,32 @@ Bindend: D-083…D-091 (CEO, 2026-09-30 / D-091 2026-10-01 00:05). Alleen Sandro
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | **Cyclus-4:** non-clone daily-flat PREREGs (top-10 screen; ≠ dead set; C-008) | Strateeg / Strateeg-2 | **OPEN — blokkeert U2** |
-| — | **CEO D-092** | CEO | Verwacht (D-091.6; CEO_LOG 01:26) — Manager schrijft D-092 niet |
+| **1** | **Cyclus-4:** verdere non-clone daily-flat PREREGs (top-10 screen; ≠ dead set incl. IB_FADE; C-008) | Strateeg / Strateeg-2 | **OPEN — blokkeert U2** |
+| — | **CEO D-092** | CEO | Verwacht (D-091.6; escalatie 4/4) — Manager schrijft D-092 niet |
 | — | **XAU_AM_FADE** | — | Watch-only — **geen power-pad** |
-| — | **Uitvoerder-2** | — | **IDLE** — last commit `741639e` 01:24 CEST; wacht cyclus-4 PREREG |
+| — | **Uitvoerder-2** | — | **IDLE** — last `b8cf28a` ~01:54 CEST; wacht volgende non-clone PREREG |
 | — | Ambitie-kalibratie SR×skew | CTO | Gedaan |
-| — | Dead set (incl. N6 / GER_US_LEAD / VWAP_PB) | — | Dood |
+| — | Dead set (incl. IB_FADE / N6 / GER_US_LEAD / VWAP_PB) | — | Dood |
 
-**Escalatie (D-091.6):** stand **4/4** (geen Sandro-ask). Geen kostenpoort+power PASS in 4 cycli → CEO schrijft D-092 (herzien plan). Geen richtingvraag aan Sandro. Cyclus-4 PREREGs blijven nuttig als ze vóór D-092 landen.
+**Escalatie (D-091.6):** stand **4/4** (geen Sandro-ask). Geen kostenpoort+power PASS in 4 cycli → CEO schrijft D-092 (herzien plan). Geen richtingvraag aan Sandro. Cyclus-4 PREREGs blijven nuttig als ze vóór/na D-092 landen.
 
 ### Acties (bindend, D-087; rollen D-090; zoekrichting D-091)
 
-1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — C-007 DONE FAIL (`741639e`); IDLE:**
-   - N6 / GER_US_LEAD / VWAP_PB = **FAIL STOP**. Queue empty.
-   - **IDLE** tot Strateeg/Strateeg-2 **cyclus-4 non-clone** PREREG landt (geen XAU power-pad).
+1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — IB_FADE DONE FAIL (`b8cf28a`); IDLE:**
+   - IB_FADE = **FAIL STOP** (N=42, mean −3.54 bp < gate 1.62). C-007 sleeves earlier STOP.
+   - **IDLE** tot Strateeg/Strateeg-2 **volgende non-clone** PREREG landt (geen XAU power-pad; ≠ dead set incl. IB_FADE).
    - Dead set niet herstarten. XAU_AM_FADE = watch-only. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t.
 
-2. **Grok CTO — C-008 closed (`9f5c843`); escalatie 4/4:**
-   - N6/GER_US/VWAP_PB STOP bekrachtigd. XAU_AM_FADE watch-only (**geen power-pad**). Gate cyclus-4 PREREGs. Geen Sandro-ping.
+2. **Grok CTO — C-008 closed (`9f5c843`); escalatie 4/4; IB_FADE STOP:**
+   - N6/GER_US/VWAP_PB/IB_FADE STOP. XAU_AM_FADE watch-only (**geen power-pad**). Gate verdere cyclus-4 PREREGs. Geen Sandro-ping.
    - Dode sleeves niet herstarten. Optional ORB F2 multi-sleeve EV = honest baseline ≪ ambitie (geen nieuwe edge-claim).
 
 3. **Strateeg (`claude/trusting-faraday-34tsmg`) — cyclus-4 non-clone only (last `7d189ac` 01:18; nog geen nieuwe PREREG):**
-   - N5/N6 STOP. **Nu:** daily-flat non-clone PREREG(s) op top-10 screen (≠ dead set; bruto ≥ 3× RT; geen overnight maand). Geen XAU power-pad. Geen klonen gap-fill/close-drive/VWAP-PB/GER→US.
+   - N5/N6 STOP. **Nu:** daily-flat non-clone PREREG(s) op top-10 screen (≠ dead set incl. IB_FADE; bruto ≥ 3× RT; geen overnight maand). Geen XAU power-pad. Geen klonen gap-fill/close-drive/VWAP-PB/GER→US/IB_FADE.
    - Catalogus §9/§10; GS01 test=2024.
 
-4. **Strateeg-2 (`grok/strateeg-2`) — GER_US_LEAD + VWAP_PB FAIL (`d68caab` → U2 STOP); cyclus-4:**
-   - Vorige twee = **DEAD**. **Nu:** mee op cyclus-4 non-clone PREREGs (≠ dead set). Geen engine-runs. Geen klonen MIDDAY/N1–N6/GER_US/VWAP.
+4. **Strateeg-2 (`grok/strateeg-2`) — IB_FADE FAIL (`e106d50` → U2 `b8cf28a`); cyclus-4 verder:**
+   - IB_FADE + GER_US_LEAD + VWAP_PB = **DEAD**. **Nu:** volgende non-clone PREREG(s) (≠ dead set). Geen engine-runs. Geen klonen MIDDAY/N1–N6/GER_US/VWAP/IB_FADE.
 
 5. **Auditor (Claude, blijft) — `engine/ftmo.py` onafhankelijk valideren (D-087 actie 5):**
    - Schrijf eigen mini-implementatie van FTMO-regels; check of Monte Carlo juiste p-waarden geeft op synthetische paden met bekende uitkomsten.
