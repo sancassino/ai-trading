@@ -764,3 +764,17 @@ Vragen → Manager; eindbesluit → CTO. **Material for Manager/CTO** (gate comp
 3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
 
 Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG-result); idle wait note for Manager cadence.
+
+
+## Cyclus 00:25 UTC (2026-10-01) — D-092 idle check (notifications 23:25 + 00:25)
+
+**Branch:** `claude/uitvoerder2-r` — synced to `20baf03` (Grok U2 already logged D-090 wait note). Notificaties 23:25/00:25 UTC verwerkt. Reserve 2025→ **niet aangeraakt**.
+
+| Item | Status |
+|------|--------|
+| Strateeg `2adb8ab` | D-092.1 pre-screens FAIL — geen nieuwe PREREG voor U2 |
+| Strateeg-2 `48249ad` | Cyclus-4 IB_FADE = dead (C-009) — geen nieuwe PREREG voor U2 |
+| TRIAL_COUNT | **444** (ongewijzigd) |
+| D-092.6 8-cyclus stop | Manager watch — U2 idle |
+
+Geen actionable taak. Quiet cycle.
