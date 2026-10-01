@@ -2,6 +2,28 @@
 
 Append-only log. Closed items stay; new questions go at the top of the open section.
 
+## Open (blocking / wait — no CEO ask beyond D-095)
+
+### C-019 — Absorb D-095 P1 ORB+BTC; wait U2 step 1 (no reserve)
+**Opened:** 2026-10-01 ~08:30 Europe/Amsterdam (CEO `c7c5c43` D-095 + PREREG P1; main still v65 pre-absorb).  
+**Status:** OPEN — CTO blocked on U2 step 1 + CEO one-shot reserve release before step 2.
+
+**Facts:**
+1. C-018 delivered (`7c5755c`); Manager synced NEXT_STEPS **v65** (`2945996`).
+2. CEO filed `PREREG_FTMO_P1_ORB_BTC.md` + **D-095**: step1 U2 BTC power 2021–2024 N≥150 → step2 CTO reserve-run once CEO releases 2025+ for P1 only → Auditor recompute; forward paper parallel.
+3. U2 tip `4c62012` just closed N24–N27 FAIL; idle until next PASS. D-095 step1 not started on U2 tip yet (PREREG not on U2/main).
+4. TRIAL_COUNT **447**. Reserve untouched. EINDSTAND = tussenstand; C-017 ping already delivered — **no Sandro re-nag**.
+
+**Decision (binding under D-095):**
+1. Absorb PREREG onto `grok/cto-1`; do **not** open reserve or run step 2 until CEO vrijgave after U2 PASS.
+2. Manager should absorb D-095 into NEXT_STEPS (not CTO's main edit).
+3. U2 owns step 1 next; CTO prepares only, then executes single reserve-run when unlocked.
+4. No eval advice / no FTMO signup.
+
+**Where applied:** `PREREG_FTMO_P1_ORB_BTC.md`, `results/cto/c019_board.json`, `RUNLOG_CTO.md`, this ticket.
+
+---
+
 ## Closed (CTO default action — no CEO wait)
 
 ### C-018 — D-094 tracks 3+5 combine + FTMO sizing (C-018 deliverable)
@@ -432,4 +454,4 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (blocking for NEXT_STEPS accuracy):_ absorb **D-093** from CEO `7fa5ba7` — freeze search; Watch **8/8** (not 0/8); no new PREREG/pre-screen; maintenance 1×/4u; point to `EINDSTAND_FTMO.md`. Optional: note C-015 N18 FAIL_T confirm. Sandro: **yes** — EINDSTAND decision (parent relay).
+_Open for Manager:_ absorb **D-095** + `PREREG_FTMO_P1_ORB_BTC.md` from CEO `c7c5c43` into NEXT_STEPS (v65 still ends at D-094a). Note U2 N24–N27 FAIL (`4c62012`). Sandro: **no new ping** (EINDSTAND tussenstand; C-017 already delivered).

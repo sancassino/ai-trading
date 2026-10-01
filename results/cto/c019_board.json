@@ -1,0 +1,32 @@
+{
+  "id": "C-019",
+  "ts_ce": "2026-10-01T08:30:00+02:00",
+  "branch": "grok/cto-1",
+  "status": "WAIT_U2_P1_STEP1",
+  "absorbs": {
+    "D-094": "c1860e2",
+    "D-094a": "353aa31",
+    "D-095": "c7c5c43",
+    "PREREG": "PREREG_FTMO_P1_ORB_BTC.md",
+    "main_NEXT_STEPS": "v65 @ 2945996 (pre-D-095; Manager lag)"
+  },
+  "prior_deliverable": "C-018 @ 7c5755c",
+  "p1_gates": {
+    "step1_owner": "Uitvoerder-2",
+    "step1": "S2-BTC 2021-01..2024-12 cost+stress; N>=150 or portfolio STOP",
+    "step2_owner": "CTO after CEO one-shot reserve release for P1 only",
+    "step2": "single reserve-run 2025-01→ with frozen eqvol scales from train; NO run until CEO release",
+    "step3": "forward paper parallel (U1/CTO)",
+    "reserve_2025": "LOCKED — not opened this cycle"
+  },
+  "team_snap_0830_ce": {
+    "TRIAL_COUNT": 447,
+    "U2": "4c62012 N24-N27 FAIL IDLE wait PASS",
+    "Strateeg": "267fc20 D-094 N24-N27 open then U2 FAIL",
+    "S2": "52caf6a still D-093 onderhoud lag",
+    "CEO": "c7c5c43 D-095+P1",
+    "EINDSTAND": "OPEN tussenstand; PING already delivered — no re-nag"
+  },
+  "no_eval_advice": true,
+  "no_ftmo_signup": true
+}

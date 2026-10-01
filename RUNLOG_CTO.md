@@ -778,3 +778,49 @@ git add scripts/c018_combine_ftmo.py results/cto/c018_* RUNLOG_CTO.md VRAGEN_CTO
 git commit -m "CTO: C-018 D-094 tracks 3+5 combine + FTMO sizing grids"
 git push origin grok/cto-1
 ```
+
+
+## C-019 — absorb D-095 P1 ORB+BTC; wait U2 step 1 — 2026-10-01 ~08:30 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No FTMO signup / spend. No EINDSTAND re-nag (C-017 PING already delivered).**
+
+### Team snapshot vs last wake (~07:53 CEST)
+
+| Item | ~07:53 | ~08:30 |
+|---|---|---|
+| main NEXT_STEPS | v62 `e0c4be3` | **v65** `2945996` (pre-D-095 lag) |
+| grok/cto-1 | `b589af8` C-017 | **`7c5755c` C-018** → this C-019 |
+| Freeze | D-093 Watch 8/8 | **D-094/D-094a OFF** (Sandro); **D-095** P1 filed |
+| TRIAL_COUNT | 447 | **447** (no new formal) |
+| U2 | `df5fa1c` IDLE | **`4c62012`** N24–N27 FAIL → IDLE wait PASS |
+| Strateeg | `68e054f` | **`267fc20`** D-094; N20–N27 FAIL batches |
+| S2 | `52caf6a` | **`52caf6a`** still D-093 onderhoud (lag) |
+| CEO | `c793b4b` geen nieuws | **`c7c5c43`** D-095 + `PREREG_FTMO_P1_ORB_BTC` |
+| EINDSTAND | OPEN (pinged) | OPEN tussenstand; **no re-nag** |
+
+### D-095 / P1 (binding)
+
+CEO `c7c5c43` (~08:27 CEST): first real portfolio candidate = ORB+BTC eqvol, frozen in `PREREG_FTMO_P1_ORB_BTC.md` (copied onto this branch). Order:
+1. **U2** — step 1: S2-BTC 2021–2024-12 cost+stress; N≥150 else portfolio STOP.
+2. **CEO** — one-shot reserve vrijgave for P1 only (D-084 per kandidaat) on PASS.
+3. **CTO** — single reserve-run with train-frozen scales; Auditor independent recompute.
+4. Forward paper parallel (U1/CTO). Other D-094 tracks continue. Diagnostic ceilings (N11/N18/LUNCH etc.) stay non-candidates.
+
+### Work this cycle
+
+- Copied `PREREG_FTMO_P1_ORB_BTC.md` from CEO tip (byte-identical content; no rule edits).
+- Logged wait-state board `results/cto/c019_board.json`.
+- **Did not** open 2025+ bars / run reserve / append TRIALS / ping Sandro.
+
+### CTO next (when unblocked)
+
+Highest leverage after U2 step-1 PASS + CEO reserve release: implement/run one-shot P1 reserve harness under PREREG constants (eqvol scales from train 2021–23 only; max daily loss ≤4%). Until then: stay on tracks 3+5 iteration only if new weak+ PASS sleeves appear; otherwise QUIET hold on P1 gate.
+
+### Git
+
+```
+git add PREREG_FTMO_P1_ORB_BTC.md results/cto/c019_board.json RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-019 absorb D-095 P1 ORB+BTC; wait U2 step1 (no reserve)"
+git push origin grok/cto-1
+```
