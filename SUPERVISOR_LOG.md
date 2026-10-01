@@ -67,6 +67,7 @@
 - 2026-10-01 07:05 Amsterdam — cyclus :05: geen nieuws; D-093 freeze stabiel; alle agents idle.
 - 2026-10-01 07:35 Amsterdam — cyclus :35: geen nieuws; D-093 freeze ongewijzigd; alle agents idle.
 - 2026-10-01 08:05 Amsterdam — cyclus :05: D-094 GROTE WIJZIGING — Sandro heeft D-093 bevriezing ingetrokken; breed zoeken hervat (kortere historie, nieuwe markten, combineren, 7 nieuwe sporen); D-094a: minimum 5 jaar historie (3 jaar alleen met vooraf vastgelegde reden); Auditor-taak D-094 = steekproef gate-PASS/FAIL_T hertesten + portefeuille-EV nabouwen; team terug op volle cadans; NEXT_STEPS v63 actief.
+- 2026-10-01 17:05 Amsterdam — cyclus :05: geen nieuws; Strateeg pipeline N88/N89/N90 OPEN; U2 idle; CEO 17:15 geen nieuws; CTO geen nieuwe commits; TRIAL 457 ongewijzigd.
 - 2026-10-01 16:35 Amsterdam — cyclus :35: geen nieuwe trials; Strateeg pipeline N88/N89/N90 OPEN; U2 idle (N87 FAIL_T delivered); CEO 16:45 N90 nieuwe familie O bevestigd; CTO geen nieuwe commits; TRIAL 457 ongewijzigd.
 - 2026-10-01 16:05 Amsterdam — cyclus :05: N87 FAIL_T verwerkt door Strateeg; N90 GBPJPY carry+momentum NEW_FAMILY O geopend; N88/N89 nog open; CEO 16:15 mini-review N87; U2 idle; CTO geen nieuwe commits; TRIAL 457 ongewijzigd.
 - 2026-10-01 15:35 Amsterdam — cyclus :35: N87 US30cash opening-gap fade FAIL_T (TRIAL 457; t_NW=1.63 < 2.0; test sterk negatief mean=−17.7 bp); N88/N89 nog open; CEO 15:45 kostenpoort bevestigd; Strateeg 15:20 geen nieuws; CTO geen nieuwe commits; Strateeg-2 drought aanhoudend; TRIAL 457.
