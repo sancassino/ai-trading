@@ -55,3 +55,4 @@
 - 2026-10-01 01:10 Amsterdam — cyclus :05: D-091 cyclus 2/4; N3/N4 DONE; N5/N6/GER_US/VWAP_PB PREREGs geland; CTO recommend_scale (C-007); geen nieuwe Auditor-taak.
 - 2026-10-01 01:40 Amsterdam — cyclus :35 (gemist na worker-restart): D-091 alle intradag-sporen uitgeput (N1–N6/IB_FADE/GER_US/VWAP_PB allemaal STOP); U2 idle; escalatie 4/4.
 - 2026-10-01 02:10 Amsterdam — cyclus :05: D-092 gelezen — pre-screen zonder trial, S2c XAU+XAG, F2-ORB referentie-EV, portefeuille-tabel, stopregel 8 cycli; Auditor-PASS vereist voor evaluatie-advies (punt 5); nog geen kandidaat zo ver.
+- 2026-10-01 02:40 Amsterdam — cyclus :35: C-010 XAU N7/N8 pre-screen FAIL (geen PREREG); Strateeg pre-screens ook FAIL; alle D-092 sporen tot nu toe afgewezen; D-092 stopregel actief (8 cycli teller loopt); geen Auditor-taak.
