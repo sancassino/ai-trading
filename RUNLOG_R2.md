@@ -1312,3 +1312,43 @@ All four: **N≥150** but mean bruto **below** gate → STOP (no PREREG ask).
 **TRIAL_COUNT unchanged (447).** Reserve 2025→ untouched.
 
 **U2 next:** (1) wait CEO P1 reserve-vrijgave / CTO stap 2; (2) wait Strateeg PREREG_FTMO_N35 / N36 → then formal trial. MATERIAL for Manager/CTO/CEO (stap1 PASS unlocks D-095 path). No Sandro-ping (agents openen/kopen niets).
+
+## Cyclus 09:19–09:25 CEST (2026-10-01) — gate GBPJPY + formal N35/N36 (NEXT_STEPS v67)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` @ `2c960e5` (NEXT_STEPS **v67**; D-096 P1 FAIL; Freeze **OFF**). Tip before: `43c395e`.
+**FF not possible** (diverged) → ort merge `9227faa`.
+
+### Prio-1a — PREREG_S2_GBPJPY_EU_MOM cost-gate + formal → **FAIL_STRESS_then_FAIL_T**
+
+**PREREG:** landed from `origin/grok/strateeg-2` @ `6444d30`.
+**Script:** `scripts/s2_gbpjpy_eu_mom_gate.py` → `results/R2/gbpjpy_eu_mom_prep/`.
+**Frozen rule:** 08:00→11:30 |ret|≥30 bp → continue @11:30; stop 0.40×ATR / target 0.60×ATR; flat 14:30; same-bar stop wins.
+**Window:** train 2021–2023; test 2024; **reserve 2025→ untouched**.
+
+| Metric | Train | Test |
+|--------|------:|-----:|
+| N | 170 | 59 |
+| mean bruto | **+3.41 bp** | −1.05 bp |
+| gate 3×RT (3.33) | **PASS** | — |
+| stress 3×(RT×1.5) (4.995) | **FAIL** | — |
+| t day-clust / NW-L5 netto | 1.04 / 1.04 | −0.64 / −0.74 |
+
+Year-split bruto: 2021 +6.59 / 2022 +0.18 / 2023 +6.21. Time-exit ~79%. **Dead/FAIL += GBPJPY_EU_MOM.**
+
+### Prio-1b — PREREG_FTMO_N35 + N36 landed Strateeg `1d5bdb2` → formal gates
+
+**Script:** `scripts/n35_n36_cost_gate_trial.py` → `results/R2/n35_n36_prep/`.
+Rules frozen = `n35_n37_prescreen` sims (N36 data file `XAUUSD.csv.gz`; PREREG typo `XAUUSDcash`).
+
+| Sleeve | N train | mean bruto | gate | stress | t train | t test | Uitkomst |
+|--------|--------:|-----------:|-----:|-------:|--------:|-------:|----------|
+| **N35** US100 EU→US | 214 | +6.60 | 1.98 **PASS** | 2.97 **PASS** | 1.22 | 0.29 | **FAIL_T** |
+| **N36** XAU NY-drive | 150 | +2.80 | 2.49 **PASS** | 3.74 **FAIL** | 0.64 | 0.68 | **FAIL_STRESS_then_FAIL_T** |
+
+**Dead/FAIL += N35 · N36 · GBPJPY_EU_MOM.** Geen klonen. Geen nieuwe reserve 2025+ (P1 verbruikt).
+
+**TRIAL_COUNT 448 → 451** (GBPJPY 449, N35 450, N36 451). TRIALS.csv append-only.
+
+**Niet gedaan:** geen forge of N35/N36 vóór Strateeg-PREREG (landden mid-cycle); geen A1/ORB/S3; geen stap2 P1 (dood). engine/ftmo.py smoke niet herhaald (CTO module; niet U2-prio v67).
+
+**U2 next:** wacht Strateeg/S2 nieuwe D-092.1-PASS / PREREG (non-clone). MATERIAL for Manager/CTO (3 FAIL_T → dead-set). No Sandro-ping.

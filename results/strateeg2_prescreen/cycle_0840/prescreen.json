@@ -1,0 +1,57 @@
+[
+  {
+    "idea": "EURGBP_LON_SPIKE_FADE",
+    "n": 37,
+    "mean_bruto": 2.2282,
+    "median": -4.516,
+    "gate": 3.12,
+    "rt": 1.04,
+    "outcome": "FAIL",
+    "stop_share": 0.4865,
+    "skew": -0.1757
+  },
+  {
+    "idea": "AUS200_ASIA_RANGE_BO",
+    "n": 352,
+    "mean_bruto": -2.5902,
+    "median": -4.1319,
+    "gate": 4.08,
+    "rt": 1.36,
+    "outcome": "FAIL",
+    "stop_share": 0.2756,
+    "skew": 0.8481
+  },
+  {
+    "idea": "UK100_AM_MOM_CONT",
+    "n": 189,
+    "mean_bruto": -1.4192,
+    "median": -3.8438,
+    "gate": 4.26,
+    "rt": 1.42,
+    "outcome": "FAIL",
+    "stop_share": 0.1905,
+    "skew": 0.285
+  },
+  {
+    "idea": "EURAUD_LON_EXT_FADE",
+    "n": 105,
+    "mean_bruto": -0.5919,
+    "median": -6.9368,
+    "gate": 3.33,
+    "rt": 1.11,
+    "outcome": "FAIL",
+    "stop_share": 0.4476,
+    "skew": 1.1636
+  },
+  {
+    "idea": "GBPJPY_EU_MOM",
+    "n": 170,
+    "mean_bruto": 3.4082,
+    "median": 2.604,
+    "gate": 3.33,
+    "rt": 1.11,
+    "outcome": "PASS",
+    "stop_share": 0.1412,
+    "skew": 0.1393
+  }
+]

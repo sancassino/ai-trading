@@ -70,3 +70,6 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-10-01 | N11/PREREG_FTMO_N11: GER40 XETRA ORB (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 446 |
 | 2026-10-01 | N18/PREREG_FTMO_N18: US500 OVN Gap Cont (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 447 |
 | 2026-10-01 | P1/PREREG_FTMO_P1_ORB_BTC: ORB+BTC eqvol reserve one-shot (FAIL, D-096; 1 variant) | 1 | 448 |
+| 2026-10-01 | S2/PREREG_S2_GBPJPY_EU_MOM: Europe-morning session mom (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 449 |
+| 2026-10-01 | N35/PREREG_FTMO_N35: US100 EU→US cont (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 450 |
+| 2026-10-01 | N36/PREREG_FTMO_N36: XAU NY-open drive (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 451 |
