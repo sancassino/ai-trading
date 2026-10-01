@@ -34,3 +34,18 @@
 
 ## Besluit
 Geen nieuwe PREREG deze cyclus. Catalogus §9/§10 bijgewerkt naar C-007/C-009/D-092 realiteit. TRIAL_COUNT ongewijzigd (**444**). Geen Sandro-ping.
+
+
+---
+
+## Follow-up (C-010 / C-011 — 2026-10-01 ~03:10)
+
+| Idee | Bron | Uitkomst (CTO/Manager, geen herberekening hier) |
+|------|------|--------------------------------------------------|
+| XAU N7 Pre-London BO | `VOORSTEL_PRESCREEN_N7.md` | **FAIL** C-010 `fc974de` (−1,18 bp) — geen PREREG |
+| XAU N8 Post-AM-Fix cont. | `VOORSTEL_PRESCREEN_N8.md` | **FAIL** C-010 `fc974de` (−1,47 bp) — geen PREREG |
+| N9 GER40 Ochtend-Fade | `VOORSTEL_PRESCREEN_N9.md` | mean-PASS +4,32≥4,20 maar **N=61≪150 → NO PREREG** (C-011 `01d93b7`) |
+| N10 XAU Mid-London Fade | `VOORSTEL_PRESCREEN_N10.md` | **FAIL** C-011 `01d93b7` (−0,82 < 2,49) — geen PREREG |
+| S2-LUNCH_OPEN (Strateeg-2) | `PREREG_S2_LUNCH_OPEN` / U2 `2a4f28e` | D-092.1 PASS → gate PASS → formal **FAIL_T**; TRIAL_COUNT **445**; watch reset **0/8** |
+
+Geen nieuwe Faraday-PREREG. Volgende non-clone alleen na D-092.1 PASS met verwachte N≥150.
