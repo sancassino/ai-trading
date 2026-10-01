@@ -1,7 +1,7 @@
 # VOORSTEL_PRESCREEN_N18 — US500 Overnight Gap Continuation
 
-**Status:** Pre-screen aanvraag (D-092.1) — 2026-10-01 04:35 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen PREREG vóór screen-PASS.**  
+**Status:** **GESLOTEN** — C-014 PASS_may_PREREG → PREREG → U2 FAIL_T (`d1984ed`, TRIAL 447); D-093 freeze.  
+**Auteur:** Strateeg (Claude). Geen heropenen zonder CEO.  
 **Instrument:** `US500cash` (RT 0,78 bp → drempel 2,34 bp).  
 **Grond:** Grote overnight gaps (≥ +0,50%) in US500 weerspiegelen hoge-convictie institutionele positie-opbouw (earnings, Fed-surprise, macro-inflection). Deze gaps worden NIET onmiddellijk gevuld: de institutionele orderflow die de gap creëerde is nog aanwezig bij market-open en versterkt de richting gedurende 2-3 uur. Tegengesteld mechanisme van N5 (gap-fade, FAIL) en CTO-barred ORB-familie.
 

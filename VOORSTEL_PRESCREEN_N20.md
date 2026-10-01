@@ -1,7 +1,7 @@
 # VOORSTEL_PRESCREEN_N20 — US30 PM Continuation (Post-Lunch AM-Trend Follow)
 
-**Status:** Pre-screen aanvraag (D-092.1) — 2026-10-01 04:55 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen PREREG vóór screen-PASS.**  
+**Status:** **BARRED** onder D-093.2 — geen pre-screen tot heropenen (CEO/Sandro). Filed 2026-10-01 04:55.  
+**Auteur:** Strateeg (Claude).  
 **Instrument:** `US30cash` (RT 0,45 bp → drempel 1,35 bp).  
 **Grond:** Na de NY lunch lull (11:30–12:30 ET) hervatten institutionele traders hun AM-trend in de mid-sessie. De richting van de ochtendsessie (09:30–12:00 ET) is de voorspeller: een sterke AM-move die niet volledig reversed is voor 12:00 ET, zet door in de PM-sessie. Non-ORB, non-fade, onderscheidend van LUNCH_OPEN (fade) en N3 (close momentum). Gemiddeld ~120–160 signalen/jaar → N>150 over 3jr verwacht.
 

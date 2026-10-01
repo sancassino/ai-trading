@@ -183,6 +183,9 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 | N13 | **GER40 US-Open Sync** (VOORSTEL_PRESCREEN_N13) | ≠ N11 ochtend / GER_US_LEAD | **geen PREREG** — D-092.1 FAIL (U2 `d4cefff`; −3,34 bp; N=92) |
 | N14 | **US100 NY-Open Pre-Market Mom** (VOORSTEL_PRESCREEN_N14) | ≠ LUNCH_OPEN fade / N3 close | **geen PREREG** — D-092.1 FAIL (U2 `d4cefff`; −5,05 bp) |
 | N15–N17 | **Venue-ORB exploratie** (CTO C-013: UK100/JP225/US30+US100+US500) | single-symbol ORB clones | **geen PREREG** — alle FAIL (C-013 `64723ff`); simple ORB-family barred |
+| N18 | **US500 Overnight Gap Continuation** — gap ≥±50 bp vs 22:00 CET, entry 15:30, flat 18:30 | ≠ N5 fade / ≠ ORB-familie | **GESTOPT FAIL_T** U2 `d1984ed` (gate+stress PASS; t≈0,64); TRIAL_COUNT **447**; D-093 freeze |
+| N19 | **XAU Overnight Gap Fill** (VOORSTEL_PRESCREEN_N19) | ≠ N5 / XAU_AM_FADE / N7–N12 | **geen PREREG** — C-014 FAIL (+2,03 < 2,49); D-093 barred |
+| N20–N21 | **US30 PM Cont. / GER40 Afternoon Fade** (VOORSTEL) | filed pre-D-093 | **BARRED** D-093.2 — geen pre-screen tot heropenen |
 | **C — HERBEOORDELEN met FTMO-EV** | | | |
 | C1 | **C02 Faber (D1 DD-filter, 1 nacht swap)** | Als overlay (long/flat), swap ≈ 1–2,3 bp/nacht → 5–8%/jr drag op long; nuttig als risicobeheer maar geen FTMO-trial | Geen trial; als portefeuille-overlay in FTMO-context herbeoordelen |
 | C2 | **C55 DAA** | Weinig trades; swap-drag als in positie | Na engine/ftmo.py eventueel herbeoordelen |
@@ -203,9 +206,9 @@ Per heropende regel de volgende metriek berekenen:
 
 **Doel: FTMO-EV ≥ €400/mnd bij realistisch risico (≤ 2% dagverlies als het fout gaat).** Schaal > 4% dagverlies-risico wordt alleen als bovengrens gerapporteerd (D-016/D-085).
 
-## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090/D-091/D-092, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
+## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090…D-093, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
 
-*Bijgewerkt: 2026-10-01 04:20 Amsterdam — C-013 N11 FAIL_T (TRIAL_COUNT 446); N12–N17 pre-screen FAIL; D-092.6 watch 0/8 (reset op N11 cost-gate PASS); F2-ORB ≤2024 ≈€513/m referentie*
+*Bijgewerkt: 2026-10-01 05:15 Amsterdam — **D-093 zoekfase bevroren**; N18 FAIL_T (TRIAL_COUNT **447**); watch **8/8 frozen** (D-093.1: reset alleen bij gate+stress+t); EINDSTAND_FTMO.md; F2-ORB ≤2024 ≈€513/m referentie*
 
 ### 10a. Overzicht PREREGs (Faraday + Grok Strateeg-1 + Strateeg-2)
 
@@ -229,6 +232,9 @@ Per heropende regel de volgende metriek berekenen:
 | N13 | GER40 US-Open Sync | faraday VOORSTEL | **geen PREREG** — U2 FAIL (−3,34 bp; N=92) | ≠ N11 / GER_US_LEAD |
 | N14 | US100 NY-Open Pre-Market Mom | faraday VOORSTEL | **geen PREREG** — U2 FAIL (−5,05 bp) | ≠ LUNCH_OPEN / N3 |
 | N15–N17 | Venue-ORB UK100/JP225/US* | CTO C-013 | **geen PREREG** — alle FAIL (`64723ff`) | simple ORB-family barred |
+| N18 | US500 Overnight Gap Continuation | faraday / CTO C-014 | **STOP FAIL_T** U2 `d1984ed` (gate+stress PASS; t≈0,64); TRIAL_COUNT **447** | ≠ N5 fade; ≠ ORB; year-skew 2023 −12,17 |
+| N19 | XAU Overnight Gap Fill | faraday VOORSTEL | **geen PREREG** — C-014 FAIL (+2,03 bp) | ≠ N5 / AM_FADE / N7–N12 |
+| N20–N21 | US30 PM Cont. / GER40 Afternoon Fade | faraday VOORSTEL | **BARRED** D-093.2 (geen screen) | filed pre-freeze |
 | GS01 | Gap-aligned long-only ORB indices | grok/strateeg-1 | PREREG + erratum; **Faraday D-092.1 diagnostic pooled FAIL** (−0,38 < 1,92 bp) | ≠ A1 bidirectioneel; GER40-leg solo +6,21 — geen cherry-pick |
 | GS02 | Asian-range fade FX | grok/strateeg-1 | PREREG (geen poort-run) | ≠ A5 breakout; fade/decay-risico |
 | S2-XAU | XAUUSD London–NY overlap breakout | grok/strateeg-2 | **STOP** cost-gate `7bac598` | ≠ A1 cash-open |
@@ -250,8 +256,9 @@ Per heropende regel de volgende metriek berekenen:
 
 - A4/C17, B1, A5, A2: poort FAIL — TRIALS append stop:kostenpoort waar gedaan.  
 - **S2-LUNCH_OPEN:** cost-gate PASS → formal trial FAIL_T → TRIALS append; TRIAL_COUNT 445 (U2 `2a4f28e`).  
-- **N11 GER40 XETRA ORB:** cost-gate PASS → stress FAIL → formal FAIL_T → TRIALS append; **TRIAL_COUNT = 446** (U2 `e6b2395` / NEXT_STEPS v58 / CTO C-013).  
-- S2-* overig / N1–N10 / N12–N17 / MIDDAY / GER_US / VWAP_PB / IB_FADE / S2b / S2c: cost-gate, t, pre-screen FAIL of underpowered — geen extra formele trial.  
+- **N11 GER40 XETRA ORB:** cost-gate PASS → stress FAIL → formal FAIL_T → TRIALS append; TRIAL_COUNT 446 (U2 `e6b2395` / CTO C-013).  
+- **N18 US500 OVN Gap Cont.:** cost-gate PASS → stress PASS → formal FAIL_T → TRIALS append; **TRIAL_COUNT = 447** (U2 `d1984ed` / CTO C-015 / D-093).  
+- S2-* overig / N1–N10 / N12–N17 / N19 / MIDDAY / GER_US / VWAP_PB / IB_FADE / S2b / S2c: cost-gate, t, pre-screen FAIL of underpowered — geen extra formele trial. N20–N21 barred (D-093).  
 - N3: gate PASS maar t FAIL — geen TRIALS-append.  
 - N9: mean-PASS maar N≪150 — **geen PREREG/trial** (D-092.1 N-eis).  
 - S2-XAU_AM_FADE: gate PASS maar power onvoldoende — **geen trial-claim** (watch-only).  
@@ -260,17 +267,17 @@ Per heropende regel de volgende metriek berekenen:
 
 ### 10c. Welke hypothese is sterker? (evidence uit docs/kosten — geen verzonnen backtests)
 
-**Korte conclusie (post C-013 / D-092):** A/B-tier + N1–N17 + S2 non-clones t/m **LUNCH_OPEN** **uitgeput** op kosten/t/power/underpowered/venue-ORB. Enige gate-PASS survivors zonder formal PASS: **S2-XAU_AM_FADE** (underpowered; S2c closed) + **S2-BTC** (power FAIL). Recent formal trials: LUNCH_OPEN FAIL_T → N11 FAIL_T. **Geen open cost-gates.** Bindende referentie: **F2-ORB ≤2024 ≈ €513/m** (CTO D-092.3; HistData via `SANDRO_ACTIES.md` A-001, geen chat-ping). Portfolio: ORB+BTC eqvol diversifieert (ρ≈0,11) op papier. D-092.6 watch **0/8** (Manager/CTO reset op N11 cost-gate PASS; CEO_LOG drought-teller ≈7/8 — discrepantie, geen Sandro-ask). CTO C-013: simple single-symbol ORB clones barred (skew-fragile patroon herhaalt).
+**Korte conclusie (post D-093 / C-015):** **Zoekfase bevroren.** A/B-tier + N1–N18 + S2 non-clones **uitgeput**; 0 sleeves gevalideerd. Recent formal: LUNCH_OPEN FAIL_T → N11 FAIL_T → **N18 FAIL_T** (TRIAL_COUNT **447**). Enige gate-PASS survivors zonder formal PASS: **S2-XAU_AM_FADE** (underpowered) + **S2-BTC** (power FAIL) — watch-only, geen nieuwe trials. Bindende referentie: **F2-ORB ≤2024 ≈ €513/m** (HistData A-001 / M-001; reopen-pad per EINDSTAND). D-092.6 / D-093.1 watch **8/8 frozen** (reset alleen bij full gate+stress+t PASS; N11/N18 cost-gate reset superseded). N20–N21 **barred**. Geen nieuwe PREREG/pre-screen tot Sandro/CEO heropent.
 
 | Rang (kwalitatief) | Hypothese | Waarom (alleen bestaande docs/kosten/research) |
 |--------------------|-----------|-----------------------------------------------|
-| 1 (referentie-EV) | **F2-ORB / A1** | Gerepliceerde bruto-edge; ≤2024 ≈€513/m; lange M1 data = enige Sandro-actie (niet-blokkerend) |
-| 2 (enige gate-PASS sleeve) | **S2-XAU_AM_FADE** | +18,70 bp; **blokker = power N=12**; geen power-pad; S2c closed |
-| 3 (portfolio only) | **S2-BTC** | +22,9 bp / N=132<150; CTO blend-lift; geen solo trial |
-| 4 (verzwakt) | **GS01** | Research-fit long+gap; Faraday pooled pre-screen FAIL; formele gate nog open bij S1 |
-| Zwakker / dood | A2/A4/A5/B1/N1–N17/LUNCH_OPEN/GER_US/VWAP/IB_FADE/MIDDAY/S2b/S2c/venue-ORB/… | Poort, t, n=0, pre-screen FAIL, underpowered, of ORB-family barred |
+| 1 (referentie-EV) | **F2-ORB / A1** | Gerepliceerde bruto-edge; ≤2024 ≈€513/m; enige reopen-pad = lange M1 (EINDSTAND optie a) |
+| 2 (watch-only) | **S2-XAU_AM_FADE** | +18,70 bp; **N=12**; S2c closed; geen trial onder freeze |
+| 3 (watch-only) | **S2-BTC** | +22,9 bp / N=132<150; portfolio-diversifier only |
+| 4 (verzwakt) | **GS01** | Research-fit; Faraday pooled pre-screen FAIL |
+| Dood / barred | A2/A4/A5/B1/N1–N19/LUNCH_OPEN/N20–N21/… | Poort, t, pre-screen FAIL, underpowered, ORB-bar, of D-093 freeze |
 
-**Faraday vs Strateeg-2:** Faraday N11 = enige recent formal trial → FAIL_T (`e6b2395`); N12–N14 + CTO N15–N17 pre-screen FAIL. Strateeg-2 `d820c5f`: D-092.1 screens FAIL — geen nieuwe PREREG (GAP_CONT underpowered; LATE_EXT/LONDON_WIDE/GER_MID FAIL). U2 idle tot D-092.1-pre-screened **non-clone** met verwachte N≥150 (≠ dead set incl. N11–N17/LUNCH_OPEN; ≠ simple venue-ORB). Programma-focus = (a) F2-ORB referentie + HistData A-001, (b) écht nieuw mechanisme pre-screened N≥150, (c) D-092.6 watch 0/8 — geen dead-set-herstart, geen overnight sleeves, geen post-hoc drempel-retune.
+**Faraday vs Strateeg-2:** Faraday N18 = laatste formal trial → FAIL_T (`d1984ed`, TRIAL 447). Strateeg-2 tip `c22d9a6`: cycle044 screens FAIL — geen nieuwe PREREG. Onder D-093: beide in onderhoud 1×/4u; geen screens/PREREGs. Sterker blijft F2-ORB/A1 referentie > XAU_AM_FADE watch > S2-BTC watch > GS01.
 
 ### 10d. Actiepunten Strateeg (deze branch)
 
@@ -281,8 +288,10 @@ Per heropende regel de volgende metriek berekenen:
 5. ✅ PREREG_FTMO_N1–N5 — alle **STOP**.  
 6. ✅ PREREG_FTMO_N6 — bevroren; **STOP** C-007 (`741639e`).  
 7. ✅ VOORSTEL_PRESCREEN_N7/N8 — C-010 FAIL; N9 underpowered / N10 FAIL (C-011).  
-8. ✅ PREREG_FTMO_N11 — bevroren; **STOP FAIL_T** (`e6b2395`); TRIAL_COUNT 446.  
+8. ✅ PREREG_FTMO_N11 — **STOP FAIL_T** (`e6b2395`); TRIAL_COUNT 446.  
 9. ✅ VOORSTEL_PRESCREEN_N12/N13/N14 — D-092.1 FAIL (C-012 / U2 `d4cefff`).  
-10. ✅ Catalogus §9/§10 sync post C-013 / N11 FAIL_T / N12–N17 FAIL / TRIAL_COUNT 446 (deze commit).  
-11. ✅ D-092.1 index pre-screens (PLM/NR7/Failed-OR/GS01) — FAIL (`STRATEEG_PRESCREEN_D092.md`).  
-12. Open: volgende cyclus alleen D-092.1 non-clone met **verwachte N≥150** en **nieuw mechanisme** (≠ dead set; ≠ simple venue-ORB per C-013); geen XAU power-pad; geen GER40-GS01-cherry-pick; U2 idle tot PASS-screen. D-092.6 watch **0/8** via Manager/CTO. Geen filler-PREREG.
+10. ✅ PREREG_FTMO_N18 — **STOP FAIL_T** (`d1984ed`); TRIAL_COUNT **447**; C-015 / D-093.  
+11. ✅ VOORSTEL N19 FAIL (C-014); N20/N21 filed → **BARRED** D-093.2.  
+12. ✅ Catalogus §9/§10 sync post D-093 / N18 FAIL_T / watch 8/8 / EINDSTAND (deze commit).  
+13. ✅ D-092.1 index pre-screens (PLM/NR7/Failed-OR/GS01) — FAIL.  
+14. **D-093 onderhoud:** geen nieuwe PREREG/pre-screen; ritme 1×/4u; reopen alleen op long_m1 of nieuw CEO-besluit. Sandro-melding = CEO `EINDSTAND_FTMO.md` / SANDRO_ACTIES (geen Strateeg-chat).

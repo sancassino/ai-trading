@@ -1,7 +1,7 @@
 # VOORSTEL_PRESCREEN_N19 — XAU Overnight Gap Fill
 
-**Status:** Pre-screen aanvraag (D-092.1) — 2026-10-01 04:35 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen PREREG vóór screen-PASS.**  
+**Status:** **GESLOTEN** — C-014 D-092.1 FAIL (+2,03 < 2,49 bp); geen PREREG; D-093 freeze.  
+**Auteur:** Strateeg (Claude).  
 **Instrument:** `XAUUSDcash` (RT 0,83 bp → drempel 2,49 bp).  
 **Grond:** XAU sluit elke dag via LBMA/COMEX at-close en opent de volgende dag op basis van Aziatische overnight flows. Overnight gaps voor XAU worden bij London-preopen (08:00 CET) gewoonlijk geïnitieerd voor het fill: LBMA-leden herpositioneren t.o.v. het gefixte niveau en de prior-day-close. Dit is een gap-fill-mechanisme specifiek voor XAU (anders dan N5 = US-equity gap fill FAIL; en alle geteste XAU-vensters zijn London/NY-sessie, niet pre-London).
 

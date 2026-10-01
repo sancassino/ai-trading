@@ -1,7 +1,7 @@
 # VOORSTEL_PRESCREEN_N21 — GER40 Afternoon Deviation Fade (post-NY-open)
 
-**Status:** Pre-screen aanvraag (D-092.1) — 2026-10-01 04:55 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen PREREG vóór screen-PASS.**  
+**Status:** **BARRED** onder D-093.2 — geen pre-screen tot heropenen (CEO/Sandro). Filed 2026-10-01 04:55.  
+**Auteur:** Strateeg (Claude).  
 **Instrument:** `GER40cash` (RT 0,72 bp → drempel 2,16 bp).  
 **Grond:** GER40 overshoots bij US-open (15:30 CET) door index-arbitrage. Na 1 uur (16:30 CET) is de NY-open volatiliteit verwerkt en begint XETRA-close positioning voor 17:30 CET. Als GER40 sterk is afgeweken van de XETRA-open (09:00 CET), trekken de close-gerelateerde order-flows (ETF NAV-rebalancing, DAX-futures convergentie) de prijs terug richting dag-gemiddelde. Onderscheidend van N9 (morning fade, exit 12:00) en N11 (ORB, dead).
 

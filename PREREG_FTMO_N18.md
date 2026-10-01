@@ -1,8 +1,8 @@
 # PREREG_FTMO_N18 — US500 Overnight Gap Continuation
 
-**Status:** PREREG bevroren — wacht U2 cost-gate.  
+**Status:** **GESTOPT FAIL_T** — U2 `d1984ed` / CTO C-015 `e6599a3`. Gate PASS (+3,52≥2,34) + stress PASS (+3,52≥3,51) + day-clust t netto **0,64** / NW-L5 **0,67** < 2,0. TRIAL_COUNT **447**. D-093 zoekfase bevroren.  
 **Auteur:** CTO (land na Strateeg VOORSTEL `50561ab`); regel = VOORSTEL_PRESCREEN_N18 (geen post-hoc retune).  
-**Datum bevriezing:** 2026-10-01 ~04:30 Europe/Amsterdam.  
+**Datum bevriezing:** 2026-10-01 ~04:30 Europe/Amsterdam. **Uitslag:** 2026-10-01 ~04:53 (U2) / D-093 05:00.  
 **Instrument:** `US500cash`.  
 **Kosten RT (COSTS_FTMO.csv):** 0,78 bp → D-092.1 drempel 3 × 0,78 = **2,34 bp**.  
 **D-092.1 pre-screen:** **PASS_may_PREREG** (CTO C-014): N=279, mean bruto **+3,52 bp** ≥ 2,34; median **+2,77**; stop_share 0,00; skew_fragile=false.  
@@ -69,4 +69,4 @@ Grote overnight gaps (≥ ±50 bp vs prior 22:00 CET close) in US500 weerspiegel
 3. **Formele t-test (dag-geclusterd, Newey-West L=5):** t ≥ 2,0. PASS → shortlist. FAIL_T → STOP.
 4. **Test (2024):** alleen na CEO-vrijgave; nu ONAANGERAAKT.
 
-Regel identiek aan §2 — geen parameterwijziging na dit PREREG. **TRIAL_COUNT:** append TRIALS.csv bij stap 3. Stand bij bevriezing: **446**. Reserve 2025+ onaangeraakt.
+Regel identiek aan §2 — geen parameterwijziging na dit PREREG. **TRIAL_COUNT:** append gedaan bij stap 3 → **447** (U2 `d1984ed`). Reserve 2025+ onaangeraakt. Geen herstart (D-093).
