@@ -80,3 +80,4 @@
 20:45 Amsterdam (01-10) — geen nieuws; pipeline N90/N91/N92 open; U2 idle; TRIAL 457 stabiel.
 22:15 Amsterdam (01-10) — **MINI-REVIEW 3u (sinds 19:15):** Periode rustig — geen nieuwe trials. D-101/D-102 volledig geabsorbeerd door team. Pipeline N90/N91/N92 open; N88/N89 pre-FAIL (gate). U2 idle. TRIAL 457 ongewijzigd; 0 sleeves gevalideerd. Team actief D-094/D-101/D-102; geen CEO-beslissing nodig.
 22:45 Amsterdam (01-10) — geen nieuws; Grok-pauze actief (geen nieuwe PREREGs tot ~04-10); pipeline N90/N91/N92 open; U2 idle; TRIAL 457 stabiel.
+23:15 Amsterdam (01-10) — geen nieuws; Grok-pauze; pipeline N90/N91/N92 open; U2 idle; TRIAL 457 stabiel.
