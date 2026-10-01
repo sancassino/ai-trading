@@ -50,3 +50,4 @@
 02:26 Amsterdam — D-092 wordt uitgevoerd (XAG/S2c pre-screen STOP, IB_FADE STOP, portfolio-EV CTO, N7/N8 XAU pre-screen aangevraagd); stopregel 8 cycli loopt; geen nieuw besluit
 02:56 Amsterdam — D-092 cyclus 2/8: LUNCH_OPEN gate PASS maar formeel FAIL_T (TRIAL_COUNT 445); pre-screen werkt (N7/N8 stopte zonder trial); geen nieuw besluit
 03:26 Amsterdam — D-092 cyclus 3/8: LUNCH_OPEN FAIL_T, N9 underpowered, N10 FAIL; geen levende kandidaat; stopregel loopt; geen nieuw besluit
+03:57 Amsterdam — D-092 cyclus 4/8: N11 (GER40 Xetra-ORB) pre-screen PASS bij RT 0,72 bp, PREREG_FTMO_N11 geschreven; eerste levende kandidaat sinds D-091; N12/N13/N14 FAIL; geen nieuw besluit
