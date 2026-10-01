@@ -63,3 +63,4 @@
 11:15 Amsterdam (01-10) — ENERGY_TSMOM FAIL_COST_GATE (geen trial); CTO C-024 D-100 IDX_SHORT PREREG; forward P1 papier lopend; TRIAL 453 stabiel
 11:45 Amsterdam (01-10) — IDX_SHORT_TSMOM FAIL_COST_GATE (geen trial); CTO C-025 FX_EUR_SHORT PREREG; spoor-6 mijlpaal: alle 166 FTMO-symbolen M5gz compleet (466 MB); TRIAL 453
 12:15 Amsterdam (01-10) — FX_EUR_SHORT_TSMOM FAIL_T (TRIAL 454); CTO C-026 USDJPY_MED PREREG; N69–N71 open (Strateeg). Team actief.
+12:45 Amsterdam (01-10) — USDJPY_MED FAIL_T (TRIAL 455) + EURJPY_MED FAIL_T (TRIAL 456); CTO D-100 FX-TSMOM reeks uitgeput; TRIAL 456. Team actief.
