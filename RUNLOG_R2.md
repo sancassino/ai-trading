@@ -1352,3 +1352,32 @@ Rules frozen = `n35_n37_prescreen` sims (N36 data file `XAUUSD.csv.gz`; PREREG t
 **Niet gedaan:** geen forge of N35/N36 vóór Strateeg-PREREG (landden mid-cycle); geen A1/ORB/S3; geen stap2 P1 (dood). engine/ftmo.py smoke niet herhaald (CTO module; niet U2-prio v67).
 
 **U2 next:** wacht Strateeg/S2 nieuwe D-092.1-PASS / PREREG (non-clone). MATERIAL for Manager/CTO (3 FAIL_T → dead-set). No Sandro-ping.
+
+## Cyclus 09:26–09:30 CEST (2026-10-01) — formal N40/N41 (SKIP N35/N36/GBPJPY already FAIL)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → already up to date. Prior tip `a498a69` (GBPJPY+N35/N36 FAIL_T; TRIAL_COUNT **451**). Strateeg Faraday `6ef46a7` asks cost-gate/formal N35/N36/N40/N41 (+ S2-GBPJPY). Reserve 2025→ **niet aangeraakt**.
+
+### Confirm SKIP (already FAIL_T / dead)
+
+| Sleeve | Prior outcome | TRIAL | Status |
+|--------|---------------|------:|--------|
+| S2_GBPJPY_EU_MOM | FAIL_STRESS_then_FAIL_T | 449 | SKIP |
+| N35 | FAIL_T | 450 | SKIP |
+| N36 | FAIL_STRESS_then_FAIL_T | 451 | SKIP |
+
+### Prio — PREREG_FTMO_N40 + N41 landed Faraday `6ef46a7` → cost-gate / stress / formal t
+
+Rules frozen = `n38_n40_prescreen` sim_n40 / `n41_n43_prescreen` sim_n41. Artefacts: `results/R2/n40_n41_prep/`. Script: `scripts/n40_n41_cost_gate_trial.py`. venv `/workspace/venv-u2`, m5gz, COSTS_FTMO.
+
+| Sleeve | N_train | mean bruto | gate | stress | t train day/NW | test N / mean / t | Uitkomst |
+|--------|--------:|-----------:|-----:|-------:|---------------:|------------------:|----------|
+| **N40** GER40 mid-morn | 205 | +2.43 | 2.16 **PASS** | 3.24 **FAIL** | 0.55 / 0.56 | 53 / −0.00 / −0.23 | **FAIL_STRESS_then_FAIL_T** |
+| **N41** US30 EU→US | 160 | +8.65 | 1.35 **PASS** | 2.025 **PASS** | 2.01 / **1.85** | 14 / −4.39 / −0.39 | **FAIL_T** |
+
+**Notes:** N40 median bruto −2.28 (PREREG caveat: staart-afhankelijk) → stress miss. N41 train day-clust 2.01 ≥2 maar NW-L5 1.85 <2.0 → FAIL_T; test N=14 sparse (coverage). Year-split N41: 2021 +9.71 / 2022 +11.67 / 2023 −3.21. Geen retune.
+
+**Dead/FAIL += N40 · N41.** Geen klonen. Geen nieuwe reserve 2025+.
+
+**TRIAL_COUNT 451 → 453** (N40 452, N41 453). TRIALS.csv append-only.
+
+**MATERIAL for Manager/CTO** (N40/N41 both formal FAIL; TRIAL_COUNT 453). Vragen → Manager; eindbesluit → CTO.
