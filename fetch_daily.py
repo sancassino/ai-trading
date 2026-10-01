@@ -33,6 +33,11 @@ SERIES = {  # naam: Yahoo-ticker
     "USDZAR": "ZAR=X", "USDHKD": "HKD=X", "USDAUD_INV": "AUD=X", "USDCNY": "CNY=X",
     # R2-007: Cboe-optiestrategie-indices (privé-repo; Cboe-indexdata: eigen onderzoek, niet herverspreiden)
     "CBOE_PUT": "^PUT", "CBOE_BXM": "^BXM", "CBOE_WPUT": "^WPUT", "CBOE_BXMD": "^BXMD", "CBOE_PPUT": "^PPUT", "VIX9D": "^VIX9D", "VIX3M": "^VIX3M",
+    # D-097 proxy-historie voor FTMO-symbolen zonder lange reeks
+    "COCOA_F": "CC=F", "OJ_F": "OJ=F", "BTC_USD": "BTC-USD", "ETH_USD": "ETH-USD", "LTC_USD": "LTC-USD", "XRP_USD": "XRP-USD", "BCH_USD": "BCH-USD",
+    "ADA_USD": "ADA-USD", "DOGE_USD": "DOGE-USD", "XLM_USD": "XLM-USD", "XMR_USD": "XMR-USD", "DASH_USD": "DASH-USD", "ETC_USD": "ETC-USD",
+    "SOL_USD": "SOL-USD", "DOT_USD": "DOT-USD", "LINK_USD": "LINK-USD", "BNB_USD": "BNB-USD", "AVAX_USD": "AVAX-USD", "UNI_USD": "UNI7083-USD",
+    "MCD": "MCD", "GM": "GM", "SNOW": "SNOW", "ARM": "ARM", "TTE": "TTE", "SAN": "SAN", "SIE_DE": "SIE.DE", "BMW_DE": "BMW.DE", "MBG_DE": "MBG.DE",
     "MTUM": "MTUM", "QUAL": "QUAL", "USMV": "USMV", "VLUE": "VLUE", "EWA": "EWA", "EWC": "EWC", "EWL": "EWL", "EWS": "EWS", "EWY": "EWY", "EWZ": "EWZ",
 }
 
