@@ -620,3 +620,43 @@ git add PREREG_FTMO_N18.md VOORSTEL_PRESCREEN_N18.md VOORSTEL_PRESCREEN_N19.md s
 git commit -m "CTO: C-014 N18 PASS_may_PREREG + N19 FAIL; PREREG_FTMO_N18"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~05:00 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes by CTO. No new pre-screens (D-093 freeze).**
+
+### Team snapshot (since CTO tip `aaaecad` / C-014 ~04:30)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v61** (`1b77759`) — N18 FAIL_T; Watch **0/8** (pre-D-093 citation); U2 IDLE; TRIAL **447** |
+| U2 `d1984ed` | N18 cost PASS + stress PASS + **FAIL_T** (t_day 0.64 / NW-L5 0.67); PREREG land `c715e06` |
+| Strateeg `4b0f9c2` | PREREG_N18 sync + VOORSTEL **N20/N21** (barred under D-093 — no new screens) |
+| Strateeg-2 `c22d9a6` | cycle044 screens FAIL — no new PREREG |
+| CEO `7fa5ba7` | **D-093 bevriezing** + `EINDSTAND_FTMO.md` (Manager v61 had not absorbed) |
+
+Merged `origin/main` (v61) → `grok/cto-1` this cycle. Mirrored CEO `EINDSTAND_FTMO.md` for team visibility.
+
+### Work executed
+
+1. **C-015 confirm N18 FAIL_T** from U2 board (`results/cto/n18_formal/n18_board.json`): gate +3.52≥2.34 PASS; stress ≥3.51 PASS; day-clust t **0.64** → FAIL_T. TRIAL_COUNT **447**. Dead set += N18.
+2. **Absorb D-093** (CEO `7fa5ba7`, 05:00 CEST): search-phase freeze; no new PREREGs/pre-screens; agents → maintenance 1×/4u (forward-paper + daily snapshot + NEXT_STEPS only).
+3. **D-092.6 watch rule corrected (D-093.1):** reset only on **gate + stress + formal t (t≥2.0 both halves +)**. Cost-gate-only PASS does **not** reset. N11/N18 did not reset → stand **8/8 frozen**. C-013 soft-affirm of cost-gate reset is **superseded**.
+4. Manager v61 still cites Watch 0/8 and "geen D-093" — CTO asks Manager (via VRAGEN) to bump NEXT_STEPS to absorb D-093 + EINDSTAND.
+5. **N20/N21:** do not screen under freeze. No engine runs. No Sandro chat from CTO (parent may relay EINDSTAND).
+
+### Remaining blockers
+
+1. **Sandro decision** on EINDSTAND options: (a) HistData/long_m1 M-001, (b) other market/prop rules, (c) stop. Freeze until then.
+2. Manager: absorb D-093 into NEXT_STEPS (v62+); correct watch to 8/8 frozen.
+3. Auditor last task per D-093.3 (TRIALS consistency + reserve hygiene) — Claude path.
+4. A5 FX intradag remains parked for Debian/MT5 (data/m5/ gitignored).
+
+### Git
+
+```
+git add EINDSTAND_FTMO.md results/cto/c015_board.json results/cto/n18_formal/ VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: C-015 N18 FAIL_T + absorb D-093 freeze; watch 8/8"
+git push origin grok/cto-1
+```

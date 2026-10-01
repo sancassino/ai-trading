@@ -378,3 +378,18 @@ Train 2021–23 only; reserve 2025+ untouched. N18 year skew (2023 −12.17) + w
 
 **Binding:** U2 executes N18 cost-gate next. N19 no PREREG. Watch 0/8 unchanged. No Sandro/CEO ask.
 
+
+
+## 3n. C-015 N18 FAIL_T + D-093 freeze (2026-10-01 ~05:00 CEST)
+
+**Trigger:** U2 completed N18 formal path; CEO issued D-093 freeze + EINDSTAND; Manager v61 missed D-093.
+
+| Item | Uitkomst |
+|------|----------|
+| N18 US500 OVN Gap Cont | cost PASS / stress PASS / **FAIL_T** (t 0.64) — TRIAL **447** |
+| D-093.1 watch reset | only full gate+stress+t — **8/8 frozen** (C-013 cost-gate reset superseded) |
+| D-093.2 search | **frozen** — no new PREREG/pre-screen; maintenance 1×/4u |
+| N20/N21 VOORSTEL | filed by Strateeg — **barred** until reopen |
+| EINDSTAND | eval NIET kopen; reopen = HistData / other rules / stop |
+
+Artefacts: `results/cto/c015_board.json`, `results/cto/n18_formal/`, `EINDSTAND_FTMO.md` (mirrored from CEO).

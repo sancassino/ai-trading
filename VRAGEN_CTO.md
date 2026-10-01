@@ -4,6 +4,27 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-015 — N18 FAIL_T + absorb D-093 freeze (watch 8/8); supersede C-013 reset
+**Opened:** 2026-10-01 ~05:00 Europe/Amsterdam (main v61 N18 FAIL_T; CEO `7fa5ba7` D-093; U2 `d1984ed` TRIAL_COUNT 447).  
+**Closed:** 2026-10-01 ~05:05 Europe/Amsterdam by CTO (D-093 already binding; no CEO wait).
+
+**Facts:**
+1. **N18 formal (U2 `d1984ed` / PREREG `c715e06` from CTO `aaaecad`):** cost-gate PASS (N=279, mean +3.52 ≥ 2.34) → stress PASS (+3.52 ≥ 3.51) → day-clust t netto **0.64** / NW-L5 **0.67** → **FAIL_T**. Year skew 2023 −12.17. TRIAL_COUNT **447**. Dead set += **N18**. Test 2024 + reserve 2025→ untouched.
+2. **D-093** on CEO branch `claude/ftmo-trading-strategy-98mplz` @ `7fa5ba7`: (1) watch reset only on full gate+stress+formal-t PASS; (2) freeze search — no new PREREG/pre-screen; maintenance 1×/4u; (3) Auditor TRIALS/reserve check; (4) `EINDSTAND_FTMO.md` for Sandro — eval **NIET kopen**; reopen via HistData / other rules / stop; (5) reopen only on new data or new CEO besluit.
+3. Manager NEXT_STEPS **v61** still says Watch **0/8** and "geen D-093 geïnventariseerd" — stale vs CEO tip.
+4. Strateeg filed VOORSTEL N20/N21 — **barred** under D-093.2 until Sandro/CEO reopens.
+
+**Decision (binding under D-093):**
+1. **N18 = FAIL_T STOP** — confirm U2; do not restart / no gap-cont clones.
+2. **D-092.6 soft-affirm (C-013) SUPERSEDED** by D-093.1 — watch = **8/8 frozen**; cost-gate-only PASS does not reset.
+3. **CTO / U2 / Strateeg / S2 / Manager:** maintenance mode — no new trials, no N20/N21 screens, no engine discovery runs. Forward-paper + daily snapshot + docs only.
+4. **Manager:** absorb D-093 + EINDSTAND into NEXT_STEPS (correct watch; freeze priorities). Mirror path: `EINDSTAND_FTMO.md` on `grok/cto-1`.
+5. **Sandro:** material — EINDSTAND options (parent may WakeParent). Agents never buy/open FTMO.
+
+**Where applied:** `EINDSTAND_FTMO.md`, `results/cto/c015_board.json`, `results/cto/n18_formal/`, `CTO_AUDIT.md` §3n, `RUNLOG_CTO.md`, this ticket.
+
+---
+
 ### C-014 — N18 PASS_may_PREREG + N19 FAIL; PREREG_FTMO_N18 unblocks U2
 **Opened:** 2026-10-01 ~04:24 Europe/Amsterdam (main v59; Strateeg `50561ab` VOORSTEL N18/N19; U2 idle `51c599d` TRIAL_COUNT 446).  
 **Closed:** 2026-10-01 ~04:30 Europe/Amsterdam by CTO (executable; no CEO wait).
@@ -369,4 +390,4 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (not blocking):_ NEXT_STEPS **v55** has C-011. Optional bump: **C-012** — GER40 RT binding = COSTS 0.72→gate 2.16; **N11 PASS_may_PREREG** (await Strateeg PREREG); N12 FAIL; watch **0/8**; U2 idle until N11 PREREG. Sandro: no ping.
+_Open for Manager (blocking for NEXT_STEPS accuracy):_ absorb **D-093** from CEO `7fa5ba7` — freeze search; Watch **8/8** (not 0/8); no new PREREG/pre-screen; maintenance 1×/4u; point to `EINDSTAND_FTMO.md`. Optional: note C-015 N18 FAIL_T confirm. Sandro: **yes** — EINDSTAND decision (parent relay).

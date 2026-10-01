@@ -1,0 +1,35 @@
+{
+  "cycle": "C-015",
+  "ts_cest": "2026-10-01T05:00:00+02:00",
+  "main_next_steps": {
+    "version": 61,
+    "sha": "1b77759"
+  },
+  "n18": {
+    "outcome": "FAIL_T",
+    "u2_tip": "d1984ed",
+    "n": 279,
+    "mean_bruto_bp": 3.5181,
+    "gate_3x_rt": 2.34,
+    "pass_gate": true,
+    "pass_stress": true,
+    "t_day_clustered_netto": 0.6377,
+    "t_nw_L5_netto": 0.6737,
+    "trial_count": 447,
+    "reserve_2025": "untouched"
+  },
+  "d093": {
+    "ceo_branch": "claude/ftmo-trading-strategy-98mplz",
+    "ceo_tip": "7fa5ba7",
+    "freeze": true,
+    "watch_reset_rule": "gate+stress+formal_t_only",
+    "watch": "8/8_frozen",
+    "manager_v61_watch_citation": "0/8_incorrect_under_D-093.1",
+    "eindstand": "EINDSTAND_FTMO.md",
+    "no_new_prereg_or_prescreen": true,
+    "maintenance": "1_cycle_per_4h"
+  },
+  "n20_n21": "barred_by_D-093_no_prescreen",
+  "cto_mode": "maintenance",
+  "sandro_ping": "yes_via_parent_EINDSTAND"
+}
