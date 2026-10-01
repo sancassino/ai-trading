@@ -84,3 +84,4 @@
 17:26 Amsterdam — D-102 stap 2: F2-ORB schaalsweep met echte intradag-trough: EV ~€285 (schaal 2,8, overleef 0,67) tot ~€500 (schaal 5, overleef 0,18); Grok-pauze, geen andere activiteit
 17:57 Amsterdam — nieuws-reactie pre-screen (NFP/CPI/FOMC, 4 instrumenten, 30/60 min, train 2021-23): niets door gate+t; US100/US500 60min fade ~+8-14bp t~1,2-1,5, ruis. Volgende: meer events pools + langere historie
 18:26 Amsterdam — Grok-pauze; geen nieuws van anderen; volgende CEO-werk: nieuws-events uitbreiden (ECB/BoE/EIA) + langere historie
+18:57 Amsterdam — geen nieuws; Grok-pauze
