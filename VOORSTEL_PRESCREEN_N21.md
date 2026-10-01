@@ -1,9 +1,12 @@
 # VOORSTEL_PRESCREEN_N21 — GER40 Afternoon Deviation Fade (post-NY-open)
 
-**Status:** **BARRED** onder D-093.2 — geen pre-screen tot heropenen (CEO/Sandro). Filed 2026-10-01 04:55.  
-**Auteur:** Strateeg (Claude).  
-**Instrument:** `GER40cash` (RT 0,72 bp → drempel 2,16 bp).  
-**Grond:** GER40 overshoots bij US-open (15:30 CET) door index-arbitrage. Na 1 uur (16:30 CET) is de NY-open volatiliteit verwerkt en begint XETRA-close positioning voor 17:30 CET. Als GER40 sterk is afgeweken van de XETRA-open (09:00 CET), trekken de close-gerelateerde order-flows (ETF NAV-rebalancing, DAX-futures convergentie) de prijs terug richting dag-gemiddelde. Onderscheidend van N9 (morning fade, exit 12:00) en N11 (ORB, dead).
+**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** lifts D-093.2 bar; filed 2026-10-01 04:55, heropend 08:05).  
+**Auteur:** Strateeg (Grok).  
+**Instrument:** `GER40cash` (RT 0,72 bp COSTS_FTMO / screen → drempel **2,16 bp** = 3× RT).  
+**Track:** non-US index afternoon inventory-fade (heropen onder D-094).  
+**Grond:** GER40 overshoots bij US-open (15:30 CET) door index-arbitrage. Na 1 uur (16:30 CET) is de NY-open volatiliteit verwerkt en begint XETRA-close positioning voor 17:30 CET. Als GER40 sterk is afgeweken van de XETRA-open (09:00 CET), trekken close-gerelateerde order-flows (ETF NAV-rebalancing, DAX-futures convergentie) de prijs terug richting dag-gemiddelde. Onderscheidend van N9 (morning fade) en N11 (ORB, dead).
+
+**D-094a (geschiedenis <5y):** train-screen 2021–2023 = 3y. Schriftelijke reden **(b)**: end-of-day inventory unwind / deviation-fade naar open is een tijdloos microstructure-effect op liquide index futures (proxy: DAX/FDAX langere historie); FTMO-M5 toetst kosten/uitvoering. Herhaal in toekomstige PREREG.
 
 ---
 
@@ -16,6 +19,7 @@ XETRA-open (09:00 CET) is het dagankerpunt voor GER40 institutionele pricing. Do
 - ≠ N11 GER40 XETRA ORB (dead; ORB breakout; dit = end-of-day deviation fade)
 - ≠ N6 GER40 pre-close momentum (N6 had CONTINUATION signal; dit = FADE/reversion signal)
 - ≠ N13 GER40 US-Open Sync (US500 signal, continuation; dit = interne GER40 deviation, fade)
+- ≠ simple ORB-familie
 
 ---
 
@@ -39,8 +43,8 @@ XETRA-open (09:00 CET) is het dagankerpunt voor GER40 institutionele pricing. Do
 ## Pre-screen aanvraag (Uitvoerder-2)
 
 - **Data:** `data/m5gz/GER40cash.csv.gz`, train 2021-01-01 … 2023-12-31.
-- **Regel:** identiek aan §1 hierboven (dev_bp 09:00–16:30 CET ≥ ±50 bp, fade-entry 16:30 CET, stop ATR14, flat 17:30 CET).
-- **Maatstaf:** mean bruto retour in bp + median + N.
+- **Regel:** identiek hierboven (dev_bp 09:00–16:30 CET ≥ ±50 bp, fade-entry 16:30 CET, stop ATR14, flat 17:30 CET).
+- **Maatstaf:** mean bruto retour in bp + median + N (signed mean).
 - **Gate:** mean bruto ≥ **2,16 bp** (3 × 0,72 bp RT). N≥150 vereist.
 - **Geen test/reserve aanraken.** Alleen train-screen.
-- **Uitkomst:** PASS + N≥150 → Strateeg schrijft PREREG_FTMO_N21. FAIL of N<150 → STOP.
+- **Uitkomst:** PASS + N≥150 → Strateeg schrijft PREREG_FTMO_N21 (incl. D-094a (b)). FAIL of N<150 → STOP.

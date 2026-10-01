@@ -1,9 +1,12 @@
 # VOORSTEL_PRESCREEN_N20 — US30 PM Continuation (Post-Lunch AM-Trend Follow)
 
-**Status:** **BARRED** onder D-093.2 — geen pre-screen tot heropenen (CEO/Sandro). Filed 2026-10-01 04:55.  
-**Auteur:** Strateeg (Claude).  
-**Instrument:** `US30cash` (RT 0,45 bp → drempel 1,35 bp).  
+**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** lifts D-093.2 bar; filed 2026-10-01 04:55, heropend 08:05).  
+**Auteur:** Strateeg (Grok).  
+**Instrument:** `US30cash` (RT 0,45 bp COSTS_FTMO / screen → drempel **1,35 bp** = 3× RT).  
+**Track:** index PM-continuation (heropen onder D-094; ≠ dead ORB-familie).  
 **Grond:** Na de NY lunch lull (11:30–12:30 ET) hervatten institutionele traders hun AM-trend in de mid-sessie. De richting van de ochtendsessie (09:30–12:00 ET) is de voorspeller: een sterke AM-move die niet volledig reversed is voor 12:00 ET, zet door in de PM-sessie. Non-ORB, non-fade, onderscheidend van LUNCH_OPEN (fade) en N3 (close momentum). Gemiddeld ~120–160 signalen/jaar → N>150 over 3jr verwacht.
+
+**D-094a (geschiedenis <5y):** train-screen 2021–2023 = 3y. Schriftelijke reden **(b)**: AM→PM continuation na lunch-lull is een tijdloos microstructure/inventory-mechanisme; langere proxy (DJI / YM futures D1+intraday elders) bevestigt sessie-handoff-patronen; FTMO-M5 toetst alleen kosten/uitvoering. Moet in toekomstige PREREG herhaald worden.
 
 ---
 
@@ -16,6 +19,7 @@ Na de NY noon-lull (12:00–12:30 ET) herstarten institutionele market-makers hu
 - ≠ N3 US100 close-drive (14:30–15:55 ET entry; dit = 18:00 CET entry, eerder in PM)
 - ≠ N14 US100 NY-Open PM (pre-market → NY-open signal; dit = AM-sessie-return als signal)
 - ≠ MIDDAY_VWAP (dead; VWAP-gebaseerd; dit = session-open anchor)
+- ≠ simple ORB-familie (A1/N11/N15–N17) — geen opening-range break
 
 ---
 
@@ -39,8 +43,8 @@ Na de NY noon-lull (12:00–12:30 ET) herstarten institutionele market-makers hu
 ## Pre-screen aanvraag (Uitvoerder-2)
 
 - **Data:** `data/m5gz/US30cash.csv.gz`, train 2021-01-01 … 2023-12-31.
-- **Regel:** identiek aan §1 hierboven (am_bp 15:30–18:00 CET ≥ ±30 bp, continuation-entry 18:00 CET, stop ATR14, flat 21:00 CET).
-- **Maatstaf:** mean bruto retour in bp + median + N.
+- **Regel:** identiek hierboven (am_bp 15:30–18:00 CET ≥ ±30 bp, continuation-entry 18:00 CET, stop ATR14, flat 21:00 CET).
+- **Maatstaf:** mean bruto retour in bp + median + N (signed mean).
 - **Gate:** mean bruto ≥ **1,35 bp** (3 × 0,45 bp RT). N≥150 vereist.
 - **Geen test/reserve aanraken.** Alleen train-screen.
-- **Uitkomst:** PASS + N≥150 → Strateeg schrijft PREREG_FTMO_N20. FAIL of N<150 → STOP.
+- **Uitkomst:** PASS + N≥150 → Strateeg schrijft PREREG_FTMO_N20 (incl. D-094a (b)). FAIL of N<150 → STOP.

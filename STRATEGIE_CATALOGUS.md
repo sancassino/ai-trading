@@ -185,7 +185,10 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 | N15–N17 | **Venue-ORB exploratie** (CTO C-013: UK100/JP225/US30+US100+US500) | single-symbol ORB clones | **geen PREREG** — alle FAIL (C-013 `64723ff`); simple ORB-family barred |
 | N18 | **US500 Overnight Gap Continuation** — gap ≥±50 bp vs 22:00 CET, entry 15:30, flat 18:30 | ≠ N5 fade / ≠ ORB-familie | **GESTOPT FAIL_T** U2 `d1984ed` (gate+stress PASS; t≈0,64); TRIAL_COUNT **447**; D-093 freeze |
 | N19 | **XAU Overnight Gap Fill** (VOORSTEL_PRESCREEN_N19) | ≠ N5 / XAU_AM_FADE / N7–N12 | **geen PREREG** — C-014 FAIL (+2,03 < 2,49); D-093 barred |
-| N20–N21 | **US30 PM Cont. / GER40 Afternoon Fade** (VOORSTEL) | filed pre-D-093 | **BARRED** D-093.2 — geen pre-screen tot heropenen |
+| N20 | **US30 PM Continuation** (VOORSTEL_PRESCREEN_N20) — AM-trend ≥±30 bp → entry 18:00 CET, flat 21:00 | ≠ LUNCH_OPEN / N3 / N14 / ORB | **OPEN** U2 screen — D-094 lifts D-093.2; gate **1,35 bp** |
+| N21 | **GER40 Afternoon Deviation Fade** (VOORSTEL_PRESCREEN_N21) — dev vs XETRA-open ≥±50 bp → fade 16:30, flat 17:30 | ≠ N9 / N11 / N6 / N13 | **OPEN** U2 screen — D-094 lifts D-093.2; gate **2,16 bp** |
+| N22 | **UKOILcash London→NY Session MR** (VOORSTEL_PRESCREEN_N22) — lon_bp ≥±40 bp → fade 15:30, flat 18:30 | ≠ S2-USOIL EIA / ORB; swap 0 | **OPEN** U2 screen — D-094 track 2; gate **8,13 bp** (3×2,71) |
+| N23 | **US100cash Swing 2d TSMOM** (VOORSTEL_PRESCREEN_N23) — ret20-sign, hold 2d, swap in gate | ≠ B1 FX month / ORB / N3 | **OPEN** U2 screen — D-094 track 4; gate **13,68 bp** (3×(0,66+2×1,95)) |
 | **C — HERBEOORDELEN met FTMO-EV** | | | |
 | C1 | **C02 Faber (D1 DD-filter, 1 nacht swap)** | Als overlay (long/flat), swap ≈ 1–2,3 bp/nacht → 5–8%/jr drag op long; nuttig als risicobeheer maar geen FTMO-trial | Geen trial; als portefeuille-overlay in FTMO-context herbeoordelen |
 | C2 | **C55 DAA** | Weinig trades; swap-drag als in positie | Na engine/ftmo.py eventueel herbeoordelen |
@@ -206,9 +209,9 @@ Per heropende regel de volgende metriek berekenen:
 
 **Doel: FTMO-EV ≥ €400/mnd bij realistisch risico (≤ 2% dagverlies als het fout gaat).** Schaal > 4% dagverlies-risico wordt alleen als bovengrens gerapporteerd (D-016/D-085).
 
-## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090…D-093, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
+## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090…D-094, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
 
-*Bijgewerkt: 2026-10-01 07:15 Amsterdam — **D-093 zoekfase bevroren** (geen D-094+); N18 FAIL_T (TRIAL_COUNT **447**); watch **8/8 frozen**; EINDSTAND_FTMO.md; F2-ORB ≤2024 ≈€513/m referentie; Strateeg-2 `8778258` freeze-onderhoud*
+*Bijgewerkt: 2026-10-01 08:05 Amsterdam — **D-094 + D-094a FREEZE OFF** (CEO BESLUITEN op `claude/ftmo-trading-strategy-98mplz`); D-093/D-092.6 stopregel ingetrokken; TRIAL_COUNT nog **447**; Strateeg tracks **2+4**; N20/N21 heropend + N22/N23 nieuwe VOORSTELs; ranking ongewijzigd F2-ORB/A1 > S2-XAU_AM_FADE watch > S2-BTC > GS01 tot nieuw bewijs*
 
 ### 10a. Overzicht PREREGs (Faraday + Grok Strateeg-1 + Strateeg-2)
 
@@ -234,7 +237,10 @@ Per heropende regel de volgende metriek berekenen:
 | N15–N17 | Venue-ORB UK100/JP225/US* | CTO C-013 | **geen PREREG** — alle FAIL (`64723ff`) | simple ORB-family barred |
 | N18 | US500 Overnight Gap Continuation | faraday / CTO C-014 | **STOP FAIL_T** U2 `d1984ed` (gate+stress PASS; t≈0,64); TRIAL_COUNT **447** | ≠ N5 fade; ≠ ORB; year-skew 2023 −12,17 |
 | N19 | XAU Overnight Gap Fill | faraday VOORSTEL | **geen PREREG** — C-014 FAIL (+2,03 bp) | ≠ N5 / AM_FADE / N7–N12 |
-| N20–N21 | US30 PM Cont. / GER40 Afternoon Fade | faraday VOORSTEL | **BARRED** D-093.2 (geen screen) | filed pre-freeze |
+| N20 | US30 PM Continuation | faraday VOORSTEL | **OPEN** U2 (D-094) gate 1,35 bp | ≠ LUNCH_OPEN; D-094a (b) |
+| N21 | GER40 Afternoon Deviation Fade | faraday VOORSTEL | **OPEN** U2 (D-094) gate 2,16 bp | ≠ N9/N11; D-094a (b) |
+| N22 | UKOILcash London→NY Session MR | faraday VOORSTEL | **OPEN** U2 (D-094 track 2) gate 8,13 bp | ≠ S2-USOIL EIA; commodity |
+| N23 | US100cash Swing 2d TSMOM | faraday VOORSTEL | **OPEN** U2 (D-094 track 4) gate 13,68 bp | ≠ B1 month; swap in gate |
 | GS01 | Gap-aligned long-only ORB indices | grok/strateeg-1 | PREREG + erratum; **Faraday D-092.1 diagnostic pooled FAIL** (−0,38 < 1,92 bp) | ≠ A1 bidirectioneel; GER40-leg solo +6,21 — geen cherry-pick |
 | GS02 | Asian-range fade FX | grok/strateeg-1 | PREREG (geen poort-run) | ≠ A5 breakout; fade/decay-risico |
 | S2-XAU | XAUUSD London–NY overlap breakout | grok/strateeg-2 | **STOP** cost-gate `7bac598` | ≠ A1 cash-open |
@@ -258,7 +264,7 @@ Per heropende regel de volgende metriek berekenen:
 - **S2-LUNCH_OPEN:** cost-gate PASS → formal trial FAIL_T → TRIALS append; TRIAL_COUNT 445 (U2 `2a4f28e`).  
 - **N11 GER40 XETRA ORB:** cost-gate PASS → stress FAIL → formal FAIL_T → TRIALS append; TRIAL_COUNT 446 (U2 `e6b2395` / CTO C-013).  
 - **N18 US500 OVN Gap Cont.:** cost-gate PASS → stress PASS → formal FAIL_T → TRIALS append; **TRIAL_COUNT = 447** (U2 `d1984ed` / CTO C-015 / D-093).  
-- S2-* overig / N1–N10 / N12–N17 / N19 / MIDDAY / GER_US / VWAP_PB / IB_FADE / S2b / S2c: cost-gate, t, pre-screen FAIL of underpowered — geen extra formele trial. N20–N21 barred (D-093).  
+- S2-* overig / N1–N10 / N12–N17 / N19 / MIDDAY / GER_US / VWAP_PB / IB_FADE / S2b / S2c: cost-gate, t, pre-screen FAIL of underpowered — geen extra formele trial. **N20–N23 OPEN** voor U2 pre-screen onder D-094 (nog geen PASS → geen PREREG).  
 - N3: gate PASS maar t FAIL — geen TRIALS-append.  
 - N9: mean-PASS maar N≪150 — **geen PREREG/trial** (D-092.1 N-eis).  
 - S2-XAU_AM_FADE: gate PASS maar power onvoldoende — **geen trial-claim** (watch-only).  
@@ -267,7 +273,7 @@ Per heropende regel de volgende metriek berekenen:
 
 ### 10c. Welke hypothese is sterker? (evidence uit docs/kosten — geen verzonnen backtests)
 
-**Korte conclusie (post D-093 / C-015):** **Zoekfase bevroren.** A/B-tier + N1–N18 + S2 non-clones **uitgeput**; 0 sleeves gevalideerd. Recent formal: LUNCH_OPEN FAIL_T → N11 FAIL_T → **N18 FAIL_T** (TRIAL_COUNT **447**). Enige gate-PASS survivors zonder formal PASS: **S2-XAU_AM_FADE** (underpowered) + **S2-BTC** (power FAIL) — watch-only, geen nieuwe trials. Bindende referentie: **F2-ORB ≤2024 ≈ €513/m** (HistData A-001 / M-001; reopen-pad per EINDSTAND). D-092.6 / D-093.1 watch **8/8 frozen** (reset alleen bij full gate+stress+t PASS; N11/N18 cost-gate reset superseded). N20–N21 **barred**. Geen nieuwe PREREG/pre-screen tot Sandro/CEO heropent.
+**Korte conclusie (post D-094 / D-094a):** **Freeze OFF.** D-093 onderhoud + 8-cycli-stop ingetrokken. Integriteit ongewijzigd (PREREG-vóór-resultaat, t, FDR, FTMO-kosten). TRIAL_COUNT nog **447**; 0 sleeves gevalideerd. Ranking tot nieuw bewijs: **F2-ORB/A1** > **S2-XAU_AM_FADE** watch > **S2-BTC** > **GS01**. Strateeg cadence: ≥3 VOORSTEL pre-screens/cyclus (tracks 2+4); PREREG alleen na cost PASS. Deze cyclus: N20/N21 heropend + N22 (UKOIL track 2) + N23 (US100 2d TSMOM track 4).
 
 | Rang (kwalitatief) | Hypothese | Waarom (alleen bestaande docs/kosten/research) |
 |--------------------|-----------|-----------------------------------------------|
@@ -275,9 +281,10 @@ Per heropende regel de volgende metriek berekenen:
 | 2 (watch-only) | **S2-XAU_AM_FADE** | +18,70 bp; **N=12**; S2c closed; geen trial onder freeze |
 | 3 (watch-only) | **S2-BTC** | +22,9 bp / N=132<150; portfolio-diversifier only |
 | 4 (verzwakt) | **GS01** | Research-fit; Faraday pooled pre-screen FAIL |
-| Dood / barred | A2/A4/A5/B1/N1–N19/LUNCH_OPEN/N20–N21/… | Poort, t, pre-screen FAIL, underpowered, ORB-bar, of D-093 freeze |
+| Dood / barred | A2/A4/A5/B1/N1–N19/LUNCH_OPEN/… | Poort, t, pre-screen FAIL, underpowered, ORB-bar (D-093 freeze opgeheven) |
+| Open screen | **N20–N23** | D-094 heropen/nieuw; wacht U2 cost pre-screen |
 
-**Faraday vs Strateeg-2:** Faraday N18 = laatste formal trial → FAIL_T (`d1984ed`, TRIAL 447). Strateeg-2 tip `8778258`: D-093 FREEZE onderhoud — no new PREREG (was `a8e753d`). Onder D-093: beide in onderhoud; geen screens/PREREGs. Sterker blijft F2-ORB/A1 referentie > XAU_AM_FADE watch > S2-BTC watch > GS01.
+**Faraday vs Strateeg-2:** Faraday N18 = laatste formal → FAIL_T (`d1984ed`, TRIAL 447). D-094: beide agents weer volle cadans; Faraday levert N20–N23 VOORSTELs (tracks 2+4). Sterker blijft F2-ORB/A1 > XAU_AM_FADE watch > S2-BTC > GS01 tot nieuwe gate-PASS.
 
 ### 10d. Actiepunten Strateeg (deze branch)
 
@@ -291,7 +298,8 @@ Per heropende regel de volgende metriek berekenen:
 8. ✅ PREREG_FTMO_N11 — **STOP FAIL_T** (`e6b2395`); TRIAL_COUNT 446.  
 9. ✅ VOORSTEL_PRESCREEN_N12/N13/N14 — D-092.1 FAIL (C-012 / U2 `d4cefff`).  
 10. ✅ PREREG_FTMO_N18 — **STOP FAIL_T** (`d1984ed`); TRIAL_COUNT **447**; C-015 / D-093.  
-11. ✅ VOORSTEL N19 FAIL (C-014); N20/N21 filed → **BARRED** D-093.2.  
-12. ✅ Catalogus §9/§10 sync post D-093 / N18 FAIL_T / watch 8/8 / EINDSTAND (deze commit).  
+11. ✅ VOORSTEL N19 FAIL (C-014); N20/N21 waren BARRED D-093.2 → **heropend D-094**.  
+12. ✅ Catalogus §9/§10 sync post D-093 / N18 FAIL_T / EINDSTAND; nu **D-094 sync**.  
 13. ✅ D-092.1 index pre-screens (PLM/NR7/Failed-OR/GS01) — FAIL.  
-14. **D-093 onderhoud:** geen nieuwe PREREG/pre-screen; ritme 1×/4u; reopen alleen op long_m1 of nieuw CEO-besluit. Sandro-melding = CEO `EINDSTAND_FTMO.md` / SANDRO_ACTIES (geen Strateeg-chat).
+14. ~~D-093 onderhoud~~ → **D-094 FREEZE OFF** (CEO 08:10 + D-094a 08:25).  
+15. ✅ **2026-10-01 08:05:** VOORSTEL N20/N21 status→OPEN; N22 UKOIL track 2; N23 US100 2d TSMOM track 4; geen PREREG (geen cost PASS).
