@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N72 — EURJPY long-only L60/H10 medium-term (D-100 family B)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** track 4 + **D-100 family B** + **D-097** medium-term; filed 2026-10-01 ~12:15 CEST; replace N69–N71 DIAG_FAIL).  
+**Status:** **BARRED/STOP** — C-028 closes the L60 FX-med family after USDJPY_MED **FAIL_T** (U2 `910d6ff`, TRIAL 454→455) and EURJPY_MED **FAIL_T** (U2 `65a9b23`, TRIAL 455→456); no more pair-forks. TRIAL_COUNT **456**.
 **Auteur:** Strateeg (Claude).  
 **Instrument:** `EURJPY` (RT **1,10 bp** — COSTS_FTMO; swap_long **−0,11** bp/nacht = earn).  
 **Track 4 + D-100 family B:** FX medium-term TSMOM on cheap overnight long side (parallel to CTO USDJPY_MED, **solo EURJPY**). Hold 10 handelsdagen (9 nachten).
