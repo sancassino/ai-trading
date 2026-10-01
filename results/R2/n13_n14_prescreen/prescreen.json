@@ -1,0 +1,41 @@
+{
+  "n13": {
+    "idea": "N13_GER40_USOPEN_SYNC",
+    "n": 92,
+    "mean_bruto_bp": -3.3443,
+    "median_bruto_bp": -4.6903,
+    "p25": -39.086,
+    "p75": 33.5488,
+    "stop_share": 0.0,
+    "rt_bp": 0.72,
+    "gate_3x_rt": 2.16,
+    "pass_gate": false,
+    "n_ok": false,
+    "pass": false,
+    "date_min": "2022-01-28",
+    "date_max": "2023-12-21",
+    "decision": "NO_PREREG_screen_fail",
+    "reserve_2025": "untouched"
+  },
+  "n14": {
+    "idea": "N14_US100_NYOPEN_PM",
+    "n": 183,
+    "mean_bruto_bp": -5.0519,
+    "median_bruto_bp": -6.1788,
+    "p25": -48.1272,
+    "p75": 43.0876,
+    "stop_share": 0.0055,
+    "rt_bp": 0.6,
+    "gate_3x_rt": 1.8,
+    "pass_gate": false,
+    "n_ok": true,
+    "pass": false,
+    "date_min": "2021-09-14",
+    "date_max": "2023-12-08",
+    "decision": "NO_PREREG_screen_fail",
+    "reserve_2025": "untouched"
+  },
+  "source": "VOORSTEL_PRESCREEN_N13/N14 @ e8f261f",
+  "min_n": 150,
+  "reserve_2025": "untouched"
+}

@@ -727,3 +727,293 @@ A4 · B1 · A5 · A2 · S2-* · N1–N6 · MIDDAY_VWAP · S2b · GER_US_LEAD · 
 3. XAU_AM_FADE: niet losser; geen pre-2021 zonder CTO.
 
 Vragen → Manager; eindbesluit → CTO. **Material for Manager/CTO** (gate completed FAIL); quiet to Sandro.
+
+## Cyclus 02:23–02:25 CEST — D-090 FASE 3 wait (NEXT_STEPS v52; D-092)
+
+**Branch:** `claude/uitvoerder2-r`. Fast-forward merged `origin/main` → tip includes NEXT_STEPS **v52** (`ff04f5d` / Verslag `047e650`). Prior U2 tip: IB_FADE FAIL STOP (`b8cf28a`).
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…**D-092** @ `origin/claude/ftmo-trading-strategy-98mplz:BESLUITEN.md` (D-092 herzien plan na 4/4)
+- `NEXT_STEPS.md` **v52** @ `origin/main` (Manager 02:05 CEST) — U2 **IDLE**; D-092.1 pre-screen gate; 8-cyclus watch **0/8**; S2c/XAG dead
+- CTO C-009 (`a416fa7`): IB_FADE STOP bekrachtigd; XAG/S2c pre-screen FAIL; XAU_AM_FADE watch-only (**geen power-pad**)
+- Strateeg tip `7d189ac` / Strateeg-2 tip `48249ad`: **geen** nieuwe bevroren pre-screened non-clone PREREG sinds IB_FADE
+
+### U2-directives (v52 §0 actie 1) — bindend
+- IB_FADE DONE FAIL (`b8cf28a` / C-009). C-007 earlier STOP.
+- **IDLE** tot Strateeg/Strateeg-2 **D-092.1 pre-screened** non-clone PREREG landt (≠ dead set incl. IB_FADE/S2c; geen XAU power-pad).
+- Dead set niet herstarten (A4·B1·A5·A2·S2-*·N1–N6·MIDDAY·S2b·GER_US_LEAD·VWAP_PB·**IB_FADE**·**S2c**).
+- XAU_AM_FADE = watch-only; do NOT loosen 0.60×; geen pre-2021.
+- Nieuwe PREREGs alleen na D-092.1 kost-pre-screen PASS (train 2021–23 mean bruto ≥ 3× RT).
+- PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025→ onaangeraakt.
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| IB_FADE / C-009 | DONE FAIL STOP (`b8cf28a`) — skip |
+| S2c XAU+XAG | CTO pre-screen FAIL / closed — skip |
+| XAU_AM_FADE power-pad | CTO watch-only (v52 / D-092) — **geen** U2-assign |
+| Pre-screened non-clone PREREG | Strateeg/Strateeg-2 **OPEN** — nog geen nieuwe bevroren PREREG voor U2 |
+| Dead set | niet herstart |
+| D-092.6 8-cyclus stop | Manager watch **0/8** — U2 idle telt mee via Manager |
+
+**TRIAL_COUNT blijft 444.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Strateeg of Strateeg-2 levert **D-092.1 pre-screen PASS** + non-clone PREREG op screen top-10 (≠ dead set) → dan U2 cost-gate.
+2. XAU_AM_FADE blijft watch-only — geen power-pad; S2c closed.
+3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
+
+Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG-result); idle wait note for Manager cadence.
+
+
+## Cyclus 00:25 UTC (2026-10-01) — D-092 idle check (notifications 23:25 + 00:25)
+
+**Branch:** `claude/uitvoerder2-r` — synced to `20baf03` (Grok U2 already logged D-090 wait note). Notificaties 23:25/00:25 UTC verwerkt. Reserve 2025→ **niet aangeraakt**.
+
+| Item | Status |
+|------|--------|
+| Strateeg `2adb8ab` | D-092.1 pre-screens FAIL — geen nieuwe PREREG voor U2 |
+| Strateeg-2 `48249ad` | Cyclus-4 IB_FADE = dead (C-009) — geen nieuwe PREREG voor U2 |
+| TRIAL_COUNT | **444** (ongewijzigd) |
+| D-092.6 8-cyclus stop | Manager watch — U2 idle |
+
+Geen actionable taak. Quiet cycle.
+
+## Cyclus 02:51–02:56 CEST — D-090 FASE 3: LUNCH_OPEN cost-gate PASS → trial FAIL_T (NEXT_STEPS v53)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` (NEXT_STEPS **v53**).  
+**Gelezen:** BESLUITEN tip upbeat-dirac (→D-086) + FTMO-branch D-087…D-092; NEXT_STEPS v53 (U2 idle / watch 1/8); Strateeg-2 `ba54fe1` **D-092.1 PASS → PREREG_S2_LUNCH_OPEN** (na v53, deblokkeert U2).
+
+### U2-actie (niet idle)
+1. Land PREREG vóór resultaat: commit `4689b9e` (bron `grok/strateeg-2` @ `ba54fe1`).
+2. Formele cost-gate train 2021–23 (+50% RT-stress): script `scripts/s2_lunch_open_gate.py`.
+3. Formele trial §4: day-clustered netto t train+test + `ftmo_ev` diagnostiek — `scripts/s2_lunch_open_trial.py`.
+4. Reserve 2025→ **onaangeraakt**. Dead set niet herstart. Geen XAU power-pad.
+
+### Kostenpoort TRAIN 2021–2023
+
+| Sleeve | N | mean bruto | TW-RT | gate 3× | gate +50% | Uitkomst |
+|--------|---|------------|-------|---------|-----------|----------|
+| S2 LUNCH_OPEN (US30+US100) | 233 | **+4.72 bp** | 0.54 bp | 1.62 bp | 2.43 bp | **PASS** |
+
+By-symbol: US30 N=134 mean +5.74 (gate 1.35); US100 N=99 mean +3.33 (gate 1.98).  
+Exit mix: stop 129 / target 32 / time 72. Sides 112L/121S. Median bruto **−13.17** (scheef). Date span 2021-01-27…2023-12-22.
+
+### Formele trial (PREREG §4) — FAIL_T
+
+| Window | N | mean netto | t day-clust | Beslis |
+|--------|---|------------|-------------|--------|
+| train 2021–23 | 233 | +4.18 bp | **1.14** | < 2.0 |
+| test 2024 | 100 | +0.17 bp | **0.05** | < 2.0 |
+
+cost_ok train (RT/bruto 0.11 < 0.50) ✔; skew_day train +2.43 ✔.  
+`ftmo_ev` train-only (0.75% risk, diagnostiek na t-fail): p_pass_2≈0.96, net_ev/m≈€563 — **niet selectie** (t faalt; test decay; median negatief).  
+**Uitkomst: FAIL_T STOP.** Geen shortlist. **TRIAL_COUNT 444→445.** TRIALS append-only.
+
+### Dead set (nu + LUNCH_OPEN)
+A4 · B1 · A5 · A2 · S2-* · N1–N6 · MIDDAY_VWAP · S2b · GER_US_LEAD · VWAP_PB · IB_FADE · S2c · **LUNCH_OPEN**.  
+XAU_AM_FADE blijft watch-only (geen power-pad). Pre-screen FAILs (PLM/NR7/Failed-OR/XAU-N7/N8) niet herhalen.
+
+### Next / escalatie
+1. U2 idle tot volgende D-092.1 pre-screened non-clone PREREG (≠ dead set / ≠ herhaalde FAIL-mechanismen).
+2. D-091.6 reeds 4/4; D-092.6 watch blijft Manager-teller (deze cyclus = echte gate-PASS op kosten, maar formal FAIL_T — Manager beslist of watch reset).
+3. Geen Sandro-ping (D-091.6 / D-092.6).
+
+Artifacts: `results/R2/lunch_open_prep/`. Vragen → Manager; eindbesluit → CTO.  
+**MATERIAL for Manager/CTO** (first cost-gate PASS since XAU_AM_FADE; formal FAIL_T; TRIAL_COUNT 445).
+
+## Cyclus 03:17–03:18 CEST — D-090 FASE 3 wait (NEXT_STEPS v55; D-092)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → tip includes NEXT_STEPS **v55** (`e9640a8`). Prior U2 tip: LUNCH_OPEN FAIL_T (`2a4f28e`, TRIAL_COUNT 445).
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…**D-092** via NEXT_STEPS / FTMO-branch context (D-092 herzien plan; escalatie 4/4)
+- `NEXT_STEPS.md` **v55** @ `origin/main` (Manager 03:10 CEST) — U2 **IDLE**; D-092.1 pre-screen; watch **0/8** (CTO C-011 confirmed); N9 underpowered / N10 FAIL
+- CTO C-011 (`01d93b7`): LUNCH_OPEN FAIL_T bekrachtigd; N10 FAIL; N9 NO PREREG (N=61≪150); watch 0/8
+- Strateeg tip `bbcd232` (N9/N10 aanvraag) / Strateeg-2 tip `ba54fe1` (LUNCH_OPEN): **geen** nieuwe bevroren pre-screened non-clone PREREG voor U2 sinds LUNCH_OPEN
+
+### U2-directives (v55 §0 actie 1) — bindend
+- LUNCH_OPEN DONE FAIL_T (`2a4f28e` / C-011). Dead set += LUNCH_OPEN · N10.
+- **IDLE** tot Strateeg/Strateeg-2 **D-092.1 pre-screened** non-clone PREREG landt met verwachte **N≥150** (≠ dead set incl. LUNCH_OPEN/N10; ≠ N9 underpowered; geen XAU power-pad; geen klonen FAIL-mechanismen).
+- Dead set niet herstarten (A4·B1·A5·A2·S2-*·N1–N6·MIDDAY·S2b·GER_US_LEAD·VWAP_PB·IB_FADE·S2c·**LUNCH_OPEN**·**N10**).
+- XAU_AM_FADE = watch-only; geen power-pad.
+- PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025→ onaangeraakt.
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| LUNCH_OPEN / C-011 | DONE FAIL_T STOP (`2a4f28e`) — skip |
+| N9 GER40 Ochtend-Fade | underpowered mean-PASS — NO PREREG — skip |
+| N10 XAU Mid-London Fade | D-092.1 FAIL — skip |
+| XAU_AM_FADE power-pad | CTO watch-only — **geen** U2-assign |
+| Pre-screened non-clone PREREG N≥150 | Strateeg/Strateeg-2 **OPEN** — nog geen nieuwe bevroren PREREG voor U2 |
+| Dead set | niet herstart |
+| D-092.6 8-cyclus stop | Manager/CTO watch **0/8** — U2 idle |
+
+**TRIAL_COUNT blijft 445.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Strateeg of Strateeg-2 levert **D-092.1 pre-screen PASS** + non-clone PREREG met N≥150 (≠ dead set / ≠ N9) → dan U2 cost-gate → formal trial.
+2. XAU_AM_FADE blijft watch-only — geen power-pad.
+3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
+
+Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG-result); idle wait note for Manager cadence.
+
+
+## Cyclus 01:25 UTC (2026-10-01) — D-092 idle check; TRIAL_COUNT 445
+
+**Branch:** `claude/uitvoerder2-r` — synced to `4129564`. Notificatie 01:25 UTC verwerkt. Reserve 2025→ **niet aangeraakt**.
+
+**Vorige cyclus (Grok U2 `2a4f28e`, ~02:56 CEST):** LUNCH_OPEN cost-gate PASS (N=233, mean=+4.72 bp ≥ 2.43 bp stress-gate), maar formal t-toets FAIL_T (train t=1.14, test t=0.05 < 2.0) → STOP. TRIALS.csv append: TRIAL_COUNT **444→445**. LUNCH_OPEN dead.
+
+**D-092.6:** CTO bevestigt watch-reset op cost-gate PASS → **0/8** (droogte-teller herstart).
+
+| Item | Status |
+|------|--------|
+| Strateeg `290be26` | N9 underpowered / N10 FAIL — geen nieuwe PREREG voor U2 |
+| Strateeg-2 `ba54fe1` | LUNCH_OPEN = dead (FAIL_T) — geen nieuwe PREREG voor U2 |
+| TRIAL_COUNT | **445** |
+| D-092.6 8-cyclus stop | CTO-confirmed reset → **0/8** |
+
+Geen actionable taak. Quiet cycle.
+
+## Cyclus 03:27–03:31 CEST — D-090 FASE 3: N11/N12 D-092.1 pre-screen FAIL (NEXT_STEPS v55)
+
+**Branch:** `claude/uitvoerder2-r`. Prior tip `a0ca558` (idle) raced Strateeg `b374f0a` (N11/N12 aanvraag). Reserve 2025→ **niet aangeraakt**. Geen TRIALS / geen TRIAL_COUNT-wijziging.
+
+**Gelezen deze cyclus:**
+- `NEXT_STEPS.md` **v55** @ `origin/main` (`e9640a8`) — U2 IDLE tot pre-screened PREREG N≥150; watch **0/8**; dead set incl. LUNCH_OPEN/N10
+- Strateeg `b374f0a` / `746e631`: **VOORSTEL_PRESCREEN_N11 + N12** expliciet aan U2 (D-092.1); wacht pre-screen
+- CTO C-011 `01d93b7` (N9/N10) als template; Strateeg-2 tip nog `ba54fe1` (geen nieuwe PREREG)
+
+### D-092.1 pre-screen (train 2021–2023 only)
+
+Script: `scripts/n11_n12_prescreen.py`. Artifacts: `results/R2/n11_n12_prescreen/`.
+
+| Idee | N | mean bruto | Gate (3×RT) | Uitkomst |
+|------|---|------------|-------------|----------|
+| **N11** GER40 XETRA ORB (VOORSTEL RT 1.40) | 496 | **+3.33 bp** | 4.20 bp | **FAIL** (NO_PREREG) |
+| N11 COSTS_FTMO RT sens. (0.72→2.16) | 496 | +3.33 bp | 2.16 bp | PASS (sens. only; **niet bindend**) |
+| **N12** XAU NY-Open Continuation | 303 | **+0.59 bp** | 2.49 bp | **FAIL** (NO_PREREG) |
+
+- N11: N≥150 ok, mean net onder VOORSTEL-gate (median −14.0 bp; stop-share 50.6%). Binding = VOORSTEL 4.20 → **geen PREREG**.
+- N12: N≥150 ok, mean ver onder gate (median −1.3 bp; bijna altijd time-exit). **geen PREREG**.
+- Pre-screen FAIL-set += **N11 · N12** (naast N7/N8/N10 / index PLM/NR7/Failed-OR/GS01-pooled). Geen klonen zonder nieuw mechanisme.
+
+**TRIAL_COUNT blijft 445.** Geen formal trial.
+
+### U2 status na cyclus
+- **IDLE** opnieuw tot volgende D-092.1-PASS non-clone PREREG N≥150 (≠ dead set; ≠ N9; ≠ N11/N12 FAIL-mechanismen).
+- Dead set ongewijzigd (LUNCH_OPEN FAIL_T blijft). XAU_AM_FADE watch-only.
+- D-092.6 watch blijft Manager/CTO-teller (**0/8** bij start; deze cyclus = pre-screen FAIL, geen gate-PASS).
+
+### Blockers / next
+1. Strateeg/Strateeg-2: ander non-clone mechanisme + D-092.1 pre-screen PASS + N≥150 → dan U2 cost-gate.
+2. N11/N12 niet heropenen zonder nieuw mechanisme (D-092.1).
+3. Escalatie D-091.6 reeds 4/4 → D-092 actief. Geen Sandro-ping.
+
+**MATERIAL for Manager/CTO** (N11/N12 D-092.1 FAIL; U2 idle again). Vragen → Manager; eindbesluit → CTO.
+
+
+## Cyclus 03:53–03:58 CEST — D-090 FASE 3: N11 cost-gate PASS → stress FAIL → FAIL_T (NEXT_STEPS v57)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → NEXT_STEPS **v57** (`ddfe7bc` / tip `f003fc4`). Prior U2 tip `2ac8e86` (N11/N12 pre-screen under VOORSTEL gate). Reserve 2025→ **niet aangeraakt**. Test 2024 **onaangeraakt** (PREREG §4).
+
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…**D-092** via NEXT_STEPS / FTMO-branch context (D-092 herzien plan; escalatie 4/4)
+- `NEXT_STEPS.md` **v57** @ `origin/main` — C-012 N11 **PASS_may_PREREG** under COSTS RT 0.72 / gate 2.16; N12 FAIL; U2 IDLE wacht **PREREG_FTMO_N11**
+- CTO C-012 (`cdabfe8`): GER40 RT bindend 0.72; VOORSTEL gate 4.20 mis-cite
+- Strateeg `e8f261f` (~04:00 CEST): **PREREG_FTMO_N11 bevroren** + VOORSTEL_PRESCREEN N13/N14
+
+### Actie — PREREG land → cost-gate → formal train t
+1. Landed `PREREG_FTMO_N11.md` from Strateeg `e8f261f` **vóór** resultaten → commit `564ee5e`.
+2. Script `scripts/n11_cost_gate_trial.py` implements **frozen PREREG §2** incl. entry cutoff **10:30 CET** (stricter than prior VOORSTEL screen that searched until 13:00; that screen was N=496 / +3.33 bp).
+3. Train 2021–2023 only; day-clustered t + Newey-West L=5 on day-sum netto.
+
+| Stap | N | mean bruto | Gate | Uitkomst |
+|------|---|------------|------|----------|
+| Cost-gate (3× RT 0.72 = 2.16) | 475 | **+2.74 bp** | 2.16 | **PASS** |
+| Stress (+50% → 3.24) | 475 | +2.74 bp | 3.24 | **FAIL** (vermelding; formele t optioneel per PREREG) |
+| Formele t (day-clust / NW L=5) | 475 | netto mean +2.02 | t≥2.0 | **FAIL_T** (t_day 0.92 / t_NW 0.85) |
+
+- Median bruto **−14.32 bp** (skew-fragile; stop-share 51.8%). Caveat C-012 bevestigd.
+- TRIALS.csv append; **TRIAL_COUNT 445→446**.
+- Geen ftmo_ev shortlist. Geen test-2024. Geen retune.
+
+### Dead set (nu + N11)
+A4 · B1 · A5 · A2 · S2-* · N1–N6 · MIDDAY_VWAP · S2b · GER_US_LEAD · VWAP_PB · IB_FADE · S2c · LUNCH_OPEN · N10 · N12 · **N11**.  
+Pre-screen FAIL-set ongewijzigd (N7/N8/N10/N12 / index PLM…). XAU_AM_FADE watch-only.
+
+### Artifacts
+`results/R2/n11_prep/` (`cost_gate_n11_train.csv`, `n11_board.json`, `n11_report.md`); `scripts/n11_cost_gate_trial.py`.
+
+### Blockers / next
+1. Strateeg/Strateeg-2: volgende D-092.1 PASS non-clone PREREG N≥150 (≠ dead set / ≠ N11/N12 FAIL-mechanismen) → U2 cost-gate.
+2. VOORSTEL_PRESCREEN N13/N14 (Strateeg `e8f261f`) — **DONE deze cyclus** → beide FAIL (zie sectie 03:58–04:00).
+3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
+
+**MATERIAL for Manager/CTO** (N11 first formal after C-012 reclass; cost-gate PASS / stress FAIL / FAIL_T; TRIAL_COUNT 446). Vragen → Manager; eindbesluit → CTO.
+
+
+## Cyclus 03:58–04:00 CEST — D-092.1 N13/N14 pre-screen FAIL (NO_PREREG; TRIAL_COUNT 446)
+
+**Branch:** `claude/uitvoerder2-r` tip after N11 FAIL_T (`e6b2395`). Strateeg `e8f261f` VOORSTEL_PRESCREEN N13/N14. Reserve 2025→ **niet aangeraakt**. Geen TRIALS / geen TRIAL_COUNT-wijziging.
+
+### D-092.1 pre-screen (train 2021–2023 only)
+
+| Idee | N | mean bruto | Gate | Uitkomst |
+|------|---|------------|------|----------|
+| **N13** GER40 US-Open Sync (US500 ±15 bp → GER40 15:30–17:00) | 92 | **−3.34 bp** | 2.16 bp | **FAIL** (NO_PREREG; also N≪150) |
+| **N14** US100 NY-Open Pre-Market Mom (±25 bp pm → 15:30–17:00) | 183 | **−5.05 bp** | 1.80 bp | **FAIL** (NO_PREREG; N≥150 ok) |
+
+- Pre-screen FAIL-set += **N13 · N14** (naast N7/N8/N10/N12 / index PLM…). Geen klonen zonder nieuw mechanisme.
+- Dead set ongewijzigd t.o.v. N11 FAIL_T (`e6b2395`).
+
+### Artifacts
+`VOORSTEL_PRESCREEN_N13.md`, `VOORSTEL_PRESCREEN_N14.md`, `scripts/n13_n14_prescreen.py`, `results/R2/n13_n14_prescreen/`.
+
+### Next
+1. U2 idle tot volgende D-092.1 PASS non-clone PREREG N≥150 (≠ dead / ≠ FAIL-pre-screens incl. N11–N14).
+2. Escalatie D-091.6 reeds 4/4 → D-092 actief. Geen Sandro-ping.
+
+**MATERIAL for Manager/CTO** (N13/N14 D-092.1 FAIL; U2 idle again). Vragen → Manager; eindbesluit → CTO.
+
+## Cyclus 04:19–04:21 CEST — D-090 FASE 3 wait (NEXT_STEPS v59; D-092)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → NEXT_STEPS **v59** (`4b585f8`). Prior U2 tip `d4cefff` (N11 FAIL_T + N13/N14 pre-screen FAIL; TRIAL_COUNT **446**). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…**D-092** via NEXT_STEPS / FTMO-branch context (D-092 herzien plan; escalatie 4/4)
+- `NEXT_STEPS.md` **v59** @ `origin/main` (Manager 04:11 CEST) — C-013 N15–N17 FAIL; D-092.6 CTO-affirm watch **0/8**; U2 **IDLE**
+- CTO C-013 (`64723ff`): N11 FAIL_T bekrachtigd; venue-ORB N15/N16/N17 (+N17b/c) FAIL; simple single-symbol ORB clones barred; watch 0/8 (cost-gate PASS resets)
+- Strateeg `ee9853f` (~04:20 CEST): §9/§10 sync post N11 FAIL_T + N12–N17 FAIL — **geen** nieuwe PREREG
+- Strateeg-2 `d820c5f` (~03:51 CEST): D-092.1 screens FAIL — **geen** nieuwe PREREG
+
+### U2-directives (v59 §0 actie 1) — bindend
+- N11 = **FAIL_T STOP** (`e6b2395` / C-013). TRIAL_COUNT **446**. N13/N14 = **NO_PREREG** (`d4cefff`).
+- **IDLE** tot volgende **D-092.1-PASS non-clone** PREREG N≥150 (≠ dead/FAIL set incl. **N11**/N12/N13–N17/LUNCH_OPEN; ≠ N9; **geen simple ORB-klonen**).
+- Dead set niet herstarten. XAU_AM_FADE = watch-only; geen power-pad.
+- PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025→ onaangeraakt.
+- A4/A5/A1: niet toegewezen / data / dead — **geen inventie**.
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| N11 / C-013 | DONE FAIL_T STOP — skip |
+| N13/N14 | D-092.1 FAIL NO_PREREG (`d4cefff`) — skip |
+| N15–N17 venue-ORB | CTO C-013 FAIL — skip (ORB clones barred) |
+| XAU_AM_FADE power-pad | CTO watch-only — **geen** U2-assign |
+| Pre-screened non-clone PREREG N≥150 | Strateeg/Strateeg-2 **OPEN** — nog geen nieuwe bevroren PREREG voor U2 |
+| Dead set + FAIL-pre-screens | niet herstart |
+| D-092.6 8-cyclus stop | Manager/CTO watch **0/8** — U2 idle |
+
+**TRIAL_COUNT blijft 446.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Strateeg of Strateeg-2 levert **D-092.1 pre-screen PASS** + non-clone PREREG met N≥150 (≠ dead/FAIL incl. N11–N17; geen ORB-clone) → dan U2 cost-gate → formal trial.
+2. XAU_AM_FADE blijft watch-only — geen power-pad.
+3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
+
+Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG-result); idle wait note for Manager cadence.
