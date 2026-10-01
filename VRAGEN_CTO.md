@@ -460,15 +460,20 @@ _Open for Manager:_ absorb **D-095** + `PREREG_FTMO_P1_ORB_BTC.md` from CEO `c7c
 
 ### C-020 — P1 reserve FAIL (D-096) — notify Auditor + Manager
 **Opened:** 2026-10-01 ~08:57 Europe/Amsterdam.  
-**Status:** CLOSED for CEO decision path (P1 dood per D-096.4); OPEN for Auditor concordance.
+**Status:** **CLOSED** — Auditor `AUDIT_4` CONCORDANT FAIL (`2959bc0`); Manager absorbed D-096 into NEXT_STEPS v67 (`d9b32cc`/`2c960e5`); CEO wrote **D-097** (`8c3b5d4`). No eval advice.
 
-**Facts:** U2 stap1 PASS → CEO D-096 vrijgave → CTO one-shot reserve FAIL (t_NW5=0.24, SR=0.20, BTC leg mean <0). TRIAL_COUNT 448. Artefacts on `grok/cto-1` `results/cto/p1_reserve/` + `p1_scales.json` (sA/sB frozen).
+---
+
+### C-021 — D-097 track-5 grid delivered; Manager absorb D-097
+**Opened:** 2026-10-01 ~09:28 Europe/Amsterdam.  
+**Status:** OPEN for Manager (CTO deliverable done on `grok/cto-1`).
+
+**Facts:** D-097 redirects to lage-omloop/groot-bruto; U2 TRIAL_COUNT **453** (N35/N36/N40/N41/GBPJPY all FAIL_*); CTO shipped diagnostic target grid `results/cto/c021_d097_low_turnover/` (0 trials, reserve untouched). Track-3 ceiling combining **paused** until solo t≥2.0.
 
 **Ask:**
-1. **Auditor:** file `AUDIT_4.md` — independent recompute with same frozen sA/sB; confirm FAIL.
-2. **Manager:** absorb D-096 + C-020 FAIL into NEXT_STEPS (P1 dead; TRIAL 448; continue D-094 tracks; N35/N36 PREREG path).
-3. **CEO:** no eval advice; no freeze. Optional one-line acknowledgment in CEO_LOG.
-4. **Sandro:** material result ping via parent (P1 FAIL → do not buy €540 eval; search continues).
+1. **Manager:** absorb **D-097** + TRIAL 453 + dead-set (P1, S2-BTC, N35/N36/N40/N41, GBPJPY) into NEXT_STEPS (v67 still ends at D-096); point Strateeg/S2 at C-021 bars (≥50 bp bruto/trade swing; ≥10y proxy).
+2. **Strateeg / S2:** open ≥2 new D-097.1/.2 pre-screens (TSMOM/XS-mom/carry/regime) — no intradag micro-edge clones.
+3. **CEO / Sandro:** no new ask. No €540 eval. No EINDSTAND re-nag.
 
-**Where:** `PREREG_FTMO_P1_ORB_BTC.md`, `results/cto/p1_reserve/`, `RUNLOG_CTO.md` C-020.
+**Where:** `results/cto/c021_d097_low_turnover/`, `RUNLOG_CTO.md` C-021, CEO `BESLUITEN.md` D-097.
 

@@ -889,3 +889,51 @@ git add scripts/c020_p1_reserve.py results/cto/p1_scales.json results/cto/p1_res
 git commit -m "CTO: C-020 P1 ORB+BTC reserve FAIL (D-096); TRIAL 448"
 git push origin grok/cto-1
 ```
+
+## C-021 — D-097 absorb + track-5 low-turnover target grid — 2026-10-01 ~09:28 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended: **0**. No FTMO signup / spend. No EINDSTAND re-nag.
+
+### Team snapshot vs prior wake (~08:57 CEST / C-020)
+
+| Item | ~08:57 C-020 | ~09:28 C-021 |
+|---|---|---|
+| main NEXT_STEPS | v66 `67e9bf0` tip `827c72b` | **v67** tip `2c960e5` (U-007 QA; still ends D-096 — D-097 not yet absorbed) |
+| grok/cto-1 | `0a97602` C-020 P1 FAIL | **this C-021** |
+| Decisions | D-094 ON; D-096 P1 vrijgave | **+ D-097** (`8c3b5d4`) lage omloop / groot bruto; AUDIT_4 **CONCORDANT FAIL** (`2959bc0`) |
+| TRIAL_COUNT (U2) | 448 | **453** (GBPJPY + N35/N36 + N40/N41) |
+| U2 | `43c395e` | **`5b3db74`** GBPJPY FAIL_STRESS; N35/N36 FAIL_T; N40 FAIL_STRESS; N41 FAIL_T |
+| Strateeg | `782e6b8` / queue | **`6ef46a7`** N40/N41 PREREG + N38–N43 screens (already gated by U2) |
+| S2 | `6444d30` | `6444d30` (unchanged; GBPJPY dead) |
+| CEO | `8ed250e` D-096 | **`8c3b5d4` D-097** |
+| EINDSTAND | tussenstand | tussenstand; **no re-nag** |
+
+### D-097 — binding for CTO tracks 3+5
+
+1. Deprioritize intradag micro-edges (0–15 bp bruto eaten by costs) — pattern confirmed by P1 + N35–N41.
+2. Target: swing/positie hold 3–20d, bruto 50–300 bp/trade, cost 1–10 bp + swap; regime filters pre-registered; ≥10y proxy for mechanism (D-094a).
+3. **Track 3 combining PAUSED** until individual day-clust t ≥ 2.0 — no more C-018 H-ENS-03 ceiling books as candidates.
+4. Dead += P1, S2-BTC US-open, N35, N36, N40, N41, GBPJPY_EU_MOM. No clones / no herrun (U-007 erratum only).
+
+### Deliverable (track 5)
+
+Synthetic design grid via `scripts/c021_d097_low_turnover_targets.py` → `results/cto/c021_d097_low_turnover/`:
+- `target_grid.csv` (92 rows), `tier_mins.json`, `c021_board.json`, `c021_report.md`
+- Hold=5d minima (net bp/trade after costs): ~**60 bp @12 trades/yr** for €500; ~**150 bp @12/yr** or **60 bp @24/yr** for €800 (assuming stable edge — ceiling, not evidence).
+- Practical bars for Strateeg: prefer ≥50 bp bruto/trade pre-screen; formal t≥2 both halves; combine only after solo PASS.
+
+### CTO next
+
+- No track-3 blend until a D-097 sleeve clears formal t.
+- On first U2 gate+stress+t PASS: track-5 `recommend_scale` / `ftmo_ev` (still no 2025+ without BESLUITEN).
+- Manager should bump NEXT_STEPS for D-097 + TRIAL 453 (CTO does not edit main).
+
+### Git
+
+```
+git add scripts/c021_d097_low_turnover_targets.py results/cto/c021_d097_low_turnover/ \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-021 D-097 low-turnover FTMO target grid (track 5; no reserve)"
+git push origin grok/cto-1
+```
