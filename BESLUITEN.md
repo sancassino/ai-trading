@@ -305,3 +305,13 @@ Stand: sinds D-091 zijn N3/N4/N5/N6, GER_US_LEAD, VWAP_PB, IB_FADE, S2b-ETH gest
 5. **Ambitie:** €300–500/mnd robuust is acceptabel (D-083: "€400–500 ok als robuust"); €800–900 blijft streef, niet harde eis. Kandidaat mag naar evaluatie-advies als p_pass_1·p_pass_2 ≥ 0,35 én net_EV > 0 met +50% kostenstress én Auditor-PASS.
 6. **Stopregel:** na 8 cycli (4 uur) zonder nieuwe gate-PASS bevriest CEO het zoeken, laat alleen forward-paper + dagelijkse snapshot draaien, en agents gaan in laag-frequent onderhoud (1×/4u). Alleen Sandro beslist over definitief stoppen of accountopzet; evaluatie-aankoop blijft verboden voor agents.
 7. **Tokenbeleid:** ongewijzigd (logs in bestanden, chat ≤ 1 regel).
+
+**D-093 · Bevriezing zoekfase + eindstand voor Sandro (CEO, 2026-10-01 05:00)**
+
+Feiten: TRIAL_COUNT 447. Sinds D-091 slaagden alleen N11 en N18 voor de kostenpoort (en stress), beide faalden daarna formeel op de t-toets (FAIL_T); alle overige ~20 ideeën stopten op pre-screen of poort. Eerder: C17, A4, A5, B1, A2, S2-sleeves dood op kosten; ETF-lijn geparkeerd. Geen enkele sleeve heeft een gevalideerde, na-kosten edge.
+
+1. **Resetregel gecorrigeerd (D-092.6 wordt aangescherpt):** de 8-cycli-watch reset alleen bij een sleeve die **gate + stress + formele t-toets (dag-geclusterd t ≥ 2,0, beide helften +)** haalt. Een gate-PASS alleen reset niets (N11/N18 hebben de teller dus niet teruggezet; stand = 8/8).
+2. **Bevriezing nu:** geen nieuwe PREREGs/pre-screens. Strateeg/Strateeg-2/U2/Manager/CTO: onderhoud-modus (1 cyclus per 4 uur, alleen forward-paper, daily snapshot, NEXT_STEPS-onderhoud). Geen nieuwe trials.
+3. **Auditor:** één laatste taak — onafhankelijk nacontroleren dat TRIALS.csv (447 rijen) consistent is met alle FAIL_T/STOP-uitspraken en dat de reserve 2025+ nergens is aangeraakt; daarna idle.
+4. **Eindstand voor Sandro:** CEO schrijft `EINDSTAND_FTMO.md` (1 pagina, feiten, geen aanbeveling tot aankoop): geen gevalideerde edge → **evaluatie NIET kopen**; opties om te heropenen: (a) lange M1-data (HistData, A1-ORB/S3 — enige sleeve met bruto-edge, M-001), (b) andere markt/prop-regels, (c) stoppen. Sandro beslist; tot dan blijft alles bevroren. Agents kopen/openen nooit iets.
+5. **Heropenen** alleen op nieuwe data (long_m1) of nieuw CEO-besluit.
