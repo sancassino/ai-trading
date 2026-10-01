@@ -1,0 +1,71 @@
+[
+  {
+    "idea": "LUNCH_OPEN_FADE",
+    "n_pooled": 233,
+    "mean_bruto_bp": 4.715370826073573,
+    "weighted_rt": 0.5392274678111588,
+    "gate_3x_wrt": 1.6176824034334765,
+    "pass_pooled": true,
+    "per_symbol": [
+      {
+        "idea": "LUNCH_OPEN_FADE",
+        "symbol": "US30cash",
+        "n": 134,
+        "mean_bruto_bp": 5.73541529149494,
+        "gate_3x_rt": 1.35,
+        "rt": 0.45,
+        "pass": true
+      },
+      {
+        "idea": "LUNCH_OPEN_FADE",
+        "symbol": "US100cash",
+        "n": 99,
+        "mean_bruto_bp": 3.334704579947681,
+        "gate_3x_rt": 1.98,
+        "rt": 0.66,
+        "pass": true
+      }
+    ],
+    "skew": 1.5219861360830662
+  },
+  {
+    "idea": "UK_AM_FADE",
+    "n_pooled": 86,
+    "mean_bruto_bp": 8.469835463184525,
+    "weighted_rt": 1.42,
+    "gate_3x_wrt": 4.26,
+    "pass_pooled": true,
+    "per_symbol": [
+      {
+        "idea": "UK_AM_FADE",
+        "symbol": "UK100cash",
+        "n": 86,
+        "mean_bruto_bp": 8.469835463184525,
+        "gate_3x_rt": 4.26,
+        "rt": 1.42,
+        "pass": true
+      }
+    ],
+    "skew": 0.9651752634372751
+  },
+  {
+    "idea": "EUR_NY_FADE",
+    "n_pooled": 105,
+    "mean_bruto_bp": -0.6902626606588027,
+    "weighted_rt": 0.63,
+    "gate_3x_wrt": 1.8900000000000001,
+    "pass_pooled": false,
+    "per_symbol": [
+      {
+        "idea": "EUR_NY_FADE",
+        "symbol": "EURUSD",
+        "n": 105,
+        "mean_bruto_bp": -0.6902626606588027,
+        "gate_3x_rt": 1.8900000000000001,
+        "rt": 0.63,
+        "pass": false
+      }
+    ],
+    "skew": 0.8748831468419033
+  }
+]

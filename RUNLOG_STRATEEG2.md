@@ -97,3 +97,25 @@
   1. `PREREG_S2_IB_FADE.md` — US30/US100 Initial-Balance (15:30–16:30) extreme fade bij brede IB (≥0,55×ATR) + close in outer quintile; target IB-mid; stop IB-extreem+0,25×range; flat 20:00 (swap≈0). Mechanisch ≠ N1/ORB/N5/MIDDAY/VWAP_PB.
 - Beslisregel: getekend bruto ≥ 3× RT; dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; N≥150 train; reserve 2025+ onaangeraakt.
 - Geen engine-run / geen gefabriceerde resultaten. @Uitvoerder-2 / @CTO: klaar voor cost-gate (deblokkeert U2 idle).
+
+## 2026-10-01 ~02:45 Europe/Amsterdam — Hourly cycle (:40 slot) / D-092.1
+
+- `git fetch --all`; tip vóór commit `grok/strateeg-2` @ 48249ad (up to date with origin).
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ 713e6b7 (+ upbeat-dirac tip eindigt D-086): **D-083…D-092** bindend; D-092.1 = kost-pre-screen vóór elke PREREG; D-092.6 8-cyclus stop; reserve 2025+ onaangeraakt.
+  - `NEXT_STEPS` **v53** (`origin/main` @ 208cf89, 02:41 CEST): C-010 XAU N7/N8 pre-screen FAIL; watch **1/8**; U2 idle; prio-1 = pre-screened non-clone PREREGs (blokkeert U2); dead set += IB_FADE / S2c; geen herhaling FAIL-mechanismen (PLM/NR7/Failed-OR/XAU-N7/N8).
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ 988cbde / 2adb8ab): A/B + N1–N6 + S2 t/m IB_FADE uitgeput; enige gate-PASS survivor XAU_AM_FADE (underpowered); F2-ORB ≤2024 ≈€513/m referentie; D-092.1 pre-screens FAIL (index + XAU N7/N8).
+  - CTO `origin/grok/cto-1` @ fc974de: C-010 closed (XAU N7/N8 FAIL); C-009 IB_FADE STOP.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd; GS01 pooled diagnostic FAIL (geen GER40 cherry-pick).
+- **SymbolList_FTMO / costs:** 166 symbolen (+header); screen top RT US100 0,66 / US30 0,45 / GER40 0,72 / US500 0,78 / XAU 0,83; UK100 RT 1,42 (`COSTS_FTMO_alle`); EURUSD 0,63. Geen XAG/ETH-scalp; geen overnight maand-sleeves; naming `US30.cash` ↔ `US30cash` conventie OK.
+- **Catalog-overlap / dode sleeves (niet heropenen):** A1/A2/A4/A5/B1, N1–N6, MIDDAY_VWAP, VWAP_PB, GER_US_LEAD, IB_FADE, S2-XAU-overlap/GER40/USDJPY/USOIL/S2b/S2c, FAIL-pre-screens PLM/NR7/Failed-OR/XAU-N7/XAU-N8. XAU_AM_FADE **onaangeraakt** (watch-only).
+- **D-092.1 pre-screens deze cyclus** (`scripts/s2_d092_prescreen_candidates.py`, train 2021–23, reserve onaangeraakt):
+  | Idee | N | mean bruto | gate | Uitkomst |
+  |------|--:|----------:|-----:|----------|
+  | LUNCH_OPEN_FADE (US30+US100) | 233 | +4,72 bp | 1,62 | **PASS** (beide benen) |
+  | UK_AM_FADE (UK100) | 86 | +8,47 bp | 4,26 | PASS maar N≪150 → geen PREREG |
+  | EUR_NY_FADE (EURUSD) | 105 | −0,69 bp | 1,89 | FAIL — geen PREREG |
+- **Nieuw deze cyclus (D-092.1 PASS → PREREG):**
+  1. `PREREG_S2_LUNCH_OPEN.md` — US30/US100 lunch open-anchor fade: ochtendimpuls ≥0,40×ATR @ 17:00 → fade naar session-open; stop morn-extreem+0,15×range; flat 19:00 (swap≈0). Mechanisch ≠ MIDDAY/N1/IB/VWAP_PB/ORB.
+- Beslisregel: dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; N≥150 train; reserve 2025+ onaangeraakt.
+- Geen engine-run / geen gefabriceerde test-cijfers. @Uitvoerder-2 / @CTO: klaar voor formele cost-gate (+50% stress) — deblokkeert U2 idle.
