@@ -937,3 +937,49 @@ git add scripts/c021_d097_low_turnover_targets.py results/cto/c021_d097_low_turn
 git commit -m "CTO: C-021 D-097 low-turnover FTMO target grid (track 5; no reserve)"
 git push origin grok/cto-1
 ```
+
+## C-022 — D-097 spoor-6 proxy TSMOM/XS diagnostic — 2026-10-01 ~09:53 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended: **0**. No FTMO signup / spend. No EINDSTAND re-nag.
+
+### Team snapshot vs prior wake (~09:31 CEST / C-021)
+
+| Item | ~09:31 C-021 | ~09:53 C-022 |
+|---|---|---|
+| main NEXT_STEPS | v68 `5c1adee` | **v69** tip **`12bdd5c`** (C-021 absorbed; N44 BARRED; OPEN N45–N48; spoor-6 PROXY_MAP) |
+| grok/cto-1 | `794b0cb` / `ec83ea7` C-021 | **this C-022** |
+| Decisions | D-097 | D-097 unchanged; CEO 09:45 `0a18744` |
+| TRIAL_COUNT (U2) | 453 | **453** (unchanged; U2 IDLE `2f5ee51`) |
+| U2 | `5b3db74` / merge pending | **`2f5ee51`** merge N40/N41 |
+| Strateeg | `23a7f6c` N45–N48 open | `23a7f6c` (pre-screen pending) |
+| S2 | `6444d30` | **`1cf4542`** cycle_0940 — 5 pre-screens FAIL (drought) |
+| CEO | `8c3b5d4` D-097 | D-097 + CEO_LOG 09:45 |
+| EINDSTAND | tussenstand | tussenstand; **no re-nag** |
+
+### Why not idle
+
+Manager listed CTO track-3/5 idle until solo t≥2, but **spoor 6 just landed** (`PROXY_MAP_FTMO.csv`, 119× ≥10y, 28 new daily series). Highest leverage = turn that data into D-097 mechanism shortlist for Strateeg (0 trials).
+
+### Deliverable
+
+`scripts/c022_d097_proxy_tsmom_screen.py` → `results/cto/c022_d097_proxy_tsmom/`:
+- 53 proxies loaded; 1908 solo TSMOM rows + 6 XS rows; cut ≤2024-12-31
+- **Headline:** energy TSMOM (UKOIL/USOIL/HEATOIL L20/H10–20) best non-crypto family; classic XS-mom L3/S3 **FAIL** (negative); crypto daily TSMOM strong diagnostically but **not default**
+- **Caveat:** UKOIL/USOIL `swap_long` is a large credit in `COSTS_FTMO` (−5.4…−6.0 bp/night) vs expensive shorts — long-only net may be **carry-assisted**; PREREG must show bruto edge and stress without treating swap subsidy as alpha
+- Artefacts: `c022_report.md`, `c022_board.json`, `shortlist_noncrypto.csv`, `screen_*.csv`
+
+### CTO next
+
+1. Strateeg/S2: PREREG energy TSMOM from shortlist (freeze before U2 gate).
+2. Track-3 still paused; track-5 `recommend_scale` on first formal PASS.
+3. No Sandro ping (no validated sleeve; no eval; drought continues but pipeline advanced).
+
+### Git
+
+```
+git add scripts/c022_d097_proxy_tsmom_screen.py results/cto/c022_d097_proxy_tsmom/ \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-022 D-097 proxy TSMOM/XS screen (spoor 6; 0 trials)"
+git push origin grok/cto-1
+```

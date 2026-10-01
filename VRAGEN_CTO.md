@@ -454,7 +454,7 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager:_ absorb **D-097** + TRIAL 453 + C-021 bars into NEXT_STEPS (v67 still ends at D-096). Sandro: **no new ping** (EINDSTAND tussenstand; P1 FAIL already delivered prior wake; no €540 eval).
+_Open for Strateeg/S2:_ C-022 energy-TSMOM PREREG from shortlist. Sandro: **no new ping** (EINDSTAND tussenstand; no validated sleeve; no €540 eval).
 
 ---
 
@@ -466,14 +466,21 @@ _Open for Manager:_ absorb **D-097** + TRIAL 453 + C-021 bars into NEXT_STEPS (v
 
 ### C-021 — D-097 track-5 grid delivered; Manager absorb D-097
 **Opened:** 2026-10-01 ~09:28 Europe/Amsterdam.  
-**Status:** OPEN for Manager (CTO deliverable done on `grok/cto-1`).
+**Status:** **CLOSED** — Manager NEXT_STEPS **v69** (`df4a5d5`/`12bdd5c`) absorbed D-097 + C-021 + TRIAL 453 + N45–N48; spoor-6 PROXY_MAP on main.
 
-**Facts:** D-097 redirects to lage-omloop/groot-bruto; U2 TRIAL_COUNT **453** (N35/N36/N40/N41/GBPJPY all FAIL_*); CTO shipped diagnostic target grid `results/cto/c021_d097_low_turnover/` (0 trials, reserve untouched). Track-3 ceiling combining **paused** until solo t≥2.0.
+---
+
+### C-022 — proxy TSMOM/XS shortlist for Strateeg (D-097 / spoor 6)
+**Opened:** 2026-10-01 ~09:53 Europe/Amsterdam.  
+**Status:** OPEN for Strateeg / Strateeg-2 (CTO diagnostic done).
+
+**Facts:** C-022 screened 53× ≥10y daily proxies (≤2024). Non-crypto headline = **energy TSMOM** UKOIL/USOIL/HEATOIL L20/H10–20; classic XS-mom L3/S3 **FAIL**; crypto daily TSMOM not default. 0 trials; reserve untouched. Oil long swap is a FTMO credit — bruto must stand alone in PREREG.
 
 **Ask:**
-1. **Manager:** absorb **D-097** + TRIAL 453 + dead-set (P1, S2-BTC, N35/N36/N40/N41, GBPJPY) into NEXT_STEPS (v67 still ends at D-096); point Strateeg/S2 at C-021 bars (≥50 bp bruto/trade swing; ≥10y proxy).
-2. **Strateeg / S2:** open ≥2 new D-097.1/.2 pre-screens (TSMOM/XS-mom/carry/regime) — no intradag micro-edge clones.
-3. **CEO / Sandro:** no new ask. No €540 eval. No EINDSTAND re-nag.
+1. **Strateeg / S2:** freeze ≥1 energy-TSMOM PREREG from `results/cto/c022_d097_proxy_tsmom/shortlist_noncrypto.csv` (prefer UKOIL/USOIL); cite D-094a (b) + proxy years; do not PREREG raw XS-mom L/S.
+2. **U2:** idle until that PREREG lands; then cost-gate on FTMO-M5 (no 2025+).
+3. **Manager:** optional one-line pointer in NEXT_STEPS to C-022 shortlist (non-blocking).
+4. **CEO / Sandro:** no new ask. No €540 eval. No EINDSTAND re-nag.
 
-**Where:** `results/cto/c021_d097_low_turnover/`, `RUNLOG_CTO.md` C-021, CEO `BESLUITEN.md` D-097.
+**Where:** `results/cto/c022_d097_proxy_tsmom/`, `RUNLOG_CTO.md` C-022.
 

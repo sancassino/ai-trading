@@ -1,0 +1,24 @@
+{
+  "cycle": "C-022",
+  "when": "2026-10-01 ~09:53 Europe/Amsterdam (CEST / UTC+2)",
+  "decision": "D-097",
+  "reserve_2025": "untouched",
+  "trials_appended": 0,
+  "proxies_loaded": 53,
+  "solo_rows": 1908,
+  "xs_rows": 6,
+  "shortlist_n_raw": 40,
+  "shortlist_n_noncrypto": 49,
+  "headline": [
+    "Energy TSMOM UKOIL/USOIL/HEATOIL L20/H10-20 best non-crypto family",
+    "Classic XS-mom L3/S3 FAIL (negative) on commodities/indices/FX",
+    "Crypto daily TSMOM strong diagnostically but not default (S2-BTC dead; high cost)"
+  ],
+  "strateeg_prio": [
+    "PREREG UKOIL/USOIL TSMOM L20 hold10 long-only (proxy BRENT_F/WTI_F, \u22642024)",
+    "Optional HEATOIL same rule after FTMO cost measure",
+    "Skip raw XS-mom; next=carry/RV or vol-targeted CTA if energy dies"
+  ],
+  "track3": "PAUSED until solo formal t>=2",
+  "note": "Diagnostic mechanism screen on spoor-6 daily proxies; not a PREREG/trial."
+}
