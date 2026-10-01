@@ -85,3 +85,4 @@
 17:57 Amsterdam — nieuws-reactie pre-screen (NFP/CPI/FOMC, 4 instrumenten, 30/60 min, train 2021-23): niets door gate+t; US100/US500 60min fade ~+8-14bp t~1,2-1,5, ruis. Volgende: meer events pools + langere historie
 18:26 Amsterdam — Grok-pauze; geen nieuws van anderen; volgende CEO-werk: nieuws-events uitbreiden (ECB/BoE/EIA) + langere historie
 18:57 Amsterdam — geen nieuws; Grok-pauze
+19:27 Amsterdam — geen nieuws
