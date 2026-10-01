@@ -1,0 +1,128 @@
+{
+  "when": "2026-10-01 ~08:57 Europe/Amsterdam (CEST / UTC+2)",
+  "deliverable": "C-020 P1 ORB+BTC reserve one-shot (D-096)",
+  "prereg": "PREREG_FTMO_P1_ORB_BTC",
+  "besluit": "D-096",
+  "reserve_window": "2025-01-01..2026-09-23",
+  "reserve_2025_touched": true,
+  "scales_path": "results/cto/p1_scales.json",
+  "scales": {
+    "when_frozen": "2026-10-01 ~08:57 Europe/Amsterdam (CEST / UTC+2)",
+    "train_window": "2021-01-01..2023-12-31",
+    "method": "eqvol_to_ORB_train_std then recommend_scale; sA/sB absorb 1/2 weights",
+    "target_daily_std_orb_train": 0.002882453400299788,
+    "fA_vol": 1.0,
+    "fB_vol": 0.4221940579220671,
+    "port_recommend_scale": 7.166236958303908,
+    "recommend_binding": "max",
+    "recommend_p95_daily_loss": 0.01639008343535058,
+    "recommend_max_daily_loss": 0.04,
+    "sA": 3.583118479151954,
+    "sB": 1.512771330728709,
+    "max_daily_loss_cap": 0.04,
+    "btc_train_n_trades": 132,
+    "orb_train_n_days": 779,
+    "prereg": "PREREG_FTMO_P1_ORB_BTC",
+    "besluit": "D-096",
+    "note": "Frozen once from train; never re-estimated on reserve."
+  },
+  "btc_reserve_n_trades": 119,
+  "btc_reserve_mean_gross_bp": -9.44635605474726,
+  "btc_reserve_mean_net_bp": -10.70673083938838,
+  "orb_reserve_n_days": 448,
+  "port_stats": {
+    "n_days": 448,
+    "n_active": 448,
+    "mean": 0.00015950709357226626,
+    "std": 0.012969277167808714,
+    "ann_sr": 0.1952380675418457,
+    "skew": 2.157198529082713
+  },
+  "leg_A_stats": {
+    "n_days": 448,
+    "n_active": 448,
+    "mean": 0.00016458722727163283,
+    "std": 0.0027933818913074174,
+    "ann_sr": 0.9353326310881108,
+    "skew": 2.136801962579499
+  },
+  "leg_B_stats": {
+    "n_days": 448,
+    "n_active": 119,
+    "mean": -0.0002843975379212539,
+    "std": 0.00517333140737415,
+    "ann_sr": -0.8726815657850395,
+    "skew": 4.467431030492805
+  },
+  "stress_stats": {
+    "n_days": 448,
+    "n_active": 448,
+    "mean": 0.00011273410177217396,
+    "std": 0.012568981228103324,
+    "ann_sr": 0.14238213526734356,
+    "skew": 2.2011255628985142
+  },
+  "day_clust_t": 0.24345690562593744,
+  "ftmo_ev": {
+    "scale": 1.0,
+    "p95_daily_loss": 0.015976013430486123,
+    "max_daily_loss": 0.03365741078618701,
+    "p_pass_1": 0.958375,
+    "p_pass_2": 0.814,
+    "p_pass_product": 0.78011725,
+    "p_survive": 0.10077656194846453,
+    "net_ev_monthly": 242.22046904711294,
+    "exp_payout_monthly": 339.9351565471129,
+    "attempts_mean": 4.342875
+  },
+  "ftmo_ev_stress": {
+    "scale": 1.0,
+    "p95_daily_loss": 0.0153758827781486,
+    "max_daily_loss": 0.032596220429350516,
+    "p_pass_1": 0.95,
+    "p_pass_2": 0.79275,
+    "p_pass_product": 0.7531125,
+    "p_survive": 0.10140690663255984,
+    "net_ev_monthly": 208.4314900325733,
+    "exp_payout_monthly": 304.48680253257334,
+    "attempts_mean": 4.269125
+  },
+  "criteria": {
+    "net_mean_gt_0": true,
+    "day_clust_t_ge_2": false,
+    "ann_sr_ge_0_8": false,
+    "p_pass_product_ge_0_35": true,
+    "net_ev_gt_0": true,
+    "stress_p_pass_product_ge_0_35": true,
+    "stress_net_ev_gt_0": true,
+    "leg_A_mean_ge_0": true,
+    "leg_B_mean_ge_0": false,
+    "auditor_independent_pass": null
+  },
+  "failed_criteria": [
+    "day_clust_t_ge_2",
+    "ann_sr_ge_0_8",
+    "leg_B_mean_ge_0"
+  ],
+  "cto_mechanical_pass": false,
+  "verdict": "FAIL",
+  "year_split": {
+    "2025": {
+      "n_days": 259,
+      "port_mean": 0.00010052228885346145,
+      "orb_mean": 0.00032833967399447143,
+      "btc_mean": -0.0007112493756452694,
+      "btc_n_trades": 68
+    },
+    "2026": {
+      "n_days": 189,
+      "port_mean": 0.0002403381222609991,
+      "orb_mean": -5.981427379299786e-05,
+      "btc_mean": 0.00030054757303387856,
+      "btc_n_trades": 51
+    }
+  },
+  "trial_count_after": 448,
+  "note": "One-shot reserve; scales frozen on train 2021-23; Auditor must file AUDIT_4 independently. Agents do not buy FTMO.",
+  "stress_method": "BTC leg uses +50% spread (net_stress_bp); ORB leg x0.95 proxy (no separable cost in F2_ORB_daily)."
+}

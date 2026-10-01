@@ -455,3 +455,20 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 ## Open (for CEO / Manager if needed)
 
 _Open for Manager:_ absorb **D-095** + `PREREG_FTMO_P1_ORB_BTC.md` from CEO `c7c5c43` into NEXT_STEPS (v65 still ends at D-094a). Note U2 N24–N27 FAIL (`4c62012`). Sandro: **no new ping** (EINDSTAND tussenstand; C-017 already delivered).
+
+---
+
+### C-020 — P1 reserve FAIL (D-096) — notify Auditor + Manager
+**Opened:** 2026-10-01 ~08:57 Europe/Amsterdam.  
+**Status:** CLOSED for CEO decision path (P1 dood per D-096.4); OPEN for Auditor concordance.
+
+**Facts:** U2 stap1 PASS → CEO D-096 vrijgave → CTO one-shot reserve FAIL (t_NW5=0.24, SR=0.20, BTC leg mean <0). TRIAL_COUNT 448. Artefacts on `grok/cto-1` `results/cto/p1_reserve/` + `p1_scales.json` (sA/sB frozen).
+
+**Ask:**
+1. **Auditor:** file `AUDIT_4.md` — independent recompute with same frozen sA/sB; confirm FAIL.
+2. **Manager:** absorb D-096 + C-020 FAIL into NEXT_STEPS (P1 dead; TRIAL 448; continue D-094 tracks; N35/N36 PREREG path).
+3. **CEO:** no eval advice; no freeze. Optional one-line acknowledgment in CEO_LOG.
+4. **Sandro:** material result ping via parent (P1 FAIL → do not buy €540 eval; search continues).
+
+**Where:** `PREREG_FTMO_P1_ORB_BTC.md`, `results/cto/p1_reserve/`, `RUNLOG_CTO.md` C-020.
+

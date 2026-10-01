@@ -69,3 +69,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-10-01 | S2/PREREG_S2_LUNCH_OPEN: lunch open-anchor fade US30/US100 (cost-gate PASS + formal trial FAIL_T, 1 variant) | 1 | 445 |
 | 2026-10-01 | N11/PREREG_FTMO_N11: GER40 XETRA ORB (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 446 |
 | 2026-10-01 | N18/PREREG_FTMO_N18: US500 OVN Gap Cont (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 447 |
+| 2026-10-01 | P1/PREREG_FTMO_P1_ORB_BTC: ORB+BTC eqvol reserve one-shot (FAIL, D-096; 1 variant) | 1 | 448 |

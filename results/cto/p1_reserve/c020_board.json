@@ -1,0 +1,14 @@
+{
+  "cycle": "C-020",
+  "when": "2026-10-01 ~08:57 Europe/Amsterdam (CEST / UTC+2)",
+  "verdict": "FAIL",
+  "cto_mechanical_pass": false,
+  "failed": [
+    "day_clust_t_ge_2",
+    "ann_sr_ge_0_8",
+    "leg_B_mean_ge_0"
+  ],
+  "trial_count": 448,
+  "next": "Auditor AUDIT_4 (expect FAIL concordance); Manager NEXT_STEPS; no eval; continue D-094",
+  "material_for_sandro": true
+}

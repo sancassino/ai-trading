@@ -824,3 +824,68 @@ git add PREREG_FTMO_P1_ORB_BTC.md results/cto/c019_board.json RUNLOG_CTO.md VRAG
 git commit -m "CTO: C-019 absorb D-095 P1 ORB+BTC; wait U2 step1 (no reserve)"
 git push origin grok/cto-1
 ```
+
+## C-020 — D-096 P1 ORB+BTC reserve one-shot **FAIL** — 2026-10-01 ~08:57 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025-01→ opened once for P1 only (D-096).** TRIAL_COUNT **447 → 448**. No FTMO signup / spend. No EINDSTAND re-nag.
+
+### Team snapshot vs last wake (~08:28 CEST)
+
+| Item | ~08:28 | ~08:57 |
+|---|---|---|
+| main NEXT_STEPS | v65 `2945996` | **v66** `67e9bf0` tip `827c72b` (forward_p1 stap3) |
+| grok/cto-1 | `06079a0` C-019 wait | **this C-020** |
+| Freeze | D-094/D-094a OFF; D-095 | **+ D-096** reserve vrijgave P1 |
+| TRIAL_COUNT | 447 | **448** (P1 reserve FAIL) |
+| U2 | `edf3acc` IDLE wait | **`43c395e`** S2-BTC stap1 **PASS** N=197 + N35/N36 PASS_may_PREREG |
+| Strateeg | `7ede6d0` | **`7ede6d0`** (N24–N34 FAIL; N35–N37 queue) |
+| S2 | `52caf6a` lag | **`6444d30`** D-094 ON — 5 pre-screens + PREREG GBPJPY_EU_MOM |
+| CEO | `c7c5c43` D-095 | **`8ed250e` D-096** reserve-vrijgave P1 |
+| EINDSTAND | tussenstand | tussenstand; **no re-nag** |
+
+### D-096 / P1 stap 2 (executed)
+
+U2 stap1 PASS (`43c395e`: N=197, bruto +15.8 bp, cost share 22%, stress PASS) → CEO D-096 (`8ed250e`) one-shot reserve vrijgave for P1 only → CTO ran frozen-scale reserve harness.
+
+**Frozen scales (train 2021–2023 only):** `results/cto/p1_scales.json` — sA=3.58312, sB=1.51277 (eqvol→ORB train σ then recommend_scale=7.166; max DD loss=0.04). Never re-estimated on reserve.
+
+**Reserve window:** 2025-01-01 … 2026-09-23 (ORB days=448 from `results/f/F2_ORB_daily.csv`; BTC trades=119 via frozen S2-BTC rule on `data/m5gz`).
+
+| Metric | Value | Gate |
+|---|---:|---|
+| port mean | +1.60e-4 | >0 ✓ |
+| day-clust t NW-L5 | **0.24** | ≥2.0 ✗ |
+| ann SR | **0.20** | ≥0.8 ✗ |
+| ftmo_ev p1·p2 | 0.780 | ≥0.35 ✓ |
+| net EV €/m | +242 | >0 ✓ |
+| stress p1·p2 / EV | 0.753 / +208 | ✓ |
+| leg A ORB mean | +1.65e-4 | ≥0 ✓ |
+| leg B BTC mean | **−2.84e-4** | ≥0 ✗ |
+
+**CTO mechanical verdict: FAIL** (failed: `day_clust_t_ge_2`, `ann_sr_ge_0_8`, `leg_B_mean_ge_0`).  
+BTC leg dragged (2025 mean strongly negative; 2026 BTC mildly +). ORB alone still weakly +. Paper EV positive is **not** enough under PREREG §3.
+
+**Per D-096.4:** P1 **dood**; reserve for this hypothese **verbruikt**; no freeze; team continues N35/N36 / GBPJPY_EU_MOM / other D-094 tracks. Auditor still files independent `AUDIT_4.md` for concordance (expected FAIL). **No eval-buy advice.**
+
+### Artefacts
+
+- `scripts/c020_p1_reserve.py`
+- `results/cto/p1_scales.json`
+- `results/cto/p1_reserve/{btc_reserve_trades,p1_reserve_daily,p1_reserve_summary}.{csv,json,md}` + `c020_board.json`
+- `catalogus/TRIALS.csv` append + `TRIAL_COUNT.md` → 448
+
+### CTO next
+
+1. Auditor: AUDIT_4 independent recompute (same frozen sA/sB).
+2. Tracks 3+5: wait for new weak+ PASS sleeves (N35/N36 PREREGs) before new combine; do **not** clone P1.
+3. Forward-papier P1 may keep logging as dead-candidate telemetry only (not evidence for reopen).
+
+### Git
+
+```
+git add scripts/c020_p1_reserve.py results/cto/p1_scales.json results/cto/p1_reserve/ \
+  catalogus/TRIALS.csv TRIAL_COUNT.md RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-020 P1 ORB+BTC reserve FAIL (D-096); TRIAL 448"
+git push origin grok/cto-1
+```
