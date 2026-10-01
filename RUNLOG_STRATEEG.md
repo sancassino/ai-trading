@@ -1,5 +1,29 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+
+## 2026-10-01 12:40 Europe/Amsterdam — C-028 Lane-B NEW_FAMILY N75–N77
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; ff-pull tip was `78673d0`).  
+**Binding:** CTO **C-028** Lane-B — PREREGs only from Lane-A survivors OR honest-RT intradag w/ D-100; novelty ≥2/3 NEW_FAMILY; freeze further L60 FX-med forks if EURJPY_MED-style FAIL (N72–N74 stay OPEN, no N75+ as L60 FX longs). D-094 FREEZE OFF; D-094a; D-097; D-100.
+
+### Inputs gelezen
+- `STRATEGIE_CATALOGUS.md` §9/§10 tip (N72–N74 OPEN; TRIAL **454**; USDJPY_MED live PREREG).
+- `COSTS_FTMO.csv` + `results/screen_cost_vol.csv`.
+- `results/ceo/swap_side_map.csv` via `git show origin/claude/ftmo-trading-strategy-98mplz:...` (cached locally for reference; not required for U2).
+
+### Geleverd (geen PREREG)
+| ID | Family | Symbol(s) | Gate bp | NEW_FAMILY |
+|----|--------|-----------|--------:|:----------:|
+| N75 | metal ratio MR 3d | XAUUSD+XAGUSD | 30,60 | Y |
+| N76 | commodity inv-window | UKOILcash | 50,00 | Y |
+| N77 | vol-timed XS rank-rev 5d | FX6 majors | 46,29 | Y |
+
+N72–N74 remain **OPEN** (L60 med); **no** more EURJPY/USDCAD/USDCHF/USDJPY L60 forks. Catalog §9/§10 + STRATEGIE_LOG updated. Train 2021–2023; N≥150; signed mean bruto; D-094a + D-100 notes in VOORSTELlen.
+
+### Niet gedaan
+- Geen `PREREG_FTMO_*` (Lane-B: no own PASS).
+- Geen L60 FX pair-forks; geen dead-sleeve restart; geen 2025-reserve; Quiet (geen agent/Sandro message).
+
 ## 2026-09-30 21:41 Europe/Amsterdam — D-090 re-kickoff cyclus
 
 **Branch:** `claude/trusting-faraday-34tsmg` (tracking `origin/claude/trusting-faraday-34tsmg`).  
