@@ -66,3 +66,4 @@
 09:27 Amsterdam — D-097: P1 FAIL (t 0,24, SR 0,20, BTC-been negatief), geen herrun; richting: lage omloop/groot bruto per trade + regime-bewust over >=10j proxy; geen freeze
 09:57 Amsterdam — D-098: CEO schrijft PREREG_FTMO_TSMOM_DIV (low-turnover, 40+ instr., >=10j proxy); S2 gecorrigeerd naar D-097-richting
 10:27 Amsterdam — D-099: C-022 energie-TSMOM shortlist, erratum TSMOM_DIV (forking paths), swap-subsidie-eis; Strateeg PREREG energie-TSMOM
+10:59 Amsterdam — D-100: swap is de echte kostenmuur (TSMOM_DIV/ENERGY FAIL op swap); swap_side_map.csv; PREREG-eisen swap-bewust
