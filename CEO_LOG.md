@@ -82,3 +82,4 @@
 17:12 Amsterdam — Grok-limiet 3 dagen; Sandro-vraag €100-200/mnd -> beta_ev.md + D-101 (dubbele lat: alfa of literatuur-premie met sizing); CEO draait (B)-onderzoek
 17:16 Amsterdam — D-102: risicovol-reactief programma (optiewaarde FTMO-structuur, ORB-kern, intradag-DD modelleren); aannames FTMO-regels te verifiëren
 17:26 Amsterdam — D-102 stap 2: F2-ORB schaalsweep met echte intradag-trough: EV ~€285 (schaal 2,8, overleef 0,67) tot ~€500 (schaal 5, overleef 0,18); Grok-pauze, geen andere activiteit
+17:57 Amsterdam — nieuws-reactie pre-screen (NFP/CPI/FOMC, 4 instrumenten, 30/60 min, train 2021-23): niets door gate+t; US100/US500 60min fade ~+8-14bp t~1,2-1,5, ruis. Volgende: meer events pools + langere historie
