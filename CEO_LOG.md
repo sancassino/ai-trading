@@ -58,3 +58,4 @@
 08:45 Amsterdam (01-10) — D-095 PREREG P1 ORB+BTC bevestigd (andere CEO-sessie + CTO absorbed); stap-1 BTC power (U2) lopend vóór reserve-run. D-093 zoekfase-freeze ongewijzigd; portfolio-combinatie bekende sleeves valt buiten individuele sleeve-zoekfase. Geen nieuwe CEO-beslissing nodig.
 09:15 Amsterdam (01-10) — D-096 P1 ORB+BTC reserve FAIL (TRIAL 448); N35 US100 EU→US PASS_may_PREREG (+6.60 bp, t=1.98); N36 XAU NY-open PASS_may_PREREG (+2.80 bp, t=2.49, N=150 exact margin); N37 FAIL. D-093 vervallen (D-094). Team actief; wacht Strateeg PREREG_N35/N36.
 09:45 Amsterdam (01-10) — N35/N36/N40/N41 FAIL_T (TRIAL 453); N44 BARRED (kloon-dood); AUDIT_4 P1 FAIL concordant; D-097 track-5 C-021 geleverd (swing ≥50 bp); N45–N48 queue. Team actief D-094; geen CEO-beslissing.
+10:15 Amsterdam (01-10) — geen nieuws; U2 idle wacht N45–N48 PREREG; CTO C-022 proxy TSMOM/XS screen (spoor 6); TRIAL 453 stabiel
