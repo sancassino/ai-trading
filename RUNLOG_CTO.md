@@ -709,3 +709,72 @@ Sandro was notified once in Grok Bot 1:1 chat (~05:00 CEST, same morning as D-09
 
 **Later CTO 30-min wakes: do not re-nag Sandro about EINDSTAND.** Quiet hold until Sandro/CEO reopens. Next CTO maintenance window ~09:30 CEST.
 
+
+## C-018 — D-094 tracks 3+5 combine + FTMO sizing — 2026-10-01 ~08:15 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No dead-sleeve solo reopen/clone. No FTMO signup / spend.**
+
+### Team snapshot
+
+| Source | Takeaway |
+|---|---|
+| CEO `c1860e2` / `353aa31` | **D-094** freeze OFF + **D-094a** ≥5y history (3y only with a/b/c in PREREG) |
+| `origin/main` | NEXT_STEPS **v63** (`7c4b4a6`, 08:03 CEST) — FREEZE OFF; tracks table; CTO owns 3+5 |
+| Prior CTO | C-017 quiet hold under D-093; superseded by D-094 |
+
+Merged `origin/main` (pre-v63 maintenance + v63) into `grok/cto-1`. Absorbed D-094/D-094a from CEO branch into this log.
+
+### Inventory (weak-positive / near-pass — portfolio use only)
+
+| Sleeve | Status | Solo reopen |
+|---|---|---|
+| F2_ORB | reference edge (HistData M1 still blocked for longer replicate) | n/a (anchor) |
+| S2_BTC | cost PASS; **power-FAIL** N=132<150 | NO (diversifier notes only) |
+| XAU_AM_FADE | watch-only N=12 | NO |
+| N11 GER40 XETRA ORB | gate PASS → FAIL_STRESS/FAIL_T | **NO** (dead) |
+| N18 US500 OVN gap-cont | gate+stress PASS → FAIL_T (2023 −12bp) | **NO** (dead) |
+| LUNCH_OPEN | cost PASS → FAIL_T (t_train≈1.14 / t_test≈0.05); skew≈+2.4 | **NO** (dead) |
+
+### Work executed (tracks 3 + 5)
+
+1. **Track 3a — combine:** `scripts/c018_combine_ftmo.py` → `recommend_scale` + `ftmo_ev` on singles + vol-matched blends (ORB calendar train 2021–2023; ≤2024 ORB reference). Artefacts: `results/cto/c018_combine_ftmo.{json,md}`, `results/cto/c018_board.json`.
+2. **Track 3b — ensemble hypotheses documented only** (H-ENS-01…04): ORB∩LUNCH filter; ORB+BTC regime gate; stack-to-SR≈1 book; explicit **REJECT** of N18 year-drop reopen. No new PREREG this cycle (CEO owns 3b PREREGs per D-094.7).
+3. **Track 5 — sizing grids:** scale sweep under max daily loss ≤4%; report recommend_scale + best-EV + best-survive\|(p1·p2≥0.35 ∧ EV>0).
+
+### Key numbers (train; n_paths=5000; seed=7; close-only DD on blends)
+
+| Series | ann SR | scale | p1·p2 | p_survive | €/m net EV |
+|---|---:|---:|---:|---:|---:|
+| F2_ORB train | 1.06 | 4.16 | 0.942 | 0.433 | 683 |
+| F2_ORB ≤2024 ref | 0.90 | 4.16 | 0.906 | 0.413 | 513 |
+| LUNCH_OPEN (diag) | 0.65 | 2.65 | 0.541 | 0.590 | 121 |
+| ORB+BTC_eqvol | 1.21 | 7.17 | 0.977 | 0.447 | 1006 |
+| ORB60_BTC25_LUNCH15 | 1.36 | 7.78 | 0.988 | 0.473 | 1188 |
+| WEAK5_eqvol (diag ceiling) | 1.62 | 6.28 | 0.947 | 0.908 | 616 |
+| ORB+BTC stress50 BTC | 1.15 | 7.12 | 0.973 | 0.418 | 939 |
+
+**Correlations (train, active-day aware):** ORB↔BTC 0.11; ORB↔LUNCH **−0.10**; BTC↔N18 −0.20; N18↔LUNCH −0.15 — diversification real on paper.
+
+**Track 5 survive-vs-EV tradeoff (examples):** F2_ORB_train recommend_scale 4.16 → EV≈€676 / surv≈0.43; scale 1.5 → surv≈0.97 / EV≈€78. LUNCH recommend 2.65 → EV≈€123 / surv≈0.61; scale≈2.0 → surv≈0.79 / EV≈€52. Low-vol positive-skew path = dial scale down for pass/survive, not up for €/m max.
+
+### Readout
+
+- Paper books with ORB+BTC(+LUNCH) can print SR≳1.2–1.4 and high p_pass, but FAIL_T / power-FAIL legs are **diagnostic ceilings**, not candidates.
+- Do not reopen N11/N18/LUNCH as clones. Ensemble PREREGs (if any) = CEO/Strateeg with frozen rules *before* results.
+- Integrity unchanged; reserve untouched.
+
+### Remaining blockers
+
+1. No validated solo sleeve → no eval advice / no FTMO signup.
+2. HistData / long M1 (A-001) still open for Sandro (non-blocking).
+3. Strateeg/S2/U2 must reopen screens under D-094 (CTO delivered 3+5 only).
+4. Auditor may rebuild combined EV independently (D-094.7).
+
+### Git
+
+```
+git add scripts/c018_combine_ftmo.py results/cto/c018_* RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-018 D-094 tracks 3+5 combine + FTMO sizing grids"
+git push origin grok/cto-1
+```

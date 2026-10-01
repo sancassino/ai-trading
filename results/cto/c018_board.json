@@ -1,0 +1,115 @@
+{
+  "id": "C-018",
+  "when": "2026-10-01 ~08:10 Europe/Amsterdam (CEST / UTC+2)",
+  "tracks": [
+    "D-094.3 combining",
+    "D-094.5 FTMO structure/sizing"
+  ],
+  "artefacts": [
+    "results/cto/c018_combine_ftmo.json",
+    "results/cto/c018_combine_ftmo.md"
+  ],
+  "reserve_2025_touched": false,
+  "prereg_trial": false,
+  "highlights": {
+    "F2_ORB::F2_ORB_reference_le2024": {
+      "ann_sr": 0.8996108954666474,
+      "scale": 4.161356602252356,
+      "p_pass_product": 0.9058448800000001,
+      "p_survive": 0.4129287598944591,
+      "net_ev_monthly": 512.8890211330919
+    },
+    "F2_ORB::F2_ORB_train_2021_2023": {
+      "ann_sr": 1.0646719733408976,
+      "scale": 4.161356602252356,
+      "p_pass_product": 0.9424875600000001,
+      "p_survive": 0.4334395685216965,
+      "net_ev_monthly": 683.0047033332797
+    },
+    "F2_ORB::sleeve_train": {
+      "ann_sr": 1.0646719733408976,
+      "scale": 4.161356602252356,
+      "p_pass_product": 0.9424875600000001,
+      "p_survive": 0.4334395685216965,
+      "net_ev_monthly": 683.0047033332797
+    },
+    "LUNCH_OPEN::sleeve_train": {
+      "ann_sr": 0.6477035641664105,
+      "scale": 2.6450055095887897,
+      "p_pass_product": 0.54056632,
+      "p_survive": 0.5902864259028643,
+      "net_ev_monthly": 120.56871358383292
+    },
+    "ORB+BTC_eqvol::portfolio_blend_train": {
+      "ann_sr": 1.2087352039951313,
+      "scale": 7.166236958303908,
+      "p_pass_product": 0.9774412,
+      "p_survive": 0.4471360652026262,
+      "net_ev_monthly": 1006.4726843669242
+    },
+    "ORB60_BTC25_LUNCH15::portfolio_blend_train": {
+      "ann_sr": 1.3625716881596717,
+      "scale": 7.780897594666428,
+      "p_pass_product": 0.98802,
+      "p_survive": 0.47318681318681316,
+      "net_ev_monthly": 1187.6816367689541
+    },
+    "WEAK5_eqvol::portfolio_blend_train": {
+      "ann_sr": 1.6245917906180067,
+      "scale": 6.280795369986593,
+      "p_pass_product": 0.9472642,
+      "p_survive": 0.9079630698211194,
+      "net_ev_monthly": 616.4167785961519
+    },
+    "sizing::F2_ORB_train": {
+      "recommend_scale": 4.161356602252356,
+      "recommend_ev": 676.4359922967063,
+      "best_ev_scale": 4.16,
+      "best_ev": 676.1249111249912,
+      "best_survive_scale": 1.5,
+      "best_survive": 0.9719438877755511
+    },
+    "sizing::F2_ORB_le2024": {
+      "recommend_scale": 4.161356602252356,
+      "recommend_ev": 512.6888321203184,
+      "best_ev_scale": 4.16,
+      "best_ev": 512.4933064926664,
+      "best_survive_scale": 2.0,
+      "best_survive": 0.8890410958904109
+    },
+    "sizing::LUNCH_OPEN_train": {
+      "recommend_scale": 2.6450055095887897,
+      "recommend_ev": 122.97749962674796,
+      "best_ev_scale": 2.5,
+      "best_ev": 106.08410104630059,
+      "best_survive_scale": 1.98,
+      "best_survive": 0.7847082494969819
+    },
+    "sizing::ORB+BTC_eqvol": {
+      "recommend_scale": 7.166236958303908,
+      "recommend_ev": 995.9453836447955,
+      "best_ev_scale": 7.0,
+      "best_ev": 970.6914116482288,
+      "best_survive_scale": 2.0,
+      "best_survive": 1.0
+    },
+    "sizing::ORB60_BTC25_LUNCH15": {
+      "recommend_scale": 7.780897594666428,
+      "recommend_ev": 1177.2088723240274,
+      "best_ev_scale": 7.78,
+      "best_ev": 1177.130128639468,
+      "best_survive_scale": 2.0,
+      "best_survive": 0.9978401727861771
+    },
+    "sizing::WEAK5_eqvol": {
+      "recommend_scale": 6.280795369986593,
+      "recommend_ev": 614.3782650079984,
+      "best_ev_scale": 6.28,
+      "best_ev": 614.0548394685622,
+      "best_survive_scale": 2.5,
+      "best_survive": 1.0
+    }
+  },
+  "manager_next_steps_note": "Manager NEXT_STEPS v63 (7c4b4a6, 08:03 CEST) absorbed into grok/cto-1 \u2014 D-094/D-094a FREEZE OFF; tracks 3+5 assigned to CTO; C-018 delivers both",
+  "next_steps_version": "v63"
+}

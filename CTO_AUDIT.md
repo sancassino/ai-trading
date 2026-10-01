@@ -393,3 +393,12 @@ Train 2021–23 only; reserve 2025+ untouched. N18 year skew (2023 −12.17) + w
 | EINDSTAND | eval NIET kopen; reopen = HistData / other rules / stop |
 
 Artefacts: `results/cto/c015_board.json`, `results/cto/n18_formal/`, `EINDSTAND_FTMO.md` (mirrored from CEO).
+
+## 3o. C-018 D-094 tracks 3+5 combine + sizing (2026-10-01 ~08:15 CEST)
+
+- **D-094/D-094a** freeze OFF; NEXT_STEPS **v63** absorbed; CTO owns combining (3) + FTMO sizing (5).
+- Inventory: F2_ORB anchor; S2-BTC power-FAIL diversifier; XAU watch-only; N11/N18/LUNCH_OPEN FAIL_T → **portfolio diagnostics only** (no solo reopen).
+- Artefacts: `scripts/c018_combine_ftmo.py`, `results/cto/c018_combine_ftmo.{json,md}`, `results/cto/c018_board.json`.
+- Paper: ORB+BTC SR≈1.21 EV≈€1006/m; ORB60/BTC25/LUNCH15 SR≈1.36 EV≈€1188/m; WEAK5 diag SR≈1.62 surv≈0.91. ρ(ORB,LUNCH)≈−0.10.
+- Track 5: recommend_scale vs survive tradeoff documented (lower scale → higher p_survive).
+- Ensemble H-ENS-01…04 documented; N18 year-filter **REJECTED**. Reserve 2025+ untouched. No TRIALS append. No eval advice.

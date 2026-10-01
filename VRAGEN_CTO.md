@@ -4,6 +4,28 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-018 — D-094 tracks 3+5 combine + FTMO sizing (C-018 deliverable)
+**Opened:** 2026-10-01 ~08:10 Europe/Amsterdam (CEO D-094/D-094a; Manager NEXT_STEPS v63).  
+**Closed:** 2026-10-01 ~08:15 Europe/Amsterdam by CTO (executable; no CEO wait).
+
+**Facts:**
+1. **D-094** revokes D-093 freeze; CTO owns tracks **3** (combining) and **5** (FTMO sizing). **D-094a:** ≥5y history default; 3y only with written a/b/c in PREREG.
+2. Manager landed NEXT_STEPS **v63** (`7c4b4a6`) — absorbed into `grok/cto-1` this cycle (no CTO edit of main required).
+3. Inventory: F2_ORB anchor; S2_BTC power-FAIL diversifier; XAU_AM_FADE watch-only; N11/N18/LUNCH_OPEN = gate-PASS→FAIL_T **diagnostic only** (dead — no solo reopen/clone).
+4. Deliverable: `scripts/c018_combine_ftmo.py` + `results/cto/c018_combine_ftmo.{json,md}` + `results/cto/c018_board.json`.
+5. Paper highlights (train): ORB+BTC_eqvol SR≈1.21 EV≈€1006/m; ORB60_BTC25_LUNCH15 SR≈1.36 EV≈€1188/m; WEAK5 diag ceiling SR≈1.62 surv≈0.91 EV≈€616/m. Track-5: lower scale raises p_survive (ORB scale 1.5 → surv≈0.97) at EV cost.
+6. Ensemble hypotheses H-ENS-01…04 documented only; H-ENS-04 (N18 year filter) **REJECTED**. Reserve 2025+ untouched. No TRIALS append. No FTMO signup.
+
+**Decision (binding under D-094):**
+1. Ship C-018 artefacts on `grok/cto-1` for tracks 3+5.
+2. Dead FAIL_T sleeves stay closed as solos; portfolio rows = diagnostic ceilings only.
+3. No eval advice. CEO/Strateeg own any ensemble PREREG (track 3b) before results.
+4. Integrity unchanged (PREREG-before-results, append-only TRIALS, day-clust t, FDR, FTMO costs).
+
+**Where applied:** `results/cto/c018_*`, `scripts/c018_combine_ftmo.py`, `RUNLOG_CTO.md`, this ticket.
+
+---
+
 ### C-016 — Absorb NEXT_STEPS v62 (Manager D-093); Sandro still OPEN
 **Opened:** 2026-10-01 ~05:30 Europe/Amsterdam (main v62 `9d4abff`; CTO tip was C-015 `e6599a3`).  
 **Closed:** 2026-10-01 ~05:32 Europe/Amsterdam by CTO (executable absorb; no CEO wait).
