@@ -1,0 +1,1122 @@
+{
+  "AUDCAD": {
+    "ftmo_symbol": "AUDCAD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_AUD+FXBIS_CAD",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "cross uit BIS (lokaal per USD): AUDCAD = FXBIS_CAD / FXBIS_AUD",
+    "loaded": true,
+    "cost": {
+      "rt": 1.0,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "fallback:fx"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13667
+  },
+  "AUDCHF": {
+    "ftmo_symbol": "AUDCHF",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_AUD+FXBIS_CHF",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "cross uit BIS (lokaal per USD): AUDCHF = FXBIS_CHF / FXBIS_AUD",
+    "loaded": true,
+    "cost": {
+      "rt": 1.0,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "fallback:fx"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13665
+  },
+  "AUDJPY": {
+    "ftmo_symbol": "AUDJPY",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_AUD+FXBIS_JPY",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): AUDJPY = FXBIS_JPY / FXBIS_AUD",
+    "loaded": true,
+    "cost": {
+      "rt": 1.61,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "alle:AUDJPY"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13660
+  },
+  "AUDUSD": {
+    "ftmo_symbol": "AUDUSD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FX_AUDUSD",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): AUDUSD = 1 / FXBIS_AUD",
+    "loaded": true,
+    "cost": {
+      "rt": 1.22,
+      "swap_long": 0.45,
+      "swap_short": 0.87,
+      "match": "AUDUSD"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13534
+  },
+  "AUS200.cash": {
+    "ftmo_symbol": "AUS200.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "AXJO",
+    "proxy_start": "1992-11-22",
+    "jaren_tm_2024": "32.1",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 1.36,
+      "swap_long": 1.5,
+      "swap_short": 0.8,
+      "match": "alle:AUS200cash"
+    },
+    "px_start": "1992-11-22",
+    "px_n": 8116
+  },
+  "CADCHF": {
+    "ftmo_symbol": "CADCHF",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_CAD+FXBIS_CHF",
+    "proxy_start": "1953-09-01",
+    "jaren_tm_2024": "71.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "cross uit BIS (lokaal per USD): CADCHF = FXBIS_CHF / FXBIS_CAD",
+    "loaded": true,
+    "cost": {
+      "rt": 1.0,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "fallback:fx"
+    },
+    "px_start": "1953-09-01",
+    "px_n": 18417
+  },
+  "CADJPY": {
+    "ftmo_symbol": "CADJPY",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_CAD+FXBIS_JPY",
+    "proxy_start": "1969-12-01",
+    "jaren_tm_2024": "55.1",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "cross uit BIS (lokaal per USD): CADJPY = FXBIS_JPY / FXBIS_CAD",
+    "loaded": true,
+    "cost": {
+      "rt": 1.0,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "fallback:fx"
+    },
+    "px_start": "1969-12-01",
+    "px_n": 13991
+  },
+  "CHFJPY": {
+    "ftmo_symbol": "CHFJPY",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_CHF+FXBIS_JPY",
+    "proxy_start": "1969-12-01",
+    "jaren_tm_2024": "55.1",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "cross uit BIS (lokaal per USD): CHFJPY = FXBIS_JPY / FXBIS_CHF",
+    "loaded": true,
+    "cost": {
+      "rt": 1.0,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "fallback:fx"
+    },
+    "px_start": "1969-12-01",
+    "px_n": 13985
+  },
+  "COCOA.c": {
+    "ftmo_symbol": "COCOA.c",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "COCOA_F",
+    "proxy_start": "2000-01-03",
+    "jaren_tm_2024": "25.0",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-01-03",
+    "px_n": 6268
+  },
+  "COFFEE.c": {
+    "ftmo_symbol": "COFFEE.c",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "COFFEE_F",
+    "proxy_start": "2000-01-03",
+    "jaren_tm_2024": "25.0",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-01-03",
+    "px_n": 6266
+  },
+  "CORN.c": {
+    "ftmo_symbol": "CORN.c",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "CORN_F",
+    "proxy_start": "2000-07-17",
+    "jaren_tm_2024": "24.5",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-07-17",
+    "px_n": 6119
+  },
+  "COTTON.c": {
+    "ftmo_symbol": "COTTON.c",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "COTTON_F",
+    "proxy_start": "2000-01-03",
+    "jaren_tm_2024": "25.0",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-01-03",
+    "px_n": 6268
+  },
+  "DXY.cash": {
+    "ftmo_symbol": "DXY.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "DXY",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 1.5,
+      "swap_long": 1.5,
+      "swap_short": 0.8,
+      "match": "fallback:index"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13715
+  },
+  "EU50.cash": {
+    "ftmo_symbol": "EU50.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "STOXX50",
+    "proxy_start": "2007-03-30",
+    "jaren_tm_2024": "17.8",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 2.96,
+      "swap_long": -2.756164383561644,
+      "swap_short": 4.564383561643836,
+      "match": "alle:EU50cash+swap_specs"
+    },
+    "px_start": "2007-03-30",
+    "px_n": 4452
+  },
+  "EURAUD": {
+    "ftmo_symbol": "EURAUD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_EUR+FXBIS_AUD",
+    "proxy_start": "1974-06-28",
+    "jaren_tm_2024": "50.5",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): EURAUD = FXBIS_AUD / FXBIS_EUR",
+    "loaded": true,
+    "cost": {
+      "rt": 1.11,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "alle:EURAUD"
+    },
+    "px_start": "1974-06-28",
+    "px_n": 12803
+  },
+  "EURCAD": {
+    "ftmo_symbol": "EURCAD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_EUR+FXBIS_CAD",
+    "proxy_start": "1974-06-28",
+    "jaren_tm_2024": "50.5",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "cross uit BIS (lokaal per USD): EURCAD = FXBIS_CAD / FXBIS_EUR",
+    "loaded": true,
+    "cost": {
+      "rt": 1.0,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "fallback:fx"
+    },
+    "px_start": "1974-06-28",
+    "px_n": 12851
+  },
+  "EURCHF": {
+    "ftmo_symbol": "EURCHF",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_EUR+FXBIS_CHF",
+    "proxy_start": "1974-06-28",
+    "jaren_tm_2024": "50.5",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): EURCHF = FXBIS_CHF / FXBIS_EUR",
+    "loaded": true,
+    "cost": {
+      "rt": 1.2,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "alle:EURCHF"
+    },
+    "px_start": "1974-06-28",
+    "px_n": 12865
+  },
+  "EURGBP": {
+    "ftmo_symbol": "EURGBP",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_EUR+FXBIS_GBP",
+    "proxy_start": "1974-06-28",
+    "jaren_tm_2024": "50.5",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): EURGBP = FXBIS_GBP / FXBIS_EUR",
+    "loaded": true,
+    "cost": {
+      "rt": 1.04,
+      "swap_long": 1.05,
+      "swap_short": -0.07,
+      "match": "EURGBP"
+    },
+    "px_start": "1974-06-28",
+    "px_n": 12857
+  },
+  "EURJPY": {
+    "ftmo_symbol": "EURJPY",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_EUR+FXBIS_JPY",
+    "proxy_start": "1974-06-28",
+    "jaren_tm_2024": "50.5",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): EURJPY = FXBIS_JPY / FXBIS_EUR",
+    "loaded": true,
+    "cost": {
+      "rt": 1.1,
+      "swap_long": -0.11,
+      "swap_short": 0.69,
+      "match": "EURJPY"
+    },
+    "px_start": "1974-06-28",
+    "px_n": 12850
+  },
+  "EURUSD": {
+    "ftmo_symbol": "EURUSD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FX_EURUSD",
+    "proxy_start": "1999-01-04",
+    "jaren_tm_2024": "26.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): EURUSD = 1 / FXBIS_EUR",
+    "loaded": true,
+    "cost": {
+      "rt": 0.63,
+      "swap_long": 1.13,
+      "swap_short": -0.14,
+      "match": "EURUSD"
+    },
+    "px_start": "1999-01-04",
+    "px_n": 6520
+  },
+  "FRA40.cash": {
+    "ftmo_symbol": "FRA40.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "CAC40",
+    "proxy_start": "1990-03-01",
+    "jaren_tm_2024": "34.8",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 1.98,
+      "swap_long": 1.5,
+      "swap_short": 0.8,
+      "match": "alle:FRA40cash"
+    },
+    "px_start": "1990-03-01",
+    "px_n": 8846
+  },
+  "GBPAUD": {
+    "ftmo_symbol": "GBPAUD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_GBP+FXBIS_AUD",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): GBPAUD = FXBIS_AUD / FXBIS_GBP",
+    "loaded": true,
+    "cost": {
+      "rt": 1.18,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "alle:GBPAUD"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13659
+  },
+  "GBPCAD": {
+    "ftmo_symbol": "GBPCAD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_GBP+FXBIS_CAD",
+    "proxy_start": "1953-08-10",
+    "jaren_tm_2024": "71.4",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "cross uit BIS (lokaal per USD): GBPCAD = FXBIS_CAD / FXBIS_GBP",
+    "loaded": true,
+    "cost": {
+      "rt": 1.0,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "fallback:fx"
+    },
+    "px_start": "1953-08-10",
+    "px_n": 18429
+  },
+  "GBPCHF": {
+    "ftmo_symbol": "GBPCHF",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_GBP+FXBIS_CHF",
+    "proxy_start": "1953-09-01",
+    "jaren_tm_2024": "71.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "cross uit BIS (lokaal per USD): GBPCHF = FXBIS_CHF / FXBIS_GBP",
+    "loaded": true,
+    "cost": {
+      "rt": 1.0,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "fallback:fx"
+    },
+    "px_start": "1953-09-01",
+    "px_n": 18423
+  },
+  "GBPJPY": {
+    "ftmo_symbol": "GBPJPY",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FXBIS_GBP+FXBIS_JPY",
+    "proxy_start": "1969-12-01",
+    "jaren_tm_2024": "55.1",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): GBPJPY = FXBIS_JPY / FXBIS_GBP",
+    "loaded": true,
+    "cost": {
+      "rt": 1.11,
+      "swap_long": 0.5,
+      "swap_short": 0.5,
+      "match": "alle:GBPJPY"
+    },
+    "px_start": "1969-12-01",
+    "px_n": 13979
+  },
+  "GBPUSD": {
+    "ftmo_symbol": "GBPUSD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FX_GBPUSD",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): GBPUSD = 1 / FXBIS_GBP",
+    "loaded": true,
+    "cost": {
+      "rt": 0.7,
+      "swap_long": 0.46,
+      "swap_short": 0.3,
+      "match": "GBPUSD"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13541
+  },
+  "GER40.cash": {
+    "ftmo_symbol": "GER40.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "DAX",
+    "proxy_start": "1987-12-30",
+    "jaren_tm_2024": "37.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 0.72,
+      "swap_long": 1.79,
+      "swap_short": 0.02,
+      "match": "GER40cash"
+    },
+    "px_start": "1987-12-30",
+    "px_n": 9356
+  },
+  "HEATOIL.c": {
+    "ftmo_symbol": "HEATOIL.c",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "HEATOIL_F",
+    "proxy_start": "2000-09-01",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-09-01",
+    "px_n": 6109
+  },
+  "HK50.cash": {
+    "ftmo_symbol": "HK50.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "HSI",
+    "proxy_start": "1986-12-31",
+    "jaren_tm_2024": "38.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 2.63,
+      "swap_long": 1.5,
+      "swap_short": 0.8,
+      "match": "alle:HK50cash"
+    },
+    "px_start": "1986-12-31",
+    "px_n": 9380
+  },
+  "JP225.cash": {
+    "ftmo_symbol": "JP225.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "N225",
+    "proxy_start": "1965-01-05",
+    "jaren_tm_2024": "60.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 1.51,
+      "swap_long": 1.5,
+      "swap_short": 0.8,
+      "match": "alle:JP225cash"
+    },
+    "px_start": "1965-01-05",
+    "px_n": 14753
+  },
+  "N25.cash": {
+    "ftmo_symbol": "N25.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "AEX",
+    "proxy_start": "1992-10-12",
+    "jaren_tm_2024": "32.2",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 5.62,
+      "swap_long": 1.5,
+      "swap_short": 0.8,
+      "match": "alle:N25cash"
+    },
+    "px_start": "1992-10-12",
+    "px_n": 8222
+  },
+  "NATGAS.cash": {
+    "ftmo_symbol": "NATGAS.cash",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "NATGAS_F",
+    "proxy_start": "2000-08-30",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-08-30",
+    "px_n": 6112
+  },
+  "NZDUSD": {
+    "ftmo_symbol": "NZDUSD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FX_NZDUSD",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 1.85,
+      "swap_long": 0.92,
+      "swap_short": 0.02,
+      "match": "NZDUSD"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13525
+  },
+  "SOYBEAN.c": {
+    "ftmo_symbol": "SOYBEAN.c",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "SOY_F",
+    "proxy_start": "2000-09-15",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-09-15",
+    "px_n": 6111
+  },
+  "SPN35.cash": {
+    "ftmo_symbol": "SPN35.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "IBEX",
+    "proxy_start": "1993-07-12",
+    "jaren_tm_2024": "31.5",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 4.09,
+      "swap_long": 1.5,
+      "swap_short": 0.8,
+      "match": "alle:SPN35cash"
+    },
+    "px_start": "1993-07-12",
+    "px_n": 7973
+  },
+  "SUGAR.c": {
+    "ftmo_symbol": "SUGAR.c",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "SUGAR_F",
+    "proxy_start": "2000-03-01",
+    "jaren_tm_2024": "24.8",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-03-01",
+    "px_n": 6229
+  },
+  "UK100.cash": {
+    "ftmo_symbol": "UK100.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "FTSE",
+    "proxy_start": "1984-01-03",
+    "jaren_tm_2024": "41.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 1.42,
+      "swap_long": 2.268493150684931,
+      "swap_short": -0.10410958904109589,
+      "match": "alle:UK100cash+swap_specs"
+    },
+    "px_start": "1984-01-03",
+    "px_n": 10356
+  },
+  "UKOIL.cash": {
+    "ftmo_symbol": "UKOIL.cash",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "BRENT_F",
+    "proxy_start": "2007-07-30",
+    "jaren_tm_2024": "17.4",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 2.71,
+      "swap_long": -5.98,
+      "swap_short": 27.03,
+      "match": "UKOILcash"
+    },
+    "px_start": "2007-07-30",
+    "px_n": 4333
+  },
+  "US100.cash": {
+    "ftmo_symbol": "US100.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "NDX",
+    "proxy_start": "1985-10-01",
+    "jaren_tm_2024": "39.2",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 0.66,
+      "swap_long": 1.95,
+      "swap_short": 0.21,
+      "match": "US100cash"
+    },
+    "px_start": "1985-10-01",
+    "px_n": 9892
+  },
+  "US2000.cash": {
+    "ftmo_symbol": "US2000.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "RUT",
+    "proxy_start": "1987-09-10",
+    "jaren_tm_2024": "37.3",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.49,
+      "swap_long": 1.5,
+      "swap_short": 0.8,
+      "match": "alle:US2000cash"
+    },
+    "px_start": "1987-09-10",
+    "px_n": 9401
+  },
+  "US30.cash": {
+    "ftmo_symbol": "US30.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "DJI",
+    "proxy_start": "1992-01-02",
+    "jaren_tm_2024": "33.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 0.45,
+      "swap_long": 2.28,
+      "swap_short": -0.12,
+      "match": "US30cash"
+    },
+    "px_start": "1992-01-02",
+    "px_n": 8311
+  },
+  "US500.cash": {
+    "ftmo_symbol": "US500.cash",
+    "categorie": "index",
+    "klasse": "indices",
+    "proxy": "SPX_TR",
+    "proxy_start": "1988-01-04",
+    "jaren_tm_2024": "37.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 0.78,
+      "swap_long": 1.36,
+      "swap_short": 0.81,
+      "match": "US500cash"
+    },
+    "px_start": "1988-01-04",
+    "px_n": 9322
+  },
+  "USDCAD": {
+    "ftmo_symbol": "USDCAD",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FX_USDCAD",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): USDCAD = FXBIS_CAD / 1",
+    "loaded": true,
+    "cost": {
+      "rt": 0.8,
+      "swap_long": -0.09,
+      "swap_short": 0.98,
+      "match": "USDCAD"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13547
+  },
+  "USDCHF": {
+    "ftmo_symbol": "USDCHF",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FX_USDCHF",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): USDCHF = FXBIS_CHF / 1",
+    "loaded": true,
+    "cost": {
+      "rt": 1.01,
+      "swap_long": -0.39,
+      "swap_short": 2.17,
+      "match": "USDCHF"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13541
+  },
+  "USDJPY": {
+    "ftmo_symbol": "USDJPY",
+    "categorie": "fx",
+    "klasse": "fx",
+    "proxy": "FX_USDJPY",
+    "proxy_start": "1971-01-04",
+    "jaren_tm_2024": "54.0",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "cross uit BIS (lokaal per USD): USDJPY = FXBIS_JPY / 1",
+    "loaded": true,
+    "cost": {
+      "rt": 0.78,
+      "swap_long": -0.37,
+      "swap_short": 1.58,
+      "match": "USDJPY"
+    },
+    "px_start": "1971-01-04",
+    "px_n": 13535
+  },
+  "USOIL.cash": {
+    "ftmo_symbol": "USOIL.cash",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "WTI_F",
+    "proxy_start": "2000-08-23",
+    "jaren_tm_2024": "24.4",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.34,
+      "swap_long": -5.4,
+      "swap_short": 24.53,
+      "match": "USOILcash"
+    },
+    "px_start": "2000-08-23",
+    "px_n": 6114
+  },
+  "WHEAT.c": {
+    "ftmo_symbol": "WHEAT.c",
+    "categorie": "commodity/metal",
+    "klasse": "energie_agri",
+    "proxy": "WHEAT_F",
+    "proxy_start": "2000-07-17",
+    "jaren_tm_2024": "24.5",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-07-17",
+    "px_n": 6131
+  },
+  "XAGAUD": {
+    "ftmo_symbol": "XAGAUD",
+    "categorie": "commodity/metal",
+    "klasse": "metalen",
+    "proxy": "SILVER_F+FXBIS_AUD",
+    "proxy_start": "2000-08-30",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-08-30",
+    "px_n": 6052
+  },
+  "XAGEUR": {
+    "ftmo_symbol": "XAGEUR",
+    "categorie": "commodity/metal",
+    "klasse": "metalen",
+    "proxy": "SILVER_F+FXBIS_EUR",
+    "proxy_start": "2000-08-30",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-08-30",
+    "px_n": 6052
+  },
+  "XAGUSD": {
+    "ftmo_symbol": "XAGUSD",
+    "categorie": "commodity/metal",
+    "klasse": "metalen",
+    "proxy": "SILVER_F",
+    "proxy_start": "2000-08-30",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 5.07,
+      "swap_long": 3.15,
+      "swap_short": -0.18,
+      "match": "XAGUSD"
+    },
+    "px_start": "2000-08-30",
+    "px_n": 6108
+  },
+  "XAUAUD": {
+    "ftmo_symbol": "XAUAUD",
+    "categorie": "commodity/metal",
+    "klasse": "metalen",
+    "proxy": "GOLD_F+FXBIS_AUD",
+    "proxy_start": "2000-08-30",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-08-30",
+    "px_n": 6051
+  },
+  "XAUEUR": {
+    "ftmo_symbol": "XAUEUR",
+    "categorie": "commodity/metal",
+    "klasse": "metalen",
+    "proxy": "GOLD_F+FXBIS_EUR",
+    "proxy_start": "2000-08-30",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-08-30",
+    "px_n": 6051
+  },
+  "XAUUSD": {
+    "ftmo_symbol": "XAUUSD",
+    "categorie": "commodity/metal",
+    "klasse": "metalen",
+    "proxy": "GOLD_F",
+    "proxy_start": "2000-08-30",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "ja",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 0.83,
+      "swap_long": 2.15,
+      "swap_short": 0.1,
+      "match": "XAUUSD"
+    },
+    "px_start": "2000-08-30",
+    "px_n": 6107
+  },
+  "XCUUSD": {
+    "ftmo_symbol": "XCUUSD",
+    "categorie": "commodity/metal",
+    "klasse": "metalen",
+    "proxy": "COPPER_F",
+    "proxy_start": "2000-08-30",
+    "jaren_tm_2024": "24.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "2000-08-30",
+    "px_n": 6111
+  },
+  "XPDUSD": {
+    "ftmo_symbol": "XPDUSD",
+    "categorie": "commodity/metal",
+    "klasse": "metalen",
+    "proxy": "PALL_F",
+    "proxy_start": "1998-09-28",
+    "jaren_tm_2024": "26.3",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "1998-09-28",
+    "px_n": 6146
+  },
+  "XPTUSD": {
+    "ftmo_symbol": "XPTUSD",
+    "categorie": "commodity/metal",
+    "klasse": "metalen",
+    "proxy": "PLAT_F",
+    "proxy_start": "1997-10-29",
+    "jaren_tm_2024": "27.2",
+    "10j_plus": "ja",
+    "m5gz": "nee",
+    "opmerking": "",
+    "loaded": true,
+    "cost": {
+      "rt": 3.0,
+      "swap_long": 2.0,
+      "swap_short": 2.0,
+      "match": "fallback:commodity/metal"
+    },
+    "px_start": "1997-10-29",
+    "px_n": 6134
+  }
+}
