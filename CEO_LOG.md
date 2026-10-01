@@ -45,3 +45,4 @@
 - 02:15 Amsterdam (01-10) — CEO-cyclus (3 triggers ingehaald). NEXT_STEPS v52: D-092 actief, 8-cyclus watchdog loopt. Team idle wacht op nieuwe pre-screen resultaten of Sandro-data (A1). Geen open CEO-vragen.
 02:45 Amsterdam (01-10) — C-010 XAU N7/N8 pre-screen FAIL (geen PREREG); D-092 stopregel cyclus ~4/8; geen gate-PASS; team idle
 03:15 Amsterdam (01-10) — LUNCH_OPEN cost-gate PASS maar trial FAIL_T (445); C-011 N9 underpowered/N10 FAIL pre-screen; D-092 stopregel cyclus 5-6/8; geen gate-PASS
+03:45 Amsterdam (01-10) — MINI-REVIEW 3u: N11/N12 pre-screen FAIL; D-092 stopregel cyclus 6/8 (start 01:00); nog 2 cycli tot D-093 freeze. Overlevenden: XAU_AM_FADE (N=12 watch) + S2-BTC (N=132 watch). Portfolio-pad: ORB+BTC eqvol €1006/m theoretisch. Geen gate-PASS in afgelopen 3 uur; patroon consistent met D-092 verwachting.
