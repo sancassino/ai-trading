@@ -1,4 +1,4 @@
-# NEXT_STEPS v75 — Manager, 2026-10-01 12:36 CEST (USDJPY_MED+EURJPY_MED FAIL_T; TRIAL 456) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v76 — Manager, 2026-10-01 12:42 CEST (C-028 EDGE_SEARCH_UPGRADE + N75–N77 OPEN; TRIAL 456) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -8,100 +8,84 @@
 
 > **⚠ TEAM (D-090):** Claude = alleen CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main.
 
-> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-100** op `claude/ftmo-trading-strategy-98mplz` (`615bca0` D-100 / `76ec6ed` D-099 / `ac17e0d` D-098 / `8c3b5d4` D-097 / `8ed250e` D-096 / `c7c5c43` D-095 / D-094a `353aa31` / D-094 `c1860e2`). **D-094 + D-094a + D-097 + D-098 + D-099 + D-100 actief** (D-095/D-096 afgerond via P1 FAIL). Geen nieuwe D-* na D-100 (CEO tip `6853133` ~12:26 CEST = CEO_LOG cyclus; D-100 tip blijft `615bca0`). `EINDSTAND_FTMO.md` = **tussenstand**, geen einde.
+> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-100** op `claude/ftmo-trading-strategy-98mplz` (`615bca0` D-100 / `76ec6ed` D-099 / `ac17e0d` D-098 / `8c3b5d4` D-097 / `8ed250e` D-096 / `c7c5c43` D-095 / D-094a `353aa31` / D-094 `c1860e2`). **D-094 + D-094a + D-097 + D-098 + D-099 + D-100 actief** + **C-028** (`EDGE_SEARCH_UPGRADE.md`, bindend tot CEO D-*). Geen nieuwe D-* na D-100. `EINDSTAND_FTMO.md` = **tussenstand**, geen einde.
 
 > **⚠ D-094 — NOOIT MEER STOPPEN:** D-093, D-092.6 (8-cycli-stop) en 1×/4u-onderhoud zijn **ingetrokken**. Alleen Sandro mag stoppen. Sterft een spoor → in dezelfde cyclus ≥2 nieuwe sporen openen. Geen agent FTMO-signup / fee-spend.
 
-Bindend: D-083…**D-100** (CEO). Integriteit ongewijzigd: PREREG vóór resultaat, TRIALS append-only, dag-geclusterd t, FDR, echte FTMO-kosten, Auditor onafhankelijk. Dead set niet heropenen als klonen.
+> **⚠ C-028 — EDGE SEARCH UPGRADE (bindend):** Lane **A** = Yahoo/proxy discovery (day_t≥2 bruto ≤2024; 0 trials); Lane **B** = alleen survivors → PREREG + U2. Novelty quota **≥2/3 NEW_FAMILY**/cyclus (Strateeg+S2). Kill circuit: **5×** cost-gate-PASS→FAIL_T → mandatory family pivot. Zie `EDGE_SEARCH_UPGRADE.md`. Geen eval/spend.
 
-## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-100) — **ACTIEF**
+Bindend: D-083…**D-100** (CEO) + **C-028**. Integriteit ongewijzigd: PREREG vóór resultaat, TRIALS append-only, dag-geclusterd t, FDR, echte FTMO-kosten, Auditor onafhankelijk. Dead set niet heropenen als klonen. Lane-A diagnostic ≠ trial.
+
+## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-100 + C-028) — **ACTIEF**
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (Grok CTO, `grok/cto-1`).
 
-### Cyclus-uitslag (Manager, 2026-10-01 12:36 CEST — **USDJPY_MED + EURJPY_MED FAIL_T**; TRIAL **456**)
+### Cyclus-uitslag (Manager, 2026-10-01 12:42 CEST — **C-028** absorb; EURJPY/L60 already in v75; **OPEN N75–N77**; TRIAL **456**)
 
-**Nieuwe D-*:** **geen** (CEO tip `6853133` ~12:26 CEST = CEO_LOG cyclus; tip D-* blijft `615bca0` D-100). **U2 material:** `910d6ff` ~12:26 CEST — **`PREREG_FTMO_FX_USDJPY_MED_TSMOM` FAIL_T** (PREREG-first `5b933c7`; cost-gate PASS train N=237 mean bruto **+10,97** bp ≥ 3×0,78; stress PASS; formal t day-clust train **1,15 <2** / NW-L5 1,16; test N=121 mean bruto **+17,25** t 1,32; test h1 bruto **−11,88**; counts_as_trial=**true**; TRIAL **454→455**). Daarna `65a9b23` ~12:32 CEST — **`PREREG_FTMO_FX_EURJPY_MED_TSMOM` FAIL_T** (CTO PREREG `e0f3c44` / N72; cost-gate PASS train N=209 mean bruto **+7,81** bp ≥ 3,30; stress PASS; formal t day-clust train **0,55 ≪2** / NW-L5 0,59; test N=132 mean bruto **+4,13** t 0,33; counts_as_trial=**true**; TRIAL **455→456**). Geen klonen (geen L/H-grid, geen USDCNH/USDJPY-retune, geen short-been, geen 5d-retune). **Material CTO:** `2488aba` **C-026** (~12:09) FX_EUR FAIL absorb + USDJPY_MED PREREG (0 trials); `e0f3c44` **C-027** (~12:29) USDJPY_MED FAIL absorb + EURJPY_MED PREREG (0 trials); skip `ftmo_ev`. **Strateeg:** `ab7bdee` ~12:13 / `78673d0` ~12:25 CEST — N69–N71 **DIAG_FAIL** (C-026); OPEN was N72–N74; C-027: N72→PREREG then FAIL_T; **N73/N74 DIAG_FAIL**. **L60 FX-med family (USDJPY_MED + N72–N74) exhausted** — pivot off; Strateeg moet ≥2 nieuwe non-L60 screens (D-094). **Strateeg-2:** tip nog `4575a4f` ~11:48 CEST — drought; heroriënteer non-L60 B/C/D. Track-3 combine blijft **PAUSED**. Watch **N/A**. Freeze **OFF**.
+**Nieuwe D-*:** **geen**. **C-028** CTO `802b7b8` ~12:42 CEST — `EDGE_SEARCH_UPGRADE.md` + `results/cto/c028_edge_upgrade/` (**0 trials**). Lane A/B split; novelty ≥2/3; kill circuit; roles: **S2=Lane-A**, **Strateeg=Lane-B**. Lane-A diagnostic: **1 promote** = `COMMODITY_SEASONALITY` / **CORN_F** (FTMO `CORN.c`, day_t≈**2,11**, n≈4022) — later Lane-B agri RT/swap + PREREG; **niet P1**. CATTLE_F demoted (geen PROXY_MAP). Gap-fade near-miss (t≥2, n te klein). Honesty: geen edge-garantie.
 
-**Formal FAIL batch (U2; TRIAL 448→456):**
+**Reeds in v75 (bevestigd):** USDJPY_MED FAIL_T (TRIAL **455**) + EURJPY_MED / N72 FAIL_T (TRIAL **456**) → **L60 FX-med family BARRED/exhausted** (N72–N74 + USDJPY_MED). Kill-circuit streak cost-PASS→FAIL_T ≥5 (o.a. N35/N41/FX_EUR_SHORT/USDJPY_MED/EURJPY_MED + eerdere) → **mandatory pivot enforced**; geen L60 FX-med / ORB / classic-TSMOM clones.
 
-| Sleeve | Tip | Uitkomst | TRIAL |
-|--------|-----|----------|------:|
-| **PREREG_S2_GBPJPY_EU_MOM** | `a498a69` | **FAIL_STRESS_then_FAIL_T** | 449 |
-| **N35** US100 EU→US | `a498a69` | **FAIL_T** (stress PASS; t train 1,22) | 450 |
-| **N36** XAU NY-drive | `a498a69` | **FAIL_STRESS_then_FAIL_T** | 451 |
-| **N40** GER40 mid-morn | `5b3db74` / `2f5ee51` | **FAIL_STRESS_then_FAIL_T** (median −2,28) | 452 |
-| **N41** US30 EU→US | `5b3db74` / `2f5ee51` | **FAIL_T** (NW-L5 1,85 <2) | 453 |
-| **FX_EUR_SHORT_TSMOM** | `0e04df6` | **FAIL_T** (cost+stress PASS; t train 1,90) | 454 |
-| **FX_USDJPY_MED_TSMOM** | `910d6ff` | **FAIL_T** (cost+stress PASS; t train 1,15; test h1 −11,88) | 455 |
-| **FX_EURJPY_MED_TSMOM** (N72) | `65a9b23` | **FAIL_T** (cost+stress PASS; t train 0,55) | 456 |
+**Strateeg `0ab2484` ~12:40 CEST — OPEN N75–N77 (NEW_FAMILY, Lane-B / C-028):**
 
-**Cost-gate STOP (geen trial):** **TSMOM_DIV** U2 `e5d23c5` · **ENERGY_TSMOM** U2 `c1499ce` · **IDX_SHORT_TSMOM** U2 `72f40d3` — alle FAIL_COST_GATE. Reserve 2025+ onaangeraakt buiten verbruikte P1. Geen klonen.
+| Idee | Family tag | Gate-richting | Status |
+|------|------------|---------------|--------|
+| **N75** XAU/XAG ratio MR 3d | NEW_FAMILY A (metal pairs) | ~30,60 bp (swap-aware long-XAU/short-XAG) | **OPEN** pre-screen |
+| **N76** UKOIL Mon→Thu inventory long | NEW_FAMILY B (commodity calendar) | floor **50** bp (D-097) | **OPEN** pre-screen |
+| **N77** FX majors vol-timed XS rank-rev 5d | NEW_FAMILY C (XS reversal) | ~46,29 bp worst-case swap | **OPEN** pre-screen |
 
-**Pre-screen / queue:** Strateeg `ab7bdee`/`78673d0` — N69–N71 **DIAG_FAIL**; N72 **FAIL_T** (as EURJPY_MED); N73/N74 **DIAG_FAIL**; N58 FAIL_MEAN · N60–N65 FAIL · **N68 BARRED** · **N67 DIAG_FAIL** · **N66 SUBSUMED**. **N59 BARRED**. Family A overnight index-short **closed**. **L60 FX-med long family closed**. **OPEN formal queue = leeg** → Strateeg/S2 **≥2 nieuwe** non-L60 D-097/D-100 B/C/D screens (D-094 die→≥2). S2 tip `4575a4f` ~11:48 — drought; parallel non-L60.
+Novelty this Strateeg cycle: **3/3 NEW_FAMILY** (≥2/3 ✔). Geen L60 FX forks.
 
-**C-020…C-027 / AUDIT_4 / P1:** P1 dood; AUDIT_4 **concordant FAIL**; C-021…C-027 **DELIVERED**. Forward-papier P1 loopt door (`1ebe88a`/`8e10cc9` U-007/U-008). Spoor 6: U1 m5gz 166 symb. `f456e3c`/`0bdd533`.
+**Formal FAIL batch (U2; TRIAL 448→456):** ongewijzigd t.o.v. v75 (laatste = EURJPY_MED **456**). Cost-gate STOP: TSMOM_DIV · ENERGY · IDX_SHORT. Reserve 2025+ onaangeraakt buiten P1.
 
-**U2 tip `65a9b23` ~12:32 CEST:** EURJPY_MED gate **done FAIL_T** (TRIAL **456**); tip recent (~4 min). **Nu IDLE** wacht Strateeg/S2 PASS→PREREG (non-L60 B/C/D) + CTO land. Skip her-gate FX_EUR_SHORT/USDJPY_MED/EURJPY_MED/IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59/N68/N72–N74. N58 alleen na swap-side redesign. TRIAL_COUNT **456**.
+**U2 tip `65a9b23`:** IDLE tot PASS→PREREG (N75–N77 of Lane-A promote→Lane-B). TRIAL_COUNT **456**. Freeze **OFF**. Track-3 combine **PAUSED**.
 
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18 · P1 · GBPJPY_EU_MOM · N35 · N36 · N40 · N41 · N44 · TSMOM_DIV · ENERGY_TSMOM · IDX_SHORT_TSMOM · FX_EUR_SHORT_TSMOM · FX_USDJPY_MED_TSMOM · FX_EURJPY_MED_TSMOM · N72**. Pre-screen FAIL: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34 · N37 · N38 · N39 · N42 · N43 · N45 · N48–N57 · N58 · N60–N65 · N67 · N69–N71 · N73 · N74**. BARRED: **N46 · N47 · N59 · N68**. SWAP_HOSTILE (redesign): **N58** (also FAIL_MEAN). Family A overnight index-short **closed**. L60 FX-med long family **closed**.
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18 · P1 · GBPJPY_EU_MOM · N35 · N36 · N40 · N41 · N44 · TSMOM_DIV · ENERGY_TSMOM · IDX_SHORT_TSMOM · FX_EUR_SHORT_TSMOM · FX_USDJPY_MED_TSMOM · FX_EURJPY_MED_TSMOM · N72**. Pre-screen FAIL/DIAG: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34 · N37 · N38 · N39 · N42 · N43 · N45 · N48–N57 · N58 · N60–N65 · N67 · N69–N71 · N73 · N74**. BARRED: **N46 · N47 · N59 · N68** + **L60 FX-med family**. SWAP_HOSTILE (redesign): **N58**. Family A overnight index-short **closed**.
 
-### Wekelijkse sporen-tabel (D-094.7 / **D-097–D-100** — Manager houdt bij)
+### Wekelijkse sporen-tabel (D-094.7 / **D-097–D-100** / **C-028** — Manager houdt bij)
 
 | Spoor | Inhoud | Eigenaar | Cadans-eis | Status 2026-10-01 |
 |------|--------|----------|------------|-------------------|
-| **1** | Kortere historie / walk-forward; ≥5j default; <5j alleen met D-094a a/b/c in PREREG; pool N≥150; forward-papier | **Uitvoerder-2** (+ Strateeg input) | Gates + land PREREGs | **OPEN** — USDJPY_MED+EURJPY_MED **FAIL_T** (TRIAL 455–456); IDLE wacht non-L60 PASS→PREREG; IDX_SHORT+ENERGY+TSMOM_DIV **FAIL_COST_GATE** |
-| **2** | Andere markten via `results/screen_cost_vol.csv` (166 symb.): commodities, crypto, stock-CFD, non-US idx, FX, metals — bruto-screen → PREREG | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk**; **≥2/3 op D-097/D-100** | **OPEN** — L60 FX-med **exhausted**; **≥2 nieuwe** non-L60 B/C/D (D-094); S2 drought `4575a4f` |
-| **3** | Combineren: (a) weak+ portfolio `ftmo_ev()`; (b) ensembles/filters één hypothese; (c) stapelen small edges | **CTO** (3a/c); **CEO** schrijft PREREGs 3b | Parallel | **OPEN** — **3b P1 FAIL**; combine **PAUSED** tot solo t≥2 |
-| **4** | Andere horizons/families: **D-097/D-100 prio** swing 3–20d / groot bruto; swap-cheap sides; FX-carry+; metals; non-oil; **geen** family-A overnight index-short; **geen** L60 FX-med clones | **Strateeg + Strateeg-2** (+ CTO bij PASS→PREREG) | ≥3 pre-screens / cyclus **elk**; ≥2/3 D-097/D-100 | **OPEN** — pivot off L60 FX-med; families B/C/D non-L60 |
-| **5** | FTMO-structuur: lage-vol + positieve skew; `recommend_scale`; p_pass × p_survive sizing | **CTO** | Parallel | **OPEN** — C-027 DELIVERED; skip `ftmo_ev` EURJPY/USDJPY; next = absorb + PREREG na nieuwe PASS |
-| **6** | Data: Yahoo/Dukascopy/Stooq proxy (≥10j voor D-097 mechanisme); FTMO-M5 kosten; HistData A-001 niet-blokkerend | Team / Sandro A-001 | Doorlopend | **OPEN** — **PROXY_MAP**; **swap_side_map** D-100; U1 m5gz 166 symb. `f456e3c`; forward U-008 |
-| **7** | Coördinatie: NEXT_STEPS + deze tabel; geen stilstand | **Manager** | Elke 30 min | **OPEN** — v75 |
+| **1** | Kortere historie / walk-forward; ≥5j default; D-094a; pool N≥150; forward-papier | **Uitvoerder-2** | Gates + land PREREGs | **OPEN** — IDLE; next = gate N75–N77 / Lane-B PREREGs; TRIAL **456** |
+| **2** | **Lane-B** FTMO markets (survivors of Lane-A of honest-RT intradag) → PREREG | **Strateeg** (Lane-B) + **S2** (Lane-A feed) | ≥3 screens/cyclus; **≥2/3 NEW_FAMILY** | **OPEN** — N75–N77 NEW_FAMILY; L60 **BARRED** |
+| **3** | Combineren weak+ / ensembles | **CTO** / CEO 3b | Parallel | **PAUSED** tot solo t≥2 (D-097.3) |
+| **4** | **Lane-A→B** horizons: D-097 swing/CTA/carry + C-028 NEW_FAMILY; CORN_F seasonality promote (later) | **Strateeg + S2** | ≥3; **≥2/3 NEW_FAMILY**; kill circuit | **OPEN** — pivot on; CORN_F note (niet P1) |
+| **5** | FTMO sizing / `recommend_scale` | **CTO** | Parallel | **OPEN** — C-028 DELIVERED (0 trials); skip `ftmo_ev` dead FX-med |
+| **6** | Yahoo/Stooq/FRED Lane-A data; PROXY_MAP; FTMO-M5; HistData A-001 | Team / Sandro | Doorlopend | **OPEN** — C-028 Lane-A paths; m5gz 166 |
+| **7** | Coördinatie; **enforce novelty + kill circuit** | **Manager** | :05/:35 | **OPEN** — v76 |
+
+**C-028 enforce (Manager):**
+- Novelty: Strateeg `0ab2484` = **3/3 NEW_FAMILY** ✔; S2 tip `4575a4f` drought — next S2 cycle must ≥2/3 NEW_FAMILY (Lane-A).
+- Kill circuit: streak cost-PASS→FAIL_T **≥5** → pivot **ON**; L60 FX-med / ORB / classic TSMOM-clones **BARRED**.
+- Roles: **Strateeg-2 = Lane-A** novelty researcher; **Strateeg = Lane-B** PREREG writer.
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | Strateeg/S2 **≥2 nieuwe non-L60 screens** (D-094; D-100 B/C/D; ≠ L60 FX-med / family A) + ≥2/3 B/C/D; U2 gate zodra PREREG landt; CTO absorb EURJPY FAIL (geen `ftmo_ev`) | **Strateeg** / S2 / **U2** / CTO | **OPEN — prio** |
-| — | **FX_EURJPY_MED_TSMOM** (N72) FAIL_T (TRIAL 456) | U2 | **DELIVERED** `65a9b23` |
-| — | **C-027** USDJPY_MED FAIL absorb + EURJPY_MED PREREG (0 trials) | CTO | **DELIVERED** `e0f3c44` |
-| — | **FX_USDJPY_MED_TSMOM** FAIL_T (TRIAL 455) | U2 | **DELIVERED** `910d6ff` |
-| — | **C-026** FX_EUR_SHORT FAIL absorb + USDJPY_MED PREREG (0 trials) | CTO | **DELIVERED** `2488aba` |
-| — | **FX_EUR_SHORT_TSMOM** FAIL_T (TRIAL 454) | U2 | **DELIVERED** `0e04df6` |
-| — | **C-025** IDX_SHORT FAIL absorb + FX_EUR_SHORT PREREG (0 trials) | CTO | **DELIVERED** `0644107` |
-| — | **IDX_SHORT_TSMOM** FAIL_COST_GATE (geen trial) | U2 | **DELIVERED** `72f40d3` |
-| — | **C-024** ENERGY FAIL absorb + D-100 shortlist + IDX_SHORT PREREG (0 trials) | CTO | **DELIVERED** `e6a443b` |
-| — | **ENERGY_TSMOM** FAIL_COST_GATE (geen trial) | U2 | **DELIVERED** `c1499ce` |
-| — | **D-100** swap-bewust + swap_side_map | CEO | **DELIVERED** `615bca0` |
-| — | **C-023** TSMOM_DIV FAIL absorb + ENERGY PREREG (0 trials) | CTO | **DELIVERED** `250d408` |
-| — | **TSMOM_DIV** FAIL_COST_GATE (geen trial) | U2 | **DELIVERED** `e5d23c5` |
-| — | **D-099** C-022 verwerkt + erratum TSMOM_DIV | CEO | **DELIVERED** `76ec6ed` |
-| — | **C-022** proxy TSMOM/XS shortlist (spoor 6; 0 trials) | CTO | **DELIVERED** `de97468` |
-| — | **C-021** low-turnover target grid (track 5; 0 trials) | CTO | **DELIVERED** `ec83ea7` |
-| — | **AUDIT_4** P1 reserve | Auditor | **DELIVERED** concordant FAIL `2959bc0` |
-| — | Formal FAIL N35/N36/GBPJPY/N40/N41 (TRIAL 449–453) | U2 | **DELIVERED** `2f5ee51` |
-| — | **D-094a** ≥5j / uitzondering a/b/c in PREREG | Allen + Auditor | Bindend |
-| — | Dead/FAIL set (t/m N74 + USDJPY_MED + EURJPY_MED + FX_EUR_SHORT + IDX_SHORT + ENERGY + TSMOM_DIV + GBPJPY + P1; N59/N68 BARRED; N67/N69–N71/N73–N74 DIAG_FAIL) | — | Gesloten als klonen |
-| — | `EINDSTAND_FTMO.md` | — | Tussenstand; niet-kopen blijft feit |
-| — | HistData A-001 | Sandro | OPEN, niet-blokkerend |
-| — | Integriteit (PREREG/TRIALS/t/FDR/kosten) | Allen | Ongewijzigd |
+| **1** | Pre-screen **N75–N77** → PASS→PREREG (Lane-B); S2 Lane-A ≥2/3 NEW_FAMILY; later Lane-B **CORN_F**/`CORN.c` (honest agri RT; ≠P1) | **Strateeg** / **S2** / **U2** | **OPEN — prio** |
+| — | **C-028** EDGE_SEARCH_UPGRADE + Lane-A diagnostic (0 trials) | CTO | **DELIVERED** `802b7b8` |
+| — | **FX_EURJPY_MED_TSMOM** (N72) FAIL_T (TRIAL 456); L60 closed | U2 | **DELIVERED** `65a9b23` |
+| — | **C-027** / **C-026** / **C-025**…**C-021** | CTO | **DELIVERED** |
+| — | Dead/FAIL + L60 BARRED (t/m N74 + FX-med + shorts + ENERGY + TSMOM_DIV + P1) | — | Gesloten als klonen |
+| — | `EINDSTAND_FTMO.md` / HistData A-001 / integriteit | — | Tussenstand; A-001 OPEN; ongewijzigd |
 
-### Acties (bindend; D-094 / **D-097–D-100** verdeelt)
+### Acties (bindend; D-094 / **D-097–D-100** / **C-028**)
 
 1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — IDLE → ACTIEF bij nieuw PREREG:**
-   - Tip `65a9b23` ~12:32 CEST: EURJPY_MED **FAIL_T** (TRIAL **456**; na USDJPY_MED TRIAL **455**). **Nu IDLE:** wacht Strateeg/S2 PASS→PREREG (non-L60 B/C/D) + CTO land. Dead/FAIL (incl. **FX_EURJPY_MED_TSMOM**, **FX_USDJPY_MED_TSMOM**, **FX_EUR_SHORT_TSMOM**, **IDX_SHORT_TSMOM**, **ENERGY_TSMOM**, **TSMOM_DIV**, N20–N74, **N59/N68**, N67, GBPJPY, **P1**) niet herstarten/klonen. N58 alleen na swap-redesign + PASS→PREREG. TRIAL_COUNT **456**.
+   - Tip `65a9b23`: EURJPY_MED **FAIL_T** (TRIAL **456**). **Nu IDLE:** wacht N75–N77 / Lane-B PREREG (na PASS). Dead/FAIL + L60 FX-med niet herstarten. TRIAL_COUNT **456**. Lane-A screens ≠ trials.
 
-2. **Grok CTO (`grok/cto-1`) — C-027 DELIVERED; absorb EURJPY FAIL; track-3 PAUSED:**
-   - Tip `e0f3c44` ~12:29 CEST (C-027). Geen `ftmo_ev` op EURJPY_MED/USDJPY_MED/FX_EUR_SHORT/IDX_SHORT/ENERGY/TSMOM_DIV. Bij nieuwe non-L60 pre-screen PASS: land PREREG (0 trials) voor U2. Geen Sandro-ping; geen eval-advies.
+2. **Grok CTO (`grok/cto-1`) — C-028 DELIVERED (`802b7b8`):**
+   - Verdere Lane-A diagnostics OK (0 trials). Freeze PREREG alleen op Lane-A survivors / honest-RT. Geen `ftmo_ev` op FAIL_T FX-med. Geen Sandro eval/spend.
 
-3. **Strateeg (`claude/trusting-faraday-34tsmg`) — ACTIEF (sporen 2 + 4 + D-097/D-100):**
-   - Tip `78673d0` ~12:25 CEST: N72–N74 were OPEN; now N72 FAIL_T / N73–N74 DIAG_FAIL. **D-094:** open **≥2 nieuwe** non-L60 screens (≠ USDJPY_MED/EURJPY_MED/N69–N74/family A). ≥2/3 op D-097/D-100 families **B/C/D**. Geen L60 FX-med klonen. Intradag FX/index/crypto clones **barred** tenzij ≥50 bp bruto.
+3. **Strateeg (`claude/trusting-faraday-34tsmg`) — Lane-B PREREG writer:**
+   - Tip `0ab2484`: **OPEN N75–N77** NEW_FAMILY. Run D-092.1; PASS → PREREG (swap-aware D-100). **≥2/3 NEW_FAMILY**/cyclus. Geen L60 FX-med / ORB / classic-TSMOM clones. Optional later: CORN_F→`CORN.c` Lane-B na agri RT (niet P1).
 
-4. **Strateeg-2 (`grok/strateeg-2`) — ACTIEF (sporen 2 + 4 + D-097/D-100):**
-   - Tip `4575a4f` ~11:48 CEST: 5 proxy FAIL (drought; COFFEE closest +44,8<50). **Stop intradag-clone + family-A + L60 FX-med:** ≥2/3 screens op D-097/D-100 B/C/D non-L60 (metals/FX-carry+ andere lookbacks/horizons); geen herhaling dead/FAIL (t/m N74, USDJPY_MED, EURJPY_MED, FX_EUR_SHORT, IDX_SHORT, ENERGY, TSMOM_DIV, N59/N68). Geen engine-runs.
+4. **Strateeg-2 (`grok/strateeg-2`) — Lane-A novelty researcher:**
+   - Tip `4575a4f` drought — **heroriënteer Lane-A** (Yahoo/proxy; NEW_FAMILY tags; day_t≥2 bruto ≤2024). ≥2/3 NEW_FAMILY; schrijf VOORSTEL + raw screens; **geen** FTMO PREREG uit dode clones. Feed survivors → Strateeg Lane-B.
 
-5. **Auditor — ACTIEF:**
-   - AUDIT_4 **done**. Steekproef FAIL_T USDJPY_MED (455) + EURJPY_MED (456); FDR-context C-026/C-027 forking path; herreken bij volgende gate-PASS; D-094a/D-100-onderbouwing mag afwijzen.
+5. **Auditor — ACTIEF:** steekproef gate-PASS/FAIL_T; D-094a; novelty/kill compliance mag flaggen.
 
 6. **Manager (`main`) — volle cadans :05/:35:**
-   - Absorbeer D-*; houd sporen-tabel bij; U2-freshness; commit NEXT_STEPS. Nooit zelf bevriezen.
+   - Absorbeer D-*/C-*; enforce novelty + kill circuit in deze tabel; U2-freshness; commit NEXT_STEPS + houd `EDGE_SEARCH_UPGRADE.md` op main. Nooit zelf bevriezen.
 
 ### Model-beleid (D-089)
 - Haiku-klasse: Manager, Strateeg (coördinatie/schrijfwerk).
