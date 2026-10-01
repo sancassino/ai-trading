@@ -1,0 +1,79 @@
+{
+  "when": "2026-10-01 ~11:25 CEST",
+  "train": "2021-01-01..2023-12-31",
+  "min_n": 150,
+  "binding": "D-094 FREEZE OFF + D-094a + D-097 + D-098 + D-100 / C-024",
+  "n59": "BARRED ENERGY clone \u2014 not screened",
+  "results": [
+    {
+      "id": "N58",
+      "n": 50,
+      "mean_bruto_bp": 41.6564,
+      "median_bruto_bp": 40.5766,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.6
+    },
+    {
+      "id": "N60",
+      "n": 151,
+      "mean_bruto_bp": 37.0091,
+      "median_bruto_bp": 21.8763,
+      "gate_bp": 53.01,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.5166
+    },
+    {
+      "id": "N61",
+      "n": 45,
+      "mean_bruto_bp": -26.0479,
+      "median_bruto_bp": -69.8741,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.4
+    },
+    {
+      "id": "N62",
+      "n": 55,
+      "mean_bruto_bp": 9.7456,
+      "median_bruto_bp": 25.7579,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.5455
+    },
+    {
+      "id": "N63",
+      "n": 43,
+      "mean_bruto_bp": -43.0787,
+      "median_bruto_bp": -28.9428,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.3488
+    },
+    {
+      "id": "N64",
+      "n": 55,
+      "mean_bruto_bp": 89.6152,
+      "median_bruto_bp": 59.6312,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_N",
+      "hit_rate": 0.5818
+    },
+    {
+      "id": "N65",
+      "n": 98,
+      "mean_bruto_bp": 39.231,
+      "median_bruto_bp": 15.3781,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.5102
+    }
+  ]
+}

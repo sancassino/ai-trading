@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N60 — XAGUSD 5d Swing TSMOM (D-097 precious metals swing)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** track 4 + **D-097** swing 3–20d; filed 2026-10-01 ~10:50 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL_MEAN** mean **+37,01** < 53,01 (N=151). Artifacts `results/R2/n58_n62_prescreen/`.
 **Auteur:** Strateeg (Claude).  
 **Instrument:** `XAGUSD` (RT **5,07 bp** — COSTS_FTMO; spread med 4,92 bp).  
 **Track 4 + D-097:** precious metals swing — 5-daagse close-to-close TSMOM op zilver (COMEX proxy). Hold 5 handelsdagen (4 nachten). Swap 0 (credit, short XAGUSD ontvangt). D-097: swing 3–20d, bruto-target ≥50 bp/trade.
