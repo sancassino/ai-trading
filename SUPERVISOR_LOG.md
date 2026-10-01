@@ -67,6 +67,7 @@
 - 2026-10-01 07:05 Amsterdam — cyclus :05: geen nieuws; D-093 freeze stabiel; alle agents idle.
 - 2026-10-01 07:35 Amsterdam — cyclus :35: geen nieuws; D-093 freeze ongewijzigd; alle agents idle.
 - 2026-10-01 08:05 Amsterdam — cyclus :05: D-094 GROTE WIJZIGING — Sandro heeft D-093 bevriezing ingetrokken; breed zoeken hervat (kortere historie, nieuwe markten, combineren, 7 nieuwe sporen); D-094a: minimum 5 jaar historie (3 jaar alleen met vooraf vastgelegde reden); Auditor-taak D-094 = steekproef gate-PASS/FAIL_T hertesten + portefeuille-EV nabouwen; team terug op volle cadans; NEXT_STEPS v63 actief.
+- 2026-10-01 14:05 Amsterdam — cyclus :05: N82/N84–N86 DIAG_FAIL + N83 UNDERPOWERED; pipeline C-030 leeg; Strateeg N87–N89 nieuwe familie L/M/N open; U2 idle; TRIAL 456 ongewijzigd; NEXT_STEPS v82.
 - 2026-10-01 13:35 Amsterdam — cyclus :35: N80 FAIL_COST_GATE (TRIAL 456 ongewijzigd); CTO C-030 N82–N86 Lane-B diag; Strateeg N84–N86 nieuwe familie; team grotendeels idle; TSMOM-reeks uitgeput per CEO 13:15.
 - 2026-10-01 13:05 Amsterdam — cyclus :05: N78 VIX_TERM_VOV FAIL_COST_GATE (TRIAL blijft 456; U2 boekhouding gecorrigeerd — Strateeg noteerde ten onrechte 457); Strateeg-2 C-028 VIX_TERM_VOV promote naar Lane-A; CTO C-029 N75–77 diag + CORN demote; Strateeg N79+ nieuwe familie open.
 - 2026-10-01 12:35 Amsterdam — cyclus :35: C-026 USDJPY_MED FAIL_T (TRIAL 455) + C-027 EURJPY_MED FAIL_T (TRIAL 456); FX TSMOM-serie passeert kostenpoort maar faalt t-test; Strateeg N72–N74 open; NEXT_STEPS v74.
