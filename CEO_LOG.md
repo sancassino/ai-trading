@@ -75,3 +75,4 @@
 13:56 Amsterdam — pipeline leeg: N82/N84–N86 DIAG_FAIL, N83 underpowered, N80 FAIL_COST_GATE; TRIAL 456; Strateeg opent N87–N89 nieuwe families; geen besluit
 14:27 Amsterdam — geen nieuws; N87–N89 open, TRIAL 456; Manager/CTO >45 min geen commit (cadans Sandro-kant)
 14:56 Amsterdam — geen nieuws; COSTS_FTMO 166 symbolen binnen; N87–N89 gates bevestigd, TRIAL 456; CTO 80+ min geen commit, U2 idle
+15:28 Amsterdam — CEO draait zelf pre-screen N87–N89 (Grok-kant stil): N87 US30 gap-fade gate PASS (N=158, +8,7bp, dag-t 1,1), N88/N89 FAIL; PREREG_FTMO_N87 geschreven; formele toets door U2 of CEO volgende cyclus
