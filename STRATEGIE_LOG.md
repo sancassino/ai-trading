@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- 18:20 Amsterdam (01-10) — Cyclus :20. Geen nieuws (main/U2/CTO ongewijzigd). Pipeline: **N90/N91/N92 OPEN**. TRIAL **457**.
+
 - 17:50 Amsterdam (01-10) — Cyclus :50. **Nieuws:** U2 `d17573c` — **D-101/D-102 absorb** + informele pre-screens N88/N89: N88 EURGBP FAIL (N=107<150, mean=−5,76 bp < 3,12); N89 GER40 FAIL (mean=+1,06 bp << gate 2,16). RISK-REACTIVE (D-102): CEO bouwt intradag-DD voor F2-ORB; U2 IDLE. Manager pauzeert ~3 dagen (v83 verwacht ~04-10). Direct **N91/N92 OPEN** toegevoegd (pipeline aanvulling voor N88/N89 formele FAIL). Pipeline: **N90/N91/N92 OPEN** (+ N88/N89 spoedig formeel FAIL → geen trial want D-092.1 cost-pre-screen NIET gehaald). TRIAL **457**.
 
 - 17:20 Amsterdam (01-10) — Cyclus :20. Geen nieuws (main/U2/CTO ongewijzigd). Pipeline: **N88/N89/N90 OPEN**. TRIAL **457**.
