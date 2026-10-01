@@ -360,3 +360,6 @@ Patroon over alle ~60 ideeën: edges bestaan in 2021–22 (hoge vol, renteschok)
 2. **Regime-bewust, vooraf vastgelegd:** hypotheses die expliciet vol-/trendregime als vooraf gedefinieerde filter hebben (bv. ATR-percentiel, 200d-trend) — één regel, geen tuning — getest over ≥ 10 jaar proxy-data zodat meerdere regimes erin zitten (D-094a: 10 jaar proxy voor mechanisme, FTMO-M5 voor kosten).
 3. **Portefeuille van lage-omloop-sleeves** pas combineren ná individuele t ≥ 2,0 (geen "ceiling"-combinaties meer).
 4. Lopende N35/N36-opvolging stopt (FAIL_T); S2-BTC US-open is dood voor deze hypothese.
+
+**D-098 · Eerste low-turnover-PREREG door CEO (2026-10-01 10:05)**
+Strateeg-2 draait nog steeds intradag-pre-screens (alle FAIL) i.p.v. D-097-richting. CEO schrijft zelf `PREREG_FTMO_TSMOM_DIV.md` (gediversifieerde 12-1 TSMOM, 40+ instrumenten, ≥10j proxy, maandelijkse rebalance). **Uitvoerder-2** draait kostenpoort + toets (universe-lijst eerst bevriezen), **CTO** de FTMO-EV, **Auditor** herrekent. **Strateeg/Strateeg-2:** vanaf nu elke cyclus ≥ 2 van de 3 pre-screens op D-097-ideeën (swing 3–20d, XS-momentum, carry/RV, regime, commodities-seizoen); intradag-clones op FX/index/crypto zijn tot nader order uitgesloten tenzij ≥ 50 bp bruto verwacht (C-021).
