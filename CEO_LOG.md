@@ -53,3 +53,4 @@
 03:57 Amsterdam — D-092 cyclus 4/8: N11 (GER40 Xetra-ORB) pre-screen PASS bij RT 0,72 bp, PREREG_FTMO_N11 geschreven; eerste levende kandidaat sinds D-091; N12/N13/N14 FAIL; geen nieuw besluit
 04:26 Amsterdam — D-092 cyclus 5/8 (team telt 7/8): N11 FAIL_T (TRIAL_COUNT 446), N12-N17 FAIL; geen levende kandidaat; D-093 bevriezing volgende cyclus bij geen PASS
 04:56 Amsterdam — D-093: zoekfase bevroren, resetregel aangescherpt (gate+t-toets), EINDSTAND_FTMO.md voor Sandro; N18 FAIL_T
+05:26 Amsterdam — D-093 door hele team opgepakt (onderhoud, watch 8/8, EINDSTAND op main); geen nieuws
