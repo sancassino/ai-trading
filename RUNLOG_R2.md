@@ -1642,3 +1642,27 @@ Year-split train bruto: 2021 **+3.43** / 2022 **−8.25** / 2023 **+9.21**. Frac
 
 **U2 next:** IDLE wacht Strateeg/CTO/Manager nieuw PREREG (NEXT_STEPS). Geen klonen van N78/VIX_TERM_VOV of prior dead sleeves.
 
+## Cyclus 12:52–13:00 CEST (2026-10-01) — D-090 IDLE + N78 bookkeeping fix (TRIAL blijft 456)
+
+**Branch:** `claude/uitvoerder2-r` — tip pre-cycle `b998253` (N78 FAIL_COST_GATE foutief als TRIAL 457). Ort-merge `origin/main` @ `77d78b1` (NEXT_STEPS **v78**; Manager 12:53 CEST). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `origin/main:NEXT_STEPS.md` **v78**: N78 FAIL_COST_GATE = **geen trial** (patroon ENERGY/IDX_SHORT/TSMOM_DIV); TRIAL_COUNT blijft **456**; U2 = bookkeeping fix + IDLE tot N75–N77 / CORN Lane-B PREREG; geen N78-klonen; L60 FX-med BARRED
+- Faraday `436fc9e` ~12:50: geen nieuws; N75–N77 OPEN pre-screen (VOORSTEL only, **geen** PREREG); N78 al gePRERE'd/gated
+- CTO `802b7b8` C-028 DELIVERED; S2 tip drought — geen nieuwe Lane-B PREREG voor U2
+- BESLUITEN-bron: D-094…D-100 + C-028 actief (geen nieuwe D-*)
+
+### Bookkeeping (Manager v78 bindend)
+
+1. **TRIAL_COUNT.md:** N78-logregel → **0** varianten; lopend totaal **456** (was 457).
+2. **TRIALS.csv** N78-rij: `fase=ongeldig`; beslissing gelabeld `ongeldig: FAIL_COST_GATE telt niet … TRIAL_COUNT blijft 456` (append-only; rij niet gewist; p leeg → buiten BH).
+3. **Dead += N78_VIX_TERM_VOV** (bevestigd; geen her-gate / geen vov-retune / geen US500-first).
+
+### Gates deze cyclus
+
+**Geen** nieuwe PREREG klaar (N75–N77 nog Strateeg pre-screen; CORN Lane-B ≠P1 / later). Skip her-gate dead set (N78 + L60 FX-med + FX shorts + ENERGY + IDX_SHORT + TSMOM_DIV + N35–N41 + GBPJPY + N72–N74 + …).
+
+**TRIAL_COUNT blijft 456** (erratum van 457). Geen formal trial.
+
+**U2 next:** IDLE wacht Strateeg Lane-B PASS→PREREG (N75–N77 of CORN) of CTO/Manager nieuw non-clone PREREG. Material via NEXT_STEPS absorb (Manager al v78); quiet naar Sandro.
+
