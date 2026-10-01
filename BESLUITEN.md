@@ -385,3 +385,6 @@ Besluit: geen ongeleid "model op alles", maar een model op **marktveranderingen/
 5. **Validatie:** walk-forward met purging + embargo (geen overlap), train ≤ 2023, validatie 2024, **reserve 2025+ onaangeroerd** tot expliciete vrijgave. Elke modelconfiguratie telt als trial (TRIALS.csv). Baseline = ongefilterde "altijd mee" en "altijd tegen". Eis: geldt alleen als het model de baselines slaat met dag-geclusterde t ≥ 2,0 netto én de EV-tool (`ftmo_ev`) positief is, ook onder kostenstress.
 6. **Ondergrens data:** ≥ 5 jaar M5 (2021-2026 valt daaronder voor sommige symbolen: dan gepoold, of uitsluiten).
 7. **Cadans:** elke 15 min een stap (data bouwen → baseline → model → validatie → vastleggen in `results/ceo/shock_*`). Auditor reproduceert onafhankelijk zodra er een kandidaat is.
+
+## D-104 — ORB-meta reserve-run: FAIL
+AUDIT_5 CONCORDANT → reserve 2025+ voor dit kandidaat vrijgegeven (D-084), één run. Resultaat: gefilterd +0,06 bp vs ongefilterd +1,20; toegevoegde waarde −2,6 bp (t −1,15); EV gefilterd ≈ €0. FAIL. Kandidaat gesloten; reserve voor ORB-meta verbruikt. Les: dag-t 1,76 in-sample was ruis; ML op publieke prijsfeatures houdt geen edge. Volgende: informatiebronnen buiten prijs (surprise/consensus, nieuwstekst) of structurele optiewaarde (D-101/102).

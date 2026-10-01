@@ -103,3 +103,4 @@
 01:14 Amsterdam — ORB-meta-labeling (trial 7): filter verbetert ORB in 2022/23/24; gepoold +5,0bp vs +2,6bp, toegevoegde waarde +3,2bp t=1,76; SR 1,29→1,67, overleving veel hoger bij gelijke schaal. PREREG_ORB_META_V1 bevroren; Auditor-reproductie, daarna eenmalige reserve-run
 23:26 UTC — AUDIT_5 binnen: code-structuur PASS, numeriek geblokkeerd (data op main gewezen); thr-fix vooraf vast. Wacht op her-run.
 23:42 UTC — ORB-meta drempel bevroren (thr=0.690 bp, mediaan OOS 2022-24) + eindmodel 5 seeds t/m 2024 (orb_meta_final.py). Reserve nog dicht; wacht op AUDIT_5 numeriek.
+23:57 UTC — D-104: ORB-meta reserve FAIL (filter averechts, EV≈0). Gesloten.
