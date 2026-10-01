@@ -698,3 +698,14 @@ git add RUNLOG_CTO.md VRAGEN_CTO.md results/cto/c016_board.json
 git commit -m "CTO: C-016 absorb NEXT_STEPS v62 D-093 freeze; Sandro still OPEN"
 git push origin grok/cto-1
 ```
+
+## C-017 — quiet hold + PING_EINDSTAND_DELIVERED — 2026-10-01 ~06:30 Europe/Amsterdam (CEST)
+
+**Branch:** `grok/cto-1`. D-093 freeze unchanged (main NEXT_STEPS v62 Watch 8/8; TRIAL_COUNT 447). No new trials/PREREGs; reserve 2025+ untouched.
+
+### PING_EINDSTAND_DELIVERED
+
+Sandro was notified once in Grok Bot 1:1 chat (~05:00 CEST, same morning as D-093): FTMO search frozen after 447 trials; do not buy €540 eval; choose (1) HistData/long M1 M-001, (2) other markets/prop rules, or (3) stop; details in `EINDSTAND_FTMO.md`; agents signup/spend nothing until he chooses.
+
+**Later CTO 30-min wakes: do not re-nag Sandro about EINDSTAND.** Quiet hold until Sandro/CEO reopens. Next CTO maintenance window ~09:30 CEST.
+
