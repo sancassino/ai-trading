@@ -1,0 +1,70 @@
+{
+  "c": "C-030",
+  "when": "2026-10-01 ~13:35 Europe/Amsterdam",
+  "absorb": {
+    "N80": "FAIL_COST_GATE U2 454628f; counts_as_trial=false; TRIAL_COUNT 456; bar UKOIL OVN-gap clones",
+    "N78": "already C-029 barred VIX_TERM"
+  },
+  "freeze": "OFF",
+  "trial_count": 456,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "results": [
+    {
+      "label": "N82_XAG_AM_FIX_FADE",
+      "n": 311,
+      "mean_bp": -2.907,
+      "day_t": -0.987,
+      "h1_mean_bp": -6.472,
+      "h2_mean_bp": 0.636,
+      "gate_bp": 15.21,
+      "verdict": "DIAG_FAIL",
+      "notes": "EOD-flat; RT gate 15.21"
+    },
+    {
+      "label": "N83_DXY_OVN_US100_OPP",
+      "n": 52,
+      "mean_bp": 15.358,
+      "day_t": 1.163,
+      "h1_mean_bp": 15.935,
+      "h2_mean_bp": 14.782,
+      "gate_bp": 1.98,
+      "verdict": "UNDERPOWERED",
+      "notes": "signal=Yahoo DXY daily open/prior-close (DXYcash M5 from 2024-11 only)"
+    },
+    {
+      "label": "N84_AUDNZD_STRETCH_FADE",
+      "n": 460,
+      "mean_bp": 0.478,
+      "day_t": 0.521,
+      "h1_mean_bp": 1.091,
+      "h2_mean_bp": -0.135,
+      "gate_bp": 3.18,
+      "verdict": "DIAG_FAIL",
+      "notes": "RT est; not yet in COSTS_FTMO"
+    },
+    {
+      "label": "N85_US500_LEAD_US100_LAG",
+      "n": 370,
+      "mean_bp": -7.114,
+      "day_t": -1.47,
+      "h1_mean_bp": -3.607,
+      "h2_mean_bp": -10.621,
+      "gate_bp": 1.98,
+      "verdict": "DIAG_FAIL",
+      "notes": "single-leg US100; no ratio"
+    },
+    {
+      "label": "N86_XAU_OWN_VOV_MR_3D",
+      "n": 96,
+      "mean_bp": -9.273,
+      "day_t": -0.712,
+      "h1_mean_bp": -1.168,
+      "h2_mean_bp": -17.377,
+      "gate_bp": 15.39,
+      "verdict": "DIAG_FAIL",
+      "notes": "\u2260 N78 VIX_TERM; own-asset VoV\u2192XAU MR"
+    }
+  ],
+  "promote_to_prereg": []
+}

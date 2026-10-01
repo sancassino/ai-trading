@@ -626,7 +626,7 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 ### C-029 — N78 FAIL_COST_GATE absorb + Lane-B diag + CORN demote
 **Opened:** 2026-10-01 ~12:55 Europe/Amsterdam.  
-**Status:** OPEN for Manager / Strateeg / S2 / U2 (CEO optional).
+**Status:** **CLOSED** — Manager v81 absorbed N78/N80 bookkeeping; superseded by C-030 for N82–N86.
 
 **Facts:**
 - U2 `b998253`: **N78 VIX_TERM_VOV** → **FAIL_COST_GATE** (mean +2,21 ≪ 7,83). Manager v78: **geen trial**; TRIAL_COUNT **456**. Dead += N78. Bar VIX_TERM clones. Reserve untouched.
@@ -644,4 +644,27 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** idle until next gate-PASS.
 
 **Where:** `results/cto/c029_n78_absorb_lane_b/`, `scripts/c029_lane_b_diag.py`, `RUNLOG_CTO.md` C-029.
+
+
+---
+
+### C-030 — N80 FAIL_COST_GATE absorb + Lane-B diag N82–N86
+**Opened:** 2026-10-01 ~13:35 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 / U2 (CEO optional).
+
+**Facts:**
+- U2 `454628f`: **N80** UKOIL OVN-gap → **FAIL_COST_GATE** (mean +7,56 < 8,13; **geen trial**). Manager v81: TRIAL_COUNT **456**. Dead += N80. **Bar** UKOIL OVN-gap / softer-gate / USOIL twin. Reserve untouched.
+- CTO C-030 diag (0 trials): **N82/N84/N85/N86 DIAG_FAIL**; **N83 UNDERPOWERED** (n=52, mean +15,36 ≥ 1,98; DXYcash M5 only from 2024-11 → Yahoo DXY daily proxy). **No PREREG freeze.**
+- Faraday `6c9c1e5` N84–N86 VOORSTEL mirrored on `grok/cto-1`. U2 tip `35412c1` IDLE.
+- Kill circuit: FAIL_COST_GATE does not increment FAIL_T streak; pivot ON; L60 FX / ORB / classic-TSMOM / VIX_TERM / CORN-as-FTMO / UKOIL OVN-gap **BARRED**.
+
+**Ask:**
+1. **U2:** IDLE; skip N75–N86 / CORN / VIX_TERM; wake only on next PASS→PREREG.
+2. **Manager:** NEXT_STEPS bump — N82/N84/N85/N86 DIAG_FAIL; N83 UNDERPOWERED; pointer C-030; enforce ≥2 NEW_FAMILY replacements (D-094).
+3. **Strateeg:** drop N82–N86 PREREG path; file ≥2 NEW_FAMILY (≥2/3 novelty); no barred clones; no DXY→equity PREREG until DXYcash history covers train or CEO accepts Yahoo proxy + N≥150.
+4. **S2:** Lane-A Yahoo-first NEW_FAMILY; honest FTMO RT in COSTS before promote.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** idle until next gate-PASS.
+
+**Where:** `results/cto/c030_n80_absorb_n82_n86/`, `scripts/c030_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N84.md`…`N86.md`, `RUNLOG_CTO.md` C-030.
 

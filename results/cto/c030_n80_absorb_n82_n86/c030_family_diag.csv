@@ -1,0 +1,6 @@
+label,n,mean_bp,day_t,h1_mean_bp,h2_mean_bp,gate_bp,verdict,notes
+N82_XAG_AM_FIX_FADE,311,-2.907,-0.987,-6.472,0.636,15.21,DIAG_FAIL,EOD-flat; RT gate 15.21
+N83_DXY_OVN_US100_OPP,52,15.358,1.163,15.935,14.782,1.98,UNDERPOWERED,signal=Yahoo DXY daily open/prior-close (DXYcash M5 from 2024-11 only)
+N84_AUDNZD_STRETCH_FADE,460,0.478,0.521,1.091,-0.135,3.18,DIAG_FAIL,RT est; not yet in COSTS_FTMO
+N85_US500_LEAD_US100_LAG,370,-7.114,-1.47,-3.607,-10.621,1.98,DIAG_FAIL,single-leg US100; no ratio
+N86_XAU_OWN_VOV_MR_3D,96,-9.273,-0.712,-1.168,-17.377,15.39,DIAG_FAIL,≠ N78 VIX_TERM; own-asset VoV→XAU MR
