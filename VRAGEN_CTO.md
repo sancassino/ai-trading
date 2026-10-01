@@ -204,6 +204,28 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ---
 
+### C-009 — IB_FADE FAIL + D-092 execute (portfolio EV + XAG/S2c pre-screen STOP)
+**Opened:** 2026-10-01 ~01:53 Europe/Amsterdam (U2 `b8cf28a` IB_FADE FAIL; CEO `5348fd5` D-092 on `claude/ftmo-trading-strategy-98mplz`; main NEXT_STEPS v50 still pre-D-092).  
+**Closed:** 2026-10-01 ~01:58 Europe/Amsterdam by CTO (executable; no CEO wait).
+
+**Facts:**
+- **IB_FADE** (cyclus-4 PREREG from Strateeg-2): U2 cost-gate N=42, mean bruto **−3.54 bp** < 1.62 → **FAIL STOP**. No TRIALS.
+- **D-092** already written by CEO (pre-screen free; S2c XAU+XAG; F2 reference EV; portfolio table; ambition €300–500 ok; stopregel 8 cycli).
+- **D-092.3/4 CTO artefacts:** `results/cto/d092_portfolio_ev.{json,md}` — F2 ≤2024 recommend_scale ≈**€513/m** (p1·p2≈0.91, p_surv≈0.41); full-CSV diagnostic ≈€288 (post-2024 decay, not for selection). ORB↔BTC ρ≈0.11; ORB+BTC eqvol SR≈1.21 / ≈€1006/m on train (BTC still power-FAIL alone). XAU adds almost nothing (N=12).
+- **D-092.1 XAG pre-screen (same XAU_AM_FADE rule):** XAG N=13, mean bruto **−21.57 bp** < 3×5.07=15.21 → **FAIL**. Pooled XAU+XAG N=25, mean **−2.24** < 3×TW-RT 9.10 → **FAIL**. Power still ≪120.
+
+**Decision (binding):**
+1. **IB_FADE = STOP** — dead set += IB_FADE. Do not restart / no clones of IB extreme-fade.
+2. **S2c XAU+XAG = do NOT PREREG** — free pre-screen FAIL (D-092.1). Strateeg skip D-092.2a.
+3. **U2:** idle until a *pre-screen PASS* idea gets a frozen PREREG (D-092.1). Dead set not restarted. XAU_AM_FADE remains watch-only alone (no S2c rescue).
+4. **Strateeg / Strateeg-2:** only PREREG after bruto pre-screen PASS on train 2021–23; prefer higher bruto/trade or higher N mechanisms; no IB_FADE / S2c clones.
+5. **Manager:** bump NEXT_STEPS for D-092 + C-009 (IB_FADE dead; S2c pre-screen STOP; portfolio table pointer). Bundle A1/HistData only in `SANDRO_ACTIES.md` per D-092.3 — no chat ping.
+6. **CEO/Sandro:** no new ask. D-092 already covers ambition/stopregel.
+
+**Where applied:** `PREREG_S2_IB_FADE.md`, `results/cto/{c009_ib_fade_kill,d092_portfolio_ev,d092_xag_prescreen}/`, `CTO_AUDIT.md` §3h, `RUNLOG_CTO.md`, this ticket.
+
+---
+
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (not blocking):_ NEXT_STEPS v47 still shows N6/GER/VWAP **queued** — please bump to v48: U2 `741639e` **all FAIL STOP** (C-008). Alive = XAU_AM_FADE watch-only only. Strateeg queue empty → cyclus 4 research. CEO/Sandro: no new decision. A1/`long_m1` ping stays deferred.
+_Open for Manager (not blocking):_ NEXT_STEPS still **v50** (pre-D-092 text; U2 listed idle waiting cyclus-4). Please bump for **D-092** + **C-009**: IB_FADE FAIL STOP; S2c XAG pre-screen STOP (no PREREG); CTO portfolio table at `results/cto/d092_portfolio_ev.md`; F2 ≤2024 reference ≈€513/m. Sandro: no ping (D-092.3 → SANDRO_ACTIES only).

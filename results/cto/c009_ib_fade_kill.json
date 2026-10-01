@@ -1,0 +1,35 @@
+{
+  "when": "2026-10-01 ~01:56 Europe/Amsterdam",
+  "ticket": "C-009",
+  "source_u2": "b8cf28a",
+  "prereg": "PREREG_S2_IB_FADE.md",
+  "verdict": "FAIL STOP",
+  "gate": {
+    "N": 42,
+    "mean_bruto": -3.5427,
+    "tw_rt": 0.54,
+    "gate": 1.62,
+    "gate_stress50": 2.43,
+    "outcome": "FAIL",
+    "by_sym": {
+      "US30cash": {
+        "N": 24,
+        "mean_bruto": -0.9044,
+        "rt": 0.45,
+        "gate_sym": 1.35
+      },
+      "US100cash": {
+        "N": 18,
+        "mean_bruto": -7.0605,
+        "rt": 0.66,
+        "gate_sym": 1.98
+      }
+    }
+  },
+  "dead_set_add": [
+    "IB_FADE"
+  ],
+  "reserve_2025_touched": false,
+  "trials_appended": false,
+  "note": "Cyclus-4 first PREREG already FAIL; D-092 now binding (CEO 5348fd5)"
+}

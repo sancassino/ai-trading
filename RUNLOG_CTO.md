@@ -368,3 +368,47 @@ git add results/cto/c007_kill_board.json results/cto/n6_ger40_close_prep/ result
 git commit -m "CTO: C-008 confirm C-007 kill (N6/GER/VWAP FAIL) + cyclus-4 research redirect"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~01:53 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened for decisions. No TRIALS.csv writes. No formal PREREG trial claimed.**
+
+### Team snapshot (since CTO tip `9f5c843` / ~01:23)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v48→v50** — escalatie D-091.6 **4/4**; C-008 bekrachtigd; D-092 verwacht (tekst nog pre-D-092) |
+| CEO `5348fd5` | **D-092** herzien plan (pre-screen; S2c; F2 ref EV; portfolio; €300–500 ok; stopregel 8 cycli) |
+| U2 `b8cf28a` | **IB_FADE FAIL STOP** (N=42, mean −3.54 bp) — cyclus-4 first PREREG dead |
+| Strateeg-2 `48249ad` | delivered `PREREG_S2_IB_FADE` (now FAIL) |
+| Strateeg `7d189ac` | no new PREREG since C-008 |
+
+Merged `origin/main` (v50) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **C-009:** confirm IB_FADE FAIL from U2; dead set += IB_FADE; artefacts `results/cto/c009_ib_fade_kill.json` + landed PREREG copy.
+2. **D-092.3 + D-092.4:** `scripts/d092_portfolio_ev.py` → `results/cto/d092_portfolio_ev.{json,md}`
+   - F2-ORB **≤2024** recommend_scale (trough DD): scale≈4.16 → **≈€513/m**, p1·p2≈0.91, p_survive≈0.41
+   - Full-CSV diagnostic (incl. post-2024): scale≈2.82 → **≈€288/m** (decay check only; not for selection)
+   - ρ(ORB,BTC)≈0.11, ρ(ORB,XAU)≈0.10, ρ(BTC,XAU)≈0.04
+   - ORB+BTC eqvol train ≈€1006/m / SR≈1.21 (BTC still power-FAIL alone); +50% BTC-cost stress still ≈€939/m
+   - XAU_AM_FADE alone ≈€7/m (N=12) — negligible in blends
+3. **D-092.1 XAG pre-screen** (same AM-fade rule): XAG **FAIL** (−21.6 bp < 15.2); pooled XAU+XAG **FAIL** (−2.2 < 9.1); N=25≪120 → **do not PREREG S2c**.
+4. Docs: `VRAGEN_CTO.md` C-009, `CTO_AUDIT.md` §3h, this log.
+
+### Remaining blockers
+
+1. Manager NEXT_STEPS still v50 — needs D-092 + C-009 bump (asked in VRAGEN open).
+2. Strateeg must pre-screen before any new PREREG; S2c path closed by screen.
+3. A1/`long_m1` only via `SANDRO_ACTIES.md` (D-092.3) — no Sandro ping.
+4. D-092 stopregel: 8 cycli without new gate-PASS → CEO freezes search (clock starts with D-092).
+
+### Git
+
+```
+git add PREREG_S2_IB_FADE.md scripts/d092_portfolio_ev.py results/cto/d092_portfolio_ev.json results/cto/d092_portfolio_ev.md results/cto/c009_ib_fade_kill.json results/cto/ib_fade_prep/ results/cto/d092_xag_prescreen/ VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: C-009 IB_FADE FAIL + D-092 portfolio EV + XAG/S2c pre-screen STOP"
+git push origin grok/cto-1
+```

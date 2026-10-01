@@ -1,0 +1,21 @@
+{
+  "label": "D092_1_PRESCREEN_XAG_AM_FADE_SAME_RULE",
+  "not_a_prereg": true,
+  "symbol": "XAGUSD",
+  "rule": "identical to XAU_AM_FADE (0.60\u00d7ATR, 11:30 entry, 14:00 flat, AMS wall)",
+  "train": "2021-01-01..2023-12-31",
+  "rt_bp": 5.07,
+  "N": 13,
+  "mean_bruto_bp": -21.568861047069202,
+  "gate_3x_rt": 15.21,
+  "verdict_xag_alone": "FAIL",
+  "xau_N": 12,
+  "xau_mean_bruto": 18.698748918106894,
+  "pooled_N": 25,
+  "pooled_mean_bruto": -2.240408263784677,
+  "pooled_tw_rt": 3.0347999999999997,
+  "pooled_gate_3x": 9.104399999999998,
+  "verdict_pooled_S2c_shape": "FAIL",
+  "power_note": "XAU N=12 + XAG N=13 = 25; S2c still needs N\u2265120 under parent PREREG if frozen",
+  "reserve_2025_touched": false
+}

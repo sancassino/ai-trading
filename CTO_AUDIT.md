@@ -229,7 +229,7 @@ No TRIALS append. D-091 cyclus **3/4** done without kostenpoort+power PASS.
 - ORB grid above: informational reassessment of published F2 series — **not** a PREREG trial; do not append TRIALS.  
 - S2 cost-gate scripts: `scripts/s2_{xau,ger40,usdjpy,btc,usoil}_cost_gate_train.py`.  
 - `recommend_scale` / `trades_bp_to_daily` landed (C-007).
-- Next: Strateeg cyclus-4 non-clones; optional ORB F2 multi-sleeve under `recommend_scale` (honest baseline ≪ ambition).
+- Next: D-092 pre-screen→PREREG only; S2c closed; Manager lands D-092 in NEXT_STEPS; optional Auditor on `engine/ftmo.py` + portfolio table.
 
 ---
 
@@ -237,7 +237,48 @@ No TRIALS append. D-091 cyclus **3/4** done without kostenpoort+power PASS.
 
 - PREREG: `PREREG_S3.md`, `PREREG_FTMO_A2.md`, `PREREG_FTMO_B1.md`, `PREREG_FTMO_C17.md`, `PREREG_S2_XAU_OVERLAP.md`, `PREREG_S2_GER40_OPEN.md`, `PREREG_S2_USDJPY_HANDOFF.md`  
 - Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,a2,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy,btc,usoil}_prep/`, `results/cto/s2b_btc_eth_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`, `results/cto/ambition_sr_skew_grid.json`  
-- Decisions: C-001…**C-008** (C-007 kill confirmed; research redirect cyclus 4)
+- Decisions: C-001…**C-009** (IB_FADE FAIL; D-092 portfolio + XAG/S2c pre-screen STOP)
 - Power-pad: `results/cto/xau_am_fade_power/`, `scripts/xau_am_fade_power_diag.py`
 - New PREREGs: `PREREG_FTMO_N5_GAP_FILL.md`, `PREREG_FTMO_N6_GER40_CLOSE.md`, `PREREG_S2_GER_US_LEAD.md`, `PREREG_S2_VWAP_PB.md`
 - Engine helpers: `trades_bp_to_daily`, `recommend_scale` in `engine/ftmo.py`
+
+
+## 3h. C-009 IB_FADE FAIL + D-092 portfolio / XAG pre-screen (2026-10-01 ~01:58 CEST)
+
+**Escalatie:** D-091.6 = **4/4**. CEO **D-092** (`5348fd5` on `claude/ftmo-trading-strategy-98mplz`).
+
+**IB_FADE (U2 `b8cf28a`):** N=42, mean bruto −3.54 bp < 1.62 → **FAIL STOP**. First cyclus-4 PREREG dead on arrival.
+
+**D-092.3 F2-ORB reference (recommend_scale, trough DD, n_paths=5000):**
+
+| Window | scale | p95 dip | max dip | p1·p2 | p_survive | €/m net EV | Role |
+|---|---:|---:|---:|---:|---:|---:|---|
+| 2021–2024 | 4.16 | 1.83% | 4.00% | 0.906 | 0.413 | **≈513** | **Binding reference** |
+| 2021–2023 train | 4.16 | — | 4.00% | 0.942 | 0.433 | ≈683 | Train align |
+| Full CSV→2026-09 | 2.82 | — | 4.00% | 0.726 | 0.665 | ≈288 | Diagnostic decay only (D-084: not for selection) |
+
+**D-092.4 weak-sleeve portfolio (train 2021–23; vol-match to ORB daily std):**
+
+| Blend | ann SR | €/m | p1·p2 | Note |
+|---|---:|---:|---:|---|
+| ORB alone | 1.06 | ≈683 | 0.94 | Reference edge |
+| S2-BTC alone | 0.74 | ≈500 | 0.85 | Power-FAIL N=132 |
+| XAU_AM_FADE alone | 0.66 | ≈7 | 0.07 | Watch-only N=12 |
+| ORB+BTC eqvol | 1.21 | ≈1006 | 0.98 | Diversification real (ρ≈0.11) |
+| ORB+BTC stress50 | 1.15 | ≈939 | 0.97 | BTC gross−1.5×cost |
+| ORB+BTC+XAU eqvol | 1.31 | ≈393 | 0.76 | XAU dilutes €/m |
+
+Artefacts: `results/cto/d092_portfolio_ev.{json,md}`, `scripts/d092_portfolio_ev.py`.
+
+**D-092.1 XAG / S2c pre-screen:** XAG mean −21.57 bp < 15.21; pooled XAU+XAG −2.24 < 9.10 → **FAIL — no S2c PREREG**. `results/cto/d092_xag_prescreen/`.
+
+**Kill / alive board (post C-009):**
+
+| Sleeve | Status |
+|---|---|
+| A4 / B1 / A5 / A2 / S2-* / N1–N6 / MIDDAY / S2b / GER_US / VWAP_PB / **IB_FADE** / **S2c-shape** | **DEAD** |
+| XAU_AM_FADE | **WATCH-ONLY** (alone; S2c rescue closed) |
+| S2-BTC | power-FAIL watch (portfolio diversifier only — no solo trial) |
+| ORB F2 | **reference** ≤2024 ≈€513/m (ambition band €300–500 ok per D-092.5) |
+
+**Ops:** pre-screen before PREREG is now mandatory (D-092.1). No Sandro ping.
