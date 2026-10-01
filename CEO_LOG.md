@@ -99,3 +99,4 @@
 00:14 Amsterdam — SHOCK model 2 (+marktcontext): corr 0,04-0,06 val+test, top1% bruto ~+13bp netto +4..+7 maar dag-t<1 (N 96-193); aanwijzing, geen bewijs; vervolg: vaste drempel, meer events, stabiliteit
 00:26 Amsterdam — SHOCK model 3 (stabiliteit 2022-24): gepoold netto -0,8bp t -0,65; 2024-aanwijzing herhaalt niet; geen kandidaat. Volgende: andere hypothese (scheduled events met surprise-proxy / lage-frequentie ML op dagdata 166 symb.)
 00:46 Amsterdam — Dagmodel 1 (44 symb., 13j walk-forward): bruto +1,5bp/week t 0,46 -> geen edge; kosten 28bp/pos/week (swap). ML op prijsfeatures = geen edge (4 trials). Volgende: ORB meta-labeling of informatiedata (COT/verrassing/sentiment)
+00:58 Amsterdam — COT-studie (CFTC, 8 markten 2015-24): H1 contrarian bruto +1,3bp t -0,3 netto -12bp; H2 trend negatief; geen edge. Totaal 6 ML/info-trials zonder edge. Volgende: ORB-meta-labeling (trade-data zoeken) of beta-sizing uitwerken
