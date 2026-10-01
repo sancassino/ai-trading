@@ -778,3 +778,46 @@ Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG
 | D-092.6 8-cyclus stop | Manager watch — U2 idle |
 
 Geen actionable taak. Quiet cycle.
+
+## Cyclus 02:51–02:56 CEST — D-090 FASE 3: LUNCH_OPEN cost-gate PASS → trial FAIL_T (NEXT_STEPS v53)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` (NEXT_STEPS **v53**).  
+**Gelezen:** BESLUITEN tip upbeat-dirac (→D-086) + FTMO-branch D-087…D-092; NEXT_STEPS v53 (U2 idle / watch 1/8); Strateeg-2 `ba54fe1` **D-092.1 PASS → PREREG_S2_LUNCH_OPEN** (na v53, deblokkeert U2).
+
+### U2-actie (niet idle)
+1. Land PREREG vóór resultaat: commit `4689b9e` (bron `grok/strateeg-2` @ `ba54fe1`).
+2. Formele cost-gate train 2021–23 (+50% RT-stress): script `scripts/s2_lunch_open_gate.py`.
+3. Formele trial §4: day-clustered netto t train+test + `ftmo_ev` diagnostiek — `scripts/s2_lunch_open_trial.py`.
+4. Reserve 2025→ **onaangeraakt**. Dead set niet herstart. Geen XAU power-pad.
+
+### Kostenpoort TRAIN 2021–2023
+
+| Sleeve | N | mean bruto | TW-RT | gate 3× | gate +50% | Uitkomst |
+|--------|---|------------|-------|---------|-----------|----------|
+| S2 LUNCH_OPEN (US30+US100) | 233 | **+4.72 bp** | 0.54 bp | 1.62 bp | 2.43 bp | **PASS** |
+
+By-symbol: US30 N=134 mean +5.74 (gate 1.35); US100 N=99 mean +3.33 (gate 1.98).  
+Exit mix: stop 129 / target 32 / time 72. Sides 112L/121S. Median bruto **−13.17** (scheef). Date span 2021-01-27…2023-12-22.
+
+### Formele trial (PREREG §4) — FAIL_T
+
+| Window | N | mean netto | t day-clust | Beslis |
+|--------|---|------------|-------------|--------|
+| train 2021–23 | 233 | +4.18 bp | **1.14** | < 2.0 |
+| test 2024 | 100 | +0.17 bp | **0.05** | < 2.0 |
+
+cost_ok train (RT/bruto 0.11 < 0.50) ✔; skew_day train +2.43 ✔.  
+`ftmo_ev` train-only (0.75% risk, diagnostiek na t-fail): p_pass_2≈0.96, net_ev/m≈€563 — **niet selectie** (t faalt; test decay; median negatief).  
+**Uitkomst: FAIL_T STOP.** Geen shortlist. **TRIAL_COUNT 444→445.** TRIALS append-only.
+
+### Dead set (nu + LUNCH_OPEN)
+A4 · B1 · A5 · A2 · S2-* · N1–N6 · MIDDAY_VWAP · S2b · GER_US_LEAD · VWAP_PB · IB_FADE · S2c · **LUNCH_OPEN**.  
+XAU_AM_FADE blijft watch-only (geen power-pad). Pre-screen FAILs (PLM/NR7/Failed-OR/XAU-N7/N8) niet herhalen.
+
+### Next / escalatie
+1. U2 idle tot volgende D-092.1 pre-screened non-clone PREREG (≠ dead set / ≠ herhaalde FAIL-mechanismen).
+2. D-091.6 reeds 4/4; D-092.6 watch blijft Manager-teller (deze cyclus = echte gate-PASS op kosten, maar formal FAIL_T — Manager beslist of watch reset).
+3. Geen Sandro-ping (D-091.6 / D-092.6).
+
+Artifacts: `results/R2/lunch_open_prep/`. Vragen → Manager; eindbesluit → CTO.  
+**MATERIAL for Manager/CTO** (first cost-gate PASS since XAU_AM_FADE; formal FAIL_T; TRIAL_COUNT 445).

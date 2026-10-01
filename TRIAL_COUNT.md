@@ -66,3 +66,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | A4/PREREG_FTMO_C17 amend 5fc3fb9: C17 FOMC op FTMO-index-CFD (kostenpoort STOP, 1 variant) | 1 | 443 |
 | 2026-09-30 | B1/PREREG_FTMO_B1: C05 TSMOM-mix FX6 (kostenpoort STOP, signed-mean poort, 1 variant) | 1 | 444 |
 | 2026-09-30 | A2/PREREG_FTMO_A2: US41 SIP-ORB earnings (kostenpoort STOP, mean-poort; **geen** TRIAL_COUNT++ per PREREG §3) | 0 | 444 |
+| 2026-10-01 | S2/PREREG_S2_LUNCH_OPEN: lunch open-anchor fade US30/US100 (cost-gate PASS + formal trial FAIL_T, 1 variant) | 1 | 445 |
