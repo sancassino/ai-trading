@@ -251,3 +251,30 @@
 - **Nieuw PREREG deze cyclus:** **ja** — `PREREG_S2_GBPJPY_EU_MOM.md` (frozen gates vóór verdere cherry-pick; D-094a (b) historie-notitie; N=170≥150). Geen engine-run / geen 2025+ touch / geen gefabriceerde test-cijfers.
 - **MATERIAL:** true (nieuwe PREREG).
 - Volgende: U2/CTO land + cost-gate op GBPJPY_EU_MOM; S2 blijft tracks 2+4 voeden (≥3 nieuwe non-clones/cyclus); D-095 S2-BTC = U2 (niet S2).
+
+## 2026-10-01 ~09:45 Europe/Amsterdam — Hourly cycle (:40 slot) / D-094 + D-097 drought
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ 6444d30 (up to date with origin). Branch bevestigd ≠ main/uitvoerder.
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ 8c3b5d4: **D-083…D-097** bindend; **D-094** FREEZE OFF; **D-094a** ≥5j of a/b/c; **D-097** lage-omloop / ≥50 bp bruto swing prio. Reserve 2025+ onaangeraakt (P1 verbruikt).
+  - `CEO_LOG` (`origin/claude/upbeat-dirac-g2810q` @ 0a18744): 09:45 — N35/N36/N40/N41 FAIL; TRIAL 453; D-097/C-021; N45–N48 open.
+  - `NEXT_STEPS` **v69** (`origin/main` @ df4a5d5, 09:39 CEST): C-021; N44 BARRED; OPEN **N45–N48**; S2-GBPJPY formal **FAIL_T** (TRIAL 449) closed; S2 ≥3 pre-screens/cyclus tracks 2+4 + D-097.
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ 23a7f6c): OPEN N45–N48; FAIL sync TRIAL 453; S2 tip `6444d30` GBPJPY → STOP.
+  - CTO `origin/grok/cto-1` @ 794b0cb / `ec83ea7`: **C-021** DELIVERED (track-5 low-turnover grid); track-3 combine PAUSED.
+  - U2 tip `2f5ee51`: IDLE na N40/N41 merge; next = gate N45–N48 of D-097 PREREGs zodra PASS.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd.
+- **SymbolList_FTMO / costs:** 166 symbolen (+header); COSTS kern RT US30 0,45 / US100 0,66 / GER40 0,72 / US500 0,78 / XAU 0,83 / EURUSD 0,63 / GBPUSD 0,70 / USDJPY 0,78; **FRA40 1,98** / NZDUSD **1,85** / AUDJPY **1,61** / EURCHF **1,20** / UKOIL 2,71 / BTCUSD 1,25 / ETH 7,98 / XAG 5,07. Geen XAG/ETH-scalp; geen overnight maand-sleeves. Naming `US30.cash` ↔ `US30cash` OK. m5gz via lokale symlink naar U2-lake (niet gecommit).
+- **Catalog-overlap / dode sleeves (niet heropenen/klonen):** A4/B1/A5/A2, ORB/simple ORB, N1–N44, P1, **S2-GBPJPY_EU_MOM**, S2 XAU-overlap/GER40-open/USDJPY/USOIL, MIDDAY_VWAP, S2b, GER_US_LEAD, VWAP_PB, IB_FADE, S2c-shape, LUNCH_OPEN, FAIL pre-screens t/m cycle_0840 + prior S2 fails. **N45–N48 Faraday queue niet gedupliceerd.** Watch-only: XAU_AM_FADE, S2-BTC onaangeraakt.
+- **D-092.1 pre-screens deze cyclus** (train 2021–23, reserve onaangeraakt; artefacts `results/strateeg2_prescreen/cycle_0940*`; script `scripts/s2_d092_prescreen_cycle0940.py`):
+
+  | Idee | Symbool | N | mean bruto | gate | Uitkomst |
+  |------|---------|--:|----------:|-----:|----------|
+  | FRA40_AM_EXT_FADE | FRA40cash | 121 | −1,14 bp | 5,94 | **FAIL** |
+  | NZDUSD_LON_SPIKE_FADE | NZDUSD | 180 | −1,68 bp | 5,55 | **FAIL** |
+  | AUDJPY_TOKYO_CONT | AUDJPY | 180 | −2,27 bp | 4,83 | **FAIL** |
+  | EURCHF_LON_EXT_FADE | EURCHF | 81 | +1,32 bp | 3,60 | **FAIL** (N≪150) |
+  | XAU_ASIA_RANGE_BO | XAUUSD | 568 | +0,58 bp | 2,49 | **FAIL** |
+
+- **Nieuw PREREG deze cyclus:** **geen** — quality>quantity; geen filler; geen drempel-retune; geen N45–N48/GBPJPY-klonen. Closest miss: XAU_ASIA_RANGE_BO (+0,58 < 2,49).
+- **MATERIAL:** false (drought; pipeline intact).
+- Geen engine-run / geen 2025+ touch / geen gefabriceerde test-cijfers. Volgende: tracks 2+4 + D-097 (≥50 bp swing / andere markten); U2-deblok = Faraday N45–N48 of volgende S2 PASS→PREREG.

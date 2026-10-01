@@ -1,0 +1,57 @@
+[
+  {
+    "idea": "FRA40_AM_EXT_FADE",
+    "n": 121,
+    "mean_bruto": -1.1446,
+    "median": -10.3166,
+    "gate": 5.94,
+    "rt": 1.98,
+    "outcome": "FAIL",
+    "stop_share": 0.405,
+    "skew": 0.7064
+  },
+  {
+    "idea": "NZDUSD_LON_SPIKE_FADE",
+    "n": 180,
+    "mean_bruto": -1.681,
+    "median": -8.7697,
+    "gate": 5.55,
+    "rt": 1.85,
+    "outcome": "FAIL",
+    "stop_share": 0.65,
+    "skew": 1.2822
+  },
+  {
+    "idea": "AUDJPY_TOKYO_CONT",
+    "n": 180,
+    "mean_bruto": -2.2667,
+    "median": -5.012,
+    "gate": 4.83,
+    "rt": 1.61,
+    "outcome": "FAIL",
+    "stop_share": 0.1556,
+    "skew": 0.5248
+  },
+  {
+    "idea": "EURCHF_LON_EXT_FADE",
+    "n": 81,
+    "mean_bruto": 1.3187,
+    "median": -4.1418,
+    "gate": 3.6,
+    "rt": 1.2,
+    "outcome": "FAIL",
+    "stop_share": 0.3951,
+    "skew": -0.5452
+  },
+  {
+    "idea": "XAU_ASIA_RANGE_BO",
+    "n": 568,
+    "mean_bruto": 0.5802,
+    "median": 3.6285,
+    "gate": 2.49,
+    "rt": 0.83,
+    "outcome": "FAIL",
+    "stop_share": 0.3768,
+    "skew": -0.0921
+  }
+]
