@@ -61,3 +61,10 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | R2/CAT2: C51 (1), C52 (2 varianten), C53 (1), C54 (basis + qa = 2; eerdere 2 rijen ongeldig door future-model-fout, tellen niet) | 6 | 427 |
 | 2026-09-30 | R3/CAT3: C04, C16, C29, C33, C43, C44, C45, C55 (1 variant elk; vehikelrapporten cfd_retail zonder trial) | 8 | 435 |
 | 2026-09-30 | R4/CAT4: C57, C58, C59, C60, C61 (v1.2-diversifiers; screen/frontier/decompositie zonder trial) | 5 | 440 |
+| 2026-09-30 | R5/CAT5: S11 cross-market-replicatie C02 (één familie, 12 markten; regionale C52 informatief zonder trial) | 1 | 441 |
+| 2026-09-30 | R7/CAT7: C67 landenrotatie (C66 VRP-proxy = evidentie zonder trial; C65/C68/PutWrite wachten op data) | 1 | 442 |
+| 2026-09-30 | A4/PREREG_FTMO_C17 amend 5fc3fb9: C17 FOMC op FTMO-index-CFD (kostenpoort STOP, 1 variant) | 1 | 443 |
+| 2026-09-30 | B1/PREREG_FTMO_B1: C05 TSMOM-mix FX6 (kostenpoort STOP, signed-mean poort, 1 variant) | 1 | 444 |
+| 2026-09-30 | A2/PREREG_FTMO_A2: US41 SIP-ORB earnings (kostenpoort STOP, mean-poort; **geen** TRIAL_COUNT++ per PREREG §3) | 0 | 444 |
+| 2026-10-01 | S2/PREREG_S2_LUNCH_OPEN: lunch open-anchor fade US30/US100 (cost-gate PASS + formal trial FAIL_T, 1 variant) | 1 | 445 |
+| 2026-10-01 | N11/PREREG_FTMO_N11: GER40 XETRA ORB (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 446 |

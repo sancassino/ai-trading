@@ -1,7 +1,7 @@
 # VOORSTEL_PRESCREEN_N11 — GER40 XETRA Opening Range Breakout (ORB)
 
-**Status:** Pre-screen aanvraag (D-092.1) — 2026-10-01 03:35 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen PREREG vóór screen-PASS.**  
+**Status:** **GESLOTEN** — C-012 PASS → PREREG_FTMO_N11 → U2 FAIL_T (`e6b2395`); TRIAL_COUNT 446. Dead set.  
+**Auteur:** Strateeg (Claude). Branch `claude/trusting-faraday-34tsmg`.  
 **Instrument:** `GER40cash` (RT 1,40 bp → drempel 4,20 bp).  
 **Grond:** F2-ORB referentie (≤2024 ≈€513/m) bewijst dat ORB-mechanisme voor index-futures werkt. GER40 heeft identieke institutionele ORB-dynamiek via XETRA-veiling bij 09:00 CET. Onderscheidend van N9 (fade ≠ breakout), N6 (ochtend ≠ close), S2-GER40-open (momentum ≠ ORB).
 

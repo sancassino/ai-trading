@@ -1,7 +1,7 @@
 # VOORSTEL_PRESCREEN_N13 — GER40 US-Open Sync
 
-**Status:** Pre-screen aanvraag (D-092.1) — 2026-10-01 04:00 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen PREREG vóór screen-PASS.**  
+**Status:** **geen PREREG** — D-092.1 FAIL (U2 `d4cefff`; mean −3,34 < 2,16 bp; N=92≪150).  
+**Auteur:** Strateeg (Claude). Branch `claude/trusting-faraday-34tsmg`.  
 **Instrument:** `GER40cash` (RT 0,72 bp → drempel 2,16 bp).  
 **Grond:** GER40 beweegt sterk mee met de eerste minuten van de US-cashsessie (15:30 CET). De eerste M5-bar van US500 geeft een directe sync-impuls voor GER40: ETF-arbs, futures-hedgers en correlation-traders drijven GER40 mee. Cross-asset momentum 15:30–17:00 CET is een onderscheidend mechanisme — nog niet getest in deze combinatie.
 

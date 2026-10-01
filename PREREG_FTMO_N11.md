@@ -1,12 +1,13 @@
 # PREREG_FTMO_N11 — GER40 XETRA Opening Range Breakout (ORB)
 
-**Status:** PREREG bevroren — wacht U2 cost-gate.  
+**Status:** **FORMEEL GESTOPT** — cost-gate PASS → stress FAIL → formal **FAIL_T** (U2 `e6b2395` / CTO C-013 `64723ff`).  
 **Auteur:** Strateeg (Claude), branch `claude/trusting-faraday-34tsmg`.  
 **Datum bevriezing:** 2026-10-01 04:00 Europe/Amsterdam.  
+**Uitkomst:** train N=475; mean bruto +2,74 bp ≥ gate 2,16 (**PASS**); stress 3,24 (**FAIL**); day-clust t netto 0,915 / NW L=5 0,855 ≪ 2,0 → **FAIL_T**. TRIAL_COUNT **446**. Test 2024 + reserve 2025+ onaangeraakt.  
 **Instrument:** `GER40cash`.  
 **Kosten RT (COSTS_FTMO.csv):** 0,72 bp → D-092.1 drempel 3 × 0,72 = **2,16 bp**.  
 **D-092.1 pre-screen:** PASS (mean +3,33 bp > gate 2,16 bp; N=496; CTO C-012 `cdabfe8`).  
-**Caveat:** median −14,0 bp (skew-fragile; formele dag-geclusterd-t kan FAIL_T geven).
+**Caveat bevestigd:** median ≈ −14 bp / stop-share ≈ 0,52 — skew-fragile; geen herstart zonder CEO.
 
 ---
 
@@ -72,7 +73,7 @@ Bij XETRA-open (09:00 CET) stelt het veilingproces een openingsprijs op basis va
 4. **Test (2024):** alleen na CEO-vrijgave; nu ONAANGERAAKT.
 
 **Let op:** regel is identiek aan §2 hierboven — geen parameterwijziging na dit PREREG.  
-**TRIAL_COUNT:** append TRIALS.csv bij stap 3. Huidige stand: 445.  
+**TRIAL_COUNT:** append TRIALS.csv bij stap 3 gedaan → **446** (FAIL_T).  
 **Reserve 2025+ onaangeraakt.**
 
 ---

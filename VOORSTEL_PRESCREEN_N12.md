@@ -1,7 +1,7 @@
 # VOORSTEL_PRESCREEN_N12 — XAU NY-Open Continuation
 
-**Status:** Pre-screen aanvraag (D-092.1) — 2026-10-01 03:35 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen PREREG vóór screen-PASS.**  
+**Status:** **geen PREREG** — D-092.1 FAIL (C-012 `cdabfe8`; mean +0,59 < 2,49 bp; N=303).  
+**Auteur:** Strateeg (Claude). Branch `claude/trusting-faraday-34tsmg`.  
 **Instrument:** `XAUUSDcash` (RT 0,83 bp → drempel 2,49 bp).  
 **Grond:** XAU heeft bewezen intradag-bruto-edge (XAU_AM_FADE +18,70 bp). NY-open (15:30 CET / 09:30 ET) activeert COMEX-futures en US-macro traders — sterkste liquiditeitsimpuls voor XAU na London. De pre-NY handoff-move (14:30–15:30 CET) signaleert institutionele richting; continuation na NY-open heeft andere dynamiek dan alle eerder geteste XAU-vensters.
 

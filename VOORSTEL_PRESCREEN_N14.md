@@ -1,7 +1,7 @@
 # VOORSTEL_PRESCREEN_N14 — US100 NY-Open Pre-Market Momentum
 
-**Status:** Pre-screen aanvraag (D-092.1) — 2026-10-01 04:00 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen PREREG vóór screen-PASS.**  
+**Status:** **geen PREREG** — D-092.1 FAIL (U2 `d4cefff`; mean −5,05 < 1,80 bp; N=183).  
+**Auteur:** Strateeg (Claude). Branch `claude/trusting-faraday-34tsmg`.  
 **Instrument:** `US100cash` (RT 0,60 bp → drempel 1,80 bp).  
 **Grond:** US100 (NASDAQ) heeft de sterkste pre-market drift van alle indices. De 14:30–15:30 CET pre-market-window weerspiegelt institutionele orderketen (futures, dark-pool pre-open). Als de pre-market duidelijk richting heeft, zet die richting zich voort in de eerste 90 minuten van de cashsessie. Onderscheidend van LUNCH_OPEN (fade na 90-min open) en N3 (close-drive 14:30–15:55 ET).
 
