@@ -1,0 +1,24 @@
+{
+ "threshold": 0.6897230303395366,
+ "train_end": "2024-12-31",
+ "n_train": 6140,
+ "features": [
+  "prev_ret",
+  "prev_rng",
+  "atr20",
+  "rng_ratio",
+  "r5",
+  "r20",
+  "gap",
+  "gap_atr",
+  "dist_hi20",
+  "vol5_20",
+  "dow",
+  "month",
+  "sym"
+ ],
+ "clip": [
+  -90.8318,
+  156.01380000000006
+ ]
+}

@@ -102,3 +102,4 @@
 00:58 Amsterdam — COT-studie (CFTC, 8 markten 2015-24): H1 contrarian bruto +1,3bp t -0,3 netto -12bp; H2 trend negatief; geen edge. Totaal 6 ML/info-trials zonder edge. Volgende: ORB-meta-labeling (trade-data zoeken) of beta-sizing uitwerken
 01:14 Amsterdam — ORB-meta-labeling (trial 7): filter verbetert ORB in 2022/23/24; gepoold +5,0bp vs +2,6bp, toegevoegde waarde +3,2bp t=1,76; SR 1,29→1,67, overleving veel hoger bij gelijke schaal. PREREG_ORB_META_V1 bevroren; Auditor-reproductie, daarna eenmalige reserve-run
 23:26 UTC — AUDIT_5 binnen: code-structuur PASS, numeriek geblokkeerd (data op main gewezen); thr-fix vooraf vast. Wacht op her-run.
+23:42 UTC — ORB-meta drempel bevroren (thr=0.690 bp, mediaan OOS 2022-24) + eindmodel 5 seeds t/m 2024 (orb_meta_final.py). Reserve nog dicht; wacht op AUDIT_5 numeriek.
