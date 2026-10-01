@@ -50,3 +50,4 @@
 04:45 Amsterdam (01-10) — N18 US500 OVN-Gap PREREG aangemeld (N=279, mean +3.52 bp; caveat 2023 mean −12.17); U2 cost-gate lopend; stopregel cyclus 8/8 — D-093 freeze wacht op N18 uitkomst
 05:15 Amsterdam (01-10) — **MIJLPAAL D-093: zoekfase bevroren.** N18 US500 OVN-Gap FAIL_T (447). EINDSTAND: 0 sleeves gevalideerd. EINDSTAND_FTMO.md geschreven. Auditor: eindcontrole TRIALS.csv. Team: onderhoud-modus 1×/4u. Sandro-melding volgt in SANDRO_ACTIES.
 05:45 Amsterdam (01-10) — D-093 bevriezing bevestigd door alle agents; team idle onderhoud-modus; wacht op Sandro-besluit (A-01 data / heropening / stoppen)
+06:15 Amsterdam (01-10) — geen nieuws; team idle D-093; wacht Sandro
