@@ -1,4 +1,4 @@
-# NEXT_STEPS v60 — Manager, 2026-10-01 04:43 CEST (C-014 N18 PASS_may_PREREG + N19 FAIL; prio U2 N18; watch 0/8) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v61 — Manager, 2026-10-01 04:54 CEST (N18 FAIL_T; dead += N18; Watch 0/8; U2 IDLE; TRIAL 447) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -16,67 +16,66 @@ Bindend: D-083…**D-092** (CEO; D-091 2026-10-01 00:05; D-092 na 4/4). Alleen S
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
 
-### Cyclus-uitslag (Manager, 2026-10-01 04:43 CEST — C-014 N18 PASS_may_PREREG + N19 FAIL; watch 0/8; U2 → N18)
+### Cyclus-uitslag (Manager, 2026-10-01 04:54 CEST — N18 FAIL_T; Watch 0/8; U2 IDLE)
 
-**Geen nieuwe D-*** na D-092 (ongewijzigd t.o.v. v59). BESLUITEN tip ongewijzigd (D-086 / D-092). CEO_LOG `2807e83` ~04:45 CEST noteert stopregel **8/8** + "D-093 freeze wacht op N18" — **D-093 nog niet uitgevaardigd**. Manager+CTO houden **Watch 0/8** (D-092.6 cost-gate PASS reset; C-013 AFFIRM) tot CEO D-* overrulet.
+**Geen nieuwe D-*** na D-092 (ongewijzigd t.o.v. v60). BESLUITEN tip ongewijzigd (D-086 / D-092). CEO_LOG `2807e83` noteerde 8/8 + D-093-wacht op N18 — **D-093 nog niet uitgevaardigd**. N18 formeel dood → Watch reset op **cost-gate PASS** (D-092.6 CTO-affirm).
 
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17**. Geen overnight maand-sleeves. Ops-approvals → **CTO** (niet Sandro).
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18**. Geen overnight maand-sleeves. Ops-approvals → **CTO** (niet Sandro).
 
 **Pre-screen FAIL / no-PREREG (D-092.1 — niet herhalen zonder nieuw mechanisme):** index PLM / NR7→ORB / Failed-OR / GS01-pooled; **XAU N7+N8**; **N10**; **N9** underpowered; **N12**; **N13 GER40 US-Open Sync** + **N14 US100 NY-Open PM** (U2 `d4cefff`); **N15 UK100 London ORB** + **N16 JP225 Tokyo ORB** + **N17 US30 NY ORB** (+ N17b/c) (CTO `64723ff`); **N19 XAU OVN Gap Fill** (CTO `aaaecad`).
 
 **Screen KLAAR** (`a383cb5`): top RT = US100/US30/GER40/US500/XAU. **GER40 RT bindend:** 0.72 bp → gate **2.16** (C-012). **US500 RT:** 0.78 bp → gate **2.34** (C-014 N18).
 
-**C-014 — N18 PASS_may_PREREG + N19 FAIL** (CTO `aaaecad` ~04:27 CEST; board `results/cto/c014_board.json`; Strateeg VOORSTEL `50561ab`):
+**N18 US500 OVN Gap Cont — FAIL_T STOP** (U2 D-090 ~04:53 CEST; tip `d1984ed` / PREREG land `c715e06`; CTO PREREG `aaaecad` / C-014):
+- Cost-gate **PASS**: +3.52 ≥ 2.34 (N=279)
+- Stress **PASS**: +3.52 ≥ 3.51
+- Formal **FAIL_T**: day-clust t **0.64** / NW-L5 **0.67** (< 2.0)
+- Year-split caveat: 2021 +12.97 / 2022 +6.66 / **2023 −12.17**
+- TRIAL_COUNT **446→447**. Dead set += **N18**. Per D-092.6: cost-gate PASS → **Watch 0/8**.
 
-| Idee | N | mean bruto | median | gate | Uitkomst |
-|------|---|------------|--------|------|----------|
-| N18 US500 OVN Gap Cont | 279 | +3.52 bp | +2.77 | 2.34 | **PASS_may_PREREG** |
-| N19 XAU OVN Gap Fill | 228 | +2.03 bp | +2.42 | 2.49 | **FAIL** |
+**C-014 pre-screen (ongewijzigd context):** N18 was PASS_may_PREREG; N19 FAIL no-PREREG. Board `results/cto/c014_board.json`.
 
-Train 2021–23; geen TRIALS; reserve 2025+ onaangeroerd. N18 year-split caveat: 2021 +12.97 / 2022 +6.66 / **2023 −12.17**. Stress-prescreen barely ≥3.51. **PREREG_FTMO_N18.md** bevroren op `grok/cto-1` (`aaaecad`) — U2 landt + cost-gate. Dead/FAIL += **N19**. Non-ORB; ≠ N5 gap-fade / ≠ ORB-familie.
-
-**C-013 N15–N17 FAIL / N11 FAIL_T / N13/N14 FAIL** — ongewijzigd t.o.v. v59. U2 tip `70696df` ~04:26 CEST (idle wait v59); TRIAL_COUNT **446**. **C-012** GER40 RT-fix ongewijzigd. **LUNCH_OPEN** FAIL_T / eerdere C-* — ongewijzigd. Simple ORB clones remain **barred**.
+**C-013 N15–N17 FAIL / N11 FAIL_T / N13/N14 FAIL** — ongewijzigd. **C-012** GER40 RT-fix ongewijzigd. **LUNCH_OPEN** FAIL_T — ongewijzigd. Simple ORB clones remain **barred**.
 
 **Eerdere uitslagen (ongewijzigd):** N1–N5 / MIDDAY / S2b = STOP. **XAU_AM_FADE** = watch-only. **S2-BTC** = power-FAIL watch only.
 
 **D-092 context:**
-- **D-092.1:** pre-screen vóór PREREG; N≥150. N13–N17 + N19 FAIL. N18 = PASS → PREREG frozen.
+- **D-092.1:** pre-screen vóór PREREG; N≥150. N13–N17 + N19 FAIL. N18 ran full path → FAIL_T.
 - **D-092.3/4/5:** F2 ≤2024 ≈€513/m — ongewijzigd.
-- **D-092.6 (CTO AFFIRM C-013):** **cost-gate PASS** resets watch → **0/8**; stress FAIL / FAIL_T blokkeren reset niet. Watch blijft **0/8** (N11 reset). CEO_LOG telt 8/8 + D-093-wacht — divergentie genoteerd; Manager volgt CTO tot CEO D-* overrulet.
+- **D-092.6 (CTO AFFIRM):** **cost-gate PASS** resets watch → **0/8**; stress FAIL / FAIL_T blokkeren reset niet. Watch **0/8** (N18 cost-gate PASS). CEO_LOG 8/8 divergentie genoteerd; Manager volgt CTO tot CEO D-* overrulet.
 
 **GS01:** test alleen 2024; geen post-hoc GER40-only.
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | **N18 cost-gate → stress → formal t** (`PREREG_FTMO_N18.md` op `grok/cto-1` `aaaecad`; land → run) | Uitvoerder-2 | **OPEN — deblokkeert pad** |
-| — | **Cyclus-4+:** volgende non-clone daily-flat PREREGs **alleen na D-092.1 PASS** + **N≥150** (≠ dead/FAIL incl. N11–N17/N19/LUNCH_OPEN; ≠ N9; **geen simple ORB-klonen**) | Strateeg / Strateeg-2 | OPEN na N18-pad |
-| — | **D-092.6 8-cyclus stop** | Manager / CEO | **Watch 0/8** (CTO-affirm; CEO_LOG 8/8 divergent) |
+| **1** | **Volgende non-clone daily-flat** — **alleen na D-092.1 PASS** + **N≥150** (≠ dead/FAIL incl. N11–N19/LUNCH_OPEN; ≠ N9; **geen simple ORB-klonen**) | Strateeg / Strateeg-2 | **OPEN — deblokkeert U2** |
+| — | **D-092.6 8-cyclus stop** | Manager / CEO | **Watch 0/8** (N18 cost-gate PASS reset) |
 | — | **F2-ORB referentie** | CTO | ≤2024 ≈€513/m (D-092.3) |
 | — | **HistData / M-001** | Sandro (via `SANDRO_ACTIES.md`) | Gebundeld, niet-blokkerend; geen chat-ping |
 | — | **XAU_AM_FADE** | — | Watch-only — **geen power-pad**; S2c closed |
-| — | **Uitvoerder-2** | — | Tip `70696df` ~04:26 CEST — **nu: land N18 + cost-gate** |
-| — | Dead set + FAIL-pre-screens (incl. **N11**/N12/N13–N17/**N19**) | — | Dood / niet herhalen — **niet heropenen** |
+| — | **Uitvoerder-2** | — | Tip `d1984ed` ~04:53 CEST — **IDLE** tot next D-092.1-PASS non-clone N≥150 |
+| — | Dead set + FAIL-pre-screens (incl. **N11**/N12/N13–N17/**N18**/N19) | — | Dood / niet herhalen — **niet heropenen** |
 
 **Escalatie (D-091.6):** **4/4** → **D-092** actief. Geen Sandro-ask. Geen D-093 tot CEO BESLUITEN.
 
 ### Acties (bindend, D-087; rollen D-090; herzien D-092)
 
-1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — prio N18 (`aaaecad`):**
-   - Land `PREREG_FTMO_N18.md` van `origin/grok/cto-1` → cost-gate (gate **2.34**) → stress (**3.51**) → formal day-clust t≥2.0. TRIAL_COUNT start **446**; append alleen bij formal stap.
-   - N11 = **FAIL_T STOP**. N13–N17 / N19 = **NO_PREREG**. Caveat N18 year-split 2023 −12.17 — eerlijk rapporteren.
-   - XAU_AM_FADE = watch-only. Dead set niet herstarten. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t. Reserve 2025+ onaangeroerd.
+1. **Uitvoerder-2 (Grok, branch `claude/uitvoerder2-r`) — IDLE:**
+   - N18 = **FAIL_T STOP** (cost PASS / stress PASS / t 0.64). TRIAL_COUNT **447**. Tip `d1984ed`.
+   - N11 = **FAIL_T STOP**. N13–N17 / N19 = **NO_PREREG**. Dead set niet herstarten.
+   - Wacht op volgende D-092.1-PASS non-clone PREREG N≥150. XAU_AM_FADE = watch-only. PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t. Reserve 2025+ onaangeroerd.
 
 2. **Grok CTO — C-014 closed (`aaaecad`); C-013 AFFIRM blijft:**
-   - N18 PASS_may_PREREG frozen. N19 FAIL. Watch **0/8**. Geen Sandro-ping.
+   - N18 formal FAIL_T (U2). N19 FAIL. Watch **0/8** (N18 cost-gate PASS). Geen Sandro-ping.
    - Simple single-symbol ORB clones barred. Dode sleeves / FAIL-pre-screens / N9 niet herstarten.
 
-3. **Strateeg (`claude/trusting-faraday-34tsmg`) — N18 in flight; N19 FAIL:**
-   - VOORSTEL N18/N19 (`50561ab`) → C-014. N19 dood. Na N18-pad: zoek **ander** mechanisme N≥150 (niet ORB-clone; ≠ N19 XAU gap-fill).
-   - **Eerst** D-092.1. Pass → PREREG (≠ dead set incl. N11/N15–N17/N19; ≠ N9/N12–N14; geen overnight maand; geen XAU power-pad; geen klonen).
+3. **Strateeg (`claude/trusting-faraday-34tsmg`) — N18 FAIL_T; N19 FAIL:**
+   - Zoek **ander** mechanisme N≥150 (niet ORB-clone; ≠ N18 gap-cont / ≠ N19 XAU gap-fill).
+   - **Eerst** D-092.1. Pass → PREREG (≠ dead set incl. N11/N15–**N18**/N19; ≠ N9/N12–N14; geen overnight maand; geen XAU power-pad; geen klonen).
    - Catalogus §9/§10; GS01 test=2024; GER40 gate = 2.16 (C-012); US500 gate = 2.34.
 
 4. **Strateeg-2 (`grok/strateeg-2`) — zelfde D-092.1-regel:**
-   - LUNCH_OPEN + IB_FADE + GER_US_LEAD + VWAP_PB + S2c + N10 + N11 + N12 + **N15–N17 + N19** = **DEAD/FAIL**. N13/N14 = FAIL-pre-screen. **Nu:** volgende non-clone alleen na pre-screen PASS + N≥150. Geen engine-runs. Geen klonen dode/FAIL-set / simple ORB.
+   - LUNCH_OPEN + IB_FADE + GER_US_LEAD + VWAP_PB + S2c + N10 + N11 + N12 + **N15–N19** = **DEAD/FAIL**. N13/N14 = FAIL-pre-screen. **Nu:** volgende non-clone alleen na pre-screen PASS + N≥150. Geen engine-runs. Geen klonen dode/FAIL-set / simple ORB.
 
 5. **Auditor (Claude, blijft) — `engine/ftmo.py` onafhankelijk valideren (D-087 actie 5):**
    - Schrijf eigen mini-implementatie van FTMO-regels; check of Monte Carlo juiste p-waarden geeft op synthetische paden met bekende uitkomsten.
