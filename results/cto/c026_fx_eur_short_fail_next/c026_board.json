@@ -1,0 +1,48 @@
+{
+  "c": "C-026",
+  "when": "2026-10-01 ~12:05 Europe/Amsterdam (CEST / UTC+2)",
+  "branch": "grok/cto-1",
+  "reserve_2025": "untouched",
+  "trials_appended_by_cto": 0,
+  "u2_fx_eur_short": {
+    "tip": "0e04df6",
+    "outcome": "FAIL_T",
+    "counts_as_trial": true,
+    "trial_count_after": 454,
+    "train_N": 227,
+    "train_mean_bruto_bp": 21.958,
+    "train_t_day_clust": 1.8961,
+    "test_mean_bruto_bp": -3.4206,
+    "note": "cost-gate+stress PASS; formal t<2; EURAUD test bruto -8.09; no ftmo_ev; no clones"
+  },
+  "flags": {
+    "FX_EUR_SHORT_TSMOM": "FAIL_T_dead",
+    "N69_NZDUSD": "DIAG_FAIL",
+    "N70_XAU_5d": "DIAG_FAIL_swap_wall",
+    "N71_GBPUSD_SO": "DIAG_FAIL",
+    "COFFEE_LONG_L20": "DIAG_FAIL_honest_RT_~10bp_gate31",
+    "family_A_index_short": "still_closed"
+  },
+  "frozen_prereg": {
+    "file": "PREREG_FTMO_FX_USDJPY_MED_TSMOM.md",
+    "rule": "USDJPY long-only L60/H10",
+    "proxy": "data/daily/FX_USDJPY.csv",
+    "train": "2000-01-01..2016-12-31",
+    "test": "2017-01-01..2024-12-31",
+    "diag_train_N": 237,
+    "diag_train_mean_bruto_bp": 10.97,
+    "diag_gate_3x_bp": 2.34,
+    "diag_train_h1_h2": [
+      3.98,
+      17.91
+    ],
+    "diag_test_N": 121,
+    "diag_test_mean_bruto_bp": 17.25,
+    "diag_test_h1_h2": [
+      -11.88,
+      45.91
+    ],
+    "distinct_from": "N67 L20/H10 DIAG_FAIL; FX_EUR_SHORT FAIL_T",
+    "prior": "moderate \u2014 test h1 bruto negative; formal may FAIL_T"
+  }
+}

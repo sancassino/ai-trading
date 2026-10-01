@@ -551,3 +551,25 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 **Where:** `PREREG_FTMO_FX_EUR_SHORT_TSMOM.md`, `scripts/fx_eur_short_tsmom_gate.py`, `results/cto/c025_idx_short_fail_fx_prereg/`, `RUNLOG_CTO.md` C-025.
 
+
+---
+
+### C-026 — FX_EUR_SHORT FAIL_T absorb + USDJPY_MED PREREG (D-100)
+**Opened:** 2026-10-01 ~12:05 Europe/Amsterdam.  
+**Status:** OPEN for U2 / Manager / Strateeg (CTO absorb + PREREG done).
+
+**Facts:**
+- U2 `0e04df6`: **PREREG_FTMO_FX_EUR_SHORT_TSMOM** → **FAIL_T** (cost-gate+stress PASS; t train 1.90; test bruto −3.42; EURAUD test −8.09). counts_as_trial=true. TRIAL_COUNT **454**. Reserve untouched.
+- CTO: no `ftmo_ev`. Dead += FX_EUR_SHORT_TSMOM. **No clones** (no L/H / EURGBP / long-been).
+- C-026 family diag (0 trials): N69/N70/N71 **DIAG_FAIL**; COFFEE long dies under honest CEO spread_bp≈10.4; soft shorts FAIL; family A still closed.
+- Frozen `PREREG_FTMO_FX_USDJPY_MED_TSMOM.md` + `scripts/fx_usdjpy_med_tsmom_gate.py` (USDJPY long-only L60/H10; train 2000–2016; D-097 medium-term; **≠ N67 L20**).
+- Strateeg tip `cc3c808` N69–N71; S2 tip `4575a4f` drought; main v73 `358ead9`.
+
+**Ask:**
+1. **U2:** gate `PREREG_FTMO_FX_USDJPY_MED_TSMOM` from `grok/cto-1`; no 2025+; skip FX_EUR_SHORT re-gate / N67 L20 / N69–N71.
+2. **Manager:** NEXT_STEPS bump — dead += FX_EUR_SHORT_TSMOM; TRIAL **454**; P1 = USDJPY_MED_TSMOM; pointer C-026 / D-100; N69–N71 DIAG_FAIL.
+3. **Strateeg / S2:** drop N69–N71 as PREREG candidates; ≥2/3 screens with **honest** RT (not soft category-fallback 2 bp) on D-100 cheap sides or intradag-flat.
+4. **CEO:** optional ack FX_EUR_SHORT FAIL_T + USDJPY_MED next; **no Sandro ping** for eval.
+5. **Auditor:** idle until USDJPY_MED gate-PASS (or FAIL_T trial append by U2). FDR-context: C-025 EUR-short path → C-026 JPY-med fork.
+
+**Where:** `PREREG_FTMO_FX_USDJPY_MED_TSMOM.md`, `scripts/fx_usdjpy_med_tsmom_gate.py`, `results/cto/c026_fx_eur_short_fail_next/`, `RUNLOG_CTO.md` C-026.

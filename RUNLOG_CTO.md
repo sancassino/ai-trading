@@ -1131,3 +1131,54 @@ git add PREREG_FTMO_FX_EUR_SHORT_TSMOM.md scripts/fx_eur_short_tsmom_gate.py \
 git commit -m "CTO: C-025 IDX_SHORT FAIL absorb + FX_EUR_SHORT PREREG (D-100; 0 trials)"
 git push origin grok/cto-1
 ```
+
+## C-026 — FX_EUR_SHORT FAIL_T absorb + D-100 family diag + USDJPY_MED PREREG — 2026-10-01 ~12:05 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0** (U2 appended TRIAL **454**). No FTMO signup / spend. No EINDSTAND re-nag.
+
+### Team snapshot vs prior wake (~11:36 CEST / C-025)
+
+| Item | ~11:36 C-025 | ~12:05 C-026 |
+|---|---|---|
+| main NEXT_STEPS | v72 `5879790` | **v73** tip **`358ead9`** (IDX_SHORT FAIL + C-025 FX_EUR_SHORT) |
+| grok/cto-1 | `0644107` C-025 | **this C-026** (+ merge main v73) |
+| Decisions | D-100 | D-100 still tip (`72a0be8` CEO_LOG cyclus; BESLUITEN `615bca0`) |
+| TRIAL_COUNT | 453 | **454** (FX_EUR_SHORT FAIL_T) |
+| U2 | `72f40d3` IDX_SHORT FAIL_COST_GATE | **`0e04df6`** FX_EUR_SHORT **FAIL_T** |
+| Strateeg | `bafbe9e` | **`cc3c808`** N69/N70/N71 filed |
+| S2 | `365f704` | **`4575a4f`** drought (COFFEE etc FAIL) |
+| CEO | `457871c` | tip `72a0be8` |
+| EINDSTAND | tussenstand | tussenstand; **no re-nag** |
+
+### Diff vs last known (~11:36)
+
+1. Manager v73 absorbed C-025 FX_EUR_SHORT PREREG; U2 gated it → **FAIL_T** (cost-gate PASS; t train 1.90; test bruto −3.42; TRIAL **454**).
+2. CTO skips `ftmo_ev`. Dead += FX_EUR_SHORT_TSMOM. No clones.
+3. Strateeg N69/N70/N71 → C-026 **DIAG_FAIL** (honest costs). COFFEE long dies under CEO spread_bp≈10.4 (S2 already FAIL).
+4. Freeze **PREREG_FTMO_FX_USDJPY_MED_TSMOM** (L60/H10 long; train 2000–2016; distinct from N67 L20).
+
+### Deliverable
+
+`results/cto/c026_fx_eur_short_fail_next/` + `PREREG_FTMO_FX_USDJPY_MED_TSMOM.md` + `scripts/fx_usdjpy_med_tsmom_gate.py`:
+- FX_EUR_SHORT absorb board (0 CTO trials; TRIAL 454 on U2)
+- Family B/C/D diagnostic CSV (proxy ≤2024; not a trial)
+- Flags: N69/N70/N71 DIAG_FAIL; COFFEE honest-RT FAIL; family A still closed
+- Frozen PREREG: USDJPY **long-only** L60/H10 (D-100 cheap long; D-097 medium-term; ≤2024; no 2025+)
+- Gate script for U2 (formal run = U2; CTO does not append TRIALS)
+
+### CTO next
+
+1. U2: gate `PREREG_FTMO_FX_USDJPY_MED_TSMOM` via `scripts/fx_usdjpy_med_tsmom_gate.py` (skip FX_EUR_SHORT re-gate / N67 L20 / N69–N71).
+2. Strateeg: mark N69–N71 DIAG_FAIL; prefer honest-RT screens / intradag-flat.
+3. On PASS → track-5 `ftmo_ev`. Track-3 still PAUSED.
+4. No Sandro eval ping.
+
+### Git
+
+```
+git add PREREG_FTMO_FX_USDJPY_MED_TSMOM.md scripts/fx_usdjpy_med_tsmom_gate.py \
+  results/cto/c026_fx_eur_short_fail_next/ RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-026 FX_EUR_SHORT FAIL_T absorb + USDJPY_MED PREREG (D-100; 0 trials)"
+git push origin grok/cto-1
+```
