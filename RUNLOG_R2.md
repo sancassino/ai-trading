@@ -950,7 +950,31 @@ Pre-screen FAIL-set ongewijzigd (N7/N8/N10/N12 / index PLM…). XAU_AM_FADE watc
 
 ### Blockers / next
 1. Strateeg/Strateeg-2: volgende D-092.1 PASS non-clone PREREG N≥150 (≠ dead set / ≠ N11/N12 FAIL-mechanismen) → U2 cost-gate.
-2. VOORSTEL_PRESCREEN N13/N14 (Strateeg `e8f261f`) — pre-screen open (aparte cyclus of follow-up deze push indien tijd).
+2. VOORSTEL_PRESCREEN N13/N14 (Strateeg `e8f261f`) — **DONE deze cyclus** → beide FAIL (zie sectie 03:58–04:00).
 3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
 
 **MATERIAL for Manager/CTO** (N11 first formal after C-012 reclass; cost-gate PASS / stress FAIL / FAIL_T; TRIAL_COUNT 446). Vragen → Manager; eindbesluit → CTO.
+
+
+## Cyclus 03:58–04:00 CEST — D-092.1 N13/N14 pre-screen FAIL (NO_PREREG; TRIAL_COUNT 446)
+
+**Branch:** `claude/uitvoerder2-r` tip after N11 FAIL_T (`e6b2395`). Strateeg `e8f261f` VOORSTEL_PRESCREEN N13/N14. Reserve 2025→ **niet aangeraakt**. Geen TRIALS / geen TRIAL_COUNT-wijziging.
+
+### D-092.1 pre-screen (train 2021–2023 only)
+
+| Idee | N | mean bruto | Gate | Uitkomst |
+|------|---|------------|------|----------|
+| **N13** GER40 US-Open Sync (US500 ±15 bp → GER40 15:30–17:00) | 92 | **−3.34 bp** | 2.16 bp | **FAIL** (NO_PREREG; also N≪150) |
+| **N14** US100 NY-Open Pre-Market Mom (±25 bp pm → 15:30–17:00) | 183 | **−5.05 bp** | 1.80 bp | **FAIL** (NO_PREREG; N≥150 ok) |
+
+- Pre-screen FAIL-set += **N13 · N14** (naast N7/N8/N10/N12 / index PLM…). Geen klonen zonder nieuw mechanisme.
+- Dead set ongewijzigd t.o.v. N11 FAIL_T (`e6b2395`).
+
+### Artifacts
+`VOORSTEL_PRESCREEN_N13.md`, `VOORSTEL_PRESCREEN_N14.md`, `scripts/n13_n14_prescreen.py`, `results/R2/n13_n14_prescreen/`.
+
+### Next
+1. U2 idle tot volgende D-092.1 PASS non-clone PREREG N≥150 (≠ dead / ≠ FAIL-pre-screens incl. N11–N14).
+2. Escalatie D-091.6 reeds 4/4 → D-092 actief. Geen Sandro-ping.
+
+**MATERIAL for Manager/CTO** (N13/N14 D-092.1 FAIL; U2 idle again). Vragen → Manager; eindbesluit → CTO.
