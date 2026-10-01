@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N67 — USDJPY long-only carry+trend 20→10 (D-100 family B)
 
-**Status:** **OPEN** — awaiting D-092.1 (filed 2026-10-01 ~11:30 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-025/C-026 (L20/H10 long). Geen PREREG. Live medium-term pad = CTO `PREREG_FTMO_FX_USDJPY_MED_TSMOM` (L60/H10; ≠ this L20).  
 **Instrument:** `USDJPY` long-only (C-024 best_side=long +0,98 %/jr). Gate **50 bp**. Hold 10d.  
 **Onderscheid:** ≠ N48 1d FAIL; ≠ N53 underpowered 60→20; ≠ S2-USDJPY intradag STOP; ≠ B1.
 ## Regel

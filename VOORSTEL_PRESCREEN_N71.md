@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N71 — GBPUSD 10d TSMOM Short-Only (D-100 family B carry)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** track 4 + **D-100 family B** carry+; filed 2026-10-01 ~11:50 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-026 (train +3,8 < gate ~11; N≈107). Geen PREREG; geen EURUSD-switch.  
 **Auteur:** Strateeg (Claude).  
 **Instrument:** `GBPUSD` (RT **0,70 bp** — COSTS_FTMO; swap_short **0,30** bp/nacht).  
 **Track 4 + D-100 family B:** FX carry+ short-only — GBPUSD short is carry-neutraal (swap_short 0,30 = betaal, maar laag). TSMOM-signaal L20 filter negatief. Hold 10 handelsdagen (9 nachten). Overnight goedkoopste kant met negatief momentum = **short**.

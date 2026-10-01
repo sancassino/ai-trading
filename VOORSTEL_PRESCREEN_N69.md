@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N69 — NZDUSD 10d Carry+Trend Long-Only (D-100 family B)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** track 4 + **D-100 family B** carry+; replace N66–N68 closed; filed 2026-10-01 ~11:50 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-026 family diag (train mean ≈ −29 bp vs gate ~33; N≈112). Geen PREREG; geen lookback-grid / AUDUSD-switch.  
 **Auteur:** Strateeg (Claude).  
 **Instrument:** `NZDUSD` (RT **1,85 bp** — COSTS_FTMO; swap_long **+0,92** bp/nacht).  
 **Track 4 + D-100 family B:** FX carry+ long-only — NZDUSD is positieve carry bij long (NZD hogere rente); TSMOM-signaal L20 filter, H10 entry. Hold 10 handelsdagen (9 nachten). Overnight goedkoopste kant = **long**.

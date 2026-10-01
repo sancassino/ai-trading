@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N70 — XAUUSD 5d Swing TSMOM Bilateral (D-100 family C metals)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** track 4 + **D-100 family C** metals; filed 2026-10-01 ~11:50 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-026 (long swap-wall gate ~35; bilateral/short halves fail). Geen PREREG; geen hold-grid / XAG-switch.  
 **Auteur:** Strateeg (Claude).  
 **Instrument:** `XAUUSD` (RT **0,83 bp** — COSTS_FTMO; swap_long **2,15** / swap_short **0,10** bp/nacht).  
 **Track 4 + D-100 family C:** precious metals swing bilateral — goud 5-daagse TSMOM. Beide kanten. Hold 5 handelsdagen (4 nachten).
