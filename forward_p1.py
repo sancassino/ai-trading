@@ -15,13 +15,14 @@ import b4_sim
 FORWARD_START = date(2026, 10, 1)
 OUT = "forward/p1_daily.csv"
 NY = ZoneInfo("America/New_York"); CET = ZoneInfo("Europe/Amsterdam")
-ORB_SYMS = ["US500cash", "US100cash", "GER40cash"]
+ORB_SYMS = ["US500cash", "US100cash", "GER40cash"]                     # PREREG-tekst been A
+ORB7 = ["US500cash", "US100cash", "US30cash", "XAUUSD", "GER40cash", "UK100cash", "EURUSD"]   # F2-equivalent (CTO orb_unit = F2, 7 symbolen × 1/7)
 RANGE_MIN, RANGE_MAX, GAP_MIN, COMM_BP_SIDE = 0.0020, 0.0150, 0.0015, 0.20
 
 
-def orb_leg():
+def orb_leg(syms=None):
     out = defaultdict(dict)
-    for s in ORB_SYMS:
+    for s in (syms or ORB_SYMS):
         for d, net, _ in b4_sim.run_orb(b4_sim.sessions(s), b4_sim.SYMS[s][3]):
             if d >= FORWARD_START:
                 out[d][s] = net
@@ -107,14 +108,14 @@ def btc_leg():
 
 def main():
     scales = json.load(open("results/cto/p1_scales.json")) if os.path.exists("results/cto/p1_scales.json") else None
-    A, B = orb_leg(), btc_leg()
-    days = sorted(set(A) | set(B))
+    A, B, A7 = orb_leg(), btc_leg(), orb_leg(ORB7)
+    days = sorted(set(A) | set(B) | set(A7))
     logged = set()
     if os.path.exists(OUT):
         logged = {l.split(";")[0] for l in open(OUT) if l[:1].isdigit()}
     else:
         with open(OUT, "w") as f:
-            f.write("date;orb_US500;orb_US100;orb_GER40;orb_leg;btc_leg;combined;berekend_utc\n")
+            f.write("date;orb_US500;orb_US100;orb_GER40;orb_leg;btc_leg;orb7_unit;combined_cto;berekend_utc\n")
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     today = datetime.now(timezone.utc).date()
     new = []
@@ -123,9 +124,10 @@ def main():
             continue
         o = A.get(d, {}); orb = sum(o.values()) / len(ORB_SYMS)
         b = B.get(d); bnet = b if b is not None else 0.0
-        comb = f"{scales['sA'] * orb + scales['sB'] * bnet:.8f}" if scales else "n.v.t."
+        orb7 = sum(A7.get(d, {}).values()) / len(ORB7)                    # F2-proxy (B4a-simulator, 7 symbolen × 1/7)
+        comb = f"{scales['sA'] * orb7 + scales['sB'] * bnet:.8f}" if scales else "n.v.t."   # sA/sB zijn geijkt op orb_unit = F2
         fmt = lambda x: f"{x:.8f}" if x is not None else ""
-        new.append(f"{d};{fmt(o.get('US500cash'))};{fmt(o.get('US100cash'))};{fmt(o.get('GER40cash'))};{orb:.8f};{fmt(b)};{comb};{ts}")
+        new.append(f"{d};{fmt(o.get('US500cash'))};{fmt(o.get('US100cash'))};{fmt(o.get('GER40cash'))};{orb:.8f};{fmt(b)};{orb7:.8f};{comb};{ts}")
     if new:
         with open(OUT, "a") as f:
             f.write("\n".join(new) + "\n")

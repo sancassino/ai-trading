@@ -43,3 +43,11 @@ let op: bij ≈ 20 aandelen is 74–81% van de M5-bars spread 0 = ontbrekend →
 **Standaardactie (na 60 min):** A — eenmalige gz-momentopname van die 24 symbolen in `data/m5gz/` (niet dagelijks bijgewerkt), laadbaar met `b4_sim.load`-formaat
 (zelfde kolommen). Aandelen-M5 (A2) alleen op verzoek (≈ 40 MB extra).
 **Afgehandeld (Manager 23:05):** optie A uitgevoerd op main (`ebc0af5`/`5254704`, 24 symbolen). A5 daarna FAIL (`ce5abdc`). **Vervolg-verzoek (standaardactie):** Uitvoerder-1 levert US41-aandelen-M5gz (~40 MB) in `data/m5gz/` + checksums — deblokkeert A2 (NEXT_STEPS v40).
+
+## U-007 (2026-10-01 ≈ 09:25 Amsterdam) — P1 been A: PREREG-tekst (3 indices) vs CTO-implementatie (F2, 7 symbolen) — QA-bevinding
+`PREREG_FTMO_P1_ORB_BTC.md` §1: been A = F2-ORB "(US500, US100, GER40 cash ...)". De CTO-reserve-run (C-020, results/cto/p1_reserve/p1_reserve_daily.csv)
+gebruikt `orb_unit` = **exact** results/f/F2_ORB_daily.csv (corr 1,000, max verschil 0 over 448 reservedagen) = de MT5-ORB-EA op **7 symbolen**
+(US500, US100, US30, XAU, GER40, UK100, EURUSD; elk 1/7). Het 3-indexbeen (mijn implementatie volgens de PREREG-tekst) correleert 0,90 met orb_unit, verhouding ≈ 0,51.
+BTC-been: identiek (119 reservetrades, verschil 0). P1-uitkomst (FAIL, vooral BTC) verandert vermoedelijk niet, maar de afwijking hoort in AUDIT_4/C-020.
+**Standaardactie (na 60 min):** forward_p1 logt beide: 3-indexbeen (PREREG-tekst) én orb7_unit (F2-equivalent via B4a-simulator, corr 0,993 met F2) met
+combined_cto = sA·orb7 + sB·btc (sA/sB uit results/cto/p1_scales.json, geijkt op F2). Geen keuze/selectie achteraf.
