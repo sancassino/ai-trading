@@ -1613,3 +1613,32 @@ h1/h2 train bruto +6.18 / +9.42; test bruto **+6.32** / +1.94 (test h2 weak). Co
 **TRIAL_COUNT 455 → 456.** TRIALS.csv append-only.
 
 **U2 next:** IDLE wacht Strateeg/CTO/Manager nieuw PREREG (NEXT_STEPS v75). Geen klonen van N72–N74/USDJPY_MED/EURJPY_MED/FX_EUR_SHORT/IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N58–N60/N67–N68. N58 alleen na swap-side redesign + PASS→PREREG.
+
+## Cyclus 12:50–13:05 CEST (2026-10-01) — N78 VIX_TERM_VOV gate → FAIL_COST_GATE (TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r` — merge `origin/main` @ `06c0079` (NEXT_STEPS v76 / C-028). Lane-B PREREG from Faraday `6c9cdca` (S2 `b765613c` C-028 Lane-A). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `PREREG_FTMO_N78_VIX_TERM_VOV.md` (Faraday `6c9cdca`): US100cash; vov10/combo; gate **7.83 bp** = 3×(0.66+1.95); train 2021–23 / test 2024; N≥150; geen retune
+- Lane-A @ `b765613c`: NDX bruto **6.80** / day_t **2.91** — **geen** PASS (expliciet in PREREG)
+- Signal: Yahoo `data/daily/VIX9D.csv` + `VIX3M.csv` + `VIX.csv`; PnL: FTMO `data/daily/US100cash.csv` (D1)
+
+### Prio — PREREG N78 VIX_TERM_VOV → cost-gate FAIL → STOP
+
+**PREREG gecommit (vóór resultaat):** `52a5212` — `PREREG_FTMO_N78_VIX_TERM_VOV.md` + `results/lane_b/VIX_TERM_VOV_SOURCE.md`. Artefacts: `results/R2/vix_term_vov_n78/`. Script: `scripts/n78_vix_term_vov_gate.py`.
+
+| Window | N | mean bruto | gate 7.83 | stress 11.75 | t day-clust / NW-L5 (netto) | Uitkomst |
+|--------|--:|-----------:|----------:|-------------:|----------------------------:|----------|
+| **Train** 2021–2023 | 492 | **+2.21 bp** | **FAIL** | FAIL | 0.12 / 0.14 | STOP |
+| **Test** 2024 | 150 | **+8.01 bp** | — | — | 0.81 / 0.80 | (niet formeel; gate FAIL) |
+
+Year-split train bruto: 2021 **+3.43** / 2022 **−8.25** / 2023 **+9.21**. Frac full/half 0.25/0.75. Mean cost ~1.63 bp (pos-scaled).
+
+**Uitkomst: FAIL_COST_GATE** — train mean bruto **2.21 ≪ 7.83**; N=492≥150 OK. Formal t niet als PASS-pad (STOP). Informatief: bruto day-clust t 0.45 / NW 0.54 ≪ 2. Bevestigt Lane-A waarschuwing (NDX 6.80 onder FTMO-gate). **1 trial** (TRIAL **457**). Geen retune (geen vov20, geen threshold-grid, geen US500-first fallback).
+
+**Dead/FAIL += N78_VIX_TERM_VOV (PREREG_FTMO_N78_VIX_TERM_VOV)**. Skip her-gate VIX_TERM_VOV / vov-window / US500-first / FX_EURJPY_MED / USDJPY_MED / FX_EUR_SHORT / IDX_SHORT / ENERGY / TSMOM_DIV / N35–N41 / GBPJPY / N58–N60 / N67–N68 / N72–N74.
+
+**TRIAL_COUNT 456 → 457.** TRIALS.csv append-only.
+
+**U2 next:** IDLE wacht Strateeg/CTO/Manager nieuw PREREG (NEXT_STEPS). Geen klonen van N78/VIX_TERM_VOV of prior dead sleeves.
+
