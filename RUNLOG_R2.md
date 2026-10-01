@@ -1229,3 +1229,31 @@ All four: **N≥150** but mean bruto **below** gate → STOP (no PREREG ask).
 
 **TRIAL_COUNT unchanged (447).** Reserve 2025→ untouched.
 
+
+
+## Cyclus 08:21–08:25 CEST (2026-10-01) — D-092.1 TRAIN-ONLY pre-screen N24–N27 (D-094)
+
+**Branch:** `claude/uitvoerder2-r`. FF `origin/main` @ `2945996` (NEXT_STEPS **v65**). Source Strateeg `claude/trusting-faraday-34tsmg` @ `b6e8c1e` (VOORSTEL_PRESCREEN_N24..N27).
+**Script:** `scripts/n24_n27_prescreen.py` → `results/R2/n24_n27_prescreen/`.
+**Window:** train **2021-01-01 … 2023-12-31** only. **No** test year / **no** 2025+ reserve. **No** PREREG written (FAIL). **No** formal trials. Dead set untouched (N20–N23 stay closed).
+
+| Sleeve | Instrument | N | mean bruto | gate (3×RT) | Uitkomst |
+|--------|------------|---|------------|-------------|----------|
+| **N24** US500 Mid-Session Lunch Fade | US500cash | 271 | **+0.35 bp** | 2.34 | **FAIL** `NO_PREREG_screen_fail` |
+| **N25** XAU NY Afternoon Fade | XAUUSD | 334 | **+1.14 bp** | 2.49 | **FAIL** `NO_PREREG_screen_fail` |
+| **N26** XS 1d Reversal Basket (5) | US100/US30/US500/GER40/XAU | 581 | **+0.77 bp** | 4.83 | **FAIL** `NO_PREREG_screen_fail` |
+| **N27** AUDUSD H4 SMA20 MR | AUDUSD | 429 | **+1.49 bp** | 3.66 | **FAIL** `NO_PREREG_screen_fail` |
+
+All four: **N≥150** but mean bruto **below** gate → STOP (no PREREG ask).
+
+**Notes:**
+- N24 date_min 2021-09-14 (US500cash 15:30/18:00 coverage sparse early 2021); N still ≥150.
+- N26 PnL = 0.5×(long_bp+short_bp); entry 15:30 / exit 17:25 CET; skip days with tied extreme ranks.
+- N27 H4 resample CET-aligned; SMA20 warm-up from 2020-10; pure hold 12:00→16:00 (no stop in pre-screen).
+- D-094a (b)/(c) excuses noted in VOORSTELs — moot on FAIL (no PREREG).
+
+**Artifacts:** `results/R2/n24_n27_prescreen/{prescreen.json,prescreen.md,n24..n27_trades_train.csv}`; VOORSTEL copies N24–N27 from Strateeg tip (status → FAIL).
+
+**TRIAL_COUNT unchanged (447).** Reserve 2025→ untouched.
+
+**U2 next:** wait next Strateeg/S2 D-092.1-PASS / PASS_may_PREREG (non-clone, D-094a). N24–N27 → FAIL-set (no clone reopen). No Sandro-ping (pre-screen FAIL batch; Manager/CTO absorb via NEXT_STEPS).
