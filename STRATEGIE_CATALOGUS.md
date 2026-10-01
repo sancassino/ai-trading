@@ -151,6 +151,7 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 2. **Kostenprofiel:** dagelijks-vlak (intraday-exit, swap = 0) **OF** bruto-carry > swap-kosten per nacht cfd (indices long 5–8%/jr → nauwelijks haalbaar, FX long hoge-rentecurrency = meevaller)
 3. **Poort:** gemiddelde bruto ≥ 3× (spread+commissie intraday) of ≥ 3× (spread+commissie+swap overnight); anders stop zonder trial
 4. **FTMO-mechanica:** 5%-dagverliesregel op floating equity; positief-scheef profiel overschrijdt grens zelden; negatief-scheef (VRP-achtig) risico op dagruin is hoog
+5. **D-092.1 (bindend):** kost-pre-screen op train 2021–2023 (mean bruto ≥ 3× RT) **vóór** elke nieuwe PREREG. Faalt → nooit PREREG. Geen overnight maand-sleeves. Dead set niet heropenen.
 
 ### 9b. Herindeling catalogus (v3)
 
@@ -172,7 +173,7 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 | N3 | **US100 Close-Drive** — 14:30–15:55 ET, trend-filter 0,30%, EOD flat | ≠ ORB/A1/GS01 (close-sessie, geen OR-break) | **GESTOPT** gate PASS + t FAIL (`328284c`; NW t=0,853) |
 | N4 | **XAU Pre-NY range breakout** — 13:00–15:00 CET range → NY open | ≠ XAU_AM_FADE (andere richting/tijd) | **GESTOPT** kostenpoort FAIL (`328284c`; +1,16 < 2,49 bp) |
 | N5 | **US500/US100 Opening Gap Fill** — fade |gap|≥0,30%, 90-min flat | ≠ GS01 (fade vs continuation) | **GESTOPT** kostenpoort FAIL (CTO `69d15cc`; −3,84 < 1,95 bp) |
-| N6 | **GER40 Pre-Close conditioneel** — 2u-trend 0,20%, 17:30–17:55 CET | ≠ B4b onvoorwaardelijk; ≠ N3 US close | **PREREG** bevroren (`cb786f1`); U2 cost-gate pending (C-007) |
+| N6 | **GER40 Pre-Close conditioneel** — 2u-trend 0,20%, 17:30–17:55 CET | ≠ B4b onvoorwaardelijk; ≠ N3 US close | **GESTOPT** kostenpoort FAIL (U2 `741639e` / CTO C-008); C-007 drained |
 | **C — HERBEOORDELEN met FTMO-EV** | | | |
 | C1 | **C02 Faber (D1 DD-filter, 1 nacht swap)** | Als overlay (long/flat), swap ≈ 1–2,3 bp/nacht → 5–8%/jr drag op long; nuttig als risicobeheer maar geen FTMO-trial | Geen trial; als portefeuille-overlay in FTMO-context herbeoordelen |
 | C2 | **C55 DAA** | Weinig trades; swap-drag als in positie | Na engine/ftmo.py eventueel herbeoordelen |
@@ -193,9 +194,9 @@ Per heropende regel de volgende metriek berekenen:
 
 **Doel: FTMO-EV ≥ €400/mnd bij realistisch risico (≤ 2% dagverlies als het fout gaat).** Schaal > 4% dagverlies-risico wordt alleen als bovengrens gerapporteerd (D-016/D-085).
 
-## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090/D-091, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
+## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090/D-091/D-092, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
 
-*Bijgewerkt: 2026-10-01 01:16 Amsterdam — post N3/N4 STOP + CTO N5 FAIL; N6/GER_US_LEAD/VWAP_PB pending U2 (C-007); XAU_AM_FADE watch-only*
+*Bijgewerkt: 2026-10-01 02:25 Amsterdam — C-007 N6/GER_US/VWAP STOP; C-009 IB_FADE STOP; S2c closed; D-092 actief; D-092.1 pre-screens FAIL (geen nieuwe PREREG); F2-ORB ≤2024 ≈€513/m referentie*
 
 ### 10a. Overzicht PREREGs (Faraday + Grok Strateeg-1 + Strateeg-2)
 
@@ -210,51 +211,54 @@ Per heropende regel de volgende metriek berekenen:
 | N3 | US100 Close-Drive | faraday | **STOP** gate PASS + t FAIL `328284c` | ≠ ORB; SE te hoog (t=0,85) |
 | N4 | XAU Pre-NY breakout | faraday | **STOP** poort FAIL `328284c` | ≠ XAU_AM_FADE |
 | N5 | Opening Gap Fill US500/US100 | faraday | **STOP** poort FAIL CTO `69d15cc` (−3,84 bp) | ≠ GS01 continuation |
-| N6 | GER40 Pre-Close conditioneel | faraday | **PREREG** (`cb786f1`); U2 gate pending | ≠ B4b / ≠ N3 |
-| GS01 | Gap-aligned long-only ORB indices | grok/strateeg-1 | PREREG (geen poort-run); test=2024 erratum | ≠ A1 bidirectioneel; long+gap; index-M5 aanwezig |
+| N6 | GER40 Pre-Close conditioneel | faraday | **STOP** poort FAIL U2 `741639e` (C-007) | ≠ B4b / ≠ N3 |
+| GS01 | Gap-aligned long-only ORB indices | grok/strateeg-1 | PREREG + erratum; **Faraday D-092.1 diagnostic pooled FAIL** (−0,38 < 1,92 bp) | ≠ A1 bidirectioneel; GER40-leg solo +6,21 — geen cherry-pick |
 | GS02 | Asian-range fade FX | grok/strateeg-1 | PREREG (geen poort-run) | ≠ A5 breakout; fade/decay-risico |
 | S2-XAU | XAUUSD London–NY overlap breakout | grok/strateeg-2 | **STOP** cost-gate `7bac598` | ≠ A1 cash-open |
 | S2-GER40 | GER40 Frankfurt open-drive | grok/strateeg-2 | **STOP** cost-gate `7bac598` | A1-overlap was risico |
 | S2-USDJPY | USDJPY Tokyo-range London-handoff | grok/strateeg-2 | **STOP** cost-gate `7bac598` | ≠ A5/GS02 |
 | S2-USOIL | USOIL EIA-window breakout | grok/strateeg-2 | **STOP** cost-gate (CTO C-004) | hoog RT ≈ 3,34 bp |
-| S2-BTC | BTCUSD US-open + US100-gap | grok/strateeg-2 | cost/stress PASS; **power FAIL** N=132<150 (CTO) | ≠ Q3; parent onaangeraakt |
-| S2b | BTC+ETH gepoold US-open | grok/strateeg-2 | **STOP** ETH leg FAIL (CTO C-005; ETH RT 7,98 bp) | D-091.1; geen parent-wijziging |
+| S2-BTC | BTCUSD US-open + US100-gap | grok/strateeg-2 | cost/stress PASS; **power FAIL** N=132<150; portfolio-diversifier only | ≠ Q3; parent onaangeraakt |
+| S2b | BTC+ETH gepoold US-open | grok/strateeg-2 | **STOP** ETH leg FAIL (CTO C-005) | D-091.1; geen parent-wijziging |
 | S2-MIDDAY_VWAP | Midday VWAP fade US100/US30 | grok/strateeg-2 | **STOP** poort FAIL `8c7a8e1` (n=3) | ≠ N1/ORB |
-| S2-XAU_AM_FADE | XAU London-AM extensie-fade, flat 14:00 | grok/strateeg-2 | **gate PASS** mean +18,70 bp (`8c7a8e1`); **N=12 ≪ 120** → watch-only (CTO C-006) | ≠ dode XAU_OVERLAP breakout |
-| S2-GER_US_LEAD | GER40 Europe-AM impuls → US open continuation | grok/strateeg-2 | **PREREG** (`d68caab`); U2 gate pending | ≠ N2 pair; ≠ S2-GER40_OPEN |
-| S2-VWAP_PB | Morning-trend VWAP pullback continuation | grok/strateeg-2 | **PREREG** (`d68caab`); U2 gate pending | ≠ MIDDAY fade; ≠ N1 |
+| S2-XAU_AM_FADE | XAU London-AM extensie-fade, flat 14:00 | grok/strateeg-2 | **gate PASS** +18,70 bp; **N=12 ≪ 120** watch-only; **S2c closed** | ≠ dode XAU_OVERLAP |
+| S2-GER_US_LEAD | GER40 Europe-AM → US open | grok/strateeg-2 | **STOP** poort FAIL U2 `741639e` (C-007) | ≠ N2; ≠ S2-GER40_OPEN |
+| S2-VWAP_PB | Morning-trend VWAP pullback | grok/strateeg-2 | **STOP** poort FAIL U2 `741639e` (C-007) | ≠ MIDDAY fade; ≠ N1 |
+| S2-IB_FADE | US IB extreme fade | grok/strateeg-2 | **STOP** poort FAIL U2 `b8cf28a` (C-009; −3,54 bp) | ≠ N1/ORB/VWAP |
+| S2c | XAU_AM_FADE + XAG pool | — | **GESLOTEN** CTO D-092.1 pre-screen FAIL (XAG −21,6; pooled −2,24) | geen PREREG |
+| N7 PLM / NR7-ORB / N8 | Faraday D-092.1 candidates | faraday | **geen PREREG** — pre-screen FAIL (zie `STRATEEG_PRESCREEN_D092.md`) | non-clones geprobeerd |
 
 ### 10b. FDR-teller impact (max, na poorten)
 
-- A4/C17, B1, A5, A2: poort FAIL — TRIALS append stop:kostenpoort waar gedaan; TRIAL_COUNT = **444** (poort-fails tellen per PREREG-regel; A5/A2/N*: geen +1).  
-- S2-XAU/GER40/USDJPY/USOIL, MIDDAY_VWAP, N1/N2/N4/N5, S2b: cost-gate FAIL — geen formele trial.  
+- A4/C17, B1, A5, A2: poort FAIL — TRIALS append stop:kostenpoort waar gedaan; TRIAL_COUNT = **444** (ongewijzigd deze cyclus).  
+- S2-* / N1–N6 / MIDDAY / GER_US / VWAP_PB / IB_FADE / S2b / S2c: cost-gate of pre-screen FAIL — geen formele trial.  
 - N3: gate PASS maar t FAIL — geen TRIALS-append.  
 - S2-XAU_AM_FADE: gate PASS maar power onvoldoende — **geen trial-claim** (watch-only).  
-- N6, GER_US_LEAD, VWAP_PB, GS01, GS02: +1/+2 indien poorten (GS01-test alleen 2024; D-091.5).  
+- GS01/GS02: +1 indien formele poort ooit PASS (GS01-test alleen 2024; D-091.5); Faraday diagnostic suggereert FAIL.  
 - Manager herbereken BH na elke TRIALS-merge.
 
 ### 10c. Welke hypothese is sterker? (evidence uit docs/kosten — geen verzonnen backtests)
 
-**Korte conclusie (v46 / post-N5):** A/B-tier + N1–N5 + S2b **uitgeput** op kosten/t/power. Enige gate-PASS survivor: **S2-XAU_AM_FADE** (underpowered N=12, CTO watch-only). Open gates (nog geen uitslag): **N6**, **GER_US_LEAD**, **VWAP_PB**. Onder *nog niet-gegate* research-fit scoort **GS01** nog. CTO ambition (C-005): €800/mnd bij p95-dip≤2% vraagt typisch SR ≳ 1,0. D-091.6: escalatie **cyclus 3/4** na N5 FAIL; na cyclus 4 zonder kostenpoort+power → CEO D-092 (geen Sandro-richtingvraag).
+**Korte conclusie (post D-092 / C-009):** A/B-tier + N1–N6 + S2 non-clones t/m IB_FADE **uitgeput** op kosten/t/power. Enige gate-PASS survivor: **S2-XAU_AM_FADE** (underpowered; S2c closed). **Geen open cost-gates.** Bindende referentie: **F2-ORB ≤2024 ≈ €513/m** (CTO D-092.3; HistData via `SANDRO_ACTIES.md` A-001, geen chat-ping). Portfolio: ORB+BTC eqvol diversifieert (ρ≈0,11) op papier. D-091.6 = **4/4** → D-092; Manager 8-cyclus-stop watch **0/8**.
 
 | Rang (kwalitatief) | Hypothese | Waarom (alleen bestaande docs/kosten/research) |
 |--------------------|-----------|-----------------------------------------------|
-| 1 (enige gate-PASS) | **S2-XAU_AM_FADE** | Signed mean +18,70 bp > 3× RT; flat vóór overlap; **blokker = power N=12** (watch-only) |
-| 2 (research-fit, data klaar) | **GS01 gap long-only ORB** | Residual ORB-edge long+gap; index RT laag; M5gz aanwezig; nog geen poort-run; test=2024 |
-| 3 (pending gate) | **N6 / GER_US_LEAD / VWAP_PB** | Bevroren non-clones; U2 C-007 queue; geen uitslag → geen claim |
-| 4 (parent edge, closed path) | **S2-BTC / S2b** | BTC mean +22,9 bp PASS maar power/S2b-ETH FAIL — pad dicht zonder CEO |
-| Zwakker / dood | A2/A4/A5/B1/N1–N5/MIDDAY/XAU-overlap/GER40/USDJPY/USOIL/GS02 | Poort, t, of n=0; geen herstart zonder CEO |
+| 1 (referentie-EV) | **F2-ORB / A1** | Gerepliceerde bruto-edge; ≤2024 ≈€513/m; lange M1 data = enige Sandro-actie (niet-blokkerend) |
+| 2 (enige gate-PASS sleeve) | **S2-XAU_AM_FADE** | +18,70 bp; **blokker = power N=12**; geen power-pad; S2c closed |
+| 3 (portfolio only) | **S2-BTC** | +22,9 bp / N=132<150; CTO blend-lift; geen solo trial |
+| 4 (verzwakt) | **GS01** | Research-fit long+gap; Faraday pooled pre-screen FAIL; formele gate nog open bij S1 |
+| Zwakker / dood | A2/A4/A5/B1/N1–N6/GER_US/VWAP/IB_FADE/MIDDAY/S2b/S2c/XAU-overlap/… | Poort, t, n=0, of pre-screen FAIL |
 
-**Faraday vs Strateeg-2:** Faraday leverde N3–N6; N3–N5 STOP; N6 wacht U2. Strateeg-2 leverde GER_US_LEAD + VWAP_PB (parallel non-clones). Enige open poort-PASS blijft XAU_AM_FADE (power). Programma-focus = U2 C-007 gates **of** GS01-poort **of** D-091.6/D-092 — geen overnight sleeves, geen dode-sleeve-herstart, geen post-hoc drempel-retune.
+**Faraday vs Strateeg-2:** Faraday N3–N6 alle STOP; D-092.1 pre-screens (PLM/NR7/N8) FAIL → geen nieuwe PREREG. Strateeg-2 GER_US/VWAP/IB_FADE STOP. U2 idle tot volgende pre-screened non-clone. Programma-focus = (a) F2-ORB referentie + HistData A-001, (b) D-092.1-pre-screened non-clones op top-10, (c) 8-cyclus watch — geen dead-set-herstart, geen overnight sleeves, geen post-hoc drempel-retune.
 
 ### 10d. Actiepunten Strateeg (deze branch)
 
-1. ✅ PREREG_FTMO_C17 — bevroren; **STOP** na poort (U2 `43b6ba2`).  
-2. ✅ PREREG_FTMO_FX_INTRADAG — bevroren; **STOP** na poort (U2 `ce5abdc`).  
-3. ✅ PREREG_FTMO_B1 — bevroren; **STOP** na poort (U2 `18c7996`).  
-4. ✅ PREREG_FTMO_A2 — bevroren; **STOP** na poort (U2 `bba5c0c`).  
-5. ✅ PREREG_FTMO_N1/N2 — bevroren; **STOP** na nacht-queue (U2 `8c7a8e1`).  
-6. ✅ PREREG_FTMO_N3/N4 — bevroren; **STOP** (U2 `328284c`).  
-7. ✅ PREREG_FTMO_N5 — bevroren; **STOP** (CTO `69d15cc`); N6 PREREG open voor U2.  
-8. ✅ Catalogus §9/§10 bijgewerkt post-N5 + Strateeg-2 GER_US/VWAP_PB (deze commit).  
-9. Open (niet Strateeg tenzij Manager/CTO): U2 C-007 (N6→GER_US→VWAP_PB); XAU_AM_FADE watch-only; GS01 cost-gate eigenaar; D-091.6 teller 3/4. Geen N*-retune. Geen A5/A2/S2-dead-herstart.
+1. ✅ PREREG_FTMO_C17 — bevroren; **STOP** (`43b6ba2`).  
+2. ✅ PREREG_FTMO_FX_INTRADAG — bevroren; **STOP** (`ce5abdc`).  
+3. ✅ PREREG_FTMO_B1 — bevroren; **STOP** (`18c7996`).  
+4. ✅ PREREG_FTMO_A2 — bevroren; **STOP** (`bba5c0c`).  
+5. ✅ PREREG_FTMO_N1–N5 — alle **STOP**.  
+6. ✅ PREREG_FTMO_N6 — bevroren; **STOP** C-007 (`741639e`).  
+7. ✅ Catalogus §9/§10 sync post C-007/C-009/D-092 + pre-screen log (deze commit).  
+8. ✅ D-092.1 pre-screens N7/N8/GS01-diagnostic — FAIL; geen PREREG (`STRATEEG_PRESCREEN_D092.md`).  
+9. Open: volgende cyclus opnieuw D-092.1 non-clone op top-10 (≠ dead set); geen XAU power-pad; geen GER40-GS01-cherry-pick; U2 idle tot PASS-screen. D-092.6 watch via Manager.

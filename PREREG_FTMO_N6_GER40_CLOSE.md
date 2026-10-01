@@ -1,9 +1,10 @@
 # PREREG_FTMO_N6 — GER40 Pre-Close Conditioneel Momentum (FTMO-EV variant)
 
 **Status:** Pre-registratie 2026-10-01 02:05 Europe/Amsterdam, branch `claude/trusting-faraday-34tsmg`.  
-**Auteur:** Strateeg (Claude). **Geen resultaten vóór deze commit.**  
-**Tier:** D-091.3 (nieuw, non-clone, cyclus 3/4); screen top-10 (GER40 top-3 RT-ratio).  
-**Relatie:** Distinct van A1 ORB / GS01 (ochtend-OR, gap-filter). Distinct van B4b (onvoorwaardelijke laatste-30-min, gefaald). **Conditionele** versie met 2-uur-trend-filter: dezelfde tijdzone maar onderscheidend mechanisme (rebalancing-inertie conditioneel op dagtrend).
+**Uitkomst (Uitvoerder-2 `741639e` / CTO C-008 `9f5c843`, C-007):** **FORMEEL GESTOPT** — kostenpoort TRAIN FAIL. Dead set. Geen herstart zonder CEO.  
+**Auteur:** Strateeg (Claude). Resultaten pas ná freeze-SHA.  
+**Tier:** D-091.3 (nieuw, non-clone); screen top-10 (GER40 top-3 RT-ratio).  
+**Relatie:** Distinct van A1 ORB / GS01 (ochtend-OR, gap-filter). Distinct van B4b (onvoorwaardelijke laatste-30-min, gefaald). **Conditionele** versie met 2-uur-trend-filter.
 
 ---
 

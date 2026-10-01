@@ -1,0 +1,32 @@
+{
+  "idea": "N7_NR7_ORB",
+  "train": "2021-2023",
+  "by_symbol": [
+    {
+      "symbol": "US30cash",
+      "n": 116,
+      "mean_bruto_bp": -2.3713,
+      "rt": 0.45,
+      "gate": 1.35,
+      "pass": false
+    },
+    {
+      "symbol": "US100cash",
+      "n": 82,
+      "mean_bruto_bp": -2.8579,
+      "rt": 0.66,
+      "gate": 1.98,
+      "pass": false
+    }
+  ],
+  "pooled": {
+    "n": 198,
+    "mean_bruto_bp": -2.5728,
+    "tw_rt": 0.537,
+    "gate": 1.6109,
+    "pass": false,
+    "date_min": "2021-01-13",
+    "date_max": "2023-12-29"
+  },
+  "decision": "NO_PREREG_screen_fail"
+}

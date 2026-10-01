@@ -1,0 +1,35 @@
+{
+  "idea": "N7_PLM_post_lunch_momentum",
+  "rule": "morning |move|\u22650.40% 15:30\u201317:30 AMS \u2192 hold dir 17:30\u201320:00; stop=morning extreme",
+  "train": "2021-01-01..2023-12-31",
+  "reserve_2025": "untouched",
+  "by_symbol": [
+    {
+      "symbol": "US30cash",
+      "n": 272,
+      "mean_bruto_bp": -4.9659,
+      "rt_bp": 0.45,
+      "gate_3x_rt": 1.35,
+      "pass": false
+    },
+    {
+      "symbol": "US100cash",
+      "n": 323,
+      "mean_bruto_bp": -0.6032,
+      "rt_bp": 0.66,
+      "gate_3x_rt": 1.98,
+      "pass": false
+    }
+  ],
+  "pooled": {
+    "n": 595,
+    "mean_bruto_bp": -2.5976,
+    "tw_rt_bp": 0.564,
+    "gate_3x_tw_rt": 1.692,
+    "pass": false,
+    "stop_share": 0.12773109243697478,
+    "date_min": "2021-01-04",
+    "date_max": "2023-12-22"
+  },
+  "decision": "NO_PREREG_screen_fail"
+}
