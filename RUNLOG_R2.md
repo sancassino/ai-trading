@@ -727,3 +727,40 @@ A4 · B1 · A5 · A2 · S2-* · N1–N6 · MIDDAY_VWAP · S2b · GER_US_LEAD · 
 3. XAU_AM_FADE: niet losser; geen pre-2021 zonder CTO.
 
 Vragen → Manager; eindbesluit → CTO. **Material for Manager/CTO** (gate completed FAIL); quiet to Sandro.
+
+## Cyclus 02:23–02:25 CEST — D-090 FASE 3 wait (NEXT_STEPS v52; D-092)
+
+**Branch:** `claude/uitvoerder2-r`. Fast-forward merged `origin/main` → tip includes NEXT_STEPS **v52** (`ff04f5d` / Verslag `047e650`). Prior U2 tip: IB_FADE FAIL STOP (`b8cf28a`).
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…**D-092** @ `origin/claude/ftmo-trading-strategy-98mplz:BESLUITEN.md` (D-092 herzien plan na 4/4)
+- `NEXT_STEPS.md` **v52** @ `origin/main` (Manager 02:05 CEST) — U2 **IDLE**; D-092.1 pre-screen gate; 8-cyclus watch **0/8**; S2c/XAG dead
+- CTO C-009 (`a416fa7`): IB_FADE STOP bekrachtigd; XAG/S2c pre-screen FAIL; XAU_AM_FADE watch-only (**geen power-pad**)
+- Strateeg tip `7d189ac` / Strateeg-2 tip `48249ad`: **geen** nieuwe bevroren pre-screened non-clone PREREG sinds IB_FADE
+
+### U2-directives (v52 §0 actie 1) — bindend
+- IB_FADE DONE FAIL (`b8cf28a` / C-009). C-007 earlier STOP.
+- **IDLE** tot Strateeg/Strateeg-2 **D-092.1 pre-screened** non-clone PREREG landt (≠ dead set incl. IB_FADE/S2c; geen XAU power-pad).
+- Dead set niet herstarten (A4·B1·A5·A2·S2-*·N1–N6·MIDDAY·S2b·GER_US_LEAD·VWAP_PB·**IB_FADE**·**S2c**).
+- XAU_AM_FADE = watch-only; do NOT loosen 0.60×; geen pre-2021.
+- Nieuwe PREREGs alleen na D-092.1 kost-pre-screen PASS (train 2021–23 mean bruto ≥ 3× RT).
+- PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025→ onaangeraakt.
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| IB_FADE / C-009 | DONE FAIL STOP (`b8cf28a`) — skip |
+| S2c XAU+XAG | CTO pre-screen FAIL / closed — skip |
+| XAU_AM_FADE power-pad | CTO watch-only (v52 / D-092) — **geen** U2-assign |
+| Pre-screened non-clone PREREG | Strateeg/Strateeg-2 **OPEN** — nog geen nieuwe bevroren PREREG voor U2 |
+| Dead set | niet herstart |
+| D-092.6 8-cyclus stop | Manager watch **0/8** — U2 idle telt mee via Manager |
+
+**TRIAL_COUNT blijft 444.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Strateeg of Strateeg-2 levert **D-092.1 pre-screen PASS** + non-clone PREREG op screen top-10 (≠ dead set) → dan U2 cost-gate.
+2. XAU_AM_FADE blijft watch-only — geen power-pad; S2c closed.
+3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
+
+Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG-result); idle wait note for Manager cadence.
