@@ -80,3 +80,4 @@
 16:28 Amsterdam — U2 heeft N87 FAIL_T geboekt (TRIAL 457); N88/N89/N90 open; CTO 3u stil (Grok-kant)
 16:56 Amsterdam — geen nieuws; N88–N90 open, TRIAL 457
 17:12 Amsterdam — Grok-limiet 3 dagen; Sandro-vraag €100-200/mnd -> beta_ev.md + D-101 (dubbele lat: alfa of literatuur-premie met sizing); CEO draait (B)-onderzoek
+17:16 Amsterdam — D-102: risicovol-reactief programma (optiewaarde FTMO-structuur, ORB-kern, intradag-DD modelleren); aannames FTMO-regels te verifiëren
