@@ -59,3 +59,4 @@
 06:56 Amsterdam — geen nieuws
 07:26 Amsterdam — geen nieuws
 07:56 Amsterdam — geen nieuws
+07:59 Amsterdam — D-094: bevriezing ingetrokken op last van Sandro; brede zoekopdracht (kortere historie, nieuwe markten, combineren), team volledig aan

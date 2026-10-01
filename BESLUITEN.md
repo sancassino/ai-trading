@@ -315,3 +315,20 @@ Feiten: TRIAL_COUNT 447. Sinds D-091 slaagden alleen N11 en N18 voor de kostenpo
 3. **Auditor:** één laatste taak — onafhankelijk nacontroleren dat TRIALS.csv (447 rijen) consistent is met alle FAIL_T/STOP-uitspraken en dat de reserve 2025+ nergens is aangeraakt; daarna idle.
 4. **Eindstand voor Sandro:** CEO schrijft `EINDSTAND_FTMO.md` (1 pagina, feiten, geen aanbeveling tot aankoop): geen gevalideerde edge → **evaluatie NIET kopen**; opties om te heropenen: (a) lange M1-data (HistData, A1-ORB/S3 — enige sleeve met bruto-edge, M-001), (b) andere markt/prop-regels, (c) stoppen. Sandro beslist; tot dan blijft alles bevroren. Agents kopen/openen nooit iets.
 5. **Heropenen** alleen op nieuwe data (long_m1) of nieuw CEO-besluit.
+
+**D-094 · BEVRIEZING VERVALLEN — nooit meer stoppen; breed zoeken (CEO, op last van Sandro, 2026-10-01 08:10)**
+
+D-093 (bevriezing), de 8-cycli-stopregel (D-092.6) en de onderhoud-modus (1 cyclus/4u) zijn **ingetrokken**. EINDSTAND_FTMO.md is een tussenstand, geen einde. **Regel voor altijd:** de CEO en geen enkele agent bevriest, pauzeert of stopt het zoeken. Sterft een spoor, dan openen we in dezelfde cyclus ≥ 2 nieuwe sporen. Alleen Sandro kan stoppen. Alle agents draaien weer op de volle cadans (Grok: elke cyclus actief; Claude: CEO + Auditor elke 30 min).
+
+Wat NIET verandert (integriteit): PREREG vóór resultaat, TRIALS.csv append-only, dag-geclusterd t, FDR over de hele familie, kostenpoort op echte FTMO-kosten, Auditor onafhankelijk. We verbreden de zoekruimte, we verlagen de lat niet.
+
+**Nieuwe sporen (allemaal tegelijk, verdeeld over agents):**
+
+1. **Kortere historie toegestaan:** als 10+ jaar niet kan, 3–5 jaar (2021–2024 train, 2025+ forward/reserve, rolling walk-forward). Compensatie voor lagere power: poolen over meerdere instrumenten/regimes, N ≥ 150 gepoold, én forward-papier (live, vooraf vastgelegd) als extra bewijs. Reserve 2025+ mag bij een shortlist vrijgegeven worden (D-084 schorsing opgeheven voor FTMO-kandidaten, op CEO-besluit per kandidaat).
+2. **Andere markten (volgens kosten/vol-ranglijst van `results/screen_cost_vol.csv`, 166 FTMO-symbolen):** commodities (olie, gas, koper, goud/zilver, agri/softs), crypto, aandelen-cfd, niet-VS-indices, FX-crosses, metalen. Eerst bruto-screen (geen trial), dan PREREG.
+3. **Combineren (portefeuille én signalen):** (a) weak-positieve sleeves in één portefeuille — CTO draait `ftmo_ev()` op de gecombineerde dagreeks (correlatie, diversificatie, skew); (b) ensembles/filters als één vooraf vastgelegde hypothese (bv. trend + gap + volatiliteitsregime); (c) meerdere kleine edges stapelen om de SR-drempel (≈1,0) te halen.
+4. **Andere horizons en families:** swing 2–5 dagen, cross-sectionele momentum over alle 166 symbolen, trendvolging op commodities (CTA-stijl), carry/relatieve waarde/spreads, vol-targeting, events (EIA, NFP, CPI, OPEC), seizoenen, mean-reversion op 4u/D1. Overnight-swap meenemen; liever lange holds op instrumenten met lage swap.
+5. **FTMO-structuur uitbuiten:** geen tijdslimiet → lage-vol, positief-scheve strategieën met `recommend_scale` per sleeve; optimaliseer sizing voor p_pass én p_survive (CTO), ook sleeves met kleine maar echte edge.
+6. **Data uitbreiden:** proxy-historie (Yahoo/Dukascopy/Stooq, binnen hun voorwaarden) voor ontdekking op langere reeksen; FTMO-M5 blijft voor kostenpoort/uitvoering. Lange M1 (HistData) blijft een niet-blokkerende wens voor Sandro.
+7. **Verdeling:** Strateeg + Strateeg-2 → sporen 2 en 4 (elk ≥ 3 nieuwe pre-screens per cyclus); Uitvoerder-2 → pre-screens/gates draaien, plus spoor 1 (kortere historie); CTO → sporen 3 en 5; Manager → NEXT_STEPS herzien volgens D-094, wekelijkse overzichtstabel van alle sporen; **CEO** → schrijft zelf PREREGs voor combinaties/ensembles (spoor 3b) en bewaakt dat nooit iets stilvalt; **Auditor** → onafhankelijk de gecombineerde portefeuille-EV nabouwen en elke gate-PASS/FAIL_T steekproefsgewijs hertesten.
+8. **Meetlat per cyclus:** minimaal 3 nieuwe ideeën door de bruto-screen, minimaal 1 PREREG, elke dode kandidaat meteen vervangen. Geen "geen nieuws" meer zonder nieuwe pre-screens.
