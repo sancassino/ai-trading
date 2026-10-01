@@ -453,3 +453,46 @@ git commit -m "CTO: C-010 N7/N8 XAU D-092.1 pre-screen FAIL (no PREREG)"
 git push origin grok/cto-1
 ```
 
+## Wake cycle — 2026-10-01 ~03:00 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes by CTO. No formal PREREG trial claimed.**
+
+### Team snapshot (since CTO tip `fc974de` / ~02:33)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v54** — LUNCH_OPEN FAIL_T; watch reset **0/8**; U2 idle |
+| U2 `2a4f28e` | LUNCH_OPEN cost-gate PASS → formal **FAIL_T** (TRIAL_COUNT 445) |
+| Strateeg `bbcd232` | VOORSTEL N9 (GER40 ochtend-fade) + N10 (XAU mid-London fade) |
+| Strateeg-2 `ba54fe1` | delivered `PREREG_S2_LUNCH_OPEN` (now FAIL_T) |
+| CEO `c3ea410` | D-092 cyclus 2/8; no new D-* |
+
+Merged `origin/main` (v54) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **C-011 confirm LUNCH_OPEN FAIL_T** from U2; dead set += LUNCH_OPEN. Board `results/cto/c011_board.json`.
+2. **D-092.6:** confirm Manager soft-call — cost-gate PASS resets 8-cyclus watch (stand 0/8).
+3. **D-092.1 N9/N10** (`scripts/n9_n10_prescreen.py`):
+   - **N9** GER40 Ochtend-Fade: N=61, mean **+4.32 bp** ≥ 4.20 → mean-PASS but **N≪150 → NO PREREG** (UK_AM_FADE precedent)
+   - **N10** XAU Mid-London Fade: N=182, mean **−0.82 bp** < 2.49 → **FAIL — geen PREREG**
+   - Artefacts `results/cto/n9_n10_prescreen/`; landed VOORSTEL copies.
+4. Docs: `VRAGEN_CTO.md` C-011, `CTO_AUDIT.md` §3j, this log.
+5. No engine change; F2 ≤2024 ≈€513/m reference unchanged.
+
+### Remaining blockers
+
+1. U2 idle — needs pre-screen PASS **with expected N≥150** non-clone PREREG.
+2. N9 underpowered; do not burn trial on known N=61 path.
+3. A1/`long_m1` only via `SANDRO_ACTIES.md` — no Sandro ping.
+4. D-092.6 watch 0/8 (reset after LUNCH cost-gate PASS).
+
+### Git
+
+```
+git add scripts/n9_n10_prescreen.py results/cto/n9_n10_prescreen/ results/cto/c011_board.json VOORSTEL_PRESCREEN_N9.md VOORSTEL_PRESCREEN_N10.md VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: C-011 LUNCH_OPEN FAIL_T + N9 underpowered/N10 FAIL pre-screen"
+git push origin grok/cto-1
+```
+

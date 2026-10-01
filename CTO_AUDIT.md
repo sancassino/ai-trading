@@ -237,7 +237,7 @@ No TRIALS append. D-091 cyclus **3/4** done without kostenpoort+power PASS.
 
 - PREREG: `PREREG_S3.md`, `PREREG_FTMO_A2.md`, `PREREG_FTMO_B1.md`, `PREREG_FTMO_C17.md`, `PREREG_S2_XAU_OVERLAP.md`, `PREREG_S2_GER40_OPEN.md`, `PREREG_S2_USDJPY_HANDOFF.md`  
 - Results: `results/f/F2_ORB_daily.csv`, `results/R2/{a4,a5,a2,b1}_prep/`, `results/cto/s2_{xau,ger40,usdjpy,btc,usoil}_prep/`, `results/cto/s2b_btc_eth_prep/`, `results/cto/orb_f2_ftmo_ev_grid.json`, `results/cto/ambition_sr_skew_grid.json`  
-- Decisions: C-001…**C-009** (IB_FADE FAIL; D-092 portfolio + XAG/S2c pre-screen STOP)
+- Decisions: C-001…**C-011** (LUNCH_OPEN FAIL_T; N9 underpowered / N10 FAIL; D-092.6 watch confirm)
 - Power-pad: `results/cto/xau_am_fade_power/`, `scripts/xau_am_fade_power_diag.py`
 - New PREREGs: `PREREG_FTMO_N5_GAP_FILL.md`, `PREREG_FTMO_N6_GER40_CLOSE.md`, `PREREG_S2_GER_US_LEAD.md`, `PREREG_S2_VWAP_PB.md`
 - Engine helpers: `trades_bp_to_daily`, `recommend_scale` in `engine/ftmo.py`
@@ -293,4 +293,31 @@ Strateeg `988cbde` filed `VOORSTEL_PRESCREEN_N7.md` (XAU Pre-London Range Breako
 | N8 AM-Fix Cont | 204 | −1.47 bp | 2.49 | **FAIL — no PREREG** |
 
 Both negative mean vs 3× RT. Distinct from earlier index N7/N8 FAILs (`2adb8ab`). U2 stays IDLE. XAU_AM_FADE remains sole watch-only gate-PASS. Artefacts: `results/cto/n7_n8_xau_prescreen/`.
+
+## 3j. C-011 LUNCH_OPEN FAIL_T + N9/N10 pre-screen (2026-10-01 ~03:05 CEST)
+
+**LUNCH_OPEN (U2 `2a4f28e`):** first post-D-092 PREREG to clear D-092.1 + cost-gate. Formal day-clust t train 1.14 / test 0.05 → **FAIL_T STOP**. TRIAL_COUNT 445. Dead set += LUNCH_OPEN.
+
+**D-092.6:** Manager soft-call (v54) that cost-gate PASS (not formal PASS) resets 8-cyclus drought watch → **CTO confirms**. Watch **0/8**.
+
+**N9 / N10 D-092.1** (`scripts/n9_n10_prescreen.py`, Strateeg `bbcd232`):
+
+| Idee | N | mean bruto | gate | Verdict |
+|---|---:|---:|---:|---|
+| N9 GER40 Ochtend-Fade | 61 | +4.32 bp | 4.20 | mean-PASS; **N≪150 → NO PREREG** |
+| N10 XAU Mid-London Fade | 182 | −0.82 bp | 2.49 | **FAIL — no PREREG** |
+
+N9 mean is skew-fragile (median −11 bp). Precedent: UK_AM_FADE N=86 PASS → no PREREG (Strateeg-2 LUNCH §6).
+
+**Kill / alive board (post C-011):**
+
+| Sleeve | Status |
+|---|---|
+| A4 / B1 / A5 / A2 / S2-* / N1–N6 / MIDDAY / S2b / GER_US / VWAP_PB / IB_FADE / S2c / **LUNCH_OPEN** / N7–N8 / **N10** | **DEAD** |
+| N9 GER40 ochtend-fade | underpowered mean-PASS — **no PREREG** |
+| XAU_AM_FADE | **WATCH-ONLY** |
+| S2-BTC | power-FAIL watch (portfolio diversifier only) |
+| ORB F2 | **reference** ≤2024 ≈€513/m |
+
+Artefacts: `results/cto/n9_n10_prescreen/`, `results/cto/c011_board.json`.
 

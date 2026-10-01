@@ -1,0 +1,60 @@
+{
+  "n9": {
+    "idea": "N9_GER40_OCHTEND_FADE",
+    "n": 61,
+    "mean_bruto_bp": 4.322,
+    "median_bruto_bp": -10.9905,
+    "p25": -21.7195,
+    "p75": 32.2193,
+    "stop_share": 0.459,
+    "target_share": 0.1148,
+    "rt_bp": 1.4,
+    "gate_3x_rt": 4.199999999999999,
+    "pass": true,
+    "date_min": "2022-01-03",
+    "date_max": "2023-12-15",
+    "decision": "PASS_may_PREREG",
+    "reserve_2025": "untouched"
+  },
+  "n9_costs_rt_sensitivity": {
+    "idea": "N9_GER40_OCHTEND_FADE_costsRT",
+    "n": 61,
+    "mean_bruto_bp": 4.322,
+    "median_bruto_bp": -10.9905,
+    "p25": -21.7195,
+    "p75": 32.2193,
+    "stop_share": 0.459,
+    "target_share": 0.1148,
+    "rt_bp": 0.72,
+    "gate_3x_rt": 2.16,
+    "pass": true,
+    "date_min": "2022-01-03",
+    "date_max": "2023-12-15",
+    "decision": "PASS_may_PREREG",
+    "reserve_2025": "untouched"
+  },
+  "n10": {
+    "idea": "N10_XAU_MIDLONDON_FADE",
+    "n": 182,
+    "mean_bruto_bp": -0.8232,
+    "median_bruto_bp": 1.6981,
+    "p25": -13.326,
+    "p75": 19.4529,
+    "stop_share": 0.0,
+    "target_share": 0.2198,
+    "rt_bp": 0.83,
+    "gate_3x_rt": 2.4899999999999998,
+    "pass": false,
+    "date_min": "2021-01-25",
+    "date_max": "2023-12-29",
+    "decision": "NO_PREREG_screen_fail",
+    "reserve_2025": "untouched"
+  },
+  "source": "VOORSTEL_PRESCREEN_N9/N10 @ bbcd232",
+  "binding_gates": {
+    "n9": 4.199999999999999,
+    "n9_note": "Strateeg VOORSTEL RT=1.40\u21924.20 (matches N6 GER40 convention); COSTS_FTMO RT=0.72\u21922.16 reported as sensitivity only",
+    "n10": 2.4899999999999998
+  },
+  "reserve_2025": "untouched"
+}

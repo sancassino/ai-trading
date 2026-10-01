@@ -4,6 +4,36 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-011 — LUNCH_OPEN FAIL_T confirm + D-092.6 watch + N9/N10 pre-screen
+**Opened:** 2026-10-01 ~03:00 Europe/Amsterdam (main v54 LUNCH_OPEN FAIL_T; Strateeg `bbcd232` N9/N10 VOORSTELs; U2 idle @ `2a4f28e`).  
+**Closed:** 2026-10-01 ~03:05 Europe/Amsterdam by CTO (executable path; no CEO wait).
+
+**Facts:**
+1. **LUNCH_OPEN** (U2 `2a4f28e` / PREREG Strateeg-2 `ba54fe1`): cost-gate PASS (N=233, mean +4.72 bp ≥ 2.43 stress) → formal day-clust t train **1.14** / test **0.05** (<2.0) → **FAIL_T STOP**. TRIAL_COUNT **445**. Dead set += LUNCH_OPEN.
+2. **D-092.6 soft-call (Manager v54):** "gate-PASS" for 8-cyclus drought watch = **kostenpoort PASS**, not formal-trial PASS. LUNCH_OPEN reset watch → **0/8**.
+3. **N9 / N10 D-092.1** (Strateeg `bbcd232`; CTO `scripts/n9_n10_prescreen.py`, train 2021–23 only):
+
+| Idee | N | mean bruto | gate | Uitkomst |
+|------|---|------------|------|----------|
+| N9 GER40 Ochtend-Fade → XETRA-open | 61 | +4.32 bp | 4.20 bp | mean-PASS but **N=61≪150 → NO PREREG** |
+| N10 XAU Mid-London Fade → AM-Fix | 182 | −0.82 bp | 2.49 bp | **FAIL — geen PREREG** |
+
+N9 median bruto −11.0 bp; mean without top-3 winners ≈ −0.96 bp (fragile skew). Same power rule as Strateeg-2 UK_AM_FADE (N=86 PASS → no PREREG) and XAU_AM_FADE watch-only.
+
+**Decision (binding):**
+1. **LUNCH_OPEN = DEAD** — confirm U2 FAIL_T; no restart / no clones of US lunch open-anchor fade.
+2. **D-092.6:** CTO **confirms** Manager soft-call — cost-gate PASS resets the 8-cyclus watch. Stand remains **0/8**. Formal FAIL_T still kills the sleeve.
+3. **N10 = STOP at pre-screen** — no PREREG.
+4. **N9 = underpowered mean-PASS → NO PREREG** until a power-pad exists (longer history / looser *pre-registered* filter that still clears 3×RT with N≥150 — not a post-hoc retune of 0.40×). Do **not** burn TRIAL_COUNT on a known N≪150 formal path. Label watch-candidate only (not XAU_AM_FADE sibling — different symbol/session).
+5. **U2:** remains **IDLE** — still waiting for a pre-screen **PASS with N≥150** (or explicit PREREG that freezes a viable power path) non-clone PREREG.
+6. **Strateeg / Strateeg-2:** next ideas must clear D-092.1 **and** expect N≥150 on train. Prefer non-XAU / non-GER-morning-fade clones of LUNCH_OPEN/N9. Do not refile N9/N10 without a distinct mechanism + power path.
+7. **CEO/Sandro:** no ask. No reserve open. No chat ping.
+
+**Where applied:** `scripts/n9_n10_prescreen.py`, `results/cto/n9_n10_prescreen/`, `results/cto/c011_board.json`, landed `VOORSTEL_PRESCREEN_N9.md` / `N10.md`, `CTO_AUDIT.md` §3j, `RUNLOG_CTO.md`, this ticket.
+
+---
+
+
 ### C-010 — D-092.1 pre-screen N7/N8 XAU FAIL (no PREREG)
 **Opened:** 2026-10-01 ~02:33 Europe/Amsterdam (Strateeg `988cbde` VOORSTEL_PRESCREEN_N7/N8; U2 idle; NEXT_STEPS v52 D-092 watch 0/8).  
 **Closed:** 2026-10-01 ~02:35 Europe/Amsterdam by CTO (executable m5gz path; no CEO wait).

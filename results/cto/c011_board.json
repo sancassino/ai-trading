@@ -1,0 +1,47 @@
+{
+  "ticket": "C-011",
+  "ts_europe_amsterdam": "2026-10-01 ~03:05 CEST",
+  "lunch_open": {
+    "u2_commit": "2a4f28e",
+    "prereg": "PREREG_S2_LUNCH_OPEN",
+    "cost_gate": {
+      "n": 233,
+      "mean_bruto_bp": 4.7154,
+      "stress_gate_bp": 2.4265,
+      "verdict": "PASS"
+    },
+    "formal_trial": {
+      "train_t": 1.1387,
+      "test_t": 0.0515,
+      "threshold": 2.0,
+      "verdict": "FAIL_T",
+      "trial_count": 445
+    },
+    "decision": "DEAD \u2014 do not restart / no clones"
+  },
+  "d092_6_watch": {
+    "manager_soft_call": "cost-gate PASS resets 8-cycle drought watch (not formal-trial PASS)",
+    "cto_confirm": "AGREE \u2014 cost-gate PASS is scarce signal of research progress; LUNCH_OPEN reset watch to 0/8 stands",
+    "watch_stand": "0/8"
+  },
+  "n9_n10_prescreen": {
+    "source": "bbcd232",
+    "n9": {
+      "n": 61,
+      "mean_bruto_bp": 4.322,
+      "gate": 4.2,
+      "mean_gate": "PASS",
+      "power": "N=61 << 150 \u2192 NO_PREREG (UK_AM_FADE / XAU_AM_FADE precedent)",
+      "median_bruto_bp": -10.99,
+      "note": "mean fragile; w/o top-3 winners mean\u2248\u22120.96"
+    },
+    "n10": {
+      "n": 182,
+      "mean_bruto_bp": -0.8232,
+      "gate": 2.49,
+      "verdict": "FAIL \u2014 no PREREG"
+    }
+  },
+  "reserve_2025": "untouched",
+  "trials_csv": "not written by CTO this cycle (U2 already appended LUNCH_OPEN)"
+}
