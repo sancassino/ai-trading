@@ -1737,3 +1737,30 @@ Year-split train bruto: 2021 **+25.26** / 2022 **−0.46** / 2023 **−3.63**. L
 **Geen nieuwe PREREG.** N82–N86 volledig afgesloten (C-030). Geen gates gerund. TRIAL_COUNT **456** onveranderd.
 
 **U2 next:** IDLE wacht Strateeg ≥2 NEW_FAMILY non-clone → PASS→PREREG. Skip N75–N86/CORN/VIX_TERM/L60/UKOIL-OVN.
+
+## Cyclus 15:25 CEST (2026-10-01) — N87 US30cash gap-fade FAIL_T (TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r` — tip pre-cycle `f37bf04` (main merge U1 COSTS 166 symb). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (no v83 issued): U2 IDLE — wacht PASS→PREREG. Formal OPEN queue was empty.
+- CEO `42821c9` (branch `claude/ftmo-trading-strategy-98mplz`) ~15:50 CEST: **PREREG_FTMO_N87** vastgelegd (US30cash opening-gap fade |gap|>30bp intradag-flat; RT 0.45 bp; gate 1.35 bp; train 2021–2023, test 2024). Pre-screen N87/N88/N89 in `results/ceo/prescreen_n87_n89.md`: N87 gate-PASS (N=158, mean=+8.73 bp), N88/N89 FAIL.
+- CEO_LOG `8a0552f`: N87-N89 kostenpoort bevestigd. SUPERVISOR_LOG `3911eed`: gates bevestigd; TRIAL 456 stabiel.
+- PREREG-vóór-resultaat voldaan: CEO commit `42821c9` is vóór deze gate-run.
+
+### Gate N87 — US30cash opening-gap fade
+
+**Regel:** prev_close = laatste M5-bar close ≤ 23:00 servertime vorige dag; open = eerste M5-bar open ≥ 08:00 servertime vandaag; gap_bp = 1e4×(open−prev_close)/prev_close; |gap_bp|>30 → fade (SHORT als gap↑, LONG als gap↓); exit = laatste M5-bar close ≤ 22:55 servertime; geen stop; max 1 trade/dag; geen swap (intradag-flat). Script: `scripts/n87_us30_gap_fade_gate.py`.
+
+| Venster | N | mean bruto (bp) | gate (1.35) | stress (2.03) | t NW-L5 (netto) | Uitkomst |
+|---|---:|---:|---:|---:|---:|---|
+| **Train** 2021–2023 | 162 | **+11.7745** | **PASS** | **PASS** | 1.6322 | t < 2.0 |
+| **Test** 2024 | 27 | **−17.7059** | FAIL | FAIL | −1.3049 | Negatief |
+
+**Uitkomst: FAIL_T** — cost-gate PASS (train mean +11.77 ≥ 1.35), maar:
+- t_NW train 1.6322 < 2.0 (formele drempel niet gehaald)
+- Test 2024 N=27 sterk negatief (mean −17.71 bp, t=−1.30); gap-gedrag reversed in 2024
+
+counts_as_trial = **true**. **TRIAL_COUNT = 457**. Dead += N87_US30_GAP_FADE. Geen klonen (geen drempel-/tijd-variatie per PREREG §3). Reserve 2025 onaangeraakt.
+
+**U2 next:** IDLE wacht Strateeg ≥2 NEW_FAMILY non-clone → PASS→PREREG. N88/N89 zijn FAIL in CEO pre-screen (N88 N<150 + negatief; N89 mean +1.06 < gate). Kill circuit: streak 5× cost-PASS→FAIL_T telt mee (N87 is een bijdrage).
