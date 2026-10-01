@@ -983,3 +983,50 @@ git add scripts/c022_d097_proxy_tsmom_screen.py results/cto/c022_d097_proxy_tsmo
 git commit -m "CTO: C-022 D-097 proxy TSMOM/XS screen (spoor 6; 0 trials)"
 git push origin grok/cto-1
 ```
+
+## C-023 — TSMOM_DIV FAIL absorb + ENERGY_TSMOM PREREG — 2026-10-01 ~10:35 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended: **0**. No FTMO signup / spend. No EINDSTAND re-nag.
+
+### Team snapshot vs prior wake (~09:53 CEST / C-022)
+
+| Item | ~09:53 C-022 | ~10:35 C-023 |
+|---|---|---|
+| main NEXT_STEPS | v69 `12bdd5c` | **v70** tip **`1f6b53f`** (D-098 TSMOM_DIV + C-022) |
+| grok/cto-1 | `de97468` C-022 | **this C-023** (+ merge main) |
+| Decisions | D-097 | **D-098** + **D-099** (`76ec6ed`) |
+| TRIAL_COUNT | 453 | **453** (TSMOM_DIV gate STOP ≠ trial) |
+| U2 | IDLE `bff9569` / was `2f5ee51` | **`e5d23c5`** TSMOM_DIV **FAIL_COST_GATE** |
+| Strateeg | `23a7f6c` / `5e288ed` | **`f5ef89d`** D-098 bar N46/N47; N45/N48–N57; OPEN N58–N59 |
+| S2 | `1cf4542` drought | `1cf4542` (unchanged) |
+| CEO | D-097 | **D-099** C-022 verwerkt + TSMOM_DIV erratum |
+| EINDSTAND | tussenstand | tussenstand; **no re-nag** |
+
+### Diff vs last known (~09:53)
+
+1. Manager v70 + CEO D-098/D-099 landed; live P1 = TSMOM_DIV.
+2. U2 executed universe freeze (n=56) + cost-gate → **FAIL** (bruto −5.73 vs cost 45.12; ~29 nights).
+3. CTO skips `ftmo_ev` (PREREG §4.1 STOP). Unblocks D-099 by freezing **PREREG_FTMO_ENERGY_TSMOM** (UKOIL+USOIL L20/H10 long_only; price-bruto gate).
+
+### Deliverable
+
+`results/cto/c023_tsmom_div_fail_energy_prereg/` + `PREREG_FTMO_ENERGY_TSMOM.md`:
+- Class cost decomp (energie_agri worst: bruto −39 / cost 105)
+- Energy PREREG frozen for U2 gate (HEATOIL deferred; swap credit ≠ alpha)
+- Dead += TSMOM_DIV (no clones)
+
+### CTO next
+
+1. U2: gate ENERGY_TSMOM (no 2025+).
+2. On PASS → track-5 `ftmo_ev` / `recommend_scale`.
+3. Track-3 still paused. No Sandro eval ping.
+
+### Git
+
+```
+git add PREREG_FTMO_ENERGY_TSMOM.md results/cto/c023_tsmom_div_fail_energy_prereg/ \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-023 TSMOM_DIV FAIL absorb + ENERGY_TSMOM PREREG (D-099; 0 trials)"
+git push origin grok/cto-1
+```

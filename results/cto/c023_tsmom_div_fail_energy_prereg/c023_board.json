@@ -1,0 +1,41 @@
+{
+  "cycle": "C-023",
+  "when_europe_amsterdam": "2026-10-01 ~10:32 CEST",
+  "decisions": [
+    "D-094 ACTIVE",
+    "D-093 OFF",
+    "D-097",
+    "D-098",
+    "D-099"
+  ],
+  "tsmom_div": {
+    "u2_tip": "e5d23c5",
+    "outcome": "FAIL_COST_GATE",
+    "counts_as_trial": false,
+    "universe_n": 56,
+    "train_mean_bruto_bp_unit": -5.7334,
+    "train_mean_cost_bp_unit": 45.1235,
+    "reserve_2025": "untouched",
+    "cto_ftmo_ev": "SKIP \u2014 cost-gate STOP (PREREG \u00a74.1); no recommend_scale"
+  },
+  "root_cause": {
+    "headline": "Monthly 12-1 L/S on 56-name FTMO universe has negative mean unit bruto; ~29 overnight nights \u00d7 FTMO swap dominate RT.",
+    "mean_nights": 28.795035223079502,
+    "class_decomp_csv": "class_cost_decomp_train.csv",
+    "implication": "Do not clone TSMOM_DIV (no lookback/universe retune). Prefer fewer names, shorter holds (10\u201320d), long-only energy where C-022 showed \u226550bp bruto, and gate on price-bruto not swap credit (D-099)."
+  },
+  "energy_prereg": {
+    "file": "PREREG_FTMO_ENERGY_TSMOM.md",
+    "symbols": [
+      "UKOIL.cash",
+      "USOIL.cash"
+    ],
+    "optional_third": "HEATOIL.c only after FTMO RT/swap confirmed (C-022 used fallback)",
+    "lookback_days": 20,
+    "hold_days": 10,
+    "mode": "long_only",
+    "source_diagnostic": "C-022 shortlist_noncrypto (forking-path disclosed; not used for post-hoc selection beyond D-099 mandate)"
+  },
+  "trials_appended": 0,
+  "reserve_2025_touched": false
+}
