@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N35 — US100cash Europe-Session Momentum → US Open Continuation
 
-**Status:** **OPEN** — awaiting cost pre-screen (**D-094** track 2; queue na N24–N34 FAIL; filed 2026-10-01 08:28).  
+**Status:** **PASS_may_PREREG** — D-092.1 PASS (U2 `43c395e`; mean +6,60 bp > 1,98 bp; N=214). PREREG_FTMO_N35 bevroren. (**D-094** track 2; queue na N24–N34 FAIL; filed 2026-10-01 08:28).  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `US100cash` (RT **0,66 bp** → gate **1,98 bp**).  
 **Track 2:** index — Europe-hours trend on US100 cash (09:00–15:00 CET) continues into first US hour (15:30–17:00). ≠ ORB, ≠ N3 close-drive, ≠ N14 pre-market mom, ≠ N20/N23.  

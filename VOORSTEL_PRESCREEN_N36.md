@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N36 — XAUUSD NY-Open Drive Continuation (first 90 min)
 
-**Status:** **OPEN** — awaiting cost pre-screen (**D-094** track 2; queue na N24–N34 FAIL; filed 2026-10-01 08:28).  
+**Status:** **PASS_may_PREREG** — D-092.1 PASS (U2 `43c395e`; mean +2,80 bp > 2,49 bp; N=150). PREREG_FTMO_N36 bevroren. (**D-094** track 2; queue na N24–N34 FAIL; filed 2026-10-01 08:28).  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `XAUUSD` (RT **0,83 bp** → gate **2,49 bp**).  
 **Track 2:** metaal — **continuation** van de eerste 30 min na NY-open door tot 17:00; ≠ N12 (andere definitie/fail), ≠ N25 fade, ≠ AM_FADE.  
