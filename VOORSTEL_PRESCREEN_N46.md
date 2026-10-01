@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N46 — EURGBP London Fix Extension Fade
 
-**Status:** **OPEN** — awaiting cost pre-screen (**D-094** track 2; replace N35 FAIL_T; filed 2026-10-01 ~09:26).  
+**Status:** **BARRED** — D-098/C-021: intradag FX-clone met gate 3,12 bp ≪ 50 bp bruto-vloer; geen screen (2026-10-01 ~10:15 CEST). Vervangen door N49–N51 (D-097 swing).
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `EURGBP` (RT **1,04 bp** COSTS_FTMO → gate **3,12 bp** = 3×RT).  
 **Track 2:** FX cross — London-fix extensie-fade (niet session-mom, niet ORB). Swap 0.

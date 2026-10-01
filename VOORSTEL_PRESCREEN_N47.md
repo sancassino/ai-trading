@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N47 — USDCHF Asia→London Handoff Continuation
 
-**Status:** **OPEN** — awaiting cost pre-screen (**D-094** track 2; replace N36 FAIL_T; filed 2026-10-01 ~09:26).  
+**Status:** **BARRED** — D-098/C-021: intradag FX-clone met gate 3,03 bp ≪ 50 bp bruto-vloer; geen screen (2026-10-01 ~10:15 CEST). Vervangen door N49–N51 (D-097 swing).
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `USDCHF` (RT **1,01 bp** → gate **3,03 bp**).  
 **Track 2:** FX major — Asia-sessie impuls continueren in vroege London (vóór Lon midday). Swap 0.

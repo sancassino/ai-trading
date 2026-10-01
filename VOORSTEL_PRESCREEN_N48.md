@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N48 — USDJPY Swing 1d TSMOM (overnight; swap in gate)
 
-**Status:** **OPEN** — awaiting cost pre-screen (**D-094** track 4; replace S2-GBPJPY FAIL_T slot; filed 2026-10-01 ~09:26).  
+**Status:** **geen PREREG — D-092.1 FAIL** Strateeg `n45_n51` (N=767, mean **3.2297** < gate **7.08**; FAIL_MEAN). Geen retune.
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `USDJPY` (RT **0,78 bp**; swap_long **−0,37** / swap_short **+1,58** bp/nacht — COSTS_FTMO).  
 **Track 4:** andere horizon — close-to-close **1 handelsdag** TSMOM (niet intradag session-mom).

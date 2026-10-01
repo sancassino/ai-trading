@@ -1,0 +1,156 @@
+{
+  "when": "2026-10-01 ~10:25 CEST",
+  "train": "2021-01-01..2023-12-31",
+  "min_n": 150,
+  "results": [
+    {
+      "id": "N45",
+      "n": 61,
+      "mean_bruto_bp": -81.7865,
+      "median_bruto_bp": -67.7906,
+      "gate_bp": 54.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.377
+    },
+    {
+      "id": "N48",
+      "n": 767,
+      "mean_bruto_bp": 3.2297,
+      "median_bruto_bp": 3.9094,
+      "gate_bp": 7.08,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.5319
+    },
+    {
+      "id": "N49",
+      "n": 55,
+      "mean_bruto_bp": 36.4032,
+      "median_bruto_bp": 24.8569,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.5455
+    },
+    {
+      "id": "N50",
+      "n": 54,
+      "mean_bruto_bp": 34.1834,
+      "median_bruto_bp": 81.6719,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.5556
+    },
+    {
+      "id": "N51",
+      "n": 59,
+      "mean_bruto_bp": 8.4748,
+      "median_bruto_bp": -24.4065,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.4746
+    },
+    {
+      "id": "N52",
+      "n": 21,
+      "mean_bruto_bp": 131.0173,
+      "median_bruto_bp": 220.8547,
+      "gate_bp": 118.98,
+      "pass": false,
+      "reason": "FAIL_N_underpowered",
+      "hit_rate": 0.619
+    },
+    {
+      "id": "N53",
+      "n": 32,
+      "mean_bruto_bp": 91.6463,
+      "median_bruto_bp": 102.4046,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_N_underpowered",
+      "hit_rate": 0.6875
+    },
+    {
+      "id": "N54",
+      "n": 33,
+      "mean_bruto_bp": 101.8346,
+      "median_bruto_bp": 173.3565,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_N_underpowered",
+      "hit_rate": 0.5758
+    },
+    {
+      "id": "N55",
+      "n": 70,
+      "mean_bruto_bp": 72.1766,
+      "median_bruto_bp": 61.0004,
+      "gate_bp": 138.15,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.5429,
+      "by_sym": {
+        "US100cash": {
+          "n": 21,
+          "mean": 131.0173
+        },
+        "US500cash": {
+          "n": 24,
+          "mean": 62.4453
+        },
+        "US30cash": {
+          "n": 25,
+          "mean": 32.0923
+        }
+      }
+    },
+    {
+      "id": "N56",
+      "n": 109,
+      "mean_bruto_bp": 35.3035,
+      "median_bruto_bp": 47.3994,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.5505,
+      "by_sym": {
+        "UKOILcash": {
+          "n": 55,
+          "mean": 36.4032
+        },
+        "USOILcash": {
+          "n": 54,
+          "mean": 34.1834
+        }
+      }
+    },
+    {
+      "id": "N57",
+      "n": 78,
+      "mean_bruto_bp": 40.6973,
+      "median_bruto_bp": 82.6388,
+      "gate_bp": 50.0,
+      "pass": false,
+      "reason": "FAIL_MEAN",
+      "hit_rate": 0.6282,
+      "by_sym": {
+        "USDJPY": {
+          "n": 32,
+          "mean": 91.6463
+        },
+        "EURJPY": {
+          "n": 29,
+          "mean": 55.0065
+        },
+        "AUDUSD": {
+          "n": 17,
+          "mean": -79.6165
+        }
+      }
+    }
+  ],
+  "note": "N46/N47 BARRED D-098; N45/N48\u2013N51/N55\u2013N57 FAIL; N52\u2013N54 underpowered (mean\u2265gate, N\u226a150); OPEN N58\u2013N59"
+}

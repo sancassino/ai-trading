@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N45 — ETHUSD Asia-Session Momentum → EU Open Continuation
 
-**Status:** **OPEN** — awaiting cost pre-screen (**D-094** track 2 + **D-097** prio; filed 2026-10-01 ~09:50 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** Strateeg `n45_n51` (N=61, mean **-81.7865** < gate **54.0**; FAIL_MEAN). Geen retune.
 **Auteur:** Strateeg (Claude).  
 **Instrument:** `ETHUSD` (RT **18,0 bp** FTMO-crypto default; `missing_from_COSTS_FTMO` → `results/screen_cost_vol.csv`).  
 **Gate:** 3 × 18,0 = **54,0 bp**.  
