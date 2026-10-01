@@ -243,6 +243,7 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 | N75 | **XAU/XAG ratio MR 3d LO-gold/SO-silver** (VOORSTEL_PRESCREEN_N75) | ≠ N60/N65/N70 / ENERGY / L60-FX | **OPEN** screen — **NEW_FAMILY A**; gate **30,60** bp; C-028 Lane-B |
 | N76 | **UKOIL Mon→Thu inventory-window LO** (VOORSTEL_PRESCREEN_N76) | ≠ ENERGY/N49/N54/N59 | **OPEN** screen — **NEW_FAMILY B**; gate **50,00** bp; C-028 Lane-B |
 | N77 | **FX6 vol-timed XS rank-reversal 5d** (VOORSTEL_PRESCREEN_N77) | ≠ TSMOM_DIV/N26/N30/N57/L60 | **OPEN** screen — **NEW_FAMILY C**; gate **46,29** bp; C-028 Lane-B |
+| N78 | **VIX_TERM_VOV** — VIX9D/VIX3M + VoV10 combo → US100 1d LO (`PREREG_FTMO_N78_VIX_TERM_VOV`) | ≠ XASSET_VOL_TIMING / TSMOM / ORB / L60 / N75–N77 | **OPEN PREREG** — Lane-B from S2 `b765613c`; gate **7,83** bp (D-100; 1× night swap long); C-028 |
 | TSMOM_DIV | **Gediversifieerde 12-1 TSMOM** (CEO `PREREG_FTMO_TSMOM_DIV`) | D-098; ≠ B1/N49–N57 | **STOP FAIL_COST_GATE** U2 `e5d23c5` (geen trial) |
 | ENERGY_TSMOM | **UKOIL+USOIL L20/H10 LO** (CTO C-023 / D-099) | ≠ N49/N59 | **STOP FAIL_COST_GATE** U2 `c1499ce` (geen trial) |
 | IDX_SHORT | **US100+US30 short-only L20/H10** (CTO C-024 / D-100) | ≠ N35/N41/N61/N64 | **STOP FAIL_COST_GATE** U2 `72f40d3` (geen trial; family A closed) |
@@ -272,7 +273,7 @@ Per heropende regel de volgende metriek berekenen:
 
 ## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090…D-100, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
 
-*Bijgewerkt: 2026-10-01 12:42 Amsterdam — **C-028** bindend: USDJPY_MED **FAIL_T** U2 `910d6ff` (TRIAL 454→455) en EURJPY_MED **FAIL_T** U2 `65a9b23` (TRIAL 455→456); L60 FX-med family **BARRED/STOP**, geen pair-forks. Strateeg writes FTMO PREREGs only from Lane-A survivors OR honest-RT intradag w/ D-100; **no Faraday PASS→PREREG this cycle**. OPEN **N75–N77** NEW_FAMILY; **TRIAL_COUNT 456**; Quiet*
+*Bijgewerkt: 2026-10-01 12:47 Amsterdam — **C-028 Lane-B:** S2 `b765613c` promote → **PREREG N78 VIX_TERM_VOV** (US100cash; gate **7,83** bp = 3×(0,66+1×1,95); OPEN awaiting U2). N75–N77 remain OPEN screens; N72–N74 BARRED; L60 FX-med closed. **TRIAL_COUNT 456**; Quiet to Sandro (parent U2 ping)*
 
 ### 10a. Overzicht PREREGs (Faraday + Grok Strateeg-1 + Strateeg-2)
 
@@ -356,6 +357,7 @@ Per heropende regel de volgende metriek berekenen:
 | N75 | XAU/XAG ratio MR 3d | faraday VOORSTEL | **OPEN** NEW_FAMILY A gate 30,60 | C-028 Lane-B |
 | N76 | UKOIL Mon→Thu inv-window | faraday VOORSTEL | **OPEN** NEW_FAMILY B gate 50,00 | C-028 Lane-B |
 | N77 | FX6 vol-timed XS rev 5d | faraday VOORSTEL | **OPEN** NEW_FAMILY C gate 46,29 | C-028 Lane-B |
+| N78 | VIX_TERM_VOV US100 1d LO | Lane-B from S2 `b765613c` | **OPEN PREREG** gate **7,83** (D-100 overnight long) | NEW_FAMILY; ≠ XASSET_VOL_TIMING; Lane-A bruto ≠ PASS |
 | TSMOM_DIV | CEO 12-1 multi-asset TSMOM | ftmo-strategy CEO | **STOP FAIL_COST_GATE** U2 `e5d23c5` | geen trial |
 | ENERGY_TSMOM | UKOIL+USOIL L20/H10 LO | CTO C-023 | **STOP FAIL_COST_GATE** U2 `c1499ce` | geen trial |
 | IDX_SHORT | US100+US30 short-only L20/H10 | CTO C-024 / D-100 | **STOP FAIL_COST_GATE** U2 `72f40d3` | family A closed |
@@ -391,7 +393,7 @@ Per heropende regel de volgende metriek berekenen:
 - **P1 ORB+BTC:** reserve one-shot FAIL → TRIALS append; **TRIAL_COUNT = 448** (CTO C-020 / D-096).  
 - **N35/N36/S2-GBPJPY FAIL_T:** U2 `a498a69` → trials 449–451.  
 - **N40 FAIL_STRESS_then_FAIL_T** (trial **452**) + **N41 FAIL_T** (trial **453**): U2 `5b3db74` → **TRIAL_COUNT = 453**. Dead-set += N40·N41.  
-- **N44 BARRED** (clone EU→US dood). **N46/N47 BARRED** D-098/C-021. **N59 BARRED** ENERGY clone. **N68 BARRED** family A. N45/N48–N58/N60–N65 screened **0 PASS** (N52–N54/N64 underpowered). N66 subsumed; N67/N69–N71 **DIAG_FAIL**. **USDJPY_MED FAIL_T** U2 `910d6ff` (TRIAL 454→455) + **EURJPY_MED FAIL_T** U2 `65a9b23` (TRIAL 455→456): **N72–N74 BARRED/STOP**, L60 FX-med family closed. OPEN **N75–N77** NEW_FAMILY. **TSMOM_DIV+ENERGY+IDX_SHORT FAIL_COST_GATE** (geen trial). **FX_EUR_SHORT FAIL_T** was TRIAL 454; **TRIAL_COUNT = 456** after the two MED FAIL_T trials. No live MED PREREG; Faraday geen eigen PASS→PREREG deze cyclus (Lane-B).
+- **N44 BARRED** (clone EU→US dood). **N46/N47 BARRED** D-098/C-021. **N59 BARRED** ENERGY clone. **N68 BARRED** family A. N45/N48–N58/N60–N65 screened **0 PASS** (N52–N54/N64 underpowered). N66 subsumed; N67/N69–N71 **DIAG_FAIL**. **USDJPY_MED FAIL_T** U2 `910d6ff` (TRIAL 454→455) + **EURJPY_MED FAIL_T** U2 `65a9b23` (TRIAL 455→456): **N72–N74 BARRED/STOP**, L60 FX-med family closed. OPEN **N75–N77** NEW_FAMILY screens. **Live PREREG N78 VIX_TERM_VOV** (Lane-B from S2 `b765613c`; gate 7,83 bp; awaiting U2). **TSMOM_DIV+ENERGY+IDX_SHORT FAIL_COST_GATE** (geen trial). **FX_EUR_SHORT FAIL_T** was TRIAL 454; **TRIAL_COUNT = 456** after the two MED FAIL_T trials.
 - N3: gate PASS maar t FAIL — geen TRIALS-append.  
 - N9: mean-PASS maar N≪150 — **geen PREREG/trial** (D-092.1 N-eis).  
 - S2-XAU_AM_FADE: gate PASS maar power onvoldoende — **geen trial-claim** (watch-only).  
@@ -400,25 +402,26 @@ Per heropende regel de volgende metriek berekenen:
 
 ### 10c. Welke hypothese is sterker? (evidence uit docs/kosten — geen verzonnen backtests)
 
-**Korte conclusie (post C-028; 12:42):** **Freeze OFF** + **C-028 Lane-B**. IDX_SHORT+ENERGY+TSMOM_DIV **FAIL_COST_GATE**; **USDJPY_MED FAIL_T** U2 `910d6ff` (454→455) en **EURJPY_MED FAIL_T** U2 `65a9b23` (455→456). N72–N74 **BARRED/STOP**; L60 FX-med family closed. OPEN **N75–N77 NEW_FAMILY** (ratio MR / oil inv-window / vol-timed XS). **TRIAL_COUNT = 456**. Ranking: **F2-ORB/A1** > **N75–N77** (OPEN screens) > **S2-XAU_AM_FADE** watch > **S2-BTC** > **GS01**. No live MED PREREG; no new VOORSTEL, no PREREG this cycle; Quiet.
+**Korte conclusie (post C-028; 12:47):** **Freeze OFF** + **C-028 Lane-B**. S2 `b765613c` → **PREREG N78 VIX_TERM_VOV** (US100; gate 7,83; OPEN U2). IDX_SHORT+ENERGY+TSMOM_DIV **FAIL_COST_GATE**; **USDJPY_MED/EURJPY_MED FAIL_T**; N72–N74 **BARRED**. OPEN screens **N75–N77**. **TRIAL_COUNT = 456**. Ranking: **F2-ORB/A1** > **N78 VIX_TERM_VOV** (live PREREG) > **N75–N77** (OPEN screens) > **S2-XAU_AM_FADE** watch > **S2-BTC** > **GS01**. Quiet to Sandro.
 
 | Rang (kwalitatief) | Hypothese | Waarom (alleen bestaande docs/kosten/research) |
 |--------------------|-----------|-----------------------------------------------|
 | 1 (referentie-EV) | **F2-ORB / A1** | Gerepliceerde bruto-edge; enige reopen-pad = lange M1 |
-| 2 (live OPEN) | **N75–N77** | C-028 Lane-B NEW_FAMILY screens; no live MED PREREG |
-| 3 (watch-only) | **S2-XAU_AM_FADE** | +18,70 bp; N=12 |
-| 4 (watch / P1-leg) | **S2-BTC** | stap1 PASS N=197; P1 reserve FAIL |
-| 5 (verzwakt) | **GS01** | Faraday pooled pre-screen FAIL |
+| 2 (live PREREG) | **N78 VIX_TERM_VOV** | Lane-B from S2 `b765613c`; gate 7,83; awaiting U2 cost/formal |
+| 3 (live OPEN screens) | **N75–N77** | C-028 Lane-B NEW_FAMILY screens (ratio/oil/FX XS) |
+| 4 (watch-only) | **S2-XAU_AM_FADE** | +18,70 bp; N=12 |
+| 5 (watch / P1-leg) | **S2-BTC** | stap1 PASS N=197; P1 reserve FAIL |
+| 6 (verzwakt) | **GS01** | Faraday pooled pre-screen FAIL |
 | Dood | A2/A4/A5/B1/N1–N65/**FX_EUR_SHORT**/IDX_SHORT/ENERGY/TSMOM_DIV/P1/… | Poort, t, FAIL_T, DIAG_FAIL |
 | Underpowered | **N43** UKOIL drive; **N52–N54/N64** | mean PASS N≪150 — geen PREREG |
 | Barred | **N44/N46/N47/N59/N68** | clones / C-021 / ENERGY / family A |
 | Open screen | **N75–N77** | NEW_FAMILY A/B/C (L60 FX-med family closed) |
 | DIAG_FAIL | **N67/N69–N71** | C-025/C-026 — geen PREREG |
-| Live PREREG | **—** | None after USDJPY_MED/EURJPY_MED FAIL_T; C-028 closed the MED sleeve family |
+| Live PREREG | **N78 VIX_TERM_VOV** | OPEN awaiting U2; Lane-A bruto ≠ PASS; gate 7,83 |
 | Dead cost-gate | **TSMOM_DIV / ENERGY / IDX_SHORT** | FAIL_COST_GATE (geen trial) |
 | Dead FAIL_T | **USDJPY_MED + EURJPY_MED** | U2 `910d6ff` / `65a9b23`; TRIAL_COUNT 456 |
 
-**Faraday vs Strateeg-2:** Faraday **C-028** closed the L60 FX-med family: **USDJPY_MED + EURJPY_MED dead**; N72–N74 **BARRED/STOP**. **N75–N77 NEW_FAMILY** remain the live OPEN pipeline. S2 tip `4575a4f` drought. No live MED PREREG; no Faraday PASS→PREREG. Quiet.
+**Faraday vs Strateeg-2:** Faraday **C-028** closed L60 FX-med (N72–N74 BARRED). S2 tip **`b765613c`** promoted **VIX_TERM_VOV** → Faraday filed **PREREG N78**. **N75–N77** remain OPEN screens. **TRIAL_COUNT 456**. Quiet to Sandro (parent U2 ping).
 
 ### 10d. Actiepunten Strateeg (deze branch)
 
@@ -445,3 +448,4 @@ Per heropende regel de volgende metriek berekenen:
 21. ✅ **2026-10-01 12:15:** Sync C-025/C-026 + Manager v74 + CEO 12:15. **FX_EUR_SHORT FAIL_T** (TRIAL **454**); IDX_SHORT FAIL_COST; N66 subsumed; N67 DIAG_FAIL; N68 BARRED; N69–N71 DIAG_FAIL; OPEN **N72–N74**; live PREREG **USDJPY_MED**. C17/FX/B1/A2 remain STOP. §10 vs S2 `4575a4f`. Geen Faraday PREREG; U2 = USDJPY_MED gate (CTO); Quiet.
 22. ✅ **2026-10-01 12:40:** **C-028 Lane-B**. No PREREG (no Lane-A survivor). Filed OPEN **N75–N77** NEW_FAMILY (XAU/XAG ratio / UKOIL Mon→Thu inv-window / FX6 vol-timed XS); N72–N74 remain OPEN + freeze further L60 FX forks. TRIAL_COUNT **454**. Quiet / geen U2 ping (no PASS→PREREG).
 23. ✅ **2026-10-01 12:42:** C-028 closure after USDJPY_MED **FAIL_T** U2 `910d6ff` (TRIAL 454→455) and EURJPY_MED **FAIL_T** U2 `65a9b23` (TRIAL 455→456). N72–N74 **BARRED/STOP**; USDJPY_MED + EURJPY_MED dead; L60 FX-med family closed. Live OPEN = **N75–N77**; **TRIAL_COUNT 456**; no new VOORSTEL, no PREREG, no agent message.
+24. ✅ **2026-10-01 12:47:** **PREREG_FTMO_N78_VIX_TERM_VOV** from S2 `b765613c` (vov10/combo freeze; US100cash; gate **7,83** bp). Ranking: N78 above watches; N75–N77 OPEN; N72–N74 BARRED; TRIAL_COUNT **456**. Source pointer `results/lane_b/VIX_TERM_VOV_SOURCE.md`. Quiet / parent U2 ping.

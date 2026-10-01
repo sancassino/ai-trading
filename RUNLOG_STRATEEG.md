@@ -234,3 +234,20 @@ N44 **BARRED** (EU→US clone of dead N35/N41). N45 blijft OPEN (≠ N40/N41).
 ≠ N35/N36/N40/N41/GBPJPY/ORB. D-094a (b); train 2021–23; N≥150; 3×RT.
 
 **Niet gedaan:** geen PREREG; geen U2/Sandro ping (Quiet; CTO: wake U2 only PASS→PREREG); geen 2025-reserve.
+
+## 2026-10-01 12:47 Europe/Amsterdam — C-028 Lane-B PREREG N78 VIX_TERM_VOV
+
+**Branch:** `claude/trusting-faraday-34tsmg`.  
+**Trigger:** Strateeg-2 Lane-A promote VIX_TERM_VOV @ `b765613c` (cycle_1240; NDX vov10/combo day_t 2,91 / mean 6,80 bp ≤2024).
+
+### Geleverd
+- `PREREG_FTMO_N78_VIX_TERM_VOV.md` — OPEN awaiting U2 cost-gate / formal t
+- Gate: **7,83 bp** = 3 × (RT 0,66 + 1× overnight swap_long 1,95); US100 long swap-hostile (D-100)
+- Freeze: term=VIX9D/VIX3M; vov10; combo thresholds (1.0 / 1.25 / 0.90 / −0.25); hold 1d; primary US100cash only
+- `results/lane_b/VIX_TERM_VOV_SOURCE.md` pointer to S2 artefacts (no CSV rewrite)
+- Catalogus §9/§10: N78 live PREREG row; ranking insert above watches; N75–N77 OPEN; N72–N74 BARRED; TRIAL_COUNT **456**
+
+### Explicit
+Lane-A bruto day_t is **not** a PASS (6,80 < 7,83 gate on proxy).
+
+**Niet gedaan:** geen agent/Sandro message; geen 2025-reserve; geen vov/threshold retune; geen L60 FX forks.
