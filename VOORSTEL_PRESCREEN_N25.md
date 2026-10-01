@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N25 — XAUUSD NY Afternoon Fade (vs NY open)
 
-**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** track 2; vervanger na N20–N23 FAIL; filed 2026-10-01 08:12).  
+**Status:** **geen PREREG — D-092.1 FAIL** (Strateeg screen 2026-10-01 08:22; N=334, mean **+1,14** < 2,49 bp). Artifacts `results/R2/n24_n27_prescreen/`.  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `XAUUSD` (RT **0,83 bp** COSTS_FTMO / screen → drempel **2,49 bp** = 3× RT).  
 **Track 2:** commodity/metaal — XAU, **ander venster** dan dode XAU-set.  

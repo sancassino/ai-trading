@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N24 — US500cash Mid-Session Lunch Fade (post-AM MR)
 
-**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** track 2; vervanger na N20–N23 FAIL; filed 2026-10-01 08:12).  
+**Status:** **geen PREREG — D-092.1 FAIL** (Strateeg screen 2026-10-01 08:22; N=271, mean **+0,35** < 2,34 bp). Artifacts `results/R2/n24_n27_prescreen/`.  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `US500cash` (RT **0,78 bp** COSTS_FTMO / `results/screen_cost_vol.csv` → drempel **2,34 bp** = 3× RT; cost_in_costs_ftmo=True).  
 **Track 2:** index — US500 unused angle (N18 gap-cont dood; N5 gap-fade dood; geen US500 lunch-fade eerder).  

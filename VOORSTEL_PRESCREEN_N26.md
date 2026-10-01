@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N26 — Cross-Sectional 1d Reversal Basket (5-asset, 1 sessie flat)
 
-**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** track 4; vervanger na N20–N23 FAIL; filed 2026-10-01 08:12).  
+**Status:** **geen PREREG — D-092.1 FAIL** (Strateeg screen 2026-10-01 08:22; N=581, mean **+0,77** < 4,83 bp). Artifacts `results/R2/n24_n27_prescreen/`.  
 **Auteur:** Strateeg (Grok).  
 **Instrumenten (pool ≥5, alle in COSTS + m5gz):** `US100cash`, `US30cash`, `US500cash`, `GER40cash`, `XAUUSD`.  
 **Track 4:** andere horizon/mechanisme — **cross-sectioneel** 1-dag reversal, hold ≈1 sessie (sync flat), geen single-name TSMOM.  

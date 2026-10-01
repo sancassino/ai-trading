@@ -1,0 +1,50 @@
+{
+  "n32": {
+    "idea": "N32_US30_IB_CONT",
+    "rt_bp": 0.45,
+    "gate_3x_rt": 1.35,
+    "reserve_2025": "untouched",
+    "n": 754,
+    "mean_bruto_bp": 0.4297,
+    "median_bruto_bp": -8.5026,
+    "pass_gate": false,
+    "n_ok": true,
+    "pass": false,
+    "date_min": "2021-01-22",
+    "date_max": "2023-12-29",
+    "decision": "NO_PREREG_screen_fail"
+  },
+  "n33": {
+    "idea": "N33_USDCAD_LON_NY",
+    "rt_bp": 0.8,
+    "gate_3x_rt": 2.4,
+    "reserve_2025": "untouched",
+    "n": 94,
+    "mean_bruto_bp": 1.0442,
+    "median_bruto_bp": 2.8828,
+    "pass_gate": false,
+    "n_ok": false,
+    "pass": false,
+    "date_min": "2021-01-26",
+    "date_max": "2023-12-19",
+    "decision": "NO_PREREG_screen_fail"
+  },
+  "n34": {
+    "idea": "N34_XAU_POSTFIX_MR",
+    "rt_bp": 0.83,
+    "gate_3x_rt": 2.49,
+    "reserve_2025": "untouched",
+    "n": 148,
+    "mean_bruto_bp": -2.7098,
+    "median_bruto_bp": -0.7268,
+    "pass_gate": false,
+    "n_ok": false,
+    "pass": false,
+    "date_min": "2021-01-22",
+    "date_max": "2023-12-28",
+    "decision": "NO_PREREG_screen_fail"
+  },
+  "train": "2021-01-01..2023-12-31",
+  "reserve_2025": "untouched",
+  "runner": "Strateeg faraday scripts/n32_n34_prescreen.py"
+}

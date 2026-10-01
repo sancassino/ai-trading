@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N27 — AUDUSD H4 Mean-Reversion (SMA20 deviation)
 
-**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** track 4; optionele 4e vervanger; filed 2026-10-01 08:12).  
+**Status:** **geen PREREG — D-092.1 FAIL** (Strateeg screen 2026-10-01 08:22; N=429, mean **+1,49** < 3,66 bp). Artifacts `results/R2/n24_n27_prescreen/`.  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `AUDUSD` (RT **1,22 bp** COSTS_FTMO / screen → drempel **3,66 bp** = 3× RT; cost_in_costs_ftmo=True).  
 **Track 4:** andere horizon — **H4** mean-reversion (niet intradag-ORB, niet 2d index-TSMOM).  
