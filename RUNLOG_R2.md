@@ -1381,3 +1381,28 @@ Rules frozen = `n35_n37_prescreen` sims (N36 data file `XAUUSD.csv.gz`; PREREG t
 **TRIAL_COUNT 451 → 453** (N40 452, N41 453). TRIALS.csv append-only.
 
 **U2 next:** wacht Strateeg/S2 nieuwe D-092.1-PASS / PREREG (non-clone, D-094a ≥5j). N44/N45 OPEN bij Strateeg (VOORSTEL). No Sandro-ping.
+
+## Cyclus 09:54–09:56 CEST (2026-10-01) — D-090 IDLE wait (NEXT_STEPS v69; geen ready PASS/PREREG)
+
+**Branch:** `claude/uitvoerder2-r` — ort-merge `origin/main` @ `12bdd5c` (NEXT_STEPS **v69**; D-097; C-021; N44 BARRED; OPEN N45–N48). Tip pre-merge `2f5ee51` (N40/N41 FAIL_T merge; TRIAL **453**). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v69** (Manager 09:39 CEST): Freeze **OFF**; U2 **IDLE tot next PASS/PREREG**; gate N45–N48 of D-097 PREREGs zodra Strateeg/S2 landen; TRIAL_COUNT **453**
+- Decisive: *"Geen nieuwe PREREG; pre-screen pending. Geen U2-wake tot PASS→PREREG."* / *"Uitvoerder-2 — IDLE tot next PASS/PREREG"*
+- BESLUITEN tip D-097 (`8c3b5d4` @ `claude/ftmo-trading-strategy-98mplz`): P1 FAIL; lage-omloop / ≥50 bp bruto; D-094 nooit-stoppen blijft
+- Strateeg tip `23a7f6c`: VOORSTEL_PRESCREEN_N45–N48 only; **N44 BARRED**; geen PREREG_FTMO_N45…N48
+- S2 tip `1cf4542`: drought pre-screens FAIL; geen nieuwe PREREG
+
+### Checked — niets klaar voor gate/trial
+| Item | Status |
+|------|--------|
+| N45–N48 | VOORSTEL only; pre-screen pending → **geen** land/gate |
+| N40/N41/N35/N36/GBPJPY/P1 | dead/FAIL — **SKIP** (geen her-gate) |
+| D-097 PREREGs / C-021 sleeves | nog niet geland voor U2 |
+| P1 `engine/ftmo.py` validate / A4/A5 | v69 zegt IDLE wait — **skip** (niet inventeren) |
+
+**Dead/FAIL (ongewijzigd):** t/m N44 + GBPJPY + P1 + N40/N41 (TRIAL 449–453). Geen klonen.
+
+**TRIAL_COUNT unchanged (453).**
+
+**U2 next:** wacht Strateeg/S2 D-092.1-PASS → PREREG op N45–N48 (of D-097 non-clone). Quiet — no Sandro-ping (Manager/CTO via NEXT_STEPS).
