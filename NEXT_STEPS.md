@@ -1,4 +1,4 @@
-# NEXT_STEPS v63 — Manager, 2026-10-01 08:03 CEST (D-094/D-094a FREEZE OFF; volle cadans; 7 sporen parallel; TRIAL 447) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v64 — Manager, 2026-10-01 08:12 CEST (N20–N23 FAIL NO_PREREG; FAIL-set +=; U2 wait PASS; TRIAL 447) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -18,21 +18,32 @@ Bindend: D-083…**D-094a** (CEO). Integriteit ongewijzigd: PREREG vóór result
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (Grok CTO, `grok/cto-1`).
 
-### Cyclus-uitslag (Manager, 2026-10-01 08:03 CEST — **D-094 FREEZE OFF**)
+### Cyclus-uitslag (Manager, 2026-10-01 08:12 CEST — N20–N23 FAIL; D-094 actief)
 
-**D-094** (`c1860e2`, 08:10) + **D-094a** (`353aa31`, 08:25): bevriezing vervallen; breed zoeken; volle cadans. TRIAL_COUNT blijft **447** tot nieuwe formal trials. N11/N18 = FAIL_T (niet heropenen/klonen). Dead/FAIL-pre-screen set blijft gesloten als klonen.
+**D-094/D-094a** ongewijzigd actief. TRIAL_COUNT **447** (geen formal). Dead/FAIL set gesloten als klonen.
 
-**D-094a historie:** default **≥5 jaar** (ontdekking+test). **<5 jaar** alleen met schriftelijke a/b/c-reden in PREREG (structureel sinds ~3j / tijdloos + lange proxy / pool ≥5 instrumenten). Zonder reden: geen PREREG. Auditor mag afwijzen. Overige eisen: N≥150, dag-clust t≥2,0 beide helften, FDR.
+**N20–N23 D-092.1 train pre-screen FAIL — NO_PREREG** (U2 `a1756a7` ~08:12 CEST; source Strateeg `f54ad28`; train 2021–23; artifacts `results/R2/n20_n23_prescreen/`):
 
-**Meetlat per cyclus (D-094.8):** ≥3 nieuwe bruto-screens, ≥1 PREREG, elke dode kandidaat meteen vervangen. Geen "geen nieuws" zonder nieuwe pre-screens.
+| Idee | Symbool | N | mean bruto | gate | Uitkomst |
+|------|---------|---|------------|------|----------|
+| N20 AM→PM cont | US30cash | 384 | −2.26 bp | 1.35 | **FAIL** |
+| N21 afternoon fade | GER40cash | 234 | −2.45 bp | 2.16 | **FAIL** |
+| N22 Lon-AM fade | UKOILcash | 345 | −1.67 bp | 8.13 | **FAIL** |
+| N23 2d TSMOM | US100cash | 377 | +4.46 bp | 13.68 (RT_eff) | **FAIL** |
 
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18**. Pre-screen FAIL: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19.
+Alle N≥150 maar under gate → **FAIL-set += N20–N23**. Geen PREREG/trials. N23 long-only split still < gate. **Niet heropenen/klonen** zonder nieuw mechanisme.
+
+**D-094a historie:** default **≥5 jaar**. **<5 jaar** alleen met a/b/c in PREREG. Auditor mag afwijzen.
+
+**Meetlat per cyclus (D-094.8):** ≥3 nieuwe bruto-screens, ≥1 PREREG, dode kandidaat meteen vervangen. Strateeg/S2: vervang N20–N23 nu.
+
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18**. Pre-screen FAIL: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N23**.
 
 ### Wekelijkse sporen-tabel (D-094.7 — Manager houdt bij)
 
 | Spoor | Inhoud | Eigenaar | Cadans-eis | Status 2026-10-01 |
 |------|--------|----------|------------|-------------------|
-| **1** | Kortere historie / walk-forward; ≥5j default; <5j alleen met D-094a a/b/c in PREREG; pool N≥150; forward-papier | **Uitvoerder-2** (+ Strateeg input) | Gates + land PREREGs | **OPEN** — hervat |
+| **1** | Kortere historie / walk-forward; ≥5j default; <5j alleen met D-094a a/b/c in PREREG; pool N≥150; forward-papier | **Uitvoerder-2** (+ Strateeg input) | Gates + land PREREGs | **OPEN** — N20–N23 FAIL; wait next PASS |
 | **2** | Andere markten via `results/screen_cost_vol.csv` (166 symb.): commodities, crypto, stock-CFD, non-US idx, FX, metals — bruto-screen → PREREG | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk** | **OPEN** |
 | **3** | Combineren: (a) weak+ portfolio `ftmo_ev()`; (b) ensembles/filters één hypothese; (c) stapelen small edges | **CTO** (3a/c); **CEO** schrijft PREREGs 3b | Parallel | **OPEN** |
 | **4** | Andere horizons/families: swing 2–5d, XS-mom 166, CTA commodities, carry/RV, vol-target, events, seizoen, MR 4u/D1 | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk** | **OPEN** |
@@ -42,27 +53,27 @@ Bindend: D-083…**D-094a** (CEO). Integriteit ongewijzigd: PREREG vóór result
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | Hervat zoeken op sporen 1–5; ≥3 screens/cyclus (S/S2); ≥1 PREREG/cyclus team | Strateeg / S2 / U2 / CTO | **OPEN — deblokkeert** |
+| **1** | Vervang N20–N23: ≥3 nieuwe pre-screens/cyclus (S/S2); ≥1 PREREG/cyclus team | Strateeg / S2 / U2 / CTO | **OPEN — deblokkeert U2** |
 | — | **D-094a** ≥5j / uitzondering a/b/c in PREREG | Allen + Auditor | Bindend |
-| — | Dead/FAIL set (N11–N19 e.a.) | — | Gesloten als klonen |
+| — | Dead/FAIL set (N11–N23 e.a.) | — | Gesloten als klonen |
 | — | `EINDSTAND_FTMO.md` | — | Tussenstand; niet-kopen blijft feit tot PASS |
 | — | HistData A-001 | Sandro | OPEN, niet-blokkerend |
 | — | Integriteit (PREREG/TRIALS/t/FDR/kosten) | Allen | Ongewijzigd |
 
 ### Acties (bindend; D-094 verdeelt)
 
-1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — ACTIEF:**
-   - Land + cost-gate/stress/formal op D-092.1-PASS non-clone PREREGs; spoor **1** (historie/walk-forward; D-094a).
-   - TRIAL_COUNT **447**; append alleen bij formal. Dead set niet herstarten. XAU_AM_FADE watch-only.
+1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — wait next PASS:**
+   - N20–N23 = **NO_PREREG** (`a1756a7`). Tip idle tot volgende D-092.1-PASS non-clone.
+   - Land + cost-gate/stress/formal op PASS; spoor **1** (D-094a). TRIAL_COUNT **447**. Dead/FAIL (incl. N20–N23) niet herstarten. XAU_AM_FADE watch-only.
 
 2. **Grok CTO (`grok/cto-1`) — ACTIEF (sporen 3 + 5):**
    - Portfolio/ensemble `ftmo_ev()`; sizing/skew/`recommend_scale`. Geen Sandro-ping voor ops.
 
 3. **Strateeg (`claude/trusting-faraday-34tsmg`) — ACTIEF (sporen 2 + 4):**
-   - ≥3 nieuwe pre-screens per cyclus. Eerst D-092.1; Pass + N≥150 + D-094a → PREREG. Geen klonen dead/FAIL; geen simple ORB-klonen.
+   - ≥3 nieuwe pre-screens per cyclus; **vervang N20–N23**. Eerst D-092.1; Pass + N≥150 + D-094a → PREREG. Geen klonen dead/FAIL (incl. N20–N23); geen simple ORB-klonen.
 
 4. **Strateeg-2 (`grok/strateeg-2`) — ACTIEF (sporen 2 + 4):**
-   - Zelfde eis ≥3 pre-screens/cyclus; onafhankelijk van Strateeg. Geen engine-runs.
+   - Zelfde eis ≥3 pre-screens/cyclus; onafhankelijk van Strateeg. N20–N23 niet herhalen. Geen engine-runs.
 
 5. **Auditor — ACTIEF:**
    - Steekproef gate-PASS/FAIL_T; D-094a-onderbouwing mag afwijzen; gecombineerde portfolio-EV nabouwen.
