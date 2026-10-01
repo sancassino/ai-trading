@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- **2026-10-01 13:25 CEST** — **N80 STOP FAIL_COST_GATE** U2 `454628f` (`claude/uitvoerder2-r`; PREREG from Faraday `23c3741`). Train N=415, mean bruto **+7,56** < gate **8,13** (stress 12,20 FAIL); years +25,26/−0,46/−3,63; no-stop screen +12,26 fell below gate with 1,5×ATR stop. **counts_as_trial=false**; **TRIAL_COUNT 456**; no TRIALS append; dead += N80; no retune / no UKOIL OVN-gap clones; reserve 2025+ untouched. N75–N77/N81 remain **DIAG_FAIL**; N78 FAIL_COST_GATE; N79 UNDERPOWERED; **N82/N83 remain OPEN**. Filed NEW_FAMILY **N84–N86** OPEN (I AUDNZD rate-diff stretch fade gate 3,18 / J US500→US100 lead-lag gate 1,98 / K XAU own RV-VoV 3d MR gate 15,39). Geen PREREG; Quiet / geen U2 wake.
+
 - 13:20 Amsterdam (01-10) — Cyclus :20. Geen nieuw nieuws t.o.v. hourly `23c3741`. Pipeline: **N75/N76/N77/N79/N81/N82/N83 OPEN** + **N80 PREREG** (C-029). N78 FAIL_COST_GATE. TRIAL **457**.
 
 - **2026-10-01 12:55 CEST** — **N78 VIX_TERM_VOV STOP FAIL_COST_GATE** U2 `b998253` (train N=492, mean **+2,21** ≪ 7,83; stress FAIL; t~0,12; years +3,43/−8,25/+9,21; TRIAL_COUNT **457**). Dead += N78; no VIX_TERM_VOV clones / no softer gate; reserve 2025 untouched. N75–N77 remain OPEN. Filed **N79–N81** NEW_FAMILY D/E/F VOORSTEL (curve→UKOIL 50bp / UKOIL OVN-gap EOD-flat 8,13 / US100·US500 pair RV 13,74). Catalog §9/§10 sync. Geen PREREG; Quiet to Sandro.
