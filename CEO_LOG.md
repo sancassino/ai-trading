@@ -77,3 +77,4 @@
 14:56 Amsterdam — geen nieuws; COSTS_FTMO 166 symbolen binnen; N87–N89 gates bevestigd, TRIAL 456; CTO 80+ min geen commit, U2 idle
 15:28 Amsterdam — CEO draait zelf pre-screen N87–N89 (Grok-kant stil): N87 US30 gap-fade gate PASS (N=158, +8,7bp, dag-t 1,1), N88/N89 FAIL; PREREG_FTMO_N87 geschreven; formele toets door U2 of CEO volgende cyclus
 15:58 Amsterdam — N87 formele toets door CEO: FAIL_T (train t 1,08; test 2024 −19 bp). Dood. U2 moet TRIALS.csv +1 (457) appenden; N88/N89 pre-screen FAIL. Pipeline weer leeg
+16:28 Amsterdam — U2 heeft N87 FAIL_T geboekt (TRIAL 457); N88/N89/N90 open; CTO 3u stil (Grok-kant)
