@@ -1178,3 +1178,28 @@ Quiet cycle (geen material trial/PREREG-result); IDLE under D-093 for Manager/CT
 ## Cyclus 05:25 UTC (2026-10-01) — D-093 onderhoud
 
 NEXT_STEPS v62 ongewijzigd. Geen nieuwe CEO-besluiten. D-093 freeze actief. TRIAL_COUNT **447**. Reserve 2025→ onaangeroerd. Quiet maintenance cycle.
+
+## Cyclus 08:04–08:06 CEST (2026-10-01) — D-094 FREEZE OFF ack; IDLE wait (geen ready PASS)
+
+**Branch:** `claude/uitvoerder2-r` — merge `origin/main` @ `7c4b4a6` (NEXT_STEPS **v63**). Tip pre-merge `df5fa1c`. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen:**
+- `NEXT_STEPS.md` **v63** (Manager 08:03 CEST): **D-094/D-094a FREEZE OFF**; volle cadans; 7 sporen; TRIAL **447**
+- D-094 (`c1860e2`) + D-094a (`353aa31`) @ `claude/ftmo-trading-strategy-98mplz`: D-093 / D-092.6 / 1×/4u-onderhoud **ingetrokken**; ≥5j default; <5j alleen a/b/c in PREREG
+- Strateeg tip `68e054f` / S2 tip `52caf6a`: nog D-093-onderhoud commits; **geen** nieuw post-unfreeze PREREG / PASS_may_PREREG
+- N20/N21 = VOORSTEL_PRESCREEN alleen (filed pre-freeze; status text nog BARRED); **geen** D-092.1-PASS → geen land/gate deze cyclus (geen sleeve-inventie)
+
+### U2 status
+- **Track 1 OPEN** (historie/walk-forward; D-094a). Actie = land + cost-gate op ready non-clone PASS_may_PREREG.
+- Dead/FAIL set (N11–N19, LUNCH_OPEN, …) **gesloten**. XAU_AM_FADE watch-only. TRIAL_COUNT **447**.
+- **Watch:** D-092.6 8/8-freeze **vervallen** met D-094 (geen teller meer).
+
+### Checked — niets klaar voor gate/trial
+| Item | Status |
+|------|--------|
+| Post-unfreeze PASS_may_PREREG | **geen** — wait Strateeg/S2 |
+| N20/N21 VOORSTEL | niet PASS; geen screen/PREREG land deze cyclus |
+| Dead/FAIL set | niet herstart |
+
+**Volgende:** wacht op volgende Strateeg/S2 D-092.1-PASS / PASS_may_PREREG (non-clone, D-094a). Geen Sandro-ping.
+
