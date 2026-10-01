@@ -1,0 +1,26 @@
+{
+  "N40": {
+    "sleeve": "N40",
+    "N": 205,
+    "mean_bruto": 2.4282,
+    "rt": 0.72,
+    "gate": 2.16,
+    "stress_gate": 3.24,
+    "gate_ok": true,
+    "stress_ok": false,
+    "t_nw": 0.3254,
+    "verdict": "FAIL_STRESS_then_FAIL_T"
+  },
+  "N41": {
+    "sleeve": "N41",
+    "N": 160,
+    "mean_bruto": 8.6507,
+    "rt": 0.45,
+    "gate": 1.35,
+    "stress_gate": 2.0250000000000004,
+    "gate_ok": true,
+    "stress_ok": true,
+    "t_nw": 1.7483,
+    "verdict": "FAIL_T"
+  }
+}

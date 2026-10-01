@@ -1352,3 +1352,31 @@ Rules frozen = `n35_n37_prescreen` sims (N36 data file `XAUUSD.csv.gz`; PREREG t
 **Niet gedaan:** geen forge of N35/N36 vóór Strateeg-PREREG (landden mid-cycle); geen A1/ORB/S3; geen stap2 P1 (dood). engine/ftmo.py smoke niet herhaald (CTO module; niet U2-prio v67).
 
 **U2 next:** wacht Strateeg/S2 nieuwe D-092.1-PASS / PREREG (non-clone). MATERIAL for Manager/CTO (3 FAIL_T → dead-set). No Sandro-ping.
+
+## Cyclus 07:25 UTC (09:25 CEST, 2026-10-01) — N40 FAIL_STRESS_FAIL_T + N41 FAIL_T (TRIAL 453)
+
+**Branch:** `claude/uitvoerder2-r` — merge FF naar `a498a69` (GBPJPY FAIL_STRESS + N35/N36 FAIL_T, Grok U2). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen:** NEXT_STEPS **v67** (`d9b32cc`); TRIAL_COUNT **451** (pre-cyclus). P1 dood (D-096.4 / C-020 FAIL). Strateeg `6ef46a7` — N40/N41 PREREGs bevroren, N38/N39/N42/N43 FAIL.
+
+### Prio-1 — PREREG gelanden + formele gates N40 en N41
+
+**PREREGs gecommit** (PREREG vóór resultaat): `1f84693` — `PREREG_FTMO_N40.md` (Strateeg 6ef46a7) + `PREREG_FTMO_N41.md`.
+
+**Script:** `scripts/n40_n41_cost_gate_trial.py` → `results/R2/n40_n41_prep/`.  
+**Window:** train **2021-01-01 … 2023-12-31**. Reserve 2025→ onaangeroerd.
+
+| Sleeve | Instrument | N | mean bruto | gate | stress | NW-t (L=5) | Uitkomst |
+|--------|------------|--:|----------:|-----:|-------:|-----------:|----------|
+| **N40** GER40 mid-morning mom | GER40cash | 205 | **+2.43 bp** | 2.16 PASS | 3.24 **FAIL** | 0.33 | **FAIL_STRESS_then_FAIL_T** |
+| **N41** US30 EU→US cont | US30cash | 160 | **+8.65 bp** | 1.35 PASS | 2.025 PASS | 1.75 | **FAIL_T** |
+
+**Noten:**
+- N40 mean PASS maar stress FAIL (2.43 < 3.24); t=0.33 bevestigt hoge variantie; mediaan −2.28 bp (scheef/staart-afhankelijk; PREREG caveat ingelost).
+- N41 PASS gate + PASS stress; t=1.7483 < 2.0 — net onder drempel; mediaan +10.34 bp (positief).
+
+**Dead/FAIL += N40 · N41.** Geen klonen. Geen nieuwe reserve 2025+ geopend.
+
+**TRIAL_COUNT 451 → 453** (N40 = 452, N41 = 453). TRIALS.csv append-only.
+
+**U2 next:** wacht Strateeg/S2 nieuwe D-092.1-PASS / PREREG (non-clone, D-094a ≥5j). N44/N45 OPEN bij Strateeg (VOORSTEL). No Sandro-ping.
