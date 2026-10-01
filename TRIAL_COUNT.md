@@ -79,3 +79,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-10-01 | FX_USDJPY_MED/PREREG_FTMO_FX_USDJPY_MED_TSMOM: USDJPY long-only L60/H10 (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 455 |
 | 2026-10-01 | FX_EURJPY_MED/PREREG_FTMO_FX_EURJPY_MED_TSMOM: EURJPY long-only L60/H10 (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 456 |
 | 2026-10-01 | N78/PREREG_FTMO_N78_VIX_TERM_VOV: US100cash vov10/combo (kostenpoort STOP mean bruto 2.21 < 7.83; **ongeldig/telt niet** per NEXT_STEPS v78 / C-028 — FAIL_COST_GATE ≠ trial) | 0 | 456 |
+| 2026-10-01 | N80/PREREG_FTMO_N80: UKOIL OVN-gap cont EOD-flat (kostenpoort STOP mean bruto 7.56 < 8.13; **ongeldig/telt niet** per NEXT_STEPS v81 / C-029 — FAIL_COST_GATE ≠ trial) | 0 | 456 |
