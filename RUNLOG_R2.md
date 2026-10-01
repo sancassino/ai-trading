@@ -1764,3 +1764,22 @@ Year-split train bruto: 2021 **+25.26** / 2022 **−0.46** / 2023 **−3.63**. L
 counts_as_trial = **true**. **TRIAL_COUNT = 457**. Dead += N87_US30_GAP_FADE. Geen klonen (geen drempel-/tijd-variatie per PREREG §3). Reserve 2025 onaangeraakt.
 
 **U2 next:** IDLE wacht Strateeg ≥2 NEW_FAMILY non-clone → PASS→PREREG. N88/N89 zijn FAIL in CEO pre-screen (N88 N<150 + negatief; N89 mean +1.06 < gate). Kill circuit: streak 5× cost-PASS→FAIL_T telt mee (N87 is een bijdrage).
+
+## Cyclus 16:26 CEST (2026-10-01) — uurcyclus sync v82 (N87 FAIL_T delivered; TRIAL 457; IDLE)
+
+**Branch:** `claude/uitvoerder2-r` — tip `3a9108e` (N87 FAIL_T; TRIAL **457**). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (no v83): U2 IDLE — wacht PASS→PREREG. Formal OPEN queue was empty t.t.v. v82.
+- CEO `078ac8b` ~15:58 CEST: bevestigt N87 FAIL_T onafhankelijk (train N=158 t=1,08; test 2024 −19 bp; "verzoekt U2: TRIAL_COUNT +1 → 457" → **reeds gedaan** in `3a9108e`).
+- Strateeg `0dec90f` ~16:20 CEST: pipeline **N88/N89/N90 OPEN** (geen PREREG). N90 = GBPJPY long-only 5d carry+momentum; NEW_FAMILY O; RT=0,72 bp; gate=2,16 bp.
+- CEO_LOG `e11b27c` ~16:45 CEST: N87 FAIL_T formeel bevestigd; N90 open; N88/N89 queued; U2 IDLE; TRIAL 457 stabiel.
+- SUPERVISOR_LOG `2c0bcf9`: N90 GBPJPY nieuw; TRIAL 457 stabiel.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** N88/N89 waren FAIL in CEO pre-screen (N88 N<150 + negatief; N89 mean+1,06 << gate 2,16). N90 is VOORSTEL-fase, geen formele PREREG beschikbaar. NEXT_STEPS v82 blijft actief — Manager nog geen v83.
+
+**TRIAL_COUNT blijft 457** (N87 FAIL_T = +1 al verwerkt). Geen TRIALS-append.
+
+**U2 next:** IDLE wacht Strateeg/CTO Lane-B PASS→PREREG (N88 kans laag; N89 kans laag; N90 nieuw — wacht op pre-screen + PREREG filing). Of Manager NEXT_STEPS v83 met nieuwe directief.
