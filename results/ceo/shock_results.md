@@ -1,0 +1,8 @@
+# SHOCK-programma, stap 1–2 (CEO, D-103, 2026-10-02 00:30) — geen trial voor de baselines; model 1 = 1 trial (nog niet in TRIALS.csv geappend)
+Data: 26 symbolen M5 t/m 2024-12-31 (reserve dicht). Event = bar met |r| ≥ 5× mediaan van hetzelfde tijdslot (20 dagen terug) en ≥ 3 bp; instap 1 bar later; non-overlappend per symbool. 73.653 events (train ≤2023: 54.451; 2024: 19.202). Scripts: `shock_build.py`, `shock_baseline.py`, `shock_model1.py`; data `shock_events.csv.gz`.
+
+**Baselines (netto, na spread+0,5 bp commissie):** mee én tegen −3,1…−3,4 bp (kostx1) en −6,3…−6,7 bp (kostx2) bij 30/60/120 min, dag-t −8…−26, identiek in 2024. Bruto mee ≈ +0,15 bp: er is **geen gemiddelde drift** na een schok; netto = −kosten. Per klasse (indices, metalen, energie, FX, crypto) en per z-bucket hetzelfde.
+
+**Model 1 (LightGBM, ret60, train ≤2023H1, val 2023H2, test 2024):** early stopping kiest 1 iteratie; corr(pred,werkelijk) = +0,03 (val) / +0,01 (test). Top-1% voorspellingen: bruto +6,4/+6,8 bp, netto −1,3 tot +0,9 bp (kostx1), dag-t ≈ 0. Geen enkele selectie haalt netto > 0 met t ≥ 2.
+
+**Conclusie:** met dit eventtype en deze features (grootte, richting, tijdslot, spreadsprong, trend, vol) is er op M5 geen voorspelbare reactie die de kosten dekt. Dit is sterk bewijs tegen "gewoon op elke schok reageren", maar sluit niet uit: (a) alleen geplande/echte nieuws-events met surprise-data (consensus), (b) langere horizon of andere markten, (c) cross-asset-kenmerken (bv. reactie van ander instrument), (d) de eerste 2 min (mag niet op funded), (e) intraday-vervolg met orderflow-/tickdata die we niet hebben.

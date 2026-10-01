@@ -95,3 +95,4 @@
 22:57 Amsterdam — geen nieuws
 23:27 Amsterdam — geen nieuws
 23:53 Amsterdam — D-103 SHOCK-programma (event-gedreven ML); wekker elke 15 min (triggers :11/:26/:41/:56); eerste stap: shock-dataset bouwen
+23:58 Amsterdam — SHOCK stap 1-2: 73.653 events, baselines = -kosten (geen drift), LightGBM model 1 corr 0,01-0,03, geen edge; resultaat in results/ceo/shock_results.md
