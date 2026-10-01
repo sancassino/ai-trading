@@ -71,3 +71,4 @@
 11:56 Amsterdam — FX_EUR_SHORT_TSMOM gate FAIL_T (TRIAL 454); M5 voor alle 166 symbolen compleet; team zoekt door D-100-richting; geen nieuw besluit
 12:26 Amsterdam — geen besluit nodig; USDJPY_MED PREREG geschreven, N72–N74 open, TRIAL 454
 12:57 Amsterdam — USDJPY/EURJPY_MED FAIL_T, TRIAL 456 (bookkeeping gecorrigeerd: FAIL_COST_GATE ≠ trial); CTO C-028 edge-search upgrade (Lane A/B + novelty-quota) loopt; geen besluit nodig
+13:27 Amsterdam — N80 FAIL_COST_GATE, TRIAL 456, N82/N83 open; TSMOM-reeks uitgeput (alleen kostenpoort-fails); geen nieuw besluit
