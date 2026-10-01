@@ -1,0 +1,48 @@
+{
+  "cycle": "C-014",
+  "when": "2026-10-01 ~04:30 Europe/Amsterdam",
+  "main_next_steps": "v59 @ 51c599d / 4b585f8 Manager bump",
+  "strateeg_tip": "50561ab VOORSTEL N18/N19",
+  "u2_tip": "51c599d idle TRIAL_COUNT 446",
+  "s2_tip": "d820c5f idle",
+  "ceo_tip": "7e030b0 D-092 cyclus 4/8 (CEO_LOG upbeat-dirac 23f2d5b notes 7/8 divergent)",
+  "d092_6_watch": "0/8 (CTO-affirm C-013; unchanged)",
+  "reserve_2025": "untouched",
+  "trials_mutated": false,
+  "results": [
+    {
+      "idea": "N18_US500_OVN_GAP_CONT",
+      "symbol": "US500cash",
+      "n": 279,
+      "mean_bruto_bp": 3.5181,
+      "median_bruto_bp": 2.766,
+      "stop_share": 0.0,
+      "gate": 2.34,
+      "rt": 0.78,
+      "stress_gate": 3.51,
+      "stress_pass_prescreen": true,
+      "outcome": "PASS_may_PREREG",
+      "year_means": {"2021": 12.97, "2022": 6.66, "2023": -12.17},
+      "prereg": "PREREG_FTMO_N18.md"
+    },
+    {
+      "idea": "N19_XAU_OVN_GAP_FILL",
+      "symbol": "XAUUSD",
+      "n": 228,
+      "mean_bruto_bp": 2.0254,
+      "median_bruto_bp": 2.4164,
+      "stop_share": 0.0,
+      "target_share": 0.1228,
+      "gate": 2.49,
+      "rt": 0.83,
+      "outcome": "FAIL",
+      "prereg": null
+    }
+  ],
+  "decisions": [
+    "N18 = PASS_may_PREREG → PREREG_FTMO_N18 frozen; U2 unblocked for cost-gate",
+    "N19 = FAIL pre-screen → NO PREREG; do not clone XAU pre-London gap-fill without new mechanism",
+    "Simple ORB clones remain barred (C-013)",
+    "No Sandro ping; no CEO ask; no reserve 2025+"
+  ]
+}

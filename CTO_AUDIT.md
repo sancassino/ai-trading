@@ -364,3 +364,17 @@ N11 median −14 bp (skew-fragile). Strateeg → `PREREG_FTMO_N11` (gate 2.16); 
 | ORB F2 | **reference** ≤2024 ≈€513/m |
 
 Artefacts: `results/cto/c013_board.json`, `results/cto/n11_prep/`, `results/cto/n15_n16_prescreen/`.
+
+## 3m. C-014 N18 PASS + N19 FAIL; PREREG_N18 (2026-10-01 ~04:30 CEST)
+
+**Trigger:** Strateeg `50561ab` non-ORB VOORSTEL N18/N19 after C-013 ORB family barred; U2 idle TRIAL_COUNT 446; main v59.
+
+| Idee | N | mean bruto | median | gate | Uitkomst |
+|------|---|------------|--------|------|----------|
+| N18 US500 OVN Gap Cont | 279 | +3.52 | +2.77 | 2.34 | **PASS_may_PREREG** → `PREREG_FTMO_N18.md` |
+| N19 XAU OVN Gap Fill | 228 | +2.03 | +2.42 | 2.49 | **FAIL** |
+
+Train 2021–23 only; reserve 2025+ untouched. N18 year skew (2023 −12.17) + wide ATR-stop → report in U2 path; still honest D-092.1 PASS (N≥150, mean≥gate, median>0).
+
+**Binding:** U2 executes N18 cost-gate next. N19 no PREREG. Watch 0/8 unchanged. No Sandro/CEO ask.
+

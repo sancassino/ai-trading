@@ -4,6 +4,33 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-014 — N18 PASS_may_PREREG + N19 FAIL; PREREG_FTMO_N18 unblocks U2
+**Opened:** 2026-10-01 ~04:24 Europe/Amsterdam (main v59; Strateeg `50561ab` VOORSTEL N18/N19; U2 idle `51c599d` TRIAL_COUNT 446).  
+**Closed:** 2026-10-01 ~04:30 Europe/Amsterdam by CTO (executable; no CEO wait).
+
+**Facts:**
+1. Team: main NEXT_STEPS **v59** (`4b585f8`/`51c599d`); C-013 absorbed; U2 idle wait; Strateeg filed non-ORB N18/N19; S2 `d820c5f` idle; CEO `7e030b0` cyclus 4/8 (CEO_LOG tip still notes 7/8 — Manager+CTO keep **0/8**).
+2. **N18 US500 Overnight Gap Continuation** (`scripts/n18_n19_prescreen.py`, train 2021–23, COSTS RT 0.78 → gate 2.34):
+
+| Idee | N | mean bruto | median | stop_share | gate | Uitkomst |
+|------|---|------------|--------|------------|------|----------|
+| N18 US500 OVN Gap Cont | 279 | +3.52 bp | +2.77 | 0.00 | 2.34 | **PASS_may_PREREG** |
+| N19 XAU OVN Gap Fill | 228 | +2.03 bp | +2.42 | 0.00 (tgt 0.12) | 2.49 | **FAIL** |
+
+3. N18 year means: 2021 +12.97 / 2022 +6.66 / **2023 −12.17**. Stress gate 3.51: mean 3.52 barely ≥ (prescreen-only). Stop 1.5×ATR rarely hit in 3h window.
+4. Symbol file for N19 = `XAUUSD.csv.gz` (not XAUUSDcash). Reserve 2025+ untouched. No TRIALS writes.
+
+**Decision (binding):**
+1. **N18 = PASS_may_PREREG** — freeze `PREREG_FTMO_N18.md` (regel = VOORSTEL; no retune). **U2 unblocked** for cost-gate → stress → formal t.
+2. **N19 = FAIL** — no PREREG; do not clone XAU pre-London gap-fill without new mechanism.
+3. ORB single-symbol clones remain barred (C-013). D-092.6 watch stays **0/8** until next U2 cost-gate PASS.
+4. **CEO/Sandro:** no ask. Highest lever now = U2 execute N18 path.
+
+**Where applied:** `PREREG_FTMO_N18.md`, `VOORSTEL_PRESCREEN_N18.md`/`N19.md`, `scripts/n18_n19_prescreen.py`, `results/cto/n18_n19_prescreen/`, `results/cto/c014_board.json`, `CTO_AUDIT.md` §3m, `RUNLOG_CTO.md`, this ticket.
+
+---
+
+
 ### C-013 — N11 FAIL_T confirm + D-092.6 affirm + N15/N16/N17 venue-ORB FAIL
 **Opened:** 2026-10-01 ~04:00 Europe/Amsterdam (main v58 N11 FAIL_T; Strateeg `e8f261f` PREREG_N11 + N13/N14; U2 `d4cefff` TRIAL_COUNT 446).  
 **Closed:** 2026-10-01 ~04:15 Europe/Amsterdam by CTO (executable; no CEO wait).

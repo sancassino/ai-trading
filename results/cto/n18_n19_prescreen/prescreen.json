@@ -1,0 +1,38 @@
+{
+  "cycle": "C-014",
+  "when": "2026-10-01 ~04:25 Europe/Amsterdam",
+  "window": "2021-01-01..2023-12-31",
+  "reserve_2025": "untouched",
+  "source_voorstel": "Strateeg 50561ab VOORSTEL_PRESCREEN_N18/N19",
+  "min_n": 150,
+  "results": [
+    {
+      "idea": "N18_US500_OVN_GAP_CONT",
+      "symbol": "US500cash",
+      "n": 279,
+      "mean_bruto_bp": 3.5181,
+      "median_bruto_bp": 2.766,
+      "stop_share": 0.0,
+      "target_share": 0.0,
+      "gate": 2.34,
+      "rt": 0.78,
+      "outcome": "PASS_may_PREREG",
+      "skew_fragile": false,
+      "note": "gap\u2265\u00b150bp vs prior 22:00; cont@15:30; stop1.5ATR; flat18:30; \u2260N5 fade"
+    },
+    {
+      "idea": "N19_XAU_OVN_GAP_FILL",
+      "symbol": "XAUUSD",
+      "n": 228,
+      "mean_bruto_bp": 2.0254,
+      "median_bruto_bp": 2.4164,
+      "stop_share": 0.0,
+      "target_share": 0.1228,
+      "gate": 2.4899999999999998,
+      "rt": 0.83,
+      "outcome": "FAIL",
+      "skew_fragile": false,
+      "note": "gap\u2265\u00b130bp vs prior 22:00; fade@08:00\u2192prior; stop1.0ATR; flat10:30; \u2260N5/XAU_AM"
+    }
+  ]
+}

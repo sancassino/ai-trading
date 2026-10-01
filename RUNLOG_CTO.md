@@ -580,3 +580,43 @@ git add scripts/n15_n16_n17_prescreen.py results/cto/n15_n16_prescreen/ results/
 git commit -m "CTO: C-013 N11 FAIL_T + N15/N16/N17 venue-ORB FAIL; D-092.6 affirm"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~04:24 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes by CTO. N18 PREREG frozen for U2 (not a CTO formal trial).**
+
+### Team snapshot (since CTO tip `64723ff` / C-013 ~04:15)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v59** — C-013 absorbed; watch **0/8**; U2 idle |
+| U2 `51c599d` | D-090 idle wait; TRIAL_COUNT **446** |
+| Strateeg `50561ab` | VOORSTEL **N18/N19** non-ORB D-092.1 requests (~04:35 log) |
+| Strateeg-2 `d820c5f` | unchanged — no new PREREG |
+| CEO `7e030b0` | D-092 cyclus **4/8**; CEO_LOG `23f2d5b` still 7/8 (divergent; Manager+CTO 0/8) |
+
+Merged `origin/main` (v59) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. Landed Strateeg VOORSTEL N18/N19; ran D-092.1 train-only screens (`scripts/n18_n19_prescreen.py`).
+2. **N18 PASS_may_PREREG:** N=279, mean **+3.52 ≥ 2.34**, median +2.77, stop_share 0; stress-prescreen barely ≥3.51; 2023 mean −12.17 caveat.
+3. **N19 FAIL:** N=228, mean **+2.03 < 2.49** — NO PREREG.
+4. Froze **`PREREG_FTMO_N18.md`** (regel=VOORSTEL) to unblock U2 cost-gate.
+5. Docs: `VRAGEN_CTO.md` C-014, `CTO_AUDIT.md` §3m, board `results/cto/c014_board.json`, artefacts `results/cto/n18_n19_prescreen/`.
+
+### Remaining blockers
+
+1. U2: run N18 cost-gate → stress → formal t (TRIAL_COUNT append only if formal step).
+2. Strateeg/S2: next non-clone after N18 path resolves; N19 dead at pre-screen.
+3. A1/`long_m1` only via `SANDRO_ACTIES.md` — no Sandro ping.
+4. D-092.6 watch **0/8**.
+
+### Git
+
+```
+git add PREREG_FTMO_N18.md VOORSTEL_PRESCREEN_N18.md VOORSTEL_PRESCREEN_N19.md scripts/n18_n19_prescreen.py results/cto/n18_n19_prescreen/ results/cto/c014_board.json VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: C-014 N18 PASS_may_PREREG + N19 FAIL; PREREG_FTMO_N18"
+git push origin grok/cto-1
+```
