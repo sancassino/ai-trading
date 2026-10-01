@@ -1472,3 +1472,23 @@ UKOIL bruto 37.1 bp / USOIL bruto 20.7 bp. Oorzaak gate-fail: FTMO-CFD olie swap
 **TRIAL_COUNT unchanged (453).**
 
 **U2 next:** D-097/D-099 spoor 1/4; wacht Strateeg/S2 PASS→PREREG non-clone ≥50 bp bruto; N58/N59 secondary na PASS. Material via NEXT_STEPS (geen Sandro-ping).
+
+## Cyclus 10:45–10:50 CEST (2026-10-01) — D-090 IDLE (ENERGY_TSMOM al FAIL; wacht next PREREG)
+
+**Branch:** `claude/uitvoerder2-r` tip `c1499ce` (FF van lokale `e5d23c5`). `origin/main` @ `a7c9451` al ancestor (NEXT_STEPS **v71**). Geen ort-merge nodig. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v71** (Manager 10:35 CEST): FREEZE **OFF**; U2 ACTIEF = gate `PREREG_FTMO_ENERGY_TSMOM` (D-099/C-023)
+- `BESLUITEN` D-099 (`76ec6ed` / tip upbeat `15334ac` 10:45 mini-review): energie-TSMOM PREREG + U2 gate; crypto buiten
+- Tip `c1499ce` ~10:43 CEST: ENERGY_TSMOM **FAIL_COST_GATE** al geland (train mean bruto 29,08 bp ≪ gate 3× 272,08; swap~83 bp/trade; counts_as_trial=false; TRIAL **453** ongewijzigd)
+
+### Actie deze cyclus
+- Verify + skip her-gate: ENERGY_TSMOM / TSMOM_DIV / N35–N41 / GBPJPY / P1 / N44 / N20–N57
+- Geen S2-BTC stap2 (D-097: dood voor die hypothese; wacht CEO alleen als NEXT_STEPS opnieuw opdraagt — niet inventeren)
+- Geen N58/N59 PREREG op main/Strateeg-tip (`f5ef89d` OPEN pre-screen only)
+- Geen nieuwe CTO-PREREG na C-023 (`250d408`)
+- Idle note only — geen fake trial
+
+**Uitkomst:** IDLE. Dead/FAIL += ENERGY_TSMOM (al). TRIAL_COUNT **453**.
+
+**U2 next:** wacht Manager absorb ENERGY FAIL → NEXT_STEPS v72+; Strateeg/S2 D-097 PASS→PREREG (≥50 bp bruto, non-clone). Material via NEXT_STEPS (geen Sandro-ping).
