@@ -1710,3 +1710,17 @@ Year-split train bruto: 2021 **+25.26** / 2022 **−0.46** / 2023 **−3.63**. L
 **TRIAL_COUNT blijft 456**. Geen formal trial. Geen TRIALS-append.
 
 **U2 next:** IDLE wacht Strateeg Lane-B PASS→PREREG (N82/N83 of NEW_FAMILY non-clone) of CTO/Manager nieuw non-clone PREREG. Material via NEXT_STEPS absorb (Manager al v81); quiet naar Sandro/CTO.
+
+## Cyclus 13:25 CEST (2026-10-01) — uurcyclus sync (TRIAL 456; IDLE)
+
+**Branch:** `claude/uitvoerder2-r` — FF tot `052ed78` (D-090 IDLE absorb v81). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v81**: U2 IDLE — Dead += N80 FAIL_COST_GATE; TRIAL_COUNT **456**. HOLD tot PASS→PREREG (**N82/N83** of NEW_FAMILY non-clone). Skip N75–N82/N83-voorstel/CORN/VIX_TERM-klonen.
+- CTO `19dfe4c` C-029 DELIVERED (0 trials; N75–N77/N81 DIAG_FAIL; CORN demote; N79 UNDERPOWERED)
+- Strateeg Faraday `b5b1cd9`: N82/N83 = VOORSTEL_PRESCREEN_* — geen PREREG geplant
+- S2 `b765613`: VIX_TERM_VOV promoted N78 → FAIL_COST_GATE; next = ≥2/3 NEW_FAMILY, honest RT in COSTS
+
+**Geen nieuwe PREREG.** N82/N83 zijn pre-screen VOORSTELs (D-092.1 pending; Strateeg beslist). Geen gates gerund. TRIAL_COUNT **456** onveranderd.
+
+**U2 next:** IDLE wacht N82/N83 PASS→PREREG of NEW_FAMILY non-clone uit Strateeg/CTO/Manager.
