@@ -207,3 +207,20 @@
 - **D-092.1 pre-screens deze cyclus:** **geen** — D-093.2 verbiedt nieuwe pre-screens tot Sandro/CEO heropent.
 - **Nieuw PREREG deze cyclus:** **geen** — D-093 freeze; quality>quantity; geen filler. Geen engine-run / geen 2025+ touch.
 - Volgende: stilten / onderhoud 1×/4u; heropenen alleen op long_m1 (HistData A-001/M-001) of nieuw CEO-besluit. Geen Sandro re-nag (C-017).
+
+## 2026-10-01 ~07:41 Europe/Amsterdam — Hourly cycle (:40 slot) / D-093 FREEZE onderhoud
+
+- `git fetch --all`; tip vóór commit `grok/strateeg-2` @ 8778258 (up to date with origin).
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ c793b4b (+ upbeat-dirac @ 0394d59 tip CEO_LOG 07:45): **D-083…D-093** bindend; **D-093** zoekfase bevroren — geen nieuwe PREREGs/pre-screens/trials; D-093.1 watch **8/8 frozen**; D-093.2 onderhoud 1×/4u; reserve 2025+ onaangeraakt. Geen D-094+.
+  - `CEO_LOG` (upbeat-dirac `0394d59`): 07:15 / 07:45 — geen nieuws; D-093 idle stabiel; wacht Sandro (A-01 / heropening / stoppen).
+  - `NEXT_STEPS` **v62** (`origin/main` @ e0c4be3, 05:02 CEST): D-093 FREEZE; Watch **8/8**; TRIAL **447**; prio-1 = Sandro-keuze; S2/U2/Strateeg/CTO = IDLE/onderhoud; `EINDSTAND_FTMO.md` geabsorbeerd (evaluatie NIET kopen).
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ 319f89d / sync ~07:15–07:20): N18 FAIL_T (TRIAL 447); N11 FAIL_T; N20–N21 barred; S2 tip `8778258` freeze-onderhoud genoteerd; open actie = onderhoud tot heropenen.
+  - CTO `origin/grok/cto-1` @ b589af8: C-017 PING_EINDSTAND_DELIVERED — stop EINDSTAND re-nag.
+  - U2 tip `df5fa1c`: D-093 freeze; IDLE; TRIAL_COUNT 447 (cyclus 05:25 UTC).
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd; geen nieuwe GS0x.
+- **SymbolList_FTMO / costs:** 166 symbolen (+header); COSTS kern RT US30 0,45 / US100 0,66 / GER40 0,72 / US500 0,78 / XAU 0,83 / EURUSD 0,63 / GBPUSD 0,70 / USDJPY 0,78; BTCUSD 1,25 / UK100 1,42 / EU50 2,96 / XAG 5,07 / ETH 7,98. Geen XAG/ETH-scalp; geen overnight maand-sleeves. Naming `US30.cash` ↔ `US30cash` OK.
+- **Catalog-overlap / dode sleeves (niet heropenen onder freeze):** A1/A2/A4/A5/B1, N1–N19, N20–N21 barred, MIDDAY_VWAP, VWAP_PB, GER_US_LEAD, IB_FADE, LUNCH_OPEN, S2-XAU-overlap/GER40/USDJPY/USOIL/S2b/S2c, FAIL-pre-screens PLM/NR7/Failed-OR. XAU_AM_FADE / S2-BTC = watch-only onaangeraakt.
+- **D-092.1 pre-screens deze cyclus:** **geen** — D-093.2 verbiedt nieuwe pre-screens tot Sandro/CEO heropent.
+- **Nieuw PREREG deze cyclus:** **geen** — D-093 freeze; quality>quantity; geen filler. Geen engine-run / geen 2025+ touch.
+- Volgende: stilten / onderhoud 1×/4u; heropenen alleen op long_m1 (HistData A-001/M-001) of nieuw CEO-besluit. Geen Sandro re-nag (C-017).
