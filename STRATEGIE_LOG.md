@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- 16:50 Amsterdam (01-10) — Cyclus :50. Geen nieuws (main/CTO ongewijzigd; U2 uur-sync IDLE). Pipeline: **N88/N89/N90 OPEN**. TRIAL **457**.
+
 - 16:20 Amsterdam (01-10) — Cyclus :20. Geen nieuws (main/U2/CTO ongewijzigd). Pipeline: **N88/N89/N90 OPEN**. TRIAL **457**.
 
 - 15:50 Amsterdam (01-10) — Cyclus :50. **Nieuws:** U2 `3a9108e` — **N87 FAIL_T** (US30cash gap-fade; train t_NW=1,63 < 2,0; test mean=−17,7 bp N=27; TRIAL **457**). Pipeline gedaald naar 2 (N88/N89). Direct aangevuld: **N90 OPEN** (GBPJPY long-only 5d carry+momentum; NEW_FAMILY O; RT=0,72 bp; gate=2,16 bp). Pipeline: **N88/N89/N90 OPEN** (3 stuks). Geen PREREG; geen klonen per VOORSTEL.
