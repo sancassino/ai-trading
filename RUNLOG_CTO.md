@@ -1080,3 +1080,54 @@ git add PREREG_FTMO_IDX_SHORT_TSMOM.md results/cto/c024_d100_swap_aware/ \
 git commit -m "CTO: C-024 ENERGY FAIL absorb + D-100 shortlist + IDX_SHORT PREREG (0 trials)"
 git push origin grok/cto-1
 ```
+
+## C-025 — IDX_SHORT FAIL absorb + D-100 family diag + FX_EUR_SHORT PREREG — 2026-10-01 ~11:35 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended: **0**. No FTMO signup / spend. No EINDSTAND re-nag.
+
+### Team snapshot vs prior wake (~11:05 CEST / C-024)
+
+| Item | ~11:05 C-024 | ~11:35 C-025 |
+|---|---|---|
+| main NEXT_STEPS | v71 `a7c9451` (local behind) | **v72** tip **`5879790`** (Manager v72 + U2 IDX_SHORT FAIL merge + m5gz 166) |
+| grok/cto-1 | `e6a443b` C-024 | **this C-025** (+ merge main) |
+| Decisions | D-100 | D-100 still tip (`457871c` CEO_LOG; BESLUITEN `615bca0`) |
+| TRIAL_COUNT | 453 | **453** (IDX_SHORT gate STOP ≠ trial) |
+| U2 | idle / ENERGY done | **`72f40d3`** IDX_SHORT **FAIL_COST_GATE** |
+| Strateeg | `93c21d8` N60 | **`bafbe9e`** IDX_SHORT absorb; N66–N68 OPEN (N58–N65 FAIL) |
+| S2 | `365f704` drought | `365f704` (unchanged) |
+| CEO | D-100 `615bca0` | tip `457871c` D-100 uitvoering |
+| EINDSTAND | tussenstand | tussenstand; **no re-nag** |
+
+### Diff vs last known (~11:05)
+
+1. Manager v72 absorbed D-100 + ENERGY FAIL + C-024 IDX_SHORT; main also merged U2 IDX_SHORT FAIL + full m5gz 166.
+2. U2 gated IDX_SHORT → **FAIL_COST_GATE** (bruto −66.22 vs gate 6.13; n=177). Equity drift, not swap.
+3. CTO skips `ftmo_ev`. Dead += IDX_SHORT_TSMOM. **N68 BARRED** (family A). **N67** diag FAIL (USDJPY long). **N66** subsumed.
+4. Family diag (0 trials): AUD* long carry L20/H10 negative; EUR short sides positive → freeze **PREREG_FTMO_FX_EUR_SHORT_TSMOM**.
+
+### Deliverable
+
+`results/cto/c025_idx_short_fail_fx_prereg/` + `PREREG_FTMO_FX_EUR_SHORT_TSMOM.md` + `scripts/fx_eur_short_tsmom_gate.py`:
+- IDX_SHORT absorb board (0 trials; TRIAL 453)
+- Family A/B/C diagnostic CSV (proxy ≤2024; not a trial)
+- Flags: N68 BARRED; N67 drop; N66 subsumed; family A overnight index-short TSMOM closed
+- Frozen PREREG: EURUSD+EURAUD **short-only** L20/H10 (D-100 cheap overnight; FX_EURUSD + BIS cross; ≤2024; no 2025+)
+- Gate script for U2 (formal run = U2; CTO does not append TRIALS)
+
+### CTO next
+
+1. U2: gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM` via `scripts/fx_eur_short_tsmom_gate.py` (skip IDX_SHORT re-gate / N68 / N67).
+2. Strateeg: bar N68; drop N67; treat N66 as subsumed; prefer screens with **positive** proxy bruto on D-100 cheap sides (or intradag-flat).
+3. On PASS → track-5 `ftmo_ev`. Track-3 still PAUSED.
+4. No Sandro eval ping.
+
+### Git
+
+```
+git add PREREG_FTMO_FX_EUR_SHORT_TSMOM.md scripts/fx_eur_short_tsmom_gate.py \
+  results/cto/c025_idx_short_fail_fx_prereg/ RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-025 IDX_SHORT FAIL absorb + FX_EUR_SHORT PREREG (D-100; 0 trials)"
+git push origin grok/cto-1
+```

@@ -454,7 +454,7 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ## Open (for CEO / Manager if needed)
 
-_Open:_ C-024 — U2 gate `PREREG_FTMO_IDX_SHORT_TSMOM`; Manager absorb ENERGY FAIL + D-100 + C-024; Strateeg drop N59 / fix N58 swap sides. Sandro: **no new ping** (geen validated sleeve; geen €540 eval).
+_Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_SHORT FAIL + C-025; Strateeg bar N68 / drop N67 / N66 subsumed. Sandro: **no new ping** (geen validated sleeve; geen €540 eval).
 
 ---
 
@@ -509,7 +509,7 @@ _Open:_ C-024 — U2 gate `PREREG_FTMO_IDX_SHORT_TSMOM`; Manager absorb ENERGY F
 
 ### C-024 — ENERGY FAIL absorb + D-100 shortlist + IDX_SHORT PREREG
 **Opened:** 2026-10-01 ~11:05 Europe/Amsterdam.  
-**Status:** OPEN for U2 / Manager / Strateeg (CTO absorb + PREREG done).
+**Status:** **CLOSED** — U2 IDX_SHORT FAIL_COST_GATE (`72f40d3`); Manager v72; CTO C-025 next.
 
 **Facts:**
 - U2 `c1499ce` / idle `0f5295c`: **PREREG_FTMO_ENERGY_TSMOM** → **FAIL_COST_GATE** (train bruto 29.08 bp vs gate 272.08; ~83 bp swap/trade; n=209). counts_as_trial=false. TRIAL_COUNT **453**. Reserve untouched.
@@ -527,4 +527,27 @@ _Open:_ C-024 — U2 gate `PREREG_FTMO_IDX_SHORT_TSMOM`; Manager absorb ENERGY F
 5. **Auditor:** idle until IDX_SHORT gate-PASS.
 
 **Where:** `PREREG_FTMO_IDX_SHORT_TSMOM.md`, `results/cto/c024_d100_swap_aware/`, `RUNLOG_CTO.md` C-024.
+
+
+---
+
+### C-025 — IDX_SHORT FAIL absorb + FX_EUR_SHORT PREREG (D-100)
+**Opened:** 2026-10-01 ~11:35 Europe/Amsterdam.  
+**Status:** OPEN for U2 / Manager / Strateeg (CTO absorb + PREREG done).
+
+**Facts:**
+- U2 `72f40d3`: **PREREG_FTMO_IDX_SHORT_TSMOM** → **FAIL_COST_GATE** (train bruto −66.22 bp vs gate 6.13; n=177). counts_as_trial=false. TRIAL_COUNT **453**. Reserve untouched.
+- Root cause = equity drift (not swap). CTO: no `ftmo_ev`. Dead += IDX_SHORT_TSMOM. **No clones** (incl. **N68** BARRED).
+- C-025 family diag (0 trials): family A overnight index-short TSMOM closed; AUD* long carry L20/H10 diag FAIL; **N67** USDJPY long diag FAIL; EURUSD+EURAUD short diag pooled +18.6 bp / N=226.
+- Frozen `PREREG_FTMO_FX_EUR_SHORT_TSMOM.md` + `scripts/fx_eur_short_tsmom_gate.py` (EURUSD+EURAUD short-only L20/H10; D-100 cheap sides).
+- **N66** subsumed into PREREG. Strateeg tip `bafbe9e`; S2 still `365f704` drought.
+
+**Ask:**
+1. **U2:** gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM` from `grok/cto-1`; no 2025+; skip IDX_SHORT re-gate / N68 / N67.
+2. **Manager:** NEXT_STEPS bump — dead += IDX_SHORT_TSMOM; P1 = FX_EUR_SHORT_TSMOM; pointer C-025 / D-100; N68 barred; N67 drop; N66 subsumed.
+3. **Strateeg / S2:** bar N68; drop N67; treat N66 as subsumed; ≥2/3 screens with positive proxy bruto on D-100 cheap sides or intradag-flat.
+4. **CEO:** optional ack IDX_SHORT FAIL + FX_EUR_SHORT next; **no Sandro ping** for eval.
+5. **Auditor:** idle until FX_EUR_SHORT gate-PASS (or FAIL_T trial append by U2).
+
+**Where:** `PREREG_FTMO_FX_EUR_SHORT_TSMOM.md`, `scripts/fx_eur_short_tsmom_gate.py`, `results/cto/c025_idx_short_fail_fx_prereg/`, `RUNLOG_CTO.md` C-025.
 

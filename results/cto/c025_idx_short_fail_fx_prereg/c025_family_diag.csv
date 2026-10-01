@@ -1,0 +1,12 @@
+family,symbol,side,rule,train_N,train_mean_bruto_bp,gate_3x_est_bp,verdict,note
+A_index_short,US100+US30,short,L20/H10,177,-66.22,6.13,FAIL_COST_GATE_U2,U2 72f40d3; equity drift
+A_index_short,GER40/DAX,short,L20/H10,94,-47.54,6.0,DIAG_FAIL_BAR_N68,same family as IDX_SHORT
+B_fx_carry,AUDCHF,long,L20/H10,109,-37.18,6.0,DIAG_FAIL,top C-024 carry earner; bruto negative
+B_fx_carry,AUDJPY,long,L20/H10,116,-12.74,6.0,DIAG_FAIL,pooled with AUDCHF still negative
+B_fx_carry,USDJPY,long,L20/H10,114,-6.83,2.34,DIAG_FAIL_drop_N67,train loses; N67 OPEN → advise FAIL
+B_fx_carry,USDCHF,long,L20/H10,105,-3.48,2.5,DIAG_FAIL,
+B_fx_carry,GBPCHF,long,L20/H10,106,-21.14,6.0,DIAG_FAIL,
+B_fx_carry,EURUSD,short,L20/H10,113,21.0,1.89,DIAG_PASS_may_PREREG,N<150 alone; pool with EURAUD
+B_fx_carry,EURAUD,short,L20/H10,113,16.14,3.33,DIAG_PASS_may_PREREG,N66; test weak (−10)
+B_fx_carry,EURUSD+EURAUD,short,L20/H10,226,18.57,2.6,DIAG_PASS_FREEZE_PREREG,h1=14.33 h2=22.81; both halves >0
+C_metal,SILVER_F,short,L20/H10,113,-39.29,15.0,DIAG_FAIL,N60 XAG already FAIL Strateeg

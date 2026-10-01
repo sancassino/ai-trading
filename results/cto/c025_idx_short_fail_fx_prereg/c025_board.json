@@ -1,0 +1,56 @@
+{
+  "c": "C-025",
+  "when_cest": "2026-10-01 ~11:35 Europe/Amsterdam",
+  "decision_context": [
+    "D-100"
+  ],
+  "idx_short_absorb": {
+    "prereg": "PREREG_FTMO_IDX_SHORT_TSMOM",
+    "u2_tip": "72f40d3",
+    "outcome": "FAIL_COST_GATE",
+    "counts_as_trial": false,
+    "train_mean_bruto_bp": -66.2182,
+    "train_mean_cost_bp": 2.0422,
+    "gate_3x": 6.1266,
+    "n_trades_train": 177,
+    "trial_count": 453,
+    "reserve_2025": "untouched",
+    "root_cause": "equity upward drift; short-only L20/H10 bruto deeply negative \u2014 swap-cheap irrelevant",
+    "no_clones": [
+      "no L/H grid",
+      "no US500/GER40/HK50/AUS200 add",
+      "no long-been rescue",
+      "no N68 GER40 short-only TSMOM (family A)"
+    ]
+  },
+  "flags": {
+    "N68": "BARRED_as_IDX_SHORT_family_A \u2014 GER40/DAX short L20/H10 diag mean \u221247 bp; same equity-drift failure",
+    "N67": "DIAG_FAIL \u2014 USDJPY long L20/H10 train mean \u22126.83 bp; drop or redesign (not PREREG)",
+    "N66": "SUBSUMED \u2014 EURAUD short enters PREREG_FTMO_FX_EUR_SHORT_TSMOM pool; single-name screen optional but PREREG is binding path",
+    "family_A": "BARRED overnight index-short TSMOM L20/H10 class after IDX_SHORT",
+    "family_B_aud_long": "DIAG_FAIL overnight AUD* carry+trend L20/H10 (AUDCHF/AUDJPY/GBPCHF)"
+  },
+  "next_prereg": {
+    "file": "PREREG_FTMO_FX_EUR_SHORT_TSMOM.md",
+    "universe": [
+      "EURUSD",
+      "EURAUD"
+    ],
+    "rule": "L20/H10 short-only on D-100 cheap overnight short sides",
+    "diag_train_N": 226,
+    "diag_train_mean_bruto_bp": 18.57,
+    "diag_h1_h2": [
+      14.33,
+      22.81
+    ],
+    "gate_est_3x_bp": 2.6,
+    "counts_as_trial_until_gate": false,
+    "proxy": {
+      "EURUSD": "FX_EURUSD",
+      "EURAUD": "FXBIS_AUD/FXBIS_EUR cross (PROXY_MAP)"
+    }
+  },
+  "trial_count": 453,
+  "reserve_2025": "untouched",
+  "ftmo_ev": "skipped on IDX_SHORT (FAIL_COST_GATE); pending FX_EUR_SHORT gate-PASS"
+}
