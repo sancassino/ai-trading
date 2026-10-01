@@ -8,6 +8,9 @@
   WMT, ZM, META, GE, BA, RTX, LMT, PLTR, AMD, INTC, QCOM, AVGO, CSCO, JNJ, SBUX, KO, MSTR, GME, NKE, CVX, FDX, JPM, DIS, IBM, ASML, AZN, BRK.B, XOM) voor A2,
   en BTCUSD, ETHUSD, USOILcash, UKOILcash voor S2. Totaal 69 symbolen, ≈ 159 MB. Let op aandelen: FTMO-aandelen openen vanaf 2024 om 09:35 ET en sommige
   symbolen hebben een uur-offset (zie Q2-RUNLOG: sessie = alle bars van de NY-datum); veel aandelen-bars hebben spread 0 (= ontbrekend, zie COSTS_FTMO_alle.csv).
+- **Uitgebreid naar alle 166 FTMO-symbolen (spoor 6 / D-097, 2026-10-01):** + FRA40cash, HK50cash, N25cash, SPN35cash, US2000cash en de overige 92 symbolen uit
+  `SymbolList_FTMO.csv` (FX-crosses/exoten, crypto, grondstoffen, EU-aandelen, overige US-aandelen); export 2026-10-01 (eind ≈ 2026-09-30). Volledige lijst =
+  `CHECKSUMS.sha256`. Begin verschilt per symbool (FTMO-historie; veel crypto/aandelen pas vanaf 2022–2024) — controleer de eerste bar vóór gebruik (D-094a: ≥ 5 jaar).
 - **Formaat:** gzip van de originele CSV (identieke inhoud; `CHECKSUMS_bron_csv.sha256` = SHA-256 van de ongecomprimeerde bron, `CHECKSUMS.sha256` = van de .gz).
   Kopregel `# ... point=<p>;` gevolgd door `time;open;high;low;close;spread` (spread in punten; × point = prijs). Tijd = servertijd.
 - **Laden:** `b4_sim.load` leest `data/m5/<SYM>.csv`. Voor de gz-versie:
