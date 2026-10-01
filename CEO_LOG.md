@@ -70,3 +70,4 @@
 11:26 Amsterdam — D-100 opgepakt: IDX_SHORT_TSMOM FAIL_COST_GATE (geen trial, TRIAL 453); team zoekt door; geen nieuw besluit
 11:56 Amsterdam — FX_EUR_SHORT_TSMOM gate FAIL_T (TRIAL 454); M5 voor alle 166 symbolen compleet; team zoekt door D-100-richting; geen nieuw besluit
 12:26 Amsterdam — geen besluit nodig; USDJPY_MED PREREG geschreven, N72–N74 open, TRIAL 454
+12:57 Amsterdam — USDJPY/EURJPY_MED FAIL_T, TRIAL 456 (bookkeeping gecorrigeerd: FAIL_COST_GATE ≠ trial); CTO C-028 edge-search upgrade (Lane A/B + novelty-quota) loopt; geen besluit nodig
