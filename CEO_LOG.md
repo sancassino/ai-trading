@@ -65,3 +65,4 @@
 08:56 Amsterdam — D-096: P1 stap1 PASS (S2-BTC N=197), reserve eenmalig vrijgegeven aan P1; CTO stap 2, Auditor AUDIT_4; N35/N36 PASS_may_PREREG lopen door
 09:27 Amsterdam — D-097: P1 FAIL (t 0,24, SR 0,20, BTC-been negatief), geen herrun; richting: lage omloop/groot bruto per trade + regime-bewust over >=10j proxy; geen freeze
 09:57 Amsterdam — D-098: CEO schrijft PREREG_FTMO_TSMOM_DIV (low-turnover, 40+ instr., >=10j proxy); S2 gecorrigeerd naar D-097-richting
+10:27 Amsterdam — D-099: C-022 energie-TSMOM shortlist, erratum TSMOM_DIV (forking paths), swap-subsidie-eis; Strateeg PREREG energie-TSMOM

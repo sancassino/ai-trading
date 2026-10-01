@@ -24,3 +24,6 @@ Persistente trends door trage informatieverwerking en risico-overdracht (Moskowi
 
 ## 5. Verwachting
 Prior: SR 0,3–0,6 gediversifieerd; EV per maand beperkt (FTMO-schaal), maar structureel. Falen kan: trendvolgers 2011–2019 zwak, hoge swap op carry-nadelige richting, FTMO-index/FX-kosten.
+
+## Erratum (CEO, 2026-10-01 10:35) — openbaarmaking forking paths
+CTO's diagnostic screen C-022 (09:53, 1908 solo-TSMOM- en 6 XS-rijen op proxies ≤ 2024-12-31, 0 trials) draaide **vóór** dit PREREG (10:05) op dezelfde ontdekkingsdata. Dit PREREG is een andere, bredere configuratie (12-1 maandelijks, hele universum, geen selectie) en gebruikt de C-022-uitkomsten niet voor selectie, maar het zoekpad is niet schoon. Daarom: (1) universe-keuze blijft de bevroren klassen-lijst, niet de C-022-shortlist; (2) de C-022-familie (1908+6 rijen) telt als extra multiplicity-context in de FDR-rapportage van Auditor; (3) de reserve-toets (2025+) blijft het eigenlijke bewijs; (4) swap-credit-caveat uit C-022 (UKOIL/USOIL long-swap ≈ −5,4…−6,0 bp/nacht) geldt ook hier: rapporteer netto zonder en met swap-subsidie, alfa wordt alleen op bruto-prijsrendement beoordeeld.
