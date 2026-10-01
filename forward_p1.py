@@ -3,7 +3,8 @@
 - Been B (BTC): PREREG_S2_BTC_USOPEN, logica regel-voor-regel overgenomen uit scripts/s2_btc_cost_gate_train.py (CTO, grok/cto-1).
 Per dag (≥ FORWARD_START): netto rendement per ORB-symbool (fractie, 1× notional), ORB-been = gemiddelde over de 3 indices (gelijke notional),
 BTC-been netto (fractie, 1× notional). Gecombineerde reeks = sA·A + sB·B zodra de CTO de train-bevroren schaalconstanten vastlegt in
-results/cto/p1_scales.json ({"sA":…, "sB":…}); tot dan 'n.v.t.'. Append-only naar forward/p1_daily.csv; data = data/m5 (dagelijks aangevuld)."""
+results/cto/p1_scales.json ({"sA":…, "sB":…}); tot dan 'n.v.t.'. Append-only naar forward/p1_daily.csv; data = data/m5_fwd (momentopname data/m5 +
+dagelijkse aanvulling via update_m5_recent.py; b4_sim zelf ongewijzigd, alleen het leespad wordt omgeleid)."""
 import json
 import os
 from collections import defaultdict
@@ -11,6 +12,8 @@ from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 import b4_sim
+
+b4_sim.open = lambda p, *a, **k: open(p.replace("data/m5/", "data/m5_fwd/") if os.path.exists(p.replace("data/m5/", "data/m5_fwd/")) else p, *a, **k)
 
 FORWARD_START = date(2026, 10, 1)
 OUT = "forward/p1_daily.csv"

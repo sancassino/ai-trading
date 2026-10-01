@@ -51,3 +51,13 @@ gebruikt `orb_unit` = **exact** results/f/F2_ORB_daily.csv (corr 1,000, max vers
 BTC-been: identiek (119 reservetrades, verschil 0). P1-uitkomst (FAIL, vooral BTC) verandert vermoedelijk niet, maar de afwijking hoort in AUDIT_4/C-020.
 **Standaardactie (na 60 min):** forward_p1 logt beide: 3-indexbeen (PREREG-tekst) én orb7_unit (F2-equivalent via B4a-simulator, corr 0,993 met F2) met
 combined_cto = sA·orb7 + sB·btc (sA/sB uit results/cto/p1_scales.json, geijkt op F2). Geen keuze/selectie achteraf.
+
+## U-008 (2026-10-01 ≈ 11:25 Amsterdam) — F3b forward-papier dag 1 (2026-09-30): ORB-been gemist door verouderde MT5-cache — QA-bevinding
+`mt5_export_recent.py` (I1, VM) vroeg `copy_rates_from_pos` één keer; MT5 synchroniseert historie asynchroon en gaf de oude cache terug
+(vandaag aangetoond: US500/US100/US30/GER40/EURUSD bleven op 01:15 servertijd staan terwijl de tick 12:18 was; 3 s later wel actueel).
+Gevolg: forward_paper verwerkte 2026-09-30 met 0 ORB-trades. Herberekend met dezelfde regels (b4_sim.run_orb) op complete M5: **7 ORB-trades, +177,5 bp som,
+≈ +€87,20** (equity €80.086,22 i.p.v. €79.999,02). RSI-been dag 1 klopt (D1-slotkoersen GER40 25101,71 / UK100 10580,37 identiek).
+**Gedaan (geen regelwijziging):** exporter wacht nu tot de laatste bar binnen 10 min (M5) / 2 dagen (D1) van de laatste tick ligt (max 15 s); uitvoerformaat identiek;
+origineel bewaard als `mt5_export_recent_I1_orig.py` op de VM; extra opwarm-cron 22:10 UTC (`mt5_warmup.py`). Gemiste trades staan in `forward/paper_corrections.csv`;
+`paper_daily.csv`/`state.json` zijn **niet** aangepast (append-only).
+**Standaardactie (na 60 min):** dag 1 blijft zoals gelogd; rapportages (forward_week) noemen de correctie apart. CEO/Manager kan anders beslissen.
