@@ -1666,3 +1666,29 @@ Year-split train bruto: 2021 **+3.43** / 2022 **−8.25** / 2023 **+9.21**. Frac
 
 **U2 next:** IDLE wacht Strateeg Lane-B PASS→PREREG (N75–N77 of CORN) of CTO/Manager nieuw non-clone PREREG. Material via NEXT_STEPS absorb (Manager al v78); quiet naar Sandro.
 
+
+## Cyclus 13:21–13:25 CEST (2026-10-01) — N80 UKOIL OVN-gap cont gate → FAIL_COST_GATE
+
+**Branch:** `claude/uitvoerder2-r` — FF-merge `origin/main` @ `69444b5` (NEXT_STEPS **v80**; C-029 absorb; N80 OPEN). Tip pre-cycle `40d770a` (N78 bookkeeping; TRIAL **456**). PREREG land `c8145b2` from Faraday `23c3741`. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v80** (Manager 13:10 CEST): U2 wake op PASS→PREREG **N80**; skip N75–N78/N81/CORN; geen VIX_TERM-klonen; TRIAL_COUNT **456**; Dead += N78
+- `PREREG_FTMO_N80.md` (Strateeg Faraday `23c3741` / D-092.1 PASS): UKOILcash |gap|≥40 @08:00 vs prior ≤22:00 → continuation; flat 17:00 CET; stop formal 1.5×ATR14(H1); gate **8,13** bp (3× RT 2,71); stress 12,20; train 2021–23; N≥150; FAIL→STOP geen retune; FAIL_COST_GATE ≠ trial (C-029)
+- D-092.1 pre-screen (no stop): N=415 mean bruto **+12,26** ≥ 8,13 → PASS_may_PREREG — **niet** automatic U2 PASS
+
+### Gate N80 (scripts/n80_cost_gate_trial.py)
+
+| Window | N | mean bruto | gate 8.13 | stress 12.20 | t day-clust / NW-L5 (netto) | Uitkomst |
+|--------|--:|-----------:|----------:|-------------:|----------------------------:|----------|
+| **Train** 2021–2023 | 415 | **+7.56 bp** | **FAIL** | FAIL | 0.68 / 0.69 | STOP |
+| **Test** 2024 | — | — | — | — | — | (niet gerund; gate FAIL) |
+
+Year-split train bruto: 2021 **+25.26** / 2022 **−0.46** / 2023 **−3.63**. Long/short n 231/184. Stop-share **0.45** (stop included → mean daalt vs pre-screen +12.26). Halves h1/h2 bruto +19.08 / −3.90. Reserve 2025 untouched.
+
+**Uitkomst: FAIL_COST_GATE** — train mean bruto **7.56 < 8.13**; N=415≥150 OK. Formal t niet als PASS-pad (STOP). counts_as_trial=**false**. Geen retune (geen gap-threshold grid, geen USOIL twin, geen overnight-hold, geen softer gate).
+
+**Dead/FAIL += N80_UKOIL_OVN_GAP_CONT (PREREG_FTMO_N80)**. Dead += N78 (al). **N75–N77 alleen laten** (DIAG_FAIL; niet killen als klonen). Skip her-gate N80 / N78/VIX_TERM / N75–N77 / CORN / L60 FX-med / ENERGY / IDX_SHORT / TSMOM_DIV / N18 / N22.
+
+**TRIAL_COUNT blijft 456** (FAIL_COST_GATE ≠ trial; C-029 / N78-erratum patroon ENERGY/IDX_SHORT/TSMOM_DIV). Geen TRIALS-append.
+
+**U2 next:** IDLE wacht Strateeg/CTO/Manager nieuw PASS→PREREG (NEXT_STEPS). Geen klonen van N80/N78/VIX_TERM of prior dead sleeves.
