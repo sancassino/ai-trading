@@ -1,0 +1,57 @@
+[
+  {
+    "idea": "SOY_SHORT_TSMOM",
+    "n": 189,
+    "mean_bruto": -17.8409,
+    "median": -46.1538,
+    "gate": 50.0,
+    "rt": 15.817,
+    "outcome": "FAIL",
+    "skew": 0.5054,
+    "hit": 0.4444
+  },
+  {
+    "idea": "COFFEE_LONG_TSMOM",
+    "n": 191,
+    "mean_bruto": 44.7632,
+    "median": -28.5016,
+    "gate": 50.0,
+    "rt": 10.443,
+    "outcome": "FAIL",
+    "skew": 0.7132,
+    "hit": 0.4869
+  },
+  {
+    "idea": "USDCHF_LONG_TSMOM",
+    "n": 192,
+    "mean_bruto": -3.3213,
+    "median": -3.642,
+    "gate": 50.0,
+    "rt": 1.01,
+    "outcome": "FAIL",
+    "skew": 0.202,
+    "hit": 0.4896
+  },
+  {
+    "idea": "XAU_SHORT_TSMOM",
+    "n": 191,
+    "mean_bruto": -23.2898,
+    "median": -18.7003,
+    "gate": 50.0,
+    "rt": 0.83,
+    "outcome": "FAIL",
+    "skew": -0.0436,
+    "hit": 0.4555
+  },
+  {
+    "idea": "USDCAD_LONG_TSMOM",
+    "n": 200,
+    "mean_bruto": 1.9693,
+    "median": 1.8803,
+    "gate": 50.0,
+    "rt": 0.8,
+    "outcome": "FAIL",
+    "skew": 0.3727,
+    "hit": 0.51
+  }
+]

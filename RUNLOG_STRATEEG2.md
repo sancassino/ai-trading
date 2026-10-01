@@ -305,3 +305,30 @@
 - **Nieuw PREREG deze cyclus:** **geen** — quality>quantity; geen filler; geen drempel-retune; geen N58/N59/ENERGY/TSMOM_DIV-klonen. 5/5 D-097-achtig (commodity regime/season + Asia index swing + FX cross swing). Closest miss: GBPAUD_SWING20 (−0,25 ≪ 50).
 - **MATERIAL:** false (drought; pipeline intact; D-097 cadans gevolgd).
 - Geen engine-run / geen 2025+ touch / geen gefabriceerde test-cijfers. Volgende: tracks 2+4 + D-097/D-099 (≥2/3); parallel N58/N59 ok als mechanisch distinct; U2-deblok = volgende PASS→PREREG.
+
+## 2026-10-01 ~11:48 Europe/Amsterdam — Hourly cycle (:40 slot) / D-094 + D-097/D-100 drought
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ 365f704 (up to date with origin). Branch bevestigd ≠ main/uitvoerder.
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ 615bca0: **D-083…D-100** bindend; **D-094** FREEZE OFF; **D-094a** ≥5j of a/b/c; **D-097** lage-omloop / ≥50 bp bruto; **D-098** ≥2/3 screens D-097; **D-099** ENERGY (FAIL_COST); **D-100** swap-bewust (overnight alleen goedkoopste kant; alfa = bruto-prijs). Reserve 2025+ onaangeraakt.
+  - `CEO_LOG` (`origin/claude/upbeat-dirac-g2810q` @ c66b9d4): 11:45 — IDX_SHORT FAIL_COST; FX_EUR_SHORT PREREG; M5 166 symb compleet.
+  - `NEXT_STEPS` **v73** (`origin/main` @ 358ead9, 11:39 CEST): C-025; IDX_SHORT FAIL_COST_GATE; OPEN U2 gate **FX_EUR_SHORT**; family A overnight index-short **closed**; S2 ≥2/3 op B/C/D; TRIAL **453**.
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ bafbe9e): N58/N60–N65 FAIL; N59/N68 BARRED; N67 DIAG_FAIL; N66 subsumed in FX_EUR_SHORT; OPEN sync post C-025.
+  - CTO `origin/grok/cto-1` @ 0644107: **C-025** IDX_SHORT FAIL absorb + `PREREG_FTMO_FX_EUR_SHORT_TSMOM` (0 trials).
+  - U2 tip `72f40d3`: IDX_SHORT FAIL_COST_GATE done; next = FX_EUR_SHORT gate.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd.
+- **SymbolList_FTMO / costs:** 166 symbolen (+header); COSTS_alle kern RT US30 0,45 / US100 0,66 / GER40 0,72 / US500 0,78 / XAU 0,83 / EURUSD 0,63 / USDCHF **1,01** / USDCAD **0,80**; specs spread_bp SOYBEAN 15,82 / COFFEE 10,44 (D-100 cheap: SOY short / COFFEE long / USDCHF long / XAU short / USDCAD long). Geen XAG/ETH-scalp; geen overnight maand-sleeves. m5gz via lokale symlink (niet gecommit).
+- **Catalog-overlap / dode sleeves (niet heropenen/klonen):** A4/B1/A5/A2, ORB/simple ORB, N1–N65, N46/N47/N59/N68 BARRED, N67 DIAG_FAIL, **P1**, **TSMOM_DIV**, **ENERGY_TSMOM**, **IDX_SHORT_TSMOM**, **FX_EUR_SHORT** (CTO/U2 pad — niet gedupliceerd), **S2-GBPJPY_EU_MOM**, S2 XAU-overlap/GER40-open/USDJPY/USOIL, MIDDAY_VWAP, S2b, GER_US_LEAD, VWAP_PB, IB_FADE, S2c-shape, LUNCH_OPEN, FAIL pre-screens t/m cycle_1040 + prior S2 fails (XCU/CORN/WHEAT/HK50/GBPAUD). Watch-only: XAU_AM_FADE, S2-BTC onaangeraakt.
+- **D-092.1 pre-screens deze cyclus** (proxy daily train **2010–2023**, 2024 unused, reserve 2025+ onaangeraakt; D-097 gate = max(3×RT, 50 bp); D-100 cheap overnight side only; D-094a (b) ≥10j proxy; artefacts `results/strateeg2_prescreen/cycle_1140*`; script `scripts/s2_d092_prescreen_cycle1140.py`):
+
+  | Idee | Symbool | N | mean bruto | gate | Uitkomst |
+  |------|---------|--:|----------:|-----:|----------|
+  | SOY_SHORT_TSMOM | SOYBEAN.c/SOY_F | 189 | −17,84 bp | 50,0 | **FAIL** |
+  | COFFEE_LONG_TSMOM | COFFEE.c/COFFEE_F | 191 | +44,76 bp | 50,0 | **FAIL** (closest miss) |
+  | USDCHF_LONG_TSMOM | USDCHF/FX_USDCHF | 192 | −3,32 bp | 50,0 | **FAIL** |
+  | XAU_SHORT_TSMOM | XAUUSD/GOLD_F | 191 | −23,29 bp | 50,0 | **FAIL** |
+  | USDCAD_LONG_TSMOM | USDCAD/FX_USDCAD | 200 | +1,97 bp | 50,0 | **FAIL** |
+
+- **Nieuw PREREG deze cyclus:** **geen** — quality>quantity; geen filler; geen drempel-retune; geen FX_EUR_SHORT/IDX_SHORT/ENERGY/N58–N68/CORN/WHEAT-klonen. 5/5 D-097/D-100 B/C/D (non-oil agri short/long + FX cheap long ×2 + metals cheap short). Closest miss: COFFEE_LONG_TSMOM (+44,76 < 50; N=191; median −28,5 — skew-fragile).
+- **MATERIAL:** false (drought; pipeline intact; D-097/D-100 cadans gevolgd).
+- Geen engine-run / geen 2025+ touch / geen gefabriceerde test-cijfers. Volgende: tracks 2+4 + D-097/D-100 B/C/D (≥2/3); U2-deblok = FX_EUR_SHORT gate (niet S2); S2 alleen nieuw mechanisme met D-092.1 PASS + N≥150.
