@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- **2026-10-01 12:55 CEST** — **N78 VIX_TERM_VOV STOP FAIL_COST_GATE** U2 `b998253` (train N=492, mean **+2,21** ≪ 7,83; stress FAIL; t~0,12; years +3,43/−8,25/+9,21; TRIAL_COUNT **457**). Dead += N78; no VIX_TERM_VOV clones / no softer gate; reserve 2025 untouched. N75–N77 remain OPEN. Filed **N79–N81** NEW_FAMILY D/E/F VOORSTEL (curve→UKOIL 50bp / UKOIL OVN-gap EOD-flat 8,13 / US100·US500 pair RV 13,74). Catalog §9/§10 sync. Geen PREREG; Quiet to Sandro.
+
 - 12:50 Amsterdam (01-10) — Cyclus :50. Geen nieuw nieuws t.o.v. 12:47. Pipeline: **N75/N76/N77 OPEN** (NEW_FAMILY Lane-B) + **N78 PREREG VIX_TERM_VOV** (U2 gate pending). L60 FX-med BARRED. TRIAL **456**.
 
 - **2026-10-01 12:47 CEST** — **C-028 Lane-B PREREG N78 VIX_TERM_VOV** from S2 `b765613c`. Primary US100cash; freeze vov10/combo; gate **7,83 bp** = 3×(0,66+1×1,95) D-100 overnight long (swap-hostile honest). Lane-A bruto 6,80/day_t 2,91 ≠ PASS. N75–N77 remain OPEN screens; N72–N74 BARRED; TRIAL_COUNT **456**. Catalog §9/§10 + source pointer `results/lane_b/VIX_TERM_VOV_SOURCE.md`. Quiet to Sandro (parent ping U2).

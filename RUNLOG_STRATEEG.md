@@ -1,5 +1,40 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-01 12:55 Europe/Amsterdam — N78 FAIL_COST_GATE + N79–N81 NEW_FAMILY
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; ff-pull `436fc9e` first).  
+**Trigger:** U2 tip `b998253` (uitvoerder2-r): **N78 VIX_TERM_VOV FAIL_COST_GATE STOP**.
+
+### U2 N78 result (binding)
+| Metric | Value |
+|--------|------:|
+| Train | 2021–23 US100cash |
+| N | 492 |
+| Mean bruto | **+2,21 bp** ≪ gate **7,83** |
+| Stress | FAIL |
+| t | ~0,12 |
+| Years | 2021 +3,43 / 2022 −8,25 / 2023 +9,21 |
+| Test 2024 | info only |
+| TRIAL_COUNT | **457** |
+| Retune | **verboden**; no VIX_TERM_VOV clones; no softer gate |
+| Reserve 2025 | untouched |
+
+### Geleverd
+- `PREREG_FTMO_N78_VIX_TERM_VOV.md` → **STOP FAIL_COST_GATE** (U2 numbers/SHA)
+- Catalogus §9/§10: N78 dead; dropped from live ranking; N75–N77 remain **OPEN**; TRIAL_COUNT **457**
+- VOORSTEL_PRESCREEN **N79–N81** NEW_FAMILY D/E/F (≥3; ≠ VIX_TERM_VOV / L60 FX-med / ORB / TSMOM_DIV / ENERGY / IDX_SHORT / N75–N77 mechanics)
+
+### New OPEN screen table
+| ID | Family | Instrument | Gate bp | Mechanisme |
+|----|--------|------------|--------:|------------|
+| N79 | D RATE_CURVE→OIL | UKOILcash | **50,00** | US10Y−US2Y steepener → LO 5d (D-100 long; D-097 floor) |
+| N80 | E OIL_OVN_GAP_FLAT | UKOILcash | **8,13** | OVN gap ≥±40 → continuation; flat 17:00 CET (swap=0) |
+| N81 | F EQUITY_PAIR_RV | US100+US500 | **13,74** | ratio z>1 → SO US100 / LO US500 3d (cheap swap side only) |
+
+Train 2021–23; N≥150; gate 3×(RT[+swap]); D-094a b/c. Softs seasonality skipped (m5gz exists; **not** in COSTS_FTMO — no binding RT). Vol-timing overnight US100 avoided (N78 dead).
+
+**Niet gedaan:** geen PREREG (geen screen PASS); geen agent/Sandro message; geen `/workspace/ai-trading` branch flip; geen 2025-reserve.
+
 ## 2026-10-01 12:42 Europe/Amsterdam — C-028 closes L60 FX-med family
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; ff-pull first, already up to date).
