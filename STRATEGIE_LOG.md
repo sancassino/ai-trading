@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- 17:20 Amsterdam (01-10) — Cyclus :20. Geen nieuws (main/U2/CTO ongewijzigd). Pipeline: **N88/N89/N90 OPEN**. TRIAL **457**.
+
 - 16:50 Amsterdam (01-10) — Cyclus :50. Geen nieuws (main/CTO ongewijzigd; U2 uur-sync IDLE). Pipeline: **N88/N89/N90 OPEN**. TRIAL **457**.
 
 - 16:20 Amsterdam (01-10) — Cyclus :20. Geen nieuws (main/U2/CTO ongewijzigd). Pipeline: **N88/N89/N90 OPEN**. TRIAL **457**.
