@@ -57,3 +57,4 @@
 - 2026-10-01 02:10 Amsterdam — cyclus :05: D-092 gelezen — pre-screen zonder trial, S2c XAU+XAG, F2-ORB referentie-EV, portefeuille-tabel, stopregel 8 cycli; Auditor-PASS vereist voor evaluatie-advies (punt 5); nog geen kandidaat zo ver.
 - 2026-10-01 02:40 Amsterdam — cyclus :35: C-010 XAU N7/N8 pre-screen FAIL (geen PREREG); Strateeg pre-screens ook FAIL; alle D-092 sporen tot nu toe afgewezen; D-092 stopregel actief (8 cycli teller loopt); geen Auditor-taak.
 - 2026-10-01 03:05 Amsterdam — cyclus :05: LUNCH_OPEN cost-gate PASS maar FAIL_T formele trial (TRIAL_COUNT 445); C-011 N9/N10 pre-screen FAIL; D-092 cyclus 2/8 watch 0/8; geen kandidaat nabij Auditor-drempel; geen Auditor-taak.
+- 2026-10-01 03:35 Amsterdam — cyclus :35: N11/N12 pre-screen FAIL (NO_PREREG); D-092 cyclus 3/8; stopregel CEO-schatting 5-6/8; TRIAL_COUNT 445; geen Auditor-taak.
