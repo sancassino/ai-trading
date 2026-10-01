@@ -75,3 +75,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-10-01 | N36/PREREG_FTMO_N36: XAU NY-open drive (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 451 |
 | 2026-10-01 | N40/PREREG_FTMO_N40: GER40 mid-morning mom cont (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 452 |
 | 2026-10-01 | N41/PREREG_FTMO_N41: US30 EU→US cont (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 453 |
+| 2026-10-01 | FX_EUR_SHORT/PREREG_FTMO_FX_EUR_SHORT_TSMOM: EURUSD+EURAUD short-only L20/H10 (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 454 |

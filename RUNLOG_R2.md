@@ -1527,3 +1527,33 @@ US100 bruto −67.9 bp / US30 bruto −64.6 bp. Beide helften bruto negatief. Oo
 **TRIAL_COUNT unchanged (453).**
 
 **U2 next:** wacht Strateeg/S2 D-097/D-100 PASS→PREREG (N60 secondary ≥50 bp; N58 na swap-redesign); geen S2-BTC stap2 inventeren. Material via NEXT_STEPS voor Manager/CTO (geen Sandro-ping).
+
+## Cyclus 11:49–11:55 CEST (2026-10-01) — C-025 FX_EUR_SHORT_TSMOM gate → FAIL_T (TRIAL 454)
+
+**Branch:** `claude/uitvoerder2-r` — FF-merge `origin/main` @ `358ead9` (NEXT_STEPS **v73**; IDX_SHORT FAIL absorb + C-025 FX_EUR_SHORT PREREG). Tip pre-merge `72f40d3` (IDX_SHORT FAIL_COST_GATE; TRIAL **453**). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v73** (Manager 11:39 CEST): FREEZE **OFF**; U2 **ACTIEF** — gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM` (EURUSD+EURAUD short-only L20/H10; cheap overnight; bruto-prijs poort; train 2010–2016 / test 2017–2024; geen 2025+)
+- `PREREG_FTMO_FX_EUR_SHORT_TSMOM.md` (CTO C-025 / D-100 @ `0644107`): short only when 20d mom < 0; hold 10d; COSTS_FTMO RT + swap_short (credits→0); alfa = bruto prijs; N≥150 + t≥2 formal bij poort-PASS; geen klonen bij FAIL
+- Skip her-gate IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59/N68
+
+### Prio — PREREG FX_EUR_SHORT (CTO 0644107) → cost-gate PASS → formal FAIL_T
+
+**PREREG gecommit:** `b184d71` — `PREREG_FTMO_FX_EUR_SHORT_TSMOM.md` + `scripts/fx_eur_short_tsmom_gate.py` (PREREG vóór resultaat; bron `grok/cto-1` @ `0644107`). Artefacts: `results/R2/fx_eur_short_tsmom/`.
+
+| Window | N | mean bruto | gate 3× | stress | t day-clust / NW-L5 | Uitkomst |
+|--------|--:|-----------:|--------:|-------:|--------------------:|----------|
+| **Train** 2010–2016 | 227 | **+21.96 bp** | 2.61 **PASS** | **PASS** | 1.90 / 1.87 | — |
+| **Test** 2017–2024 | 239 | **−3.42 bp** | — | — | −0.14 / −0.13 | — |
+
+Symbol train: EURUSD N=114 bruto +24.35 · EURAUD N=113 bruto +19.54.  
+Symbol test: EURUSD N=120 bruto +1.21 · **EURAUD N=119 bruto −8.09** (dual-symbol bruto≥0 op test **FAIL**).  
+h1/h2 train bruto +17.5 / +26.2; test bruto −18.0 / +11.8.
+
+**Uitkomst: FAIL_T** — cost-gate+stress PASS; formal day-clust t train **1.90 < 2.0** én test t −0.14; EURAUD test bruto <0. **1 trial** (TRIAL **454**). Geen klonen (geen L/H-grid, geen EURGBP-add, geen long-been, geen 5d-retune).
+
+**Dead/FAIL += FX_EUR_SHORT_TSMOM (PREREG_FTMO_FX_EUR_SHORT_TSMOM)**. Skip her-gate IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59/N68/P1.
+
+**TRIAL_COUNT 453 → 454.** TRIALS.csv append-only.
+
+**U2 next:** wacht Strateeg/S2 D-097/D-100 B/C/D PASS→PREREG (geen family-A short klonen; N58 alleen na swap-redesign); geen S2-BTC stap2 inventeren. Material via NEXT_STEPS voor Manager/CTO/Auditor (geen Sandro-ping).
