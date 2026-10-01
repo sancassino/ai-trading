@@ -913,3 +913,44 @@ Script: `scripts/n11_n12_prescreen.py`. Artifacts: `results/R2/n11_n12_prescreen
 3. Escalatie D-091.6 reeds 4/4 → D-092 actief. Geen Sandro-ping.
 
 **MATERIAL for Manager/CTO** (N11/N12 D-092.1 FAIL; U2 idle again). Vragen → Manager; eindbesluit → CTO.
+
+
+## Cyclus 03:53–03:58 CEST — D-090 FASE 3: N11 cost-gate PASS → stress FAIL → FAIL_T (NEXT_STEPS v57)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → NEXT_STEPS **v57** (`ddfe7bc` / tip `f003fc4`). Prior U2 tip `2ac8e86` (N11/N12 pre-screen under VOORSTEL gate). Reserve 2025→ **niet aangeraakt**. Test 2024 **onaangeraakt** (PREREG §4).
+
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…**D-092** via NEXT_STEPS / FTMO-branch context (D-092 herzien plan; escalatie 4/4)
+- `NEXT_STEPS.md` **v57** @ `origin/main` — C-012 N11 **PASS_may_PREREG** under COSTS RT 0.72 / gate 2.16; N12 FAIL; U2 IDLE wacht **PREREG_FTMO_N11**
+- CTO C-012 (`cdabfe8`): GER40 RT bindend 0.72; VOORSTEL gate 4.20 mis-cite
+- Strateeg `e8f261f` (~04:00 CEST): **PREREG_FTMO_N11 bevroren** + VOORSTEL_PRESCREEN N13/N14
+
+### Actie — PREREG land → cost-gate → formal train t
+1. Landed `PREREG_FTMO_N11.md` from Strateeg `e8f261f` **vóór** resultaten → commit `564ee5e`.
+2. Script `scripts/n11_cost_gate_trial.py` implements **frozen PREREG §2** incl. entry cutoff **10:30 CET** (stricter than prior VOORSTEL screen that searched until 13:00; that screen was N=496 / +3.33 bp).
+3. Train 2021–2023 only; day-clustered t + Newey-West L=5 on day-sum netto.
+
+| Stap | N | mean bruto | Gate | Uitkomst |
+|------|---|------------|------|----------|
+| Cost-gate (3× RT 0.72 = 2.16) | 475 | **+2.74 bp** | 2.16 | **PASS** |
+| Stress (+50% → 3.24) | 475 | +2.74 bp | 3.24 | **FAIL** (vermelding; formele t optioneel per PREREG) |
+| Formele t (day-clust / NW L=5) | 475 | netto mean +2.02 | t≥2.0 | **FAIL_T** (t_day 0.92 / t_NW 0.85) |
+
+- Median bruto **−14.32 bp** (skew-fragile; stop-share 51.8%). Caveat C-012 bevestigd.
+- TRIALS.csv append; **TRIAL_COUNT 445→446**.
+- Geen ftmo_ev shortlist. Geen test-2024. Geen retune.
+
+### Dead set (nu + N11)
+A4 · B1 · A5 · A2 · S2-* · N1–N6 · MIDDAY_VWAP · S2b · GER_US_LEAD · VWAP_PB · IB_FADE · S2c · LUNCH_OPEN · N10 · N12 · **N11**.  
+Pre-screen FAIL-set ongewijzigd (N7/N8/N10/N12 / index PLM…). XAU_AM_FADE watch-only.
+
+### Artifacts
+`results/R2/n11_prep/` (`cost_gate_n11_train.csv`, `n11_board.json`, `n11_report.md`); `scripts/n11_cost_gate_trial.py`.
+
+### Blockers / next
+1. Strateeg/Strateeg-2: volgende D-092.1 PASS non-clone PREREG N≥150 (≠ dead set / ≠ N11/N12 FAIL-mechanismen) → U2 cost-gate.
+2. VOORSTEL_PRESCREEN N13/N14 (Strateeg `e8f261f`) — pre-screen open (aparte cyclus of follow-up deze push indien tijd).
+3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
+
+**MATERIAL for Manager/CTO** (N11 first formal after C-012 reclass; cost-gate PASS / stress FAIL / FAIL_T; TRIAL_COUNT 446). Vragen → Manager; eindbesluit → CTO.
