@@ -69,3 +69,4 @@
 10:59 Amsterdam — D-100: swap is de echte kostenmuur (TSMOM_DIV/ENERGY FAIL op swap); swap_side_map.csv; PREREG-eisen swap-bewust
 11:26 Amsterdam — D-100 opgepakt: IDX_SHORT_TSMOM FAIL_COST_GATE (geen trial, TRIAL 453); team zoekt door; geen nieuw besluit
 11:56 Amsterdam — FX_EUR_SHORT_TSMOM gate FAIL_T (TRIAL 454); M5 voor alle 166 symbolen compleet; team zoekt door D-100-richting; geen nieuw besluit
+12:26 Amsterdam — geen besluit nodig; USDJPY_MED PREREG geschreven, N72–N74 open, TRIAL 454
