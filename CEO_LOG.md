@@ -56,3 +56,4 @@
 07:45 Amsterdam (01-10) — geen nieuws; D-093 idle stabiel
 08:15 Amsterdam (01-10) — geen nieuws FTMO-tak; D-093 stabiel; ETF-werkstroom (andere CEO-sessie) actief maar buiten FTMO-scope
 08:45 Amsterdam (01-10) — D-095 PREREG P1 ORB+BTC bevestigd (andere CEO-sessie + CTO absorbed); stap-1 BTC power (U2) lopend vóór reserve-run. D-093 zoekfase-freeze ongewijzigd; portfolio-combinatie bekende sleeves valt buiten individuele sleeve-zoekfase. Geen nieuwe CEO-beslissing nodig.
+09:15 Amsterdam (01-10) — D-096 P1 ORB+BTC reserve FAIL (TRIAL 448); N35 US100 EU→US PASS_may_PREREG (+6.60 bp, t=1.98); N36 XAU NY-open PASS_may_PREREG (+2.80 bp, t=2.49, N=150 exact margin); N37 FAIL. D-093 vervallen (D-094). Team actief; wacht Strateeg PREREG_N35/N36.
