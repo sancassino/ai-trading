@@ -1053,3 +1053,7 @@ forward_p1.py logt nu: per-index en 3-indexbeen (PREREG-tekst), BTC-been, orb7_u
 ## 2026-10-01 07:46 — D-097 / spoor 6: proxy-koppeltabel 166 FTMO-symbolen (≥10 jaar voor mechanisme-toetsen) + 28 ontbrekende dagreeksen
 
 D-097.2 vraagt ≥10 jaar proxy-data (meerdere regimes) voor mechanisme, FTMO-M5 voor kosten. data/PROXY_MAP_FTMO.csv (make_proxy_map.py): per FTMO-symbool de langste dagreeks in de repo (data/daily, data/yahoo, BIS-FX), startdatum, jaren t/m 2024, ≥10j ja/nee, m5gz aanwezig, opmerking; dagdata gaat voor op World-Bank-maandreeksen. Nieuw opgehaald (Yahoo, fetch_daily.py): COCOA_F, OJ_F, 17 crypto (BTC/LTC vanaf 2014, rest 2017/2020), MCD, GM, SNOW, ARM, TTE, SAN, SIE.DE, BMW.DE, MBG.DE. Uitkomst: 119 van 166 met ≥10 jaar — indices 14/14, grondstoffen/metalen 20/20, aandelen 53/59, FX 30/43, crypto 2/30 (BTC, LTC). Zonder proxy (27): NZD-crosses en CZK/HUF/PLN/ILS (niet in de lokale BIS-set), kleine altcoins, SPCX. Alleen beschikbaarheid, geen analyse.
+
+## 2026-10-01 07:57 — M5-export: 30 symbolen tussentijds naar Debian + op VM opgeruimd; VM-schijf bewaakt
+
+Na 31 van 52 symbolen was de VM-schijf van 7,2 naar 3,7 GB vrij gezakt. Afgeronde export-CSV's gekopieerd naar data/m5 (eind-datum gevalideerd, alle 30 OK) en op de VM verwijderd → 3,9 GB vrij. De groei zit vooral in de MT5-historie (bases) die per symbool wordt gedownload (≈0,11 GB/symbool); 21 resterend ≈ 2,4 GB → past, wordt elke cyclus gecontroleerd.
