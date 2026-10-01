@@ -1203,3 +1203,29 @@ NEXT_STEPS v62 ongewijzigd. Geen nieuwe CEO-besluiten. D-093 freeze actief. TRIA
 
 **Volgende:** wacht op volgende Strateeg/S2 D-092.1-PASS / PASS_may_PREREG (non-clone, D-094a). Geen Sandro-ping.
 
+## Cyclus 08:10–08:20 CEST (2026-10-01) — D-092.1 TRAIN-ONLY pre-screen N20–N23 (D-094)
+
+**Branch:** `claude/uitvoerder2-r`. Synced `origin/main`. Source Strateeg `claude/trusting-faraday-34tsmg` @ `f54ad28` (VOORSTEL_PRESCREEN_N20..N23).
+**Script:** `scripts/n20_n23_prescreen.py` → `results/R2/n20_n23_prescreen/`.
+**Window:** train **2021-01-01 … 2023-12-31** only. **No** test year / **no** 2025+ reserve. **No** PREREG written (Strateeg only on PASS). **No** formal trials. Dead set untouched.
+
+| Sleeve | Instrument | N | mean bruto | gate (3×RT) | Uitkomst |
+|--------|------------|---|------------|-------------|----------|
+| **N20** AM→PM cont 18:00→21:00 | US30cash | 384 | **−2.26 bp** | 1.35 bp | **FAIL** `NO_PREREG_screen_fail` |
+| **N21** dev-fade 16:30→17:30 | GER40cash | 234 | **−2.45 bp** | 2.16 bp | **FAIL** `NO_PREREG_screen_fail` |
+| **N22** Lon-AM±40 → fade 15:30→18:30 | UKOILcash | 345 | **−1.67 bp** | 8.13 bp | **FAIL** `NO_PREREG_screen_fail` |
+| **N23** 2d TSMOM non-overlap | US100cash | 377 | **+4.46 bp** | 13.68 bp (RT_eff) | **FAIL** `NO_PREREG_screen_fail` |
+
+All four: **N≥150** but mean bruto **below** gate → STOP (no PREREG ask).
+
+**Side split (N23):** long mean +10.83 bp (n=223) / short −4.77 bp (n=154) — long still < 13.68 gate.
+
+**Data gaps (non-blocking; N still ≥150):**
+- GER40cash M5 sparse in 2021 (~17 bars/day until late Dec) → N21 effectively 2022–23 dominant (`date_min` 2021-12-28).
+- UKOILcash 15:30 CET bars sparse until ~2021-09 → N22 `date_min` 2021-09-20.
+- US30 / US100 coverage adequate for train window.
+
+**Artifacts:** `results/R2/n20_n23_prescreen/{prescreen.json,prescreen.md,n20..n23_trades_train.csv,n23_d1_resample_train.csv}`; VOORSTEL copies N20–N23 from Strateeg tip.
+
+**TRIAL_COUNT unchanged (447).** Reserve 2025→ untouched.
+
