@@ -1,0 +1,46 @@
+{
+  "window": "2021-01-01..2023-12-31",
+  "source": "VOORSTEL_PRESCREEN_N35..N37 @ Strateeg 782e6b8",
+  "reserve_2025_touched": false,
+  "sleeves": [
+    {
+      "sleeve": "N35",
+      "n": 214,
+      "mean_gross_bp": 6.599536342786834,
+      "median_gross_bp": 7.80275508274226,
+      "gate_bp": 1.98,
+      "rt_bp": 0.66,
+      "power_n_ge_150": true,
+      "gate_ok": true,
+      "verdict": "PASS",
+      "date_min": "2021-09-20",
+      "date_max": "2023-12-07"
+    },
+    {
+      "sleeve": "N36",
+      "n": 150,
+      "mean_gross_bp": 2.8010494986233003,
+      "median_gross_bp": 1.1506609898557631,
+      "gate_bp": 2.49,
+      "rt_bp": 0.83,
+      "power_n_ge_150": true,
+      "gate_ok": true,
+      "verdict": "PASS",
+      "date_min": "2021-01-21",
+      "date_max": "2023-12-28"
+    },
+    {
+      "sleeve": "N37",
+      "n": 627,
+      "mean_gross_bp": -0.16521320747667698,
+      "median_gross_bp": -0.09232757824617734,
+      "gate_bp": 1.89,
+      "rt_bp": 0.63,
+      "power_n_ge_150": true,
+      "gate_ok": false,
+      "verdict": "FAIL",
+      "date_min": "2021-01-08",
+      "date_max": "2023-12-28"
+    }
+  ]
+}
