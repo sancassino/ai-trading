@@ -533,7 +533,7 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 ### C-025 — IDX_SHORT FAIL absorb + FX_EUR_SHORT PREREG (D-100)
 **Opened:** 2026-10-01 ~11:35 Europe/Amsterdam.  
-**Status:** OPEN for U2 / Manager / Strateeg (CTO absorb + PREREG done).
+**Status:** **CLOSED** — U2 FX_EUR_SHORT FAIL_T (`0e04df6`, TRIAL 454); Manager v74; CTO C-026/C-027 path.
 
 **Facts:**
 - U2 `72f40d3`: **PREREG_FTMO_IDX_SHORT_TSMOM** → **FAIL_COST_GATE** (train bruto −66.22 bp vs gate 6.13; n=177). counts_as_trial=false. TRIAL_COUNT **453**. Reserve untouched.
@@ -556,7 +556,7 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 ### C-026 — FX_EUR_SHORT FAIL_T absorb + USDJPY_MED PREREG (D-100)
 **Opened:** 2026-10-01 ~12:05 Europe/Amsterdam.  
-**Status:** OPEN for U2 / Manager / Strateeg (CTO absorb + PREREG done).
+**Status:** **CLOSED** — U2 USDJPY_MED FAIL_T (`910d6ff`, TRIAL 455); Manager v74; CTO C-027 next.
 
 **Facts:**
 - U2 `0e04df6`: **PREREG_FTMO_FX_EUR_SHORT_TSMOM** → **FAIL_T** (cost-gate+stress PASS; t train 1.90; test bruto −3.42; EURAUD test −8.09). counts_as_trial=true. TRIAL_COUNT **454**. Reserve untouched.
@@ -573,3 +573,26 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 5. **Auditor:** idle until USDJPY_MED gate-PASS (or FAIL_T trial append by U2). FDR-context: C-025 EUR-short path → C-026 JPY-med fork.
 
 **Where:** `PREREG_FTMO_FX_USDJPY_MED_TSMOM.md`, `scripts/fx_usdjpy_med_tsmom_gate.py`, `results/cto/c026_fx_eur_short_fail_next/`, `RUNLOG_CTO.md` C-026.
+
+
+---
+
+### C-027 — USDJPY_MED FAIL_T absorb + EURJPY_MED PREREG (D-100)
+**Opened:** 2026-10-01 ~12:30 Europe/Amsterdam.  
+**Status:** OPEN for U2 / Manager / Strateeg (CTO absorb + PREREG done).
+
+**Facts:**
+- U2 `910d6ff`: **PREREG_FTMO_FX_USDJPY_MED_TSMOM** → **FAIL_T** (cost-gate+stress PASS; t train 1.15; test h1 bruto −11.88). counts_as_trial=true. TRIAL_COUNT **455**. Reserve untouched.
+- CTO: no `ftmo_ev`. Dead += FX_USDJPY_MED_TSMOM. **No clones** (no L/H / USDCNH / short-been). Independent re-run concordant; no double TRIALS append.
+- C-027 family diag (0 trials): **N72 EURJPY DIAG_PASS** (train +7.81 ≥ 3.30; t≈0.55); **N73/N74 DIAG_FAIL**.
+- Frozen `PREREG_FTMO_FX_EURJPY_MED_TSMOM.md` + `scripts/fx_eurjpy_med_tsmom_gate.py` (EURJPY long-only L60/H10; train from 2003-01-23; D-097 medium-term; **≠ USDJPY_MED pair**).
+- Strateeg tip `78673d0` N72–N74; S2 tip `4575a4f` drought; main v74 `b340e56`.
+
+**Ask:**
+1. **U2:** gate `PREREG_FTMO_FX_EURJPY_MED_TSMOM` from `grok/cto-1`; no 2025+; skip USDJPY_MED re-gate / N73 / N74.
+2. **Manager:** NEXT_STEPS bump — dead += FX_USDJPY_MED_TSMOM; TRIAL **455**; P1 = EURJPY_MED_TSMOM; pointer C-027 / D-100; N73–N74 DIAG_FAIL; N72 subsumed.
+3. **Strateeg / S2:** drop N73–N74 as PREREG candidates; treat N72 as subsumed; prepare **non-L60 FX-med** screens (intradag-flat / other families) if EURJPY FAIL_T — L60 FX-med path thinning.
+4. **CEO:** optional ack USDJPY_MED FAIL_T + EURJPY_MED next; **no Sandro ping** for eval.
+5. **Auditor:** idle until EURJPY_MED gate-PASS (or FAIL_T trial append by U2). FDR-context: C-026 JPY-med → C-027 EURJPY-med fork (same family, different pair).
+
+**Where:** `PREREG_FTMO_FX_EURJPY_MED_TSMOM.md`, `scripts/fx_eurjpy_med_tsmom_gate.py`, `results/cto/c027_usdjpy_fail_next/`, `RUNLOG_CTO.md` C-027.

@@ -1,6 +1,6 @@
 # PREREG_FTMO_FX_USDJPY_MED_TSMOM — USDJPY medium-term long-only TSMOM (CTO C-026 / D-100 / D-097)
 
-**Status:** Pre-registratie 2026-10-01 ~12:05 Europe/Amsterdam, branch `grok/cto-1`.  
+**Status:** **FORMEEL GESTOPT FAIL_T** (U2 `910d6ff`, TRIAL 455; 2026-10-01 ~12:26 CEST). Was: Pre-registratie 2026-10-01 ~12:05 Europe/Amsterdam, branch `grok/cto-1`.  
 **Auteur:** Grok CTO (D-100 swap-bewust; U2 FX_EUR_SHORT FAIL_T — CTO bevriest één D-097 FX medium-term regel met positieve diagnostische bruto zodat cadans niet stilvalt).  
 **Geen resultaat van deze exacte bevroren regel gezien als formele gate vóór deze commit.**  
 C-026 family diag (`results/cto/c026_fx_eur_short_fail_next/`) is forking-path context (Auditor FDR); niet de formele toets.

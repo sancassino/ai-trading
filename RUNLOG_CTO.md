@@ -1182,3 +1182,55 @@ git add PREREG_FTMO_FX_USDJPY_MED_TSMOM.md scripts/fx_usdjpy_med_tsmom_gate.py \
 git commit -m "CTO: C-026 FX_EUR_SHORT FAIL_T absorb + USDJPY_MED PREREG (D-100; 0 trials)"
 git push origin grok/cto-1
 ```
+
+## C-027 — USDJPY_MED FAIL_T absorb + D-100 family diag + EURJPY_MED PREREG — 2026-10-01 ~12:30 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0** (U2 appended TRIAL **455**). No FTMO signup / spend. No EINDSTAND re-nag.
+
+### Team snapshot vs prior wake (~12:05 CEST / C-026)
+
+| Item | ~12:05 C-026 | ~12:30 C-027 |
+|---|---|---|
+| main NEXT_STEPS | v73 `358ead9` | **v74** tip **`b340e56`** (FX_EUR_SHORT FAIL_T + N69–N71 OPEN; TRIAL 454) |
+| grok/cto-1 | `2488aba` C-026 | **this C-027** (+ merge main v74) |
+| Decisions | D-100 | D-100 still tip (CEO `25e4bd1` 12:15; BESLUITEN `615bca0`) |
+| TRIAL_COUNT | 454 | **455** (USDJPY_MED FAIL_T) |
+| U2 | `0e04df6` FX_EUR FAIL_T | **`910d6ff`** USDJPY_MED **FAIL_T** (PREREG-first `5b933c7`) |
+| Strateeg | `cc3c808` N69–N71 | **`78673d0`** / `ab7bdee` N72–N74 OPEN; N69–N71 DIAG_FAIL |
+| S2 | `4575a4f` drought | `4575a4f` (unchanged) |
+| CEO | `72a0be8` | tip `25e4bd1` USDJPY_MED ack |
+| EINDSTAND | tussenstand | tussenstand; **no re-nag** |
+
+### Diff vs last known (~12:05)
+
+1. Manager v74 absorbed FX_EUR FAIL + N69–N71 OPEN (before C-026 USDJPY land was fully in NEXT_STEPS).
+2. U2 gated USDJPY_MED → **FAIL_T** (cost-gate PASS bruto +10.97 ≥ 2.34; t train **1.15**; test h1 bruto **−11.88**; TRIAL **455**). CTO independent re-run concordant; **no double TRIALS append**.
+3. CTO skips `ftmo_ev`. Dead += FX_USDJPY_MED_TSMOM. No clones.
+4. Strateeg N72/N73/N74 → C-027 diag: **N72 EURJPY DIAG_PASS** (train +7.81 ≥ 3.30; weak t≈0.55); N73/N74 **DIAG_FAIL**.
+5. Freeze **PREREG_FTMO_FX_EURJPY_MED_TSMOM** (solo EURJPY L60/H10; ≠ USDJPY pair). Prior low–moderate.
+
+### Deliverable
+
+`results/cto/c027_usdjpy_fail_next/` + `PREREG_FTMO_FX_EURJPY_MED_TSMOM.md` + `scripts/fx_eurjpy_med_tsmom_gate.py`:
+- USDJPY_MED absorb board (0 CTO trials; TRIAL 455 on U2)
+- Family B L60 diagnostic CSV (proxy ≤2024; not a trial)
+- Flags: N73/N74 DIAG_FAIL; N72 → PREREG; if EURJPY FAIL_T → pivot off L60 FX-med family
+- Frozen PREREG: EURJPY **long-only** L60/H10 (D-100 cheap long; train from 2003-01-23; ≤2024; no 2025+)
+- Gate script for U2 (formal run = U2; CTO does not append TRIALS)
+
+### CTO next
+
+1. U2: gate `PREREG_FTMO_FX_EURJPY_MED_TSMOM` via `scripts/fx_eurjpy_med_tsmom_gate.py` (skip USDJPY_MED re-gate / N73 / N74).
+2. Strateeg: mark N73–N74 DIAG_FAIL; treat N72 as subsumed into PREREG; prepare non-L60 FX-med screens if EURJPY dies.
+3. On PASS → track-5 `ftmo_ev`. Track-3 still PAUSED.
+4. No Sandro eval ping.
+
+### Git
+
+```
+git add PREREG_FTMO_FX_EURJPY_MED_TSMOM.md scripts/fx_eurjpy_med_tsmom_gate.py \
+  results/cto/c027_usdjpy_fail_next/ RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-027 USDJPY_MED FAIL_T absorb + EURJPY_MED PREREG (D-100; 0 trials)"
+git push origin grok/cto-1
+```

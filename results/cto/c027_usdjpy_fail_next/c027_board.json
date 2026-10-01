@@ -1,0 +1,49 @@
+{
+  "c": "C-027",
+  "decision": "D-100",
+  "absorbed": {
+    "prereg": "PREREG_FTMO_FX_USDJPY_MED_TSMOM.md",
+    "u2_tip": "910d6ff",
+    "outcome": "FAIL_T",
+    "counts_as_trial": true,
+    "trial_count": 455,
+    "train": {
+      "N": 237,
+      "mean_bruto_bp": 10.9746,
+      "gate_3x": 2.34,
+      "gate_pass": true,
+      "t_day_clust_netto": 1.1508,
+      "t_nw_L5_netto": 1.1616,
+      "h1_bruto": 3.9824,
+      "h2_bruto": 17.9081
+    },
+    "test": {
+      "N": 121,
+      "mean_bruto_bp": 17.2497,
+      "t_day_clust_netto": 1.3188,
+      "h1_bruto": -11.8837,
+      "h2_bruto": 45.9055
+    },
+    "fail_reason": "train t day-clust netto 1.15 < 2.0; test h1 bruto < 0",
+    "reserve_2025": "untouched"
+  },
+  "cto_independent_gate_concordant": true,
+  "skip_ftmo_ev": true,
+  "dead_add": [
+    "FX_USDJPY_MED_TSMOM"
+  ],
+  "no_clones": [
+    "L20/L120 grid",
+    "USDCNH-add",
+    "short-been",
+    "5d-retune",
+    "N67 L20"
+  ],
+  "family_diag": {
+    "N72_EURJPY": "DIAG_PASS_may_PREREG train bruto 7.81 >= gate 3.30; both halves >0; weak t\u22480.55",
+    "N73_USDCAD": "DIAG_FAIL train bruto 0.73 < gate 2.40",
+    "N74_USDCHF": "DIAG_FAIL train bruto -7.57 < gate 3.03"
+  },
+  "next_prereg": "PREREG_FTMO_FX_EURJPY_MED_TSMOM.md",
+  "note": "Formal TRIALS append owned by U2 910d6ff; CTO does not double-count."
+}
