@@ -53,3 +53,5 @@
 - 2026-10-01 00:10 Amsterdam — cyclus :05: D-091 nacht-queue (N1/N2/MIDDAY FAIL, XAU_AM_FADE gate PASS n=12); S2b ETH FAIL; team loopt door; geen nieuwe Auditor-taak.
 - 2026-10-01 00:40 Amsterdam — cyclus :35: forward-paper dag 1 (30-09) verwerkt; D-091 cyclus 1/4 actief; geen nieuwe Auditor-taak.
 - 2026-10-01 01:10 Amsterdam — cyclus :05: D-091 cyclus 2/4; N3/N4 DONE; N5/N6/GER_US/VWAP_PB PREREGs geland; CTO recommend_scale (C-007); geen nieuwe Auditor-taak.
+- 2026-10-01 01:40 Amsterdam — cyclus :35 (gemist na worker-restart): D-091 alle intradag-sporen uitgeput (N1–N6/IB_FADE/GER_US/VWAP_PB allemaal STOP); U2 idle; escalatie 4/4.
+- 2026-10-01 02:10 Amsterdam — cyclus :05: D-092 gelezen — pre-screen zonder trial, S2c XAU+XAG, F2-ORB referentie-EV, portefeuille-tabel, stopregel 8 cycli; Auditor-PASS vereist voor evaluatie-advies (punt 5); nog geen kandidaat zo ver.
