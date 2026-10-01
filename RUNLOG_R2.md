@@ -1586,3 +1586,30 @@ h1/h2 train bruto +3.98 / +17.91; test bruto **−11.88** / +45.91 (test h1 brut
 **TRIAL_COUNT 454 → 455.** TRIALS.csv append-only.
 
 **U2 next:** IDLE wacht Strateeg/S2 D-097/D-100 B/C/D PASS→PREREG (N72–N74 of andere; geen family-A / USDJPY_MED / FX_EUR_SHORT klonen; N58 alleen na swap-redesign); geen S2-BTC stap2 inventeren. Material via NEXT_STEPS voor Manager/CTO/Auditor (geen Sandro-ping).
+
+## Cyclus 12:30–12:45 CEST (2026-10-01) — C-027 FX_EURJPY_MED_TSMOM gate → FAIL_T (TRIAL 456)
+
+**Branch:** `claude/uitvoerder2-r` — merge `origin/claude/uitvoerder2-r` @ `910d6ff` (USDJPY_MED FAIL_T; TRIAL 455). CTO `e0f3c44` **C-027**: USDJPY_MED FAIL_T absorb + **`PREREG_FTMO_FX_EURJPY_MED_TSMOM`** (N72; D-100 cheap long side). N73/N74 DIAG_FAIL → niet gePRERE'd. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- Remote `origin/claude/uitvoerder2-r` @ `910d6ff`: USDJPY_MED FAIL_T (TRIAL 455); merge → conflict-free ort
+- CTO `e0f3c44` **C-027**: N72 EURJPY solo; L60/H10 long; D-100 cheap overnight long; geen USDJPY-retune / N73-N74 (DIAG_FAIL); geen short-been; geen klonen bij FAIL
+
+### Prio — PREREG EURJPY_MED (CTO e0f3c44) → cost-gate PASS → formal FAIL_T
+
+**PREREG gecommit (CTO):** `e0f3c44` — `PREREG_FTMO_FX_EURJPY_MED_TSMOM.md` + `scripts/fx_eurjpy_med_tsmom_gate.py` (PREREG vóór resultaat; bron `grok/cto-1` @ `e0f3c44`). Artefacts: `results/R2/fx_eurjpy_med_tsmom/`.
+
+| Window | N | mean bruto | gate 3× (drempel 3.30) | stress | t day-clust / NW-L5 | Uitkomst |
+|--------|--:|-----------:|-----------------------:|-------:|--------------------:|----------|
+| **Train** 2003–2016 | 209 | **+7.81 bp** | PASS | **PASS** | 0.55 / 0.59 | — |
+| **Test** 2017–2024 | 132 | **+4.13 bp** | — | — | 0.33 / 0.39 | — |
+
+h1/h2 train bruto +6.18 / +9.42; test bruto **+6.32** / +1.94 (test h2 weak). Cost-gate RT=1.10 bp; swap_long=−0.11 bp/night (earn) → zeroed in gate. Gate threshold = 3× 1.10 = **3.30 bp PASS** (7.81 > 3.30).
+
+**Uitkomst: FAIL_T** — cost-gate+stress PASS; formal day-clust t train **0.55 ≪ 2.0** én test t 0.33 < 2; prior C-027 diag t≈0.55 bevestigd. **1 trial** (TRIAL **456**). Geen klonen (geen L20/L120-grid, geen USDJPY-retune, geen short-been, geen 5d-retune; geen N73–N74-add want DIAG_FAIL).
+
+**Dead/FAIL += FX_EURJPY_MED_TSMOM (PREREG_FTMO_FX_EURJPY_MED_TSMOM; N72)**. L60/H10 FX medium-term long family (N72–N74 + USDJPY_MED) exhausted; geen klonen.
+
+**TRIAL_COUNT 455 → 456.** TRIALS.csv append-only.
+
+**U2 next:** IDLE wacht Strateeg/CTO/Manager nieuw PREREG (NEXT_STEPS v75). Geen klonen van N72–N74/USDJPY_MED/EURJPY_MED/FX_EUR_SHORT/IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N58–N60/N67–N68. N58 alleen na swap-side redesign + PASS→PREREG.
