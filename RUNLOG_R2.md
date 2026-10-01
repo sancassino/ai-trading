@@ -1783,3 +1783,29 @@ counts_as_trial = **true**. **TRIAL_COUNT = 457**. Dead += N87_US30_GAP_FADE. Ge
 **TRIAL_COUNT blijft 457** (N87 FAIL_T = +1 al verwerkt). Geen TRIALS-append.
 
 **U2 next:** IDLE wacht Strateeg/CTO Lane-B PASS→PREREG (N88 kans laag; N89 kans laag; N90 nieuw — wacht op pre-screen + PREREG filing). Of Manager NEXT_STEPS v83 met nieuwe directief.
+
+## Cyclus 17:25 CEST (2026-10-01) — D-101/D-102 absorb; RISK-REACTIVE framework; IDLE (TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r` — tip `57d3b86` (TRIAL **457**). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (no v83 — Manager/Grok pauzeert ~3 dagen per CEO-notitie D-101).
+- **D-101** (CEO `41e0c44` ~17:35 CEST): doel herijkt — dubbele lat voor FTMO-kandidaten:
+  - (A) bewezen alfa-sleeve: t ≥ 2,0 in train EN test (ongewijzigd)
+  - (B) literatuur-gedragen premie (equity-beta, trend, carry): `ftmo_ev()` over meerdere periodes (2000+/2011+/2015+) + intradag-DD-correctie → net EV > 0 EN overleving ≥ 0,5 + forward-papier; label altijd "beta, geen edge"
+- **D-102** (CEO `824213f` ~18:15 CEST): programma "RISK-REACTIVE" — kern = F2-ORB (CTO C-018; SR ≈ 1,06 train, schaal 4,2 → EV ≈ €680/mnd, overleving 0,43) als D-101-lat-B-kandidaat; CEO bouwt intradag-DD-model uit M5; uitbreiding pas na positieve EV; FTMO-regel-verificatie niet-blokkerend; geen agent FTMO-signup.
+- CEO beta-referentie `results/ceo/beta_ev.md` + `results/ceo/option_value.md`: long-only beta geeft €60–240/mnd (17–50% overleving); optiewaarde = positieve EV bij ~20–30%/jr vol, zero-edge (close-only onderschat breach).
+- Strateeg `e2a1e0c` ~17:20 CEST: pipeline **N88/N89/N90 OPEN** (geen PREREG). N88: N<150+negatief pre-screen; N89: mean+1,06<<gate. N90 GBPJPY nieuw.
+- CEO_LOG `ef39b29` ~19:15 CEST: pipeline N88-N90 open; TRIAL 457; geen CEO-beslissing.
+- BESLUITEN tip: D-101/D-102 zijn nu de hoogste actieve CEO-besluiten (bovenop D-083…D-100).
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** D-102 legt CEO als bouwer van de intradag-DD-module vast; U2 wacht op CEO-PREREG voor F2-ORB of nieuwe Strateeg PREREG voor N88/N89/N90. Pipeline:
+- N88 EURGBP: pre-screen FAIL (N=107<150, mean −5,76 bp < gate 3,12) → PREREG onwaarschijnlijk
+- N89 GER40: pre-screen FAIL (mean +1,06 << gate 2,16) → PREREG onwaarschijnlijk
+- N90 GBPJPY carry+mom: VOORSTEL-fase, geen pre-screen resultaat nog
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE. Wacht CEO-PREREG voor F2-ORB/intradag-DD OF Strateeg PREREG voor N90 (of nieuw). Manager NEXT_STEPS v83 verwacht na Grok-pauze (~04-10).
