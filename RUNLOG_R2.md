@@ -1557,3 +1557,32 @@ h1/h2 train bruto +17.5 / +26.2; test bruto −18.0 / +11.8.
 **TRIAL_COUNT 453 → 454.** TRIALS.csv append-only.
 
 **U2 next:** wacht Strateeg/S2 D-097/D-100 B/C/D PASS→PREREG (geen family-A short klonen; N58 alleen na swap-redesign); geen S2-BTC stap2 inventeren. Material via NEXT_STEPS voor Manager/CTO/Auditor (geen Sandro-ping).
+
+## Cyclus 12:25–12:30 CEST (2026-10-01) — C-026 FX_USDJPY_MED_TSMOM gate → FAIL_T (TRIAL 455)
+
+**Branch:** `claude/uitvoerder2-r` — ort-merge `origin/main` @ `b340e56` (NEXT_STEPS **v74**; FX_EUR_SHORT FAIL_T absorb + N69–N71 OPEN). Tip pre-merge `0e04df6` (FX_EUR FAIL_T; TRIAL **454**). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v74** (Manager 12:05 CEST): FREEZE **OFF**; U2 IDLE→ACTIEF bij nieuw PREREG; tip `0e04df6` recent; wacht Strateeg/S2 PASS→PREREG of CTO land
+- CTO `2488aba` **C-026**: FX_EUR FAIL absorb + **`PREREG_FTMO_FX_USDJPY_MED_TSMOM`** (0 trials) — USDJPY L60/H10 long-only; D-100 cheap long side; niet N67 L20 clone
+- Strateeg `ab7bdee`/`78673d0`: N69–N71 DIAG_FAIL; OPEN N72–N74; **USDJPY_MED live**
+- Skip her-gate: FX_EUR_SHORT / IDX_SHORT / ENERGY / TSMOM_DIV / N35–N41 / GBPJPY / N59 / N68 / P1 / N67
+
+### Prio — PREREG USDJPY_MED (CTO 2488aba) → cost-gate PASS → formal FAIL_T
+
+**PREREG gecommit:** `5b933c7` — `PREREG_FTMO_FX_USDJPY_MED_TSMOM.md` + `scripts/fx_usdjpy_med_tsmom_gate.py` (PREREG vóór resultaat; bron `grok/cto-1` @ `2488aba`). Artefacts: `results/R2/fx_usdjpy_med_tsmom/`.
+
+| Window | N | mean bruto | gate 3× | stress | t day-clust / NW-L5 | Uitkomst |
+|--------|--:|-----------:|--------:|-------:|--------------------:|----------|
+| **Train** 2000–2016 | 237 | **+10.97 bp** | 2.34 **PASS** | **PASS** | 1.15 / 1.16 | — |
+| **Test** 2017–2024 | 121 | **+17.25 bp** | — | — | 1.32 / 1.46 | — |
+
+h1/h2 train bruto +3.98 / +17.91; test bruto **−11.88** / +45.91 (test h1 bruto <0 → half FAIL). Netto train mean +15.59 (swap credit); alfa-maatstaf blijft bruto.
+
+**Uitkomst: FAIL_T** — cost-gate+stress PASS; formal day-clust t train **1.15 < 2.0** én test t 1.32 < 2; test h1 bruto <0. **1 trial** (TRIAL **455**). Geen klonen (geen L20/L120-grid, geen USDCNH-add, geen short-been, geen 5d-retune).
+
+**Dead/FAIL += FX_USDJPY_MED_TSMOM (PREREG_FTMO_FX_USDJPY_MED_TSMOM)**. Skip her-gate FX_EUR_SHORT/IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59/N67/N68/P1.
+
+**TRIAL_COUNT 454 → 455.** TRIALS.csv append-only.
+
+**U2 next:** IDLE wacht Strateeg/S2 D-097/D-100 B/C/D PASS→PREREG (N72–N74 of andere; geen family-A / USDJPY_MED / FX_EUR_SHORT klonen; N58 alleen na swap-redesign); geen S2-BTC stap2 inventeren. Material via NEXT_STEPS voor Manager/CTO/Auditor (geen Sandro-ping).
