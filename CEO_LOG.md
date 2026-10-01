@@ -54,3 +54,4 @@
 06:45 Amsterdam (01-10) — MINI-REVIEW 6u: D-093 bevriezing stabiel; alle agents idle/onderhoud-modus; TRIAL_COUNT 447; geen activiteit verwacht tot Sandro-besluit (A-01 data / heropening / stoppen). Crons blijven draaien.
 07:15 Amsterdam (01-10) — geen nieuws; D-093 idle stabiel
 07:45 Amsterdam (01-10) — geen nieuws; D-093 idle stabiel
+08:15 Amsterdam (01-10) — geen nieuws FTMO-tak; D-093 stabiel; ETF-werkstroom (andere CEO-sessie) actief maar buiten FTMO-scope
