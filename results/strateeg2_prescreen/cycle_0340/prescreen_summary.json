@@ -1,0 +1,98 @@
+[
+  {
+    "idea": "GAP_CONT_FADE",
+    "n_pooled": 45,
+    "mean_bruto_bp": 5.435777470623136,
+    "weighted_rt": 0.5666666666666667,
+    "gate_3x_wrt": 1.7,
+    "pass_pooled_n150": false,
+    "mean_ge_gate": true,
+    "per_symbol": [
+      {
+        "idea": "GAP_CONT_FADE",
+        "symbol": "US30cash",
+        "n": 20,
+        "mean_bruto_bp": 4.552101412041792,
+        "gate_3x_rt": 1.35,
+        "rt": 0.45,
+        "pass": false,
+        "skew": 1.6399571290582786
+      },
+      {
+        "idea": "GAP_CONT_FADE",
+        "symbol": "US100cash",
+        "n": 25,
+        "mean_bruto_bp": 6.142718317488216,
+        "gate_3x_rt": 1.98,
+        "rt": 0.66,
+        "pass": false,
+        "skew": 1.4182926642577964
+      }
+    ],
+    "skew": 1.4771576183520752
+  },
+  {
+    "idea": "LATE_EXT_FADE",
+    "n_pooled": 277,
+    "mean_bruto_bp": 1.6063389604580947,
+    "weighted_rt": 0.5515884476534296,
+    "gate_3x_wrt": 1.6547653429602889,
+    "pass_pooled_n150": false,
+    "mean_ge_gate": false,
+    "per_symbol": [
+      {
+        "idea": "LATE_EXT_FADE",
+        "symbol": "US30cash",
+        "n": 143,
+        "mean_bruto_bp": 2.086710071056577,
+        "gate_3x_rt": 1.35,
+        "rt": 0.45,
+        "pass": true,
+        "skew": 1.2847859610953403
+      },
+      {
+        "idea": "LATE_EXT_FADE",
+        "symbol": "US100cash",
+        "n": 134,
+        "mean_bruto_bp": 1.0937041185507594,
+        "gate_3x_rt": 1.98,
+        "rt": 0.66,
+        "pass": false,
+        "skew": 1.1700947653589175
+      }
+    ],
+    "skew": 1.2212059576145695
+  },
+  {
+    "idea": "LONDON_WIDE_NY_FADE",
+    "n_pooled": 311,
+    "mean_bruto_bp": -0.9280203434387304,
+    "weighted_rt": 0.6653376205787781,
+    "gate_3x_wrt": 1.9960128617363342,
+    "pass_pooled_n150": false,
+    "mean_ge_gate": false,
+    "per_symbol": [
+      {
+        "idea": "LONDON_WIDE_NY_FADE",
+        "symbol": "EURUSD",
+        "n": 154,
+        "mean_bruto_bp": -0.35492531855347254,
+        "gate_3x_rt": 1.8900000000000001,
+        "rt": 0.63,
+        "pass": false,
+        "skew": -0.7212253551289034
+      },
+      {
+        "idea": "LONDON_WIDE_NY_FADE",
+        "symbol": "GBPUSD",
+        "n": 157,
+        "mean_bruto_bp": -1.490164507975863,
+        "gate_3x_rt": 2.0999999999999996,
+        "rt": 0.7,
+        "pass": false,
+        "skew": -0.11042822792209135
+      }
+    ],
+    "skew": -0.378253652251133
+  }
+]

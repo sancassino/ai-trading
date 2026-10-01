@@ -1,0 +1,78 @@
+[
+  {
+    "idea": "OPEN_RECLAIM",
+    "n_pooled": 1,
+    "mean_bruto_bp": 21.242308819219627,
+    "weighted_rt": 0.66,
+    "gate_3x_wrt": 1.98,
+    "pass_pooled_n150": false,
+    "mean_ge_gate": true,
+    "per_symbol": [
+      {
+        "idea": "OPEN_RECLAIM",
+        "symbol": "US30cash",
+        "n": 0,
+        "mean_bruto_bp": NaN,
+        "gate_3x_rt": 1.35,
+        "rt": 0.45,
+        "pass": false,
+        "skew": NaN
+      },
+      {
+        "idea": "OPEN_RECLAIM",
+        "symbol": "US100cash",
+        "n": 1,
+        "mean_bruto_bp": 21.242308819219627,
+        "gate_3x_rt": 1.98,
+        "rt": 0.66,
+        "pass": false,
+        "skew": NaN
+      }
+    ],
+    "skew": NaN
+  },
+  {
+    "idea": "GER_MID_FADE",
+    "n_pooled": 110,
+    "mean_bruto_bp": -1.5369491859645783,
+    "weighted_rt": 0.72,
+    "gate_3x_wrt": 2.16,
+    "pass_pooled_n150": false,
+    "mean_ge_gate": false,
+    "per_symbol": [
+      {
+        "idea": "GER_MID_FADE",
+        "symbol": "GER40cash",
+        "n": 110,
+        "mean_bruto_bp": -1.5369491859645783,
+        "gate_3x_rt": 2.16,
+        "rt": 0.72,
+        "pass": false,
+        "skew": 0.8371214071555932
+      }
+    ],
+    "skew": 0.8371214071555932
+  },
+  {
+    "idea": "JP_TOKYO_FADE",
+    "n_pooled": 0,
+    "mean_bruto_bp": NaN,
+    "weighted_rt": NaN,
+    "gate_3x_wrt": NaN,
+    "pass_pooled_n150": false,
+    "mean_ge_gate": false,
+    "per_symbol": [
+      {
+        "idea": "JP_TOKYO_FADE",
+        "symbol": "JP225cash",
+        "n": 0,
+        "mean_bruto_bp": NaN,
+        "gate_3x_rt": 4.53,
+        "rt": 1.51,
+        "pass": false,
+        "skew": NaN
+      }
+    ],
+    "skew": NaN
+  }
+]

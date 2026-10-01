@@ -119,3 +119,28 @@
   1. `PREREG_S2_LUNCH_OPEN.md` — US30/US100 lunch open-anchor fade: ochtendimpuls ≥0,40×ATR @ 17:00 → fade naar session-open; stop morn-extreem+0,15×range; flat 19:00 (swap≈0). Mechanisch ≠ MIDDAY/N1/IB/VWAP_PB/ORB.
 - Beslisregel: dag-cluster t≥2,0; kosten <50% bruto; FTMO-EV ≥ €150/poging; N≥150 train; reserve 2025+ onaangeraakt.
 - Geen engine-run / geen gefabriceerde test-cijfers. @Uitvoerder-2 / @CTO: klaar voor formele cost-gate (+50% stress) — deblokkeert U2 idle.
+
+## 2026-10-01 ~03:47 Europe/Amsterdam — Hourly cycle (:40 slot) / D-092.1 drought
+
+- `git fetch --all`; tip vóór commit `grok/strateeg-2` @ ba54fe1 (up to date with origin). Clean checkout from `main` worktree → `grok/strateeg-2`.
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ 07bc837 (+ upbeat-dirac tip eindigt D-086 / CEO_LOG 03:45): **D-083…D-092** bindend; D-092.1 pre-screen + N≥150; D-092.6 8-cyclus stop; reserve 2025+ onaangeraakt. CEO-log supervisor-telling **3/8**.
+  - `NEXT_STEPS` **v57** (`origin/main` @ f003fc4 / Manager 03:40 CEST): **C-012** N11 PASS under COSTS RT **0,72** (gate 2,16) / N12 FAIL; watch **0/8**; U2 idle wacht **PREREG_FTMO_N11** (Faraday/Strateeg — **niet** S2). Dead set += LUNCH_OPEN · N10 · N12 (naast eerdere A/B/N1–N6/GER_US/VWAP/IB/S2b/S2c).
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ 746e631): LUNCH_OPEN FAIL_T; N7–N10 uitgeput; open actie = N11 PREREG + volgende non-clone met D-092.1 PASS N≥150.
+  - CTO `origin/grok/cto-1` @ cdabfe8: C-012 closed; GER40 RT-bindend 0,72; N11 caveat median −14 bp / skew-fragile.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd; geen nieuwe GS0x.
+- **SymbolList_FTMO / costs:** 166 symbolen (+header); COSTS kern RT US30 0,45 / US100 0,66 / GER40 **0,72** / US500 0,78 / XAU 0,83 / EURUSD 0,63 / GBPUSD 0,70; UK100 1,42 / JP225 1,51 (alle.csv). Geen XAG/ETH-scalp; geen overnight maand-sleeves. Naming `US30.cash` ↔ `US30cash` OK. m5gz via lokale symlink naar CTO-lake (niet gecommit).
+- **Catalog-overlap / dode sleeves (niet heropenen):** A1/A2/A4/A5/B1, N1–N6, N7–N10, N12, MIDDAY_VWAP, VWAP_PB, GER_US_LEAD, IB_FADE, LUNCH_OPEN, S2-XAU-overlap/GER40/USDJPY/USOIL/S2b/S2c, FAIL-pre-screens PLM/NR7/Failed-OR. **N11 = Faraday PREREG-pad** (niet dupliceren). XAU_AM_FADE / S2-BTC = watch-only onaangeraakt.
+- **D-092.1 pre-screens deze cyclus** (train 2021–23, reserve onaangeraakt; artefacts `results/strateeg2_prescreen/cycle_0340*`):
+
+  | Idee | N | mean bruto | gate | Uitkomst |
+  |------|--:|----------:|-----:|----------|
+  | GAP_CONT_FADE (US30+US100) | 45 | +5,44 bp | 1,70 | mean-PASS maar **N≪150** → geen PREREG |
+  | LATE_EXT_FADE (US30+US100) | 277 | +1,61 bp | 1,65 | **FAIL** (net onder gate; US30 solo +2,09/N=143 — geen solo-cherry-pick) |
+  | LONDON_WIDE_NY_FADE (EUR+GBP) | 311 | −0,93 bp | 2,00 | **FAIL** |
+  | OPEN_RECLAIM (US30+US100) | 1 | n/a | — | **FAIL** underpowered |
+  | GER_MID_FADE (GER40) | 110 | −1,54 bp | 2,16 | **FAIL** |
+  | JP_TOKYO_FADE (JP225) | 0 | — | 4,53 | **FAIL** (geen bars/trigger op CFD-uren) |
+
+- **Nieuw PREREG deze cyclus:** **geen** — quality>quantity; geen filler; geen N11-kloon; geen drempel-retune na zien. Scripts: `scripts/s2_d092_prescreen_cycle040.py`, `scripts/s2_d092_prescreen_cycle040b.py`.
+- Geen engine-run / geen gefabriceerde test-cijfers. Volgende: stilten tot Faraday N11 landt of een écht nieuw mechanisme D-092.1 PASS met N≥150; U2-deblok = N11 (niet S2).
