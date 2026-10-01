@@ -1,0 +1,49 @@
+{
+  "window": "2021-01-01..2023-12-31",
+  "source": "VOORSTEL_PRESCREEN_N38..N40",
+  "reserve_2025_touched": false,
+  "sleeves": [
+    {
+      "sleeve": "N38",
+      "symbol": "GBPUSD",
+      "n": 102,
+      "mean_gross_bp": -1.3465185261419423,
+      "median_gross_bp": -0.507319282452583,
+      "gate_bp": 2.1,
+      "rt_bp": 0.7,
+      "power_n_ge_150": false,
+      "gate_ok": false,
+      "verdict": "FAIL",
+      "date_min": "2021-02-18",
+      "date_max": "2023-12-29"
+    },
+    {
+      "sleeve": "N39",
+      "symbol": "BTCUSD",
+      "n": 132,
+      "mean_gross_bp": -3.4344648202913732,
+      "median_gross_bp": 1.5845151813025415,
+      "gate_bp": 3.75,
+      "rt_bp": 1.25,
+      "power_n_ge_150": false,
+      "gate_ok": false,
+      "verdict": "FAIL",
+      "date_min": "2021-01-15",
+      "date_max": "2021-10-13"
+    },
+    {
+      "sleeve": "N40",
+      "symbol": "GER40cash",
+      "n": 205,
+      "mean_gross_bp": 2.4281807246120555,
+      "median_gross_bp": -2.2765214751859157,
+      "gate_bp": 2.16,
+      "rt_bp": 0.72,
+      "power_n_ge_150": true,
+      "gate_ok": true,
+      "verdict": "PASS",
+      "date_min": "2022-01-03",
+      "date_max": "2023-11-29"
+    }
+  ]
+}

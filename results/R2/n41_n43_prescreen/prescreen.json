@@ -1,0 +1,49 @@
+{
+  "window": "2021-01-01..2023-12-31",
+  "source": "VOORSTEL_PRESCREEN_N41..N43",
+  "reserve_2025_touched": false,
+  "sleeves": [
+    {
+      "sleeve": "N41",
+      "symbol": "US30cash",
+      "n": 160,
+      "mean_gross_bp": 8.650724007670954,
+      "median_gross_bp": 10.337528249245981,
+      "gate_bp": 1.35,
+      "rt_bp": 0.45,
+      "power_n_ge_150": true,
+      "gate_ok": true,
+      "verdict": "PASS",
+      "date_min": "2021-01-22",
+      "date_max": "2023-10-27"
+    },
+    {
+      "sleeve": "N42",
+      "symbol": "NZDUSD",
+      "n": 132,
+      "mean_gross_bp": 0.30774538168413085,
+      "median_gross_bp": 2.893839781739814,
+      "gate_bp": 5.55,
+      "rt_bp": 1.85,
+      "power_n_ge_150": false,
+      "gate_ok": false,
+      "verdict": "FAIL",
+      "date_min": "2021-01-28",
+      "date_max": "2023-12-29"
+    },
+    {
+      "sleeve": "N43",
+      "symbol": "UKOILcash",
+      "n": 139,
+      "mean_gross_bp": 12.73803370775527,
+      "median_gross_bp": 13.182872811644238,
+      "gate_bp": 8.13,
+      "rt_bp": 2.71,
+      "power_n_ge_150": false,
+      "gate_ok": true,
+      "verdict": "FAIL",
+      "date_min": "2021-09-20",
+      "date_max": "2023-12-14"
+    }
+  ]
+}

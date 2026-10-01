@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N37 — EURUSD H4 Trend-Follow (SMA20 slope)
 
-**Status:** **FAIL** — D-092.1 FAIL (U2 `43c395e`; mean −0,17 bp < gate 1,89 bp). Geen PREREG. — awaiting cost pre-screen (**D-094** track 4; queue na N24–N34 FAIL; filed 2026-10-01 08:28).  
+**Status:** **FAIL — geen PREREG** — U2 `43c395e` (N=627, mean **−0,17** < 1,89). FAIL-set; geen klonen.
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `EURUSD` (RT **0,63 bp** → gate **1,89 bp**).  
 **Track 4:** andere horizon — **H4 trend-follow** (niet MR zoals N27 AUDUSD; niet month TSMOM B1; niet London ORB A5).  

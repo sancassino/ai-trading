@@ -1,17 +1,18 @@
-# Eindstand FTMO-onderzoek (CEO, 2026-10-01)
+# Eindstand FTMO-onderzoek (tussenstand — D-094 FREEZE OFF; bijgewerkt 2026-10-01 ~09:28)
 
-**Conclusie:** er is nog geen sleeve met een gevalideerde edge na kosten. Evaluatie (€540) NIET kopen op basis van wat er nu ligt.
+**Conclusie:** nog geen sleeve met een **gevalideerde** na-kosten edge (formele t + reserve). Evaluatie (€540) **NIET kopen** op basis van wat er nu ligt. Zoeken gaat door (D-094); alleen Sandro beslist over stoppen/aankoop.
 
 ## Cijfers
-- 447 geteste trials (TRIALS.csv), alle FTMO-sleeves dood: kostenpoort (A4, A5, B1, A2, S2-XAU/GER40/USDJPY/USOIL/BTC-ETH, N3–N17, IB_FADE, LUNCH_OPEN) of formele t-toets (N11 GER40-ORB, N18 US500-overnight-gap, LUNCH_OPEN).
-- Intradag/overnight-edges zijn klein (0–5 bp bruto) tegenover kosten (0,7–3 bp + swap).
-- Rekenkundig: €800/mnd vraagt Sharpe ≳ 1,0; bekende ORB-sleeve haalt ≈ €290–300/mnd en is statistisch zwak (t ≈ 1,8).
-- Engine `engine/ftmo.py` onafhankelijk gevalideerd (Auditor). Grok- en Claude-PREREGs voldoen aan alle regels (AUDIT_2).
-- Reserve 2025+ onaangeroerd.
+- **TRIAL_COUNT = 448** (P1 ORB+BTC reserve one-shot FAIL, CTO C-020 / D-096).
+- P1: day-clust t≈0,24; ann SR≈0,20; BTC-leg mean <0 op reserve 2025→ — P1 dood; reserve voor P1 verbruikt.
+- Pre-screen PASS → PREREG pending formal U2: **N35, N36, N40, N41** + S2 **GBPJPY_EU_MOM**.
+- C17/FX_INTRADAG/B1/A2 en N1–N34/N37–N39/N42 STOP of pre-screen FAIL; N43 underpowered (geen PREREG).
+- Engine `engine/ftmo.py` onafhankelijk gevalideerd (Auditor). Integriteit: PREREG vóór resultaat, TRIALS append-only, geen 2025+ buiten CEO-vrijgave.
 
-## Wat kan heropenen
-1. Lange M1-data via HistData (SANDRO_ACTIES / M-001): zonder deze data kan de enige sleeve met bruto-edge (ORB) niet langer dan 2021–26 getest worden. ±1 uur werk.
-2. Andere markten of andere prop-regels (kleinere account, andere firm).
-3. Definitief stoppen.
+## Wat kan heropenen / doorloopt
+1. U2 formal gates op N35/N36/N40/N41 + GBPJPY (geen evaluatie-advies tot PASS + Auditor).
+2. Lange M1-data via HistData (SANDRO_ACTIES / M-001) voor A1-ORB.
+3. Nieuwe pre-screens (N44–N45 OPEN); D-094 tracks 2+4.
+4. Definitief stoppen — alleen Sandro.
 
-Alles staat bevroren tot Sandro kiest. Agents openen of kopen nooit iets.
+Agents openen of kopen nooit iets. `EINDSTAND_FTMO.md` = tussenstand, geen einde (D-094).
