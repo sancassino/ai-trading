@@ -1,4 +1,4 @@
-# NEXT_STEPS v66 — Manager, 2026-10-01 08:35 CEST (D-095 P1 ORB+BTC; C-019; N24–N34 FAIL; U2 step1; TRIAL 447) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v67 — Manager, 2026-10-01 09:05 CEST (D-096 P1 reserve FAIL C-020; U2 S2-BTC PASS + N35/N36; N37 FAIL; TRIAL 448) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -8,98 +8,80 @@
 
 > **⚠ TEAM (D-090):** Claude = alleen CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main.
 
-> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-095** op `claude/ftmo-trading-strategy-98mplz` (`c7c5c43` / D-094a `353aa31` / D-094 `c1860e2`). **D-094 + D-094a + D-095 actief.** `EINDSTAND_FTMO.md` = **tussenstand**, geen einde.
+> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-096** op `claude/ftmo-trading-strategy-98mplz` (`8ed250e` D-096 / `c7c5c43` D-095 / D-094a `353aa31` / D-094 `c1860e2`). **D-094 + D-094a + D-095 + D-096 actief.** `EINDSTAND_FTMO.md` = **tussenstand**, geen einde.
 
 > **⚠ D-094 — NOOIT MEER STOPPEN:** D-093, D-092.6 (8-cycli-stop) en 1×/4u-onderhoud zijn **ingetrokken**. Alleen Sandro mag stoppen. Sterft een spoor → in dezelfde cyclus ≥2 nieuwe sporen openen. Geen agent FTMO-signup / fee-spend.
 
-Bindend: D-083…**D-095** (CEO). Integriteit ongewijzigd: PREREG vóór resultaat, TRIALS append-only, dag-geclusterd t, FDR, echte FTMO-kosten, Auditor onafhankelijk. Dead set niet heropenen als klonen.
+Bindend: D-083…**D-096** (CEO). Integriteit ongewijzigd: PREREG vóór resultaat, TRIALS append-only, dag-geclusterd t, FDR, echte FTMO-kosten, Auditor onafhankelijk. Dead set niet heropenen als klonen.
 
-## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-095) — **ACTIEF**
+## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-096) — **ACTIEF**
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (Grok CTO, `grok/cto-1`).
 
-### Cyclus-uitslag (Manager, 2026-10-01 08:35 CEST — **D-095** P1 absorb; C-019; N24–N34 FAIL)
+### Cyclus-uitslag (Manager, 2026-10-01 09:05 CEST — **D-096** + **C-020** P1 FAIL; U2 stap1 PASS; N35/N36; TRIAL 448)
 
-**Nieuwe D-*:** **D-095** (`c7c5c43` ~08:27 CEST) — portefeuille **P1 ORB+BTC** als eerste echte kandidaat; `PREREG_FTMO_P1_ORB_BTC.md` op main. BESLUITEN tip **D-095**; D-094a `353aa31`; D-094 `c1860e2`. TRIAL_COUNT **447** (geen formal). Watch **N/A** (D-092.6 ingetrokken). Freeze **OFF**.
+**Nieuwe D-*:** **D-096** (`8ed250e` ~08:56 CEST) — reserve-vrijgave P1 ORB+BTC na U2 stap1 PASS (N=197, +15,8 bp, stress PASS; kanttekening 2023–24 netto −4,4 bp). Eenmalig voor P1; Auditor AUDIT_4; FAIL → P1 dood, geen freeze, door met overige sporen. BESLUITEN tip **D-096**. TRIAL_COUNT **448**. Watch **N/A**. Freeze **OFF**.
 
-**D-095 / P1 volgorde (bindend):**
-1. **Uitvoerder-2** stap 1: S2-BTC 2021–2024-12 cost-gate + stress; N≥150 anders portefeuille STOP (geen trial).
-2. Bij PASS → CEO éénmalige reserve-vrijgave P1 (D-084 per kandidaat) → **CTO** één reserve-run met train-bevroren scales → **Auditor** herberekent.
-3. Forward-papier parallel. Andere D-094-sporen lopen door. FAIL_T-combinaties buiten dit PREREG = géén kandidaten (diag ceilings).
+**U2 D-095 stap1 DONE** (`43c395e` ~08:56 CEST): S2-BTC 2021–2024-12 cost-gate+stress **PASS** (N=197, mean bruto +15,76 bp, cost share 22%, all gates). Unlockte D-096 → CTO step2. Geen U2-PREREG op N35/N36 (Strateeg/S2 landt).
 
-**C-019** (CTO `06079a0` ~08:28 CEST): D-095/PREREG gekopieerd; wait U2 step1; **geen** reserve 2025+ geopend; geen TRIALS; geen Sandro re-nag. C-018 (`7c5755c`) blijft delivered (combine/sizing diag; H-ENS-04 REJECTED).
+**C-020 P1 reserve FAIL** (CTO `0a97602` ~09:03 CEST; TRIAL 448): frozen sA/sB train 2021–23; reserve 2025-01→2026-09; day-clust t=0,24 (<2); ann SR=0,20 (<0,8); BTC-leg mean <0. Mechanical FAIL per PREREG. **P1 dood** (D-096.4). Auditor AUDIT_4 nog due (verwacht FAIL-concordance). Forward-papier P1 (U1 `aad5a8d`/`827c72b`) loopt door als aanvullend bewijs. C-019 closed by C-020.
 
-**N24–N27 D-092.1 FAIL — NO_PREREG** (U2 `4c62012` ~08:24 CEST; source Strateeg `b6e8c1e`; train 2021–23; `results/R2/n24_n27_prescreen/`):
+**N35/N36 PASS_may_PREREG; N37 FAIL** (U2 `43c395e`; source Strateeg `782e6b8`; train 2021–23; `results/R2/n35_n37_prescreen/`):
 
 | Idee | Symbool | N | mean bruto | gate | Uitkomst |
 |------|---------|---|------------|------|----------|
-| N24 mid-session lunch fade | US500cash | 271 | +0.35 bp | 2.34 | **FAIL** |
-| N25 NY afternoon fade | XAUUSD | 334 | +1.14 bp | 2.49 | **FAIL** |
-| N26 XS 1d reversal basket | 5-sym | 581 | +0.77 bp | 4.83 | **FAIL** |
-| N27 H4 MR | AUDUSD | 429 | +1.49 bp | 3.66 | **FAIL** |
+| N35 US100 EU→US cont | US100cash | 214 | +6.60 bp | 1.98 | **PASS_may_PREREG** |
+| N36 XAU NY-open drive | XAUUSD | 150 | +2.80 bp | 2.49 | **PASS_may_PREREG** |
+| N37 EURUSD H4 TF | EURUSD | 627 | −0.17 bp | 1.89 | **FAIL** |
 
-**N28–N34 D-092.1 FAIL — NO_PREREG** (Strateeg `7ede6d0` ~08:28 CEST; train 2021–23; closest miss N28 EURJPY +2.91 < 3.30):
+**FAIL-set += N37 · P1**. Geen klonen. OPEN: **N35/N36** (PREREG pending Strateeg) + **PREREG_S2_GBPJPY_EU_MOM** (S2 `6444d30` ~08:46 CEST; N=170 +3,41≥3,33; D-094a(b)).
 
-| Idee | N | mean bruto | gate | Uitkomst |
-|------|---|------------|------|----------|
-| N28 EURJPY Lon→NY mom | 189 | +2.91 bp | 3.30 | **FAIL** |
-| N29 GBPUSD midday fade | 122 | −1.20 bp | 2.10 | **FAIL** |
-| N30 XS 5d mom | 553 | +0.44 bp | 4.83 | **FAIL** |
-| N31 XAU Asia→Lon cont | 21 | −0.01 bp | 2.49 | **FAIL** |
-| N32 US30 IB cont | 754 | +0.43 bp | 1.35 | **FAIL** |
-| N33 USDCAD Lon→NY | 94 | +1.04 bp | 2.40 | **FAIL** |
-| N34 XAU postfix MR | 148 | −2.71 bp | 2.49 | **FAIL** |
+**S2** tip `6444d30` ~08:46 CEST: D-094 volle cadans hervat; 5 screens (EURGBP/AUS200/UK100/EURAUD FAIL); **PREREG GBPJPY_EU_MOM** frozen. **Strateeg** tip `782e6b8` ~08:51 CEST: N35–N37 queue sync.
 
-**FAIL-set += N24–N34**. Geen PREREG/trials. **Niet heropenen/klonen.** OPEN queue: **N35–N37** (Strateeg tracks 2+4).
+**Main sinds v66:** U1 forward_p1.py (`aad5a8d`/`827c72b`); RUNLOG VM-schijf vol → reset (`778f4ab` ~09:06 CEST) — M5-export hervat (spoor 6).
 
-**D-094a historie:** default **≥5 jaar**. **<5 jaar** alleen met a/b/c in PREREG. Auditor mag afwijzen.
-
-**Meetlat per cyclus (D-094.8):** ≥3 nieuwe bruto-screens, ≥1 PREREG, dode kandidaat meteen vervangen. S2 tip `52caf6a` ~07:42 CEST nog D-093-onderhoud — moet D-094 volle cadans oppakken.
-
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18**. Pre-screen FAIL: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34**.
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18 · P1**. Pre-screen FAIL: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34 · N37**.
 
 ### Wekelijkse sporen-tabel (D-094.7 — Manager houdt bij)
 
 | Spoor | Inhoud | Eigenaar | Cadans-eis | Status 2026-10-01 |
 |------|--------|----------|------------|-------------------|
-| **1** | Kortere historie / walk-forward; ≥5j default; <5j alleen met D-094a a/b/c in PREREG; pool N≥150; forward-papier | **Uitvoerder-2** (+ Strateeg input) | Gates + land PREREGs | **OPEN** — **prio = D-095 stap 1** (S2-BTC power); N20–N34 FAIL |
-| **2** | Andere markten via `results/screen_cost_vol.csv` (166 symb.): commodities, crypto, stock-CFD, non-US idx, FX, metals — bruto-screen → PREREG | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk** | **OPEN** — N35–N37 queue |
-| **3** | Combineren: (a) weak+ portfolio `ftmo_ev()`; (b) ensembles/filters één hypothese; (c) stapelen small edges | **CTO** (3a/c); **CEO** schrijft PREREGs 3b | Parallel | **OPEN** — **3b P1 PREREG filed (D-095)**; C-018 3a diag; C-019 wait U2 |
-| **4** | Andere horizons/families: swing 2–5d, XS-mom 166, CTA commodities, carry/RV, vol-target, events, seizoen, MR 4u/D1 | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk** | **OPEN** — N35–N37 queue |
-| **5** | FTMO-structuur: lage-vol + positieve skew; `recommend_scale`; p_pass × p_survive sizing | **CTO** | Parallel | **OPEN** — C-018 sizing grids |
-| **6** | Data: Yahoo/Dukascopy/Stooq proxy voor ontdekking; FTMO-M5 voor kosten/uitvoering; HistData A-001 niet-blokkerend | Team / Sandro A-001 | Doorlopend | **OPEN** — U1 `69c641a` M5→m5gz 166 symb. (export 92 gestart) |
-| **7** | Coördinatie: NEXT_STEPS + deze tabel; geen stilstand | **Manager** | Elke 30 min | **OPEN** — v66 |
+| **1** | Kortere historie / walk-forward; ≥5j default; <5j alleen met D-094a a/b/c in PREREG; pool N≥150; forward-papier | **Uitvoerder-2** (+ Strateeg input) | Gates + land PREREGs | **OPEN** — P1 pad afgerond (FAIL); prio = gate GBPJPY + land N35/N36 |
+| **2** | Andere markten via `results/screen_cost_vol.csv` (166 symb.): commodities, crypto, stock-CFD, non-US idx, FX, metals — bruto-screen → PREREG | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk** | **OPEN** — N35/N36 may PREREG; N37 FAIL; S2 GBPJPY PREREG |
+| **3** | Combineren: (a) weak+ portfolio `ftmo_ev()`; (b) ensembles/filters één hypothese; (c) stapelen small edges | **CTO** (3a/c); **CEO** schrijft PREREGs 3b | Parallel | **OPEN** — **3b P1 FAIL (C-020 / D-096)**; reserve P1 verbruikt; nieuwe 3b ok |
+| **4** | Andere horizons/families: swing 2–5d, XS-mom 166, CTA commodities, carry/RV, vol-target, events, seizoen, MR 4u/D1 | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk** | **OPEN** — N35/N36 + GBPJPY; ≥3 nieuwe screens |
+| **5** | FTMO-structuur: lage-vol + positieve skew; `recommend_scale`; p_pass × p_survive sizing | **CTO** | Parallel | **OPEN** — C-018 sizing grids; iterate bij nieuwe weak+ |
+| **6** | Data: Yahoo/Dukascopy/Stooq proxy voor ontdekking; FTMO-M5 voor kosten/uitvoering; HistData A-001 niet-blokkerend | Team / Sandro A-001 | Doorlopend | **OPEN** — U1 M5→m5gz; VM reset `778f4ab`; export hervat |
+| **7** | Coördinatie: NEXT_STEPS + deze tabel; geen stilstand | **Manager** | Elke 30 min | **OPEN** — v67 |
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | **D-095 stap 1:** S2-BTC 2021–2024 cost+stress; N≥150 → unlock CEO reserve + CTO step2 | **Uitvoerder-2** | **OPEN — deblokkeert P1** |
-| **2** | Vervang N24–N34: ≥3 pre-screens/cyclus (N35–N37+); ≥1 PREREG/cyclus team | Strateeg / S2 | **OPEN** |
-| — | **C-019** wait U2 step1 (no reserve) | CTO | **OPEN** `06079a0` |
+| **1** | Land PREREG N35/N36 + gate **PREREG_S2_GBPJPY_EU_MOM**; ≥3 nieuwe screens | Strateeg / S2 / **U2** | **OPEN — prio na P1 FAIL** |
+| **2** | **AUDIT_4** onafhankelijk P1 reserve herberekend (expect FAIL concordance) | Auditor | **OPEN** |
+| — | **C-020** P1 reserve FAIL (TRIAL 448); P1 dood | CTO | **DELIVERED** `0a97602` |
 | — | **C-018** combine/sizing (diag ceilings; no solo reopen FAIL_T) | CTO | **DELIVERED** `7c5755c` |
-| — | **D-094a** ≥5j / uitzondering a/b/c in PREREG | Allen + Auditor | Bindend |
-| — | Dead/FAIL set (N11–N34 e.a.) | — | Gesloten als klonen |
-| — | `EINDSTAND_FTMO.md` | — | Tussenstand; niet-kopen blijft feit tot PASS |
+| — | **D-094a** ≥5j / uitzondering a/b/c in PREREG (GBPJPY = b) | Allen + Auditor | Bindend |
+| — | Dead/FAIL set (N11–N34, N37, P1 e.a.) | — | Gesloten als klonen |
+| — | `EINDSTAND_FTMO.md` | — | Tussenstand; niet-kopen blijft feit (P1 FAIL bevestigt) |
 | — | HistData A-001 | Sandro | OPEN, niet-blokkerend |
 | — | Integriteit (PREREG/TRIALS/t/FDR/kosten) | Allen | Ongewijzigd |
 
-### Acties (bindend; D-094 / D-095 verdeelt)
+### Acties (bindend; D-094 / D-096 verdeelt)
 
-1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — prio-1 = D-095 stap 1:**
-   - Tip `edf3acc` ~08:28 CEST IDLE na N24–N27 FAIL (`4c62012`). **Nu:** run S2-BTC 2021–2024-12 cost-gate + stress (N≥150?) per `PREREG_FTMO_P1_ORB_BTC.md`.
-   - Parallel: land + gate op volgende D-092.1-PASS (N35+). Dead/FAIL (incl. N20–N34) niet herstarten. TRIAL_COUNT **447**. XAU_AM_FADE watch-only. Geen reserve 2025+ openen.
+1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — prio-1 = gate GBPJPY + land N35/N36:**
+   - Tip `43c395e` ~08:56 CEST: D-095 stap1 S2-BTC **PASS**; N35/N36 PASS_may_PREREG; N37 FAIL. **Nu:** zodra Strateeg/S2 PREREGs landen → cost-gate/formal; gate `PREREG_S2_GBPJPY_EU_MOM` (`6444d30`). Dead/FAIL (incl. N20–N34, N37, **P1**) niet herstarten. TRIAL_COUNT **448**. Geen nieuwe reserve 2025+ openen (P1 verbruikt).
 
-2. **Grok CTO (`grok/cto-1`) — C-019 OPEN (`06079a0`); wait U2 step1:**
-   - Geen reserve-run tot CEO vrijgave na U2 PASS. Iterate 3a/c + 5 alleen bij nieuwe weak+ PASS sleeves; anders QUIET hold op P1-gate. Geen Sandro-ping; geen eval-advies.
-   - H-ENS-04 N18 year-filter blijft REJECTED. FAIL_T sleeves = diagnostic only.
+2. **Grok CTO (`grok/cto-1`) — C-020 DELIVERED (`0a97602`); P1 FAIL:**
+   - Geen tweede P1-blik / herschatting. Iterate 3a/c + 5 bij nieuwe weak+ PASS sleeves; anders QUIET. Geen Sandro-ping; geen eval-advies. H-ENS-04 blijft REJECTED. FAIL_T/P1 = diagnostic/dead only.
 
 3. **Strateeg (`claude/trusting-faraday-34tsmg`) — ACTIEF (sporen 2 + 4):**
-   - Tip `7ede6d0` ~08:28 CEST: N24–N34 FAIL; OPEN **N35–N37**. ≥3 nieuwe pre-screens/cyclus; geen klonen dead/FAIL (incl. N20–N34); geen simple ORB-klonen. D-095 P1 = CEO/U2/CTO spoor — Strateeg blijft tracks 2+4 voeden.
+   - Tip `782e6b8` ~08:51 CEST: land **PREREG N35 + N36** (PASS screens); N37 FAIL gesloten. ≥3 nieuwe pre-screens/cyclus; geen klonen dead/FAIL (incl. N20–N37, P1); geen simple ORB-klonen.
 
 4. **Strateeg-2 (`grok/strateeg-2`) — ACTIEF (sporen 2 + 4):**
-   - Tip `52caf6a` ~07:42 CEST nog D-093-onderhoud → **nu D-094 volle cadans**. ≥3 pre-screens/cyclus; N20–N34 niet herhalen. Geen engine-runs.
+   - Tip `6444d30` ~08:46 CEST: **PREREG_S2_GBPJPY_EU_MOM** filed (D-094a(b)). ≥3 pre-screens/cyclus; N20–N37/P1 niet herhalen. Geen engine-runs.
 
 5. **Auditor — ACTIEF:**
-   - Steekproef gate-PASS/FAIL_T; D-094a-onderbouwing mag afwijzen; na P1 reserve-run onafhankelijk herberekent (D-095).
+   - **AUDIT_4** P1 reserve onafhankelijk (D-096.2); steekproef gate-PASS/FAIL_T; D-094a(b) GBPJPY mag afwijzen.
 
 6. **Manager (`main`) — volle cadans :05/:35:**
    - Absorbeer D-*; houd sporen-tabel bij; U2-freshness; commit NEXT_STEPS. Nooit zelf bevriezen.
