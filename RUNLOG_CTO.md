@@ -1030,3 +1030,53 @@ git add PREREG_FTMO_ENERGY_TSMOM.md results/cto/c023_tsmom_div_fail_energy_prere
 git commit -m "CTO: C-023 TSMOM_DIV FAIL absorb + ENERGY_TSMOM PREREG (D-099; 0 trials)"
 git push origin grok/cto-1
 ```
+
+## C-024 — ENERGY_TSMOM FAIL absorb + D-100 swap shortlist + IDX_SHORT PREREG — 2026-10-01 ~11:05 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended: **0**. No FTMO signup / spend. No EINDSTAND re-nag.
+
+### Team snapshot vs prior wake (~10:35 CEST / C-023)
+
+| Item | ~10:35 C-023 | ~11:05 C-024 |
+|---|---|---|
+| main NEXT_STEPS | v70 `1f6b53f` | **v71** tip **`a7c9451`** (D-099 + TSMOM_DIV FAIL + C-023 ENERGY) |
+| grok/cto-1 | `250d408` C-023 | **this C-024** (+ merge main) |
+| Decisions | D-099 | **D-100** (`615bca0`) swap-bewust + swap_side_map |
+| TRIAL_COUNT | 453 | **453** (ENERGY gate STOP ≠ trial) |
+| U2 | `e5d23c5` TSMOM_DIV FAIL | **`0f5295c`** idle — ENERGY **FAIL_COST_GATE** (`c1499ce`) |
+| Strateeg | `f5ef89d` N58–N59 | **`93c21d8`** N60 XAGUSD 5d + N58/N59 |
+| S2 | `1cf4542` drought | **`365f704`** cycle_1040 — 5 D-097 pre-screens FAIL |
+| CEO | D-099 `76ec6ed` | **D-100** `615bca0` |
+| EINDSTAND | tussenstand | tussenstand; **no re-nag** |
+
+### Diff vs last known (~10:35)
+
+1. Manager v71 absorbed C-023 ENERGY PREREG; U2 already gated it → **FAIL_COST_GATE** (bruto 29.08 vs gate 272.08; ~83 bp swap/trade; n=209 train).
+2. CEO **D-100**: overnight swap is the cost wall; design intradag-flat or cheapest side only; oil/UK100 credits ≠ alpha.
+3. CTO skips `ftmo_ev` on ENERGY; dead += ENERGY_TSMOM (no L/H / HEATOIL / short / N59 clones).
+4. Highest leverage: operationalize D-100 + freeze one swap-cheap PREREG so U2 is not idle on N58/N59 wait.
+
+### Deliverable
+
+`results/cto/c024_d100_swap_aware/` + `PREREG_FTMO_IDX_SHORT_TSMOM.md`:
+- ENERGY absorb board (0 trials; TRIAL 453)
+- `swap_side_map.csv` copy + `swap_cheap_shortlist.csv` (75 names; families A index-short / B FX-carry+ / C metal / D non-oil commodity)
+- Flags: **N58 SWAP_HOSTILE**; **N59 BARRED** (ENERGY clone); N60 OK to screen
+- Frozen PREREG: US100+US30 **short-only** L20/H10 (D-100 cheap overnight; proxy NDX/DJI; ≤2024; no 2025+)
+
+### CTO next
+
+1. U2: gate `PREREG_FTMO_IDX_SHORT_TSMOM` (skip ENERGY re-gate / N59).
+2. Strateeg: drop N59; redesign N58 to cheap FX sides; keep N60; prefer C-024 families A/B.
+3. On PASS → track-5 `ftmo_ev`. Track-3 still PAUSED.
+4. No Sandro eval ping.
+
+### Git
+
+```
+git add PREREG_FTMO_IDX_SHORT_TSMOM.md results/cto/c024_d100_swap_aware/ \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-024 ENERGY FAIL absorb + D-100 shortlist + IDX_SHORT PREREG (0 trials)"
+git push origin grok/cto-1
+```

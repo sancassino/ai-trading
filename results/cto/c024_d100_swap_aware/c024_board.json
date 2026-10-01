@@ -1,0 +1,88 @@
+{
+  "c": "C-024",
+  "when_cest": "2026-10-01 ~11:05 Europe/Amsterdam",
+  "decision_context": [
+    "D-099",
+    "D-100"
+  ],
+  "energy_absorb": {
+    "prereg": "PREREG_FTMO_ENERGY_TSMOM",
+    "u2_tip": "c1499ce",
+    "outcome": "FAIL_COST_GATE",
+    "counts_as_trial": false,
+    "train_mean_bruto_bp": 29.08,
+    "train_mean_cost_bp": 90.69,
+    "gate_3x": 272.08,
+    "swap_bp_per_trade_approx": 83.33,
+    "n_trades_train": 209,
+    "trial_count": 453,
+    "reserve_2025": "untouched",
+    "no_clones": [
+      "no L/H grid",
+      "no HEATOIL add",
+      "no short leg",
+      "no N59 UKOIL L20/H10 regime clone"
+    ]
+  },
+  "n58_flag": {
+    "idea": "N58 LONG AUDUSD + SHORT USDJPY",
+    "audusd_best": "long",
+    "audusd_long_pct": -1.728,
+    "audusd_short_pct": -3.215,
+    "usdjpy_best": "long",
+    "usdjpy_long_pct": 0.983,
+    "usdjpy_short_pct": -5.133,
+    "verdict": "SWAP_HOSTILE \u2014 both legs on expensive/adverse side vs D-100; redesign to cheap sides (e.g. long USDJPY + long USDCHF carry+trend) or intradag-flat"
+  },
+  "n59_flag": "BARRED_as_ENERGY_clone \u2014 UKOIL L20/H10 long_only regime variant; ENERGY FAIL + no clones",
+  "shortlist_n": 75,
+  "family_counts": {
+    "A_index_short_regime": 9,
+    "B_fx_carry_positive_side": 23,
+    "C_metal_cheap_side": 6,
+    "D_commodity_non_oil_cheap": 9
+  },
+  "family_top": {
+    "A_index_short_regime": [
+      "US100.cash:short",
+      "AUS200.cash:short",
+      "HK50.cash:short",
+      "US30.cash:short",
+      "GER40.cash:short",
+      "EU50.cash:short",
+      "FRA40.cash:short",
+      "US500.cash:short"
+    ],
+    "B_fx_carry_positive_side": [
+      "AUDCHF:long",
+      "AUDJPY:long",
+      "EURHUF:short",
+      "AUDCAD:long",
+      "GBPCHF:long",
+      "USDSEK:long",
+      "NZDCHF:long",
+      "EURAUD:short"
+    ],
+    "C_metal_cheap_side": [
+      "XAGAUD:short",
+      "XAGEUR:short",
+      "XAGUSD:short",
+      "XAUEUR:short",
+      "XAUUSD:short",
+      "XAUAUD:short"
+    ],
+    "D_commodity_non_oil_cheap": [
+      "NATGAS.cash:short",
+      "COFFEE.c:long",
+      "CORN.c:short",
+      "COTTON.c:short",
+      "SUGAR.c:short",
+      "WHEAT.c:short",
+      "COCOA.c:short",
+      "XCUUSD:short"
+    ]
+  },
+  "prereg_frozen": "PREREG_FTMO_IDX_SHORT_TSMOM.md",
+  "trials_appended": 0,
+  "reserve_2025": "untouched"
+}

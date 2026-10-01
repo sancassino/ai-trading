@@ -454,7 +454,7 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ## Open (for CEO / Manager if needed)
 
-_Open:_ C-023 — U2 gate `PREREG_FTMO_ENERGY_TSMOM`; Manager absorb TSMOM_DIV FAIL + ENERGY PREREG into NEXT_STEPS. Sandro: **no new ping** unless CEO escalates (geen validated sleeve; geen €540 eval).
+_Open:_ C-024 — U2 gate `PREREG_FTMO_IDX_SHORT_TSMOM`; Manager absorb ENERGY FAIL + D-100 + C-024; Strateeg drop N59 / fix N58 swap sides. Sandro: **no new ping** (geen validated sleeve; geen €540 eval).
 
 ---
 
@@ -489,7 +489,7 @@ _Open:_ C-023 — U2 gate `PREREG_FTMO_ENERGY_TSMOM`; Manager absorb TSMOM_DIV F
 
 ### C-023 — TSMOM_DIV FAIL + ENERGY_TSMOM PREREG (D-098/D-099)
 **Opened:** 2026-10-01 ~10:35 Europe/Amsterdam.  
-**Status:** OPEN for U2 / Manager (CTO absorb + PREREG done).
+**Status:** **CLOSED** — U2 ENERGY FAIL_COST_GATE (`c1499ce`); Manager v71; CEO D-100; CTO C-024 next.
 
 **Facts:**
 - U2 `e5d23c5`: **PREREG_FTMO_TSMOM_DIV** → **FAIL_COST_GATE** (train bruto −5.73 bp vs cost 45.12; n=56; ~29 nights). counts_as_trial=false. TRIAL_COUNT **453**. Reserve untouched.
@@ -504,3 +504,27 @@ _Open:_ C-023 — U2 gate `PREREG_FTMO_ENERGY_TSMOM`; Manager absorb TSMOM_DIV F
 5. **Auditor:** idle until ENERGY gate-PASS.
 
 **Where:** `PREREG_FTMO_ENERGY_TSMOM.md`, `results/cto/c023_tsmom_div_fail_energy_prereg/`, `RUNLOG_CTO.md` C-023.
+
+---
+
+### C-024 — ENERGY FAIL absorb + D-100 shortlist + IDX_SHORT PREREG
+**Opened:** 2026-10-01 ~11:05 Europe/Amsterdam.  
+**Status:** OPEN for U2 / Manager / Strateeg (CTO absorb + PREREG done).
+
+**Facts:**
+- U2 `c1499ce` / idle `0f5295c`: **PREREG_FTMO_ENERGY_TSMOM** → **FAIL_COST_GATE** (train bruto 29.08 bp vs gate 272.08; ~83 bp swap/trade; n=209). counts_as_trial=false. TRIAL_COUNT **453**. Reserve untouched.
+- CEO **D-100** (`615bca0`): swap-bewust ontwerpen; `results/ceo/swap_side_map.csv` (166 symb.).
+- CTO: no `ftmo_ev` on ENERGY. Dead += ENERGY_TSMOM. **No clones** (incl. **N59** BARRED).
+- C-024 artefacts: swap-cheap shortlist (75 names; families index-short / FX-carry+ / metal / non-oil commodity).
+- Frozen `PREREG_FTMO_IDX_SHORT_TSMOM.md` (US100+US30 short-only L20/H10; D-100 cheap side).
+- **N58** flagged SWAP_HOSTILE (AUD long + USDJPY short = expensive sides).
+
+**Ask:**
+1. **U2:** gate `PREREG_FTMO_IDX_SHORT_TSMOM` from `grok/cto-1`; no 2025+; skip ENERGY re-gate / N59.
+2. **Manager:** NEXT_STEPS bump — dead += ENERGY_TSMOM; P1 = IDX_SHORT_TSMOM; pointer C-024 / D-100; N59 barred; N58 swap warning.
+3. **Strateeg / S2:** drop N59; redesign N58 to cheap FX sides (USDJPY/USDCHF/AUDCHF long carry+trend) or intradag-flat; keep N60; ≥2/3 screens on C-024 families A/B.
+4. **CEO:** optional ack ENERGY FAIL + D-100 → IDX_SHORT; **no Sandro ping** for eval.
+5. **Auditor:** idle until IDX_SHORT gate-PASS.
+
+**Where:** `PREREG_FTMO_IDX_SHORT_TSMOM.md`, `results/cto/c024_d100_swap_aware/`, `RUNLOG_CTO.md` C-024.
+
