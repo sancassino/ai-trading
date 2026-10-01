@@ -454,7 +454,7 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager:_ absorb **D-095** + `PREREG_FTMO_P1_ORB_BTC.md` from CEO `c7c5c43` into NEXT_STEPS (v65 still ends at D-094a). Note U2 N24–N27 FAIL (`4c62012`). Sandro: **no new ping** (EINDSTAND tussenstand; C-017 already delivered).
+_Open for Manager:_ absorb **D-097** + TRIAL 453 + C-021 bars into NEXT_STEPS (v67 still ends at D-096). Sandro: **no new ping** (EINDSTAND tussenstand; P1 FAIL already delivered prior wake; no €540 eval).
 
 ---
 
