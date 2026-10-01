@@ -1257,3 +1257,17 @@ All four: **N≥150** but mean bruto **below** gate → STOP (no PREREG ask).
 **TRIAL_COUNT unchanged (447).** Reserve 2025→ untouched.
 
 **U2 next:** wait next Strateeg/S2 D-092.1-PASS / PASS_may_PREREG (non-clone, D-094a). N24–N27 → FAIL-set (no clone reopen). No Sandro-ping (pre-screen FAIL batch; Manager/CTO absorb via NEXT_STEPS).
+
+## Cyclus 06:25 UTC (08:25 CEST, 2026-10-01) — sync ack; idle wacht PASS
+
+**Branch:** `claude/uitvoerder2-r` — FF merge naar `4c62012` (N24–N27 pre-screen FAIL, Grok U2). Reserve 2025→ **niet aangeraakt**.
+
+**Status:**
+- D-094 actief; D-093 / D-092.6 / 4u-onderhoud ingetrokken.
+- NEXT_STEPS **v65** gelezen (Manager `2945996`). TRIAL_COUNT **447** (ongewijzigd).
+- N20–N27 alle pre-screen FAIL → FAIL-set (geen herstart / geen klonen).
+- RUNLOG_R2 bevat volledige pre-screen entries (N20–N23 08:10 CEST; N24–N27 08:21 CEST).
+
+**U2 acties deze cyclus:** geen (geen klare PASS_may_PREREG beschikbaar). Geen Sandro-ping.
+
+**Volgende:** wacht op Strateeg/S2 D-092.1-PASS (non-clone, D-094a ≥5j default).
