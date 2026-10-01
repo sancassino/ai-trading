@@ -67,3 +67,5 @@
 13:15 Amsterdam (01-10) — **MINI-REVIEW 3u (sinds 10:45):** D-100 FX/IDX-TSMOM reeks: USDJPY/EURJPY FAIL_T (TRIAL 456); N78 FAIL_COST_GATE; N75–N77 DIAG_FAIL; CORN gedegradeerd. Patroon: TSMOM-varianten systematisch afgewezen (kosten te hoog of t < 2,0). CTO zoekt nieuwe familie. Strateeg N69–N71/N80 queued. TRIAL 456; 0 sleeves gevalideerd. Team actief D-094/D-097/D-100; geen CEO-beslissing nodig.
 13:45 Amsterdam (01-10) — N80 FAIL_COST_GATE; N82/N84–N86 DIAG_FAIL; N83 underpowered; U2 idle; TRIAL 456 stabiel. CTO Lane-B diagnose lopend.
 14:15 Amsterdam (01-10) — geen nieuws; U2 idle; CTO Lane-B diagnose; TRIAL 456 stabiel
+
+14:45 Amsterdam (01-10) — MIJLPAAL C-028: COSTS_FTMO eerlijke RT uitgebreid 74→166 symbolen (promote-criterium actief); Strateeg N87/N88/N89 nieuwe familie L/M/N open (Lane-A kandidaten); U2 idle; TRIAL 456 stabiel.
