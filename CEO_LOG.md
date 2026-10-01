@@ -44,3 +44,4 @@
 - 01:45 Amsterdam (01-10) — CEO-cyclus. IB_FADE (cyclus-4) gestopt op kostenpoort (N=42, mean −3.54 bp; U2 b8cf28a). XAG pre-screen FAIL → S2c pad gesloten. CTO portfolio-EV: F2-ORB ≈€513/m, ORB+BTC eqvol ≈€1006/m (maar BTC nog power-FAIL solo). D-092 stopregel loopt (start 01:00). Geen open CEO-vragen.
 - 02:15 Amsterdam (01-10) — CEO-cyclus (3 triggers ingehaald). NEXT_STEPS v52: D-092 actief, 8-cyclus watchdog loopt. Team idle wacht op nieuwe pre-screen resultaten of Sandro-data (A1). Geen open CEO-vragen.
 02:45 Amsterdam (01-10) — C-010 XAU N7/N8 pre-screen FAIL (geen PREREG); D-092 stopregel cyclus ~4/8; geen gate-PASS; team idle
+03:15 Amsterdam (01-10) — LUNCH_OPEN cost-gate PASS maar trial FAIL_T (445); C-011 N9 underpowered/N10 FAIL pre-screen; D-092 stopregel cyclus 5-6/8; geen gate-PASS
