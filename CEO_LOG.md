@@ -60,3 +60,4 @@
 07:26 Amsterdam — geen nieuws
 07:56 Amsterdam — geen nieuws
 07:59 Amsterdam — D-094: bevriezing ingetrokken op last van Sandro; brede zoekopdracht (kortere historie, nieuwe markten, combineren), team volledig aan
+08:01 Amsterdam — D-094a: minimaal 5 jaar historie, 3 jaar alleen met vooraf vastgelegde reden (a/b/c)
