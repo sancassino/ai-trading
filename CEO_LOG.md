@@ -61,3 +61,4 @@
 10:15 Amsterdam (01-10) — geen nieuws; U2 idle wacht N45–N48 PREREG; CTO C-022 proxy TSMOM/XS screen (spoor 6); TRIAL 453 stabiel
 10:45 Amsterdam (01-10) — **MINI-REVIEW 3u (sinds 06:45):** D-094 volledig actief. Periode-uitslag: P1 ORB+BTC reserve FAIL (TRIAL 448→453 via N35/N36/N40/N41 FAIL_T); TSMOM_DIV FAIL_COST_GATE (geen trial); AUDIT_4 P1 concordant FAIL. Nieuw: D-097 swing ≥50 bp + C-021/C-022 target-grid/proxy-map geleverd; D-099 ENERGY_TSMOM PREREG (C-023) aangemeld; Strateeg-2 rapporteert pre-screen drought (5 FAIL). U2 idle wacht N45–N48 PREREG. TRIAL 453; 0 sleeves gevalideerd. Team actief; geen CEO-beslissing nodig.
 11:15 Amsterdam (01-10) — ENERGY_TSMOM FAIL_COST_GATE (geen trial); CTO C-024 D-100 IDX_SHORT PREREG; forward P1 papier lopend; TRIAL 453 stabiel
+11:45 Amsterdam (01-10) — IDX_SHORT_TSMOM FAIL_COST_GATE (geen trial); CTO C-025 FX_EUR_SHORT PREREG; spoor-6 mijlpaal: alle 166 FTMO-symbolen M5gz compleet (466 MB); TRIAL 453
