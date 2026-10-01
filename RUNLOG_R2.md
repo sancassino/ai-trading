@@ -1809,3 +1809,22 @@ counts_as_trial = **true**. **TRIAL_COUNT = 457**. Dead += N87_US30_GAP_FADE. Ge
 **TRIAL_COUNT blijft 457**. Geen TRIALS-append.
 
 **U2 next:** IDLE. Wacht CEO-PREREG voor F2-ORB/intradag-DD OF Strateeg PREREG voor N90 (of nieuw). Manager NEXT_STEPS v83 verwacht na Grok-pauze (~04-10).
+
+## Cyclus 18:25 CEST (2026-10-01) — uurcyclus sync v82 (IDLE; TRIAL 457; news pre-screen)
+
+**Branch:** `claude/uitvoerder2-r` — tip `d17573c` (TRIAL **457**). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (no v83 — Manager Grok op pauze).
+- CEO `fc46d7e` ~17:57 CEST: **nieuws-reactie pre-screen** (NFP/CPI/FOMC, train 2021–23, 4 symbolen, 30/60 min, cont/fade; `results/ceo/news_prescreen.md`). Geen enkele combo haalt gate+t≥2.0; US100/US500 60min fade (+13,8/+8,1 bp) haalt gate maar t≈1,2–1,5 (ruis). Geen PREREG. CEO advies: meer events (ECB/BoE/EIA/GDP) of langere historie ≥2015.
+- Strateeg `7690342` ~18:20 CEST: pipeline **N90/N91/N92 OPEN**. N91/N92 = NEW_FAMILY P/Q (geen details, geen pre-screen). N88/N89 bevestigd pre-FAIL.
+- CEO_LOG `a3bd3eb` ~20:15 CEST: N88/N89 pre-FAIL; N91/N92 nieuwe familie open; TRIAL 457.
+- SUPERVISOR_LOG `b20ff1d`: D-101/D-102 koerswijziging; N91/N92 nieuw.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Nieuws-pre-screen gate PASS maar t<2.0 → CEO gaat door met groter events-pool/langere periode. N90/N91/N92 in VOORSTEL-fase; geen pre-screen resultaten voor N91/N92 nog.
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE wacht CEO-PREREG voor nieuws-reactie (na groter events-pool) OF Strateeg PREREG voor N90/N91/N92. Kill circuit teller: N87 cost-PASS→FAIL_T bijdrage.
