@@ -1,0 +1,7 @@
+family,symbols,lookback_hold,train_years,mean_bp,day_t,n_days,promote_to_lane_b,notes
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV10/k0.75|hold=OC|pooled,19.91,-6.57,-1.586,864,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV20/k0.75|hold=OC|pooled,19.82,-7.124,-1.737,859,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV10/k1.0|hold=OC|pooled,19.67,7.89,1.23,429,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV20/k1.0|hold=OC|pooled,19.7,-2.633,-0.407,438,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV10/k1.25|hold=OC|pooled,19.67,17.655,1.81,210,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV20/k1.25|hold=OC|pooled,19.7,12.362,1.207,219,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024

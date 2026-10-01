@@ -1,0 +1,7 @@
+family,symbols,lookback_hold,train_years,mean_bp,day_t,n_days,promote_to_lane_b,notes
+COMMODITY_SEASONALITY,COFFEE_F,MoY_expanding|hold=1d,15.99,-1.245,-0.379,4023,no,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024
+COMMODITY_SEASONALITY,CORN_F,MoY_expanding|hold=1d,15.99,5.979,2.111,4022,yes,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024
+COMMODITY_SEASONALITY,WTI_F,MoY_expanding|hold=1d,15.99,-7.826,-0.848,4024,no,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024
+COMMODITY_SEASONALITY,COPPER_F,MoY_expanding|hold=1d,15.99,-2.032,-0.84,4024,no,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024
+COMMODITY_SEASONALITY,COCOA_F,MoY_expanding|hold=1d,15.99,-0.441,-0.138,4023,no,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024
+COMMODITY_SEASONALITY,CATTLE_F,MoY_expanding|hold=1d,15.99,5.893,3.299,4022,yes,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024

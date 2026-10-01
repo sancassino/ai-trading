@@ -1,0 +1,73 @@
+family,symbols,lookback/hold,train_years,mean_bp,day_t,n_days,promote_to_lane_b,notes
+COMMODITY_SEASONALITY,CATTLE_F,MoY_expanding|hold=1d,15.99,5.893,3.299,4022,no,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024; NO FTMO symbol in PROXY_MAP — research-only unless Sandro confirms agri listing; do NOT PREREG without map; demoted: no FTMO PROXY_MAP symbol
+COMMODITY_SEASONALITY,CORN_F,MoY_expanding|hold=1d,15.99,5.979,2.111,4022,yes,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024; FTMO map CORN.c via PROXY_MAP; Lane-B needs honest agri RT/swap
+COMMODITY_SEASONALITY,COCOA_F,MoY_expanding|hold=1d,15.99,-0.441,-0.138,4023,no,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024
+COMMODITY_SEASONALITY,COFFEE_F,MoY_expanding|hold=1d,15.99,-1.245,-0.379,4023,no,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024
+COMMODITY_SEASONALITY,COPPER_F,MoY_expanding|hold=1d,15.99,-2.032,-0.84,4024,no,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024
+COMMODITY_SEASONALITY,WTI_F,MoY_expanding|hold=1d,15.99,-7.826,-0.848,4024,no,NEW_FAMILY; expanding month-of-year sign; bruto daily; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L60/H20/lam1.0|LS2/S2,18.38,0.136,0.131,4761,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L60/H10/lam1.0|LS2/S2,18.38,0.104,0.099,4761,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L60/H20/lam0.5|LS2/S2,18.38,-0.031,-0.028,4761,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L60/H5/lam0.5|LS2/S2,18.38,-0.076,-0.068,4761,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L120/H20/lam1.0|LS2/S2,18.15,-0.135,-0.131,4701,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L60/H10/lam0.5|LS2/S2,18.38,-0.283,-0.253,4761,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L60/H5/lam1.0|LS2/S2,18.38,-0.385,-0.367,4761,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L120/H10/lam1.0|LS2/S2,18.15,-0.404,-0.383,4701,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L120/H5/lam1.0|LS2/S2,18.15,-0.465,-0.437,4701,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L120/H20/lam0.5|LS2/S2,18.15,-0.546,-0.489,4701,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L120/H5/lam0.5|LS2/S2,18.15,-0.581,-0.513,4701,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+FX_CARRY_TREND_RESIDUAL,"AUDUSD,NZDUSD,EURUSD,GBPUSD,JPYUSD,CHFUSD",L120/H10/lam0.5|LS2/S2,18.15,-0.63,-0.559,4701,no,NEW_FAMILY; carry z − λ·mom z; FRED 3M diff; bruto daily port; short=no; ≤2024
+OVERNIGHT_GAP_FADE,SPY,RV10/k1.5|hold=OC,19.99,69.596,3.068,45,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024; NEAR_MISS t>=2 but n_days<80 — not promote
+OVERNIGHT_GAP_FADE,NDX,RV10/k2.0|hold=OC,19.99,182.179,3.025,11,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024; NEAR_MISS t>=2 but n_days<80 — not promote
+OVERNIGHT_GAP_FADE,NDX,RV10/k1.5|hold=OC,19.99,67.541,2.548,40,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024; NEAR_MISS t>=2 but n_days<80 — not promote
+OVERNIGHT_GAP_FADE,SPY,RV20/k2.0|hold=OC,19.99,101.238,2.404,18,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024; NEAR_MISS t>=2 but n_days<80 — not promote
+OVERNIGHT_GAP_FADE,SPY,RV10/k2.0|hold=OC,19.99,85.969,2.309,10,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024; NEAR_MISS t>=2 but n_days<80 — not promote
+OVERNIGHT_GAP_FADE,CAC40,RV10/k2.0|hold=OC,19.99,76.178,2.278,10,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024; NEAR_MISS t>=2 but n_days<80 — not promote
+OVERNIGHT_GAP_FADE,SPY,RV20/k1.5|hold=OC,19.99,53.341,2.192,46,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024; NEAR_MISS t>=2 but n_days<80 — not promote
+OVERNIGHT_GAP_FADE,NDX,RV20/k2.0|hold=OC,19.99,94.407,1.92,17,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,SPY,RV10/k1.0|hold=OC,19.99,19.612,1.905,173,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV10/k1.25|hold=OC|pooled,19.67,17.655,1.81,210,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,NDX,RV10/k1.0|hold=OC,19.99,19.281,1.481,164,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,DAX,RV10/k1.5|hold=OC,19.99,48.781,1.396,29,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV10/k1.0|hold=OC|pooled,19.67,7.89,1.23,429,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV20/k1.25|hold=OC|pooled,19.7,12.362,1.207,219,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,NDX,RV20/k1.5|hold=OC,19.99,32.332,1.128,47,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,DAX,RV10/k2.0|hold=OC,19.99,50.591,1.037,8,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,SPY,RV20/k1.0|hold=OC,19.99,9.734,0.874,191,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,DAX,RV20/k2.0|hold=OC,19.99,30.657,0.646,9,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,CAC40,RV10/k1.5|hold=OC,19.99,11.046,0.525,52,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,CAC40,RV20/k2.0|hold=OC,19.99,21.959,0.519,23,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,DAX,RV10/k1.0|hold=OC,19.99,4.339,0.338,153,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,DAX,RV20/k1.5|hold=OC,19.99,10.923,0.305,29,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,NDX,RV20/k1.0|hold=OC,19.99,-3.502,-0.273,200,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV20/k1.0|hold=OC|pooled,19.7,-2.633,-0.407,438,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,CAC40,RV20/k1.5|hold=OC,19.99,-12.47,-0.522,58,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,CAC40,RV20/k1.0|hold=OC,19.99,-8.033,-0.763,208,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,DAX,RV20/k1.0|hold=OC,19.99,-13.253,-1.05,168,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,CAC40,RV10/k1.0|hold=OC,19.99,-11.748,-1.151,195,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV10/k0.75|hold=OC|pooled,19.91,-6.57,-1.586,864,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+OVERNIGHT_GAP_FADE,SPY+NDX+DAX+CAC40,RV20/k0.75|hold=OC|pooled,19.82,-7.124,-1.737,859,no,NEW_FAMILY; pooled day-cluster; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|blockH20,17.72,50.819,1.522,217,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|blockH5,17.72,12.719,1.482,867,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|blockH10,17.72,25.409,1.457,434,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|daily_vs_H5,17.72,2.544,1.377,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|daily_vs_H10,17.72,2.544,1.377,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|daily_vs_H20,17.72,2.544,1.377,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|blockH10,17.72,21.059,1.251,421,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|blockH20,17.72,39.215,1.243,211,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|blockH20,17.72,42.018,1.24,211,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|blockH10,17.72,19.654,1.203,421,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|blockH5,17.72,10.53,1.145,842,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|blockH5,17.72,9.827,1.094,842,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|blockH20,17.72,33.133,1.023,217,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|blockH10,17.72,16.566,0.975,434,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|blockH5,17.72,8.293,0.953,867,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|daily_vs_H5,17.72,1.739,0.941,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|daily_vs_H10,17.72,1.739,0.941,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|daily_vs_H20,17.72,1.739,0.941,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|daily_vs_H5,17.72,1.684,0.911,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|daily_vs_H10,17.72,1.684,0.911,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|daily_vs_H20,17.72,1.684,0.911,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|daily_vs_H5,17.72,1.607,0.869,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|daily_vs_H10,17.72,1.607,0.869,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|daily_vs_H20,17.72,1.607,0.869,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024

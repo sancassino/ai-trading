@@ -1,0 +1,25 @@
+family,symbols,lookback_hold,train_years,mean_bp,day_t,n_days,promote_to_lane_b,notes,variant
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|daily_vs_H5,17.72,1.684,0.911,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|blockH5,17.72,8.293,0.953,867,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|daily_vs_H10,17.72,1.684,0.911,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|blockH10,17.72,16.566,0.975,434,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|daily_vs_H20,17.72,1.684,0.911,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.7|blockH20,17.72,33.133,1.023,217,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|daily_vs_H5,17.72,2.544,1.377,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|blockH5,17.72,12.719,1.482,867,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|daily_vs_H10,17.72,2.544,1.377,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|blockH10,17.72,25.409,1.457,434,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|daily_vs_H20,17.72,2.544,1.377,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct126/thr0.8|blockH20,17.72,50.819,1.522,217,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|daily_vs_H5,17.72,1.607,0.869,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|blockH5,17.72,9.827,1.094,842,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|daily_vs_H10,17.72,1.607,0.869,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|blockH10,17.72,19.654,1.203,421,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|daily_vs_H20,17.72,1.607,0.869,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.7|blockH20,17.72,39.215,1.243,211,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|daily_vs_H5,17.72,1.739,0.941,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|blockH5,17.72,10.53,1.145,842,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|daily_vs_H10,17.72,1.739,0.941,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|blockH10,17.72,21.059,1.251,421,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|daily_vs_H20,17.72,1.739,0.941,4462,no,NEW_FAMILY; VIX pctile → risk-on(SPY/DBC) vs def(IEF/GLD); bruto daily; short=no; ≤2024,daily
+XASSET_VOL_TIMING,"SPY,DBC,IEF,GLD|VIX",VIXpct252/thr0.8|blockH20,17.72,42.018,1.24,211,no,NEW_FAMILY; block-sum H days; VIX pctile timing; bruto; ≤2024,block

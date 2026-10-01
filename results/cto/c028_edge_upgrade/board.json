@@ -1,0 +1,61 @@
+{
+  "c": "C-028",
+  "title": "Edge-search upgrade (Lane A/B + novelty quota)",
+  "when": "2026-10-01 ~12:41 Europe/Amsterdam (CEST / UTC+2)",
+  "branch": "grok/cto-1",
+  "binding_doc": "EDGE_SEARCH_UPGRADE.md",
+  "trials_appended": 0,
+  "reserve_2025": "untouched",
+  "spend": "none",
+  "lanes": {
+    "A": "Yahoo/Stooq/proxy daily discovery; day_t>=2 bruto before FTMO cost",
+    "B": "Only Lane-A survivors (or honest-RT intradag) -> PREREG + U2 cost gate"
+  },
+  "novelty_quota": ">=2/3 pre-screens NEW_FAMILY not used by FAIL/dead in last 30d; clones BARRED",
+  "kill_circuit": "5 consecutive cost-gate-PASS FAIL_T -> mandatory family pivot (document in NEXT_STEPS)",
+  "roles": {
+    "Strateeg-2": "Lane-A novelty researcher (Yahoo-first, VOORSTEL + raw screens)",
+    "Strateeg": "Lane-B FTMO PREREG from survivors + D-100; stop L60 FX-med clones if EURJPY dies",
+    "Manager": "Absorb EDGE_SEARCH_UPGRADE into NEXT_STEPS; enforce novelty quota",
+    "U2": "Continue gating current OPEN PREREGs",
+    "CEO": "Optional later D-* confirm/supersede"
+  },
+  "lane_a_diagnostic": {
+    "script": "scripts/c028_lane_a_screen.py",
+    "families_screened": [
+      "OVERNIGHT_GAP_FADE",
+      "FX_CARRY_TREND_RESIDUAL",
+      "XASSET_VOL_TIMING",
+      "COMMODITY_SEASONALITY"
+    ],
+    "vs_dead": "Not TSMOM / ORB / L60 FX-med clones",
+    "data": "data/daily/* + data/fred/*; PROXY_MAP kept; cut <=2024-12-31",
+    "n_rows": 72,
+    "promote_to_lane_b_yes": [
+      {
+        "family": "COMMODITY_SEASONALITY",
+        "symbols": "CORN_F",
+        "ftmo_map": "CORN.c",
+        "lookback_hold": "MoY_expanding|hold=1d",
+        "train_years": 15.99,
+        "mean_bp": 5.979,
+        "day_t": 2.111,
+        "n_days": 4022
+      }
+    ],
+    "near_miss": [
+      "OVERNIGHT_GAP_FADE SPY RV10/k1.5 day_t=3.07 but n=45 <80",
+      "COMMODITY_SEASONALITY CATTLE_F day_t=3.30 but no FTMO PROXY_MAP symbol (demoted)",
+      "XASSET_VOL_TIMING best day_t=1.52 <2",
+      "FX_CARRY_TREND_RESIDUAL best day_t=0.13 (FAIL)"
+    ]
+  },
+  "honesty": "No guaranteed edge; upgrade raises hit-rate odds only. Not a fake PASS. EURJPY_MED PREREG remains OPEN for U2 (C-027).",
+  "outputs": [
+    "EDGE_SEARCH_UPGRADE.md",
+    "results/cto/c028_edge_upgrade/board.json",
+    "results/cto/c028_edge_upgrade/report.md",
+    "results/cto/c028_edge_upgrade/lane_a_shortlist.csv",
+    "scripts/c028_lane_a_screen.py"
+  ]
+}

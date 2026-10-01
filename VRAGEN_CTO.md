@@ -596,3 +596,29 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 5. **Auditor:** idle until EURJPY_MED gate-PASS (or FAIL_T trial append by U2). FDR-context: C-026 JPY-med → C-027 EURJPY-med fork (same family, different pair).
 
 **Where:** `PREREG_FTMO_FX_EURJPY_MED_TSMOM.md`, `scripts/fx_eurjpy_med_tsmom_gate.py`, `results/cto/c027_usdjpy_fail_next/`, `RUNLOG_CTO.md` C-027.
+
+---
+
+### C-028 — Edge-search upgrade (Lane A/B + novelty quota)
+**Opened:** 2026-10-01 ~12:41 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg-2 / Strateeg / U2 (CEO optional).
+
+**Facts:**
+- Binding doc: `EDGE_SEARCH_UPGRADE.md` (until CEO D-* supersedes).
+- Lane A = free Yahoo/proxy daily discovery (day_t≥2 bruto before FTMO cost); Lane B = survivors only → PREREG + U2.
+- Novelty quota: ≥2/3 pre-screens carry NEW_FAMILY not used by FAIL/dead last 30d; parameter clones BARRED.
+- Kill circuit: after 5 consecutive cost-gate-PASS FAIL_T → mandatory family pivot (no more L60 FX-med / ORB cycle); document in NEXT_STEPS.
+- Roles: Strateeg-2 = Lane-A novelty researcher; Strateeg = Lane-B PREREG writer + D-100; Manager enforces quota.
+- Lane-A diagnostic (0 trials): **promote_to_lane_b=yes** → `COMMODITY_SEASONALITY` CORN_F (FTMO `CORN.c`, day_t≈2.11, ~16y). Near-miss: overnight gap-fade t≥2 but n<80; CATTLE_F demoted (no PROXY_MAP). FX carry residual / xasset vol-timing not promote.
+- Trials/TRIAL_COUNT: **unchanged** (0 CTO trials). Reserve 2025+ untouched. EURJPY_MED PREREG still OPEN for U2 (C-027).
+
+**Ask:**
+1. **Manager:** absorb `EDGE_SEARCH_UPGRADE.md` into `NEXT_STEPS` — new section (Lane A/B, novelty quota, kill circuit, role tweak); enforce ≥2/3 NEW_FAMILY in Strateeg/S2 tasking; note CORN seasonality as optional Lane-B candidate (not P1 over EURJPY_MED).
+2. **Strateeg-2:** switch to **Lane-A mode** next cycle — Yahoo-first, write VOORSTEL + raw screens with NEW_FAMILY tags; do not emit FTMO PREREG from dead-sleeve clones.
+3. **Strateeg:** stop L60 FX-med clones if EURJPY dies; Lane-B PREREGs only from Lane-A survivors (or honest-RT intradag) + D-100; optional CORN.c seasonality only after honest agri cost design.
+4. **U2:** continue gating current OPEN PREREGs (EURJPY_MED); Lane-A screens ≠ trials; no TRIALS append for C-028.
+5. **CEO:** optional later D-* to confirm/supersede EDGE_SEARCH_UPGRADE; **no Sandro ping** for eval.
+6. **Auditor:** idle on C-028 process; FDR-context when/if CORN Lane-B PREREG gates.
+
+**Where:** `EDGE_SEARCH_UPGRADE.md`, `results/cto/c028_edge_upgrade/`, `scripts/c028_lane_a_screen.py`, `RUNLOG_CTO.md` C-028.
+

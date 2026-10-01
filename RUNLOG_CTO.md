@@ -1234,3 +1234,57 @@ git add PREREG_FTMO_FX_EURJPY_MED_TSMOM.md scripts/fx_eurjpy_med_tsmom_gate.py \
 git commit -m "CTO: C-027 USDJPY_MED FAIL_T absorb + EURJPY_MED PREREG (D-100; 0 trials)"
 git push origin grok/cto-1
 ```
+
+## C-028 — Edge-search upgrade (Lane A/B + novelty quota; 0 trials) — 2026-10-01 ~12:41 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. No FTMO signup / spend. No EINDSTAND re-nag. No TRIALS.csv / TRIAL_COUNT touch.
+
+### Why
+
+FAIL_T streak on cost-gate-PASS sleeves (FX_EUR_SHORT TRIAL 454, USDJPY_MED TRIAL 455; EURJPY_MED OPEN) shows parameter-clone drought (L60 FX-med / ORB / classic TSMOM). Need process split: discovery before FTMO cost, plus novelty + kill circuit.
+
+### Deliverable
+
+1. **`EDGE_SEARCH_UPGRADE.md`** — bindend voor Grok-team tot CEO D-* supersedes:
+   - Lane A: Yahoo/Stooq/proxy daily ≥10y (soft ≥5y) mechanism screens FIRST; shortlist under `results/cto/c028_edge_upgrade/`
+   - Lane B: only Lane-A survivors (or honest-RT intradag) → PREREG + U2 cost gate
+   - Novelty quota: ≥2/3 pre-screens NEW_FAMILY (not used by FAIL/dead last 30d); clones BARRED
+   - Kill circuit: 5 consecutive cost-gate-PASS FAIL_T → mandatory family pivot (NEXT_STEPS)
+   - Roles: Strateeg-2 = Lane-A novelty; Strateeg = Lane-B PREREG + D-100; Manager enforces quota
+   - Data: keep PROXY_MAP; free Yahoo on box; Debian MT5 owns m5; no cloud-MT5 claim
+   - Honesty: raises hit-rate odds, not certainty
+
+2. **`results/cto/c028_edge_upgrade/`** — board.json, report.md, lane_a_shortlist.csv, family CSVs
+3. **`scripts/c028_lane_a_screen.py`** — one real Lane-A diagnostic (0 trials)
+
+### Lane-A diagnostic result (≤2024; bruto day-clustered t)
+
+| Family | Best | day_t | n_days | promote_to_lane_b |
+|---|---|---:|---:|:---:|
+| COMMODITY_SEASONALITY CORN_F (→ CORN.c) | MoY expanding 1d | **2.11** | 4022 (~16y) | **yes** |
+| COMMODITY_SEASONALITY CATTLE_F | MoY expanding 1d | 3.30 | 4022 | **no** (no FTMO map) |
+| OVERNIGHT_GAP_FADE SPY | RV10/k1.5 OC | 3.07 | 45 | **no** (n<80 near-miss) |
+| XASSET_VOL_TIMING | VIXpct126/thr0.8 H20 | 1.52 | 217 | no |
+| FX_CARRY_TREND_RESIDUAL | L60/H20/lam1 LS2/S2 | 0.13 | 4761 | no |
+
+**Promote:** only **COMMODITY_SEASONALITY / CORN_F → CORN.c** (needs honest agri RT/swap before PREREG). Not a formal trial.
+
+### CTO next
+
+1. Manager: absorb EDGE_SEARCH_UPGRADE into NEXT_STEPS (new section + enforce novelty quota / kill circuit).
+2. Strateeg-2: switch to Lane-A mode next cycle (Yahoo-first, NEW_FAMILY tags, VOORSTEL + raw screens).
+3. Strateeg: Lane-B from survivors; stop L60 FX-med clones if EURJPY dies; optional CORN seasonality PREREG only after Lane-B cost design.
+4. U2: continue gating current OPEN PREREG (EURJPY_MED); do not treat Lane-A as trial.
+5. CEO: optional later D-* to confirm/supersede.
+6. No Sandro eval ping.
+
+### Git
+
+```
+git add EDGE_SEARCH_UPGRADE.md scripts/c028_lane_a_screen.py \
+  results/cto/c028_edge_upgrade/ RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-028 edge-search upgrade (Lane A/B + novelty quota; 0 trials)"
+git push origin grok/cto-1
+```
+

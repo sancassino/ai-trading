@@ -1,0 +1,25 @@
+family,symbols,lookback_hold,train_years,mean_bp,day_t,n_days,promote_to_lane_b,notes,k_gap,rv_win,fire_rate
+OVERNIGHT_GAP_FADE,SPY,RV10/k1.0|hold=OC,19.99,19.612,1.905,173,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.0,10,0.03437313729386052
+OVERNIGHT_GAP_FADE,NDX,RV10/k1.0|hold=OC,19.99,19.281,1.481,164,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.0,10,0.03258493939996026
+OVERNIGHT_GAP_FADE,DAX,RV10/k1.0|hold=OC,19.99,4.339,0.338,153,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.0,10,0.030129972430090586
+OVERNIGHT_GAP_FADE,CAC40,RV10/k1.0|hold=OC,19.99,-11.748,-1.151,195,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.0,10,0.03812316715542522
+OVERNIGHT_GAP_FADE,SPY,RV20/k1.0|hold=OC,19.99,9.734,0.874,191,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.0,20,0.03794953308166104
+OVERNIGHT_GAP_FADE,NDX,RV20/k1.0|hold=OC,19.99,-3.502,-0.273,200,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.0,20,0.0397377309755613
+OVERNIGHT_GAP_FADE,DAX,RV20/k1.0|hold=OC,19.99,-13.253,-1.05,168,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.0,20,0.03308389129578574
+OVERNIGHT_GAP_FADE,CAC40,RV20/k1.0|hold=OC,19.99,-8.033,-0.763,208,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.0,20,0.04066471163245357
+OVERNIGHT_GAP_FADE,SPY,RV10/k1.5|hold=OC,19.99,69.596,3.068,45,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.5,10,0.008940989469501292
+OVERNIGHT_GAP_FADE,NDX,RV10/k1.5|hold=OC,19.99,67.541,2.548,40,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.5,10,0.00794754619511226
+OVERNIGHT_GAP_FADE,DAX,RV10/k1.5|hold=OC,19.99,48.781,1.396,29,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.5,10,0.005710909807010634
+OVERNIGHT_GAP_FADE,CAC40,RV10/k1.5|hold=OC,19.99,11.046,0.525,52,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.5,10,0.010166177908113392
+OVERNIGHT_GAP_FADE,SPY,RV20/k1.5|hold=OC,19.99,53.341,2.192,46,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.5,20,0.009139678124379097
+OVERNIGHT_GAP_FADE,NDX,RV20/k1.5|hold=OC,19.99,32.332,1.128,47,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.5,20,0.009338366779256905
+OVERNIGHT_GAP_FADE,DAX,RV20/k1.5|hold=OC,19.99,10.923,0.305,29,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.5,20,0.005710909807010634
+OVERNIGHT_GAP_FADE,CAC40,RV20/k1.5|hold=OC,19.99,-12.47,-0.522,58,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,1.5,20,0.01133919843597263
+OVERNIGHT_GAP_FADE,SPY,RV10/k2.0|hold=OC,19.99,85.969,2.309,10,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,2.0,10,0.001986886548778065
+OVERNIGHT_GAP_FADE,NDX,RV10/k2.0|hold=OC,19.99,182.179,3.025,11,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,2.0,10,0.002185575203655871
+OVERNIGHT_GAP_FADE,DAX,RV10/k2.0|hold=OC,19.99,50.591,1.037,8,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,2.0,10,0.0015754233950374162
+OVERNIGHT_GAP_FADE,CAC40,RV10/k2.0|hold=OC,19.99,76.178,2.278,10,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,2.0,10,0.0019550342130987292
+OVERNIGHT_GAP_FADE,SPY,RV20/k2.0|hold=OC,19.99,101.238,2.404,18,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,2.0,20,0.0035763957878005167
+OVERNIGHT_GAP_FADE,NDX,RV20/k2.0|hold=OC,19.99,94.407,1.92,17,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,2.0,20,0.00337770713292271
+OVERNIGHT_GAP_FADE,DAX,RV20/k2.0|hold=OC,19.99,30.657,0.646,9,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,2.0,20,0.0017723513194170934
+OVERNIGHT_GAP_FADE,CAC40,RV20/k2.0|hold=OC,19.99,21.959,0.519,23,no,NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; ≤2024,2.0,20,0.004496578690127077

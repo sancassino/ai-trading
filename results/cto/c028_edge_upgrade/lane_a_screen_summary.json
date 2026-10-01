@@ -1,0 +1,115 @@
+{
+  "c": "C-028",
+  "when": "2026-10-01 ~12:41 Europe/Amsterdam (CEST / UTC+2)",
+  "n_rows": 72,
+  "n_promote": 1,
+  "families": [
+    "COMMODITY_SEASONALITY",
+    "FX_CARRY_TREND_RESIDUAL",
+    "OVERNIGHT_GAP_FADE",
+    "XASSET_VOL_TIMING"
+  ],
+  "promote_rows": [
+    {
+      "family": "COMMODITY_SEASONALITY",
+      "symbols": "CORN_F",
+      "lookback/hold": "MoY_expanding|hold=1d",
+      "train_years": 15.99,
+      "mean_bp": 5.979,
+      "day_t": 2.111,
+      "n_days": 4022,
+      "promote_to_lane_b": "yes",
+      "notes": "NEW_FAMILY; expanding month-of-year sign; bruto daily; \u22642024; FTMO map CORN.c via PROXY_MAP; Lane-B needs honest agri RT/swap"
+    }
+  ],
+  "near_miss": [
+    {
+      "family": "COMMODITY_SEASONALITY",
+      "symbols": "CATTLE_F",
+      "lookback/hold": "MoY_expanding|hold=1d",
+      "train_years": 15.99,
+      "mean_bp": 5.893,
+      "day_t": 3.299,
+      "n_days": 4022,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; expanding month-of-year sign; bruto daily; \u22642024; NO FTMO symbol in PROXY_MAP \u2014 research-only unless Sandro confirms agri listing; do NOT PREREG without map; demoted: no FTMO PROXY_MAP symbol"
+    },
+    {
+      "family": "OVERNIGHT_GAP_FADE",
+      "symbols": "SPY",
+      "lookback/hold": "RV10/k1.5|hold=OC",
+      "train_years": 19.99,
+      "mean_bp": 69.596,
+      "day_t": 3.068,
+      "n_days": 45,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; \u22642024; NEAR_MISS t>=2 but n_days<80 \u2014 not promote"
+    },
+    {
+      "family": "OVERNIGHT_GAP_FADE",
+      "symbols": "NDX",
+      "lookback/hold": "RV10/k2.0|hold=OC",
+      "train_years": 19.99,
+      "mean_bp": 182.179,
+      "day_t": 3.025,
+      "n_days": 11,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; \u22642024; NEAR_MISS t>=2 but n_days<80 \u2014 not promote"
+    },
+    {
+      "family": "OVERNIGHT_GAP_FADE",
+      "symbols": "NDX",
+      "lookback/hold": "RV10/k1.5|hold=OC",
+      "train_years": 19.99,
+      "mean_bp": 67.541,
+      "day_t": 2.548,
+      "n_days": 40,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; \u22642024; NEAR_MISS t>=2 but n_days<80 \u2014 not promote"
+    },
+    {
+      "family": "OVERNIGHT_GAP_FADE",
+      "symbols": "SPY",
+      "lookback/hold": "RV20/k2.0|hold=OC",
+      "train_years": 19.99,
+      "mean_bp": 101.238,
+      "day_t": 2.404,
+      "n_days": 18,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; \u22642024; NEAR_MISS t>=2 but n_days<80 \u2014 not promote"
+    },
+    {
+      "family": "OVERNIGHT_GAP_FADE",
+      "symbols": "SPY",
+      "lookback/hold": "RV10/k2.0|hold=OC",
+      "train_years": 19.99,
+      "mean_bp": 85.969,
+      "day_t": 2.309,
+      "n_days": 10,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; \u22642024; NEAR_MISS t>=2 but n_days<80 \u2014 not promote"
+    },
+    {
+      "family": "OVERNIGHT_GAP_FADE",
+      "symbols": "CAC40",
+      "lookback/hold": "RV10/k2.0|hold=OC",
+      "train_years": 19.99,
+      "mean_bp": 76.178,
+      "day_t": 2.278,
+      "n_days": 10,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; \u22642024; NEAR_MISS t>=2 but n_days<80 \u2014 not promote"
+    },
+    {
+      "family": "OVERNIGHT_GAP_FADE",
+      "symbols": "SPY",
+      "lookback/hold": "RV20/k1.5|hold=OC",
+      "train_years": 19.99,
+      "mean_bp": 53.341,
+      "day_t": 2.192,
+      "n_days": 46,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; fade overnight gap when |gap|>k*RV & RV>med252; bruto trade-conditional; short=no; \u22642024; NEAR_MISS t>=2 but n_days<80 \u2014 not promote"
+    }
+  ]
+}
