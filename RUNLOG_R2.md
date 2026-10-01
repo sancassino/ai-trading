@@ -876,3 +876,40 @@ Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG
 | D-092.6 8-cyclus stop | CTO-confirmed reset → **0/8** |
 
 Geen actionable taak. Quiet cycle.
+
+## Cyclus 03:27–03:31 CEST — D-090 FASE 3: N11/N12 D-092.1 pre-screen FAIL (NEXT_STEPS v55)
+
+**Branch:** `claude/uitvoerder2-r`. Prior tip `a0ca558` (idle) raced Strateeg `b374f0a` (N11/N12 aanvraag). Reserve 2025→ **niet aangeraakt**. Geen TRIALS / geen TRIAL_COUNT-wijziging.
+
+**Gelezen deze cyclus:**
+- `NEXT_STEPS.md` **v55** @ `origin/main` (`e9640a8`) — U2 IDLE tot pre-screened PREREG N≥150; watch **0/8**; dead set incl. LUNCH_OPEN/N10
+- Strateeg `b374f0a` / `746e631`: **VOORSTEL_PRESCREEN_N11 + N12** expliciet aan U2 (D-092.1); wacht pre-screen
+- CTO C-011 `01d93b7` (N9/N10) als template; Strateeg-2 tip nog `ba54fe1` (geen nieuwe PREREG)
+
+### D-092.1 pre-screen (train 2021–2023 only)
+
+Script: `scripts/n11_n12_prescreen.py`. Artifacts: `results/R2/n11_n12_prescreen/`.
+
+| Idee | N | mean bruto | Gate (3×RT) | Uitkomst |
+|------|---|------------|-------------|----------|
+| **N11** GER40 XETRA ORB (VOORSTEL RT 1.40) | 496 | **+3.33 bp** | 4.20 bp | **FAIL** (NO_PREREG) |
+| N11 COSTS_FTMO RT sens. (0.72→2.16) | 496 | +3.33 bp | 2.16 bp | PASS (sens. only; **niet bindend**) |
+| **N12** XAU NY-Open Continuation | 303 | **+0.59 bp** | 2.49 bp | **FAIL** (NO_PREREG) |
+
+- N11: N≥150 ok, mean net onder VOORSTEL-gate (median −14.0 bp; stop-share 50.6%). Binding = VOORSTEL 4.20 → **geen PREREG**.
+- N12: N≥150 ok, mean ver onder gate (median −1.3 bp; bijna altijd time-exit). **geen PREREG**.
+- Pre-screen FAIL-set += **N11 · N12** (naast N7/N8/N10 / index PLM/NR7/Failed-OR/GS01-pooled). Geen klonen zonder nieuw mechanisme.
+
+**TRIAL_COUNT blijft 445.** Geen formal trial.
+
+### U2 status na cyclus
+- **IDLE** opnieuw tot volgende D-092.1-PASS non-clone PREREG N≥150 (≠ dead set; ≠ N9; ≠ N11/N12 FAIL-mechanismen).
+- Dead set ongewijzigd (LUNCH_OPEN FAIL_T blijft). XAU_AM_FADE watch-only.
+- D-092.6 watch blijft Manager/CTO-teller (**0/8** bij start; deze cyclus = pre-screen FAIL, geen gate-PASS).
+
+### Blockers / next
+1. Strateeg/Strateeg-2: ander non-clone mechanisme + D-092.1 pre-screen PASS + N≥150 → dan U2 cost-gate.
+2. N11/N12 niet heropenen zonder nieuw mechanisme (D-092.1).
+3. Escalatie D-091.6 reeds 4/4 → D-092 actief. Geen Sandro-ping.
+
+**MATERIAL for Manager/CTO** (N11/N12 D-092.1 FAIL; U2 idle again). Vragen → Manager; eindbesluit → CTO.
