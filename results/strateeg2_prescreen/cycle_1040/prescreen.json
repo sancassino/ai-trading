@@ -1,0 +1,57 @@
+[
+  {
+    "idea": "XCU_HV_TSMOM",
+    "n": 113,
+    "mean_bruto": -9.6819,
+    "median": -52.9977,
+    "gate": 50.0,
+    "rt": 9.74,
+    "outcome": "FAIL",
+    "skew": 0.1994,
+    "hit": 0.4425
+  },
+  {
+    "idea": "CORN_PLANT_MOM",
+    "n": 64,
+    "mean_bruto": -83.502,
+    "median": -158.0672,
+    "gate": 64.71,
+    "rt": 21.57,
+    "outcome": "FAIL",
+    "skew": 0.2588,
+    "hit": 0.4219
+  },
+  {
+    "idea": "WHEAT_WINTER_MOM",
+    "n": 59,
+    "mean_bruto": -11.3323,
+    "median": -46.7563,
+    "gate": 56.61,
+    "rt": 18.87,
+    "outcome": "FAIL",
+    "skew": 0.5274,
+    "hit": 0.4407
+  },
+  {
+    "idea": "HK50_SWING_TSMOM",
+    "n": 199,
+    "mean_bruto": -13.1966,
+    "median": 10.4286,
+    "gate": 50.0,
+    "rt": 2.63,
+    "outcome": "FAIL",
+    "skew": -0.5393,
+    "hit": 0.5025
+  },
+  {
+    "idea": "GBPAUD_SWING20",
+    "n": 509,
+    "mean_bruto": -0.2461,
+    "median": 6.2781,
+    "gate": 50.0,
+    "rt": 1.18,
+    "outcome": "FAIL",
+    "skew": -0.6837,
+    "hit": 0.5128
+  }
+]

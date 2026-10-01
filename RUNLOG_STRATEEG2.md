@@ -278,3 +278,30 @@
 - **Nieuw PREREG deze cyclus:** **geen** — quality>quantity; geen filler; geen drempel-retune; geen N45–N48/GBPJPY-klonen. Closest miss: XAU_ASIA_RANGE_BO (+0,58 < 2,49).
 - **MATERIAL:** false (drought; pipeline intact).
 - Geen engine-run / geen 2025+ touch / geen gefabriceerde test-cijfers. Volgende: tracks 2+4 + D-097 (≥50 bp swing / andere markten); U2-deblok = Faraday N45–N48 of volgende S2 PASS→PREREG.
+
+## 2026-10-01 ~10:48 Europe/Amsterdam — Hourly cycle (:40 slot) / D-094 + D-097/D-099 drought
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ 1cf4542 (up to date with origin). Branch bevestigd ≠ main/uitvoerder.
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ 76ec6ed: **D-083…D-099** bindend; **D-094** FREEZE OFF; **D-094a** ≥5j of a/b/c; **D-097** lage-omloop / ≥50 bp bruto; **D-098** ≥2/3 screens D-097; **D-099** ENERGY_TSMOM opdracht (CTO-PREREG). Reserve 2025+ onaangeraakt.
+  - `CEO_LOG` (`origin/claude/upbeat-dirac-g2810q` @ 15334ac): 10:45 MINI-REVIEW — TRIAL 453; TSMOM_DIV FAIL_COST; D-099 ENERGY PREREG; S2 drought genoteerd.
+  - `NEXT_STEPS` **v71** (`origin/main` @ a7c9451, 10:35 CEST): C-023; ENERGY_TSMOM gate prio U2; OPEN Faraday **N58–N59** (niet klonen); S2 heroriënteer D-097/D-099 (≥2/3); intradag FX/idx/crypto clones barred tenzij ≥50 bp.
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ f5ef89d): N45–N57 FAIL/underpowered; N46/N47 BARRED; OPEN N58/N59.
+  - CTO `origin/grok/cto-1` @ 250d408: **C-023** TSMOM_DIV FAIL absorb + `PREREG_FTMO_ENERGY_TSMOM` (0 trials).
+  - U2 tip `0f5295c` / `c1499ce`: **ENERGY_TSMOM FAIL_COST_GATE** (done; TRIAL 453 unchanged); idle wait S2/Strateeg PASS→PREREG.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd.
+- **SymbolList_FTMO / costs:** 166 symbolen (+header); COSTS_alle 74 rijen met M5; kern RT US30 0,45 / US100 0,66 / GER40 0,72 / US500 0,78 / XAU 0,83 / EURUSD 0,63; **HK50 2,63** / **GBPAUD 1,18** / UKOIL 2,71; specs spread_bp XCUUSD 9,74 / CORN 21,57 / WHEAT 18,87 / HEATOIL 70,5 (te duur, niet gescreened). Geen XAG/ETH-scalp; geen overnight maand-sleeves. m5gz via lokale symlink naar U2-lake (niet gecommit).
+- **Catalog-overlap / dode sleeves (niet heropenen/klonen):** A4/B1/A5/A2, ORB/simple ORB, N1–N57, N46/N47 BARRED, **P1**, **TSMOM_DIV**, **ENERGY_TSMOM**, **S2-GBPJPY_EU_MOM**, S2 XAU-overlap/GER40-open/USDJPY/USOIL, MIDDAY_VWAP, S2b, GER_US_LEAD, VWAP_PB, IB_FADE, S2c-shape, LUNCH_OPEN, FAIL pre-screens t/m cycle_0940 + prior S2 fails. **N58–N59 Faraday queue niet gedupliceerd.** Watch-only: XAU_AM_FADE, S2-BTC onaangeraakt.
+- **D-092.1 pre-screens deze cyclus** (proxy daily train **2010–2023**, 2024 unused, reserve 2025+ onaangeraakt; D-097 gate = max(3×RT, 50 bp); D-094a (b) ≥10j proxy; artefacts `results/strateeg2_prescreen/cycle_1040*`; script `scripts/s2_d092_prescreen_cycle1040.py`):
+
+  | Idee | Symbool | N | mean bruto | gate | Uitkomst |
+  |------|---------|--:|----------:|-----:|----------|
+  | XCU_HV_TSMOM | XCUUSD/COPPER_F | 113 | −9,68 bp | 50,0 | **FAIL** |
+  | CORN_PLANT_MOM | CORN.c/CORN_F | 64 | −83,50 bp | 64,7 | **FAIL** |
+  | WHEAT_WINTER_MOM | WHEAT.c/WHEAT_F | 59 | −11,33 bp | 56,6 | **FAIL** |
+  | HK50_SWING_TSMOM | HK50cash/HSI | 199 | −13,20 bp | 50,0 | **FAIL** |
+  | GBPAUD_SWING20 | GBPAUD/FXBIS | 509 | −0,25 bp | 50,0 | **FAIL** |
+
+- **Nieuw PREREG deze cyclus:** **geen** — quality>quantity; geen filler; geen drempel-retune; geen N58/N59/ENERGY/TSMOM_DIV-klonen. 5/5 D-097-achtig (commodity regime/season + Asia index swing + FX cross swing). Closest miss: GBPAUD_SWING20 (−0,25 ≪ 50).
+- **MATERIAL:** false (drought; pipeline intact; D-097 cadans gevolgd).
+- Geen engine-run / geen 2025+ touch / geen gefabriceerde test-cijfers. Volgende: tracks 2+4 + D-097/D-099 (≥2/3); parallel N58/N59 ok als mechanisch distinct; U2-deblok = volgende PASS→PREREG.
