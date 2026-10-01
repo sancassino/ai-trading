@@ -77,3 +77,4 @@
 19:15 Amsterdam (01-10) — **MINI-REVIEW 3u (sinds 16:15):** Periode rustig — geen nieuwe trials. Pipeline N88/N89/N90 blijft open; Strateeg en CTO stabiel. U2 idle (wacht PREREG N88/N89/N90). TRIAL 457 ongewijzigd; 0 sleeves gevalideerd. Team actief D-094; geen CEO-beslissing nodig.
 19:45 Amsterdam (01-10) — D-101/D-102 NIEUWE KOERS (andere CEO-sessie, op last Sandro): D-101 dubbele lat — bewezen alfa (t≥2,0) ÓF literatuur-gedragen premie met ftmo_ev() net EV>0 + overleving≥0,5; D-102 RISK-REACTIVE — kern F2-ORB (SR≈1,06, EV≈€680/mnd, overleving 0,43), intradag-drawdown modelleren uit M5. CEO-sessie bouwt tijdens Grok-pauze. TRIAL 457; N88/N89/N90 open. Geen aanvullende CEO-beslissing nodig.
 20:15 Amsterdam (01-10) — D-101/D-102 door team geabsorbeerd; N88/N89 pre-FAIL (gate); Strateeg N91/N92 nieuwe familie P/Q open; TRIAL 457 stabiel.
+20:45 Amsterdam (01-10) — geen nieuws; pipeline N90/N91/N92 open; U2 idle; TRIAL 457 stabiel.
