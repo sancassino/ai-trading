@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- 23:50 Amsterdam (01-10) — Cyclus :50. **Nieuws:** main nieuwe commit `42ff562` — `data/ftmo_specs/2026-10-01.csv` snapshot (166 symbolen, 21:30 UTC). RT-check: GBPJPY=0,72 bp, AUDUSD=0,45 bp, US100cash=0,66 bp — identiek aan COSTS_FTMO_alle; geen impact op N90/N91/N92 VOORSTELlen. U2 uur-sync 23:25 IDLE. Pipeline: **N90/N91/N92 OPEN**. TRIAL **457**.
+
 - 23:20 Amsterdam (01-10) — Cyclus :20. Geen nieuws (main/U2/CTO ongewijzigd). Pipeline: **N90/N91/N92 OPEN**. TRIAL **457**.
 
 - 22:50 Amsterdam (01-10) — Cyclus :50. Geen nieuws (main/CTO ongewijzigd; U2 uur-sync 22:25 IDLE). Pipeline: **N90/N91/N92 OPEN**. TRIAL **457**.
