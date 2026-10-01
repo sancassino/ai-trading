@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N80 — UKOIL overnight-gap continuation, same-day flat (NEW_FAMILY E; D-097/D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** + **C-028** replace cycle after N78 FAIL_COST_GATE; filed 2026-10-01 ~12:55 CEST).  
+**Status:** **PASS → PREREG** — D-092.1 Strateeg screen N=415, mean +12,26 ≥ 8,13 → `PREREG_FTMO_N80.md` OPEN for U2 (2026-10-01 ~13:20 CEST).
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `UKOILcash` (RT **2,71** bp; swap irrelevant — **EOD flat**).  
 **NEW_FAMILY E:** commodity **overnight gap → same-session continuation, flat before night** — ≠ N18 US500 OVN gap, ≠ N19 XAU gap fill, ≠ N22 Lon→NY MR, ≠ N76 Mon→Thu hold, ≠ ENERGY TSMOM.

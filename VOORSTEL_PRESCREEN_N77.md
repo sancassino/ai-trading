@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N77 — FX majors vol-timed XS rank-reversal 5d (NEW_FAMILY C; D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**C-028 Lane-B** + **D-094** track 4 + **D-097** XS swing 5d + **D-100** swap in gate; filed 2026-10-01 ~12:40 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-029 Lane-B diag (mean −2,57 ≪ gate 46,29; N=107). Geen PREREG. Drop pad (2026-10-01 ~13:15 CEST).
 **Auteur:** Strateeg (Grok).  
 **Instrumenten (pool 6, alle in COSTS_FTMO + m5gz):** `EURUSD`, `GBPUSD`, `USDJPY`, `AUDUSD`, `USDCAD`, `USDCHF`.  
 **NEW_FAMILY C:** cross-sectional **volatility-timed rank-reversal** on small liquid FX basket — ≠ TSMOM_DIV 12-1 monthly, ≠ N26/N30 XS index/intradag, ≠ L60 FX-med pair-forks.

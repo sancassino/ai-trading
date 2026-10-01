@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N76 — UKOIL Mon→Thu inventory-window long (NEW_FAMILY B; D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**C-028 Lane-B** + **D-094** track 2/4 + **D-097** commodities short-hold + **D-100** cheap long; filed 2026-10-01 ~12:40 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-029 Lane-B diag (mean −14,90 ≪ gate 50,00; N=153). Geen PREREG. Drop pad (2026-10-01 ~13:15 CEST).
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `UKOILcash` (RT **2,71** bp — COSTS_FTMO; swap_long **−5,98** / short **+27,03**).  
 **NEW_FAMILY B:** commodity **inventory-window / weekly calendar** — ≠ ENERGY L20 TSMOM, ≠ N54 winter-season month-bias, ≠ intradag ORB.

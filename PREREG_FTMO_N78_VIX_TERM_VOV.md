@@ -4,7 +4,7 @@
 **Auteur:** Strateeg (Grok) Lane-B. **Bron Lane-A:** Strateeg-2 (`grok/strateeg-2`) @ **`b765613c`** — `VOORSTEL_S2_VIX_TERM_VOV.md` / cycle_1240.  
 **Instrument (primary):** `US100cash` (NDX proxy).  
 **Config freeze:** **vov10 / combo** only (niet vov20; niet stress_mr-only). **Geen retune.**  
-**TRIAL_COUNT:** **457** (U2 append after FAIL_COST_GATE).  
+**TRIAL_COUNT:** **456** (C-029/U2 erratum: FAIL_COST_GATE = geen trial; book 456).  
 **Reserve 2025+:** **onaangeroerd.**
 
 Pointer: `results/lane_b/VIX_TERM_VOV_SOURCE.md` → S2 artefacts @ `b765613c` (geen CSV-rewrite).
@@ -78,4 +78,4 @@ Train was **2021–2023**; test 2024 info; reserve 2025+ untouched. Success requ
 - **Catalogus:** §9/§10 row **N78** dead; dropped from live ranking
 - **Source pointer:** `results/lane_b/VIX_TERM_VOV_SOURCE.md`
 - **Branch:** `claude/trusting-faraday-34tsmg`
-- **TRIAL_COUNT:** **457**
+- **TRIAL_COUNT:** **456**

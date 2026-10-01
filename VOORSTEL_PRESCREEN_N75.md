@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N75 — XAU/XAG ratio mean-reversion 3d (NEW_FAMILY A; D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**C-028 Lane-B** + **D-094** track 4 + **D-097** metals swing 3d + **D-100** swap-aware; filed 2026-10-01 ~12:40 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-029 Lane-B diag (mean 10,86 ≪ gate 30,60; N=71). Geen PREREG. Drop pad (2026-10-01 ~13:15 CEST).
 **Auteur:** Strateeg (Grok).  
 **Instrumenten:** `XAUUSD` + `XAGUSD` (pair legs; COSTS_FTMO RT **0,83** + **5,07** = **5,90** bp).  
 **NEW_FAMILY A:** metal **ratio / pairs** MR (EOD 3d) — ≠ solo XAU/XAG TSMOM, ≠ L60 FX-med, ≠ ENERGY, ≠ intradag ORB.

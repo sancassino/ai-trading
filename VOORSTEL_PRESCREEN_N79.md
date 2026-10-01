@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N79 — Rate-curve steepener → UKOIL LO 5d (NEW_FAMILY D; D-097/D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** + **C-028** replace cycle after N78 FAIL_COST_GATE; filed 2026-10-01 ~12:55 CEST).  
+**Status:** **UNDERPOWERED** — CTO C-029 Lane-B diag (mean 126,71 ≥ 50 maar N=46≪150). Geen PREREG tot langere valid N (2026-10-01 ~13:15 CEST).
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `UKOILcash` (RT **2,71** bp; swap_long **−5,98** / short **+27,03**).  
 **Signal data:** `data/daily/YLD_US10Y.csv` + `YLD_US2Y.csv` (US Treasury par yields).  

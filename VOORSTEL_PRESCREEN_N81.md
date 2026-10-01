@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N81 — US100/US500 equity-pair RV 3d (NEW_FAMILY F; D-094a c / D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** + **C-028** replace cycle after N78 FAIL_COST_GATE; filed 2026-10-01 ~12:55 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-029 Lane-B diag (mean −7,77 ≪ gate 13,74; N=86). Skip / geen PREREG (2026-10-01 ~13:15 CEST).
 **Auteur:** Strateeg (Grok).  
 **Instrumenten:** `US100cash` + `US500cash` (pair legs; RT **0,66** + **0,78** = **1,44** bp).  
 **NEW_FAMILY F:** equity **pair relative-value / ratio MR** (EOD 3d) — ≠ N2 morning relative intradag, ≠ N26 XS1d basket5, ≠ N30 XS5d momentum, ≠ VIX_TERM_VOV single-index overnight.
