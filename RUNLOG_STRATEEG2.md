@@ -332,3 +332,33 @@
 - **Nieuw PREREG deze cyclus:** **geen** — quality>quantity; geen filler; geen drempel-retune; geen FX_EUR_SHORT/IDX_SHORT/ENERGY/N58–N68/CORN/WHEAT-klonen. 5/5 D-097/D-100 B/C/D (non-oil agri short/long + FX cheap long ×2 + metals cheap short). Closest miss: COFFEE_LONG_TSMOM (+44,76 < 50; N=191; median −28,5 — skew-fragile).
 - **MATERIAL:** false (drought; pipeline intact; D-097/D-100 cadans gevolgd).
 - Geen engine-run / geen 2025+ touch / geen gefabriceerde test-cijfers. Volgende: tracks 2+4 + D-097/D-100 B/C/D (≥2/3); U2-deblok = FX_EUR_SHORT gate (niet S2); S2 alleen nieuw mechanisme met D-092.1 PASS + N≥150.
+
+## 2026-10-01 ~12:45 Europe/Amsterdam — Hourly cycle (:40 slot) / C-028 Lane-A novelty
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ 4575a4f (up to date with origin). Branch bevestigd ≠ main/uitvoerder.
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ 615bca0 (+ CEO_LOG tip `6853133`): **D-083…D-100** bindend; **D-094** FREEZE OFF; **D-094a** ≥5j; **D-097–D-100** actief. Reserve 2025+ onaangeraakt.
+  - `NEXT_STEPS` **v76** (`origin/main` @ 06c0079, 12:42 CEST): **C-028** EDGE_SEARCH_UPGRADE bindend; S2 = Lane-A; Strateeg = Lane-B; OPEN **N75–N77**; L60 FX-med **BARRED**; kill circuit ON; TRIAL **456**.
+  - `EDGE_SEARCH_UPGRADE.md` via `origin/grok/cto-1` @ 802b7b8: Yahoo/proxy day_t≥2 bruto vóór FTMO cost; ≥2/3 NEW_FAMILY; S2 schrijft VOORSTEL + screens (geen PREREG uit dode clones).
+  - CTO Lane-A diagnostic al gedaan: COMMODITY_SEASONALITY (CORN_F promote), OVERNIGHT_GAP_FADE near-miss, XASSET_VOL_TIMING / FX_CARRY_TREND_RESIDUAL FAIL — **niet herhaald**.
+  - Faraday `0ab2484` / `5cdf8bd`: OPEN N75–N77; BAR N72–N74. U2 `65a9b23`: IDLE na EURJPY_MED FAIL_T.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd.
+- **SymbolList_FTMO / costs (context only; Lane-A = bruto):** US100 RT ≈ 0,66 / US500 ≈ 0,78. Geen FTMO cost-gate deze cyclus.
+- **Catalog-overlap / dode sleeves (niet gekloond):** ORB / classic TSMOM / L60 FX-med / ENERGY / IDX_SHORT / FX_EUR_SHORT / USDJPY_MED / EURJPY_MED / TSMOM_DIV / prior S2 drought TSMOM agri-FX. Niet gedupliceerd: N75–N77, CTO C-028 families.
+- **C-028 Lane-A screens** (proxy daily ≤2024-12-31; day_t bruto trade-cond; artefacts `results/strateeg2_prescreen/cycle_1240/`; script `scripts/s2_c028_lane_a_cycle1240.py`):
+
+  | Family (NEW_FAMILY) | Best symbols | Config | years | mean_bp | day_t | n | Uitkomst |
+  |---------------------|--------------|--------|------:|--------:|------:|--:|----------|
+  | **VIX_TERM_VOV** | VIX9D/VIX3M+VoV→**NDX** | vov10/combo\|1d | 13.99 | +6.80 | **2.91** | 2327 | **PROMOTE** |
+  | VIX_TERM_VOV | →SPY | vov10/combo\|1d | 13.99 | +5.50 | **2.71** | 2320 | **PROMOTE** |
+  | RATE_CURVE_SHAPE | TYX−TNX→SPY | lvl120/d5\|1d | 19.81 | +3.34 | 1.79 | 4301 | FAIL (near-miss) |
+  | CREDIT_SPREAD_PROXY | HYG/LQD→TLT | z90/thr1.0\|1d | 17.61 | +3.11 | 1.48 | 2379 | FAIL |
+  | EM_DM_FLOW_ROTATION | EEM/EFA+DXY | rel120/dxy60\|LS | 19.52 | +2.52 | 1.41 | 2846 | FAIL |
+
+- **Novelty:** **4/4 NEW_FAMILY** (≥2/3 ✔). 70 configs; 7 promote-configs all in VIX_TERM_VOV.
+- **Survivor pack (VOORSTEL + CSV, geen PREREG):**
+  - `results/strateeg2_prescreen/cycle_1240/VOORSTEL_S2_VIX_TERM_VOV.md`
+  - `VIX_TERM_VOV_NDX_vov10_combo_daily.csv` / `_SPY_…csv`
+  - FTMO map indicatief: NDX→US100.cash, SPY→US500.cash — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1 cost.
+- **MATERIAL:** true (nieuwe VOORSTEL/survivor pack).
+- Geen engine-run / geen 2025+ touch / geen TRIALS append / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag VIX_TERM_VOV oppakken; S2 blijft Lane-A novelty.

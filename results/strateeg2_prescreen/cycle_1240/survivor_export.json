@@ -1,0 +1,18 @@
+[
+  {
+    "target": "NDX",
+    "path": "results/strateeg2_prescreen/cycle_1240/VIX_TERM_VOV_NDX_vov10_combo_daily.csv",
+    "mean_bp": 6.802,
+    "day_t": 2.906,
+    "n": 2327,
+    "years": 13.99
+  },
+  {
+    "target": "SPY",
+    "path": "results/strateeg2_prescreen/cycle_1240/VIX_TERM_VOV_SPY_vov10_combo_daily.csv",
+    "mean_bp": 5.495,
+    "day_t": 2.712,
+    "n": 2320,
+    "years": 13.99
+  }
+]

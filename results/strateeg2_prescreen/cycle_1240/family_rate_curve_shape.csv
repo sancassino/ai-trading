@@ -1,0 +1,17 @@
+family,symbols,lookback_hold,train_years,mean_bp,day_t,n_days,mean_bp_alldays,day_t_alldays,n_alldays,promote_to_lane_b,notes,slope,lvl_win,d_win,target
+RATE_CURVE_SHAPE,TNX-FVX→SPY,lvl60/d5|hold=1d,19.89,0.206,0.113,4391,0.181,0.113,5003,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TNX-FVX,60,5,SPY
+RATE_CURVE_SHAPE,TNX-FVX→TLT,lvl60/d5|hold=1d,19.89,-0.876,-0.616,4382,-0.768,-0.616,5003,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TNX-FVX,60,5,TLT
+RATE_CURVE_SHAPE,TNX-FVX→SPY,lvl60/d10|hold=1d,19.87,0.775,0.424,4429,0.687,0.424,4998,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TNX-FVX,60,10,SPY
+RATE_CURVE_SHAPE,TNX-FVX→TLT,lvl60/d10|hold=1d,19.87,0.083,0.058,4422,0.073,0.058,4998,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TNX-FVX,60,10,TLT
+RATE_CURVE_SHAPE,TNX-FVX→SPY,lvl120/d5|hold=1d,19.81,-1.047,-0.579,4386,-0.922,-0.579,4983,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TNX-FVX,120,5,SPY
+RATE_CURVE_SHAPE,TNX-FVX→TLT,lvl120/d5|hold=1d,19.81,-2.44,-1.717,4378,-2.144,-1.717,4983,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TNX-FVX,120,5,TLT
+RATE_CURVE_SHAPE,TNX-FVX→SPY,lvl120/d10|hold=1d,19.79,-0.921,-0.514,4408,-0.815,-0.514,4978,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TNX-FVX,120,10,SPY
+RATE_CURVE_SHAPE,TNX-FVX→TLT,lvl120/d10|hold=1d,19.79,-1.936,-1.368,4399,-1.711,-1.368,4978,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TNX-FVX,120,10,TLT
+RATE_CURVE_SHAPE,TYX-TNX→SPY,lvl60/d5|hold=1d,19.89,3.066,1.662,4320,2.647,1.662,5003,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TYX-TNX,60,5,SPY
+RATE_CURVE_SHAPE,TYX-TNX→TLT,lvl60/d5|hold=1d,19.89,-3.427,-2.396,4314,-2.955,-2.396,5003,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TYX-TNX,60,5,TLT
+RATE_CURVE_SHAPE,TYX-TNX→SPY,lvl60/d10|hold=1d,19.87,1.703,0.934,4369,1.488,0.934,4998,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TYX-TNX,60,10,SPY
+RATE_CURVE_SHAPE,TYX-TNX→TLT,lvl60/d10|hold=1d,19.87,-2.191,-1.537,4362,-1.912,-1.537,4998,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TYX-TNX,60,10,TLT
+RATE_CURVE_SHAPE,TYX-TNX→SPY,lvl120/d5|hold=1d,19.81,3.335,1.788,4301,2.879,1.788,4983,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TYX-TNX,120,5,SPY
+RATE_CURVE_SHAPE,TYX-TNX→TLT,lvl120/d5|hold=1d,19.81,-2.365,-1.644,4300,-2.041,-1.644,4983,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TYX-TNX,120,5,TLT
+RATE_CURVE_SHAPE,TYX-TNX→SPY,lvl120/d10|hold=1d,19.79,2.293,1.232,4331,1.995,1.232,4978,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TYX-TNX,120,10,SPY
+RATE_CURVE_SHAPE,TYX-TNX→TLT,lvl120/d10|hold=1d,19.79,-2.262,-1.58,4329,-1.967,-1.58,4978,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024,TYX-TNX,120,10,TLT

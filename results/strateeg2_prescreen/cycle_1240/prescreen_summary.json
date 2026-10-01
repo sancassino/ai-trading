@@ -1,0 +1,90 @@
+{
+  "cycle": "cycle_1240",
+  "when": "2026-10-01 ~12:45 Europe/Amsterdam",
+  "branch": "grok/strateeg-2",
+  "n_configs": 70,
+  "families": [
+    "CREDIT_SPREAD_PROXY",
+    "EM_DM_FLOW_ROTATION",
+    "RATE_CURVE_SHAPE",
+    "VIX_TERM_VOV"
+  ],
+  "new_family_count": 4,
+  "n_promote_configs": 7,
+  "n_promote_families": 1,
+  "shortlist": [
+    {
+      "family": "CREDIT_SPREAD_PROXY",
+      "symbols": "HYG/LQD\u2192TLT",
+      "lookback_hold": "z90/thr1.0|hold=1d",
+      "train_years": 17.61,
+      "mean_bp": 3.11,
+      "day_t": 1.484,
+      "n_days": 2379,
+      "mean_bp_alldays": 1.669,
+      "day_t_alldays": 1.484,
+      "n_alldays": 4433,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; HYG/LQD z-impulse \u2192 next-day asset; bruto trade-cond; short_hist=no; \u22642024"
+    },
+    {
+      "family": "EM_DM_FLOW_ROTATION",
+      "symbols": "EEM/EFA+DXY",
+      "lookback_hold": "rel120/dxy60|hold=1d_LS",
+      "train_years": 19.52,
+      "mean_bp": 2.522,
+      "day_t": 1.414,
+      "n_days": 2846,
+      "mean_bp_alldays": 1.462,
+      "day_t_alldays": 1.414,
+      "n_alldays": 4910,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; EM vs DM equity flow with DXY filter; bruto trade-cond LS; short_hist=no; \u22642024"
+    },
+    {
+      "family": "RATE_CURVE_SHAPE",
+      "symbols": "TYX-TNX\u2192SPY",
+      "lookback_hold": "lvl120/d5|hold=1d",
+      "train_years": 19.81,
+      "mean_bp": 3.335,
+      "day_t": 1.788,
+      "n_days": 4301,
+      "mean_bp_alldays": 2.879,
+      "day_t_alldays": 1.788,
+      "n_alldays": 4983,
+      "promote_to_lane_b": "no",
+      "notes": "NEW_FAMILY; Treasury curve shape z + \u0394z \u2192 next-day; bruto trade-cond; short_hist=no; \u22642024"
+    },
+    {
+      "family": "VIX_TERM_VOV",
+      "symbols": "VIX9D/VIX3M+VoV\u2192NDX",
+      "lookback_hold": "vov10/combo|hold=1d",
+      "train_years": 13.99,
+      "mean_bp": 6.802,
+      "day_t": 2.906,
+      "n_days": 2327,
+      "mean_bp_alldays": 4.495,
+      "day_t_alldays": 2.905,
+      "n_alldays": 3521,
+      "promote_to_lane_b": "yes",
+      "notes": "NEW_FAMILY; VIX term structure + vol-of-vol regime; \u2260 XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; \u22642024"
+    }
+  ],
+  "survivors": [
+    {
+      "family": "VIX_TERM_VOV",
+      "symbols": "VIX9D/VIX3M+VoV\u2192NDX",
+      "lookback_hold": "vov10/combo|hold=1d",
+      "train_years": 13.99,
+      "mean_bp": 6.802,
+      "day_t": 2.906,
+      "n_days": 2327,
+      "mean_bp_alldays": 4.495,
+      "day_t_alldays": 2.905,
+      "n_alldays": 3521,
+      "promote_to_lane_b": "yes",
+      "notes": "NEW_FAMILY; VIX term structure + vol-of-vol regime; \u2260 XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; \u22642024"
+    }
+  ],
+  "rules": "day_t>=2 bruto trade-cond; n>=80; years>=5; mean>0; cut<=2024; no FTMO cost yet"
+}

@@ -1,0 +1,5 @@
+family,symbols,lookback_hold,train_years,mean_bp,day_t,n_days,mean_bp_alldays,day_t_alldays,n_alldays,promote_to_lane_b,notes
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z90/thr1.0|hold=1d,17.61,3.11,1.484,2379,1.669,1.484,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+EM_DM_FLOW_ROTATION,EEM/EFA+DXY,rel120/dxy60|hold=1d_LS,19.52,2.522,1.414,2846,1.462,1.414,4910,no,NEW_FAMILY; EM vs DM equity flow with DXY filter; bruto trade-cond LS; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TYX-TNX→SPY,lvl120/d5|hold=1d,19.81,3.335,1.788,4301,2.879,1.788,4983,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→NDX,vov10/combo|hold=1d,13.99,6.802,2.906,2327,4.495,2.905,3521,yes,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024

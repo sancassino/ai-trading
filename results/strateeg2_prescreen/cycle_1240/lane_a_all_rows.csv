@@ -1,0 +1,71 @@
+family,symbols,lookback_hold,train_years,mean_bp,day_t,n_days,mean_bp_alldays,day_t_alldays,n_alldays,promote_to_lane_b,notes
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z90/thr1.0|hold=1d,17.61,3.11,1.484,2379,1.669,1.484,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z60/thr0.5|hold=1d,17.65,2.473,1.427,3358,1.869,1.427,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z90/thr0.5|hold=1d,17.61,2.206,1.297,3376,1.68,1.297,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z40/thr0.5|hold=1d,17.65,1.902,1.118,3359,1.438,1.118,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z60/thr1.0|hold=1d,17.65,1.764,0.839,2310,0.917,0.839,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z90/thr1.5|hold=1d,17.61,1.931,0.673,1387,0.604,0.673,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→IWM,z90/thr1.0|hold=1d,17.61,0.457,0.13,2385,0.246,0.13,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z40/thr1.0|hold=1d,17.65,-0.385,-0.18,2289,-0.198,-0.18,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→IWM,z90/thr0.5|hold=1d,17.61,-0.723,-0.259,3384,-0.552,-0.259,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→IWM,z60/thr0.5|hold=1d,17.65,-0.896,-0.32,3366,-0.679,-0.32,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z60/thr1.5|hold=1d,17.65,-1.323,-0.46,1298,-0.386,-0.46,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→IWM,z60/thr1.0|hold=1d,17.65,-2.399,-0.68,2314,-1.249,-0.68,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→SPY,z90/thr1.0|hold=1d,17.61,-2.26,-0.78,2381,-1.214,-0.78,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→NDX,z90/thr1.0|hold=1d,17.61,-2.892,-0.89,2389,-1.558,-0.89,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→TLT,z40/thr1.5|hold=1d,17.65,-2.586,-0.895,1269,-0.739,-0.895,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→SPY,z90/thr0.5|hold=1d,17.61,-2.225,-0.991,3380,-1.697,-0.991,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→IWM,z90/thr1.5|hold=1d,17.61,-5.397,-1.072,1389,-1.691,-1.072,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→SPY,z60/thr0.5|hold=1d,17.65,-2.488,-1.102,3361,-1.882,-1.102,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→IWM,z40/thr0.5|hold=1d,17.65,-3.095,-1.104,3363,-2.342,-1.104,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→NDX,z60/thr1.0|hold=1d,17.65,-3.671,-1.13,2318,-1.915,-1.13,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→SPY,z60/thr1.0|hold=1d,17.65,-3.291,-1.134,2309,-1.71,-1.134,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→NDX,z60/thr0.5|hold=1d,17.65,-3.034,-1.183,3372,-2.303,-1.183,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→SPY,z90/thr1.5|hold=1d,17.61,-5.179,-1.218,1389,-1.623,-1.218,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→NDX,z90/thr0.5|hold=1d,17.61,-3.264,-1.276,3391,-2.497,-1.276,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→IWM,z40/thr1.0|hold=1d,17.65,-4.645,-1.33,2292,-2.396,-1.33,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→NDX,z90/thr1.5|hold=1d,17.61,-6.221,-1.33,1392,-1.954,-1.33,4433,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→IWM,z40/thr1.5|hold=1d,17.65,-7.501,-1.586,1272,-2.148,-1.585,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→IWM,z60/thr1.5|hold=1d,17.65,-8.427,-1.733,1299,-2.464,-1.732,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→NDX,z40/thr0.5|hold=1d,17.65,-4.454,-1.737,3371,-3.379,-1.737,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→SPY,z40/thr0.5|hold=1d,17.65,-4.184,-1.856,3361,-3.165,-1.856,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→SPY,z40/thr1.0|hold=1d,17.65,-5.48,-1.914,2291,-2.826,-1.914,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→NDX,z40/thr1.0|hold=1d,17.65,-6.463,-2.002,2296,-3.34,-2.002,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→SPY,z40/thr1.5|hold=1d,17.65,-8.259,-2.007,1270,-2.361,-2.005,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→SPY,z60/thr1.5|hold=1d,17.65,-8.657,-2.068,1298,-2.529,-2.066,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→NDX,z60/thr1.5|hold=1d,17.65,-10.834,-2.35,1301,-3.173,-2.347,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+CREDIT_SPREAD_PROXY,HYG/LQD→NDX,z40/thr1.5|hold=1d,17.65,-11.708,-2.616,1274,-3.357,-2.612,4443,no,NEW_FAMILY; HYG/LQD z-impulse → next-day asset; bruto trade-cond; short_hist=no; ≤2024
+EM_DM_FLOW_ROTATION,EEM/EFA+DXY,rel120/dxy60|hold=1d_LS,19.52,2.522,1.414,2846,1.462,1.414,4910,no,NEW_FAMILY; EM vs DM equity flow with DXY filter; bruto trade-cond LS; short_hist=no; ≤2024
+EM_DM_FLOW_ROTATION,EEM/EFA+DXY,rel120/dxy20|hold=1d_LS,19.52,2.495,1.349,2646,1.345,1.349,4910,no,NEW_FAMILY; EM vs DM equity flow with DXY filter; bruto trade-cond LS; short_hist=no; ≤2024
+EM_DM_FLOW_ROTATION,EEM/EFA+DXY,rel60/dxy60|hold=1d_LS,19.75,1.378,0.768,2816,0.781,0.768,4970,no,NEW_FAMILY; EM vs DM equity flow with DXY filter; bruto trade-cond LS; short_hist=no; ≤2024
+EM_DM_FLOW_ROTATION,EEM/EFA+DXY,rel60/dxy20|hold=1d_LS,19.75,1.305,0.685,2544,0.668,0.685,4970,no,NEW_FAMILY; EM vs DM equity flow with DXY filter; bruto trade-cond LS; short_hist=no; ≤2024
+EM_DM_FLOW_ROTATION,EEM/EFA+DXY,rel20/dxy60|hold=1d_LS,19.76,0.633,0.352,2690,0.342,0.352,4972,no,NEW_FAMILY; EM vs DM equity flow with DXY filter; bruto trade-cond LS; short_hist=no; ≤2024
+EM_DM_FLOW_ROTATION,EEM/EFA+DXY,rel20/dxy20|hold=1d_LS,19.91,0.361,0.202,2657,0.191,0.203,5010,no,NEW_FAMILY; EM vs DM equity flow with DXY filter; bruto trade-cond LS; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TYX-TNX→SPY,lvl120/d5|hold=1d,19.81,3.335,1.788,4301,2.879,1.788,4983,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TYX-TNX→SPY,lvl60/d5|hold=1d,19.89,3.066,1.662,4320,2.647,1.662,5003,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TYX-TNX→SPY,lvl120/d10|hold=1d,19.79,2.293,1.232,4331,1.995,1.232,4978,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TYX-TNX→SPY,lvl60/d10|hold=1d,19.87,1.703,0.934,4369,1.488,0.934,4998,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TNX-FVX→SPY,lvl60/d10|hold=1d,19.87,0.775,0.424,4429,0.687,0.424,4998,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TNX-FVX→SPY,lvl60/d5|hold=1d,19.89,0.206,0.113,4391,0.181,0.113,5003,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TNX-FVX→TLT,lvl60/d10|hold=1d,19.87,0.083,0.058,4422,0.073,0.058,4998,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TNX-FVX→SPY,lvl120/d10|hold=1d,19.79,-0.921,-0.514,4408,-0.815,-0.514,4978,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TNX-FVX→SPY,lvl120/d5|hold=1d,19.81,-1.047,-0.579,4386,-0.922,-0.579,4983,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TNX-FVX→TLT,lvl60/d5|hold=1d,19.89,-0.876,-0.616,4382,-0.768,-0.616,5003,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TNX-FVX→TLT,lvl120/d10|hold=1d,19.79,-1.936,-1.368,4399,-1.711,-1.368,4978,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TYX-TNX→TLT,lvl60/d10|hold=1d,19.87,-2.191,-1.537,4362,-1.912,-1.537,4998,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TYX-TNX→TLT,lvl120/d10|hold=1d,19.79,-2.262,-1.58,4329,-1.967,-1.58,4978,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TYX-TNX→TLT,lvl120/d5|hold=1d,19.81,-2.365,-1.644,4300,-2.041,-1.644,4983,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TNX-FVX→TLT,lvl120/d5|hold=1d,19.81,-2.44,-1.717,4378,-2.144,-1.717,4983,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+RATE_CURVE_SHAPE,TYX-TNX→TLT,lvl60/d5|hold=1d,19.89,-3.427,-2.396,4314,-2.955,-2.396,5003,no,NEW_FAMILY; Treasury curve shape z + Δz → next-day; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→NDX,vov10/combo|hold=1d,13.99,6.802,2.906,2327,4.495,2.905,3521,yes,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→SPY,vov10/combo|hold=1d,13.99,5.495,2.712,2320,3.621,2.711,3521,yes,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→NDX,vov20/combo|hold=1d,13.99,6.274,2.568,2236,3.984,2.567,3521,yes,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→NDX,vov20/stress_mr|hold=1d,13.99,16.212,2.377,784,3.61,2.371,3521,yes,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→SPY,vov20/combo|hold=1d,13.99,4.696,2.218,2229,2.973,2.217,3521,yes,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→NDX,vov10/stress_mr|hold=1d,13.99,14.732,2.106,749,3.134,2.102,3521,yes,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→SPY,vov20/stress_mr|hold=1d,13.99,12.237,2.053,784,2.725,2.05,3521,yes,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→SPY,vov10/stress_mr|hold=1d,13.99,11.264,1.835,749,2.396,1.833,3521,no,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→SPY,vov10/contango_trend|hold=1d,13.99,1.983,0.901,2183,1.229,0.901,3521,no,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→NDX,vov10/contango_trend|hold=1d,13.99,2.272,0.866,2192,1.414,0.866,3521,no,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→SPY,vov20/contango_trend|hold=1d,13.99,1.378,0.595,2035,0.797,0.595,3521,no,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
+VIX_TERM_VOV,VIX9D/VIX3M+VoV→NDX,vov20/contango_trend|hold=1d,13.99,1.503,0.542,2045,0.873,0.542,3521,no,NEW_FAMILY; VIX term structure + vol-of-vol regime; ≠ XASSET_VOL_TIMING; bruto trade-cond; short_hist=no; ≤2024
