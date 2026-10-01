@@ -61,3 +61,4 @@
 07:56 Amsterdam — geen nieuws
 07:59 Amsterdam — D-094: bevriezing ingetrokken op last van Sandro; brede zoekopdracht (kortere historie, nieuwe markten, combineren), team volledig aan
 08:01 Amsterdam — D-094a: minimaal 5 jaar historie, 3 jaar alleen met vooraf vastgelegde reden (a/b/c)
+08:27 Amsterdam — AUDIT_3 + C-018: ORB+BTC in-sample SR 1,2 / ≈€1000/mnd (CONCORDANT); PREREG_FTMO_P1_ORB_BTC + D-095: stap 1 BTC N>=150, dan eenmalige reserve-run
