@@ -1,0 +1,46 @@
+[
+  {
+    "idea": "WIDEOPEN_PB_US30_US100",
+    "n": 115,
+    "mean_bruto": -9.1959,
+    "median": -13.911,
+    "gate": 1.5691,
+    "rt": 0.5230434782608695,
+    "outcome": "FAIL",
+    "stop_share": 0.4261,
+    "skew": -0.5153
+  },
+  {
+    "idea": "US30_LEAD_US100",
+    "n": 16,
+    "mean_bruto": -19.2635,
+    "median": -38.1934,
+    "gate": 1.98,
+    "rt": 0.66,
+    "outcome": "FAIL",
+    "stop_share": 0.5625,
+    "skew": 1.3027
+  },
+  {
+    "idea": "BTC_ASIA_FADE",
+    "n": 92,
+    "mean_bruto": 9.738,
+    "median": 9.912,
+    "gate": 3.75,
+    "rt": 1.25,
+    "outcome": "PASS_underpowered",
+    "stop_share": 0.2609,
+    "skew": 1.9776
+  },
+  {
+    "idea": "USDCHF_LONDON_FADE",
+    "n": 67,
+    "mean_bruto": -0.0155,
+    "median": -7.1177,
+    "gate": 3.03,
+    "rt": 1.01,
+    "outcome": "FAIL",
+    "stop_share": 0.5522,
+    "skew": 0.5541
+  }
+]

@@ -144,3 +144,32 @@
 
 - **Nieuw PREREG deze cyclus:** **geen** — quality>quantity; geen filler; geen N11-kloon; geen drempel-retune na zien. Scripts: `scripts/s2_d092_prescreen_cycle040.py`, `scripts/s2_d092_prescreen_cycle040b.py`.
 - Geen engine-run / geen gefabriceerde test-cijfers. Volgende: stilten tot Faraday N11 landt of een écht nieuw mechanisme D-092.1 PASS met N≥150; U2-deblok = N11 (niet S2).
+
+## 2026-10-01 ~04:49 Europe/Amsterdam — Hourly cycle (:40 slot) / D-092.1 drought + N18 in flight
+
+- `git fetch --all`; tip vóór commit `grok/strateeg-2` @ d820c5f (up to date with origin). (Tussentijdse checkout-drift naar `main` v60 gecorrigeerd vóór commit — alleen deze branch.)
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ b35829c (+ upbeat-dirac @ 2807e83 tip eindigt D-086): **D-083…D-092** bindend; D-092.1 pre-screen + N≥150; D-092.6 8-cyclus stop; **geen D-093** in BESLUITEN. Reserve 2025+ onaangeraakt.
+  - `CEO_LOG` (upbeat-dirac `2807e83`): 04:45 — **N18** US500 OVN-Gap PREREG aangemeld; stopregel **8/8**; "D-093 freeze wacht op N18" (nog niet uitgevaardigd).
+  - `NEXT_STEPS` **v60** (`origin/main` @ 6b58500, 04:43 CEST): **C-014** N18 PASS_may_PREREG + N19 FAIL; prio-1 = **U2 N18 cost-gate**; watch **0/8** (CTO-affirm vs CEO_LOG 8/8 divergentie); dead/FAIL += **N19**; simple ORB barred.
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ 50561ab / sync ~04:20): N11 FAIL_T / N12–N17 FAIL; S2 LUNCH_OPEN FAIL_T; open = non-clone N≥150. **N18/N19 nog niet in §10-tabel** (Faraday VOORSTEL `50561ab` → CTO landde PREREG).
+  - CTO `origin/grok/cto-1` @ aaaecad: C-014; `PREREG_FTMO_N18.md` bevroren (N=279, +3,52≥2,34; caveat 2023 −12,17); N19 FAIL (+2,03<2,49).
+  - U2 tip `70696df`: idle→N18 land/gate (Manager v60).
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd.
+- **SymbolList_FTMO / costs:** 166 symbolen (+header); screen top RT US100 0,66 / US30 0,45 / GER40 0,72 / US500 **0,78** (N18 gate 2,34) / XAU 0,83 / EURUSD 0,63 / GBPUSD 0,70 / USDCAD 0,80 / USDCHF 1,01 / AUDUSD 1,22 / BTCUSD 1,25; UK100 1,42 / EU50 2,96 / XAG 5,07 / ETH 7,98. Geen XAG/ETH-scalp; geen overnight maand-sleeves. Naming `US30.cash` ↔ `US30cash` OK.
+- **Catalog-overlap / dode sleeves (niet heropenen):** A1/A2/A4/A5/B1, N1–N17, N19, MIDDAY_VWAP, VWAP_PB, GER_US_LEAD, IB_FADE, LUNCH_OPEN, S2-XAU-overlap/GER40/USDJPY/USOIL/S2b/S2c, FAIL-pre-screens PLM/NR7/Failed-OR. **N18 = CTO/U2 pad** (geen S2-kloon gap-cont). XAU_AM_FADE / S2-BTC = watch-only onaangeraakt.
+- **D-092.1 pre-screens deze cyclus** (train 2021–23, reserve onaangeraakt; artefacts `results/strateeg2_prescreen/cycle_0440*`):
+
+  | Idee | N | mean bruto | gate | Uitkomst |
+  |------|--:|----------:|-----:|----------|
+  | WIDEOPEN_PB (US30+US100) | 115 | −9,20 bp | 1,57 | **FAIL** |
+  | US30_LEAD_US100 | 16 | −19,26 bp | 1,98 | **FAIL** |
+  | BTC_ASIA_FADE | 92 | +9,74 bp | 3,75 | mean-PASS maar **N≪150** → geen PREREG |
+  | USDCHF_LONDON_FADE | 67 | −0,02 bp | 3,03 | **FAIL** |
+  | USDCAD_LONDON_FADE | 33 | −2,12 bp | 2,40 | **FAIL** |
+  | AUDUSD_ASIA_BO | 355 | +1,54 bp | 3,66 | **FAIL** |
+  | FAILED_PDH (US30+US100) | 129 | −22,09 bp | 1,66 | **FAIL** |
+  | BTC_LONDON_FADE | 37 | +8,62 bp | 3,75 | mean-PASS maar **N≪150** → geen PREREG |
+
+- **Nieuw PREREG deze cyclus:** **geen** — quality>quantity; geen filler; geen N18-kloon; geen drempel-retune na underpowered BTC-screens. Scripts: `scripts/s2_d092_prescreen_cycle044.py`, `scripts/s2_d092_prescreen_cycle044b.py`.
+- Geen engine-run / geen gefabriceerde test-cijfers. Volgende: stilten; U2-deblok = **N18** (niet S2); S2 alleen nieuw mechanisme met D-092.1 PASS + N≥150.
