@@ -1440,3 +1440,35 @@ Test 2017–2024 (informatief na gate-fail): mean bruto −2.67 bp; t netto −2
 **TRIAL_COUNT unchanged (453).**
 
 **U2 next:** wacht Strateeg/S2 D-097/C-022 energy PREREGs of andere non-clone PASS→PREREG; N45–N48 secondary alleen ≥50 bp + PASS. Material via NEXT_STEPS voor Manager/CTO (geen Sandro-ping).
+
+## Cyclus 10:35–10:45 CEST (2026-10-01) — D-099 ENERGY_TSMOM gate → FAIL_COST_GATE
+
+**Branch:** `claude/uitvoerder2-r` — merge `origin/main` @ `a7c9451` (NEXT_STEPS **v71**; D-099/C-023; PREREG_FTMO_ENERGY_TSMOM.md). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v71** (Manager 10:35 CEST): U2 **ACTIEF** — gate `PREREG_FTMO_ENERGY_TSMOM` (UKOIL+USOIL L20/H10 LO; bruto-prijs poort; geen swap-credit in gate)
+- `PREREG_FTMO_ENERGY_TSMOM.md` (CTO C-023/D-099): L20/H10 LO; train 2010–2016 / test 2017–2024; reserve 2025+; kostenpoort bruto ≥ 3×(RT+swap_pay); formeel t≥2 beide helften; N_trades≥150; beide symbolen bruto≥0 op test
+
+### Actie
+Script `scripts/energy_tsmom_gate.py` (commit `afa30a6` vóór run; PREREG op main `a7c9451`).
+
+| Metric (train 2010–2016) | Waarde |
+|--------------------------|-------:|
+| N_trades (UKOIL+USOIL) | 209 |
+| mean bruto bp/trade | **29.08** |
+| mean RT bp | 7.36 |
+| mean swap bp (gate, 10d×~14 cal-nights) | 83.33 |
+| mean cost bp | 90.69 |
+| gate 3× = 272.08 bp | **FAIL** (29.08 ≪ 272.08) |
+| mean netto bp | −61.62 |
+| t day-clust netto | −1.53 |
+
+UKOIL bruto 37.1 bp / USOIL bruto 20.7 bp. Oorzaak gate-fail: FTMO-CFD olie swap extreem hoog (~21.5%/jr UKOIL, ~19.5%/jr USOIL) → ~83 bp swap/trade bij 14 cal-nachten. Bruto van 29 bp kan swap+RT niet dekken.
+
+**Uitkomst: FAIL_COST_GATE** — per PREREG §4.1 STOP, **geen trial**. Geen klonen (geen H/L-grid, geen HEATOIL-add, geen short-been).
+
+**Dead/FAIL += ENERGY_TSMOM (PREREG_FTMO_ENERGY_TSMOM)**. Skip her-gate TSMOM_DIV/N35–N41/GBPJPY/P1/N44.
+
+**TRIAL_COUNT unchanged (453).**
+
+**U2 next:** D-097/D-099 spoor 1/4; wacht Strateeg/S2 PASS→PREREG non-clone ≥50 bp bruto; N58/N59 secondary na PASS. Material via NEXT_STEPS (geen Sandro-ping).

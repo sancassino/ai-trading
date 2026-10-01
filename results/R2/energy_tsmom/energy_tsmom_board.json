@@ -1,0 +1,72 @@
+{
+  "prereg": "PREREG_FTMO_ENERGY_TSMOM.md",
+  "decision": "D-099",
+  "universe": [
+    "UKOIL.cash",
+    "USOIL.cash"
+  ],
+  "outcome": "FAIL_COST_GATE",
+  "counts_as_trial": false,
+  "reserve_2025": "untouched",
+  "train": {
+    "label": "train",
+    "N": 209,
+    "mean_bruto_bp": 29.0762,
+    "mean_netto_bp": -61.6157,
+    "mean_rt_bp": 7.3603,
+    "mean_swap_gate_bp": 83.3317,
+    "mean_cost_bp": 90.6919,
+    "gate_3x_threshold": 272.0758,
+    "gate_3x": false,
+    "t_day_clust_netto": -1.5324,
+    "t_nw_L5_netto": -1.3091,
+    "t_day_clust_bruto": 0.7276,
+    "mean_h1_bruto": 18.9195,
+    "mean_h2_bruto": 40.147,
+    "mean_h1_netto": -71.9774,
+    "mean_h2_netto": -50.3214,
+    "sym": {
+      "UKOIL.cash": {
+        "N": 107,
+        "mean_bruto": 37.0922,
+        "mean_netto": -57.8226
+      },
+      "USOIL.cash": {
+        "N": 102,
+        "mean_bruto": 20.6674,
+        "mean_netto": -65.5947
+      }
+    }
+  },
+  "train_stress": {
+    "label": "train_stress",
+    "N": 209,
+    "mean_bruto_bp": 29.0762,
+    "mean_netto_bp": -103.2815,
+    "mean_rt_bp": 7.3603,
+    "mean_swap_gate_bp": 83.3317,
+    "mean_cost_bp": 90.6919,
+    "gate_3x_threshold": 272.0758,
+    "gate_3x": false,
+    "t_day_clust_netto": -2.5589,
+    "t_nw_L5_netto": -2.1803,
+    "t_day_clust_bruto": 0.7276,
+    "mean_h1_bruto": 18.9195,
+    "mean_h2_bruto": 40.147,
+    "mean_h1_netto": -113.739,
+    "mean_h2_netto": -91.8828,
+    "sym": {
+      "UKOIL.cash": {
+        "N": 107,
+        "mean_bruto": 37.0922,
+        "mean_netto": -102.043
+      },
+      "USOIL.cash": {
+        "N": 102,
+        "mean_bruto": 20.6674,
+        "mean_netto": -104.5808
+      }
+    }
+  },
+  "test": null
+}
