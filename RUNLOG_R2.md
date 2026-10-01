@@ -1033,3 +1033,45 @@ Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG
 | D-092.6 watch | **0/8** (CTO-affirmed; N11 cost-gate PASS reset) |
 
 Geen actionable taak. Quiet cycle.
+
+
+## Cyclus 04:51–04:55 CEST — N18 cost-gate PASS / stress PASS / FAIL_T (TRIAL_COUNT 446→447)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → NEXT_STEPS **v60** (`6b58500`). Prior tip `70696df` (idle v59). Reserve 2025→ **niet aangeraakt**. Test 2024 **onaangeroerd**.
+
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…**D-092** via NEXT_STEPS (D-092 herzien plan; escalatie 4/4; **geen D-093** uitgevaardigd)
+- `NEXT_STEPS.md` **v60** @ `origin/main` (Manager 04:43 CEST) — C-014 N18 **PASS_may_PREREG** + N19 FAIL; prio U2 **N18**; watch **0/8**
+- CTO `aaaecad` C-014: PREREG_FTMO_N18 bevroren; N19 FAIL; US500 RT 0.78 → gate **2.34** / stress **3.51**
+- Strateeg VOORSTEL `50561ab` N18/N19
+
+### Actie — land PREREG + formal pad (v60 §0 actie 1)
+1. Landed `PREREG_FTMO_N18.md` van `origin/grok/cto-1` → commit **`c715e06`** (vóór resultaat).
+2. Ran `scripts/n18_cost_gate_trial.py` — train 2021–2023 only; frozen §2 rule.
+
+### Uitkomst train 2021–2023
+
+| Stap | Drempel | Waarde | Uitkomst |
+|------|---------|--------|----------|
+| Cost-gate | mean bruto ≥ **2.34** bp | **+3.52** bp (N=279; median +2.77) | **PASS** |
+| Stress +50% | mean bruto ≥ **3.51** bp | **+3.52** bp | **PASS** (barely) |
+| Formal t | day-clust ≥2.0 **en** NW L=5 ≥2.0 | t **0.64** / NW **0.67** (netto) | **FAIL_T** |
+
+**Year-split mean bruto (PREREG caveat, eerlijk):** 2021 **+12.97** (n=76) / 2022 **+6.66** (n=131) / **2023 −12.17** (n=72). Stop-share 0.00 (brede 1.5×ATR → exits vrijwel altijd flat).
+
+### Artifacts
+- `PREREG_FTMO_N18.md` (`c715e06`)
+- `scripts/n18_cost_gate_trial.py`
+- `results/R2/n18_prep/` (`n18_board.json`, `n18_report.md`, `cost_gate_n18_train.csv`)
+- `catalogus/TRIALS.csv` append; `TRIAL_COUNT.md` → **447**
+
+### Dead set
+Dead set += **N18** (FAIL_T STOP). N19 blijft FAIL-pre-screen (CTO). Geen klonen zonder nieuw mechanisme. XAU watch-only ongewijzigd.
+
+### Next
+1. U2 idle tot volgende D-092.1-PASS non-clone PREREG N≥150 (≠ dead/FAIL incl. N11–N19/LUNCH_OPEN; ≠ N9; geen simple ORB-klonen).
+2. Watch blijft **0/8** (cost-gate PASS resets per D-092.6 CTO-affirm — Manager cadence).
+3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping.
+
+**MATERIAL for Manager/CTO** (N18 first formal after C-014; cost-gate+stress PASS / FAIL_T; TRIAL_COUNT 447; year-split 2023 collapse). Vragen → Manager; eindbesluit → CTO.
