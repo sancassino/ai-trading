@@ -1,0 +1,49 @@
+{
+  "idea": "N18_US500_OVN_GAP_CONT",
+  "prereg": "PREREG_FTMO_N18.md",
+  "prereg_sha_local": "c715e06",
+  "source_cto": "aaaecad",
+  "source_strateeg": "50561ab",
+  "n": 279,
+  "mean_bruto_bp": 3.5181,
+  "median_bruto_bp": 2.766,
+  "mean_netto_bp": 2.7381,
+  "p25_bruto": -34.6865,
+  "p75_bruto": 48.3042,
+  "stop_share": 0.0,
+  "rt_bp": 0.78,
+  "gate_3x_rt": 2.34,
+  "gate_stress": 3.51,
+  "pass_gate": true,
+  "pass_stress": true,
+  "N_days": 279,
+  "t_day_clustered_netto": 0.6377,
+  "t_nw_L5_netto": 0.6737,
+  "t_day_clustered_bruto": 0.8194,
+  "t_nw_L5_bruto": 0.8656,
+  "mean_day_netto_bp": 2.7381,
+  "skew_day_netto": -0.5314,
+  "t_ok": false,
+  "outcome": "FAIL_T",
+  "year_split_mean_bruto": {
+    "2021": {
+      "n": 76,
+      "mean_bruto_bp": 12.9664,
+      "median_bruto_bp": 11.3796
+    },
+    "2022": {
+      "n": 131,
+      "mean_bruto_bp": 6.6618,
+      "median_bruto_bp": 6.9567
+    },
+    "2023": {
+      "n": 72,
+      "mean_bruto_bp": -12.1749,
+      "median_bruto_bp": -17.5014
+    }
+  },
+  "date_min": "2021-01-27",
+  "date_max": "2023-11-29",
+  "reserve_2025": "untouched",
+  "test_2024": "untouched"
+}

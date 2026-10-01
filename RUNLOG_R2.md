@@ -1017,3 +1017,114 @@ Pre-screen FAIL-set ongewijzigd (N7/N8/N10/N12 / index PLM…). XAU_AM_FADE watc
 3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
 
 Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG-result); idle wait note for Manager cadence.
+
+
+## Cyclus 02:25 UTC (2026-10-01) — D-092 idle check; TRIAL_COUNT 446
+
+**Branch:** `claude/uitvoerder2-r` — synced to `51c599d` (NEXT_STEPS v59). Notificatie 02:25 UTC verwerkt. Reserve 2025→ **niet aangeraakt**.
+
+**Vorige cycli (Grok U2):** N11 cost-gate PASS → FAIL_T (TRIAL_COUNT 444→446 via N11+eerder). N12/N13/N14/N15/N16/N17 pre-screen FAIL — allemaal dead. Strateeg N18/N19 aangevraagd. CTO C-013: venue-ORB klonen (N15/N16/N17) barred zonder nieuw mechanisme.
+
+| Item | Status |
+|------|--------|
+| Strateeg `50561ab` | N18/N19 pre-screen aangevraagd — nog geen resultaat |
+| Strateeg-2 `d820c5f` | D-092.1 screens FAIL — geen nieuwe PREREG |
+| TRIAL_COUNT | **446** |
+| D-092.6 watch | **0/8** (CTO-affirmed; N11 cost-gate PASS reset) |
+
+Geen actionable taak. Quiet cycle.
+
+
+## Cyclus 04:51–04:55 CEST — N18 cost-gate PASS / stress PASS / FAIL_T (TRIAL_COUNT 446→447)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → NEXT_STEPS **v60** (`6b58500`). Prior tip `70696df` (idle v59). Reserve 2025→ **niet aangeraakt**. Test 2024 **onaangeroerd**.
+
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…**D-092** via NEXT_STEPS (D-092 herzien plan; escalatie 4/4; **geen D-093** uitgevaardigd)
+- `NEXT_STEPS.md` **v60** @ `origin/main` (Manager 04:43 CEST) — C-014 N18 **PASS_may_PREREG** + N19 FAIL; prio U2 **N18**; watch **0/8**
+- CTO `aaaecad` C-014: PREREG_FTMO_N18 bevroren; N19 FAIL; US500 RT 0.78 → gate **2.34** / stress **3.51**
+- Strateeg VOORSTEL `50561ab` N18/N19
+
+### Actie — land PREREG + formal pad (v60 §0 actie 1)
+1. Landed `PREREG_FTMO_N18.md` van `origin/grok/cto-1` → commit **`c715e06`** (vóór resultaat).
+2. Ran `scripts/n18_cost_gate_trial.py` — train 2021–2023 only; frozen §2 rule.
+
+### Uitkomst train 2021–2023
+
+| Stap | Drempel | Waarde | Uitkomst |
+|------|---------|--------|----------|
+| Cost-gate | mean bruto ≥ **2.34** bp | **+3.52** bp (N=279; median +2.77) | **PASS** |
+| Stress +50% | mean bruto ≥ **3.51** bp | **+3.52** bp | **PASS** (barely) |
+| Formal t | day-clust ≥2.0 **en** NW L=5 ≥2.0 | t **0.64** / NW **0.67** (netto) | **FAIL_T** |
+
+**Year-split mean bruto (PREREG caveat, eerlijk):** 2021 **+12.97** (n=76) / 2022 **+6.66** (n=131) / **2023 −12.17** (n=72). Stop-share 0.00 (brede 1.5×ATR → exits vrijwel altijd flat).
+
+### Artifacts
+- `PREREG_FTMO_N18.md` (`c715e06`)
+- `scripts/n18_cost_gate_trial.py`
+- `results/R2/n18_prep/` (`n18_board.json`, `n18_report.md`, `cost_gate_n18_train.csv`)
+- `catalogus/TRIALS.csv` append; `TRIAL_COUNT.md` → **447**
+
+### Dead set
+Dead set += **N18** (FAIL_T STOP). N19 blijft FAIL-pre-screen (CTO). Geen klonen zonder nieuw mechanisme. XAU watch-only ongewijzigd.
+
+### Next
+1. U2 idle tot volgende D-092.1-PASS non-clone PREREG N≥150 (≠ dead/FAIL incl. N11–N19/LUNCH_OPEN; ≠ N9; geen simple ORB-klonen).
+2. Watch blijft **0/8** (cost-gate PASS resets per D-092.6 CTO-affirm — Manager cadence).
+3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping.
+
+**MATERIAL for Manager/CTO** (N18 first formal after C-014; cost-gate+stress PASS / FAIL_T; TRIAL_COUNT 447; year-split 2023 collapse). Vragen → Manager; eindbesluit → CTO.
+
+## Cyclus 05:23–05:25 CEST — D-090 FASE 3 IDLE (NEXT_STEPS v62; **D-093 FREEZE**)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → NEXT_STEPS **v62** (`9d4abff`) + U1 RUNLOG D-093 (`38a612b`) + `EINDSTAND_FTMO.md`. Prior U2 tip `d1984ed` (N18 FAIL_T; TRIAL_COUNT **447**). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- **D-093** @ `claude/ftmo-trading-strategy-98mplz` `7fa5ba7` (05:00 CEST): zoekfase bevroren; watch reset alleen bij gate+stress+formele t; onderhoud 1×/4u; geen nieuwe PREREGs/pre-screens/trials
+- `NEXT_STEPS.md` **v62** @ `origin/main` (Manager 05:02 CEST) — D-093 FREEZE; Watch **8/8**; U2 **IDLE / onderhoud**; TRIAL **447**
+- CTO C-015 (`e6599a3`): N18 FAIL_T bevestigd; D-093 absorbed; C-013 cost-gate watch-reset **superseded** → **8/8 frozen**
+- Strateeg `53d72b9`: §9/§10 sync post D-093 + N18 FAIL_T — **geen** nieuwe PREREG (N20/N21 barred under freeze)
+- Strateeg-2 `c22d9a6`: screens FAIL — **geen** nieuwe PREREG
+- `EINDSTAND_FTMO.md`: 0 sleeves gevalideerd; evaluatie **NIET kopen**
+
+### U2-directives (v62 §0 actie 1 / D-093.2) — bindend
+- **IDLE / onderhoud** — geen nieuwe trials, PREREGs of pre-screens.
+- N18/N11 = **FAIL_T STOP**. TRIAL_COUNT **447**. Dead set (incl. N11–N19 / LUNCH_OPEN) niet herstarten.
+- Wacht op **Sandro-keuze** (HistData / andere regels / stop) of nieuw CEO-besluit / long_m1 (D-093.4–5).
+- Reserve 2025→ onaangeraakt. Geen FTMO-signup/fees. Geen inventie van scope (geen A4/A5/P1-engine-run tijdens freeze).
+- Cadans: onderhoud **1×/4u** (D-093).
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| N18 formal | DONE FAIL_T STOP (`d1984ed`) — skip |
+| N11 / N13–N17 / N19 | FAIL_T / NO_PREREG — skip |
+| N20/N21 (Strateeg VOORSTEL) | **barred** under D-093.2 — skip |
+| D-092.1 non-clone PREREG N≥150 | **frozen** — geen nieuwe screens tot heropening |
+| P1 `engine/ftmo.py` validate / A4/A5 | **niet** toegewezen onder D-093; v62 zegt IDLE — skip |
+| Dead set + FAIL-pre-screens | niet herstart |
+| D-093 / D-092.6 watch | **8/8 frozen** (gate-only PASS resets niet) |
+
+**TRIAL_COUNT blijft 447.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Heropening alleen na Sandro-keuze of nieuw CEO-besluit / `data/long_m1/` (D-093.5).
+2. Tot dan: U2 idle wait notes op 1×/4u cadence; geen trials.
+3. Escalatie D-091.6 → D-092 → **D-093 freeze**. Geen Sandro-ping vanuit U2 (eindstand al geschreven).
+
+Quiet cycle (geen material trial/PREREG-result); IDLE under D-093 for Manager/CTO cadence.
+
+
+## Cyclus 03:25 UTC (2026-10-01) — D-093 FREEZE; onderhoud 1×/4u
+
+**Branch:** `claude/uitvoerder2-r` — synced to `762911a` (NEXT_STEPS v62). D-093 freeze actief (CEO ~05:00 CEST). Reserve 2025→ **niet aangeraakt**.
+
+**D-093 samenvatting:**
+- TRIAL_COUNT **447** (N18 FAIL_T toegevoegd voor freeze)
+- 8/8 cycli zonder gate+stress+formele t PASS → bevriezing
+- Geen nieuwe PREREGs/pre-screens/trials tot Sandro-keuze of nieuw CEO-besluit
+- Agents kopen/openen nooit iets; geen FTMO-signup/fee-spend
+
+**U2 status:** IDLE / onderhoud 1×/4u. Wacht op Sandro-keuze (D-093.4): HistData M-001 / andere regels / definitief stoppen.
