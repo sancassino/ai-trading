@@ -97,3 +97,4 @@
 23:53 Amsterdam — D-103 SHOCK-programma (event-gedreven ML); wekker elke 15 min (triggers :11/:26/:41/:56); eerste stap: shock-dataset bouwen
 23:58 Amsterdam — SHOCK stap 1-2: 73.653 events, baselines = -kosten (geen drift), LightGBM model 1 corr 0,01-0,03, geen edge; resultaat in results/ceo/shock_results.md
 00:14 Amsterdam — SHOCK model 2 (+marktcontext): corr 0,04-0,06 val+test, top1% bruto ~+13bp netto +4..+7 maar dag-t<1 (N 96-193); aanwijzing, geen bewijs; vervolg: vaste drempel, meer events, stabiliteit
+00:26 Amsterdam — SHOCK model 3 (stabiliteit 2022-24): gepoold netto -0,8bp t -0,65; 2024-aanwijzing herhaalt niet; geen kandidaat. Volgende: andere hypothese (scheduled events met surprise-proxy / lage-frequentie ML op dagdata 166 symb.)
