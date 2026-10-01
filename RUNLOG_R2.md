@@ -1271,3 +1271,44 @@ All four: **N≥150** but mean bruto **below** gate → STOP (no PREREG ask).
 **U2 acties deze cyclus:** geen (geen klare PASS_may_PREREG beschikbaar). Geen Sandro-ping.
 
 **Volgende:** wacht op Strateeg/S2 D-092.1-PASS (non-clone, D-094a ≥5j default).
+
+
+## Cyclus 08:50–08:55 CEST (2026-10-01) — D-095 stap 1 S2-BTC PASS + D-092.1 N35–N37
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` @ `827c72b` (NEXT_STEPS **v66**). Freeze **OFF** (D-094). Tip before: `edf3acc` (idle ack).
+
+### Prio-1 — D-095 stap 1: S2-BTC 2021–2024-12 cost-gate + stress → **PASS**
+
+**PREREG:** landed `PREREG_S2_BTC_USOPEN.md` from `origin/grok/cto-1` + existing `PREREG_FTMO_P1_ORB_BTC.md` (main).
+**Script:** `scripts/s2_btc_cost_gate_train.py` (CTO rule frozen; window extended 2023-12-31 → **2024-12-31** per D-095 / P1 PREREG stap 1).
+**Artefacts:** `results/R2/s2_btc_prep/cost_gate_s2_btc_train.{md,json,csv}`.
+
+| Metric | Waarde |
+|--------|--------|
+| N trades | **197** (≥150 ✔) |
+| Mean bruto | **+15.76 bp** (2× fixed 1.25 = 2.50 ✔) |
+| Mean cost | 3.50 bp (share **22.2%** <50% ✔) |
+| +50% spread stress | mean cost 5.05 bp; 2×stress ✔ share ✔ |
+| **Verdict** | **PASS** |
+
+**Informatief (geen formal / geen TRIALS):** day-clust NW-L5 t bruto 1.49 / netto 1.17; skew bruto +2.73; half 2021–22 mean netto +36.1 bp; half 2023–24 mean netto **−4.4 bp**; years bruto: 2021 +53 / 2022 +35 / 2023 −4.9 / 2024 +1.2. Edge concentratie early years — CEO/Auditor context voor reserve-vrijgave.
+
+**Niet gedaan (bindend):** geen reserve 2025+ geopend; geen TRIAL_COUNT-bump; geen formal P1 trial (wacht CEO éénmalige vrijgave → CTO stap 2 → Auditor).
+
+### Parallel — D-092.1 TRAIN pre-screen N35–N37
+
+**Source:** Strateeg `claude/trusting-faraday-34tsmg` @ `782e6b8` (VOORSTEL_PRESCREEN_N35..N37).
+**Script:** `scripts/n35_n37_prescreen.py` → `results/R2/n35_n37_prescreen/`.
+**Window:** 2021–2023 only. **No** 2025+. **No** PREREG written by U2 (Strateeg on PASS).
+
+| Sleeve | Instrument | N | mean bruto | gate | Uitkomst |
+|--------|------------|---|------------|------|----------|
+| **N35** US100 EU→US cont | US100cash | 214 | **+6.60 bp** | 1.98 | **PASS_may_PREREG** |
+| **N36** XAU NY-open drive | XAUUSD | 150 | **+2.80 bp** | 2.49 | **PASS_may_PREREG** |
+| **N37** EURUSD H4 SMA20 TF | EURUSD | 627 | **−0.17 bp** | 1.89 | **FAIL** `NO_PREREG` |
+
+**Notes:** N35 `date_min` 2021-09-20 (US100 09:00/15:00 coverage sparse early 2021); N still ≥150. N36 exact N=150 at gate margin (+2.80 vs 2.49). N37 → FAIL-set (geen klonen).
+
+**TRIAL_COUNT unchanged (447).** Reserve 2025→ untouched.
+
+**U2 next:** (1) wait CEO P1 reserve-vrijgave / CTO stap 2; (2) wait Strateeg PREREG_FTMO_N35 / N36 → then formal trial. MATERIAL for Manager/CTO/CEO (stap1 PASS unlocks D-095 path). No Sandro-ping (agents openen/kopen niets).
