@@ -94,3 +94,4 @@
 22:27 Amsterdam — geen nieuws
 22:57 Amsterdam — geen nieuws
 23:27 Amsterdam — geen nieuws
+23:53 Amsterdam — D-103 SHOCK-programma (event-gedreven ML); wekker elke 15 min (triggers :11/:26/:41/:56); eerste stap: shock-dataset bouwen
