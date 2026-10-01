@@ -1,0 +1,104 @@
+{
+  "prereg": "PREREG_FTMO_FX_EUR_SHORT_TSMOM.md",
+  "decision": "D-100",
+  "c": "C-025",
+  "universe": [
+    "EURUSD",
+    "EURAUD"
+  ],
+  "rule": "L20/H10 short-only; cheap overnight (swap_short)",
+  "outcome": "FAIL_T",
+  "counts_as_trial": true,
+  "reserve_2025": "untouched",
+  "costs_source": "COSTS_FTMO.csv + COSTS_FTMO_alle.csv + swap_side_map EURAUD",
+  "train": {
+    "label": "train",
+    "N": 227,
+    "mean_bruto_bp": 21.958,
+    "mean_netto_bp": 24.1608,
+    "mean_rt_bp": 0.8689,
+    "mean_swap_gate_bp": 0.0,
+    "mean_cost_bp": 0.8689,
+    "gate_3x_threshold": 2.6068,
+    "gate_3x": true,
+    "t_day_clust_netto": 1.8961,
+    "t_nw_L5_netto": 1.8706,
+    "t_day_clust_bruto": 1.7231,
+    "mean_h1_bruto": 17.5052,
+    "mean_h2_bruto": 26.2188,
+    "mean_h1_netto": 19.7361,
+    "mean_h2_netto": 28.3947,
+    "sym": {
+      "EURUSD": {
+        "N": 114,
+        "mean_bruto": 24.3529,
+        "mean_netto": 25.7566
+      },
+      "EURAUD": {
+        "N": 113,
+        "mean_bruto": 19.5418,
+        "mean_netto": 22.5508
+      }
+    }
+  },
+  "train_stress": {
+    "label": "train_stress",
+    "N": 227,
+    "mean_bruto_bp": 21.958,
+    "mean_netto_bp": 25.6967,
+    "mean_rt_bp": 0.8689,
+    "mean_swap_gate_bp": 0.0,
+    "mean_cost_bp": 0.8689,
+    "gate_3x_threshold": 2.6068,
+    "gate_3x": true,
+    "t_day_clust_netto": 2.0168,
+    "t_nw_L5_netto": 1.9894,
+    "t_day_clust_bruto": 1.7231,
+    "mean_h1_bruto": 17.5052,
+    "mean_h2_bruto": 26.2188,
+    "mean_h1_netto": 21.2898,
+    "mean_h2_netto": 29.9135,
+    "sym": {
+      "EURUSD": {
+        "N": 114,
+        "mean_bruto": 24.3529,
+        "mean_netto": 26.7734
+      },
+      "EURAUD": {
+        "N": 113,
+        "mean_bruto": 19.5418,
+        "mean_netto": 24.6104
+      }
+    }
+  },
+  "test": {
+    "label": "test",
+    "N": 239,
+    "mean_bruto_bp": -3.4206,
+    "mean_netto_bp": -1.1898,
+    "mean_rt_bp": 0.869,
+    "mean_swap_gate_bp": 0.0,
+    "mean_cost_bp": 0.869,
+    "gate_3x_threshold": 2.607,
+    "gate_3x": false,
+    "t_day_clust_netto": -0.1381,
+    "t_nw_L5_netto": -0.1317,
+    "t_day_clust_bruto": -0.3969,
+    "mean_h1_bruto": -18.0213,
+    "mean_h2_bruto": 11.8041,
+    "mean_h1_netto": -15.7798,
+    "mean_h2_netto": 14.0236,
+    "sym": {
+      "EURUSD": {
+        "N": 120,
+        "mean_bruto": 1.2136,
+        "mean_netto": 2.6416
+      },
+      "EURAUD": {
+        "N": 119,
+        "mean_bruto": -8.0937,
+        "mean_netto": -5.0535
+      }
+    }
+  }
+}

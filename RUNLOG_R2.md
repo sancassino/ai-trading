@@ -1527,3 +1527,168 @@ US100 bruto −67.9 bp / US30 bruto −64.6 bp. Beide helften bruto negatief. Oo
 **TRIAL_COUNT unchanged (453).**
 
 **U2 next:** wacht Strateeg/S2 D-097/D-100 PASS→PREREG (N60 secondary ≥50 bp; N58 na swap-redesign); geen S2-BTC stap2 inventeren. Material via NEXT_STEPS voor Manager/CTO (geen Sandro-ping).
+
+## Cyclus 11:49–11:55 CEST (2026-10-01) — C-025 FX_EUR_SHORT_TSMOM gate → FAIL_T (TRIAL 454)
+
+**Branch:** `claude/uitvoerder2-r` — FF-merge `origin/main` @ `358ead9` (NEXT_STEPS **v73**; IDX_SHORT FAIL absorb + C-025 FX_EUR_SHORT PREREG). Tip pre-merge `72f40d3` (IDX_SHORT FAIL_COST_GATE; TRIAL **453**). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v73** (Manager 11:39 CEST): FREEZE **OFF**; U2 **ACTIEF** — gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM` (EURUSD+EURAUD short-only L20/H10; cheap overnight; bruto-prijs poort; train 2010–2016 / test 2017–2024; geen 2025+)
+- `PREREG_FTMO_FX_EUR_SHORT_TSMOM.md` (CTO C-025 / D-100 @ `0644107`): short only when 20d mom < 0; hold 10d; COSTS_FTMO RT + swap_short (credits→0); alfa = bruto prijs; N≥150 + t≥2 formal bij poort-PASS; geen klonen bij FAIL
+- Skip her-gate IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59/N68
+
+### Prio — PREREG FX_EUR_SHORT (CTO 0644107) → cost-gate PASS → formal FAIL_T
+
+**PREREG gecommit:** `b184d71` — `PREREG_FTMO_FX_EUR_SHORT_TSMOM.md` + `scripts/fx_eur_short_tsmom_gate.py` (PREREG vóór resultaat; bron `grok/cto-1` @ `0644107`). Artefacts: `results/R2/fx_eur_short_tsmom/`.
+
+| Window | N | mean bruto | gate 3× | stress | t day-clust / NW-L5 | Uitkomst |
+|--------|--:|-----------:|--------:|-------:|--------------------:|----------|
+| **Train** 2010–2016 | 227 | **+21.96 bp** | 2.61 **PASS** | **PASS** | 1.90 / 1.87 | — |
+| **Test** 2017–2024 | 239 | **−3.42 bp** | — | — | −0.14 / −0.13 | — |
+
+Symbol train: EURUSD N=114 bruto +24.35 · EURAUD N=113 bruto +19.54.  
+Symbol test: EURUSD N=120 bruto +1.21 · **EURAUD N=119 bruto −8.09** (dual-symbol bruto≥0 op test **FAIL**).  
+h1/h2 train bruto +17.5 / +26.2; test bruto −18.0 / +11.8.
+
+**Uitkomst: FAIL_T** — cost-gate+stress PASS; formal day-clust t train **1.90 < 2.0** én test t −0.14; EURAUD test bruto <0. **1 trial** (TRIAL **454**). Geen klonen (geen L/H-grid, geen EURGBP-add, geen long-been, geen 5d-retune).
+
+**Dead/FAIL += FX_EUR_SHORT_TSMOM (PREREG_FTMO_FX_EUR_SHORT_TSMOM)**. Skip her-gate IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59/N68/P1.
+
+**TRIAL_COUNT 453 → 454.** TRIALS.csv append-only.
+
+**U2 next:** wacht Strateeg/S2 D-097/D-100 B/C/D PASS→PREREG (geen family-A short klonen; N58 alleen na swap-redesign); geen S2-BTC stap2 inventeren. Material via NEXT_STEPS voor Manager/CTO/Auditor (geen Sandro-ping).
+
+## Cyclus 12:25–12:30 CEST (2026-10-01) — C-026 FX_USDJPY_MED_TSMOM gate → FAIL_T (TRIAL 455)
+
+**Branch:** `claude/uitvoerder2-r` — ort-merge `origin/main` @ `b340e56` (NEXT_STEPS **v74**; FX_EUR_SHORT FAIL_T absorb + N69–N71 OPEN). Tip pre-merge `0e04df6` (FX_EUR FAIL_T; TRIAL **454**). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v74** (Manager 12:05 CEST): FREEZE **OFF**; U2 IDLE→ACTIEF bij nieuw PREREG; tip `0e04df6` recent; wacht Strateeg/S2 PASS→PREREG of CTO land
+- CTO `2488aba` **C-026**: FX_EUR FAIL absorb + **`PREREG_FTMO_FX_USDJPY_MED_TSMOM`** (0 trials) — USDJPY L60/H10 long-only; D-100 cheap long side; niet N67 L20 clone
+- Strateeg `ab7bdee`/`78673d0`: N69–N71 DIAG_FAIL; OPEN N72–N74; **USDJPY_MED live**
+- Skip her-gate: FX_EUR_SHORT / IDX_SHORT / ENERGY / TSMOM_DIV / N35–N41 / GBPJPY / N59 / N68 / P1 / N67
+
+### Prio — PREREG USDJPY_MED (CTO 2488aba) → cost-gate PASS → formal FAIL_T
+
+**PREREG gecommit:** `5b933c7` — `PREREG_FTMO_FX_USDJPY_MED_TSMOM.md` + `scripts/fx_usdjpy_med_tsmom_gate.py` (PREREG vóór resultaat; bron `grok/cto-1` @ `2488aba`). Artefacts: `results/R2/fx_usdjpy_med_tsmom/`.
+
+| Window | N | mean bruto | gate 3× | stress | t day-clust / NW-L5 | Uitkomst |
+|--------|--:|-----------:|--------:|-------:|--------------------:|----------|
+| **Train** 2000–2016 | 237 | **+10.97 bp** | 2.34 **PASS** | **PASS** | 1.15 / 1.16 | — |
+| **Test** 2017–2024 | 121 | **+17.25 bp** | — | — | 1.32 / 1.46 | — |
+
+h1/h2 train bruto +3.98 / +17.91; test bruto **−11.88** / +45.91 (test h1 bruto <0 → half FAIL). Netto train mean +15.59 (swap credit); alfa-maatstaf blijft bruto.
+
+**Uitkomst: FAIL_T** — cost-gate+stress PASS; formal day-clust t train **1.15 < 2.0** én test t 1.32 < 2; test h1 bruto <0. **1 trial** (TRIAL **455**). Geen klonen (geen L20/L120-grid, geen USDCNH-add, geen short-been, geen 5d-retune).
+
+**Dead/FAIL += FX_USDJPY_MED_TSMOM (PREREG_FTMO_FX_USDJPY_MED_TSMOM)**. Skip her-gate FX_EUR_SHORT/IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59/N67/N68/P1.
+
+**TRIAL_COUNT 454 → 455.** TRIALS.csv append-only.
+
+**U2 next:** IDLE wacht Strateeg/S2 D-097/D-100 B/C/D PASS→PREREG (N72–N74 of andere; geen family-A / USDJPY_MED / FX_EUR_SHORT klonen; N58 alleen na swap-redesign); geen S2-BTC stap2 inventeren. Material via NEXT_STEPS voor Manager/CTO/Auditor (geen Sandro-ping).
+
+## Cyclus 12:30–12:45 CEST (2026-10-01) — C-027 FX_EURJPY_MED_TSMOM gate → FAIL_T (TRIAL 456)
+
+**Branch:** `claude/uitvoerder2-r` — merge `origin/claude/uitvoerder2-r` @ `910d6ff` (USDJPY_MED FAIL_T; TRIAL 455). CTO `e0f3c44` **C-027**: USDJPY_MED FAIL_T absorb + **`PREREG_FTMO_FX_EURJPY_MED_TSMOM`** (N72; D-100 cheap long side). N73/N74 DIAG_FAIL → niet gePRERE'd. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- Remote `origin/claude/uitvoerder2-r` @ `910d6ff`: USDJPY_MED FAIL_T (TRIAL 455); merge → conflict-free ort
+- CTO `e0f3c44` **C-027**: N72 EURJPY solo; L60/H10 long; D-100 cheap overnight long; geen USDJPY-retune / N73-N74 (DIAG_FAIL); geen short-been; geen klonen bij FAIL
+
+### Prio — PREREG EURJPY_MED (CTO e0f3c44) → cost-gate PASS → formal FAIL_T
+
+**PREREG gecommit (CTO):** `e0f3c44` — `PREREG_FTMO_FX_EURJPY_MED_TSMOM.md` + `scripts/fx_eurjpy_med_tsmom_gate.py` (PREREG vóór resultaat; bron `grok/cto-1` @ `e0f3c44`). Artefacts: `results/R2/fx_eurjpy_med_tsmom/`.
+
+| Window | N | mean bruto | gate 3× (drempel 3.30) | stress | t day-clust / NW-L5 | Uitkomst |
+|--------|--:|-----------:|-----------------------:|-------:|--------------------:|----------|
+| **Train** 2003–2016 | 209 | **+7.81 bp** | PASS | **PASS** | 0.55 / 0.59 | — |
+| **Test** 2017–2024 | 132 | **+4.13 bp** | — | — | 0.33 / 0.39 | — |
+
+h1/h2 train bruto +6.18 / +9.42; test bruto **+6.32** / +1.94 (test h2 weak). Cost-gate RT=1.10 bp; swap_long=−0.11 bp/night (earn) → zeroed in gate. Gate threshold = 3× 1.10 = **3.30 bp PASS** (7.81 > 3.30).
+
+**Uitkomst: FAIL_T** — cost-gate+stress PASS; formal day-clust t train **0.55 ≪ 2.0** én test t 0.33 < 2; prior C-027 diag t≈0.55 bevestigd. **1 trial** (TRIAL **456**). Geen klonen (geen L20/L120-grid, geen USDJPY-retune, geen short-been, geen 5d-retune; geen N73–N74-add want DIAG_FAIL).
+
+**Dead/FAIL += FX_EURJPY_MED_TSMOM (PREREG_FTMO_FX_EURJPY_MED_TSMOM; N72)**. L60/H10 FX medium-term long family (N72–N74 + USDJPY_MED) exhausted; geen klonen.
+
+**TRIAL_COUNT 455 → 456.** TRIALS.csv append-only.
+
+**U2 next:** IDLE wacht Strateeg/CTO/Manager nieuw PREREG (NEXT_STEPS v75). Geen klonen van N72–N74/USDJPY_MED/EURJPY_MED/FX_EUR_SHORT/IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N58–N60/N67–N68. N58 alleen na swap-side redesign + PASS→PREREG.
+
+## Cyclus 12:50–13:05 CEST (2026-10-01) — N78 VIX_TERM_VOV gate → FAIL_COST_GATE (TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r` — merge `origin/main` @ `06c0079` (NEXT_STEPS v76 / C-028). Lane-B PREREG from Faraday `6c9cdca` (S2 `b765613c` C-028 Lane-A). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `PREREG_FTMO_N78_VIX_TERM_VOV.md` (Faraday `6c9cdca`): US100cash; vov10/combo; gate **7.83 bp** = 3×(0.66+1.95); train 2021–23 / test 2024; N≥150; geen retune
+- Lane-A @ `b765613c`: NDX bruto **6.80** / day_t **2.91** — **geen** PASS (expliciet in PREREG)
+- Signal: Yahoo `data/daily/VIX9D.csv` + `VIX3M.csv` + `VIX.csv`; PnL: FTMO `data/daily/US100cash.csv` (D1)
+
+### Prio — PREREG N78 VIX_TERM_VOV → cost-gate FAIL → STOP
+
+**PREREG gecommit (vóór resultaat):** `52a5212` — `PREREG_FTMO_N78_VIX_TERM_VOV.md` + `results/lane_b/VIX_TERM_VOV_SOURCE.md`. Artefacts: `results/R2/vix_term_vov_n78/`. Script: `scripts/n78_vix_term_vov_gate.py`.
+
+| Window | N | mean bruto | gate 7.83 | stress 11.75 | t day-clust / NW-L5 (netto) | Uitkomst |
+|--------|--:|-----------:|----------:|-------------:|----------------------------:|----------|
+| **Train** 2021–2023 | 492 | **+2.21 bp** | **FAIL** | FAIL | 0.12 / 0.14 | STOP |
+| **Test** 2024 | 150 | **+8.01 bp** | — | — | 0.81 / 0.80 | (niet formeel; gate FAIL) |
+
+Year-split train bruto: 2021 **+3.43** / 2022 **−8.25** / 2023 **+9.21**. Frac full/half 0.25/0.75. Mean cost ~1.63 bp (pos-scaled).
+
+**Uitkomst: FAIL_COST_GATE** — train mean bruto **2.21 ≪ 7.83**; N=492≥150 OK. Formal t niet als PASS-pad (STOP). Informatief: bruto day-clust t 0.45 / NW 0.54 ≪ 2. Bevestigt Lane-A waarschuwing (NDX 6.80 onder FTMO-gate). **1 trial** (TRIAL **457**). Geen retune (geen vov20, geen threshold-grid, geen US500-first fallback).
+
+**Dead/FAIL += N78_VIX_TERM_VOV (PREREG_FTMO_N78_VIX_TERM_VOV)**. Skip her-gate VIX_TERM_VOV / vov-window / US500-first / FX_EURJPY_MED / USDJPY_MED / FX_EUR_SHORT / IDX_SHORT / ENERGY / TSMOM_DIV / N35–N41 / GBPJPY / N58–N60 / N67–N68 / N72–N74.
+
+**TRIAL_COUNT 456 → 457.** TRIALS.csv append-only.
+
+**U2 next:** IDLE wacht Strateeg/CTO/Manager nieuw PREREG (NEXT_STEPS). Geen klonen van N78/VIX_TERM_VOV of prior dead sleeves.
+
+## Cyclus 12:52–13:00 CEST (2026-10-01) — D-090 IDLE + N78 bookkeeping fix (TRIAL blijft 456)
+
+**Branch:** `claude/uitvoerder2-r` — tip pre-cycle `b998253` (N78 FAIL_COST_GATE foutief als TRIAL 457). Ort-merge `origin/main` @ `77d78b1` (NEXT_STEPS **v78**; Manager 12:53 CEST). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `origin/main:NEXT_STEPS.md` **v78**: N78 FAIL_COST_GATE = **geen trial** (patroon ENERGY/IDX_SHORT/TSMOM_DIV); TRIAL_COUNT blijft **456**; U2 = bookkeeping fix + IDLE tot N75–N77 / CORN Lane-B PREREG; geen N78-klonen; L60 FX-med BARRED
+- Faraday `436fc9e` ~12:50: geen nieuws; N75–N77 OPEN pre-screen (VOORSTEL only, **geen** PREREG); N78 al gePRERE'd/gated
+- CTO `802b7b8` C-028 DELIVERED; S2 tip drought — geen nieuwe Lane-B PREREG voor U2
+- BESLUITEN-bron: D-094…D-100 + C-028 actief (geen nieuwe D-*)
+
+### Bookkeeping (Manager v78 bindend)
+
+1. **TRIAL_COUNT.md:** N78-logregel → **0** varianten; lopend totaal **456** (was 457).
+2. **TRIALS.csv** N78-rij: `fase=ongeldig`; beslissing gelabeld `ongeldig: FAIL_COST_GATE telt niet … TRIAL_COUNT blijft 456` (append-only; rij niet gewist; p leeg → buiten BH).
+3. **Dead += N78_VIX_TERM_VOV** (bevestigd; geen her-gate / geen vov-retune / geen US500-first).
+
+### Gates deze cyclus
+
+**Geen** nieuwe PREREG klaar (N75–N77 nog Strateeg pre-screen; CORN Lane-B ≠P1 / later). Skip her-gate dead set (N78 + L60 FX-med + FX shorts + ENERGY + IDX_SHORT + TSMOM_DIV + N35–N41 + GBPJPY + N72–N74 + …).
+
+**TRIAL_COUNT blijft 456** (erratum van 457). Geen formal trial.
+
+**U2 next:** IDLE wacht Strateeg Lane-B PASS→PREREG (N75–N77 of CORN) of CTO/Manager nieuw non-clone PREREG. Material via NEXT_STEPS absorb (Manager al v78); quiet naar Sandro.
+
+
+## Cyclus 13:21–13:25 CEST (2026-10-01) — N80 UKOIL OVN-gap cont gate → FAIL_COST_GATE
+
+**Branch:** `claude/uitvoerder2-r` — FF-merge `origin/main` @ `69444b5` (NEXT_STEPS **v80**; C-029 absorb; N80 OPEN). Tip pre-cycle `40d770a` (N78 bookkeeping; TRIAL **456**). PREREG land `c8145b2` from Faraday `23c3741`. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v80** (Manager 13:10 CEST): U2 wake op PASS→PREREG **N80**; skip N75–N78/N81/CORN; geen VIX_TERM-klonen; TRIAL_COUNT **456**; Dead += N78
+- `PREREG_FTMO_N80.md` (Strateeg Faraday `23c3741` / D-092.1 PASS): UKOILcash |gap|≥40 @08:00 vs prior ≤22:00 → continuation; flat 17:00 CET; stop formal 1.5×ATR14(H1); gate **8,13** bp (3× RT 2,71); stress 12,20; train 2021–23; N≥150; FAIL→STOP geen retune; FAIL_COST_GATE ≠ trial (C-029)
+- D-092.1 pre-screen (no stop): N=415 mean bruto **+12,26** ≥ 8,13 → PASS_may_PREREG — **niet** automatic U2 PASS
+
+### Gate N80 (scripts/n80_cost_gate_trial.py)
+
+| Window | N | mean bruto | gate 8.13 | stress 12.20 | t day-clust / NW-L5 (netto) | Uitkomst |
+|--------|--:|-----------:|----------:|-------------:|----------------------------:|----------|
+| **Train** 2021–2023 | 415 | **+7.56 bp** | **FAIL** | FAIL | 0.68 / 0.69 | STOP |
+| **Test** 2024 | — | — | — | — | — | (niet gerund; gate FAIL) |
+
+Year-split train bruto: 2021 **+25.26** / 2022 **−0.46** / 2023 **−3.63**. Long/short n 231/184. Stop-share **0.45** (stop included → mean daalt vs pre-screen +12.26). Halves h1/h2 bruto +19.08 / −3.90. Reserve 2025 untouched.
+
+**Uitkomst: FAIL_COST_GATE** — train mean bruto **7.56 < 8.13**; N=415≥150 OK. Formal t niet als PASS-pad (STOP). counts_as_trial=**false**. Geen retune (geen gap-threshold grid, geen USOIL twin, geen overnight-hold, geen softer gate).
+
+**Dead/FAIL += N80_UKOIL_OVN_GAP_CONT (PREREG_FTMO_N80)**. Dead += N78 (al). **N75–N77 alleen laten** (DIAG_FAIL; niet killen als klonen). Skip her-gate N80 / N78/VIX_TERM / N75–N77 / CORN / L60 FX-med / ENERGY / IDX_SHORT / TSMOM_DIV / N18 / N22.
+
+**TRIAL_COUNT blijft 456** (FAIL_COST_GATE ≠ trial; C-029 / N78-erratum patroon ENERGY/IDX_SHORT/TSMOM_DIV). Geen TRIALS-append.
+
+**U2 next:** IDLE wacht Strateeg/CTO/Manager nieuw PASS→PREREG (NEXT_STEPS). Geen klonen van N80/N78/VIX_TERM of prior dead sleeves.

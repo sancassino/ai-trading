@@ -1,0 +1,54 @@
+{
+  "idea": "N80_UKOIL_OVN_GAP_CONT",
+  "prereg": "PREREG_FTMO_N80.md",
+  "source_strateeg": "23c3741",
+  "branch_source": "claude/trusting-faraday-34tsmg",
+  "instrument": "UKOILcash",
+  "rt_bp": 2.71,
+  "gate_bp": 8.129999999999999,
+  "stress_bp": 12.195,
+  "outcome": "FAIL_COST_GATE",
+  "counts_as_trial": false,
+  "train": {
+    "window": "train",
+    "N": 415,
+    "mean_bruto": 7.5625,
+    "median_bruto": -34.5433,
+    "mean_netto": 4.8525,
+    "gate": 8.129999999999999,
+    "stress": 12.195,
+    "gate_pass": false,
+    "stress_pass": false,
+    "t_day_clust_netto": 0.6772,
+    "t_nw_L5_netto": 0.6862,
+    "t_day_clust_bruto": 1.0554,
+    "t_nw_L5_bruto": 1.0695,
+    "mean_h1_bruto": 19.0757,
+    "mean_h2_bruto": -3.8952,
+    "mean_h1_netto": 16.3657,
+    "mean_h2_netto": -6.6052,
+    "stop_share": 0.4482,
+    "n_long": 231,
+    "n_short": 184,
+    "date_min": "2021-01-05",
+    "date_max": "2023-12-22",
+    "years": {
+      "2021": {
+        "N": 144,
+        "mean_bruto": 25.26
+      },
+      "2022": {
+        "N": 153,
+        "mean_bruto": -0.4648
+      },
+      "2023": {
+        "N": 118,
+        "mean_bruto": -3.626
+      }
+    }
+  },
+  "test": null,
+  "reserve_2025": "untouched",
+  "no_retune": true,
+  "note": "pre-screen D-092.1 omitted stop (mean +12.26); gate re-measure includes 1.5\u00d7ATR14(H1)"
+}

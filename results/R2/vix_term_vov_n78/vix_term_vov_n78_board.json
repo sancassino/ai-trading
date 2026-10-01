@@ -1,0 +1,74 @@
+{
+  "prereg": "PREREG_FTMO_N78_VIX_TERM_VOV.md",
+  "decision": "D-100",
+  "c": "C-028",
+  "family": "VIX_TERM_VOV",
+  "universe": [
+    "US100cash"
+  ],
+  "rule": "vov10/combo; term=VIX9D/VIX3M; pos +1 if term>1 OR vov_z>1.25 else +0.5 if term<0.90 AND vov_z<-0.25; hold=1d",
+  "signal_source": "Yahoo VIX9D/VIX3M/VIX via data/daily/ (Lane-A/C-028 proxy OK)",
+  "pnl_source": "FTMO US100cash D1 data/daily/US100cash.csv",
+  "gate_bp": 7.83,
+  "gate_stress_bp": 11.745,
+  "costs": {
+    "rt_bp": 0.66,
+    "swap_long_bp": 1.95,
+    "n_nights": 1
+  },
+  "outcome": "FAIL_COST_GATE",
+  "counts_as_trial": true,
+  "reserve_2025": "untouched",
+  "train": {
+    "label": "train",
+    "N": 492,
+    "mean_bruto_bp": 2.2095,
+    "mean_netto_bp": 0.5836,
+    "mean_cost_bp": 1.6259,
+    "gate_threshold_bp": 7.83,
+    "gate_3x": false,
+    "stress_threshold_bp": 11.745,
+    "stress_pass": false,
+    "t_day_clust_bruto": 0.4483,
+    "t_nw_L5_bruto": 0.5372,
+    "t_day_clust_netto": 0.1184,
+    "t_nw_L5_netto": 0.1418,
+    "mean_h1_bruto": -1.2096,
+    "mean_h2_bruto": 5.6287,
+    "mean_h1_netto": -2.8382,
+    "mean_h2_netto": 4.0054,
+    "by_year_bruto": {
+      "2021": 3.4327,
+      "2022": -8.2505,
+      "2023": 9.2076
+    },
+    "frac_full": 0.2459,
+    "frac_half": 0.7541
+  },
+  "test": {
+    "label": "test",
+    "N": 150,
+    "mean_bruto_bp": 8.0079,
+    "mean_netto_bp": 6.3027,
+    "mean_cost_bp": 1.7052,
+    "gate_threshold_bp": 7.83,
+    "gate_3x": true,
+    "stress_threshold_bp": 11.745,
+    "stress_pass": false,
+    "t_day_clust_bruto": 1.0321,
+    "t_nw_L5_bruto": 1.0122,
+    "t_day_clust_netto": 0.8127,
+    "t_nw_L5_netto": 0.7972,
+    "mean_h1_bruto": 7.2145,
+    "mean_h2_bruto": 8.8012,
+    "mean_h1_netto": 5.7529,
+    "mean_h2_netto": 6.8524,
+    "by_year_bruto": {
+      "2024": 8.0079
+    },
+    "frac_full": 0.3067,
+    "frac_half": 0.6933
+  },
+  "d094a": "(b) VIX term/VoV equity timing literature/proxy \u226510y; FTMO US100 tests cost+swap+execution",
+  "lane_a_note": "Lane-A NDX bruto 6.80 / day_t 2.91 is NOT a PASS; this run re-measures FTMO US100"
+}

@@ -75,3 +75,8 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-10-01 | N36/PREREG_FTMO_N36: XAU NY-open drive (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 451 |
 | 2026-10-01 | N40/PREREG_FTMO_N40: GER40 mid-morning mom cont (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 452 |
 | 2026-10-01 | N41/PREREG_FTMO_N41: US30 EU→US cont (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 453 |
+| 2026-10-01 | FX_EUR_SHORT/PREREG_FTMO_FX_EUR_SHORT_TSMOM: EURUSD+EURAUD short-only L20/H10 (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 454 |
+| 2026-10-01 | FX_USDJPY_MED/PREREG_FTMO_FX_USDJPY_MED_TSMOM: USDJPY long-only L60/H10 (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 455 |
+| 2026-10-01 | FX_EURJPY_MED/PREREG_FTMO_FX_EURJPY_MED_TSMOM: EURJPY long-only L60/H10 (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 456 |
+| 2026-10-01 | N78/PREREG_FTMO_N78_VIX_TERM_VOV: US100cash vov10/combo (kostenpoort STOP mean bruto 2.21 < 7.83; **ongeldig/telt niet** per NEXT_STEPS v78 / C-028 — FAIL_COST_GATE ≠ trial) | 0 | 456 |
+| 2026-10-01 | N80/PREREG_FTMO_N80: UKOIL OVN-gap cont EOD-flat (kostenpoort STOP mean bruto 7.56 < 8.13; **ongeldig/telt niet** per NEXT_STEPS v81 / C-029 — FAIL_COST_GATE ≠ trial) | 0 | 456 |
