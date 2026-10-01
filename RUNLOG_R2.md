@@ -1406,3 +1406,37 @@ Rules frozen = `n35_n37_prescreen` sims (N36 data file `XAUUSD.csv.gz`; PREREG t
 **TRIAL_COUNT unchanged (453).**
 
 **U2 next:** wacht Strateeg/S2 D-092.1-PASS → PREREG op N45–N48 (of D-097 non-clone). Quiet — no Sandro-ping (Manager/CTO via NEXT_STEPS).
+
+## Cyclus 10:25–10:31 CEST (2026-10-01) — D-090 ACTIEF: D-098 PREREG_FTMO_TSMOM_DIV gate → FAIL_COST_GATE
+
+**Branch:** `claude/uitvoerder2-r` — ort-merge `origin/main` @ `1f6b53f` (NEXT_STEPS **v70**; D-098; C-022). Tip pre-merge `bff9569` (idle v69). Merge commit `7dfef9c`. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v70** (Manager 10:13 CEST): Freeze **OFF**; U2 **ACTIEF** — gate `PREREG_FTMO_TSMOM_DIV` (universe freeze → kostenpoort → toets); TRIAL_COUNT **453**
+- `PREREG_FTMO_TSMOM_DIV.md` (CEO `ac17e0d` / D-098): 12-1 TSMOM, 40+ instr, ≥10j proxy, maandelijkse rebalance; train 2008–2016 / test 2017–2024; kostenpoort 3×; t≥2 beide helften; ≥2/3 klassen +; N_maand≥150
+- BESLUITEN D-098 (`ac17e0d` @ `claude/ftmo-trading-strategy-98mplz`): U2 kostenpoort+toets; CTO ftmo_ev na PASS; geen klonen bij FAIL
+
+### Actie
+1. **Universe freeze** → `results/R2/tsmom_div/universe.csv` (n=**56**: fx22 / indices14 / energie_agri11 / metalen9). Bron `PROXY_MAP_FTMO.csv` `10j_plus=ja`; barred stock/crypto; FX-exotics (non-G8) excluded. Exclusions log: `universe_exclusions.csv`.
+2. **Kostenpoort + toets** — script `scripts/tsmom_div_cost_gate_trial.py`. Artefacts: `results/R2/tsmom_div/` (board/report/daily/month_trades).
+
+| Metric (train 2008–2016) | Waarde |
+|--------------------------|-------:|
+| loaded proxies | 56/56 |
+| N_month / N_trades | 107 / 5962 |
+| mean bruto bp/unit-trade | **−5.73** |
+| mean cost bp (RT+swap) | 45.12 |
+| gate 3× cost | **FAIL** (−5.73 ≱ 3×45.12) |
+| stress +50% swap | FAIL |
+| t day-clust netto | −2.00 |
+| klassen + | 0/4 |
+
+Test 2017–2024 (informatief na gate-fail): mean bruto −2.67 bp; t netto −2.39; 0/4 klassen +.
+
+**Uitkomst: FAIL_COST_GATE** — per PREREG §4.1 STOP, **geen trial**. (Unit-trade bruto al negatief → poort faalt onafhankelijk van kostniveau; port-bruto dagelijks licht + maar swap/RT vreet edge — in lijn met C01 kostenpoort-FAIL.)
+
+**Dead/FAIL += TSMOM_DIV (PREREG_FTMO_TSMOM_DIV)** — geen lookback-/universum-klonen. Skip her-gate N35–N41/GBPJPY/P1/N44.
+
+**TRIAL_COUNT unchanged (453).**
+
+**U2 next:** wacht Strateeg/S2 D-097/C-022 energy PREREGs of andere non-clone PASS→PREREG; N45–N48 secondary alleen ≥50 bp + PASS. Material via NEXT_STEPS voor Manager/CTO (geen Sandro-ping).
