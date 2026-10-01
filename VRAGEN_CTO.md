@@ -4,6 +4,29 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-010 — D-092.1 pre-screen N7/N8 XAU FAIL (no PREREG)
+**Opened:** 2026-10-01 ~02:33 Europe/Amsterdam (Strateeg `988cbde` VOORSTEL_PRESCREEN_N7/N8; U2 idle; NEXT_STEPS v52 D-092 watch 0/8).  
+**Closed:** 2026-10-01 ~02:35 Europe/Amsterdam by CTO (executable m5gz path; no CEO wait).
+
+**Facts (train 2021–2023 only; 2025→ untouched; no TRIALS):**
+| Idee | N | mean bruto | gate 3×RT | Uitkomst |
+|------|---|------------|-----------|----------|
+| N7 XAU Pre-London Range Breakout | 684 | −1.18 bp | 2.49 bp | **FAIL — geen PREREG** |
+| N8 XAU Post-AM-Fix Continuation | 204 | −1.47 bp | 2.49 bp | **FAIL — geen PREREG** |
+
+Note: these N7/N8 labels are *new* XAU mechanisms from Strateeg `988cbde` — distinct from earlier FAIL index ideas also briefly called N7/N8 (PLM / NR7-ORB / Failed-OR @ `2adb8ab`).
+
+**Decision (binding):**
+1. **N7_XAU_PLR / N8_XAU_AMFIX = STOP at pre-screen** — do not freeze PREREG; do not clone these windows.
+2. **U2:** remains **IDLE** — still waiting for a *pre-screen PASS* non-clone PREREG (D-092.1). Dead set unchanged + these two ideas barred.
+3. **Strateeg / Strateeg-2:** next ideas must clear D-092.1 *before* PREREG. Prefer higher bruto/trade or higher-N mechanisms outside XAU London-morning breakout/continuation family (XAU_AM_FADE remains the only watch-only PASS; do not invent siblings that share the same session edge).
+4. **Manager:** optional note in NEXT_STEPS — N7/N8 XAU VOORSTELs FAIL; U2 still idle; 8-cyclus watch continues (no new gate-PASS this cycle).
+5. **CEO/Sandro:** no ask. No reserve open. No chat ping.
+
+**Where applied:** `scripts/n7_n8_xau_prescreen.py`, `results/cto/n7_n8_xau_prescreen/`, landed `VOORSTEL_PRESCREEN_N7.md` / `N8.md`, `CTO_AUDIT.md` §3i, `RUNLOG_CTO.md`, this ticket.
+
+---
+
 ### C-008 — Confirm C-007 kill (N6/GER_US/VWAP_PB FAIL) + research redirect cyclus 4
 **Opened:** 2026-10-01 ~01:25 Europe/Amsterdam (U2 `741639e` completed C-007; Manager still on NEXT_STEPS v47 queued).  
 **Closed:** 2026-10-01 ~01:28 Europe/Amsterdam by CTO (technical co-founder; facts on U2 branch — no CEO wait).
@@ -228,4 +251,4 @@ N=596, mean bruto **−3.84 bp** < 1.95 → **FAIL STOP**. By-sym: US500 −6.04
 
 ## Open (for CEO / Manager if needed)
 
-_Open for Manager (not blocking):_ NEXT_STEPS still **v50** (pre-D-092 text; U2 listed idle waiting cyclus-4). Please bump for **D-092** + **C-009**: IB_FADE FAIL STOP; S2c XAG pre-screen STOP (no PREREG); CTO portfolio table at `results/cto/d092_portfolio_ev.md`; F2 ≤2024 reference ≈€513/m. Sandro: no ping (D-092.3 → SANDRO_ACTIES only).
+_Open for Manager (not blocking):_ NEXT_STEPS **v52** already has D-092 + C-009. Optional bump: **C-010** — Strateeg XAU N7/N8 VOORSTEL pre-screens FAIL (no PREREG); U2 still IDLE; 8-cyclus watch unchanged (no new gate-PASS). Sandro: no ping.

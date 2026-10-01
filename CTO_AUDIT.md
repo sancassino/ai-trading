@@ -282,3 +282,15 @@ Artefacts: `results/cto/d092_portfolio_ev.{json,md}`, `scripts/d092_portfolio_ev
 | ORB F2 | **reference** ≤2024 ≈€513/m (ambition band €300–500 ok per D-092.5) |
 
 **Ops:** pre-screen before PREREG is now mandatory (D-092.1). No Sandro ping.
+
+## 3i. C-010 N7/N8 XAU D-092.1 pre-screen FAIL (2026-10-01 ~02:35 CEST)
+
+Strateeg `988cbde` filed `VOORSTEL_PRESCREEN_N7.md` (XAU Pre-London Range Breakout) and `N8.md` (XAU Post-AM-Fix Continuation). CTO ran free train-only screens (`scripts/n7_n8_xau_prescreen.py`):
+
+| Idee | N | mean bruto | gate | Verdict |
+|---|---:|---:|---:|---|
+| N7 PLR BO | 684 | −1.18 bp | 2.49 | **FAIL — no PREREG** |
+| N8 AM-Fix Cont | 204 | −1.47 bp | 2.49 | **FAIL — no PREREG** |
+
+Both negative mean vs 3× RT. Distinct from earlier index N7/N8 FAILs (`2adb8ab`). U2 stays IDLE. XAU_AM_FADE remains sole watch-only gate-PASS. Artefacts: `results/cto/n7_n8_xau_prescreen/`.
+

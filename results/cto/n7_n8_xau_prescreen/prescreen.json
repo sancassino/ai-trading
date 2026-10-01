@@ -1,0 +1,35 @@
+{
+  "n7": {
+    "idea": "N7_XAU_PRELONDON_RANGE_BO",
+    "n": 684,
+    "mean_bruto_bp": -1.1809,
+    "median_bruto_bp": -1.71,
+    "p25": -14.5348,
+    "p75": 9.2124,
+    "stop_share": 0.1988,
+    "rt_bp": 0.83,
+    "gate_3x_rt": 2.4899999999999998,
+    "pass": false,
+    "date_min": "2021-01-04",
+    "date_max": "2023-12-29",
+    "decision": "NO_PREREG_screen_fail",
+    "reserve_2025": "untouched"
+  },
+  "n8": {
+    "idea": "N8_XAU_POST_AMFIX_CONT",
+    "n": 204,
+    "mean_bruto_bp": -1.4716,
+    "median_bruto_bp": -3.1308,
+    "p25": -14.7634,
+    "p75": 12.2025,
+    "stop_share": 0.0,
+    "rt_bp": 0.83,
+    "gate_3x_rt": 2.4899999999999998,
+    "pass": false,
+    "date_min": "2021-01-21",
+    "date_max": "2023-12-28",
+    "decision": "NO_PREREG_screen_fail",
+    "reserve_2025": "untouched"
+  },
+  "source": "VOORSTEL_PRESCREEN_N7/N8 @ 988cbde"
+}

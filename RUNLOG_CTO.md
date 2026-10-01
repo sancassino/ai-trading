@@ -412,3 +412,44 @@ git add PREREG_S2_IB_FADE.md scripts/d092_portfolio_ev.py results/cto/d092_portf
 git commit -m "CTO: C-009 IB_FADE FAIL + D-092 portfolio EV + XAG/S2c pre-screen STOP"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~02:33 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes. No formal PREREG trial claimed.**
+
+### Team snapshot (since CTO tip `a416fa7` / ~01:53)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v52** — D-092 actief; C-009; S2c dead; 8-cyclus watch **0/8**; U2 idle |
+| U2 `fa19cb0` | IDLE check — waiting pre-screened non-clone PREREG |
+| Strateeg `988cbde` | Prior index N7/N8/GS01 pre-screens FAIL (`2adb8ab`); **new** XAU VOORSTEL N7/N8 pre-screen requests |
+| Strateeg-2 `48249ad` | IB_FADE delivered (now FAIL); no newer tip |
+| CEO | D-092 on `claude/ftmo-trading-strategy-98mplz` (main already synced) |
+
+Merged `origin/main` (v52 + VERSLAG_v52 / P0 log) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **C-010 D-092.1 pre-screens** for Strateeg XAU VOORSTELs (`scripts/n7_n8_xau_prescreen.py`):
+   - **N7** Pre-London Range BO: N=684, mean bruto **−1.18 bp** < 2.49 → **FAIL — geen PREREG**
+   - **N8** Post-AM-Fix Cont: N=204, mean bruto **−1.47 bp** < 2.49 → **FAIL — geen PREREG**
+   - Artefacts `results/cto/n7_n8_xau_prescreen/`; landed VOORSTEL copies.
+2. Docs: `VRAGEN_CTO.md` C-010, `CTO_AUDIT.md` §3i, this log.
+3. No engine change; F2 ≤2024 ≈€513/m reference unchanged.
+
+### Remaining blockers
+
+1. U2 idle — needs pre-screen **PASS** non-clone PREREG (D-092.1). Latest XAU N7/N8 VOORSTELs FAIL.
+2. 8-cyclus stop watch (D-092.6): still early; no new gate-PASS this cycle.
+3. A1/`long_m1` only via `SANDRO_ACTIES.md` — no Sandro ping.
+
+### Git
+
+```
+git add scripts/n7_n8_xau_prescreen.py results/cto/n7_n8_xau_prescreen/ VOORSTEL_PRESCREEN_N7.md VOORSTEL_PRESCREEN_N8.md VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: C-010 N7/N8 XAU D-092.1 pre-screen FAIL (no PREREG)"
+git push origin grok/cto-1
+```
+
