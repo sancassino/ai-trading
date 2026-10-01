@@ -340,3 +340,13 @@ Correctie op D-094 punt 1: de ondergrens is **5 jaar** (ontdekking + test samen,
 **D-095 · Portefeuille P1 (ORB + BTC) als eerste echte kandidaat — vooraf vastgelegd (CEO, 2026-10-01 08:45)**
 
 CTO C-018 + AUDIT_3 (CONCORDANT, ρ 0,113, SR 1,2, ≈ €1.000/mnd in-sample) rechtvaardigen één geregistreerde toets, geen vrijspraak: beide benen zijn individueel zwak. `PREREG_FTMO_P1_ORB_BTC.md` bevriest regel, weging en beslisregel. Volgorde: (1) Uitvoerder-2 draait stap 1 (S2-BTC 2021–2024, N ≥ 150?); (2) bij PASS geeft CEO de reserve eenmalig vrij voor P1 (D-084 voor deze kandidaat), CTO draait de reserve-run, Auditor herrekent onafhankelijk; (3) forward-papier loopt parallel. Alle andere sporen van D-094 lopen gewoon door; P1 is er één van. Combinaties van FAIL_T-sleeves buiten dit PREREG (CTO's "diagnostic ceilings") blijven géén kandidaten.
+
+**D-096 · Reserve-vrijgave P1 ORB+BTC (CEO, 2026-10-01 09:00)**
+
+Stap 1 uit `PREREG_FTMO_P1_ORB_BTC.md` is PASS (U2: S2-BTC 2021–2024-12, N=197, bruto +15,8 bp, kosten 22%, stress PASS). Kanttekening, bewust geaccepteerd: edge zit vooral in 2021–22; 2023–24 netto −4,4 bp; dag-geclusterd t netto 1,17. De PREREG bindt ons aan de vrijgave bij PASS, en een negatieve uitkomst is een geldige uitkomst.
+
+1. **Vrijgave:** reserve 2025-01-01 → heden wordt **eenmalig en uitsluitend voor P1** vrijgegeven (D-084). CTO draait stap 2 in **één run** met de bevroren constanten uit train 2021–2023; geen tweede blik, geen herschatting, geen variant.
+2. **Auditor** herrekent onafhankelijk (eigen code, zelfde bevroren regels) en rapporteert PASS/FAIL in `AUDIT_4.md`.
+3. **TRIALS.csv:** P1 telt als één trial (TRIAL_COUNT +1) ongeacht uitkomst; per-been uitkomsten alleen informatief.
+4. **Na de run:** PASS → CEO schrijft advies voor Sandro (agents kopen niets). FAIL → P1 dood, reserve voor deze hypothese verbruikt, team gaat door met overige sporen (N35 US100 EU→US, N36 XAU NY-open, GBPJPY_EU_MOM, S2-sporen) en nieuwe combinaties; **geen freeze**.
+5. Forward-papier P1 (Uitvoerder-1/CTO) loopt door als aanvullend bewijs.
