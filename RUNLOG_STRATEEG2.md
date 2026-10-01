@@ -224,3 +224,30 @@
 - **D-092.1 pre-screens deze cyclus:** **geen** — D-093.2 verbiedt nieuwe pre-screens tot Sandro/CEO heropent.
 - **Nieuw PREREG deze cyclus:** **geen** — D-093 freeze; quality>quantity; geen filler. Geen engine-run / geen 2025+ touch.
 - Volgende: stilten / onderhoud 1×/4u; heropenen alleen op long_m1 (HistData A-001/M-001) of nieuw CEO-besluit. Geen Sandro re-nag (C-017).
+
+## 2026-10-01 ~08:45 Europe/Amsterdam — Hourly cycle (:40 slot) / D-094 FREEZE OFF — full cadence
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ 52caf6a (reset hard → origin; was D-093 onderhoud). Branch bevestigd ≠ main/uitvoerder.
+- **Refresh (read-only, geen merge van exclusieve agent-files):**
+  - `BESLUITEN.md` via `origin/claude/ftmo-trading-strategy-98mplz` @ c7c5c43: **D-083…D-095** bindend; **D-094** FREEZE OFF (D-093 + D-092.6 + 1×/4u ingetrokken); **D-094a** ≥5j of a/b/c; **D-095** P1 ORB+BTC (U2 stap1). Reserve 2025+ onaangeraakt zonder CEO per kandidaat.
+  - `CEO_LOG` (zelfde tip): D-094/D-094a/D-095 uitgevaardigd ~08:00–08:27; P1 parallel; andere D-094-sporen door.
+  - `NEXT_STEPS` **v66** (`origin/main` @ 67e9bf0, 08:35 CEST): S2 tip nog D-093-onderhoud → **nu volle D-094 cadans**; meetlat ≥3 bruto-screens/cyclus; FAIL-set += N24–N34; OPEN Faraday **N35–N37** (niet klonen); U2 prio = D-095 S2-BTC step1.
+  - `STRATEGIE_CATALOGUS.md` §9–§10 (`origin/claude/trusting-faraday-34tsmg` @ 7ede6d0): N24–N34 FAIL; OPEN N35–N37; S2 tip `52caf6a` als achterstallig genoteerd.
+  - CTO `origin/grok/cto-1` @ 06079a0: **C-019** absorb D-095; wait U2 step1; geen reserve.
+  - U2 tip `edf3acc`: idle na N24–N27 FAIL; wacht/next = S2-BTC D-095 stap1.
+  - `origin/grok/strateeg-1`: GS01/GS02 ongewijzigd.
+- **SymbolList_FTMO / costs:** 166 symbolen (+header); COSTS kern RT US30 0,45 / US100 0,66 / GER40 0,72 / US500 0,78 / XAU 0,83 / EURUSD 0,63 / GBPUSD 0,70 / USDJPY 0,78 / EURGBP **1,04** / EURJPY 1,10 / GBPJPY **1,11** / EURAUD 1,11 (alle); AUS200 1,36 / UK100 1,42 / JP225 1,51 / BTCUSD 1,25 / EU50 2,96 / XAG 5,07 / ETH 7,98. Geen XAG/ETH-scalp; geen overnight maand-sleeves. Naming `US30.cash` ↔ `US30cash` OK. m5gz via lokale symlink naar U2-lake (niet gecommit).
+- **Catalog-overlap / dode sleeves (niet heropenen/klonen):** A4/B1/A5/A2, ORB/simple ORB, N1–N34, S2 XAU-overlap/GER40-open/USDJPY/USOIL, MIDDAY_VWAP, S2b, GER_US_LEAD, VWAP_PB, IB_FADE, S2c-shape, LUNCH_OPEN, FAIL pre-screens PLM/NR7/Failed-OR/GS01-pooled/XAU N7+N8/N9/N19/N20–N34, prior S2 fails GAP_CONT_FADE/LATE_EXT_FADE/LONDON_WIDE_NY_FADE/OPEN_RECLAIM/GER_MID_FADE/JP_TOKYO_FADE/WIDEOPEN_PB/US30_LEAD_US100/BTC_ASIA_FADE/USDCHF_LONDON_FADE/USDCAD_LONDON_FADE/AUDUSD_ASIA_BO/FAILED_PDH/BTC_LONDON_FADE/UK_AM_FADE underpowered/EUR_NY_FADE. **N35–N37 Faraday queue niet gedupliceerd.** Watch-only: XAU_AM_FADE, S2-BTC (U2 D-095) onaangeraakt.
+- **D-092.1 pre-screens deze cyclus** (train 2021–23, reserve onaangeraakt; artefacts `results/strateeg2_prescreen/cycle_0840*`; script `scripts/s2_d092_prescreen_cycle0840.py`):
+
+  | Idee | Symbool | N | mean bruto | gate | Uitkomst |
+  |------|---------|--:|----------:|-----:|----------|
+  | EURGBP_LON_SPIKE_FADE | EURGBP | 37 | +2,23 bp | 3,12 | **FAIL** |
+  | AUS200_ASIA_RANGE_BO | AUS200cash | 352 | −2,59 bp | 4,08 | **FAIL** |
+  | UK100_AM_MOM_CONT | UK100cash | 189 | −1,42 bp | 4,26 | **FAIL** |
+  | EURAUD_LON_EXT_FADE | EURAUD | 105 | −0,59 bp | 3,33 | **FAIL** |
+  | GBPJPY_EU_MOM | GBPJPY | 170 | +3,41 bp | 3,33 | **PASS** |
+
+- **Nieuw PREREG deze cyclus:** **ja** — `PREREG_S2_GBPJPY_EU_MOM.md` (frozen gates vóór verdere cherry-pick; D-094a (b) historie-notitie; N=170≥150). Geen engine-run / geen 2025+ touch / geen gefabriceerde test-cijfers.
+- **MATERIAL:** true (nieuwe PREREG).
+- Volgende: U2/CTO land + cost-gate op GBPJPY_EU_MOM; S2 blijft tracks 2+4 voeden (≥3 nieuwe non-clones/cyclus); D-095 S2-BTC = U2 (niet S2).
