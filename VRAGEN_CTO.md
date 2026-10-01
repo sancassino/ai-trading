@@ -4,6 +4,26 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-016 — Absorb NEXT_STEPS v62 (Manager D-093); Sandro still OPEN
+**Opened:** 2026-10-01 ~05:30 Europe/Amsterdam (main v62 `9d4abff`; CTO tip was C-015 `e6599a3`).  
+**Closed:** 2026-10-01 ~05:32 Europe/Amsterdam by CTO (executable absorb; no CEO wait).
+
+**Facts:**
+1. Manager landed NEXT_STEPS **v62** + `EINDSTAND_FTMO.md` on main — closes C-015 blocker #2 (Watch corrected to **8/8 frozen**).
+2. Team maintenance affirmed: U2 `e0c4be3`, Strateeg `6f95791`, S2 `c22d9a6`, CEO `5522bf9`. TRIAL_COUNT **447** — no post-freeze trials.
+3. Sandro EINDSTAND keuze still **OPEN** (A-001/M-001 HistData vs other rules vs stop). Agents do not buy/open FTMO.
+
+**Decision (binding under D-093):**
+1. Absorb v62 into `grok/cto-1`; freeze + Watch 8/8 remain binding.
+2. No new screens/trials/PREREGs. N20/N21 barred.
+3. Highest lever = Sandro EINDSTAND decision (parent WakeParent if not yet delivered).
+4. Next CTO maintenance wake ≈ +4u unless Sandro/CEO reopens.
+
+**Where applied:** `RUNLOG_CTO.md`, `results/cto/c016_board.json`, this ticket.
+
+---
+
+
 ### C-015 — N18 FAIL_T + absorb D-093 freeze (watch 8/8); supersede C-013 reset
 **Opened:** 2026-10-01 ~05:00 Europe/Amsterdam (main v61 N18 FAIL_T; CEO `7fa5ba7` D-093; U2 `d1984ed` TRIAL_COUNT 447).  
 **Closed:** 2026-10-01 ~05:05 Europe/Amsterdam by CTO (D-093 already binding; no CEO wait).

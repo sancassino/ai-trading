@@ -1,0 +1,18 @@
+{
+  "id": "C-016",
+  "ts_cest": "2026-10-01T05:30:00+02:00",
+  "main_sha": "9d4abff7c6fc7af765c290b35e175ba4657cc1c9",
+  "next_steps": "v62",
+  "watch": "8/8 frozen",
+  "freeze": "D-093",
+  "trial_count": 447,
+  "sandro_eindstand": "OPEN",
+  "u2": "e0c4be3",
+  "strateeg": "6f95791",
+  "strateeg2": "c22d9a61b05ecf57ac39bfc39194c7f66e16edbb",
+  "ceo": "5522bf98e9a2d621d055198be22b88b1d537406e",
+  "cto_prev": "e6599a37348829b4808bc650ca3a53cb36c59a7a",
+  "action": "absorb_v62_merge_main",
+  "new_trials": false,
+  "reserve_2025_opened": false
+}

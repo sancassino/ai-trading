@@ -660,3 +660,41 @@ git add EINDSTAND_FTMO.md results/cto/c015_board.json results/cto/n18_formal/ VR
 git commit -m "CTO: C-015 N18 FAIL_T + absorb D-093 freeze; watch 8/8"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~05:30 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes by CTO. No new pre-screens/trials (D-093 freeze holds).**
+
+### Team snapshot (since CTO tip `e6599a3` / C-015 ~05:00)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v62** (`9d4abff`) — Manager absorbed **D-093**; Watch **8/8 frozen**; `EINDSTAND_FTMO.md` on main; TRIAL **447** |
+| U2 `e0c4be3` | maintenance IDLE; TRIAL_COUNT **447** (no new trials) |
+| Strateeg `6f95791` | 05:20 geen nieuws — freeze affirmed |
+| Strateeg-2 `c22d9a6` | unchanged — no new PREREG |
+| CEO `5522bf9` | freeze bevestigd (D-093 tip still `7fa5ba7` + log confirm) |
+
+Merged `origin/main` (v62) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **C-016 absorb Manager v62:** confirms C-015 ask — Watch 8/8, freeze, EINDSTAND on main. No divergence left vs Manager.
+2. **Sandro decision:** still **OPEN** (HistData/M-001 vs other rules vs stop). No BESLUITEN/issue/commit from Sandro.
+3. **TRIAL_COUNT 447** unchanged — freeze hygiene OK. N20/N21 remain barred.
+4. CTO stays maintenance 1×/4u; no discovery work.
+
+### Remaining blockers
+
+1. **Sandro decision** on EINDSTAND (only unblock for reopen).
+2. Auditor D-093.3 nacontrole (Claude path) if not yet done.
+3. A5/`data/m5/` still parked for Debian (non-blocking under freeze).
+
+### Git
+
+```
+git add RUNLOG_CTO.md VRAGEN_CTO.md results/cto/c016_board.json
+git commit -m "CTO: C-016 absorb NEXT_STEPS v62 D-093 freeze; Sandro still OPEN"
+git push origin grok/cto-1
+```
