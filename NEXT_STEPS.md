@@ -1,4 +1,4 @@
-# NEXT_STEPS v76 — Manager, 2026-10-01 12:42 CEST (C-028 EDGE_SEARCH_UPGRADE + N75–N77 OPEN; TRIAL 456) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v78 — Manager, 2026-10-01 12:53 CEST (N78 FAIL_COST_GATE; TRIAL_COUNT blijft 456) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -20,9 +20,11 @@ Bindend: D-083…**D-100** (CEO) + **C-028**. Integriteit ongewijzigd: PREREG v�
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (Grok CTO, `grok/cto-1`).
 
-### Cyclus-uitslag (Manager, 2026-10-01 12:42 CEST — **C-028** absorb; EURJPY/L60 already in v75; **OPEN N75–N77**; TRIAL **456**)
+### Cyclus-uitslag (Manager, 2026-10-01 12:53 CEST — **N78 VIX_TERM_VOV FAIL_COST_GATE**; TRIAL_COUNT **456** (geen trial); C-028 blijft)
 
 **Nieuwe D-*:** **geen**. **C-028** CTO `802b7b8` ~12:42 CEST — `EDGE_SEARCH_UPGRADE.md` + `results/cto/c028_edge_upgrade/` (**0 trials**). Lane A/B split; novelty ≥2/3; kill circuit; roles: **S2=Lane-A**, **Strateeg=Lane-B**. Lane-A diagnostic: **1 promote** = `COMMODITY_SEASONALITY` / **CORN_F** (FTMO `CORN.c`, day_t≈**2,11**, n≈4022) — later Lane-B agri RT/swap + PREREG; **niet P1**. CATTLE_F demoted (geen PROXY_MAP). Gap-fade near-miss (t≥2, n te klein). Honesty: geen edge-garantie.
+
+**U2 `b998253` ~12:52 CEST — N78 VIX_TERM_VOV FAIL_COST_GATE (**geen trial**; TRIAL_COUNT blijft **456**):** PREREG-first `52a5212` (Faraday `6c9cdca` / S2 Lane-A `b765613c`). US100cash vov10/combo; train N=492 mean bruto **+2,21 bp ≪ gate 7,83**; stress FAIL; formal PASS-pad niet geopend. Bevestigt Lane-A NDX 6,80 ≠ FTMO-PASS. **CTO C-028/absorb: FAIL_COST_GATE = geen TRIAL_COUNT++** (zelfde patroon als ENERGY/IDX_SHORT/TSMOM_DIV). U2 tip claimde 457 + TRIALS-append — **erratum:** telling blijft **456**; TRIALS-rij N78 markeren `ongeldig/telt niet` (append-only; niet wissen). Geen retune. **Dead += N78_VIX_TERM_VOV**. Reserve 2025+ onaangeraakt. U2 **IDLE**. OPEN **N75–N77** + later CORN Lane-B prep (**≠P1**). Kill circuit: cost-gate FAIL telt niet in cost-PASS→FAIL_T streak.
 
 **Reeds in v75 (bevestigd):** USDJPY_MED FAIL_T (TRIAL **455**) + EURJPY_MED / N72 FAIL_T (TRIAL **456**) → **L60 FX-med family BARRED/exhausted** (N72–N74 + USDJPY_MED). Kill-circuit streak cost-PASS→FAIL_T ≥5 (o.a. N35/N41/FX_EUR_SHORT/USDJPY_MED/EURJPY_MED + eerdere) → **mandatory pivot enforced**; geen L60 FX-med / ORB / classic-TSMOM clones.
 
@@ -36,23 +38,23 @@ Bindend: D-083…**D-100** (CEO) + **C-028**. Integriteit ongewijzigd: PREREG v�
 
 Novelty this Strateeg cycle: **3/3 NEW_FAMILY** (≥2/3 ✔). Geen L60 FX forks.
 
-**Formal FAIL batch (U2; TRIAL 448→456):** ongewijzigd t.o.v. v75 (laatste = EURJPY_MED **456**). Cost-gate STOP: TSMOM_DIV · ENERGY · IDX_SHORT. Reserve 2025+ onaangeraakt buiten P1.
+**Formal FAIL batch (U2; TRIAL 448→456):** ongewijzigd (laatste formal FAIL_T = EURJPY_MED **456**). **Cost-gate STOP (geen trial):** TSMOM_DIV · ENERGY · IDX_SHORT · **N78 VIX_TERM_VOV**. Reserve 2025+ onaangeraakt buiten P1. TRIAL_COUNT **456**.
 
-**U2 tip `65a9b23`:** IDLE tot PASS→PREREG (N75–N77 of Lane-A promote→Lane-B). TRIAL_COUNT **456**. Freeze **OFF**. Track-3 combine **PAUSED**.
+**U2 tip `b998253` ~12:52 CEST:** N78 **FAIL_COST_GATE** (**geen trial**; TRIAL_COUNT **456**); **IDLE** tot next non-clone PASS/PREREG (N75–N77 / CORN Lane-B). Skip her-gate N78. Freeze **OFF**. Track-3 combine **PAUSED**.
 
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18 · P1 · GBPJPY_EU_MOM · N35 · N36 · N40 · N41 · N44 · TSMOM_DIV · ENERGY_TSMOM · IDX_SHORT_TSMOM · FX_EUR_SHORT_TSMOM · FX_USDJPY_MED_TSMOM · FX_EURJPY_MED_TSMOM · N72**. Pre-screen FAIL/DIAG: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34 · N37 · N38 · N39 · N42 · N43 · N45 · N48–N57 · N58 · N60–N65 · N67 · N69–N71 · N73 · N74**. BARRED: **N46 · N47 · N59 · N68** + **L60 FX-med family**. SWAP_HOSTILE (redesign): **N58**. Family A overnight index-short **closed**.
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18 · P1 · GBPJPY_EU_MOM · N35 · N36 · N40 · N41 · N44 · TSMOM_DIV · ENERGY_TSMOM · IDX_SHORT_TSMOM · FX_EUR_SHORT_TSMOM · FX_USDJPY_MED_TSMOM · FX_EURJPY_MED_TSMOM · N72 · **N78_VIX_TERM_VOV**. Pre-screen FAIL/DIAG: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34 · N37 · N38 · N39 · N42 · N43 · N45 · N48–N57 · N58 · N60–N65 · N67 · N69–N71 · N73 · N74**. BARRED: **N46 · N47 · N59 · N68** + **L60 FX-med family**. SWAP_HOSTILE (redesign): **N58**. Family A overnight index-short **closed**.
 
 ### Wekelijkse sporen-tabel (D-094.7 / **D-097–D-100** / **C-028** — Manager houdt bij)
 
 | Spoor | Inhoud | Eigenaar | Cadans-eis | Status 2026-10-01 |
 |------|--------|----------|------------|-------------------|
-| **1** | Kortere historie / walk-forward; ≥5j default; D-094a; pool N≥150; forward-papier | **Uitvoerder-2** | Gates + land PREREGs | **OPEN** — IDLE; next = gate N75–N77 / Lane-B PREREGs; TRIAL **456** |
+| **1** | Kortere historie / walk-forward; ≥5j default; D-094a; pool N≥150; forward-papier | **Uitvoerder-2** | Gates + land PREREGs | **OPEN** — N78 **FAIL_COST_GATE** (geen trial); TRIAL **456**; IDLE; next = N75–N77 / CORN Lane-B |
 | **2** | **Lane-B** FTMO markets (survivors of Lane-A of honest-RT intradag) → PREREG | **Strateeg** (Lane-B) + **S2** (Lane-A feed) | ≥3 screens/cyclus; **≥2/3 NEW_FAMILY** | **OPEN** — N75–N77 NEW_FAMILY; L60 **BARRED** |
 | **3** | Combineren weak+ / ensembles | **CTO** / CEO 3b | Parallel | **PAUSED** tot solo t≥2 (D-097.3) |
 | **4** | **Lane-A→B** horizons: D-097 swing/CTA/carry + C-028 NEW_FAMILY; CORN_F seasonality promote (later) | **Strateeg + S2** | ≥3; **≥2/3 NEW_FAMILY**; kill circuit | **OPEN** — pivot on; CORN_F note (niet P1) |
 | **5** | FTMO sizing / `recommend_scale` | **CTO** | Parallel | **OPEN** — C-028 DELIVERED (0 trials); skip `ftmo_ev` dead FX-med |
 | **6** | Yahoo/Stooq/FRED Lane-A data; PROXY_MAP; FTMO-M5; HistData A-001 | Team / Sandro | Doorlopend | **OPEN** — C-028 Lane-A paths; m5gz 166 |
-| **7** | Coördinatie; **enforce novelty + kill circuit** | **Manager** | :05/:35 | **OPEN** — v76 |
+| **7** | Coördinatie; **enforce novelty + kill circuit** | **Manager** | :05/:35 | **OPEN** — v78 |
 
 **C-028 enforce (Manager):**
 - Novelty: Strateeg `0ab2484` = **3/3 NEW_FAMILY** ✔; S2 tip `4575a4f` drought — next S2 cycle must ≥2/3 NEW_FAMILY (Lane-A).
@@ -61,23 +63,24 @@ Novelty this Strateeg cycle: **3/3 NEW_FAMILY** (≥2/3 ✔). Geen L60 FX forks.
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | Pre-screen **N75–N77** → PASS→PREREG (Lane-B); S2 Lane-A ≥2/3 NEW_FAMILY; later Lane-B **CORN_F**/`CORN.c` (honest agri RT; ≠P1) | **Strateeg** / **S2** / **U2** | **OPEN — prio** |
+| **1** | Pre-screen **N75–N77** → PASS→PREREG (Lane-B); CORN Lane-B prep (≠P1); S2 Lane-A ≥2/3 NEW_FAMILY; **geen** N78-klonen | **Strateeg** / **S2** / **U2** | **OPEN — prio** |
+| — | **N78 VIX_TERM_VOV** FAIL_COST_GATE (**geen trial**; TRIAL blijft 456) | U2 | **DELIVERED** `b998253` — bookkeeping fix due |
 | — | **C-028** EDGE_SEARCH_UPGRADE + Lane-A diagnostic (0 trials) | CTO | **DELIVERED** `802b7b8` |
 | — | **FX_EURJPY_MED_TSMOM** (N72) FAIL_T (TRIAL 456); L60 closed | U2 | **DELIVERED** `65a9b23` |
 | — | **C-027** / **C-026** / **C-025**…**C-021** | CTO | **DELIVERED** |
-| — | Dead/FAIL + L60 BARRED (t/m N74 + FX-med + shorts + ENERGY + TSMOM_DIV + P1) | — | Gesloten als klonen |
+| — | Dead/FAIL + L60 BARRED (t/m N74 + N78 + FX-med + shorts + ENERGY + TSMOM_DIV + P1) | — | Gesloten als klonen |
 | — | `EINDSTAND_FTMO.md` / HistData A-001 / integriteit | — | Tussenstand; A-001 OPEN; ongewijzigd |
 
 ### Acties (bindend; D-094 / **D-097–D-100** / **C-028**)
 
-1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — IDLE → ACTIEF bij nieuw PREREG:**
-   - Tip `65a9b23`: EURJPY_MED **FAIL_T** (TRIAL **456**). **Nu IDLE:** wacht N75–N77 / Lane-B PREREG (na PASS). Dead/FAIL + L60 FX-med niet herstarten. TRIAL_COUNT **456**. Lane-A screens ≠ trials.
+1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — IDLE + bookkeeping fix:**
+   - Tip `b998253`: N78 **FAIL_COST_GATE** (mean +2,21 ≪ 7,83). **CTO/Manager: geen trial** — TRIAL_COUNT blijft **456** (niet 457). Fix op branch: TRIAL_COUNT.md → 456; TRIALS.csv N78-rij labelen `ongeldig, telt niet` (append-only; niet wissen). Daarna IDLE tot N75–N77 / CORN Lane-B PREREG. Dead += N78; geen klonen.
 
 2. **Grok CTO (`grok/cto-1`) — C-028 DELIVERED (`802b7b8`):**
    - Verdere Lane-A diagnostics OK (0 trials). Freeze PREREG alleen op Lane-A survivors / honest-RT. Geen `ftmo_ev` op FAIL_T FX-med. Geen Sandro eval/spend.
 
 3. **Strateeg (`claude/trusting-faraday-34tsmg`) — Lane-B PREREG writer:**
-   - Tip `0ab2484`: **OPEN N75–N77** NEW_FAMILY. Run D-092.1; PASS → PREREG (swap-aware D-100). **≥2/3 NEW_FAMILY**/cyclus. Geen L60 FX-med / ORB / classic-TSMOM clones. Optional later: CORN_F→`CORN.c` Lane-B na agri RT (niet P1).
+   - Tip `0ab2484`: **OPEN N75–N77** NEW_FAMILY. Run D-092.1; PASS → PREREG (swap-aware D-100). **≥2/3 NEW_FAMILY**/cyclus. Geen L60 FX-med / ORB / classic-TSMOM / **N78 VIX_TERM_VOV** clones. Optional later: CORN_F→`CORN.c` Lane-B na agri RT (niet P1).
 
 4. **Strateeg-2 (`grok/strateeg-2`) — Lane-A novelty researcher:**
    - Tip `4575a4f` drought — **heroriënteer Lane-A** (Yahoo/proxy; NEW_FAMILY tags; day_t≥2 bruto ≤2024). ≥2/3 NEW_FAMILY; schrijf VOORSTEL + raw screens; **geen** FTMO PREREG uit dode clones. Feed survivors → Strateeg Lane-B.
