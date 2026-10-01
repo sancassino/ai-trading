@@ -72,3 +72,4 @@
 15:15 Amsterdam (01-10) — geen nieuws; Strateeg N87/N88/N89 open; U2 idle; TRIAL 456 stabiel.
 15:45 Amsterdam (01-10) — N87/N88/N89 nieuwe familie kostenpoort bevestigd (CTO 15:05 + Strateeg 14:50); wacht PREREG + U2 run; TRIAL 456 stabiel.
 16:15 Amsterdam (01-10) — **MINI-REVIEW 3u (sinds 13:15):** N87 US30cash opening-gap fade FAIL_T (t=1.63, mean=−17.7 bp sterk negatief; TRIAL 457); N88/N89 nog open. Periode-uitslag: nieuwe familie L/M/N gestart na TSMOM-reeks uitputting; N87 direct FAIL met negatieve edge. C-028 eerlijke RT 166 symbolen actief (promote-criterium). Strateeg-2 drought aanhoudend. U2 idle. TRIAL 457; 0 sleeves gevalideerd. Team actief D-094; geen CEO-beslissing nodig.
+16:45 Amsterdam (01-10) — N87 FAIL_T formeel bevestigd (TRIAL 457); Strateeg N90 GBPJPY carry+momentum nieuwe familie O open; N88/N89 nog queued; U2 idle; TRIAL 457 stabiel.
