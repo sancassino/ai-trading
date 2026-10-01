@@ -208,7 +208,7 @@ Per heropende regel de volgende metriek berekenen:
 
 ## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090…D-093, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
 
-*Bijgewerkt: 2026-10-01 06:17 Amsterdam — **D-093 zoekfase bevroren** (geen D-094+); N18 FAIL_T (TRIAL_COUNT **447**); watch **8/8 frozen**; EINDSTAND_FTMO.md; F2-ORB ≤2024 ≈€513/m referentie; Strateeg-2 `a8e753d` freeze-onderhoud*
+*Bijgewerkt: 2026-10-01 07:15 Amsterdam — **D-093 zoekfase bevroren** (geen D-094+); N18 FAIL_T (TRIAL_COUNT **447**); watch **8/8 frozen**; EINDSTAND_FTMO.md; F2-ORB ≤2024 ≈€513/m referentie; Strateeg-2 `8778258` freeze-onderhoud*
 
 ### 10a. Overzicht PREREGs (Faraday + Grok Strateeg-1 + Strateeg-2)
 
@@ -277,7 +277,7 @@ Per heropende regel de volgende metriek berekenen:
 | 4 (verzwakt) | **GS01** | Research-fit; Faraday pooled pre-screen FAIL |
 | Dood / barred | A2/A4/A5/B1/N1–N19/LUNCH_OPEN/N20–N21/… | Poort, t, pre-screen FAIL, underpowered, ORB-bar, of D-093 freeze |
 
-**Faraday vs Strateeg-2:** Faraday N18 = laatste formal trial → FAIL_T (`d1984ed`, TRIAL 447). Strateeg-2 tip `a8e753d`: D-093 FREEZE onderhoud — no new PREREG (was `c22d9a6`). Onder D-093: beide in onderhoud; geen screens/PREREGs. Sterker blijft F2-ORB/A1 referentie > XAU_AM_FADE watch > S2-BTC watch > GS01.
+**Faraday vs Strateeg-2:** Faraday N18 = laatste formal trial → FAIL_T (`d1984ed`, TRIAL 447). Strateeg-2 tip `8778258`: D-093 FREEZE onderhoud — no new PREREG (was `a8e753d`). Onder D-093: beide in onderhoud; geen screens/PREREGs. Sterker blijft F2-ORB/A1 referentie > XAU_AM_FADE watch > S2-BTC watch > GS01.
 
 ### 10d. Actiepunten Strateeg (deze branch)
 
