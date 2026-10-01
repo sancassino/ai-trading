@@ -46,3 +46,4 @@
 02:45 Amsterdam (01-10) — C-010 XAU N7/N8 pre-screen FAIL (geen PREREG); D-092 stopregel cyclus ~4/8; geen gate-PASS; team idle
 03:15 Amsterdam (01-10) — LUNCH_OPEN cost-gate PASS maar trial FAIL_T (445); C-011 N9 underpowered/N10 FAIL pre-screen; D-092 stopregel cyclus 5-6/8; geen gate-PASS
 03:45 Amsterdam (01-10) — MINI-REVIEW 3u: N11/N12 pre-screen FAIL; D-092 stopregel cyclus 6/8 (start 01:00); nog 2 cycli tot D-093 freeze. Overlevenden: XAU_AM_FADE (N=12 watch) + S2-BTC (N=132 watch). Portfolio-pad: ORB+BTC eqvol €1006/m theoretisch. Geen gate-PASS in afgelopen 3 uur; patroon consistent met D-092 verwachting.
+04:15 Amsterdam (01-10) — N11 GER40 stress FAIL_T (TRIAL_COUNT 446); N13/N14/N15/N16/N17 FAIL; D-092 stopregel cyclus 7/8; volgende cyclus = D-093 freeze als geen gate-PASS
