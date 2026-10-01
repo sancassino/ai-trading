@@ -1066,3 +1066,7 @@ forward_p1 (D-096.5): forward_p1.sh = opwarmen → export 8 symbolen → update_
 ## 2026-10-01 09:31 — Spoor 6: data/m5gz = alle 166 FTMO-symbolen (≈466 MB) + verslag U1 2026-10-01
 
 92 extra symbolen gegzipt (gzip -9 -n), CHECKSUMS.sha256 (gz) en CHECKSUMS_bron_csv.sha256 (bron) opnieuw berekend en met sha256sum -c geverifieerd (166/166); steekproef zcat ≡ bron. README bijgewerkt. Verslag: VERSLAG_U1_2026-10-01.md.
+
+## 2026-10-01 12:29 — Spoor 6 (C-028 'eerlijke RT vóór promote'): COSTS_FTMO_alle + per_uur uitgebreid van 74 naar 166 FTMO-symbolen
+
+Nieuw reproduceerbaar script costs_ftmo_all.py (zelfde definities als c4b2e24: 2024→ momentopname, M5-barspread in bp, spread-0 = ontbrekend, beste NY-uur ≥ 200 bars, rondreis = mediaan + 2× commissie). Controle: alle 74 eerdere rondreiswaarden exact gereproduceerd (afwijking ≤ 0,05 bp: 0 symbolen). Commissie: FX/exoten €2,25/lot/kant omgerekend via tick_value uit de FTMO-snapshot; XAUUSD €2/lot (MT5-deals), overige metalen €2/lot (aangenomen); aandelen/crypto 0,002 %/kant (Q2-aanname); indices/olie 0 (indices bevestigd); agri/overige grondstof-CFD's 0 = NIET bevestigd (gevlagd). Opvallend voor Lane-B: CORN.c rondreis ≈ 21 bp (spread), ETHUSD ≈ 8 bp, USDZAR ≈ 5,8 bp. Swap blijft apart (data/ftmo_specs, results/ceo/swap_side_map.csv).
