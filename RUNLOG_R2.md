@@ -1128,3 +1128,104 @@ Quiet cycle (geen material trial/PREREG-result); IDLE under D-093 for Manager/CT
 - Agents kopen/openen nooit iets; geen FTMO-signup/fee-spend
 
 **U2 status:** IDLE / onderhoud 1×/4u. Wacht op Sandro-keuze (D-093.4): HistData M-001 / andere regels / definitief stoppen.
+
+## Cyclus 05:45–05:47 CEST — D-090 FASE 3 IDLE (NEXT_STEPS v62; **D-093 FREEZE**)
+
+**Branch:** `claude/uitvoerder2-r`. FF `e0c4be3`; merge `origin/main` → already up to date (tip = U2 maintenance). NEXT_STEPS **v62** (`9d4abff`). Prior tip N18 FAIL_T `d1984ed`; TRIAL_COUNT **447**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- **D-093** @ `claude/ftmo-trading-strategy-98mplz` `7fa5ba7` (05:00 CEST): zoekfase bevroren; watch reset alleen bij gate+stress+formele t; onderhoud 1×/4u; geen nieuwe PREREGs/pre-screens/trials
+- `NEXT_STEPS.md` **v62** @ `origin/main` (Manager 05:02 CEST) — D-093 FREEZE; Watch **8/8**; U2 **IDLE / onderhoud**; TRIAL **447**
+- CTO C-016 (`eee4cf9`): absorb v62; Sandro-keuze still OPEN
+- Strateeg `6f95791`: 05:20 geen nieuws — freeze; **geen** nieuwe PREREG (N20/N21 barred)
+- Strateeg-2 `c22d9a6`: screens FAIL — **geen** nieuwe PREREG
+- `EINDSTAND_FTMO.md`: 0 sleeves gevalideerd; evaluatie **NIET kopen**
+
+### U2-directives (v62 §0 actie 1 / D-093.2) — bindend
+- **IDLE / onderhoud** — geen nieuwe trials, PREREGs of pre-screens.
+- N18/N11 = **FAIL_T STOP**. TRIAL_COUNT **447**. Dead set (incl. N11–N19 / LUNCH_OPEN) niet herstarten.
+- Wacht op **Sandro-keuze** (HistData / andere regels / stop) of nieuw CEO-besluit / long_m1 (D-093.4–5).
+- Reserve 2025→ onaangeraakt. Geen FTMO-signup/fees. Geen inventie van scope (geen A4/A5/P1-engine-run tijdens freeze).
+- Cadans: onderhoud **1×/4u** (D-093).
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| N18 formal | DONE FAIL_T STOP (`d1984ed`) — skip |
+| N11 / N13–N17 / N19 | FAIL_T / NO_PREREG — skip |
+| N20/N21 (Strateeg VOORSTEL) | **barred** under D-093.2 — skip |
+| D-092.1 non-clone PREREG N≥150 | **frozen** — geen nieuwe screens tot heropening |
+| P1 `engine/ftmo.py` validate / A4/A5 | **niet** toegewezen onder D-093; v62 zegt IDLE — skip |
+| Dead set + FAIL-pre-screens | niet herstart |
+| D-093 / D-092.6 watch | **8/8 frozen** (gate-only PASS resets niet) |
+
+**TRIAL_COUNT blijft 447.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Heropening alleen na Sandro-keuze of nieuw CEO-besluit / `data/long_m1/` (D-093.5).
+2. Tot dan: U2 idle wait notes; geen trials.
+3. Escalatie D-091.6 → D-092 → **D-093 freeze**. Geen Sandro-ping vanuit U2 (eindstand al geschreven).
+
+Quiet cycle (geen material trial/PREREG-result); IDLE under D-093 for Manager/CTO cadence.
+
+
+## Cyclus 04:25 UTC (2026-10-01) — D-093 onderhoud
+
+**Branch:** synced. NEXT_STEPS v62 ongewijzigd. D-093 freeze actief. Geen nieuwe CEO-besluiten. TRIAL_COUNT **447**. Reserve 2025→ onaangeroerd. Quiet maintenance cycle.
+
+
+## Cyclus 05:25 UTC (2026-10-01) — D-093 onderhoud
+
+NEXT_STEPS v62 ongewijzigd. Geen nieuwe CEO-besluiten. D-093 freeze actief. TRIAL_COUNT **447**. Reserve 2025→ onaangeroerd. Quiet maintenance cycle.
+
+## Cyclus 08:04–08:06 CEST (2026-10-01) — D-094 FREEZE OFF ack; IDLE wait (geen ready PASS)
+
+**Branch:** `claude/uitvoerder2-r` — merge `origin/main` @ `7c4b4a6` (NEXT_STEPS **v63**). Tip pre-merge `df5fa1c`. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen:**
+- `NEXT_STEPS.md` **v63** (Manager 08:03 CEST): **D-094/D-094a FREEZE OFF**; volle cadans; 7 sporen; TRIAL **447**
+- D-094 (`c1860e2`) + D-094a (`353aa31`) @ `claude/ftmo-trading-strategy-98mplz`: D-093 / D-092.6 / 1×/4u-onderhoud **ingetrokken**; ≥5j default; <5j alleen a/b/c in PREREG
+- Strateeg tip `68e054f` / S2 tip `52caf6a`: nog D-093-onderhoud commits; **geen** nieuw post-unfreeze PREREG / PASS_may_PREREG
+- N20/N21 = VOORSTEL_PRESCREEN alleen (filed pre-freeze; status text nog BARRED); **geen** D-092.1-PASS → geen land/gate deze cyclus (geen sleeve-inventie)
+
+### U2 status
+- **Track 1 OPEN** (historie/walk-forward; D-094a). Actie = land + cost-gate op ready non-clone PASS_may_PREREG.
+- Dead/FAIL set (N11–N19, LUNCH_OPEN, …) **gesloten**. XAU_AM_FADE watch-only. TRIAL_COUNT **447**.
+- **Watch:** D-092.6 8/8-freeze **vervallen** met D-094 (geen teller meer).
+
+### Checked — niets klaar voor gate/trial
+| Item | Status |
+|------|--------|
+| Post-unfreeze PASS_may_PREREG | **geen** — wait Strateeg/S2 |
+| N20/N21 VOORSTEL | niet PASS; geen screen/PREREG land deze cyclus |
+| Dead/FAIL set | niet herstart |
+
+**Volgende:** wacht op volgende Strateeg/S2 D-092.1-PASS / PASS_may_PREREG (non-clone, D-094a). Geen Sandro-ping.
+
+## Cyclus 08:10–08:20 CEST (2026-10-01) — D-092.1 TRAIN-ONLY pre-screen N20–N23 (D-094)
+
+**Branch:** `claude/uitvoerder2-r`. Synced `origin/main`. Source Strateeg `claude/trusting-faraday-34tsmg` @ `f54ad28` (VOORSTEL_PRESCREEN_N20..N23).
+**Script:** `scripts/n20_n23_prescreen.py` → `results/R2/n20_n23_prescreen/`.
+**Window:** train **2021-01-01 … 2023-12-31** only. **No** test year / **no** 2025+ reserve. **No** PREREG written (Strateeg only on PASS). **No** formal trials. Dead set untouched.
+
+| Sleeve | Instrument | N | mean bruto | gate (3×RT) | Uitkomst |
+|--------|------------|---|------------|-------------|----------|
+| **N20** AM→PM cont 18:00→21:00 | US30cash | 384 | **−2.26 bp** | 1.35 bp | **FAIL** `NO_PREREG_screen_fail` |
+| **N21** dev-fade 16:30→17:30 | GER40cash | 234 | **−2.45 bp** | 2.16 bp | **FAIL** `NO_PREREG_screen_fail` |
+| **N22** Lon-AM±40 → fade 15:30→18:30 | UKOILcash | 345 | **−1.67 bp** | 8.13 bp | **FAIL** `NO_PREREG_screen_fail` |
+| **N23** 2d TSMOM non-overlap | US100cash | 377 | **+4.46 bp** | 13.68 bp (RT_eff) | **FAIL** `NO_PREREG_screen_fail` |
+
+All four: **N≥150** but mean bruto **below** gate → STOP (no PREREG ask).
+
+**Side split (N23):** long mean +10.83 bp (n=223) / short −4.77 bp (n=154) — long still < 13.68 gate.
+
+**Data gaps (non-blocking; N still ≥150):**
+- GER40cash M5 sparse in 2021 (~17 bars/day until late Dec) → N21 effectively 2022–23 dominant (`date_min` 2021-12-28).
+- UKOILcash 15:30 CET bars sparse until ~2021-09 → N22 `date_min` 2021-09-20.
+- US30 / US100 coverage adequate for train window.
+
+**Artifacts:** `results/R2/n20_n23_prescreen/{prescreen.json,prescreen.md,n20..n23_trades_train.csv,n23_d1_resample_train.csv}`; VOORSTEL copies N20–N23 from Strateeg tip.
+
+**TRIAL_COUNT unchanged (447).** Reserve 2025→ untouched.
+
