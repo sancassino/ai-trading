@@ -579,7 +579,7 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 ### C-027 — USDJPY_MED FAIL_T absorb + EURJPY_MED PREREG (D-100)
 **Opened:** 2026-10-01 ~12:30 Europe/Amsterdam.  
-**Status:** OPEN for U2 / Manager / Strateeg (CTO absorb + PREREG done).
+**Status:** **CLOSED** — U2 EURJPY_MED FAIL_T (TRIAL 456); L60 FX-med BARRED; Manager v75+; C-028/C-029 next.
 
 **Facts:**
 - U2 `910d6ff`: **PREREG_FTMO_FX_USDJPY_MED_TSMOM** → **FAIL_T** (cost-gate+stress PASS; t train 1.15; test h1 bruto −11.88). counts_as_trial=true. TRIAL_COUNT **455**. Reserve untouched.
@@ -601,7 +601,7 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 ### C-028 — Edge-search upgrade (Lane A/B + novelty quota)
 **Opened:** 2026-10-01 ~12:41 Europe/Amsterdam.  
-**Status:** OPEN for Manager / Strateeg-2 / Strateeg / U2 (CEO optional).
+**Status:** **CLOSED** — Manager v76+ absorbed C-028; S2/Strateeg role split live; CORN promote later demoted in C-029.
 
 **Facts:**
 - Binding doc: `EDGE_SEARCH_UPGRADE.md` (until CEO D-* supersedes).
@@ -621,4 +621,27 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** idle on C-028 process; FDR-context when/if CORN Lane-B PREREG gates.
 
 **Where:** `EDGE_SEARCH_UPGRADE.md`, `results/cto/c028_edge_upgrade/`, `scripts/c028_lane_a_screen.py`, `RUNLOG_CTO.md` C-028.
+
+---
+
+### C-029 — N78 FAIL_COST_GATE absorb + Lane-B diag + CORN demote
+**Opened:** 2026-10-01 ~12:55 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 / U2 (CEO optional).
+
+**Facts:**
+- U2 `b998253`: **N78 VIX_TERM_VOV** → **FAIL_COST_GATE** (mean +2,21 ≪ 7,83). Manager v78: **geen trial**; TRIAL_COUNT **456**. Dead += N78. Bar VIX_TERM clones. Reserve untouched.
+- CTO C-029 diag (0 trials): **N75/N76/N77 DIAG_FAIL**; **N81 DIAG_FAIL**; **N79 UNDERPOWERED** (n=46, mean 127≥50). **No PREREG freeze.**
+- **CORN_F demote:** honest M5 spread≈20.8 bp → gate≈62 bp; Lane-A mean 5.98≪62; not in COSTS_FTMO. Was C-028 Lane-A promote — not Lane-B ready.
+- Kill circuit: FAIL_COST_GATE does not increment FAIL_T streak; pivot already ON (L60 FX-med / ORB / classic-TSMOM barred).
+- Strateeg tip `bdc0387` N79–N81 NEW_FAMILY; U2 IDLE after bookkeeping.
+
+**Ask:**
+1. **U2:** IDLE; TRIAL_COUNT→456 + TRIALS N78 `ongeldig`; skip N75–N78 / CORN.
+2. **Manager:** NEXT_STEPS bump — dead+=N78; N75–N77 DIAG_FAIL; CORN demote; TRIAL 456; pointer C-029.
+3. **Strateeg:** drop N75–N77; N79 underpowered / N80 open / skip N81; ≥2/3 NEW_FAMILY.
+4. **S2:** Lane-A with honest-cost survivors only; bar VIX_TERM / CORN-as-FTMO / L60 FX / ORB / classic-TSMOM.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** idle until next gate-PASS.
+
+**Where:** `results/cto/c029_n78_absorb_lane_b/`, `scripts/c029_lane_b_diag.py`, `RUNLOG_CTO.md` C-029.
 

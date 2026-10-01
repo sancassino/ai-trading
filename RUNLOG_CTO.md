@@ -1288,3 +1288,52 @@ git commit -m "CTO: C-028 edge-search upgrade (Lane A/B + novelty quota; 0 trial
 git push origin grok/cto-1
 ```
 
+
+## C-029 — N78 FAIL_COST_GATE absorb + Lane-B diag N75–N77/N79/N81 + CORN demote (0 trials) — 2026-10-01 ~12:55 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **456**. No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch (U2 owns bookkeeping erratum).
+
+### Sync
+
+- Merged `origin/main` @ `77d78b1` (NEXT_STEPS **v78** — N78 FAIL_COST_GATE geen trial; TRIAL 456).
+- Teammate since ~12:25 CEST: S2 `b765613` Lane-A VIX promote → Strateeg `6c9cdca`/`52a5212` N78 PREREG → U2 `b998253` FAIL_COST_GATE → Manager v77/v78; Strateeg `bdc0387` N79–N81 NEW_FAMILY; U2 tip ahead bookkeeping.
+
+### Absorb
+
+U2 `b998253` **N78 VIX_TERM_VOV FAIL_COST_GATE** (mean bruto +2,21 ≪ 7,83). Manager v78: **counts_as_trial=false**; TRIAL_COUNT **456**. Dead += `N78_VIX_TERM_VOV`. Bar VIX_TERM / NDX overnight vol-structure clones. Kill circuit: FAIL_COST_GATE ≠ cost-PASS→FAIL_T increment (pivot already ON from ≥5 FAIL_T). No `ftmo_ev`. Lane-A NDX day_t≈2.9 ≠ FTMO PASS — C-028 honesty confirmed.
+
+### Deliverable (0 trials)
+
+1. **Lane-B diag** `scripts/c029_lane_b_diag.py` + `results/cto/c029_n78_absorb_lane_b/`:
+
+| Idee | mean_bp | n | gate | Verdict |
+|------|--------:|--:|-----:|---------|
+| N75 XAU/XAG ratio MR 3d | 10.86 | 71 | 30.60 | **DIAG_FAIL** |
+| N76 UKOIL Mon→Thu long | −14.90 | 153 | 50.00 | **DIAG_FAIL** |
+| N77 FX XS rank-rev 5d | −2.57 | 107 | 46.29 | **DIAG_FAIL** |
+| N79 curve→UKOIL 5d | 126.71 | 46 | 50.00 | **UNDERPOWERED** |
+| N81 US100/US500 pair RV 3d | −7.77 | 86 | 13.74 | **DIAG_FAIL** |
+
+2. **CORN_F demote** from C-028 Lane-B promote: honest M5 spread (point=0.01) med≈**20.8 bp** → 3×RT≈**62 bp**; Lane-A mean 5.98≪62; not in COSTS_FTMO; swap missing. **No PREREG freeze.**
+
+3. **No new PREREG** this wake (nothing cleared N≥150 ∧ mean≥gate). U2 stays IDLE until Strateeg PASS→PREREG (N80 or new) / S2 honest-cost survivor.
+
+### CTO next
+
+1. Manager: NEXT_STEPS — dead+=N78; N75–N77 DIAG_FAIL; CORN demote; TRIAL 456; pointer C-029.
+2. Strateeg: drop N75–N77 PREREG path; N79 underpowered; N80 open; skip N81; ≥2/3 NEW_FAMILY.
+3. S2: Lane-A survivors must clear honest FTMO RT in COSTS before promote; bar VIX_TERM / CORN-as-FTMO / L60 FX / ORB / classic-TSMOM.
+4. U2: IDLE + bookkeeping fix (456 / N78 ongeldig); skip N75–N78 / CORN.
+5. CEO: optional ack; no Sandro ping.
+6. Auditor: idle until next gate-PASS.
+
+### Git
+
+```
+git add scripts/c029_lane_b_diag.py results/cto/c029_n78_absorb_lane_b/ \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-029 N78 FAIL_COST_GATE absorb + N75-77 diag + CORN demote (0 trials)"
+git push origin grok/cto-1
+```
+

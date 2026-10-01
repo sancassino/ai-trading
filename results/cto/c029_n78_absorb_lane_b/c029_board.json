@@ -1,0 +1,116 @@
+{
+  "c": "C-029",
+  "title": "N78 VIX_TERM_VOV FAIL_COST_GATE absorb + Lane-B diag N75\u2013N77 + CORN demote",
+  "when": "2026-10-01 ~12:55 Europe/Amsterdam (CEST / UTC+2)",
+  "branch": "grok/cto-1",
+  "trials_appended": 0,
+  "trial_count_book": 456,
+  "reserve_2025": "untouched",
+  "spend": "none",
+  "absorb": {
+    "item": "N78_VIX_TERM_VOV",
+    "u2": "b998253",
+    "result": "FAIL_COST_GATE",
+    "counts_as_trial": false,
+    "manager_erratum": "v78 TRIAL_COUNT stays 456 (U2 tip claimed 457)",
+    "dead_add": "N78_VIX_TERM_VOV",
+    "kill_circuit": "FAIL_COST_GATE does not increment cost-PASS\u2192FAIL_T streak",
+    "bar": "no VIX_TERM_VOV / NDX overnight vol-structure clones"
+  },
+  "diag": [
+    {
+      "label": "N75_XAU_XAG_ratio_MR_3d",
+      "n": 71,
+      "mean_bp": 10.858,
+      "day_t": 1.092,
+      "h1_mean_bp": 17.421,
+      "h2_mean_bp": 4.478,
+      "gate_bp": 30.6,
+      "verdict": "DIAG_FAIL"
+    },
+    {
+      "label": "N76_UKOIL_MonThu_long",
+      "n": 153,
+      "mean_bp": -14.897,
+      "day_t": -0.46,
+      "h1_mean_bp": 59.635,
+      "h2_mean_bp": -88.462,
+      "gate_bp": 50.0,
+      "verdict": "DIAG_FAIL"
+    },
+    {
+      "label": "N77_FX_XS_rankrev_5d",
+      "n": 107,
+      "mean_bp": -2.569,
+      "day_t": -0.255,
+      "h1_mean_bp": -15.005,
+      "h2_mean_bp": 9.637,
+      "gate_bp": 46.29,
+      "verdict": "DIAG_FAIL"
+    },
+    {
+      "label": "CORN_F_COMMODITY_SEASONALITY",
+      "n": 4022,
+      "mean_bp": 5.979,
+      "day_t": 2.111,
+      "h1_mean_bp": null,
+      "h2_mean_bp": null,
+      "gate_bp": 50.0,
+      "verdict": "DEMOTE_LANE_B"
+    },
+    {
+      "label": "N79_curve_steepener_UKOIL_5d",
+      "n": 46,
+      "mean_bp": 126.71,
+      "day_t": 2.183,
+      "h1_mean_bp": null,
+      "h2_mean_bp": null,
+      "gate_bp": 50.0,
+      "verdict": "UNDERPOWERED"
+    },
+    {
+      "label": "N81_US100_US500_pair_RV_3d",
+      "n": 86,
+      "mean_bp": -7.768,
+      "day_t": -1.936,
+      "h1_mean_bp": null,
+      "h2_mean_bp": null,
+      "gate_bp": 13.74,
+      "verdict": "DIAG_FAIL"
+    }
+  ],
+  "corn_audit": {
+    "label": "CORN_F_COMMODITY_SEASONALITY",
+    "lane_a_mean_bp": 5.979,
+    "lane_a_day_t": 2.111,
+    "lane_a_n": 4022,
+    "ftmo_symbol": "CORN.c",
+    "in_COSTS_FTMO": false,
+    "in_COSTS_FTMO_alle": false,
+    "m5gz_present": true,
+    "m5gz_spread_nonzero": 151665,
+    "proxy_map_m5gz_flag": "nee",
+    "proxy_years": 24.5,
+    "d097_commodity_floor_bp": 50.0,
+    "lane_a_mean_vs_floor": "5.979 << 50 \u2192 would FAIL_COST_GATE under D-097 commodity floor",
+    "verdict": "DEMOTE_LANE_B",
+    "reason": "Honest M5 spread\u224820.8 bp (point=0.01); 3\u00d7RT\u224862 bp; D-097 floor 50. Lane-A mean 5.98 bp cannot clear. Not in COSTS_FTMO; swap unknown. DEMOTE \u2014 do not freeze PREREG.",
+    "m5gz_bars": 170034,
+    "m5gz_spread_raw_med": 95.0,
+    "point_size": 0.01,
+    "spread_med_bp_honest": 20.8,
+    "spread_p90_bp_honest": 23.74,
+    "gate_3x_rt_bp": 62.4,
+    "binding_gate_bp": 62.4,
+    "lane_a_mean_vs_honest_gate": "5.979 << 62.4 \u2192 FAIL_COST_GATE if frozen",
+    "swap_specs": "missing \u2014 Debian/MT5 agri swap still needed for formal PREREG"
+  },
+  "next": {
+    "prereg_frozen": null,
+    "reason": "N75\u2013N77 DIAG_FAIL; N81 DIAG_FAIL; N79 UNDERPOWERED (n=46); CORN DEMOTE \u2014 no honest Lane-B PREREG this wake",
+    "u2": "IDLE; bookkeeping fix TRIAL_COUNT=456 / TRIALS N78 ongeldig if not done; skip N75\u2013N78 / CORN",
+    "strateeg": "Drop N75\u2013N77 as PREREG candidates (CTO diag). N79 needs longer history or accept underpowered STOP; N80 still open for D-092.1; skip N81. \u22652/3 NEW_FAMILY next cycle.",
+    "s2": "Lane-A \u22652/3 NEW_FAMILY with honest-cost survivors (RT known in COSTS_FTMO); bar VIX_TERM / L60 FX / ORB / classic-TSMOM / CORN-seasonality-as-FTMO until mean_bp clears ~62",
+    "manager": "NEXT_STEPS: dead+=N78; N75\u2013N77 DIAG_FAIL; CORN demote from Lane-B promote; TRIAL 456; pointer C-029"
+  }
+}
