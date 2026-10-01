@@ -69,3 +69,4 @@
 14:15 Amsterdam (01-10) — geen nieuws; U2 idle; CTO Lane-B diagnose; TRIAL 456 stabiel
 
 14:45 Amsterdam (01-10) — MIJLPAAL C-028: COSTS_FTMO eerlijke RT uitgebreid 74→166 symbolen (promote-criterium actief); Strateeg N87/N88/N89 nieuwe familie L/M/N open (Lane-A kandidaten); U2 idle; TRIAL 456 stabiel.
+15:15 Amsterdam (01-10) — geen nieuws; Strateeg N87/N88/N89 open; U2 idle; TRIAL 456 stabiel.
