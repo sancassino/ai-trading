@@ -1,4 +1,4 @@
-# NEXT_STEPS v72 — Manager, 2026-10-01 11:12 CEST (D-100 + ENERGY FAIL_COST_GATE + C-024 IDX_SHORT; TRIAL 453) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v73 — Manager, 2026-10-01 11:39 CEST (IDX_SHORT FAIL_COST_GATE + C-025 FX_EUR_SHORT; TRIAL 453) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
@@ -8,7 +8,7 @@
 
 > **⚠ TEAM (D-090):** Claude = alleen CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main.
 
-> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-100** op `claude/ftmo-trading-strategy-98mplz` (`615bca0` D-100 / `76ec6ed` D-099 / `ac17e0d` D-098 / `8c3b5d4` D-097 / `8ed250e` D-096 / `c7c5c43` D-095 / D-094a `353aa31` / D-094 `c1860e2`). **D-094 + D-094a + D-097 + D-098 + D-099 + D-100 actief** (D-095/D-096 afgerond via P1 FAIL). `EINDSTAND_FTMO.md` = **tussenstand**, geen einde.
+> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-100** op `claude/ftmo-trading-strategy-98mplz` (`615bca0` D-100 / `76ec6ed` D-099 / `ac17e0d` D-098 / `8c3b5d4` D-097 / `8ed250e` D-096 / `c7c5c43` D-095 / D-094a `353aa31` / D-094 `c1860e2`). **D-094 + D-094a + D-097 + D-098 + D-099 + D-100 actief** (D-095/D-096 afgerond via P1 FAIL). Geen nieuwe D-* na D-100 (`457871c` CEO_LOG uitvoering). `EINDSTAND_FTMO.md` = **tussenstand**, geen einde.
 
 > **⚠ D-094 — NOOIT MEER STOPPEN:** D-093, D-092.6 (8-cycli-stop) en 1×/4u-onderhoud zijn **ingetrokken**. Alleen Sandro mag stoppen. Sterft een spoor → in dezelfde cyclus ≥2 nieuwe sporen openen. Geen agent FTMO-signup / fee-spend.
 
@@ -18,9 +18,9 @@ Bindend: D-083…**D-100** (CEO). Integriteit ongewijzigd: PREREG vóór resulta
 
 **Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (Grok CTO, `grok/cto-1`).
 
-### Cyclus-uitslag (Manager, 2026-10-01 11:12 CEST — **D-100** + **ENERGY FAIL_COST_GATE** + **C-024**; TRIAL **453**)
+### Cyclus-uitslag (Manager, 2026-10-01 11:39 CEST — **IDX_SHORT FAIL_COST_GATE** + **C-025 FX_EUR_SHORT**; TRIAL **453**)
 
-**Nieuwe D-*:** **D-100** (`615bca0` ~10:59 CEST / tekst 11:15) — swap is de verborgen kostenmuur; `results/ceo/swap_side_map.csv` (166 symb.); PREREG-eisen: intradag-flat **óf** overnight alleen op goedkoopste kant met swap in kostenpoort; alfa = bruto-prijs; swap-credits nooit als alfa; richting index-short / FX-carry-positief / pairs / korte holds met groot bruto. **U2 material:** `c1499ce` ~10:43 CEST — **`PREREG_FTMO_ENERGY_TSMOM` FAIL_COST_GATE** (train mean bruto **29,08** bp vs gate 3×90,69 = **272,08**; oil swap ≈83 bp/trade; counts_as_trial=**false**; TRIAL **453** ongewijzigd). Geen klonen (geen H/L-grid, HEATOIL, short-leg). Tip daarna `0f5295c` ~10:47 CEST **IDLE**. **Material CTO:** **C-024** (`e6a443b` ~11:04 CEST) — absorb ENERGY FAIL (skip `ftmo_ev`); D-100 shortlist (75 swap-cheap); land **`PREREG_FTMO_IDX_SHORT_TSMOM.md`** (US100+US30 short-only L20/H10; 0 trials); **N58 SWAP_HOSTILE**; **N59 BARRED** (ENERGY-clone); N60 OK. Track-3 combine blijft **PAUSED**. Watch **N/A**. Freeze **OFF**.
+**Nieuwe D-*:** **geen** (CEO tip `457871c` ~11:26 CEST = D-100 uitvoering; tip D-* blijft `615bca0`). **U2 material:** `72f40d3` ~11:18 CEST — **`PREREG_FTMO_IDX_SHORT_TSMOM` FAIL_COST_GATE** (train N=177, mean bruto **−66,22** bp vs gate 3×2,04 = **6,13**; equity upward drift; counts_as_trial=**false**; TRIAL **453** ongewijzigd). Geen klonen (geen L/H-grid, geen US500/GER40/HK50-add, geen long-been). Main merge tip `5879790`. **Material CTO:** **C-025** (`0644107` ~11:36 CEST) — absorb IDX_SHORT FAIL (skip `ftmo_ev`); **N68 BARRED** (family-A index-short); **N67 DIAG_FAIL** (USDJPY long); **N66 SUBSUMED**; land **`PREREG_FTMO_FX_EUR_SHORT_TSMOM.md`** + `scripts/fx_eur_short_tsmom_gate.py` (EURUSD+EURAUD short-only L20/H10; diag train N=226 mean +18,6 bp; 0 trials). **Strateeg:** `03fa1a3` N58/N60–N65 pre-screen FAIL; `bafbe9e` ~11:22 CEST IDX_SHORT FAIL sync (pipeline had N66–N68 OPEN → C-025 overrides). Track-3 combine blijft **PAUSED**. Watch **N/A**. Freeze **OFF**.
 
 **Formal FAIL batch (ongewijzigd; U2 merge `2f5ee51`; TRIAL 448→453):**
 
@@ -32,31 +32,33 @@ Bindend: D-083…**D-100** (CEO). Integriteit ongewijzigd: PREREG vóór resulta
 | **N40** GER40 mid-morn | `5b3db74` / `2f5ee51` | **FAIL_STRESS_then_FAIL_T** (median −2,28) | 452 |
 | **N41** US30 EU→US | `5b3db74` / `2f5ee51` | **FAIL_T** (NW-L5 1,85 <2) | 453 |
 
-**Cost-gate STOP (geen trial):** **TSMOM_DIV** U2 `e5d23c5` · **ENERGY_TSMOM** U2 `c1499ce` — beide FAIL_COST_GATE. Reserve 2025+ onaangeraakt buiten verbruikte P1. Geen klonen.
+**Cost-gate STOP (geen trial):** **TSMOM_DIV** U2 `e5d23c5` · **ENERGY_TSMOM** U2 `c1499ce` · **IDX_SHORT_TSMOM** U2 `72f40d3` — alle FAIL_COST_GATE. Reserve 2025+ onaangeraakt buiten verbruikte P1. Geen klonen.
 
-**Pre-screen / queue:** Strateeg `93c21d8` ~10:53 CEST — **OPEN N60** XAGUSD 5d swing TSMOM (D-097; gate 53 bp). **N58** FX carry+trend = **SWAP_HOSTILE** (C-024: redesign cheap sides). **N59** = **BARRED** (ENERGY-clone). N45 FAIL · N46/N47 BARRED · N48–N57 FAIL/underpowered. S2 tip `365f704` ~10:48 CEST — 5 proxy screens FAIL (drought); heroriënteer D-097/D-100 families A/B (index-short / FX-carry+).
+**Pre-screen / queue:** Strateeg `03fa1a3`/`bafbe9e` — N58 FAIL_MEAN · **N60–N65 FAIL** (N64 FAIL_N) · **N68 BARRED** (C-025 family A) · **N67 DIAG_FAIL** · **N66 SUBSUMED** in FX_EUR_SHORT PREREG. **N59 BARRED**. Family A overnight index-short TSMOM **closed**. S2 tip `365f704` ~10:48 CEST — drought; heroriënteer D-100 family B/C/D (geen family-A short-TSMOM klonen).
 
-**C-020…C-024 / AUDIT_4 / P1:** P1 dood; AUDIT_4 **concordant FAIL**; C-021/C-022/C-023 **DELIVERED**; **C-024 DELIVERED** (IDX_SHORT PREREG + D-100 shortlist). Forward-papier P1 loopt door (`1ebe88a` U-007).
+**C-020…C-025 / AUDIT_4 / P1:** P1 dood; AUDIT_4 **concordant FAIL**; C-021…C-024 **DELIVERED**; **C-025 DELIVERED** (IDX_SHORT absorb + FX_EUR_SHORT PREREG). Forward-papier P1 loopt door (`1ebe88a`/`8e10cc9` U-007/U-008). Spoor 6: U1 m5gz 166 symb. `f456e3c`/`0bdd533`.
 
-**U2 tip `0f5295c` ~10:47 CEST:** ENERGY gate **done FAIL**; tip **IDLE**. **Nu ACTIEF:** gate **`PREREG_FTMO_IDX_SHORT_TSMOM`** op main (C-024/D-100; US100+US30 short-only L20/H10; cheap overnight; bruto-prijs poort; geen 2025+). Skip her-gate ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59. N58 alleen na swap-side redesign + PASS→PREREG; N60 secondary ≥50 bp. TRIAL_COUNT **453**.
+**U2 tip `72f40d3` ~11:18 CEST:** IDX_SHORT gate **done FAIL**; tip recent (~21 min). **Nu ACTIEF:** merge/fetch **`PREREG_FTMO_FX_EUR_SHORT_TSMOM`** (C-025 op `grok/cto-1` `0644107`) + gate `scripts/fx_eur_short_tsmom_gate.py` (EURUSD+EURAUD short-only L20/H10; cheap overnight; bruto-prijs poort; geen 2025+). Skip her-gate IDX_SHORT/ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59/N68. N58 alleen na swap-side redesign; N66/N67 niet dual-gaten. TRIAL_COUNT **453**.
 
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18 · P1 · GBPJPY_EU_MOM · N35 · N36 · N40 · N41 · N44 · TSMOM_DIV · ENERGY_TSMOM**. Pre-screen FAIL: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34 · N37 · N38 · N39 · N42 · N43 · N45 · N48–N57**. BARRED: **N46 · N47 · N59**. SWAP_HOSTILE (redesign): **N58**.
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18 · P1 · GBPJPY_EU_MOM · N35 · N36 · N40 · N41 · N44 · TSMOM_DIV · ENERGY_TSMOM · IDX_SHORT_TSMOM**. Pre-screen FAIL: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34 · N37 · N38 · N39 · N42 · N43 · N45 · N48–N57 · N58 · N60–N65 · N67**. BARRED: **N46 · N47 · N59 · N68**. SWAP_HOSTILE (redesign): **N58** (also FAIL_MEAN). Family A overnight index-short **closed**.
 
 ### Wekelijkse sporen-tabel (D-094.7 / **D-097–D-100** — Manager houdt bij)
 
 | Spoor | Inhoud | Eigenaar | Cadans-eis | Status 2026-10-01 |
 |------|--------|----------|------------|-------------------|
-| **1** | Kortere historie / walk-forward; ≥5j default; <5j alleen met D-094a a/b/c in PREREG; pool N≥150; forward-papier | **Uitvoerder-2** (+ Strateeg input) | Gates + land PREREGs | **OPEN** — **gate IDX_SHORT** (D-100/C-024); ENERGY+TSMOM_DIV **FAIL_COST_GATE** |
-| **2** | Andere markten via `results/screen_cost_vol.csv` (166 symb.): commodities, crypto, stock-CFD, non-US idx, FX, metals — bruto-screen → PREREG | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk**; **≥2/3 op D-097/D-100** | **OPEN** — intradag FX/idx/crypto clones **barred**; N58 redesign; N59 BARRED; OPEN N60 |
+| **1** | Kortere historie / walk-forward; ≥5j default; <5j alleen met D-094a a/b/c in PREREG; pool N≥150; forward-papier | **Uitvoerder-2** (+ Strateeg input) | Gates + land PREREGs | **OPEN** — **gate FX_EUR_SHORT** (C-025/D-100); IDX_SHORT+ENERGY+TSMOM_DIV **FAIL_COST_GATE** |
+| **2** | Andere markten via `results/screen_cost_vol.csv` (166 symb.): commodities, crypto, stock-CFD, non-US idx, FX, metals — bruto-screen → PREREG | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk**; **≥2/3 op D-097/D-100** | **OPEN** — family A overnight short **closed**; N60–N65 FAIL; N66 subsumed; N67/N68 drop/bar; ≥2/3 op B/C/D |
 | **3** | Combineren: (a) weak+ portfolio `ftmo_ev()`; (b) ensembles/filters één hypothese; (c) stapelen small edges | **CTO** (3a/c); **CEO** schrijft PREREGs 3b | Parallel | **OPEN** — **3b P1 FAIL**; combine **PAUSED** tot solo t≥2 |
-| **4** | Andere horizons/families: **D-097/D-100 prio** swing 3–20d / groot bruto; swap-cheap sides; index-short; FX-carry+; metals; non-oil; XS-mom FAIL | **Strateeg + Strateeg-2** (+ CTO IDX_SHORT PREREG) | ≥3 pre-screens / cyclus **elk**; ≥2/3 D-097/D-100 | **OPEN** — **PREREG IDX_SHORT**; ENERGY FAIL; OPEN N60; families A/B/C/D C-024 |
-| **5** | FTMO-structuur: lage-vol + positieve skew; `recommend_scale`; p_pass × p_survive sizing | **CTO** | Parallel | **OPEN** — C-024 DELIVERED; next = `ftmo_ev` op IDX_SHORT na gate-PASS |
-| **6** | Data: Yahoo/Dukascopy/Stooq proxy (≥10j voor D-097 mechanisme); FTMO-M5 kosten; HistData A-001 niet-blokkerend | Team / Sandro A-001 | Doorlopend | **OPEN** — **PROXY_MAP** `65a2727`/`12bdd5c`; **swap_side_map** D-100; U1 M5→m5gz `bd3c7e1` |
-| **7** | Coördinatie: NEXT_STEPS + deze tabel; geen stilstand | **Manager** | Elke 30 min | **OPEN** — v72 |
+| **4** | Andere horizons/families: **D-097/D-100 prio** swing 3–20d / groot bruto; swap-cheap sides; FX-carry+ (EUR short); metals; non-oil; **geen** family-A overnight index-short | **Strateeg + Strateeg-2** (+ CTO FX_EUR_SHORT PREREG) | ≥3 pre-screens / cyclus **elk**; ≥2/3 D-097/D-100 | **OPEN** — **PREREG FX_EUR_SHORT**; IDX_SHORT FAIL; families B/C/D |
+| **5** | FTMO-structuur: lage-vol + positieve skew; `recommend_scale`; p_pass × p_survive sizing | **CTO** | Parallel | **OPEN** — C-025 DELIVERED; next = `ftmo_ev` op FX_EUR_SHORT na gate-PASS |
+| **6** | Data: Yahoo/Dukascopy/Stooq proxy (≥10j voor D-097 mechanisme); FTMO-M5 kosten; HistData A-001 niet-blokkerend | Team / Sandro A-001 | Doorlopend | **OPEN** — **PROXY_MAP**; **swap_side_map** D-100; U1 m5gz 166 symb. `f456e3c`; forward U-008 |
+| **7** | Coördinatie: NEXT_STEPS + deze tabel; geen stilstand | **Manager** | Elke 30 min | **OPEN** — v73 |
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | **D-100** gate **`PREREG_FTMO_IDX_SHORT_TSMOM`** (US100+US30 short-only L20/H10; cheap overnight) + Strateeg/S2 D-097/D-100 (≥2/3; N60; fix N58; drop N59) | **U2** / Strateeg / S2 / CTO | **OPEN — prio** |
+| **1** | **D-100/C-025** gate **`PREREG_FTMO_FX_EUR_SHORT_TSMOM`** (EURUSD+EURAUD short-only L20/H10; cheap overnight) + Strateeg/S2 D-097/D-100 (≥2/3 op B/C/D; no family-A short clones; no N67/N68) | **U2** / Strateeg / S2 / CTO | **OPEN — prio** |
+| — | **C-025** IDX_SHORT FAIL absorb + FX_EUR_SHORT PREREG (0 trials) | CTO | **DELIVERED** `0644107` |
+| — | **IDX_SHORT_TSMOM** FAIL_COST_GATE (geen trial) | U2 | **DELIVERED** `72f40d3` |
 | — | **C-024** ENERGY FAIL absorb + D-100 shortlist + IDX_SHORT PREREG (0 trials) | CTO | **DELIVERED** `e6a443b` |
 | — | **ENERGY_TSMOM** FAIL_COST_GATE (geen trial) | U2 | **DELIVERED** `c1499ce` |
 | — | **D-100** swap-bewust + swap_side_map | CEO | **DELIVERED** `615bca0` |
@@ -68,27 +70,27 @@ Bindend: D-083…**D-100** (CEO). Integriteit ongewijzigd: PREREG vóór resulta
 | — | **AUDIT_4** P1 reserve | Auditor | **DELIVERED** concordant FAIL `2959bc0` |
 | — | Formal FAIL N35/N36/GBPJPY/N40/N41 (TRIAL 449–453) | U2 | **DELIVERED** `2f5ee51` |
 | — | **D-094a** ≥5j / uitzondering a/b/c in PREREG | Allen + Auditor | Bindend |
-| — | Dead/FAIL set (t/m N57 + ENERGY + TSMOM_DIV + GBPJPY + P1; N59 BARRED) | — | Gesloten als klonen |
+| — | Dead/FAIL set (t/m N65 + IDX_SHORT + ENERGY + TSMOM_DIV + GBPJPY + P1; N59/N68 BARRED; N67 DIAG_FAIL) | — | Gesloten als klonen |
 | — | `EINDSTAND_FTMO.md` | — | Tussenstand; niet-kopen blijft feit |
 | — | HistData A-001 | Sandro | OPEN, niet-blokkerend |
 | — | Integriteit (PREREG/TRIALS/t/FDR/kosten) | Allen | Ongewijzigd |
 
 ### Acties (bindend; D-094 / **D-097–D-100** verdeelt)
 
-1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — ACTIEF (D-100 IDX_SHORT):**
-   - Tip `0f5295c` ~10:47 CEST: ENERGY **FAIL_COST_GATE** (done); was IDLE. **Nu:** gate **`PREREG_FTMO_IDX_SHORT_TSMOM.md`** op main (US100+US30 short-only L20/H10; overnight short-kant; bruto-prijs ≥ 3× cost; train 2010–2016 / test 2017–2024; geen 2025+). Bij PASS → CTO `ftmo_ev` + Auditor. Dead/FAIL (incl. **ENERGY_TSMOM**, **TSMOM_DIV**, N20–N57, **N59**, GBPJPY, **P1**) niet herstarten/klonen. N58 alleen na swap-redesign + PASS→PREREG; N60 secondary (≥50 bp). TRIAL_COUNT **453**.
+1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — ACTIEF (C-025 FX_EUR_SHORT):**
+   - Tip `72f40d3` ~11:18 CEST: IDX_SHORT **FAIL_COST_GATE** (done). **Nu:** fetch/merge **`PREREG_FTMO_FX_EUR_SHORT_TSMOM.md`** + `scripts/fx_eur_short_tsmom_gate.py` van `origin/grok/cto-1` (`0644107`) of main zodra geland; gate EURUSD+EURAUD short-only L20/H10; overnight short-kant; bruto-prijs ≥ 3× cost; train 2010–2016 / test 2017–2024; geen 2025+. Bij PASS → CTO `ftmo_ev` + Auditor. Dead/FAIL (incl. **IDX_SHORT_TSMOM**, **ENERGY_TSMOM**, **TSMOM_DIV**, N20–N65, **N59/N68**, N67, GBPJPY, **P1**) niet herstarten/klonen. N58 alleen na swap-redesign + PASS→PREREG; N66 niet dual-gaten. TRIAL_COUNT **453**.
 
-2. **Grok CTO (`grok/cto-1`) — C-024 DELIVERED; track-3 PAUSED:**
-   - Tip `e6a443b` ~11:04 CEST (C-024). Geen `ftmo_ev` op ENERGY/TSMOM_DIV. Na U2 IDX_SHORT gate-PASS: `recommend_scale`/`ftmo_ev` (+50% swap; alfa = bruto-prijs). Geen Sandro-ping; geen eval-advies.
+2. **Grok CTO (`grok/cto-1`) — C-025 DELIVERED; track-3 PAUSED:**
+   - Tip `0644107` ~11:36 CEST (C-025). Geen `ftmo_ev` op IDX_SHORT/ENERGY/TSMOM_DIV. Na U2 FX_EUR_SHORT gate-PASS: `recommend_scale`/`ftmo_ev` (+50% swap; alfa = bruto-prijs). Geen Sandro-ping; geen eval-advies.
 
 3. **Strateeg (`claude/trusting-faraday-34tsmg`) — ACTIEF (sporen 2 + 4 + D-097/D-100):**
-   - Tip `93c21d8` ~10:53 CEST: **OPEN N60** XAGUSD 5d TSMOM. **D-100/C-024:** drop **N59**; redesign **N58** naar cheap sides (of intradag-flat); ≥2/3 screens op D-097/D-100 families A/B/C/D (index-short regime, FX-carry+, metals cheap, non-oil). Geen ENERGY/TSMOM_DIV/N49–N57 klonen. Intradag FX/index/crypto clones **barred** tenzij ≥50 bp bruto.
+   - Tip `bafbe9e` ~11:22 CEST: IDX_SHORT FAIL sync; N60–N65 FAIL; N66–N68 were OPEN. **C-025:** drop **N67/N68**; N66 subsumed in FX_EUR_SHORT; family A overnight index-short **closed**. ≥2/3 screens op D-097/D-100 families **B/C/D** (FX-carry+ cheap sides, metals with +bruto, non-oil). Geen IDX_SHORT/ENERGY/TSMOM_DIV/N49–N65/N68 klonen. Intradag FX/index/crypto clones **barred** tenzij ≥50 bp bruto.
 
 4. **Strateeg-2 (`grok/strateeg-2`) — ACTIEF (sporen 2 + 4 + D-097/D-100):**
-   - Tip `365f704` ~10:48 CEST: 5 proxy FAIL (drought). **Stop intradag-clone-droogte:** ≥2/3 screens op D-097/D-100 (swap-cheap A/B; parallel N60; N58 redesign); geen herhaling dead/FAIL (t/m N57, ENERGY, TSMOM_DIV, N59). Geen engine-runs.
+   - Tip `365f704` ~10:48 CEST: 5 proxy FAIL (drought). **Stop intradag-clone + family-A short-droogte:** ≥2/3 screens op D-097/D-100 B/C/D (swap-cheap EUR/FX short; metals +bruto); geen herhaling dead/FAIL (t/m N65, IDX_SHORT, ENERGY, TSMOM_DIV, N59/N68, N67). Geen engine-runs.
 
 5. **Auditor — ACTIEF:**
-   - AUDIT_4 **done**. Herreken IDX_SHORT bij gate-PASS; FDR-context C-022/C-024 forking path; steekproef FAIL_T; D-094a/D-100-onderbouwing mag afwijzen.
+   - AUDIT_4 **done**. Herreken FX_EUR_SHORT bij gate-PASS; FDR-context C-022/C-024/C-025 forking path; steekproef FAIL_T; D-094a/D-100-onderbouwing mag afwijzen.
 
 6. **Manager (`main`) — volle cadans :05/:35:**
    - Absorbeer D-*; houd sporen-tabel bij; U2-freshness; commit NEXT_STEPS. Nooit zelf bevriezen.
