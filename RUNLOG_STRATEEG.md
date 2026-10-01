@@ -170,3 +170,30 @@ Sterkste *nieuwe* sleeve op kosten/distinctheid: **S2-XAU_OVERLAP**. Programma-p
 4. RUNLOG + STRATEGIE_LOG append.
 
 **Niet gedaan:** geen PREREG; geen agent/Sandro-ping (parent); geen 2025-touch; geen herstart N20–N23.
+
+## 2026-10-01 09:30 Europe/Amsterdam — D-094 FAIL_T sync TRIAL453 + N46–N48
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree faraday; tip was `6ef46a7`).  
+**Trigger:** U2 `a498a69` (N35/N36/GBPJPY FAIL_T → 451) + U2 `5b3db74` (N40 FAIL_STRESS trial 452; N41 FAIL_T NW 1,85 trial 453 → **TRIAL_COUNT 453**).
+
+### Marked STOP FAIL_T
+| ID | Uitkomst | Cite |
+|----|----------|------|
+| N35 | FAIL_T (t≈1,22) | `a498a69` trial 450 |
+| N36 | FAIL_STRESS→FAIL_T | `a498a69` trial 451 |
+| S2-GBPJPY | FAIL_STRESS→FAIL_T | `a498a69` trial 449 (catalog only) |
+| N40 | FAIL_STRESS→FAIL_T | `5b3db74` trial 452 |
+| N41 | FAIL_T (NW 1,85; test −4,39) | `5b3db74` trial 453 |
+
+N44 **BARRED** (EU→US clone of dead N35/N41). N45 blijft OPEN (≠ N40/N41).
+
+### New OPEN VOORSTELs (D-094 ≥3 non-clone; tracks 2+4)
+| ID | Track | Instrument | Gate | Mechanisme |
+|----|-------|------------|-----:|------------|
+| N46 | 2 | EURGBP | 3,12 | Lon fix extension **fade** |
+| N47 | 2 | USDCHF | 3,03 | Asia→London handoff **cont** |
+| N48 | 4 | USDJPY | 7,08 | 1d TSMOM overnight (swap in gate) |
+
+≠ N35/N36/N40/N41/GBPJPY/ORB. D-094a (b); train 2021–23; N≥150; 3×RT.
+
+**Niet gedaan:** geen PREREG; geen U2/Sandro ping (Quiet; CTO: wake U2 only PASS→PREREG); geen 2025-reserve.

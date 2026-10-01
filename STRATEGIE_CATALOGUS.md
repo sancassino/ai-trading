@@ -200,17 +200,20 @@ PutWrite i.p.v. 25% aandelenbeta ≈ **+€25/mnd** · factortilt op de aandelen
 | N32 | **US30cash IB Breakout Continuation** (VOORSTEL_PRESCREEN_N32) — IB 15:30–16:30 break → flat 18:30 | ≠ IB_FADE / ORB / N20 | **geen PREREG — D-092.1 FAIL** Strateeg `n32_n34` (N=754, mean **+0,43** < 1,35) |
 | N33 | **USDCAD London→NY Session Mom** (VOORSTEL_PRESCREEN_N33) — lon_bp ≥±35 → continue 15:30, flat 18:30 | ≠ N28 EURJPY / A5 / B1 | **geen PREREG — D-092.1 FAIL** Strateeg `n32_n34` (N=94, mean **+1,04** < 2,40) |
 | N34 | **XAUUSD Post-AM-Fix MR to Lon-open** (VOORSTEL_PRESCREEN_N34) — |dev|≥40 @13:00 → fade, flat 15:00 | ≠ N8 cont / AM_FADE / N25 | **geen PREREG — D-092.1 FAIL** Strateeg `n32_n34` (N=148, mean **−2,71** < 2,49) |
-| N35 | **US100cash Europe→US Open Cont.** — eu_bp 09:00–15:00 ≥±40 → entry 15:30, flat 17:00 | ≠ ORB / N3 / N14 / N20 | **PREREG** `PREREG_FTMO_N35` — U2 D-092.1 PASS `43c395e` (N=214, +6,60≥1,98); formele gate pending U2 |
-| N36 | **XAUUSD NY-Open Drive Cont.** — drive 15:30–16:00 ≥±25 → entry 16:00, flat 17:00 | ≠ N12 / N25 fade / AM_FADE | **PREREG** `PREREG_FTMO_N36` — U2 D-092.1 PASS `43c395e` (N=150, +2,80≥2,49); formele gate pending U2 |
+| N35 | **US100cash Europe→US Open Cont.** — eu_bp 09:00–15:00 ≥±40 → entry 15:30, flat 17:00 | ≠ ORB / N3 / N14 / N20 | **GESTOPT FAIL_T** U2 `a498a69` (gate+stress PASS; t≈1,22/0,29); TRIAL **450**/451-set; geen herstart zonder CEO |
+| N36 | **XAUUSD NY-Open Drive Cont.** — drive 15:30–16:00 ≥±25 → entry 16:00, flat 17:00 | ≠ N12 / N25 fade / AM_FADE | **GESTOPT FAIL_T** U2 `a498a69` (gate PASS; stress FAIL); TRIAL **451**; geen herstart zonder CEO |
 | N37 | **EURUSD H4 Trend-Follow SMA20** — close vs SMA20+slope @12:00 → hold to 16:00 | ≠ N27 MR / A5 / B1 | **geen PREREG — D-092.1 FAIL** U2 `43c395e` (N=627, mean **−0,17** < 1,89) |
 | N38 | **GBPUSD London Morning Mom Cont.** (VOORSTEL_PRESCREEN_N38) — 08:00→11:30 ≥±30 → flat 14:30 | ≠ N29 fade / S2-GBPJPY / N28 | **geen PREREG — D-092.1 FAIL** Strateeg `n38_n40` (N=102, **−1,35** < 2,10) |
 | N39 | **BTCUSD Asia→Europe Handoff Cont.** (VOORSTEL_PRESCREEN_N39) — asia ≥±80 → flat 12:00 | ≠ S2-BTC US-open / S2b | **geen PREREG — D-092.1 FAIL** Strateeg `n38_n40` (N=132, **−3,43** < 3,75) |
-| N40 | **GER40cash Mid-Morning Mom Cont.** — 09:30→12:00 ≥±40 → flat 14:00 | ≠ N9/N11/N13/N21/S2-GER* | **PREREG** `PREREG_FTMO_N40` — Strateeg PASS (N=205, +2,43≥2,16; median −2,28 caveat) |
-| N41 | **US30cash Europe→US Open Cont.** — eu_bp ≥±40 → entry 15:30, flat 17:00 | ≠ N35 US100 / N20 / N32 | **PREREG** `PREREG_FTMO_N41` — Strateeg PASS (N=160, +8,65≥1,35) |
+| N40 | **GER40cash Mid-Morning Mom Cont.** — 09:30→12:00 ≥±40 → flat 14:00 | ≠ N9/N11/N13/N21/S2-GER* | **GESTOPT FAIL_T** U2 `5b3db74` (gate PASS; stress FAIL; trial **452**); TRIAL_COUNT **453**; geen retune |
+| N41 | **US30cash Europe→US Open Cont.** — eu_bp ≥±40 → entry 15:30, flat 17:00 | ≠ N35 FAIL_T / N20 / N32 | **GESTOPT FAIL_T** U2 `5b3db74` (NW 1,85<2; test −4,39; trial **453**); geen herstart |
 | N42 | **NZDUSD London Morning Mom Cont.** (VOORSTEL_PRESCREEN_N42) | ≠ N38 / S2-GBPJPY | **geen PREREG — D-092.1 FAIL** Strateeg `n41_n43` (N=132, +0,31 < 5,55) |
 | N43 | **UKOILcash NY-Open Drive Cont.** (VOORSTEL_PRESCREEN_N43) | ≠ N22 MR / S2-USOIL | **geen PREREG — underpowered** Strateeg `n41_n43` (mean +12,74≥8,13 maar **N=139≪150**) |
-| N44 | **US500cash Europe→US Open Cont.** (VOORSTEL_PRESCREEN_N44) — parallel N35/N41 | ≠ N18/N24/ORB | **OPEN** screen queue — gate **2,34 bp**; D-094a (b) |
+| N44 | **US500cash Europe→US Open Cont.** (VOORSTEL_PRESCREEN_N44) — parallel N35/N41 | ≠ N18/N24/ORB | **BARRED clone-of-dead** N35/N41 FAIL_T — geen screen |
 | N45 | **ETHUSD Asia→Europe Handoff Cont.** (VOORSTEL_PRESCREEN_N45) | ≠ N39 BTC / S2b / S2-BTC | **OPEN** screen queue — gate ≈**3,75 bp**; D-094a (b) |
+| N46 | **EURGBP London Fix Extension Fade** (VOORSTEL_PRESCREEN_N46) — ext 08:00→10:30 ≥±25 → fade flat 13:30 | ≠ S2-GBPJPY/N29/N38/N40/N41 | **OPEN** screen — gate **3,12 bp**; D-094a (b) |
+| N47 | **USDCHF Asia→London Handoff Cont.** (VOORSTEL_PRESCREEN_N47) — asia ≥±35 → flat 11:30 | ≠ S2-USDJPY/N31/N39/N40/N41 | **OPEN** screen — gate **3,03 bp**; D-094a (b) |
+| N48 | **USDJPY Swing 1d TSMOM** (VOORSTEL_PRESCREEN_N48) — ret10, hold 1d, swap in gate | ≠ B1/N23/S2-USDJPY/N40/N41 | **OPEN** screen — gate **7,08 bp**; track 4; D-094a (b) |
 | P1 | **ORB + BTC portfolio** (PREREG_FTMO_P1_ORB_BTC) | CEO D-095/D-096 | **GESTOPT FAIL** CTO C-020 `0a97602` (reserve t=0,24 / SR=0,20 / BTC-leg <0); TRIAL_COUNT **448** |
 | **C — HERBEOORDELEN met FTMO-EV** | | | |
 | C1 | **C02 Faber (D1 DD-filter, 1 nacht swap)** | Als overlay (long/flat), swap ≈ 1–2,3 bp/nacht → 5–8%/jr drag op long; nuttig als risicobeheer maar geen FTMO-trial | Geen trial; als portefeuille-overlay in FTMO-context herbeoordelen |
@@ -234,7 +237,7 @@ Per heropende regel de volgende metriek berekenen:
 
 ## 10. Coördinatie Strateeg-1 / Strateeg-2 (D-090…D-096, bijgehouden door Strateeg `claude/trusting-faraday-34tsmg`)
 
-*Bijgewerkt: 2026-10-01 09:28 Amsterdam — **D-094/D-094a + D-095 + D-096** actief (FREEZE OFF; **P1 reserve FAIL** C-020 / TRIAL **448**); U2 N35/N36 PASS→PREREG + N37 FAIL; Strateeg N38/N39 FAIL, **N40/N41 PASS→PREREG**, N42 FAIL, N43 underpowered; OPEN **N44–N45**; Strateeg-2 tip `6444d30` (**PREREG GBPJPY_EU_MOM**); ranking F2-ORB/A1 > N35/N41 (pending formal) > N36/N40 (pending) > S2-GBPJPY (pending U2) > S2-XAU_AM_FADE watch > S2-BTC > GS01*
+*Bijgewerkt: 2026-10-01 09:30 Amsterdam — **D-094** sync: U2 `a498a69`+`5b3db74` → **N35/N36/N40/N41/S2-GBPJPY FAIL_T** (TRIAL_COUNT **453**); N44 BARRED clone; OPEN **N45–N48** (N46–N48 vervangers); ranking F2-ORB/A1 > S2-XAU_AM_FADE watch > S2-BTC > GS01; Quiet to Sandro*
 
 ### 10a. Overzicht PREREGs (Faraday + Grok Strateeg-1 + Strateeg-2)
 
@@ -275,19 +278,22 @@ Per heropende regel de volgende metriek berekenen:
 | N32 | US30 IB breakout cont | faraday VOORSTEL | **geen PREREG** FAIL +0,43 < 1,35 (N=754) | ≠ IB_FADE |
 | N33 | USDCAD Lon→NY mom | faraday VOORSTEL | **geen PREREG** FAIL +1,04 < 2,40 (N=94) | ≠ N28 |
 | N34 | XAU post-AM-fix MR | faraday VOORSTEL | **geen PREREG** FAIL −2,71 < 2,49 (N=148) | ≠ N8/AM_FADE |
-| N35 | US100 Europe→US open cont | faraday | **PREREG** — U2 PASS `43c395e` (+6,60≥1,98, N=214); formal pending | D-094a (b); ≠ ORB/N3/N14 |
-| N36 | XAU NY-open drive cont | faraday | **PREREG** — U2 PASS `43c395e` (+2,80≥2,49, N=150); formal pending | D-094a (b); ≠ N12/N25; N=150 margin |
+| N35 | US100 Europe→US open cont | faraday | **STOP FAIL_T** U2 `a498a69` (t≈1,22); TRIAL **450** | dead; geen herstart zonder CEO |
+| N36 | XAU NY-open drive cont | faraday | **STOP FAIL_T** U2 `a498a69` (stress FAIL); TRIAL **451** | dead; geen herstart zonder CEO |
 | N37 | EURUSD H4 trend SMA20 | faraday VOORSTEL | **geen PREREG** U2 FAIL (−0,17 < 1,89; N=627) | ≠ N27 MR/A5/B1 |
 | N38 | GBPUSD Lon morning mom | faraday VOORSTEL | **geen PREREG** FAIL −1,35 < 2,10 (N=102) | ≠ N29/S2-GBPJPY |
 | N39 | BTC Asia→EU handoff | faraday VOORSTEL | **geen PREREG** FAIL −3,43 < 3,75 (N=132) | ≠ S2-BTC US-open |
-| N40 | GER40 mid-morning mom | faraday | **PREREG** — PASS +2,43≥2,16 (N=205; median −2,28 caveat) | ≠ N9/N11/N21 |
-| N41 | US30 Europe→US open cont | faraday | **PREREG** — PASS +8,65≥1,35 (N=160) | ≠ N35/N20/N32 |
+| N40 | GER40 mid-morning mom | faraday | **STOP FAIL_T** U2 `5b3db74` (stress FAIL; trial **452**); TRIAL **453** | dead; geen retune |
+| N41 | US30 Europe→US open cont | faraday | **STOP FAIL_T** U2 `5b3db74` (NW 1,85; trial **453**) | dead; ≠ N44 clone |
 | N42 | NZDUSD Lon morning mom | faraday VOORSTEL | **geen PREREG** FAIL +0,31 < 5,55 (N=132) | ≠ N38 |
 | N43 | UKOIL NY-open drive | faraday VOORSTEL | **geen PREREG** underpowered N=139≪150 (mean +12,74≥8,13) | ≠ N22; no threshold shift |
-| N44 | US500 Europe→US open cont | faraday VOORSTEL | **OPEN** screen queue gate 2,34 | ≠ N18/N24; parallel N35/N41 |
+| N44 | US500 Europe→US open cont | faraday VOORSTEL | **BARRED** clone-of-dead N35/N41 | geen screen |
 | N45 | ETH Asia→EU handoff | faraday VOORSTEL | **OPEN** screen queue gate ≈3,75 | ≠ N39/S2b |
+| N46 | EURGBP Lon fix ext fade | faraday VOORSTEL | **OPEN** screen gate 3,12 | ≠ S2-GBPJPY/N29/N40/N41 |
+| N47 | USDCHF Asia→Lon cont | faraday VOORSTEL | **OPEN** screen gate 3,03 | ≠ S2-USDJPY/N31/N40/N41 |
+| N48 | USDJPY 1d TSMOM | faraday VOORSTEL | **OPEN** screen gate 7,08 | track 4; ≠ B1/N23/N40/N41 |
 | P1 | ORB+BTC portfolio | CEO/CTO | **STOP FAIL** C-020 / D-096 (t=0,24; SR=0,20; BTC-leg <0); TRIAL **448** | reserve P1 verbruikt |
-| S2-GBPJPY | GBPJPY EU morning mom | grok/strateeg-2 | **PREREG** `6444d30` (pre-screen +3,41≥3,33, N=170); U2 gate pending | ≠ N28/N38; D-094a (b) |
+| S2-GBPJPY | GBPJPY EU morning mom | grok/strateeg-2 | **STOP FAIL_T** U2 `a498a69` (stress FAIL; TRIAL **449**) | catalog only; geen S2-PREREG rewrite |
 | GS01 | Gap-aligned long-only ORB indices | grok/strateeg-1 | PREREG + erratum; **Faraday D-092.1 diagnostic pooled FAIL** (−0,38 < 1,92 bp) | ≠ A1 bidirectioneel; GER40-leg solo +6,21 — geen cherry-pick |
 | GS02 | Asian-range fade FX | grok/strateeg-1 | PREREG (geen poort-run) | ≠ A5 breakout; fade/decay-risico |
 | S2-XAU | XAUUSD London–NY overlap breakout | grok/strateeg-2 | **STOP** cost-gate `7bac598` | ≠ A1 cash-open |
@@ -313,7 +319,9 @@ Per heropende regel de volgende metriek berekenen:
 - **N18 US500 OVN Gap Cont.:** cost-gate PASS → stress PASS → formal FAIL_T → TRIALS append; **TRIAL_COUNT = 447** (U2 `d1984ed` / CTO C-015 / D-093).  
 - S2-* overig / N1–N10 / N12–N17 / N19–N34 / N37–N39 / N42–N43 / MIDDAY / GER_US / VWAP_PB / IB_FADE / S2b / S2c: cost-gate, t, pre-screen FAIL of underpowered — geen extra formele trial. **N20–N34 FAIL**; **N37/N38/N39/N42 FAIL**; **N43 underpowered**.  
 - **P1 ORB+BTC:** reserve one-shot FAIL → TRIALS append; **TRIAL_COUNT = 448** (CTO C-020 / D-096).  
-- **N35/N36/N40/N41:** PREREG landed (pre-screen PASS); formele trial nog niet — TRIAL_COUNT blijft **448** tot U2 formal. OPEN queue **N44–N45**. S2-GBPJPY PREREG pending U2.  
+- **N35/N36/S2-GBPJPY FAIL_T:** U2 `a498a69` → trials 449–451.  
+- **N40 FAIL_STRESS_then_FAIL_T** (trial **452**) + **N41 FAIL_T** (trial **453**): U2 `5b3db74` → **TRIAL_COUNT = 453**. Dead-set += N40·N41.  
+- **N44 BARRED** (clone EU→US dood). OPEN **N45** + **N46–N48** (D-094 non-clone vervangers). Geen U2 wake tot PASS→PREREG.  
 - N3: gate PASS maar t FAIL — geen TRIALS-append.  
 - N9: mean-PASS maar N≪150 — **geen PREREG/trial** (D-092.1 N-eis).  
 - S2-XAU_AM_FADE: gate PASS maar power onvoldoende — **geen trial-claim** (watch-only).  
@@ -322,22 +330,20 @@ Per heropende regel de volgende metriek berekenen:
 
 ### 10c. Welke hypothese is sterker? (evidence uit docs/kosten — geen verzonnen backtests)
 
-**Korte conclusie (post D-094…D-096; 09:28):** **Freeze OFF.** **P1 ORB+BTC reserve FAIL** (C-020; TRIAL **448**) — P1 dood, geen freeze. U2: N35/N36 PASS_may_PREREG → Strateeg PREREGs landed; N37 FAIL. Deze cyclus Strateeg: **6 pre-screens** (N38–N43): N40/N41 PASS→PREREG; N38/N39/N42 FAIL; N43 underpowered. S2 tip `6444d30`: **PREREG GBPJPY_EU_MOM**. Ranking: **F2-ORB/A1** > **N35/N41** (strong pre-screen, formal pending) > **N36/N40** (PASS margin/caveat) > **S2-GBPJPY** (pending U2) > **S2-XAU_AM_FADE** watch > **S2-BTC** > **GS01**. OPEN: **N44–N45**.
+**Korte conclusie (post U2 `5b3db74`; 09:30):** **Freeze OFF.** Alle Faraday PREREGs deze cyclus **FAIL_T**: N35/N36 (`a498a69`) + N40/N41 (`5b3db74`) + S2-GBPJPY. **TRIAL_COUNT = 453**. N44 BARRED clone. D-094: OPEN **N46–N48** (+ N45). Ranking: **F2-ORB/A1** > **S2-XAU_AM_FADE** watch > **S2-BTC** > **GS01**. Quiet to Sandro. Geen U2 wake (geen PASS).
 
 | Rang (kwalitatief) | Hypothese | Waarom (alleen bestaande docs/kosten/research) |
 |--------------------|-----------|-----------------------------------------------|
 | 1 (referentie-EV) | **F2-ORB / A1** | Gerepliceerde bruto-edge; enige reopen-pad = lange M1 |
-| 2 (PREREG pending formal) | **N35 / N41** EU→US index cont | U2/Strateeg pre-screen +6,60 / +8,65 bp; N≥150 |
-| 3 (PREREG pending formal) | **N36 / N40** | PASS but fragile (N36 N=150; N40 median <0) |
-| 4 (PREREG pending U2) | **S2-GBPJPY_EU_MOM** | S2 pre-screen +3,41≥3,33 N=170 |
-| 5 (watch-only) | **S2-XAU_AM_FADE** | +18,70 bp; N=12 |
-| 6 (watch / P1-leg) | **S2-BTC** | stap1 PASS N=197; P1 reserve FAIL |
-| 7 (verzwakt) | **GS01** | Faraday pooled pre-screen FAIL |
-| Dood | A2/A4/A5/B1/N1–N34/N37–N39/N42/P1/LUNCH_OPEN/… | Poort, t, pre-screen FAIL, reserve FAIL |
+| 2 (watch-only) | **S2-XAU_AM_FADE** | +18,70 bp; N=12 |
+| 3 (watch / P1-leg) | **S2-BTC** | stap1 PASS N=197; P1 reserve FAIL |
+| 4 (verzwakt) | **GS01** | Faraday pooled pre-screen FAIL |
+| Dood | A2/A4/A5/B1/N1–N42/**N35/N36/N40/N41**/P1/LUNCH_OPEN/**S2-GBPJPY**/… | Poort, t, FAIL_T |
 | Underpowered | **N43** UKOIL drive | mean PASS N≪150 — geen PREREG |
-| Open screen | **N44–N45** | US500 EU→US / ETH Asia→EU |
+| Barred clone | **N44** US500 EU→US | clone-of-dead N35/N41 |
+| Open screen | **N45–N48** | ETH Asia / EURGBP fade / USDCHF Asia / USDJPY 1d TSMOM |
 
-**Faraday vs Strateeg-2:** Faraday landed **4 PREREGs** this cycle (N35/N36/N40/N41) after cost PASS; S2 tip `6444d30` landed **GBPJPY_EU_MOM**. Faraday stronger on index EU→US family (N35/N41); S2 stronger on FX session-mom (GBPJPY). Both pending U2 formal gates.
+**Faraday vs Strateeg-2:** U2 `a498a69`+`5b3db74` killed Faraday **N35/N36/N40/N41** + S2 **GBPJPY** (all FAIL_T; TRIAL **453**). Geen live Faraday PREREG over. D-094 OPEN **N46–N48** (non-clone; geen N40/N41/EU→US/GBPJPY-mom). S2-GBPJPY: catalog STOP only.
 
 ### 10d. Actiepunten Strateeg (deze branch)
 
@@ -359,3 +365,4 @@ Per heropende regel de volgende metriek berekenen:
 16. ✅ **2026-10-01 08:12:** N20–N23 → **geen PREREG — U2 D-092.1 FAIL** (`a1756a7`; means −2,26/−2,45/−1,67/+4,46); VOORSTEL N24–N27 OPEN (US500 lunch-fade / XAU NY-PM fade / XS basket / AUDUSD H4 MR); TRIAL_COUNT **447**; geen PREREG.
 17. ✅ **2026-10-01 08:28:** Strateeg advanced D-094: screened **N24–N34** (11× D-092.1 FAIL; artifacts `results/R2/n24_n27_prescreen/`, `n28_n31_prescreen/`, `n32_n34_prescreen/`); closest miss N28 EURJPY +2,91 vs 3,30; filed OPEN **N35–N37**; TRIAL_COUNT **447**; geen PREREG; geen U2 ping (CTO: only on PASS→PREREG).
 18. ✅ **2026-10-01 09:28:** Sync D-096 P1 FAIL (TRIAL **448**). Land **PREREG N35/N36** (U2 PASS) + **N40/N41** (Strateeg PASS); N37/N38/N39/N42 FAIL; N43 underpowered; OPEN **N44–N45**. C17/FX/B1/A2 remain STOP. §10 vs S2 `6444d30` GBPJPY. U2 ping warranted (PASS→PREREG ×4 + GBPJPY already filed).
+19. ✅ **2026-10-01 09:30:** U2 `a498a69`+`5b3db74` TRIAL **453**: **N35/N36/N40/N41/S2-GBPJPY STOP FAIL_T**; N44 BARRED clone; OPEN **N46–N48** (+N45). Geen PREREG; geen U2/Sandro ping (Quiet).
