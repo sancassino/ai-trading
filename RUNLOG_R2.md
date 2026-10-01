@@ -1724,3 +1724,16 @@ Year-split train bruto: 2021 **+25.26** / 2022 **−0.46** / 2023 **−3.63**. L
 **Geen nieuwe PREREG.** N82/N83 zijn pre-screen VOORSTELs (D-092.1 pending; Strateeg beslist). Geen gates gerund. TRIAL_COUNT **456** onveranderd.
 
 **U2 next:** IDLE wacht N82/N83 PASS→PREREG of NEW_FAMILY non-clone uit Strateeg/CTO/Manager.
+
+## Cyclus 14:26 CEST (2026-10-01) — uurcyclus sync v82 (TRIAL 456; IDLE)
+
+**Branch:** `claude/uitvoerder2-r` — FF tot `e16f4d4` (NEXT_STEPS **v82**). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (Manager 13:38 CEST): U2 IDLE — C-030 DELIVERED (0 trials; N82/N84/N85/N86 DIAG_FAIL; N83 UNDERPOWERED); Dead += N82/N84–N86; UNDERPOWERED += N83. Formal OPEN queue **leeg**. HOLD tot next PASS→PREREG (Strateeg ≥2 NEW_FAMILY nodig). TRIAL_COUNT **456** onveranderd.
+- CTO `6174bca` C-030: N80 absorb + N82–N86 Lane-B diag; Bar UKOIL OVN-gap clones. Kill circuit: FAIL_COST_GATE telt niet in streak.
+- Strateeg Faraday `6c9c1e5`: N84–N86 NEW_FAMILY I/J/K filed → C-030 DIAG_FAIL. Drop N82–N86 PREREG-pad. File ≥2 replacements.
+
+**Geen nieuwe PREREG.** N82–N86 volledig afgesloten (C-030). Geen gates gerund. TRIAL_COUNT **456** onveranderd.
+
+**U2 next:** IDLE wacht Strateeg ≥2 NEW_FAMILY non-clone → PASS→PREREG. Skip N75–N86/CORN/VIX_TERM/L60/UKOIL-OVN.
