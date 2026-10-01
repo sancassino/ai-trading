@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- 12:50 Amsterdam (01-10) — Cyclus :50. Geen nieuw nieuws t.o.v. 12:47. Pipeline: **N75/N76/N77 OPEN** (NEW_FAMILY Lane-B) + **N78 PREREG VIX_TERM_VOV** (U2 gate pending). L60 FX-med BARRED. TRIAL **456**.
+
 - **2026-10-01 12:47 CEST** — **C-028 Lane-B PREREG N78 VIX_TERM_VOV** from S2 `b765613c`. Primary US100cash; freeze vov10/combo; gate **7,83 bp** = 3×(0,66+1×1,95) D-100 overnight long (swap-hostile honest). Lane-A bruto 6,80/day_t 2,91 ≠ PASS. N75–N77 remain OPEN screens; N72–N74 BARRED; TRIAL_COUNT **456**. Catalog §9/§10 + source pointer `results/lane_b/VIX_TERM_VOV_SOURCE.md`. Quiet to Sandro (parent ping U2).
 
 - 12:42 CEST (01-10) — **C-028 binding close**: USDJPY_MED **FAIL_T** U2 `910d6ff` (TRIAL 454→455) gevolgd door EURJPY_MED **FAIL_T** U2 `65a9b23` (TRIAL 455→456). **BARRED/STOP** N72–N74 (EURJPY/USDCAD/USDCHF L60/H10); L60 FX-med family closed, geen pair-forks. Catalog §9/§10 synced: USDJPY_MED + EURJPY_MED dead, ranking MED sleeves dropped, TRIAL_COUNT **456**. Live OPEN = **N75–N77** (already filed); no new VOORSTEL, no PREREG, no agent message.
