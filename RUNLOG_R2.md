@@ -1353,30 +1353,31 @@ Rules frozen = `n35_n37_prescreen` sims (N36 data file `XAUUSD.csv.gz`; PREREG t
 
 **U2 next:** wacht Strateeg/S2 nieuwe D-092.1-PASS / PREREG (non-clone). MATERIAL for Manager/CTO (3 FAIL_T → dead-set). No Sandro-ping.
 
-## Cyclus 07:25 UTC (09:25 CEST, 2026-10-01) — N40 FAIL_STRESS_FAIL_T + N41 FAIL_T (TRIAL 453)
+## Cyclus 07:25 UTC / 09:25–09:30 CEST (2026-10-01) — formal N40 FAIL_STRESS + N41 FAIL_T (TRIAL 453)
 
-**Branch:** `claude/uitvoerder2-r` — merge FF naar `a498a69` (GBPJPY FAIL_STRESS + N35/N36 FAIL_T, Grok U2). Reserve 2025→ **niet aangeraakt**.
+**Branch:** `claude/uitvoerder2-r`. Prior tip `a498a69` (GBPJPY+N35/N36 FAIL_T; TRIAL_COUNT **451**). Strateeg `6ef46a7` — N40/N41 PREREGs bevroren. Reserve 2025→ **niet aangeraakt**.
 
-**Gelezen:** NEXT_STEPS **v67** (`d9b32cc`); TRIAL_COUNT **451** (pre-cyclus). P1 dood (D-096.4 / C-020 FAIL). Strateeg `6ef46a7` — N40/N41 PREREGs bevroren, N38/N39/N42/N43 FAIL.
+### Confirm SKIP (already FAIL_T / dead)
 
-### Prio-1 — PREREG gelanden + formele gates N40 en N41
+| Sleeve | Prior outcome | TRIAL | Status |
+|--------|---------------|------:|--------|
+| S2_GBPJPY_EU_MOM | FAIL_STRESS_then_FAIL_T | 449 | SKIP |
+| N35 | FAIL_T | 450 | SKIP |
+| N36 | FAIL_STRESS_then_FAIL_T | 451 | SKIP |
 
-**PREREGs gecommit** (PREREG vóór resultaat): `1f84693` — `PREREG_FTMO_N40.md` (Strateeg 6ef46a7) + `PREREG_FTMO_N41.md`.
+### Prio — PREREG N40+N41 (Strateeg 6ef46a7) → cost-gate / stress / formal t (incl. test 2024)
 
-**Script:** `scripts/n40_n41_cost_gate_trial.py` → `results/R2/n40_n41_prep/`.  
-**Window:** train **2021-01-01 … 2023-12-31**. Reserve 2025→ onaangeroerd.
+**PREREGs gecommit:** `1f84693` — `PREREG_FTMO_N40.md` + `PREREG_FTMO_N41.md` (PREREG vóór resultaat). Script: `scripts/n40_n41_cost_gate_trial.py`. Artefacts: `results/R2/n40_n41_prep/`.
 
-| Sleeve | Instrument | N | mean bruto | gate | stress | NW-t (L=5) | Uitkomst |
-|--------|------------|--:|----------:|-----:|-------:|-----------:|----------|
-| **N40** GER40 mid-morning mom | GER40cash | 205 | **+2.43 bp** | 2.16 PASS | 3.24 **FAIL** | 0.33 | **FAIL_STRESS_then_FAIL_T** |
-| **N41** US30 EU→US cont | US30cash | 160 | **+8.65 bp** | 1.35 PASS | 2.025 PASS | 1.75 | **FAIL_T** |
+| Sleeve | N_train | mean bruto | gate | stress | t train day/NW | test N / mean / t | Uitkomst |
+|--------|--------:|-----------:|-----:|-------:|---------------:|------------------:|----------|
+| **N40** GER40 mid-morn | 205 | +2.43 | 2.16 **PASS** | 3.24 **FAIL** | 0.55 / 0.56 | 53 / −0.00 / −0.23 | **FAIL_STRESS_then_FAIL_T** |
+| **N41** US30 EU→US | 160 | +8.65 | 1.35 **PASS** | 2.025 **PASS** | 2.01 / **1.85** | 14 / −4.39 / −0.39 | **FAIL_T** |
 
-**Noten:**
-- N40 mean PASS maar stress FAIL (2.43 < 3.24); t=0.33 bevestigt hoge variantie; mediaan −2.28 bp (scheef/staart-afhankelijk; PREREG caveat ingelost).
-- N41 PASS gate + PASS stress; t=1.7483 < 2.0 — net onder drempel; mediaan +10.34 bp (positief).
+**Noten:** N40 mediaan bruto −2.28 bp (PREREG caveat: staart-afhankelijk) → stress miss. N41 train day-clust 2.01 ≥2 maar NW-L5 1.85 <2.0 → FAIL_T; test N=14 spaarzaam (dekking). Year-split N41: 2021 +9.71 / 2022 +11.67 / 2023 −3.21.
 
-**Dead/FAIL += N40 · N41.** Geen klonen. Geen nieuwe reserve 2025+ geopend.
+**Dead/FAIL += N40 · N41.** Geen klonen. Geen nieuwe reserve 2025+.
 
-**TRIAL_COUNT 451 → 453** (N40 = 452, N41 = 453). TRIALS.csv append-only.
+**TRIAL_COUNT 451 → 453** (N40 452, N41 453). TRIALS.csv append-only.
 
 **U2 next:** wacht Strateeg/S2 nieuwe D-092.1-PASS / PREREG (non-clone, D-094a ≥5j). N44/N45 OPEN bij Strateeg (VOORSTEL). No Sandro-ping.
