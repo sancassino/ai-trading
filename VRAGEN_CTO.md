@@ -4,6 +4,38 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-013 — N11 FAIL_T confirm + D-092.6 affirm + N15/N16/N17 venue-ORB FAIL
+**Opened:** 2026-10-01 ~04:00 Europe/Amsterdam (main v58 N11 FAIL_T; Strateeg `e8f261f` PREREG_N11 + N13/N14; U2 `d4cefff` TRIAL_COUNT 446).  
+**Closed:** 2026-10-01 ~04:15 Europe/Amsterdam by CTO (executable; no CEO wait).
+
+**Facts:**
+1. **N11 formal path (U2 `e6b2395` / tip `d4cefff`; PREREG Strateeg `564ee5e`/`e8f261f`):** cost-gate PASS (N=475, mean bruto +2.74 ≥ gate 2.16) → stress FAIL (+2.74 < 3.24) → day-clust t netto **0.92** / NW-L5 **0.85** → **FAIL_STRESS_then_FAIL_T**. TRIAL_COUNT **446**. Dead set += **N11**. Test 2024 + reserve 2025→ untouched.
+2. **N13/N14 D-092.1 (U2 `d4cefff`):** N13 GER40 US-Open Sync N=92 mean −3.34 < 2.16 → FAIL (also underpowered); N14 US100 NY-Open PM N=183 mean −5.05 < 1.80 → FAIL. **NO_PREREG**.
+3. **Manager v58 soft-call:** N11 cost-gate PASS resets D-092.6 watch → **0/8** (stress/FAIL_T do not block reset). CTO invited to refine.
+4. **CTO free venue-ORB screens** (`scripts/n15_n16_n17_prescreen.py`, train 2021–23, COSTS RT):
+
+| Idee | N | mean bruto | median | gate | Uitkomst |
+|------|---|------------|--------|------|----------|
+| N15 UK100 London ORB | 510 | −2.30 bp | −14.0 | 4.26 | **FAIL** |
+| N16 JP225 Tokyo ORB | 432 | +2.48 bp | −12.4 | 4.53 | **FAIL** |
+| N17 US30 NY ORB | 614 | −0.16 bp | −14.4 | 1.35 | **FAIL** |
+| N17b US100 NY ORB | 550 | +1.87 bp | −20.0 | 1.98 | **FAIL** |
+| N17c US500 NY ORB | 507 | −0.54 bp | −15.6 | 2.34 | **FAIL** |
+
+**Decision (binding):**
+1. **N11 = DEAD FAIL_T** — confirm U2; no restart / no GER40 XETRA-ORB clones.
+2. **N13/N14 = FAIL pre-screen** — no PREREG; do not repeat without new mechanism.
+3. **D-092.6:** CTO **affirms** Manager soft-call — **cost-gate PASS** resets the 8-cyclus drought watch. Stress FAIL and formal FAIL_T are trial hurdles, not drought counters. Watch stays **0/8**.
+4. **N15/N16/N17 (+ companions) = STOP at pre-screen** — simple single-symbol venue-ORB family barred without a *new* mechanism (filter/structure distinct from N11/F2-style breakout). Same skew failure mode (median ≪ 0, stop_share ~0.55–0.67).
+5. **Hygiene (advisory, not a hard gate):** Strateeg/S2 pre-screens should report **median bruto + stop_share** alongside mean; flag skew-fragile (median<0 and stop_share>0.45) before burning a PREREG trial.
+6. **U2:** remains **IDLE** until next D-092.1 PASS non-clone PREREG N≥150 (≠ dead/FAIL set incl. N11–N17).
+7. **Highest lever:** F2-ORB ≤2024 ≈€513/m remains the living reference; Strateeg should hunt non-ORB daily-flat edges or structurally different power paths — not more venue-ORB clones.
+8. **CEO/Sandro:** no ask. No reserve 2025+. No TRIALS inventie by CTO.
+
+**Where applied:** `results/cto/c013_board.json`, `results/cto/n11_prep/`, `results/cto/n15_n16_prescreen/`, `scripts/n15_n16_n17_prescreen.py`, `CTO_AUDIT.md` §3l, `RUNLOG_CTO.md`, this ticket.
+
+---
+
 ### C-012 — N11 PASS (COSTS RT fix) + N12 FAIL; GER40 gate correction
 **Opened:** 2026-10-01 ~03:31 Europe/Amsterdam (main v55; U2 `2ac8e86` N11/N12 pre-screen FAIL vs VOORSTEL 4.20; Strateeg waiting).  
 **Closed:** 2026-10-01 ~03:40 Europe/Amsterdam by CTO (executable; no CEO wait).

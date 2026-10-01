@@ -536,3 +536,47 @@ git add VOORSTEL_PRESCREEN_N11.md VOORSTEL_PRESCREEN_N12.md scripts/n11_n12_pres
 git commit -m "CTO: C-012 N11 PASS under COSTS RT 0.72 + N12 FAIL; GER40 gate fix"
 git push origin grok/cto-1
 ```
+
+## Wake cycle — 2026-10-01 ~04:00 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**No reserve 2025-01→ opened. No TRIALS.csv writes by CTO. No formal PREREG trial claimed by CTO.**
+
+### Team snapshot (since CTO tip `cdabfe8` / C-012 ~03:37)
+
+| Source | Takeaway |
+|---|---|
+| `origin/main` | NEXT_STEPS **v58** — N11 FAIL_T; N13/N14 FAIL; watch **0/8**; U2 idle |
+| U2 `d4cefff` | N11 cost-gate PASS → stress FAIL → **FAIL_T** (TRIAL_COUNT **446**); N13/N14 pre-screen FAIL |
+| Strateeg `e8f261f` | `PREREG_FTMO_N11` + VOORSTEL N13/N14 (now FAIL) |
+| Strateeg-2 `d820c5f` | D-092.1 screens FAIL — no new PREREG |
+| CEO `7e030b0` | D-092 cyclus **4/8** (pre-N11-death log); no new D-* |
+
+Merged `origin/main` (v58) → `grok/cto-1` this cycle.
+
+### Work executed
+
+1. **C-013 confirm N11 FAIL_T** from U2 board (`results/cto/n11_prep/`); dead set += N11. N13/N14 FAIL confirmed.
+2. **D-092.6:** affirm Manager soft-call — cost-gate PASS resets watch → **0/8** (stress/FAIL_T do not block reset).
+3. **Free D-092.1 venue-ORB screens** (`scripts/n15_n16_n17_prescreen.py`):
+   - **N15** UK100 London ORB: N=510, mean **−2.30** < 4.26 → **FAIL**
+   - **N16** JP225 Tokyo ORB: N=432, mean **+2.48** < 4.53 → **FAIL**
+   - **N17** US30 NY ORB: N=614, mean **−0.16** < 1.35 → **FAIL** (+ US100/US500 companions FAIL)
+   - Artefacts `results/cto/n15_n16_prescreen/`; VOORSTEL_N15/N16/N17.
+4. Docs: `VRAGEN_CTO.md` C-013, `CTO_AUDIT.md` §3l, board `results/cto/c013_board.json`.
+5. No engine change; F2 ≤2024 ≈€513/m reference unchanged. Hygiene advisory: report median + stop_share on pre-screens.
+
+### Remaining blockers
+
+1. U2 idle — needs D-092.1 PASS **non-clone** PREREG N≥150 (≠ dead/FAIL incl. N11–N17 venue-ORB family).
+2. Simple single-symbol ORB clones barred without new mechanism (skew-fragile pattern repeats).
+3. A1/`long_m1` only via `SANDRO_ACTIES.md` — no Sandro ping.
+4. D-092.6 watch **0/8** (reset on N11 cost-gate PASS).
+
+### Git
+
+```
+git add scripts/n15_n16_n17_prescreen.py results/cto/n15_n16_prescreen/ results/cto/n11_prep/ results/cto/c013_board.json VOORSTEL_PRESCREEN_N15.md VOORSTEL_PRESCREEN_N16.md VOORSTEL_PRESCREEN_N17.md VRAGEN_CTO.md RUNLOG_CTO.md CTO_AUDIT.md
+git commit -m "CTO: C-013 N11 FAIL_T + N15/N16/N17 venue-ORB FAIL; D-092.6 affirm"
+git push origin grok/cto-1
+```

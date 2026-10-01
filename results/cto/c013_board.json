@@ -1,0 +1,99 @@
+{
+  "ticket": "C-013",
+  "when": "2026-10-01 ~04:10 Europe/Amsterdam",
+  "main": "3de9a77 NEXT_STEPS v58",
+  "n11": {
+    "u2_tip": "d4cefff",
+    "prereg": "PREREG_FTMO_N11",
+    "outcome": "FAIL_STRESS_then_FAIL_T",
+    "n": 475,
+    "mean_bruto_bp": 2.7365,
+    "gate_3x_rt": 2.16,
+    "gate_stress": 3.24,
+    "pass_gate": true,
+    "pass_stress": false,
+    "t_day_clustered_netto": 0.915,
+    "trial_count": 446,
+    "status": "DEAD FAIL_T"
+  },
+  "n13_n14": "U2 d4cefff pre-screen FAIL NO_PREREG",
+  "d092_6": {
+    "watch": "0/8",
+    "cto_call": "AFFIRM Manager soft-call: cost-gate PASS resets drought watch; stress FAIL / FAIL_T do not block reset. Stress remains a trial hurdle not a drought counter."
+  },
+  "venue_orb_screens": [
+    {
+      "idea": "N15_UK100_LONDON_ORB",
+      "symbol": "UK100cash",
+      "n": 510,
+      "mean_bruto": -2.3035,
+      "median_bruto": -13.9706,
+      "stop_share": 0.649,
+      "rt": 1.42,
+      "gate": 4.26,
+      "outcome": "FAIL",
+      "note": "LSE open AMS",
+      "p25": -20.4174,
+      "p75": 11.4355
+    },
+    {
+      "idea": "N16_JP225_TOKYO_ORB",
+      "symbol": "JP225cash",
+      "n": 432,
+      "mean_bruto": 2.4849,
+      "median_bruto": -12.3999,
+      "stop_share": 0.5648,
+      "rt": 1.51,
+      "gate": 4.53,
+      "outcome": "FAIL",
+      "note": "Tokyo\u224802:00 CEST",
+      "p25": -19.6063,
+      "p75": 18.9566
+    },
+    {
+      "idea": "N17_US30_NY_ORB",
+      "symbol": "US30cash",
+      "n": 614,
+      "mean_bruto": -0.157,
+      "median_bruto": -14.365,
+      "stop_share": 0.6694,
+      "rt": 0.45,
+      "gate": 1.35,
+      "outcome": "FAIL",
+      "note": "NY open AMS",
+      "p25": -24.5093,
+      "p75": 15.9587
+    },
+    {
+      "idea": "N17b_US100_NY_ORB",
+      "symbol": "US100cash",
+      "n": 550,
+      "mean_bruto": 1.8681,
+      "median_bruto": -20.0286,
+      "stop_share": 0.6691,
+      "rt": 0.66,
+      "gate": 1.98,
+      "outcome": "FAIL",
+      "note": "US100 NY companion",
+      "p25": -34.1626,
+      "p75": 29.6679
+    },
+    {
+      "idea": "N17c_US500_NY_ORB",
+      "symbol": "US500cash",
+      "n": 507,
+      "mean_bruto": -0.5432,
+      "median_bruto": -15.6293,
+      "stop_share": 0.6548,
+      "rt": 0.78,
+      "gate": 2.34,
+      "outcome": "FAIL",
+      "note": "US500 NY companion",
+      "p25": -26.6077,
+      "p75": 18.4129
+    }
+  ],
+  "venue_orb_verdict": "ALL FAIL \u2014 no PREREG; bar simple single-symbol ORB clones without new mechanism",
+  "highest_lever": "Strateeg/S2: non-ORB or structurally different daily-flat idea with D-092.1 PASS + N\u2265150 + preferably median\u22650; F2-ORB \u22642024 \u2248\u20ac513/m remains reference",
+  "sandro_ping": false
+}

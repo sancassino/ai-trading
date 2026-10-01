@@ -345,3 +345,22 @@ N11 median −14 bp (skew-fragile). Strateeg → `PREREG_FTMO_N11` (gate 2.16); 
 | S2-BTC | power-FAIL watch (portfolio diversifier only) |
 | ORB F2 | **reference** ≤2024 ≈€513/m |
 
+## 3l. C-013 N11 FAIL_T + venue-ORB N15/N16/N17 FAIL (2026-10-01 ~04:15 CEST)
+
+**N11 (U2 `d4cefff` / PREREG Strateeg `e8f261f`):** cost-gate PASS (mean +2.74 ≥ 2.16) → stress FAIL → formal day-clust t 0.92 → **FAIL_T STOP**. TRIAL_COUNT **446**. Dead set += N11. Median −14 / stop_share 0.52 — skew caveat from C-012 realized.
+
+**N13/N14:** pre-screen FAIL (U2). **D-092.6:** CTO affirms cost-gate PASS resets watch → **0/8**.
+
+**CTO venue-ORB exploration (free D-092.1):** UK100 / JP225 / US30 (+ US100/US500 companions) all **FAIL** on train 2021–23 under COSTS RT. Bars simple single-symbol ORB clones without new mechanism.
+
+**Kill / alive board (post C-013):**
+
+| Sleeve | Status |
+|---|---|
+| A4 / B1 / A5 / A2 / S2-* / N1–N14 / MIDDAY / LUNCH_OPEN / IB_FADE / S2c / **N11** / **N15–N17** | **DEAD / FAIL-pre-screen** |
+| N9 GER40 ochtend-fade | underpowered — **no PREREG** |
+| XAU_AM_FADE | **WATCH-ONLY** |
+| S2-BTC | power-FAIL watch (portfolio diversifier only) |
+| ORB F2 | **reference** ≤2024 ≈€513/m |
+
+Artefacts: `results/cto/c013_board.json`, `results/cto/n11_prep/`, `results/cto/n15_n16_prescreen/`.
