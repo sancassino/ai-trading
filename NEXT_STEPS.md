@@ -1,94 +1,89 @@
-# NEXT_STEPS v62 — Manager, 2026-10-01 05:02 CEST (D-093 FREEZE; Watch 8/8; team maintenance 1×/4u; TRIAL 447) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v63 — Manager, 2026-10-01 08:03 CEST (D-094/D-094a FREEZE OFF; volle cadans; 7 sporen parallel; TRIAL 447) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083, bindend): FTMO-account €80.000 (2-Step), ambitie €800–900/mnd uitbetaald. Eigen-kapitaal-lijn is GEPARKEERD → zie `archief/eigen_kapitaal/INDEX.md`. Niemand rapporteert nog "beter dan 60/40/cash" als doelmaat.**
 
-> **⚠ RESERVE-RUN (D-084) GESCHORST:** het OOS-venster 2025-01→ is schaars; we gebruiken het niet voor ETF-portefeuilles. `r2_reserve.py` blijft staan; nieuwe shortlist + vrijgave volgen alleen voor FTMO-kandidaten (CEO-besluit). GS01-test = alleen 2024 tot CEO-vrijgave (D-091.5 — reserve 2025+ onaangeroerd).
+> **⚠ RESERVE (D-084 / D-094.1):** ETF-reserve blijft geparkeerd. Voor **FTMO-kandidaten** mag reserve 2025+ per shortlist vrijgegeven worden (CEO-besluit per kandidaat). GS01-test = alleen 2024 tot CEO-vrijgave tenzij kandidaat-vrijgave.
 
 > **⚠ FORWARD ETF-PAPIER:** loopt als papierreeks door (kost niets) maar is **geen hoofdspoor**. Geen nieuwe ETF-acties; Uitvoerder-1 laat de cron draaien.
 
 > **⚠ TEAM (D-090):** Claude = alleen CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main.
 
-> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-093** op `claude/ftmo-trading-strategy-98mplz` (`7fa5ba7`). **D-093 actief** (2026-10-01 05:00). Eindstand: `EINDSTAND_FTMO.md` op main.
+> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-094a** op `claude/ftmo-trading-strategy-98mplz` (`353aa31` / D-094 `c1860e2`). **D-094 + D-094a actief.** `EINDSTAND_FTMO.md` = **tussenstand**, geen einde.
 
-> **⚠ D-093 BEVRIJZING:** geen nieuwe PREREGs / pre-screens / trials. Team = onderhoud 1×/4u (forward-paper, daily snapshot, NEXT_STEPS). Geen FTMO-signup / fee-spend door agents. Heropenen alleen na Sandro-keuze of nieuw CEO-besluit / long_m1-data.
+> **⚠ D-094 — NOOIT MEER STOPPEN:** D-093, D-092.6 (8-cycli-stop) en 1×/4u-onderhoud zijn **ingetrokken**. Alleen Sandro mag stoppen. Sterft een spoor → in dezelfde cyclus ≥2 nieuwe sporen openen. Geen agent FTMO-signup / fee-spend.
 
-Bindend: D-083…**D-093** (CEO). Alleen Sandro kiest heropenen (HistData M-001 / andere regels / stoppen). Agents kopen/openen nooit iets.
+Bindend: D-083…**D-094a** (CEO). Integriteit ongewijzigd: PREREG vóór resultaat, TRIALS append-only, dag-geclusterd t, FDR, echte FTMO-kosten, Auditor onafhankelijk. Dead set niet heropenen als klonen.
 
-## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-093) — **BEVROREN**
+## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-094a) — **ACTIEF**
 
-**Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (gebouwd door Grok CTO, branch `grok/cto-1`).
+**Doel:** voor elke catalogus-sleeve/portefeuille: P(slagen fase 1+2), P(funded overleven), netto-EV in €/mnd, fee/pogingen — module `engine/ftmo.py` (Grok CTO, `grok/cto-1`).
 
-### Cyclus-uitslag (Manager, 2026-10-01 05:02 CEST — **D-093 FREEZE**; Watch **8/8**)
+### Cyclus-uitslag (Manager, 2026-10-01 08:03 CEST — **D-094 FREEZE OFF**)
 
-**D-093** (`claude/ftmo-trading-strategy-98mplz` `7fa5ba7`, 05:00 CEST): zoekfase bevroren + eindstand voor Sandro. Feiten: TRIAL_COUNT **447**; sinds D-091 alleen N11+N18 door gate(+stress), beide **FAIL_T**; geen gevalideerde na-kosten edge. Zie `EINDSTAND_FTMO.md` (evaluatie **NIET kopen**).
+**D-094** (`c1860e2`, 08:10) + **D-094a** (`353aa31`, 08:25): bevriezing vervallen; breed zoeken; volle cadans. TRIAL_COUNT blijft **447** tot nieuwe formal trials. N11/N18 = FAIL_T (niet heropenen/klonen). Dead/FAIL-pre-screen set blijft gesloten als klonen.
 
-**D-092.6 aangescherpt (D-093.1):** watch reset alleen bij **gate + stress + formele t** (dag-clust t≥2,0, beide helften +). Gate-PASS alleen reset **niet**. N11/N18 resetten dus niet → stand **8/8 frozen**. (Eerdere Manager/CTO “0/8 na cost-gate” = overruled.)
+**D-094a historie:** default **≥5 jaar** (ontdekking+test). **<5 jaar** alleen met schriftelijke a/b/c-reden in PREREG (structureel sinds ~3j / tijdloos + lange proxy / pool ≥5 instrumenten). Zonder reden: geen PREREG. Auditor mag afwijzen. Overige eisen: N≥150, dag-clust t≥2,0 beide helften, FDR.
 
-**Bevriezing (D-093.2):** geen nieuwe PREREGs/pre-screens/trials. Strateeg / S2 / U2 / Manager / CTO → **onderhoud 1×/4u** (forward-paper, daily snapshot, NEXT_STEPS-onderhoud). Auditor: één nacontrole TRIALS.csv 447 + reserve 2025+ onaangeroerd → idle (D-093.3).
+**Meetlat per cyclus (D-094.8):** ≥3 nieuwe bruto-screens, ≥1 PREREG, elke dode kandidaat meteen vervangen. Geen "geen nieuws" zonder nieuwe pre-screens.
 
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18**. Geen overnight maand-sleeves.
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18**. Pre-screen FAIL: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19.
 
-**Pre-screen FAIL / no-PREREG:** index PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9 underpowered; N10; N12; N13/N14; N15–N17; **N19**.
+### Wekelijkse sporen-tabel (D-094.7 — Manager houdt bij)
 
-**Laatste pad N18 FAIL_T** (ongewijzigd feiten): cost+stress PASS, t 0.64 / NW-L5 0.67; tip U2 `d1984ed`; year-split 2023 −12.17 = instability — **niet heropenen/klonen**.
-
-**Sandro-keuze (D-093.4) — wacht:**
-1. Lange M1 HistData (A-001 / M-001) — enige sleeve met bruto-edge (ORB) langer testen
-2. Andere markten / andere prop-regels
-3. Definitief stoppen
-
-Tot keuze: alles bevroren. Geen agent FTMO-signup of fee-spend.
+| Spoor | Inhoud | Eigenaar | Cadans-eis | Status 2026-10-01 |
+|------|--------|----------|------------|-------------------|
+| **1** | Kortere historie / walk-forward; ≥5j default; <5j alleen met D-094a a/b/c in PREREG; pool N≥150; forward-papier | **Uitvoerder-2** (+ Strateeg input) | Gates + land PREREGs | **OPEN** — hervat |
+| **2** | Andere markten via `results/screen_cost_vol.csv` (166 symb.): commodities, crypto, stock-CFD, non-US idx, FX, metals — bruto-screen → PREREG | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk** | **OPEN** |
+| **3** | Combineren: (a) weak+ portfolio `ftmo_ev()`; (b) ensembles/filters één hypothese; (c) stapelen small edges | **CTO** (3a/c); **CEO** schrijft PREREGs 3b | Parallel | **OPEN** |
+| **4** | Andere horizons/families: swing 2–5d, XS-mom 166, CTA commodities, carry/RV, vol-target, events, seizoen, MR 4u/D1 | **Strateeg + Strateeg-2** | ≥3 pre-screens / cyclus **elk** | **OPEN** |
+| **5** | FTMO-structuur: lage-vol + positieve skew; `recommend_scale`; p_pass × p_survive sizing | **CTO** | Parallel | **OPEN** |
+| **6** | Data: Yahoo/Dukascopy/Stooq proxy voor ontdekking; FTMO-M5 voor kosten/uitvoering; HistData A-001 niet-blokkerend | Team / Sandro A-001 | Doorlopend | **OPEN** |
+| **7** | Coördinatie: NEXT_STEPS + deze tabel; geen stilstand | **Manager** | Elke 30 min | **OPEN** — v63 |
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | **Sandro-keuze** (HistData / andere regels / stop) | Sandro | **OPEN — deblokkeert heropening** |
-| — | **D-093 freeze / D-092.6 watch** | Manager / team | **8/8 frozen**; maintenance 1×/4u |
-| — | **EINDSTAND_FTMO.md** | CEO → main | Geabsorbeerd; evaluatie niet kopen |
-| — | **Auditor nacontrole TRIALS 447** | Auditor | Eén taak, daarna idle |
-| — | **U2 / Strateeg / S2 / CTO** | — | **IDLE / onderhoud** — geen nieuwe trials |
-| — | **HistData A-001** | Sandro (`SANDRO_ACTIES.md`) | OPEN — geen agent-chat-nag |
-| — | Dead/FAIL set (incl. N11–N19) | — | **Niet heropenen** tot nieuw CEO-besluit |
+| **1** | Hervat zoeken op sporen 1–5; ≥3 screens/cyclus (S/S2); ≥1 PREREG/cyclus team | Strateeg / S2 / U2 / CTO | **OPEN — deblokkeert** |
+| — | **D-094a** ≥5j / uitzondering a/b/c in PREREG | Allen + Auditor | Bindend |
+| — | Dead/FAIL set (N11–N19 e.a.) | — | Gesloten als klonen |
+| — | `EINDSTAND_FTMO.md` | — | Tussenstand; niet-kopen blijft feit tot PASS |
+| — | HistData A-001 | Sandro | OPEN, niet-blokkerend |
+| — | Integriteit (PREREG/TRIALS/t/FDR/kosten) | Allen | Ongewijzigd |
 
-**Escalatie:** D-091.6 4/4 → D-092 → **D-093 freeze**. Heropenen alleen op long_m1 of nieuw CEO-besluit (D-093.5).
+### Acties (bindend; D-094 verdeelt)
 
-### Acties (bindend, D-087; rollen D-090; **D-093 freeze**)
+1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — ACTIEF:**
+   - Land + cost-gate/stress/formal op D-092.1-PASS non-clone PREREGs; spoor **1** (historie/walk-forward; D-094a).
+   - TRIAL_COUNT **447**; append alleen bij formal. Dead set niet herstarten. XAU_AM_FADE watch-only.
 
-1. **Uitvoerder-2 — IDLE / onderhoud:**
-   - Geen nieuwe trials/PREREGs. N18/N11 = FAIL_T; TRIAL_COUNT **447**. Tip `d1984ed`.
-   - Wacht op Sandro-keuze of nieuw CEO-besluit. Reserve 2025+ onaangeroerd. Geen FTMO-signup/fees.
+2. **Grok CTO (`grok/cto-1`) — ACTIEF (sporen 3 + 5):**
+   - Portfolio/ensemble `ftmo_ev()`; sizing/skew/`recommend_scale`. Geen Sandro-ping voor ops.
 
-2. **Grok CTO — onderhoud 1×/4u:**
-   - C-014 closed; Watch **8/8** onder D-093.1. Geen nieuwe screens. Geen agent fee-spend.
-   - Forward-paper / daily snapshot mag doorlopen.
+3. **Strateeg (`claude/trusting-faraday-34tsmg`) — ACTIEF (sporen 2 + 4):**
+   - ≥3 nieuwe pre-screens per cyclus. Eerst D-092.1; Pass + N≥150 + D-094a → PREREG. Geen klonen dead/FAIL; geen simple ORB-klonen.
 
-3. **Strateeg — IDLE:**
-   - Geen nieuwe PREREGs/pre-screens tot heropening. Dead/FAIL set (incl. N11–N19) niet heropenen.
+4. **Strateeg-2 (`grok/strateeg-2`) — ACTIEF (sporen 2 + 4):**
+   - Zelfde eis ≥3 pre-screens/cyclus; onafhankelijk van Strateeg. Geen engine-runs.
 
-4. **Strateeg-2 — IDLE:**
-   - Zelfde freeze. Geen engine-runs. Geen klonen.
+5. **Auditor — ACTIEF:**
+   - Steekproef gate-PASS/FAIL_T; D-094a-onderbouwing mag afwijzen; gecombineerde portfolio-EV nabouwen.
 
-5. **Auditor — D-093.3 laatste taak:**
-   - Nacontrole TRIALS.csv (447) vs FAIL_T/STOP + reserve 2025+ onaangeroerd → daarna idle.
-
-6. **Manager-QA (Grok, `main`) — onderhoud 1×/4u:**
-   - Geen U2-freshness-escalatie tijdens freeze.
-   - Absorbeer CEO D-* → NEXT_STEPS; houd `EINDSTAND_FTMO.md` synchroon.
-   - Geen nieuwe trials; geen Sandro-nag over A-001 (gebundeld in eindstand).
+6. **Manager (`main`) — volle cadans :05/:35:**
+   - Absorbeer D-*; houd sporen-tabel bij; U2-freshness; commit NEXT_STEPS. Nooit zelf bevriezen.
 
 ### Model-beleid (D-089)
 - Haiku-klasse: Manager, Strateeg (coördinatie/schrijfwerk).
 - Sonnet-klasse: Uitvoerder-2, Auditor, CEO (Python/MC/statistisch oordeel).
-- Regel: meerdere lege cycli → CEO zet agent omlaag of pauzeert trigger. Enige maatstaf = voortgang FTMO-edge.
-- Platform-minimum trigger = 1 uur; Grok dekt fijnere cadans waar nodig.
+- Enige maatstaf = voortgang FTMO-edge. Geen stilstand (D-094).
+- Platform-minimum trigger = 1 uur; Grok dekt fijnere cadans.
 
-### Teamcadans (D-088, herzien D-089/D-090)
-- CEO (Claude): elk uur (platform-min); beslist + BESLUITEN
-- Auditor (Claude): onafhankelijk, op verzoek / D-087
-- Manager (Grok → `main`): **1×/4u** (D-093 onderhoud)
-- Uitvoerder-2 (Grok → `claude/uitvoerder2-r`): **1×/4u** onderhoud / idle (D-093)
-- Strateeg (Grok → `claude/trusting-faraday-34tsmg`): **1×/4u** onderhoud / idle (D-093)
-- Strateeg-2 (Grok → `grok/strateeg-2`): **1×/4u** onderhoud / idle (D-093)
-- CTO (Grok → `grok/cto-1`): **1×/4u** onderhoud (D-093); geen nieuwe trials
+### Teamcadans (D-088 / D-090 / **D-094 volle cadans**)
+- CEO (Claude): elke 30 min; beslist + BESLUITEN; schrijft ensemble-PREREGs (3b)
+- Auditor (Claude): elke 30 min / steekproef
+- Manager (Grok → `main`): elke 30 min (:05/:35)
+- Uitvoerder-2 (Grok → `claude/uitvoerder2-r`): elke 30 min — gates + spoor 1
+- Strateeg (Grok → `claude/trusting-faraday-34tsmg`): elke cyclus — sporen 2+4
+- Strateeg-2 (Grok → `grok/strateeg-2`): elke cyclus — sporen 2+4
+- CTO (Grok → `grok/cto-1`): elke cyclus — sporen 3+5
 
 ---
 
