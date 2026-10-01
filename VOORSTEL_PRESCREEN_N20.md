@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N20 — US30 PM Continuation (Post-Lunch AM-Trend Follow)
 
-**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** lifts D-093.2 bar; filed 2026-10-01 04:55, heropend 08:05).  
+**Status:** **geen PREREG — U2 D-092.1 FAIL** (U2 `a1756a7` op `claude/uitvoerder2-r`; train 2021–2023: N=384, mean **−2,26** < gate **1,35** bp). Geen herstart zonder CEO. Vervangen door N24+ (D-094).  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `US30cash` (RT 0,45 bp COSTS_FTMO / screen → drempel **1,35 bp** = 3× RT).  
 **Track:** index PM-continuation (heropen onder D-094; ≠ dead ORB-familie).  

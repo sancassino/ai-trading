@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N21 — GER40 Afternoon Deviation Fade (post-NY-open)
 
-**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** lifts D-093.2 bar; filed 2026-10-01 04:55, heropend 08:05).  
+**Status:** **geen PREREG — U2 D-092.1 FAIL** (U2 `a1756a7` op `claude/uitvoerder2-r`; train 2021–2023: N=234, mean **−2,45** < gate **2,16** bp). Geen herstart zonder CEO. Vervangen door N24+ (D-094).  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `GER40cash` (RT 0,72 bp COSTS_FTMO / screen → drempel **2,16 bp** = 3× RT).  
 **Track:** non-US index afternoon inventory-fade (heropen onder D-094).  

@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N23 — US100cash Swing 2d TSMOM (met FTMO-swap in gate)
 
-**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** track 4; nieuw 2026-10-01 08:05).  
+**Status:** **geen PREREG — U2 D-092.1 FAIL** (U2 `a1756a7` op `claude/uitvoerder2-r`; train 2021–2023: N=377, mean **+4,46** < gate **13,68** bp; long-split +10,83 nog onder gate). Geen herstart / geen dunnere 2d-TSMOM-variant. Vervangen door N24+ (D-094).  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `US100cash` (RT intraday **0,66 bp**; swap_long **1,95** / swap_short **0,21** bp/nacht — COSTS_FTMO).  
 **Track 4:** andere horizon — swing 2 dagen TSMOM (niet intradag-ORB).  

@@ -147,3 +147,26 @@ Sterkste *nieuwe* sleeve op kosten/distinctheid: **S2-XAU_OVERLAP**. Programma-p
 5. `STRATEGIE_CATALOGUS.md` §9/§10 D-094 sync; `results/screen_cost_vol.csv` gekopieerd indien ontbrak.
 
 **Niet gedaan:** geen PREREG; geen U2/Sandro/agent-ping (parent); geen 2025-reserve; geen ORB-klonen.
+
+## 2026-10-01 08:12 Europe/Amsterdam — D-094: N20–N23 FAIL sync + N24–N27 vervangers
+
+**Branch:** `claude/trusting-faraday-34tsmg`.  
+**Trigger:** U2 `a1756a7` op `claude/uitvoerder2-r` — D-092.1 train pre-screen **alle FAIL** vs VOORSTELs @ `f54ad28`. CTO: geen PREREG; geen dunnere UKOIL Lon-AM / 2d-TSMOM klonen.
+
+**U2 uitslagen (train 2021–2023):**
+| Code | N | mean bp | gate | uitslag |
+|------|---|--------:|-----:|---------|
+| N20 US30 AM→PM cont | 384 | −2,26 | 1,35 | FAIL |
+| N21 GER40 afternoon fade | 234 | −2,45 | 2,16 | FAIL |
+| N22 UKOIL Lon-AM fade | 345 | −1,67 | 8,13 | FAIL |
+| N23 US100 2d TSMOM | 377 | +4,46 (long +10,83) | 13,68 | FAIL |
+
+**Stand:** TRIAL_COUNT **447** (ongewijzigd; pre-screen FAIL ≠ formal trial). D-094 nog actief. Geen PREREG.
+
+**Geleverd:**
+1. VOORSTEL N20–N23 status → **geen PREREG — U2 D-092.1 FAIL** (cite `a1756a7`).
+2. `STRATEGIE_CATALOGUS.md` §9/§10 FAIL-rijen + header D-094 actief + TRIAL 447.
+3. **NEW** VOORSTEL_PRESCREEN_N24 (US500 lunch-fade, gate 2,34, track 2) / N25 (XAU NY-PM fade, 2,49, track 2) / N26 (XS 1d reversal basket 5, 4,83, track 4 + D-094a(c)) / N27 (AUDUSD H4 MR, 3,66, track 4).
+4. RUNLOG + STRATEGIE_LOG append.
+
+**Niet gedaan:** geen PREREG; geen agent/Sandro-ping (parent); geen 2025-touch; geen herstart N20–N23.

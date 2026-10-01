@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N22 — UKOILcash London→NY Session Mean-Reversion
 
-**Status:** **OPEN** — awaiting U2 cost pre-screen (**D-094** track 2; nieuw 2026-10-01 08:05).  
+**Status:** **geen PREREG — U2 D-092.1 FAIL** (U2 `a1756a7` op `claude/uitvoerder2-r`; train 2021–2023: N=345, mean **−1,67** < gate **8,13** bp). Geen herstart / geen dunnere UKOIL Lon-AM-fade kloon. Vervangen door N24+ (D-094).  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `UKOILcash` (Brent CFD; RT **2,71 bp** COSTS_FTMO / `results/screen_cost_vol.csv` → drempel **8,13 bp** = 3× RT; cost_in_costs_ftmo=True; rt_over_day≈0,010).  
 **Track 2:** commodity (olie) — niet-US-index.  
