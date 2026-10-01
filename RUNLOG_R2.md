@@ -1492,3 +1492,38 @@ UKOIL bruto 37.1 bp / USOIL bruto 20.7 bp. Oorzaak gate-fail: FTMO-CFD olie swap
 **Uitkomst:** IDLE. Dead/FAIL += ENERGY_TSMOM (al). TRIAL_COUNT **453**.
 
 **U2 next:** wacht Manager absorb ENERGY FAIL → NEXT_STEPS v72+; Strateeg/S2 D-097 PASS→PREREG (≥50 bp bruto, non-clone). Material via NEXT_STEPS (geen Sandro-ping).
+
+## Cyclus 11:15–11:20 CEST (2026-10-01) — D-100 IDX_SHORT_TSMOM gate → FAIL_COST_GATE
+
+**Branch:** `claude/uitvoerder2-r` — ort-merge `origin/main` @ `01be4c2` (NEXT_STEPS **v72**; D-100 + ENERGY FAIL absorb + C-024 IDX_SHORT PREREG). Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v72** (Manager 11:12 CEST): FREEZE **OFF**; U2 **ACTIEF** — gate `PREREG_FTMO_IDX_SHORT_TSMOM` (US100+US30 short-only L20/H10; cheap overnight; bruto-prijs poort; train 2010–2016 / test 2017–2024; geen 2025+)
+- `PREREG_FTMO_IDX_SHORT_TSMOM.md` (CTO C-024 / D-100): short only when 20d mom < 0; hold 10d; COSTS_FTMO RT + swap_short (credits→0); alfa = bruto prijs; N≥150 + t≥2 formal bij poort-PASS; geen klonen bij FAIL
+- Skip her-gate: ENERGY / TSMOM_DIV / N35–N41 / GBPJPY / N59 / P1 / N20–N57
+
+### Actie
+1. Ort-merge main → PREREG + NEXT_STEPS v72 on tip.
+2. Script `scripts/idx_short_tsmom_gate.py` (commit vóór run; PREREG op main `01be4c2` / CTO `e6a443b`).
+3. Artefacts: `results/R2/idx_short_tsmom/` (board/report/train CSVs).
+
+| Metric (train 2010–2016) | Waarde |
+|--------------------------|-------:|
+| N_trades (US100+US30) | 177 |
+| mean bruto bp/trade | **−66.22** |
+| mean RT bp | 0.55 |
+| mean swap bp (gate) | 1.49 |
+| mean cost bp | 2.04 |
+| gate 3× = 6.13 bp | **FAIL** (−66.22 ≱ 6.13) |
+| mean netto bp | −67.38 |
+| t day-clust netto | −2.69 |
+
+US100 bruto −67.9 bp / US30 bruto −64.6 bp. Beide helften bruto negatief. Oorzaak: structurele opwaartse drift — short-only 20/10 verliest in bruto-prijs; swap-cheap overnight helpt niet als signaal zelf negatieve expectatie heeft. Stress +50% swap: ook FAIL.
+
+**Uitkomst: FAIL_COST_GATE** — per PREREG §4.1 STOP, **geen trial**. Geen klonen (geen L/H-grid, geen US500/GER40-add, geen long-been, geen 5d-retune).
+
+**Dead/FAIL += IDX_SHORT_TSMOM (PREREG_FTMO_IDX_SHORT_TSMOM)**. Skip her-gate ENERGY/TSMOM_DIV/N35–N41/GBPJPY/N59/P1.
+
+**TRIAL_COUNT unchanged (453).**
+
+**U2 next:** wacht Strateeg/S2 D-097/D-100 PASS→PREREG (N60 secondary ≥50 bp; N58 na swap-redesign); geen S2-BTC stap2 inventeren. Material via NEXT_STEPS voor Manager/CTO (geen Sandro-ping).

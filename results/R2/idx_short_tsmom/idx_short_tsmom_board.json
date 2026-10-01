@@ -1,0 +1,75 @@
+{
+  "prereg": "PREREG_FTMO_IDX_SHORT_TSMOM.md",
+  "decision": "D-100",
+  "c": "C-024",
+  "universe": [
+    "US100.cash",
+    "US30.cash"
+  ],
+  "rule": "L20/H10 short-only; cheap overnight (swap_short)",
+  "outcome": "FAIL_COST_GATE",
+  "counts_as_trial": false,
+  "reserve_2025": "untouched",
+  "costs_source": "COSTS_FTMO.csv",
+  "train": {
+    "label": "train",
+    "N": 177,
+    "mean_bruto_bp": -66.2182,
+    "mean_netto_bp": -67.3817,
+    "mean_rt_bp": 0.5532,
+    "mean_swap_gate_bp": 1.489,
+    "mean_cost_bp": 2.0422,
+    "gate_3x_threshold": 6.1266,
+    "gate_3x": false,
+    "t_day_clust_netto": -2.6869,
+    "t_nw_L5_netto": -2.8517,
+    "t_day_clust_bruto": -2.6406,
+    "mean_h1_bruto": -82.5412,
+    "mean_h2_bruto": -48.5509,
+    "mean_h1_netto": -83.8123,
+    "mean_h2_netto": -49.5981,
+    "sym": {
+      "US100.cash": {
+        "N": 87,
+        "mean_bruto": -67.9122,
+        "mean_netto": -71.6015
+      },
+      "US30.cash": {
+        "N": 90,
+        "mean_bruto": -64.5806,
+        "mean_netto": -63.3026
+      }
+    }
+  },
+  "train_stress": {
+    "label": "train_stress",
+    "N": 177,
+    "mean_bruto_bp": -66.2182,
+    "mean_netto_bp": -67.6869,
+    "mean_rt_bp": 0.5532,
+    "mean_swap_gate_bp": 2.2335,
+    "mean_cost_bp": 2.7867,
+    "gate_3x_threshold": 8.3601,
+    "gate_3x": false,
+    "t_day_clust_netto": -2.6989,
+    "t_nw_L5_netto": -2.8637,
+    "t_day_clust_bruto": -2.6406,
+    "mean_h1_bruto": -82.5412,
+    "mean_h2_bruto": -48.5509,
+    "mean_h1_netto": -84.1692,
+    "mean_h2_netto": -49.8473,
+    "sym": {
+      "US100.cash": {
+        "N": 87,
+        "mean_bruto": -67.9122,
+        "mean_netto": -73.1162
+      },
+      "US30.cash": {
+        "N": 90,
+        "mean_bruto": -64.5806,
+        "mean_netto": -62.4386
+      }
+    }
+  },
+  "test": null
+}
