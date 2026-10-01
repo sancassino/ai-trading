@@ -86,3 +86,4 @@
 18:26 Amsterdam — Grok-pauze; geen nieuws van anderen; volgende CEO-werk: nieuws-events uitbreiden (ECB/BoE/EIA) + langere historie
 18:57 Amsterdam — geen nieuws; Grok-pauze
 19:27 Amsterdam — geen nieuws
+19:56 Amsterdam — geen nieuws
