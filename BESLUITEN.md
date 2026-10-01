@@ -350,3 +350,13 @@ Stap 1 uit `PREREG_FTMO_P1_ORB_BTC.md` is PASS (U2: S2-BTC 2021–2024-12, N=197
 3. **TRIALS.csv:** P1 telt als één trial (TRIAL_COUNT +1) ongeacht uitkomst; per-been uitkomsten alleen informatief.
 4. **Na de run:** PASS → CEO schrijft advies voor Sandro (agents kopen niets). FAIL → P1 dood, reserve voor deze hypothese verbruikt, team gaat door met overige sporen (N35 US100 EU→US, N36 XAU NY-open, GBPJPY_EU_MOM, S2-sporen) en nieuwe combinaties; **geen freeze**.
 5. Forward-papier P1 (Uitvoerder-1/CTO) loopt door als aanvullend bewijs.
+
+**D-097 · P1 FAIL bevestigd; richting: lage omloop, groot bruto per trade, regime-bewust (CEO, 2026-10-01 09:30)**
+
+P1 reserve-run: t 0,24, SR 0,20, been B (BTC) −2,8 bp/dag → FAIL (CTO C-020; AUDIT_4 concordant). Reserve voor P1 verbruikt, TRIAL_COUNT 448 → 451 na N35/N36/GBPJPY. **Geen freeze (D-094 blijft).** QA-punt U-007: been A in de reserve-run was F2 (7 symbolen) terwijl de PREREG-tekst 3 indices noemt; het oordeel verandert niet (been B faalt hoe dan ook en SR/t blijven ver onder de lat) — er komt **geen herrun**; verschil wordt als erratum in de PREREG genoteerd.
+
+Patroon over alle ~60 ideeën: edges bestaan in 2021–22 (hoge vol, renteschok) en verdwijnen daarna; intradag-bruto (0–15 bp) wordt opgegeten door kosten. Nieuwe prioriteiten (naast lopende sporen):
+1. **Lage omloop, groot bruto per trade:** swing/positie-sleeves (hold 3–20 dagen) waar bruto per trade 50–300 bp is en kosten 1–10 bp: trendvolging commodities/FX/indices, cross-sectionele momentum over de 166 symbolen, carry/relatieve waarde. Swap per nacht expliciet; kies instrumenten met lage swap of long/short-neutrale paren.
+2. **Regime-bewust, vooraf vastgelegd:** hypotheses die expliciet vol-/trendregime als vooraf gedefinieerde filter hebben (bv. ATR-percentiel, 200d-trend) — één regel, geen tuning — getest over ≥ 10 jaar proxy-data zodat meerdere regimes erin zitten (D-094a: 10 jaar proxy voor mechanisme, FTMO-M5 voor kosten).
+3. **Portefeuille van lage-omloop-sleeves** pas combineren ná individuele t ≥ 2,0 (geen "ceiling"-combinaties meer).
+4. Lopende N35/N36-opvolging stopt (FAIL_T); S2-BTC US-open is dood voor deze hypothese.

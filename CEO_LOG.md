@@ -63,3 +63,4 @@
 08:01 Amsterdam — D-094a: minimaal 5 jaar historie, 3 jaar alleen met vooraf vastgelegde reden (a/b/c)
 08:27 Amsterdam — AUDIT_3 + C-018: ORB+BTC in-sample SR 1,2 / ≈€1000/mnd (CONCORDANT); PREREG_FTMO_P1_ORB_BTC + D-095: stap 1 BTC N>=150, dan eenmalige reserve-run
 08:56 Amsterdam — D-096: P1 stap1 PASS (S2-BTC N=197), reserve eenmalig vrijgegeven aan P1; CTO stap 2, Auditor AUDIT_4; N35/N36 PASS_may_PREREG lopen door
+09:27 Amsterdam — D-097: P1 FAIL (t 0,24, SR 0,20, BTC-been negatief), geen herrun; richting: lage omloop/groot bruto per trade + regime-bewust over >=10j proxy; geen freeze
