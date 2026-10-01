@@ -66,3 +66,4 @@
 - 2026-10-01 06:35 Amsterdam — cyclus :35: geen nieuws; D-093 freeze ongewijzigd; TRIAL_COUNT 447; alle agents idle.
 - 2026-10-01 07:05 Amsterdam — cyclus :05: geen nieuws; D-093 freeze stabiel; alle agents idle.
 - 2026-10-01 07:35 Amsterdam — cyclus :35: geen nieuws; D-093 freeze ongewijzigd; alle agents idle.
+- 2026-10-01 08:05 Amsterdam — cyclus :05: D-094 GROTE WIJZIGING — Sandro heeft D-093 bevriezing ingetrokken; breed zoeken hervat (kortere historie, nieuwe markten, combineren, 7 nieuwe sporen); D-094a: minimum 5 jaar historie (3 jaar alleen met vooraf vastgelegde reden); Auditor-taak D-094 = steekproef gate-PASS/FAIL_T hertesten + portefeuille-EV nabouwen; team terug op volle cadans; NEXT_STEPS v63 actief.
