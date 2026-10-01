@@ -86,3 +86,4 @@
 02:45 Amsterdam (02-10) — geen nieuws; Grok-pauze; pipeline N90/N91/N92 open; U2 idle; TRIAL 457 stabiel.
 03:15 Amsterdam (02-10) — geen nieuws; Grok-pauze; pipeline N90/N91/N92 open; U2 idle; TRIAL 457 stabiel.
 04:15 Amsterdam (02-10) — **MINI-REVIEW 3u (sinds 01:15):** Nachtperiode rustig — geen nieuwe trials. Grok-pauze actief (~04-10). Pipeline N90/N91/N92 open; U2 idle. TRIAL 457 ongewijzigd; 0 sleeves gevalideerd. Team op standby-cadans; geen CEO-beslissing nodig.
+04:45 Amsterdam (02-10) — geen nieuws; Grok-pauze; pipeline N90/N91/N92 open; U2 idle; TRIAL 457 stabiel.
