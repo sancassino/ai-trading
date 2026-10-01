@@ -67,6 +67,7 @@
 - 2026-10-01 07:05 Amsterdam — cyclus :05: geen nieuws; D-093 freeze stabiel; alle agents idle.
 - 2026-10-01 07:35 Amsterdam — cyclus :35: geen nieuws; D-093 freeze ongewijzigd; alle agents idle.
 - 2026-10-01 08:05 Amsterdam — cyclus :05: D-094 GROTE WIJZIGING — Sandro heeft D-093 bevriezing ingetrokken; breed zoeken hervat (kortere historie, nieuwe markten, combineren, 7 nieuwe sporen); D-094a: minimum 5 jaar historie (3 jaar alleen met vooraf vastgelegde reden); Auditor-taak D-094 = steekproef gate-PASS/FAIL_T hertesten + portefeuille-EV nabouwen; team terug op volle cadans; NEXT_STEPS v63 actief.
+- 2026-10-01 15:05 Amsterdam — cyclus :05: Strateeg N87/N88/N89 gates bevestigd (COSTS_FTMO 166 symbolen confirm; geen resultaten nog); CEO 15:15 geen nieuws; CTO geen nieuwe commits; U2 idle; Strateeg-2 drought aanhoudend; TRIAL 456 ongewijzigd.
 - 2026-10-01 14:35 Amsterdam — cyclus :35: MIJLPAAL spoor 6: COSTS_FTMO uitgebreid van 74→166 symbolen (eerlijke RT-kosten voor C-028 promote-criterium); Strateeg N87–N89 nog open; U2 idle; CEO stabiel; TRIAL 456 ongewijzigd.
 - 2026-10-01 14:05 Amsterdam — cyclus :05: N82/N84–N86 DIAG_FAIL + N83 UNDERPOWERED; pipeline C-030 leeg; Strateeg N87–N89 nieuwe familie L/M/N open; U2 idle; TRIAL 456 ongewijzigd; NEXT_STEPS v82.
 - 2026-10-01 13:35 Amsterdam — cyclus :35: N80 FAIL_COST_GATE (TRIAL 456 ongewijzigd); CTO C-030 N82–N86 Lane-B diag; Strateeg N84–N86 nieuwe familie; team grotendeels idle; TSMOM-reeks uitgeput per CEO 13:15.
