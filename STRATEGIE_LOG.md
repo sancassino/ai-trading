@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- 14:50 Amsterdam (01-10) — Cyclus :50. **Nieuws:** main `f0f9597`/`8aafddf` — **COSTS_FTMO_alle.csv** uitgebreid van 74 → 166 FTMO-symbolen (C-028 eerlijke RT vóór promote; U1). N87/N88/N89 gates ongewijzigd (US30=0,45/EURGBP=1,04/GER40=0,72 bevestigd in nieuwe file). U2 IDLE; TRIAL **456**. Pipeline: **N87/N88/N89 OPEN**. Geen PREREG; Quiet to Sandro.
+
 - 14:20 Amsterdam (01-10) — Cyclus :20. Geen nieuws (main/U2/CTO ongewijzigd). Pipeline: **N87/N88/N89 OPEN** (NEW_FAMILY L/M/N; gates 1,35/3,12/2,16 bp). TRIAL **456**.
 
 - 13:50 Amsterdam (01-10) — Cyclus :50. **Nieuws:** NEXT_STEPS v82 (C-030; N82/N84–N86 DIAG_FAIL; N83 UNDERPOWERED) → pipeline leeg. D-094 fill: **OPEN N87** US30cash opening gap fade (gate 1,35 bp; NEW_FAMILY L) / **N88** EURGBP short-only 5d swing (gate 3,12 bp; NEW_FAMILY M) / **N89** GER40cash EU-session 2h open momentum (gate 2,16 bp; NEW_FAMILY N). Novelty **3/3 NEW_FAMILY** (≥2/3 ✔). TRIAL **456** ongewijzigd (N80 geen trial). Geen PREREG; Quiet to Sandro.
