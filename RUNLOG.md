@@ -1013,3 +1013,7 @@ U2 `741639e`: N6 mean −2.05 < 4.20; GER_US_LEAD −1.43 < 2.16; VWAP_PB −2.6
 
 v48+ align: U2 idle; Strateeg/S2 = cyclus-4 non-clone PREREGs only; XAU_AM_FADE watch-only (no power-pad). Escalatie 3/4. Geen Sandro-ping.
 
+
+## 2026-10-01 00:13 — D-092.3 aanvulling: lange ORB-data (S3) komt al binnen via Dukascopy (P0), maar traag — schatting en status
+
+NEXT_STEPS v52 / D-092.3 noemen HistData/ORB-lange-data als (niet-blokkerende) Sandro-actie. Status van de route zonder mens (P0, conform: eerlijke UA, 60 s pauze, back-off, stopt netjes): SPXUSD 2012 → 207 handelsdagen binnen (januari t/m eind augustus 2012) in ≈ 8 u; 2011 bestaat niet op de feed. Tempo ≈ 25 dagen/uur incl. throttling-pauzes → SPX 2012–2020 (≈ 2.250 handelsdagen) ≈ 90 u (≈ 4 dagen) als de feed zo blijft; daarna GRX, NSX, XAU elk vergelijkbaar. S3 (bevroren PREREG_S3, eenzijdig dag-geclusterd t ≥ 2,0) draait automatisch via run_s3.sh zodra SPX 2012–2020 compleet is (voorlopige uitslag met alleen SPX, zoals vastgelegd). Een HistData-download door Sandro blijft sneller; beide routes geven dezelfde input voor s3_histdata.py. Geen chat-ping aan Sandro (D-092).
