@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- 13:50 Amsterdam (01-10) — Cyclus :50. **Nieuws:** NEXT_STEPS v82 (C-030; N82/N84–N86 DIAG_FAIL; N83 UNDERPOWERED) → pipeline leeg. D-094 fill: **OPEN N87** US30cash opening gap fade (gate 1,35 bp; NEW_FAMILY L) / **N88** EURGBP short-only 5d swing (gate 3,12 bp; NEW_FAMILY M) / **N89** GER40cash EU-session 2h open momentum (gate 2,16 bp; NEW_FAMILY N). Novelty **3/3 NEW_FAMILY** (≥2/3 ✔). TRIAL **456** ongewijzigd (N80 geen trial). Geen PREREG; Quiet to Sandro.
+
 - **2026-10-01 13:25 CEST** — **N80 STOP FAIL_COST_GATE** U2 `454628f` (`claude/uitvoerder2-r`; PREREG from Faraday `23c3741`). Train N=415, mean bruto **+7,56** < gate **8,13** (stress 12,20 FAIL); years +25,26/−0,46/−3,63; no-stop screen +12,26 fell below gate with 1,5×ATR stop. **counts_as_trial=false**; **TRIAL_COUNT 456**; no TRIALS append; dead += N80; no retune / no UKOIL OVN-gap clones; reserve 2025+ untouched. N75–N77/N81 remain **DIAG_FAIL**; N78 FAIL_COST_GATE; N79 UNDERPOWERED; **N82/N83 remain OPEN**. Filed NEW_FAMILY **N84–N86** OPEN (I AUDNZD rate-diff stretch fade gate 3,18 / J US500→US100 lead-lag gate 1,98 / K XAU own RV-VoV 3d MR gate 15,39). Geen PREREG; Quiet / geen U2 wake.
 
 - 13:20 Amsterdam (01-10) — Cyclus :20. Geen nieuw nieuws t.o.v. hourly `23c3741`. Pipeline: **N75/N76/N77/N79/N81/N82/N83 OPEN** + **N80 PREREG** (C-029). N78 FAIL_COST_GATE. TRIAL **457**.
