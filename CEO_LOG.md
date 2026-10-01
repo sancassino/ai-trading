@@ -79,3 +79,4 @@
 15:58 Amsterdam — N87 formele toets door CEO: FAIL_T (train t 1,08; test 2024 −19 bp). Dood. U2 moet TRIALS.csv +1 (457) appenden; N88/N89 pre-screen FAIL. Pipeline weer leeg
 16:28 Amsterdam — U2 heeft N87 FAIL_T geboekt (TRIAL 457); N88/N89/N90 open; CTO 3u stil (Grok-kant)
 16:56 Amsterdam — geen nieuws; N88–N90 open, TRIAL 457
+17:12 Amsterdam — Grok-limiet 3 dagen; Sandro-vraag €100-200/mnd -> beta_ev.md + D-101 (dubbele lat: alfa of literatuur-premie met sizing); CEO draait (B)-onderzoek
