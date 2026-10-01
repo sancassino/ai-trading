@@ -821,3 +821,40 @@ XAU_AM_FADE blijft watch-only (geen power-pad). Pre-screen FAILs (PLM/NR7/Failed
 
 Artifacts: `results/R2/lunch_open_prep/`. Vragen → Manager; eindbesluit → CTO.  
 **MATERIAL for Manager/CTO** (first cost-gate PASS since XAU_AM_FADE; formal FAIL_T; TRIAL_COUNT 445).
+
+## Cyclus 03:17–03:18 CEST — D-090 FASE 3 wait (NEXT_STEPS v55; D-092)
+
+**Branch:** `claude/uitvoerder2-r`. Merged `origin/main` → tip includes NEXT_STEPS **v55** (`e9640a8`). Prior U2 tip: LUNCH_OPEN FAIL_T (`2a4f28e`, TRIAL_COUNT 445).
+**Gelezen deze cyclus:**
+- `BESLUITEN.md` @ `origin/claude/upbeat-dirac-g2810q` (tip eindigt D-086)
+- D-087…**D-092** via NEXT_STEPS / FTMO-branch context (D-092 herzien plan; escalatie 4/4)
+- `NEXT_STEPS.md` **v55** @ `origin/main` (Manager 03:10 CEST) — U2 **IDLE**; D-092.1 pre-screen; watch **0/8** (CTO C-011 confirmed); N9 underpowered / N10 FAIL
+- CTO C-011 (`01d93b7`): LUNCH_OPEN FAIL_T bekrachtigd; N10 FAIL; N9 NO PREREG (N=61≪150); watch 0/8
+- Strateeg tip `bbcd232` (N9/N10 aanvraag) / Strateeg-2 tip `ba54fe1` (LUNCH_OPEN): **geen** nieuwe bevroren pre-screened non-clone PREREG voor U2 sinds LUNCH_OPEN
+
+### U2-directives (v55 §0 actie 1) — bindend
+- LUNCH_OPEN DONE FAIL_T (`2a4f28e` / C-011). Dead set += LUNCH_OPEN · N10.
+- **IDLE** tot Strateeg/Strateeg-2 **D-092.1 pre-screened** non-clone PREREG landt met verwachte **N≥150** (≠ dead set incl. LUNCH_OPEN/N10; ≠ N9 underpowered; geen XAU power-pad; geen klonen FAIL-mechanismen).
+- Dead set niet herstarten (A4·B1·A5·A2·S2-*·N1–N6·MIDDAY·S2b·GER_US_LEAD·VWAP_PB·IB_FADE·S2c·**LUNCH_OPEN**·**N10**).
+- XAU_AM_FADE = watch-only; geen power-pad.
+- PREREG vóór resultaat; TRIALS append-only; dag-geclusterd t; reserve 2025→ onaangeraakt.
+
+### Checked — geen actionable U2-run
+| Item | Status |
+|------|--------|
+| LUNCH_OPEN / C-011 | DONE FAIL_T STOP (`2a4f28e`) — skip |
+| N9 GER40 Ochtend-Fade | underpowered mean-PASS — NO PREREG — skip |
+| N10 XAU Mid-London Fade | D-092.1 FAIL — skip |
+| XAU_AM_FADE power-pad | CTO watch-only — **geen** U2-assign |
+| Pre-screened non-clone PREREG N≥150 | Strateeg/Strateeg-2 **OPEN** — nog geen nieuwe bevroren PREREG voor U2 |
+| Dead set | niet herstart |
+| D-092.6 8-cyclus stop | Manager/CTO watch **0/8** — U2 idle |
+
+**TRIAL_COUNT blijft 445.** Geen nieuwe sleeve/trial. Geen inventie van scope.
+
+### Blockers / next
+1. Strateeg of Strateeg-2 levert **D-092.1 pre-screen PASS** + non-clone PREREG met N≥150 (≠ dead set / ≠ N9) → dan U2 cost-gate → formal trial.
+2. XAU_AM_FADE blijft watch-only — geen power-pad.
+3. Escalatie D-091.6 reeds **4/4** → D-092 actief. Geen Sandro-ping (D-091.6 / D-092.6).
+
+Vragen → Manager; eindbesluit → CTO. Quiet cycle (geen material trial/PREREG-result); idle wait note for Manager cadence.
