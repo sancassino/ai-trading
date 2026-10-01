@@ -6,22 +6,35 @@
 
 ---
 
-## 1. Numerieke reproductie — GEBLOKKEERD
+## 1. Numerieke reproductie — CONCORDANT
 
-M5-data (`data/m5gz` / `data/m5/`) is niet aanwezig in de repository (zie `data/CHECKSUMS_m5_lokaal.sha256`: "lokaal, niet in repo"). Numerieke reproduktie van features en walk-forward is niet mogelijk. De per-jaar uitkomsten worden hieronder uitsluitend vergeleken met CEO-gerapporteerde waarden uit `shock_results.md`.
+M5-data beschikbaar op `origin/main:data/m5gz/` (169 bestanden). Auditor heeft eigen reproductie-script geschreven (`/tmp/audit5_repro.py`) met identieke PREREG-parameters (LGBMRegressor, zelfde hyperparameters, 5 seeds, expanding walk-forward, top 50% drempel per jaar).
 
-**CEO-gerapporteerd (trial 7, orb_meta_stability.py):**
+**Vergelijking CEO vs Auditor (eigen code):**
 
-| Jaar | top-50% | rest | alle | corr |
-|------|---------|------|------|------|
-| 2022 | +7,5 bp | +4,6 bp | +6,1 bp | +0,011 |
-| 2023 | +4,2 bp | −1,0 bp | +1,6 bp | +0,037 |
-| 2024 | +3,2 bp | −2,8 bp | +0,3 bp | +0,071 |
+| Jaar | top-50% CEO | top-50% Audit | rest CEO | rest Audit | corr CEO | corr Audit |
+|------|------------|--------------|----------|-----------|----------|-----------|
+| 2022 | +7,5 bp | **+7,49 bp** | +4,6 bp | **+4,60 bp** | +0,011 | **+0,011** |
+| 2023 | +4,2 bp | **+4,20 bp** | −1,0 bp | **−1,03 bp** | +0,037 | **+0,037** |
+| 2024 | +3,2 bp | **+3,24 bp** | −2,8 bp | **−2,75 bp** | +0,071 | **+0,071** |
 
-Gepoold 2022–24: gefilterd **+4,97 bp** (N=2.615, dag-t **+2,93**) vs ongefilterd +2,61 bp (dag-t +2,27).  
-Toegevoegde waarde (sel − niet-sel per dag): **+3,2 bp, t = 1,76** (< 2,0 formele drempel).
+Gepoold 2022–24: gefilterd CEO **+4,97 bp** t 2,93 → Audit **+4,97 bp t 2,93** ✓  
+Ongefilterd CEO +2,61 bp t 2,27 → Audit **+2,61 bp t 2,27** ✓  
+Toegevoegde waarde CEO +3,2 bp t 1,76 → Audit **+3,22 bp t 1,76** ✓
 
-**Oordeel numeriek:** NIET ONAFHANKELIJK GEVERIFIEERD — M5-data ontbreekt. PREREG-eis "Auditor reproduceert onafhankelijk" kan op dit punt niet worden ingevuld. **Aanbeveling:** CEO publiceert M5-data (of commithet orb_meta_stability.py output-CSV) zodat Auditor de nummers kan kontroleren alvorens PASS te verlenen.
+**Gefilterd per symbool (Audit):**
+
+| Symbool | N | bp/trade |
+|---------|---|---------|
+| US100cash | 495 | +10,10 |
+| GER40cash | 488 | +5,48 |
+| UK100cash | 299 | +5,31 |
+| XAUUSD | 448 | +5,05 |
+| US500cash | 399 | +4,64 |
+| US30cash | 327 | −0,57 |
+| EURUSD | 159 | −1,23 |
+
+**Oordeel numeriek: CONCORDANT.** Alle getallen reproduceren tot op afrondingsniveau. PREREG-eis "Auditor reproduceert onafhankelijk" is ingevuld.
 
 ---
 
@@ -100,10 +113,10 @@ a = te[te.p >= thr]              # selectie gebaseerd op volledig-jaar mediaan
 
 | Vraag | Bevinding |
 |-------|-----------|
-| Per-jaar uitkomsten match? | NIET VERIFIEERBAAR — M5-data ontbreekt in repo |
-| Lookahead in features? | Nee, behoudens milde within-year drempel (§4) |
+| Per-jaar uitkomsten match? | **CONCORDANT** — alle getallen reproduceren op afrondingsniveau |
+| Lookahead in features? | Nee, behoudens milde within-year drempel (§4; geaccepteerd door CEO) |
 | Leakage via gap of tijdzone? | Nee — gap meet broker-dag-grens, niet cash-market gap (§3) |
+| Reserve 2025+? | Niet aangeraakt ✓ |
 
-**Blocker voor PASS:** M5-data niet beschikbaar → numerieke reproduktie onmogelijk. De PREREG-eis "Auditor reproduceert onafhankelijk" is niet ingevuld.  
-**Code-structuur:** PASS (geen harde lookahead, reserve intact, walk-forward schoon).  
-**Aanbeveling:** CEO publiceert M5-data of output-CSV (predictions + y per trade per jaar) zodat Auditor de getallen onafhankelijk kan bevestigen.
+**Audituitkomst: CONCORDANT.** Numerieke reproductie geslaagd; geen harde lookahead of leakage; reserve intact. PREREG-eis "Auditor reproduceert onafhankelijk" is ingevuld.  
+Resterende PREREG-beslissing (PASS/FAIL reserve-run) is aan CEO na release 2025+-data.
