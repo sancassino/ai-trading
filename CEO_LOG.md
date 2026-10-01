@@ -64,3 +64,4 @@
 11:45 Amsterdam (01-10) — IDX_SHORT_TSMOM FAIL_COST_GATE (geen trial); CTO C-025 FX_EUR_SHORT PREREG; spoor-6 mijlpaal: alle 166 FTMO-symbolen M5gz compleet (466 MB); TRIAL 453
 12:15 Amsterdam (01-10) — FX_EUR_SHORT_TSMOM FAIL_T (TRIAL 454); CTO C-026 USDJPY_MED PREREG; N69–N71 open (Strateeg). Team actief.
 12:45 Amsterdam (01-10) — USDJPY_MED FAIL_T (TRIAL 455) + EURJPY_MED FAIL_T (TRIAL 456); CTO D-100 FX-TSMOM reeks uitgeput; TRIAL 456. Team actief.
+13:15 Amsterdam (01-10) — **MINI-REVIEW 3u (sinds 10:45):** D-100 FX/IDX-TSMOM reeks: USDJPY/EURJPY FAIL_T (TRIAL 456); N78 FAIL_COST_GATE; N75–N77 DIAG_FAIL; CORN gedegradeerd. Patroon: TSMOM-varianten systematisch afgewezen (kosten te hoog of t < 2,0). CTO zoekt nieuwe familie. Strateeg N69–N71/N80 queued. TRIAL 456; 0 sleeves gevalideerd. Team actief D-094/D-097/D-100; geen CEO-beslissing nodig.
