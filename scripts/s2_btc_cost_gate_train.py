@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""S2-BTC PRE-trial kostenpoort — PREREG_S2_BTC_USOPEN, TRAIN 2021–2023 ONLY.
+"""S2-BTC D-095 stap 1 — kostenpoort + stress, window 2021–2024-12.
 
-Loads data/m5gz/{BTCUSD,US100cash}.csv.gz (U-006 v41). Skips 2025→ at load.
-Rule (frozen PREREG): pre-range 14:30–15:30 Europe/Amsterdam; entry 15:30–16:00
-on M5 close beyond range; skip two-way; range width ∈ [0.20%, 1.50%]; stop = mid;
-flat 21:00 same day; max 1/day; US100 cash-gap filter |gap|≥0.15% same sign.
-Poort: mean bruto ≥ 2× 1.25 bp AND costs < 50% bruto; +50% spread stress same.
-FAIL → STOP; no TRIALS append / no formal trial claim from this script alone.
+PREREG_S2_BTC_USOPEN + PREREG_FTMO_P1_ORB_BTC stap 1 (CEO D-095).
+Frozen rule from CTO scripts/s2_btc_cost_gate_train.py; only window extended
+to 2024-12-31 so N≥150 is possible. Skips 2025→ at load (reserve untouched).
+Poort: mean bruto ≥ 2× 1.25 bp AND costs < 50% bruto; +50% spread stress same;
+N ≥ 150. FAIL → portefeuille STOP (geen trial / geen TRIALS append).
 """
 from __future__ import annotations
 
@@ -27,8 +26,8 @@ US100 = "US100cash"
 RT_FIXED_BP = 1.25  # COSTS_FTMO_alle roundtrip_intraday
 COMM_BP_SIDE = 0.20
 TRAIN_START = date(2021, 1, 1)
-TRAIN_END = date(2023, 12, 31)
-OUT_DIR = Path("results/cto/s2_btc_prep")
+TRAIN_END = date(2024, 12, 31)
+OUT_DIR = Path("results/R2/s2_btc_prep")
 RANGE_MIN = 0.0020
 RANGE_MAX = 0.0150
 GAP_MIN = 0.0015
@@ -275,7 +274,7 @@ def main():
     summary = {
         "n_trades": len(rows),
         "symbol": BTC,
-        "train": "2021-01-01..2023-12-31",
+        "train": "2021-01-01..2024-12-31",
         "prereg": "PREREG_S2_BTC_USOPEN",
         "mean_gross_bp": mean_g,
         "median_gross_bp": med_g,
@@ -291,7 +290,7 @@ def main():
         "cost_share_pct": (100.0 * mean_c / mean_g) if mean_g else None,
         "verdict": verdict,
         "reserve_2025_touched": False,
-        "note": "CTO wake cost-gate; formal trial/TRIALS only if PASS under PREREG discipline",
+        "note": "D-095 stap1 U2; window 2021-2024-12; formal P1 reserve only if PASS + CEO vrijgave",
     }
 
     csv_path = OUT_DIR / "cost_gate_s2_btc_train.csv"
@@ -307,7 +306,7 @@ def main():
             [
                 "# S2-BTC kostenpoort TRAIN — PREREG_S2_BTC_USOPEN",
                 "",
-                f"- Train: 2021-01-01 … 2023-12-31 (geen 2024/2025 in poort)",
+                f"- Train/discovery: 2021-01-01 … 2024-12-31 (D-095 stap 1; 2025→ onaangeraakt)",
                 f"- Data: `data/m5gz/BTCUSD.csv.gz` + `US100cash.csv.gz` (U-006 v41)",
                 f"- Regel: pre-range 14:30–15:30 CET; entry close-break 15:30–16:00; stop=mid; flat 21:00; US100 |gap|≥0.15% same sign; width∈[0.20%,1.50%]",
                 f"- N trades: **{len(rows)}** (power ≥150: {power_ok})",

@@ -7,8 +7,11 @@ data/m5/
 forward/cron.log
 .venv/
 data/m5_vol/
+data/m5_fwd/
 data/long_m1/
 data/long_m5/
 data/dukascopy_raw/
 __pycache__/
 *.pyc
+forward/warmup_cron.log
+forward/p1_cron.log

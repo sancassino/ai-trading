@@ -1,0 +1,60 @@
+# PREREG_FTMO_TSMOM_DIV universe freeze — Uitvoerder-2, 2026-10-01
+# Source: data/PROXY_MAP_FTMO.csv; 10j_plus=ja; classes index/metalen/energie_agri/FX-majors-crosses; NO stock-CFD/crypto/exotics
+# Exotic FX = pair involving currency outside {USD,EUR,GBP,JPY,CHF,AUD,CAD,NZD}
+ftmo_symbol;categorie;klasse;proxy;proxy_start;jaren_tm_2024;10j_plus;m5gz;opmerking
+AUDCAD;fx;fx;FXBIS_AUD+FXBIS_CAD;1971-01-04;54.0;ja;nee;cross uit BIS (lokaal per USD): AUDCAD = FXBIS_CAD / FXBIS_AUD
+AUDCHF;fx;fx;FXBIS_AUD+FXBIS_CHF;1971-01-04;54.0;ja;nee;cross uit BIS (lokaal per USD): AUDCHF = FXBIS_CHF / FXBIS_AUD
+AUDJPY;fx;fx;FXBIS_AUD+FXBIS_JPY;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): AUDJPY = FXBIS_JPY / FXBIS_AUD
+AUDUSD;fx;fx;FX_AUDUSD;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): AUDUSD = 1 / FXBIS_AUD
+AUS200.cash;index;indices;AXJO;1992-11-22;32.1;ja;ja;
+CADCHF;fx;fx;FXBIS_CAD+FXBIS_CHF;1953-09-01;71.3;ja;nee;cross uit BIS (lokaal per USD): CADCHF = FXBIS_CHF / FXBIS_CAD
+CADJPY;fx;fx;FXBIS_CAD+FXBIS_JPY;1969-12-01;55.1;ja;nee;cross uit BIS (lokaal per USD): CADJPY = FXBIS_JPY / FXBIS_CAD
+CHFJPY;fx;fx;FXBIS_CHF+FXBIS_JPY;1969-12-01;55.1;ja;nee;cross uit BIS (lokaal per USD): CHFJPY = FXBIS_JPY / FXBIS_CHF
+COCOA.c;commodity/metal;energie_agri;COCOA_F;2000-01-03;25.0;ja;nee;
+COFFEE.c;commodity/metal;energie_agri;COFFEE_F;2000-01-03;25.0;ja;nee;
+CORN.c;commodity/metal;energie_agri;CORN_F;2000-07-17;24.5;ja;nee;
+COTTON.c;commodity/metal;energie_agri;COTTON_F;2000-01-03;25.0;ja;nee;
+DXY.cash;index;indices;DXY;1971-01-04;54.0;ja;nee;
+EU50.cash;index;indices;STOXX50;2007-03-30;17.8;ja;ja;
+EURAUD;fx;fx;FXBIS_EUR+FXBIS_AUD;1974-06-28;50.5;ja;ja;cross uit BIS (lokaal per USD): EURAUD = FXBIS_AUD / FXBIS_EUR
+EURCAD;fx;fx;FXBIS_EUR+FXBIS_CAD;1974-06-28;50.5;ja;nee;cross uit BIS (lokaal per USD): EURCAD = FXBIS_CAD / FXBIS_EUR
+EURCHF;fx;fx;FXBIS_EUR+FXBIS_CHF;1974-06-28;50.5;ja;ja;cross uit BIS (lokaal per USD): EURCHF = FXBIS_CHF / FXBIS_EUR
+EURGBP;fx;fx;FXBIS_EUR+FXBIS_GBP;1974-06-28;50.5;ja;ja;cross uit BIS (lokaal per USD): EURGBP = FXBIS_GBP / FXBIS_EUR
+EURJPY;fx;fx;FXBIS_EUR+FXBIS_JPY;1974-06-28;50.5;ja;ja;cross uit BIS (lokaal per USD): EURJPY = FXBIS_JPY / FXBIS_EUR
+EURUSD;fx;fx;FX_EURUSD;1999-01-04;26.0;ja;ja;cross uit BIS (lokaal per USD): EURUSD = 1 / FXBIS_EUR
+FRA40.cash;index;indices;CAC40;1990-03-01;34.8;ja;ja;
+GBPAUD;fx;fx;FXBIS_GBP+FXBIS_AUD;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): GBPAUD = FXBIS_AUD / FXBIS_GBP
+GBPCAD;fx;fx;FXBIS_GBP+FXBIS_CAD;1953-08-10;71.4;ja;nee;cross uit BIS (lokaal per USD): GBPCAD = FXBIS_CAD / FXBIS_GBP
+GBPCHF;fx;fx;FXBIS_GBP+FXBIS_CHF;1953-09-01;71.3;ja;nee;cross uit BIS (lokaal per USD): GBPCHF = FXBIS_CHF / FXBIS_GBP
+GBPJPY;fx;fx;FXBIS_GBP+FXBIS_JPY;1969-12-01;55.1;ja;ja;cross uit BIS (lokaal per USD): GBPJPY = FXBIS_JPY / FXBIS_GBP
+GBPUSD;fx;fx;FX_GBPUSD;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): GBPUSD = 1 / FXBIS_GBP
+GER40.cash;index;indices;DAX;1987-12-30;37.0;ja;ja;
+HEATOIL.c;commodity/metal;energie_agri;HEATOIL_F;2000-09-01;24.3;ja;nee;
+HK50.cash;index;indices;HSI;1986-12-31;38.0;ja;ja;
+JP225.cash;index;indices;N225;1965-01-05;60.0;ja;ja;
+N25.cash;index;indices;AEX;1992-10-12;32.2;ja;ja;
+NATGAS.cash;commodity/metal;energie_agri;NATGAS_F;2000-08-30;24.3;ja;nee;
+NZDUSD;fx;fx;FX_NZDUSD;1971-01-04;54.0;ja;ja;
+SOYBEAN.c;commodity/metal;energie_agri;SOY_F;2000-09-15;24.3;ja;nee;
+SPN35.cash;index;indices;IBEX;1993-07-12;31.5;ja;ja;
+SUGAR.c;commodity/metal;energie_agri;SUGAR_F;2000-03-01;24.8;ja;nee;
+UK100.cash;index;indices;FTSE;1984-01-03;41.0;ja;ja;
+UKOIL.cash;commodity/metal;energie_agri;BRENT_F;2007-07-30;17.4;ja;ja;
+US100.cash;index;indices;NDX;1985-10-01;39.2;ja;ja;
+US2000.cash;index;indices;RUT;1987-09-10;37.3;ja;ja;
+US30.cash;index;indices;DJI;1992-01-02;33.0;ja;ja;
+US500.cash;index;indices;SPX_TR;1988-01-04;37.0;ja;ja;
+USDCAD;fx;fx;FX_USDCAD;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): USDCAD = FXBIS_CAD / 1
+USDCHF;fx;fx;FX_USDCHF;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): USDCHF = FXBIS_CHF / 1
+USDJPY;fx;fx;FX_USDJPY;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): USDJPY = FXBIS_JPY / 1
+USOIL.cash;commodity/metal;energie_agri;WTI_F;2000-08-23;24.4;ja;ja;
+WHEAT.c;commodity/metal;energie_agri;WHEAT_F;2000-07-17;24.5;ja;nee;
+XAGAUD;commodity/metal;metalen;SILVER_F+FXBIS_AUD;2000-08-30;24.3;ja;nee;
+XAGEUR;commodity/metal;metalen;SILVER_F+FXBIS_EUR;2000-08-30;24.3;ja;nee;
+XAGUSD;commodity/metal;metalen;SILVER_F;2000-08-30;24.3;ja;ja;
+XAUAUD;commodity/metal;metalen;GOLD_F+FXBIS_AUD;2000-08-30;24.3;ja;nee;
+XAUEUR;commodity/metal;metalen;GOLD_F+FXBIS_EUR;2000-08-30;24.3;ja;nee;
+XAUUSD;commodity/metal;metalen;GOLD_F;2000-08-30;24.3;ja;ja;
+XCUUSD;commodity/metal;metalen;COPPER_F;2000-08-30;24.3;ja;nee;
+XPDUSD;commodity/metal;metalen;PALL_F;1998-09-28;26.3;ja;nee;
+XPTUSD;commodity/metal;metalen;PLAT_F;1997-10-29;27.2;ja;nee;

@@ -1,0 +1,10 @@
+# U-008: ORB-trades die forward_paper op 2026-09-30 niet zag door verouderde MT5-cache (mt5_export_recent.py, copy_rates_from_pos);
+# herberekend 2026-10-01 met dezelfde regels (b4_sim.run_orb) op de nu complete M5. paper_daily/state.json zijn NIET aangepast (append-only).
+date;leg;symbol;action;detail;pnl_eur
+2026-09-30;ORB;US500cash;trade_gemist;-26.5 bp (-1.05 R);-13.00
+2026-09-30;ORB;US100cash;trade_gemist;-50.4 bp (-0.96 R);-24.79
+2026-09-30;ORB;US30cash;trade_gemist;+75.0 bp (+2.04 R);36.86
+2026-09-30;ORB;XAUUSD;trade_gemist;+48.7 bp (+1.07 R);23.91
+2026-09-30;ORB;GER40cash;trade_gemist;+91.3 bp (+1.61 R);44.85
+2026-09-30;ORB;UK100cash;trade_gemist;+46.3 bp (+0.72 R);22.75
+2026-09-30;ORB;EURUSD;trade_gemist;-6.9 bp (-1.07 R);-3.38

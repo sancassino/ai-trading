@@ -1,0 +1,109 @@
+{
+  "idea": "GBPJPY_EU_MOM",
+  "prereg": "PREREG_S2_GBPJPY_EU_MOM.md",
+  "prereg_source": "origin/grok/strateeg-2@6444d30",
+  "outcome": "FAIL_STRESS_then_FAIL_T",
+  "train": {
+    "window": "train",
+    "N": 170,
+    "mean_bruto": 3.4082,
+    "median_bruto": 2.604,
+    "mean_netto": 2.2982,
+    "rt": 1.11,
+    "gate": 3.33,
+    "gate_stress50": 4.995,
+    "cost_share": 0.3257,
+    "stop_share": 0.1412,
+    "time_share": 0.7941,
+    "skew_bruto": 0.1406,
+    "t_day_clust_netto": 1.0409,
+    "t_nw_L5_netto": 1.0447,
+    "t_day_clust_bruto": 1.5437,
+    "t_nw_L5_bruto": 1.5493,
+    "max_day_dip_risk": -0.0075,
+    "skew_day_ret": 0.2094,
+    "n_long": 83,
+    "n_short": 87,
+    "date_min": "2021-02-24",
+    "date_max": "2023-12-28",
+    "years": {
+      "2021": {
+        "N": 32,
+        "mean_bruto": 6.5879,
+        "median_bruto": 6.7856
+      },
+      "2022": {
+        "N": 81,
+        "mean_bruto": 0.1798,
+        "median_bruto": 0.4367
+      },
+      "2023": {
+        "N": 57,
+        "mean_bruto": 6.2107,
+        "median_bruto": 4.3549
+      }
+    },
+    "reasons": {
+      "time": 135,
+      "stop": 24,
+      "target": 11
+    },
+    "mean_netto_stress50": 1.7432,
+    "cost_share_stress50": 0.4885,
+    "gate_pass": true,
+    "stress50_pass_bruto_vs_3x": false,
+    "cost_share_ok": true,
+    "cost_share_stress50_ok": true
+  },
+  "test": {
+    "window": "test",
+    "N": 59,
+    "mean_bruto": -1.0482,
+    "median_bruto": -0.634,
+    "mean_netto": -2.1582,
+    "rt": 1.11,
+    "gate": 3.33,
+    "gate_stress50": 4.995,
+    "cost_share": null,
+    "stop_share": 0.1356,
+    "time_share": 0.8136,
+    "skew_bruto": 0.5551,
+    "t_day_clust_netto": -0.6357,
+    "t_nw_L5_netto": -0.7354,
+    "t_day_clust_bruto": -0.3088,
+    "t_nw_L5_bruto": -0.3572,
+    "max_day_dip_risk": -0.0075,
+    "skew_day_ret": 0.4031,
+    "n_long": 29,
+    "n_short": 30,
+    "date_min": "2024-01-10",
+    "date_max": "2024-12-19",
+    "years": {
+      "2024": {
+        "N": 59,
+        "mean_bruto": -1.0482,
+        "median_bruto": -0.634
+      }
+    },
+    "reasons": {
+      "time": 48,
+      "stop": 8,
+      "target": 3
+    }
+  },
+  "train_t_ok": false,
+  "test_t_ok": false,
+  "skew_or_dip_ok": true,
+  "ftmo_ev_train": {
+    "p_pass_1": 0.997,
+    "p_pass_2": 0.9845,
+    "p_survive": 0.9964564138908576,
+    "exp_payout_monthly": 528.5127735072858,
+    "net_ev": 12142.68656417486,
+    "fee": 540.0,
+    "account": 80000.0
+  },
+  "reserve_2025": "untouched",
+  "trial_counts_if_base_gate_pass": true,
+  "counts_as_trial": true
+}
