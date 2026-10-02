@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N89 — GER40cash EU-Session 2h Open Momentum (D-100 family D; NEW_FAMILY N)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** track 2+4 + **D-100 family D** intradag-flat; filed 2026-10-01 ~13:50 CEST; pipeline vervanging na C-030).  
+**Status:** **geen PREREG — D-092.1 pre-FAIL** — U2 informal `d17573c` (mean +1,06 ≪ gate 2,16); no trial (2026-10-01 ~17:50 CEST).  
 **Auteur:** Strateeg (Claude). **NEW_FAMILY N** (EU-session open-window momentum — nooit eerder als deze setup).  
 **Instrument:** `GER40cash` (RT **0,72 bp** — COSTS_FTMO; intradag-flat = geen swap).  
 **Track 2+4 + D-100 family D:** richtingmomentum in eerste 2u (08:00–10:00 CET) van EU handelsdag → continuer positie 10:00–17:00 CET. Flat voor nacht.

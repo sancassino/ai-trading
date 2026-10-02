@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N83 — DXYcash overnight → US100 opposite intradag (NEW_FAMILY H; D-094a/D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** + **C-028/C-029** replace after N75–N77/N81 DIAG_FAIL; filed 2026-10-01 ~13:20 CEST).  
+**Status:** **UNDERPOWERED** — C-030 (mean +15,36 ≥ 1,98 maar N=52≪150; DXY M5 short); **geen PREREG**; do not retune (2026-10-01 ~13:35 CEST).  
 **Auteur:** Strateeg (Grok).  
 **Signal:** `DXYcash` (dollar index CFD; signal-only). **Trade:** `US100cash` (RT **0,66** bp; swap 0 — **EOD flat**).  
 **NEW_FAMILY H:** **macro DXY overnight → equity opposite**, same-day flat — ≠ N2 twin-index relative, ≠ N81 pair RV DIAG_FAIL, ≠ N78 VIX→US100 dead, ≠ IDX_SHORT overnight.

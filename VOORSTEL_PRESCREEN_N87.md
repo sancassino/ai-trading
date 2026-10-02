@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N87 — US30cash Intraday Opening-Gap Fade (D-100 family D; NEW_FAMILY L)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** track 2+4 + **D-100 family D** intradag-flat; filed 2026-10-01 ~13:50 CEST; pipeline vervanging na C-030 N82–N86 DIAG_FAIL).  
+**Status:** **STOP FAIL_T** — U2 `3a9108e` (train t_NW=1,63 < 2,0; test mean −17,7 bp; **TRIAL 457**); dead += N87; no gap-fade clones (2026-10-01 ~15:33 CEST).  
 **Auteur:** Strateeg (Claude). **NEW_FAMILY L** (opening gap fade — nooit eerder geprobeerd in pipeline).  
 **Instrument:** `US30cash` (RT **0,45 bp** — COSTS_FTMO; intradag-flat = geen swap).  
 **Track 2+4 + D-100 family D:** intradag mean-reversion van opening gap. Flat vóór US close → nul overnight swap.

@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N84 — AUDNZD rate-diff stretch fade, same-day flat (NEW_FAMILY I; D-097/D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** + Lane-B replace after N80 FAIL_COST_GATE; filed 2026-10-01 ~13:25 CEST).  
+**Status:** **DIAG_FAIL** — C-030 Lane-B diag (mean +0,48 ≪ gate 3,18; N=460); **geen PREREG**; drop path (2026-10-01 ~13:35 CEST).  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `AUDNZD` (RT **est. 1,06** bp = M5 spread_med **0,64** bp 2024–26 + 2×€2,25/lot/kant ≈ **0,21** bp; **not yet in** `COSTS_FTMO.csv` — U2 remeasure before any PREREG). Swap irrelevant — **EOD flat**.  
 **NEW_FAMILY I:** **AUD–NZD rate-differential / cross stretch fade**, London session, same-day flat — ≠ L60 FX-med (C-028 barred), ≠ N69/N71 NZD/AUD USD-legs DIAG_FAIL, ≠ N77 FX6 XS, ≠ carry-TSMOM long-only.

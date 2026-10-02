@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N86 — XAU own RV-VoV → 3d gold MR (NEW_FAMILY K; D-097/D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** + Lane-B replace after N80 FAIL_COST_GATE; filed 2026-10-01 ~13:25 CEST).  
+**Status:** **DIAG_FAIL** — C-030 Lane-B diag (mean −9,27 ≪ gate 15,39; N=96); **geen PREREG**; drop path (2026-10-01 ~13:35 CEST).  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `XAUUSD` (RT **0,83** bp; swap_long **2,15** / swap_short **0,10** bp/nacht — `COSTS_FTMO.csv`).  
 **NEW_FAMILY K:** **gold own realized vol-of-vol → multi-day mean-reversion** — ≠ N78 VIX_TERM_VOV (VIX9D/VIX3M → US100; **BARRED clones**), ≠ N70 XAU 5d TSMOM DIAG_FAIL, ≠ N75 XAU/XAG ratio DIAG_FAIL, ≠ XAU_AM_FADE intradag.

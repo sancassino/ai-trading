@@ -1,5 +1,7 @@
 # STRATEGIE_LOG (Strateeg)
 
+- **2026-10-02 20:19 CEST** — Hourly FASE3 catch-up (prior :15 failed; was behind origin by 21). **ff-pull** `6c9c1e5`→`45403f1`. **BESLUITEN:** tip **D-104** @`8e25e3c` on `claude/ftmo-trading-strategy-98mplz` (D-101…D-104 bindend; upbeat-dirac file tip still D-086). Manager NEXT_STEPS **v83** @`054a8eb`. CTO tip **C-030** `6174bca`. U2 tip `4de01a9` IDLE (last formal N87 FAIL_T `3a9108e`). **Stand:** C17/FX_INTRADAG/B1/A2 STOP; N72–N74 BARRED; N75–N77/N81/N82/N84–N86 DIAG_FAIL; N78/N80 FAIL_COST_GATE; N79/N83 UNDERPOWERED; **N87 FAIL_T** TRIAL **457**; N88/N89 pre-FAIL; OPEN **N90/N91/N92** (NEW_FAMILY O/P/Q). ORB-meta reserve FAIL (D-104). FREEZE OFF. **Geleverd:** catalogus §9/§10 sync + VOORSTEL N82–N89 status; §10: F2-ORB/A1 > N90–N92 OPEN > XAU_AM_FADE watch > S2-BTC > GS01; vs S2 `b765613` STALE. Geen PREREG (geen screen-PASS); Quiet / geen U2 wake.
+
 - 23:50 Amsterdam (01-10) — Cyclus :50. **Nieuws:** main nieuwe commit `42ff562` — `data/ftmo_specs/2026-10-01.csv` snapshot (166 symbolen, 21:30 UTC). RT-check: GBPJPY=0,72 bp, AUDUSD=0,45 bp, US100cash=0,66 bp — identiek aan COSTS_FTMO_alle; geen impact op N90/N91/N92 VOORSTELlen. U2 uur-sync 23:25 IDLE. Pipeline: **N90/N91/N92 OPEN**. TRIAL **457**.
 
 - 23:20 Amsterdam (01-10) — Cyclus :20. Geen nieuws (main/U2/CTO ongewijzigd). Pipeline: **N90/N91/N92 OPEN**. TRIAL **457**.

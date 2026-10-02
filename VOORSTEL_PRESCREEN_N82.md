@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N82 — XAGUSD London AM-Fix Fade (NEW_FAMILY G; D-097/D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** + **C-028/C-029** replace after N75–N77/N81 DIAG_FAIL; filed 2026-10-01 ~13:20 CEST).  
+**Status:** **DIAG_FAIL** — C-030 Lane-B diag (mean −2,91 ≪ gate 15,21; N=311); **geen PREREG**; drop path (2026-10-01 ~13:35 CEST).  
 **Auteur:** Strateeg (Grok).  
 **Instrument:** `XAGUSD` (RT **5,07** bp; swap irrelevant — **EOD flat**).  
 **NEW_FAMILY G:** silver **London AM-fix extension fade**, same-day flat — ≠ XAU_AM_FADE (gold), ≠ N25 NY-PM fade, ≠ N10 Mid-London XAU, ≠ N75 ratio 3d DIAG_FAIL.

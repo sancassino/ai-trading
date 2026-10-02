@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N88 — EURGBP 5d Short-Only TSMOM (D-100 family M; NEW_FAMILY M)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** track 4 + **D-100 family B** carry short + **D-097** swing 5d; filed 2026-10-01 ~13:50 CEST; pipeline vervanging na C-030).  
+**Status:** **geen PREREG — D-092.1 pre-FAIL** — U2 informal `d17573c` (N=107≪150, mean −5,76 < 3,12); no trial (2026-10-01 ~17:50 CEST).  
 **Auteur:** Strateeg (Claude). **NEW_FAMILY M** (EURGBP cross — nooit eerder geprobeerd).  
 **Instrument:** `EURGBP` (RT **1,04 bp** — COSTS_FTMO; swap_short **−0,07** bp/nacht = ontvangen).  
 **Track 4 + D-100 family B:** EUR/GBP cross short-only 5d swing. Short = structurele EUR-zwakte vs GBP. Overnight short EURGBP = earn 0,07 bp/nacht (positieve carry bij short).

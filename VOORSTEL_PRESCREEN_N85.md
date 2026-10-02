@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N85 — US500 AM lead → US100 same-dir PM lag (NEW_FAMILY J; D-094a/D-100)
 
-**Status:** **OPEN** — awaiting D-092.1 (**D-094** + Lane-B replace after N80 FAIL_COST_GATE; filed 2026-10-01 ~13:25 CEST).  
+**Status:** **DIAG_FAIL** — C-030 Lane-B diag (mean −7,11 ≪ gate 1,98; N=370); **geen PREREG**; drop path (2026-10-01 ~13:35 CEST).  
 **Auteur:** Strateeg (Grok).  
 **Signal:** `US500cash` (lead). **Trade:** `US100cash` (RT **0,66** bp; swap 0 — **EOD flat**).  
 **NEW_FAMILY J:** **index lead–lag non-ratio** — US500 morning impulse → US100 afternoon continuation, same-day flat — ≠ N2 twin relative morning, ≠ N81 3d pair RV DIAG_FAIL, ≠ N83 DXY→US100, ≠ IDX_SHORT.
