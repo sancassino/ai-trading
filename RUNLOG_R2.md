@@ -2388,3 +2388,18 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD. No new trial. Skip N75–N137 + XLF / QUAL / BRENT_WTI / USDMXN / MTUM / GLD / EQW / DXY_DOLLAR / BWX / EWZ / YIELD_CURVE_2S10S / DEFENSIVE_CYCLICAL / VNQ/EEM/DBC/EFA/TIP/IWM/TLT/CPER/HYG→US500 / GAS/SILVER / EMB/CRACK / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD + listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. Prio-1 remains Strateeg D-092.1 on N138/N139 (or replacements) → PASS→PREREG.
 
 **Book end:** TRIAL_COUNT **470** unchanged. Quiet — no Sandro/CTO ping.
+
+
+## Cyclus 01:52 CEST (2026-10-03) — D-090 IDLE absorb NEXT_STEPS v103 (hold; OPEN N154/N155 no PREREG; TRIAL 470)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` `ddb929c` (NEXT_STEPS **v103**; Manager) into tip post-`78775a2`. N130 EQW_BREADTH_STRESS FAIL_T (469) + N131 DXY_DOLLAR_STRESS FAIL_T (470) already catalogued. Formal OPEN **N154 US100_GER40_TRANSATLANTIC_XS (BW)** + **N155 US30_UKOIL_INDUSTRIAL_CRUDE_XS (BX)** — **screens only, no live PREREG / not PASS→PREREG**. Pre-screen FAIL/FAIL_CLONE += N138–N153 (geen trial). C-041 `7041e8a` N143 DIAG_PASS→PREREG retracted by C-042 `d5311f9` (FAIL_CLONE of DBC); N150/N151 DIAG_FAIL (0 CTO trials). Live PREREG cleared.
+
+**Faraday note (not gated):** tip moved `9c4ee71`→`363033c` (N154 FAIL / N155 FAIL_CLONE; OPEN N156/N157) →`78ee291` (N156 FAIL / N157 FAIL; OPEN N158/N159) — **VOORSTEL/OPEN screens only**, not Manager formal PASS→PREREG. No `PREREG_FTMO_N15*` on Faraday/main. U2 does **not** start N154–N159.
+
+**01:15 miss:** prior :15 routine left no commit after `78775a2` (~00:52). Working tree / remotes clean; no auth or merge blocker. Treat as missed agent start (orchestration), not repo breakage — this cycle recovers absorb.
+
+**Action:** IDLE/HOLD. No new trial. Skip N75–N153 + XLE→US500 / DBC→US500 / GER40-UK100 / JP225-HK50 / XAU-UKOIL / XAG-UKOIL / US30-US500 / XPT-XPD / BTC-ETH / AUD-XAU / GBP-UKOIL / USDJPY-US100 / EUR-GER40 / XAG-US30 / EURJPY-USDCHF / GBP-NZD / EUR-CAD / XLF→US500 / QUAL→US500 / BRENT_WTI XS / USDMXN EM-fade / MTUM→US500 / GLD→US500 / EQW_BREADTH / DXY_DOLLAR / BWX→US500 / EWZ→US500 / DBA→US500 / YIELD_CURVE / DEFENSIVE_CYCLICAL / VNQ/EEM/DBC/EFA/TIP/IWM/TLT/CPER/HYG→US500 / GAS/SILVER / EMB/CRACK / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD / USDCHF-LO / GER40→US30 / EURNZD-LO / UK→FRA40 / AUS Asia→Lon / GBPCHF-LO / JP225 Tokyo→Lon / CHFJPY-LO / DXY Lon→EU-PM / GBPAUD-LO / PPLT→US500 + listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. Prio-1 remains Strateeg D-092.1 on N154/N155 (or replacements) → PASS→PREREG. P1 ftmo.py validation not opened for U2 this cycle (CTO spoor 5; U2 IDLE per v103).
+
+**Book end:** TRIAL_COUNT **470** unchanged. Quiet — no Sandro/CTO ping.
