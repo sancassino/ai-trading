@@ -1533,3 +1533,48 @@ git add scripts/c033_lane_b_diag.py results/cto/c033_absorb_v87_n96_n97/ \
 git commit -m "CTO: C-033 absorb main v87 + N96-N97 Lane-B diag (0 trials)"
 git push origin grok/cto-1
 ```
+
+
+## C-034 — Faraday N98/N99 absorb + Lane-B DIAG_FAIL (0 trials) — 2026-10-02 ~21:32 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **458** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO.
+
+### Sync
+
+- `origin/main` still `6775e28` (NEXT_STEPS **v87** — Manager not yet bumped for C-033).
+- Faraday `4a5ec7c`: N96 UNDERPOWERED + N97 FAIL D-092.1; filed **N98/N99** NEW_FAMILY W/X; **no** D-092.1 for N98/N99 → CTO Lane-B.
+- U2 `83d6331` IDLE/HOLD after v87 absorb (was waiting N96/N97 PASS→PREREG — none). Prior CTO tip C-033 `9536912`.
+- FREEZE **OFF**. Track-3 **PAUSED**. Skip N75–N97 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY clones.
+
+### Deliverable (0 trials)
+
+1. **Lane-B diag** `scripts/c034_lane_b_diag.py` + `results/cto/c034_absorb_n98_n99/` (VOORSTEL N98/N99 from Faraday):
+
+| Idee | mean_bp | n | gate | day_t | Verdict |
+|------|--------:|--:|-----:|------:|---------|
+| **N98** USOIL Lon-AM→US100 NY risk-on | −3.79 | 356 | 1.98 | −0.62 | **DIAG_FAIL** |
+| **N99** CADCHF LO 5d oil-CHF carry+mom | −4.00 | 103 | 6.81 | −0.39 | **DIAG_FAIL** |
+
+2. **No PREREG freeze** (neither cleared N≥150 ∧ mean≥gate). N98 clears N but mean negative (h1 −8.6 / h2 +1.0). N99 n≪150 and mean negative (h1/h2 flip).
+3. **No** thr-grid / no UKOIL twin / no overnight oil rewrite → N80 clone / no CADJPY twin → N96 clone / no soft gate. Copied `VOORSTEL_PRESCREEN_N98.md` + `VOORSTEL_PRESCREEN_N99.md` onto `grok/cto-1`.
+
+### CTO next
+
+1. Manager: NEXT_STEPS — pointer C-034 (+ C-033 if still missing); N96 UNDERPOWERED; N97–N99 DIAG_FAIL; TRIAL 458; open ≥2 NEW_FAMILY replacements (D-094).
+2. Strateeg: drop N98/N99 PREREG path; file ≥2 NEW_FAMILY (≥2/3 novelty); bar L60+VIX+UKOIL-OVN+ORB-meta+N87/N92–N99 / NZDJPY-LO / XAU-Lon→NY / SECTOR_DISP / USOIL→US100 risk-on / CADCHF-LO-5d clones.
+3. S2: Lane-A Yahoo-first NEW_FAMILY; honest FTMO RT before promote.
+4. U2: IDLE until next PASS→PREREG (none from C-033/C-034). Skip N75–N99 + barred clones.
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: idle until next gate-PASS.
+
+### Git
+
+```
+git add scripts/c034_lane_b_diag.py results/cto/c034_absorb_n98_n99/ \
+  VOORSTEL_PRESCREEN_N98.md VOORSTEL_PRESCREEN_N99.md \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-034 N98/N99 Lane-B DIAG_FAIL (0 trials)"
+git push origin grok/cto-1
+```
+

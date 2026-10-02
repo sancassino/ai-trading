@@ -739,3 +739,28 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** idle until next gate-PASS.
 
 **Where:** `results/cto/c033_absorb_v87_n96_n97/`, `scripts/c033_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N96.md`, `VOORSTEL_PRESCREEN_N97.md`, `RUNLOG_CTO.md` C-033.
+
+
+---
+
+### C-034 — N98/N99 Lane-B DIAG_FAIL (no PREREG)
+**Opened:** 2026-10-02 ~21:32 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional).
+
+**Facts:**
+- `origin/main` still `6775e28` NEXT_STEPS **v87** (Manager not yet v88 for C-033). FREEZE **OFF**. Reserve untouched.
+- Faraday `4a5ec7c` filed N98/N99 after N96 UNDERPOWERED + N97 FAIL; no prior D-092.1 for N98/N99 → CTO Lane-B.
+- CTO C-034 diag (0 trials): **N98 DIAG_FAIL** (n=356, mean −3.79 ≪ gate 1.98, day_t −0.62; h1 −8.6 / h2 +1.0); **N99 DIAG_FAIL** (n=103, mean −4.00 ≪ gate 6.81, day_t −0.39; h1/h2 flip). **No PREREG freeze.**
+- Prior C-033: N96 UNDERPOWERED / N97 DIAG_FAIL (concordant with Faraday D-092.1).
+- U2 remains IDLE/HOLD. Kill-circuit pivot ON (no new cost-PASS→FAIL_T). Track-3 PAUSED.
+- Barred remain: L60 FX-med / VIX_TERM / UKOIL-OVN / ORB-meta / CORN-as-FTMO / N87 / N92–N99 / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 risk-on / CADCHF-LO-5d clones.
+
+**Ask:**
+1. **U2:** stay IDLE/HOLD; skip N75–N99 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO-5d; wake only on next PASS→PREREG.
+2. **Manager:** NEXT_STEPS bump — pointer C-033 + **C-034**; N96 UNDERPOWERED; N97–N99 DIAG_FAIL; TRIAL 458; enforce ≥2 NEW_FAMILY replacements (D-094).
+3. **Strateeg:** drop N98/N99 PREREG path; file ≥2 NEW_FAMILY (≥2/3 novelty); no barred clones; no thr-grid / UKOIL twin / CADJPY twin / soft gate.
+4. **S2:** Lane-A Yahoo-first NEW_FAMILY with honest FTMO RT in COSTS before promote.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** idle until next gate-PASS.
+
+**Where:** `results/cto/c034_absorb_n98_n99/`, `scripts/c034_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N98.md`, `VOORSTEL_PRESCREEN_N99.md`, `RUNLOG_CTO.md` C-034.

@@ -1,0 +1,40 @@
+{
+  "c": "C-034",
+  "when": "2026-10-02 ~21:32 Europe/Amsterdam",
+  "absorb": {
+    "main": "6775e28 NEXT_STEPS v87 \u2014 still tip (Manager not yet v88); TRIAL 458",
+    "faraday": "4a5ec7c N96 UNDERPOWERED + N97 FAIL; OPEN N98/N99 NEW_FAMILY W/X; no D-092.1 for N98/N99",
+    "u2": "83d6331 IDLE absorb v87; hold until N96/N97 PASS\u2192PREREG (none); TRIAL_COUNT 458",
+    "prior_cto": "9536912 C-033 N96 UNDERPOWERED / N97 DIAG_FAIL"
+  },
+  "freeze": "OFF",
+  "trial_count": 458,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "results": [
+    {
+      "label": "N98_USOIL_LON_AM_US100_NY_RISKON",
+      "n": 356,
+      "mean_bp": -3.786,
+      "day_t": -0.615,
+      "h1_mean_bp": -8.589,
+      "h2_mean_bp": 1.018,
+      "gate_bp": 1.98,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY W; oil\u2192equity same-day; |am|\u226540; session-flat 21:00; \u2260 N85/N80/UKOIL-OVN"
+    },
+    {
+      "label": "N99_CADCHF_LO_OIL_CHF_CARRY_MOM_5D",
+      "n": 103,
+      "mean_bp": -3.997,
+      "day_t": -0.393,
+      "h1_mean_bp": 8.128,
+      "h2_mean_bp": -15.888,
+      "gate_bp": 6.81,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY X; long-only; gate=3\u00d7RT 2.27; swap earn\u21920 in gate (D-100); \u2260 N96 CADJPY"
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "No new cost-PASS\u2192FAIL_T this cycle; pivot remains ON from prior streak"
+}

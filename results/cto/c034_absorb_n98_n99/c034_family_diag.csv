@@ -1,0 +1,3 @@
+label,n,mean_bp,day_t,h1_mean_bp,h2_mean_bp,gate_bp,verdict,notes
+N98_USOIL_LON_AM_US100_NY_RISKON,356,-3.786,-0.615,-8.589,1.018,1.98,DIAG_FAIL,NEW_FAMILY W; oil→equity same-day; |am|≥40; session-flat 21:00; ≠ N85/N80/UKOIL-OVN
+N99_CADCHF_LO_OIL_CHF_CARRY_MOM_5D,103,-3.997,-0.393,8.128,-15.888,6.81,DIAG_FAIL,NEW_FAMILY X; long-only; gate=3×RT 2.27; swap earn→0 in gate (D-100); ≠ N96 CADJPY
