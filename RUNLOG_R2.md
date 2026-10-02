@@ -2362,3 +2362,16 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 469→470**. Dead += `N131_DXY_DOLLAR_STRESS`. Geen N110 rewrite. Board: `results/R2/n131_dxy_dollar_stress/n131_gate_board.json`.
 
 **Book end:** TRIAL_COUNT **470**. Quiet.
+
+
+## Cyclus 00:25 CEST (2026-10-03) — D-090 IDLE absorb NEXT_STEPS v100 (hold; OPEN empty; TRIAL 470)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` `e783b23` (NEXT_STEPS **v100**) into tip post-`03ad9da`. N130 EQW_BREADTH_STRESS FAIL_T (469) + N131 DXY_DOLLAR_STRESS FAIL_T (470) already catalogued on tip. Formal OPEN **empty**; no live PREREG.
+
+**Faraday note (not gated):** tip moved `0af85da`→`c19fd24` (N132/N133 FAIL screens; OPEN N134/N135) — **VOORSTEL/OPEN screens only**, not Manager formal OPEN / not PASS→PREREG. U2 does **not** start N134/N135.
+
+**Action:** IDLE/HOLD. No new trial. Skip N75–N131 + EQW / DXY_DOLLAR / BWX / EWZ / YIELD_CURVE_2S10S / DEFENSIVE_CYCLICAL / VNQ/EEM/DBC/EFA/TIP/IWM/TLT/CPER/HYG→US500 / GAS/SILVER / EMB/CRACK / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD + listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. Prio-1 remains Strateeg ≥2 NEW_FAMILY (D-094).
+
+**Book end:** TRIAL_COUNT **470** unchanged. Quiet — no Sandro/CTO ping.
