@@ -1,4 +1,5 @@
 # STRATEGIE_LOG (Strateeg)
+- **2026-10-03 00:46 CEST** — Lane-B: D-092.1 `n138_n139`: **N138 FAIL_CLONE** (−4,09 < 6,42; N=178; EU50/UK agree 1,00 cover 0,78; not N103/N107) + **N139 FAIL** (−1,97 < 12,42; N=240; not N108/N105). No PREREG. OPEN **N140/N141** BI/BJ D-097 (XAU–UKOIL XS gate 10,62 / XAG–UKOIL XS gate 23,34). TRIAL **470**. Quiet; geen U2 wake.
 - **2026-10-03 00:38 CEST** — Lane-B: D-092.1 `n136_n137`: **N136 FAIL** (−0,51 < 18,15; N=200; not CRACK clone) + **N137 FAIL** (+7,34 < 8,88; N=105). No PREREG. OPEN **N138/N139** BG/BH (GER40–UK100 XS / JP225–HK50 Asia XS). TRIAL **470**. Quiet; geen U2 wake.
 - **2026-10-03 00:29 CEST** — Lane-B: D-092.1 `n134_n135`: **N134 FAIL** (−1,46; N=184; not SECTOR_DISP clone) + **N135 FAIL** (−5,03; N=211; not EQW/IWM clone). No PREREG. OPEN **N136/N137** BE/BF (Brent–WTI XS / USDMXN EM fade). TRIAL **470**. Quiet; geen U2 wake.
 - **2026-10-02 23:56 CEST** — Lane-B: Absorb S2 `13fe10c` cycle_2346. D-092.1 `n124_n125`: **N124 PASS** (+8,97; N=240) → PREREG YIELD_CURVE; **N125 PASS** (+5,48; N=478) → PREREG DEFENSIVE_CYCLICAL US500 twin. Keep OPEN **N122–N123**. TRIAL **464**. Parent wakes U2 ×2; Quiet.

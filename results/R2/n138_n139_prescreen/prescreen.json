@@ -1,0 +1,238 @@
+{
+  "N138": {
+    "id": "N138",
+    "instrument": "GER40cash+UK100cash",
+    "n": 178,
+    "mean_bruto_bp": -4.0892,
+    "gate_bp": 6.42,
+    "verdict": "FAIL_CLONE",
+    "notes": "GER40_UK100_XS z40/\u00b11.5 both legs 15:30\u219221:00; gate 6.42 = 3*(0.72+1.42 est); swap 0; NEW_FAMILY BG; UK100 RT not in COSTS | CLONE of EU50_UK_z40 \u2014 no PREREG",
+    "median_bruto_bp": -5.8543,
+    "stress_gate_bp": 9.63,
+    "stress_note": "BELOW_stress_1.5x (info only; catalog states no separate stress gate)",
+    "hit_rate": 0.4213,
+    "n_long_basket": 67,
+    "n_short_basket": 111,
+    "years": {
+      "2022": -3.2213,
+      "2023": -4.7358
+    },
+    "meta": {
+      "n_signal_days": 223,
+      "n_skip_missing_bar": 45
+    },
+    "clone": {
+      "US100_US500_z40": {
+        "peer": "US100/US500",
+        "z_corr_train": 0.361,
+        "sign_agree_both_active": 0.8375,
+        "both_active_over_cand": 0.3587,
+        "n_cand_active": 223,
+        "n_both_active": 80,
+        "clone": false
+      },
+      "GER_FRA_z40": {
+        "peer": "GER/FRA",
+        "z_corr_train": 0.5004,
+        "sign_agree_both_active": 0.9438,
+        "both_active_over_cand": 0.3991,
+        "n_cand_active": 223,
+        "n_both_active": 89,
+        "clone": false
+      },
+      "UK_FRA_z40": {
+        "peer": "UK/FRA",
+        "z_corr_train": -0.781,
+        "sign_agree_both_active": 0.0,
+        "both_active_over_cand": 0.6413,
+        "n_cand_active": 223,
+        "n_both_active": 143,
+        "clone": false
+      },
+      "EU50_GER_z40": {
+        "peer": "EU50/GER",
+        "z_corr_train": -0.2219,
+        "sign_agree_both_active": 0.1618,
+        "both_active_over_cand": 0.3049,
+        "n_cand_active": 223,
+        "n_both_active": 68,
+        "clone": false
+      },
+      "EU50_UK_z40": {
+        "peer": "EU50/UK",
+        "z_corr_train": 0.8914,
+        "sign_agree_both_active": 1.0,
+        "both_active_over_cand": 0.7758,
+        "n_cand_active": 223,
+        "n_both_active": 173,
+        "clone": true
+      },
+      "N103_GER_AM_vs_GER_leg": {
+        "peer": "N103",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.5068,
+        "both_active_over_cand": 0.4101,
+        "n_cand_active": 178,
+        "n_both_active": 73,
+        "clone": false
+      },
+      "N107_UK_AM_vs_UK_leg": {
+        "peer": "N107",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.5075,
+        "both_active_over_cand": 0.3764,
+        "n_cand_active": 178,
+        "n_both_active": 67,
+        "clone": false
+      },
+      "FRA_AM_vs_GER_leg": {
+        "peer": "FRA_AM",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.4815,
+        "both_active_over_cand": 0.4551,
+        "n_cand_active": 178,
+        "n_both_active": 81,
+        "clone": false
+      },
+      "EU50_AM_vs_GER_leg": {
+        "peer": "EU50_AM",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.4872,
+        "both_active_over_cand": 0.4382,
+        "n_cand_active": 178,
+        "n_both_active": 78,
+        "clone": false
+      },
+      "N103_vs_signal_day_pos": {
+        "peer": "N103_sigday",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.4222,
+        "both_active_over_cand": 0.4036,
+        "n_cand_active": 223,
+        "n_both_active": 90,
+        "clone": false
+      },
+      "N107_vs_signal_day_UK": {
+        "peer": "N107_sigday",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.4583,
+        "both_active_over_cand": 0.3229,
+        "n_cand_active": 223,
+        "n_both_active": 72,
+        "clone": false
+      }
+    },
+    "rt_uk_in_costs": false
+  },
+  "N139": {
+    "id": "N139",
+    "instrument": "JP225cash+HK50cash",
+    "n": 240,
+    "mean_bruto_bp": -1.9746,
+    "gate_bp": 12.42,
+    "verdict": "FAIL",
+    "notes": "JP225_HK50_ASIA_XS z40/\u00b11.5 both legs 03:00\u219208:00; gate 12.42 = 3*(1.51+2.63 est); swap 0; NEW_FAMILY BH; RTs not in COSTS",
+    "median_bruto_bp": -4.2675,
+    "stress_gate_bp": 18.63,
+    "stress_note": "BELOW_stress_1.5x (info only; catalog states no separate stress gate)",
+    "hit_rate": 0.4875,
+    "n_long_basket": 59,
+    "n_short_basket": 181,
+    "years": {
+      "2021": -4.9456,
+      "2022": 1.4381,
+      "2023": -3.969
+    },
+    "meta": {
+      "n_signal_days": 252,
+      "n_skip_missing_bar": 12
+    },
+    "clone": {
+      "GER_UK_z40": {
+        "peer": "N138_ratio",
+        "z_corr_train": 0.2902,
+        "sign_agree_both_active": 0.8989,
+        "both_active_over_cand": 0.356,
+        "n_cand_active": 250,
+        "n_both_active": 89,
+        "clone": false
+      },
+      "JP_AUS_z40": {
+        "peer": "JP/AUS",
+        "z_corr_train": 0.3437,
+        "sign_agree_both_active": 0.7258,
+        "both_active_over_cand": 0.494,
+        "n_cand_active": 251,
+        "n_both_active": 124,
+        "clone": false
+      },
+      "HK_AUS_z40": {
+        "peer": "HK/AUS",
+        "z_corr_train": -0.7692,
+        "sign_agree_both_active": 0.0133,
+        "both_active_over_cand": 0.5976,
+        "n_cand_active": 251,
+        "n_both_active": 150,
+        "clone": false
+      },
+      "N105_JP_Tokyo_vs_JP_leg": {
+        "peer": "N105",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.5135,
+        "both_active_over_cand": 0.4625,
+        "n_cand_active": 240,
+        "n_both_active": 111,
+        "clone": false
+      },
+      "N108_AUS_Asia_vs_JP_leg": {
+        "peer": "N108",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.5526,
+        "both_active_over_cand": 0.3167,
+        "n_cand_active": 240,
+        "n_both_active": 76,
+        "clone": false
+      },
+      "JP_0300_0600_vs_JP_leg": {
+        "peer": "JP_AM_03_06",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.4945,
+        "both_active_over_cand": 0.3792,
+        "n_cand_active": 240,
+        "n_both_active": 91,
+        "clone": false
+      },
+      "HK_0300_0600_vs_HK_leg": {
+        "peer": "HK_AM_03_06",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.4568,
+        "both_active_over_cand": 0.675,
+        "n_cand_active": 240,
+        "n_both_active": 162,
+        "clone": false
+      },
+      "N64_HK_TSMOM_vs_HK_leg": {
+        "peer": "N64",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.0601,
+        "both_active_over_cand": 0.7625,
+        "n_cand_active": 240,
+        "n_both_active": 183,
+        "clone": false
+      }
+    },
+    "rt_in_costs": false
+  },
+  "gates": {
+    "N138": 6.42,
+    "N139": 12.42,
+    "not_the_2.34_us500_gate": true
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150
+}

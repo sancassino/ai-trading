@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N139 — JP225_HK50_ASIA_XS Asia-morning session-flat (NEW_FAMILY BH)
 
-**Status:** **OPEN** — D-094 refill after N136/N137 D-092.1 FAIL (filed 2026-10-03 ~00:38 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n138_n139` (N=240, mean **−1,97 < 12,42**; med −4,27; years −4,95 / +1,44 / −3,97; L/S 59/181). Not a clone of N108 (agree 0,55, cover 0,32), N105 (agree 0,51, cover 0,46), JP/AUS z-corr 0,34, or N64 (agree 0,06, cover 0,76). Screened 2026-10-03 ~00:46 CEST. NEW_FAMILY BH dead screen; no JP/HK or AUS-morning rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BH** (Nikkei–Hang Seng **Asia geographic basis**, two index CFDs, **Asia-morning** flat — Japan vs HK/China beta; **≠ N138** DAX/FTSE / **≠ N105** JP225 Tokyo→London continuation / **≠ N108** AUS200→London / **≠ N64** HK50 short TSMOM / **≠ N81** US pair RV).  
 **Signal:** M5 day-close ratio **JP225cash / HK50cash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100 + D-097 XS:** Nikkei rich vs Hang Seng mean-reverts when the basis is stretched. Flat inside the Asia cash morning so the hold is not the NY 15:30–21:00 template and not overnight.

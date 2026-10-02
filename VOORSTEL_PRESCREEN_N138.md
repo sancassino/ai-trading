@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N138 — GER40_UK100_XS session-flat (NEW_FAMILY BG)
 
-**Status:** **OPEN** — D-094 refill after N136/N137 D-092.1 FAIL (filed 2026-10-03 ~00:38 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL_CLONE** `n138_n139` (N=178, mean **−4,09 < 6,42**; med −5,85; years — / −3,22 / −4,74; L/S 67/111). **FAIL_CLONE** of EU50/UK z40 (sign-agree **1,00**, cover **0,78**; z-corr 0,89 < 0,90). Not N103 (agree 0,51, cover 0,41) and not N107 (agree 0,51, cover 0,38). No 2021 15:30 fill (GER40 15:30 starts 2021-12-28); N=178 is 2022–23, still ≥150. Screened 2026-10-03 ~00:46 CEST. NEW_FAMILY BG dead screen; no EU50/UK or GER/UK rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BG** (DAX–FTSE **geographic equity basis**, two index CFDs, session-flat — eurozone vs UK cash basis; **≠ N81** US100/US500 pair RV / **≠ N103** GER→US30 lead-lag / **≠ N107** UK→FRA continuation / **≠ N136** Brent–WTI / **≠ ETF→US500** stress).  
 **Signal:** M5 day-close ratio **GER40cash / UK100cash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100 + D-097 XS:** GER rich vs UK mean-reverts when the basis is stretched; intradag-vlak (no overnight, no swap-credit).

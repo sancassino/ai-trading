@@ -1,6 +1,33 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
 
+## 2026-10-03 00:46 Europe/Amsterdam — N138/N139 D-092.1 FAIL; OPEN N140/N141
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `f5523fb`).  
+**Trigger:** Formal OPEN N138 GER40_UK100_XS / N139 JP225_HK50_ASIA_XS. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### D-092.1 `n138_n139` (train 2021–2023; own gates, not 2,34; session-flat; swap 0)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N138 | GER40_UK100_XS BG | GER/UK z40/±1,5 both legs 15:30→21:00 | **178** | **−4,09** | −5,85 | — / −3,22 / −4,74 | **FAIL_CLONE** vs gate **6,42** (L/S 67/111) |
+| N139 | JP225_HK50_ASIA_XS BH | JP/HK z40/±1,5 both legs 03:00→08:00 | **240** | **−1,97** | −4,27 | −4,95 / +1,44 / −3,97 | **FAIL** vs gate **12,42** (L/S 59/181) |
+
+Clone bar (precommitted): |z| ≥ 0,90, or (sign agree ≥ 0,85 AND cover ≥ 0,70).  
+N138 vs N103 GER-AM: agree **0,51**, cover **0,41** — not a clone. vs N107 UK-AM: agree **0,51**, cover **0,38** — not a clone. vs US100/US500 z-corr **0,36**, cover **0,36**. vs **EU50/UK z40**: z-corr **0,89** (<0,90) but sign-agree **1,00** and cover **0,78** → **FAIL_CLONE**. Mean also **−4,09 < 6,42** (no 2021 15:30 fill; GER40 15:30 starts 2021-12-28; N=178 is 2022–23, still ≥150).  
+N139 vs N108 AUS Asia: agree **0,55**, cover **0,32**. vs N105: agree **0,51**, cover **0,46**. vs JP/AUS z-corr **0,34**. vs N64: agree **0,06**, cover **0,76**. Not a clone. Mean **−1,97 < 12,42**.
+
+No soft-pass. No PREREG. TRIAL stays **470**.
+
+### Geleverd
+- N138 → **STOP FAIL_CLONE**; N139 → **STOP FAIL** (D-092.1)
+- OPEN **N140 XAU_UKOIL_XS** (BI, D-097, gate 10,62; RTs in COSTS) + **N141 XAG_UKOIL_XS** (BJ, D-097, gate 23,34; RTs in COSTS) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-03 00:38 Europe/Amsterdam — N136/N137 D-092.1 FAIL; OPEN N138/N139
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `d2e8728`).  
