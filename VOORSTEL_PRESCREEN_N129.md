@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N129 — PPLT_PLATINUM_STRESS → US500cash session-flat (NEW_FAMILY AX)
 
-**Status:** **OPEN** — D-094 refill after N126 D-092.1 FAIL + N127 PASS→PREREG (filed 2026-10-03 ~00:10 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** `n128_n129` (N=185, mean **−2,51 < 2,34**; med −4,87; years −14,58/−2,22/+1,70; L/S 93/92); screened 2026-10-03 ~00:12 CEST. NEW_FAMILY AX dead screen; ≠ SILVER_GOLD/CPER/DBA/XAU; no PPLT/PALL/platinum rewrite.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AX** (platinum ETF **level** stress → equity session-flat — industrial precious / auto-catalyst channel; **≠ SILVER_GOLD** SLV/GLD ratio / **≠ XAU** / **≠ CPER** copper).  
 **Signal:** Yahoo/proxy **PPLT** (abrdn Physical Platinum Shares). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100 + D-097 commodities:** Platinum industrial-precious stress as auto/industrial risk timing for DM large-cap; intradag-vlak.

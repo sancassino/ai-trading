@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N127 — EWZ_BRAZIL_STRESS → US500cash session-flat (NEW_FAMILY AV)
 
-**Status:** **PASS → PREREG** — D-092.1 `n126_n127` train N=**208** mean bruto **+3,54** ≥ gate **2,34** (filed/screened 2026-10-03 ~00:05 CEST). Live: `PREREG_FTMO_N127_EWZ_BRAZIL_STRESS.md`.
+**Status:** **STOP FAIL_T** — U2 `3a970c7` (cost+stress PASS; t_netto/t_NW5 **0,57/0,50**; test N=85 bruto **+1,85**; TRIAL **466→467**). Dead += N127; no EWZ/EEM/EMB/EFA clones. Pre-screen was PASS (+3,54; N=208).
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AV** (Brazil single-country EM equity ETF **level** stress → US large-cap session-flat — LatAm / commodity-FX equity channel; **≠ EEM** EM basket / **≠ EMB** EM credit / **≠ EFA** DM ex-US).  
 **Signal:** Yahoo/proxy **EWZ** (iShares MSCI Brazil). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** Brazil equity stress as EM/commodity-FX risk-appetite timing for US large-cap; intradag-vlak (geen swap).

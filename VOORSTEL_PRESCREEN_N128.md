@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N128 — BWX_INTL_TREASURY_STRESS → US500cash session-flat (NEW_FAMILY AW)
 
-**Status:** **OPEN** — D-094 refill after N126 D-092.1 FAIL + N127 PASS→PREREG (filed 2026-10-03 ~00:10 CEST).  
+**Status:** **PASS → PREREG** — D-092.1 `n128_n129` train N=**419** mean bruto **+6,63** ≥ gate **2,34** (stress informal ≥3,51; med +8,58; years −8,07/+8,89/+9,55; L/S 96/323); screened 2026-10-03 ~00:12 CEST. Live: `PREREG_FTMO_N128_BWX_INTL_TREASURY_STRESS.md`.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AW** (international / DM ex-US treasury ETF **level** stress → equity session-flat — global rates channel; **≠ TLT** US duration / **≠ TIP** real-rate / **≠ EMB** EM credit / **≠ YIELD_CURVE** 10Y−3M slope).  
 **Signal:** Yahoo/proxy **BWX** (SPDR Bloomberg International Treasury Bond). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100 + D-097 rates:** Intl treasury stress as global rates / FX-reserve timing for DM large-cap; intradag-vlak.

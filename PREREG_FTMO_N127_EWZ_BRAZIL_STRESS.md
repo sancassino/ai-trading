@@ -1,16 +1,31 @@
 # PREREG_FTMO_N127 — EWZ_BRAZIL_STRESS (US500cash; session-flat; NEW_FAMILY AV)
 
-**Status:** **OPEN** — frozen for U2 cost-gate + formal trial (Lane-B D-092.1 PASS).  
+**Status:** **STOP FAIL_T** — U2 tip `3a970c7` on `claude/uitvoerder2-r` (TRIAL **466→467**).  
 **Auteur:** Strateeg (Grok) Lane-B on `claude/trusting-faraday-34tsmg`.  
 **VOORSTEL:** `VOORSTEL_PRESCREEN_N127.md`.  
 **Signal:** Yahoo/proxy **EWZ** (iShares MSCI Brazil). **Trade:** `US500cash`.  
-**NEW_FAMILY AV:** Brazil single-country EM equity ETF level stress → equity session-flat (**≠ EEM** basket / **≠ EMB** credit / **≠ EFA** DM ex-US).  
-**Hold:** **session-flat** entry ≈15:30 CET → flat ≈21:00 CET (D-100; US500 overnight swap avoided).  
-**TRIAL_COUNT book:** **466** (deze PREREG telt nog niet).  
+**NEW_FAMILY AV:** **DEAD** (no EWZ/EEM/EMB/EFA clones, no thr-grid, no overnight).  
+**Hold:** session-flat 15:30→21:00 CET (was freeze).  
+**TRIAL_COUNT book:** **467** after this trial.  
 **Reserve 2025+:** **onaangeroerd.**  
-**Geen retune** na freeze.
+**Dead += N127.** No retune.
 
-Pre-screen: `results/R2/n126_n127_prescreen/` — N127 **PASS** train N=**208** mean bruto **+3,54** ≥ gate **2,34**.
+Board: U2 `results/R2/n127_ewz_brazil_stress/` (tip `3a970c7`). Faraday tip at PREREG freeze: `3a96125`. Pre-screen was `results/R2/n126_n127_prescreen/` (N=208, bruto **+3,54**).
+
+---
+
+## U2 result (authoritative)
+
+| Post | Waarde |
+|------|--------|
+| Verdict | **FAIL_T** (cost+stress **PASS**) |
+| Train 2021–23 | N=**208**, mean bruto **+3,54** ≥2,34 and ≥3,51; netto **+2,76**; med **+1,89**; years **+18,36/−2,23/+5,62**; L/S **86/122** |
+| t | t_netto **0,57** / t_NW5 **0,50** ≪ 2 |
+| Test | N=**85**, mean bruto **+1,85** |
+| Trial | **466→467**; counts_as_trial=true |
+| Retune | **verboden** (geen thr-grid, geen EEM/EMB/EFA rewrite, geen EWZ clone, geen overnight) |
+
+Live PREREG-pointer **cleared**.
 
 ---
 
@@ -88,4 +103,4 @@ Artifact: `results/R2/n126_n127_prescreen/prescreen.json`.
 4. FAIL_T / FAIL_STRESS / FAIL_COST → STOP; **geen** thr-grid / EEM twin / overnight rewrite.
 5. counts_as_trial only if cost+stress PASS then formal t run.
 
-**TRIAL_COUNT at freeze:** **466**.
+**TRIAL_COUNT at freeze (was):** **466**. After U2 FAIL_T: **467**.

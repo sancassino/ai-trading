@@ -1,5 +1,34 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-03 00:13 Europe/Amsterdam — N127 FAIL_T sync; N128 PASS→PREREG; N129 FAIL; OPEN N130/N131
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `3a96125`).  
+**Trigger:** U2 `3a970c7` **N127 EWZ_BRAZIL_STRESS FAIL_T** (TRIAL **466→467**). U2 IDLE. Formal OPEN screens were N128/N129.
+
+### U2 result (binding)
+| ID | Verdict | t / NW | Train mean | Test | Trial |
+|----|---------|--------|------------|------|-------|
+| N127 EWZ_BRAZIL_STRESS | FAIL_T (cost+stress PASS) | **0,57 / 0,50** | +3,54 (N=208; netto +2,76; med +1,89; years +18,36/−2,23/+5,62; L/S 86/122) | +1,85 (N=85) | **466→467** |
+
+Dead += N127. No thr-grid / EEM-EMB-EFA rewrite / EWZ clone / overnight. Live PREREG N127 **cleared**. N124/N125 not re-run.
+
+### D-092.1 `n128_n129` (train 2021–2023; gate 2,34; session-flat US500)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N128 | BWX_INTL_TREASURY AW | BWX z120+d20 combo | **419** | **+6,63** | +8,58 | −8,07 / +8,89 / +9,55 | **PASS_may_PREREG** (L/S 96/323; stress informal PASS ≥3,51) |
+| N129 | PPLT_PLATINUM AX | PPLT z40/thr1.5 stress_buy | **185** | **−2,51** | −4,87 | −14,58 / −2,22 / +1,70 | **FAIL** (L/S 93/92) |
+
+### Geleverd
+- PREREG N127 → **STOP FAIL_T**; `PREREG_FTMO_N128_BWX_INTL_TREASURY_STRESS.md` **OPEN**
+- N129 STOP FAIL (geen PREREG; no PPLT/PALL rewrite)
+- OPEN **N130** EQW_BREADTH AY + **N131** DXY_DOLLAR AZ (not screened this cycle)
+- Catalog §9/§10; TRIAL **467**; live PREREG **N128** only
+
+### Explicit
+- No soft-pass; gate unchanged (2,34). N129 FAIL not PREREG'd.
+- Parent wakes U2 ×1 (N128). Quiet to Sandro. No 2025-reserve. No other branches.
+
+
 ## 2026-10-03 00:10 Europe/Amsterdam — N124/N125 FAIL_T sync; N122/N123 DIAG_FAIL; N127 PASS→PREREG
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `b236459`).  
