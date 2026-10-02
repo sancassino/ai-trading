@@ -18,3 +18,6 @@ corr(surprise,reactie) −0,2; vervolgbeweging na eerste uur: |t| ≤ 1,4 voor U
 
 ## ORB op extra indices (PREREG_ORB_INDEX_EXT, EU50/FRA40/JP225): FAIL
 21–24 gepoold +2,8bp (kosten 0,5) / +1,8bp (kosten 1,5; dag-t 1,09, N 2513); 25–26 −0,3/−1,3bp. EU50 +4,1, JP225 +3,4, FRA40 +0,9 (21–24). Zelfde patroon als eerder: 2022–23 goed, daarna weg. Geen robuust index-effect. Trials in results/ceo/TRIALS_CEO.csv.
+
+## Turn-of-month (PREREG_TOM, 7 indices, 1990–2024): FAIL
+Train 1990–2015 bruto +33,7bp/trade (5 nachten), netto (11bp: spread+swap) +22,7bp, gem. t 1,6; test 2016–2024 bruto +7,2bp, netto −3,8bp, t −0,1; DAX/FTSE/N225/STOXX negatief. Klassiek verdwenen effect; swap (≈10bp/5 nachten long) eet de rest. Gesloten.
