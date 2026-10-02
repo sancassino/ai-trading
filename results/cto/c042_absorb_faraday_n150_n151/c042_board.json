@@ -1,0 +1,63 @@
+{
+  "c": "C-042",
+  "when": "2026-10-03 ~01:30 Europe/Amsterdam",
+  "absorb": {
+    "main": "cb1b8d1 tip unchanged (NEXT_STEPS v102; TRIAL 470; FREEZE OFF)",
+    "faraday": "aca4d2f \u2014 N148 FAIL / N149 FAIL; OPEN N150/N151; prior N142 FAIL / N143 FAIL_CLONE(DBC) / N144\u2013N147 FAIL",
+    "u2": "78775a2 IDLE/HOLD absorb v102; TRIAL 470; no N143 run yet",
+    "prior_cto": "7041e8a C-041 N142 DIAG_FAIL / N143 DIAG_PASS\u2192PREREG (retracted this cycle)"
+  },
+  "n143_correction": {
+    "prior": "C-041 DIAG_PASS\u2192PREREG",
+    "faraday_authoritative": "93cb002 D-092.1 FAIL_CLONE of DBC_z40_thr1.0 \u2014 no PREREG",
+    "action": "RETRACT PREREG_FTMO_N143 \u2192 STOP FAIL_CLONE; U2 do not run"
+  },
+  "freeze": "OFF",
+  "trial_count": 470,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "live_prereg": null,
+  "results": [
+    {
+      "label": "N150_XAG_US30_METAL_INDUSTRIAL_XS_SESSION",
+      "n": 225,
+      "mean_bp": 10.046,
+      "median_bp": 3.588,
+      "day_t": 1.258,
+      "h1_mean_bp": 5.12,
+      "h2_mean_bp": 14.928,
+      "n_long": 131,
+      "n_short": 94,
+      "gate_bp": 16.560000000000002,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": 13.145,
+        "2022": -7.565,
+        "2023": 29.218
+      },
+      "notes": "NEW_FAMILY BS; XAG/US30 ratio z40/thr1.5 basis fade both legs 15:30\u219221:00; gate=3\u00d7(5.07+0.45)=16.56; \u2260 N148/N149/N146/N141/N142/N75"
+    },
+    {
+      "label": "N151_EURJPY_USDCHF_FUNDING_XS_SESSION",
+      "n": 221,
+      "mean_bp": -0.597,
+      "median_bp": -1.491,
+      "day_t": -0.189,
+      "h1_mean_bp": 1.974,
+      "h2_mean_bp": -3.145,
+      "n_long": 77,
+      "n_short": 144,
+      "gate_bp": 6.330000000000001,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": 1.207,
+        "2022": 4.685,
+        "2023": -5.43
+      },
+      "notes": "NEW_FAMILY BT; EURJPY/USDCHF ratio z40/thr1.5 basis fade both legs 15:30\u219221:00; gate=3\u00d7(1.10+1.01)=6.33; \u2260 N148/N149/L60/N28/N47/N150"
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N100\u2026N131 (\u22655); pivot ON; bar N75\u2013N149 + XLE\u2192US500(DBC clone)/US30_US500/XPT_XPD/BTC_ETH/AUD_XAU/GBP_UKOIL/USDJPY_US100/EUR_GER40 + prior; N150/N151 = NEW_FAMILY BS/BT"
+}

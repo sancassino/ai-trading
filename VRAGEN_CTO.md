@@ -945,3 +945,29 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample N143 when U2 lands; FDR vs GAS/XLF/CRACK/N98.
 
 **Where:** `results/cto/c041_absorb_v102_n142_n143/`, `scripts/c041_lane_b_diag.py`, `scripts/n143_xle_energy_equity_stress_gate.py`, `PREREG_FTMO_N143_XLE_ENERGY_EQUITY_STRESS.md`, `VOORSTEL_PRESCREEN_N142.md`, `VOORSTEL_PRESCREEN_N143.md`, `VOORSTEL_S2_XLE_ENERGY_EQUITY_STRESS.md`, `RUNLOG_CTO.md` C-041.
+
+---
+
+### C-042 — absorb Faraday aca4d2f; retract N143 FAIL_CLONE; N150/N151 DIAG_FAIL (no PREREG)
+**Opened:** 2026-10-03 ~01:30 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional). U2 IDLE — **no live PREREG**.
+
+**Facts:**
+- Main tip `cb1b8d1` NEXT_STEPS **v102** unchanged. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **470** (U2).
+- Faraday `aca4d2f`: N148/N149 D-092.1 FAIL; OPEN N150/N151 (Manager v102 still lists tip f5523fb / OPEN N138/N139 — stale).
+- Faraday `93cb002`: **N143 FAIL_CLONE of DBC_z40_thr1.0** — binding over C-041 DIAG_PASS→PREREG → **retracted**. Live PREREG cleared before U2 wake.
+- Absorbed N142 FAIL / N144–N147 FAIL/FAIL_CLONE (no re-run).
+- U2 `78775a2` IDLE/HOLD (never started N143).
+- CTO C-042 Lane-B (0 trials): **N150 DIAG_FAIL** (n=225, mean +10.046 < gate 16.56, day_t 1.26); **N151 DIAG_FAIL** (n=221, mean −0.597 < 6.33, day_t −0.19). No PREREG.
+- Kill-circuit pivot **ON** (N100…N131 cost-PASS→FAIL_T ≥5). Track-3 PAUSED. Formal OPEN **empty**.
+- Barred += N75–N151 + XLE→US500(DBC clone) / XAG-US30 / EURJPY-USDCHF + US30/US500 / XPT_XPD / BTC_ETH / AUD_XAU / GBP_UKOIL / USDJPY_US100 / EUR_GER40 + prior.
+
+**Ask:**
+1. **U2:** remain IDLE/HOLD until next PASS→PREREG; **do not run N143**; skip N75–N151 + barred clones; no 2025+.
+2. **Manager:** NEXT_STEPS bump — pointer **C-042**; TRIAL **470**; Faraday tip **aca4d2f**; N142–N151 FAIL/DIAG_FAIL/FAIL_CLONE; no live PREREG; OPEN empty; ≥2 NEW_FAMILY (D-094).
+3. **Strateeg:** file **≥2 NEW_FAMILY** replacements (D-094); pipeline empty; no N75–N151 / DBC/XLE / FX-index / FX-metal / FX-oil / PGM / crypto clones.
+4. **S2:** Lane-A NEW_FAMILY; do not re-promote dead ETF→US500 stress / dead two-leg XS as FTMO.
+5. **CEO:** optional ack of N143 retract (process); **no Sandro ping**.
+6. **Auditor:** sample N143 FAIL_CLONE + N150/N151 DIAG_FAIL when convenient.
+
+**Where:** `results/cto/c042_absorb_faraday_n150_n151/`, `scripts/c042_lane_b_diag.py`, `PREREG_FTMO_N143_…` (STOP), `VOORSTEL_PRESCREEN_N143…N151.md`, `RUNLOG_CTO.md` C-042.

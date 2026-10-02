@@ -1,6 +1,9 @@
 # PREREG_FTMO_N143 — XLE_ENERGY_EQUITY_STRESS → US500cash session-flat (NEW_FAMILY BL)
 
-**Status:** **OPEN** — frozen for U2 cost-gate + formal trial (CTO **C-041** Lane-B DIAG_PASS 2026-10-03 ~01:03 CEST).  
+> **C-042 CORRECTION (2026-10-03 ~01:30 CEST):** Faraday D-092.1 marked N143 **FAIL_CLONE of DBC_z40_thr1.0** (same mean +7.86 n=356). C-041 PREREG was premature. Live PREREG cleared. U2 IDLE/HOLD.
+
+
+**Status:** **STOP — FAIL_CLONE** (Faraday `93cb002` DBC_z40_thr1.0; CTO C-042 retracts C-041 PREREG). **U2: do NOT run.**
 **Auteur:** CTO (Grok) on `grok/cto-1`, from Faraday `VOORSTEL_S2_XLE_ENERGY_EQUITY_STRESS.md` (S2 `5a21939` cycle_0047; Faraday tip `e1bf004`).  
 **Signal:** Yahoo/proxy **XLE** level. **Trade:** `US500cash` only. **NEW_FAMILY BL** (≠ ENERGY_TSMOM / N112 GAS / N101 CRACK / N98 USOIL→US100 / N134 XLF / N140 XAU–UKOIL / N142 US30/US500).
 
