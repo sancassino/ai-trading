@@ -1,0 +1,68 @@
+{
+  "c": "C-043",
+  "when": "2026-10-03 ~01:53 Europe/Amsterdam",
+  "absorb": {
+    "main": "ddb929c NEXT_STEPS v103 (Manager ~01:41; Faraday tip listed 9c4ee71 OPEN N154/N155 \u2014 stale)",
+    "faraday": "78ee291 \u2014 N156 FAIL / N157 FAIL; OPEN N158/N159; prior N154 FAIL / N155 FAIL_CLONE / N152\u2013N153 FAIL",
+    "u2": "c2b7720 IDLE/HOLD absorb v103; TRIAL 470; screens-only N154/N155 (no PREREG)",
+    "s2": "51b24bf cycle_0147 XLK_TECH_SECTOR_STRESS COST_OK\u2192PROMOTE (Lane-A; Strateeg may pick up)",
+    "prior_cto": "d5311f9 C-042 N150/N151 DIAG_FAIL; N143 PREREG retracted"
+  },
+  "freeze": "OFF",
+  "trial_count": 470,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "live_prereg": null,
+  "results": [
+    {
+      "label": "N158_USOIL_NY_IMPULSE_FADE",
+      "n": 491,
+      "mean_bp": -0.574,
+      "median_bp": 0.167,
+      "day_t": -0.086,
+      "h1_mean_bp": -12.371,
+      "h2_mean_bp": 11.176,
+      "n_long": 221,
+      "n_short": 270,
+      "gate_bp": 10.02,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": -9.433,
+        "2022": -5.481,
+        "2023": 12.922
+      },
+      "notes": "NEW_FAMILY CA; USOILcash impulse 15:30\u219217:00 fade \u00b140.0bp; entry@17:00 flat 21:00; gate=3\u00d73.34=10.02; session-flat; \u2260 N22/N43/N80/N98/N136/N155/CRACK",
+      "meta": {
+        "n_impulse_days": 491,
+        "n_skip_missing_bar": 0,
+        "thr_bp": 40.0
+      }
+    },
+    {
+      "label": "N159_GER40_EUROPE_CLOSE_FADE",
+      "n": 141,
+      "mean_bp": -4.34,
+      "median_bp": -1.802,
+      "day_t": -0.91,
+      "h1_mean_bp": -1.909,
+      "h2_mean_bp": -6.737,
+      "n_long": 70,
+      "n_short": 71,
+      "gate_bp": 2.16,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2022": -2.988,
+        "2023": -7.131
+      },
+      "notes": "NEW_FAMILY CB; GER40cash impulse 12:00\u219215:00 fade \u00b140.0bp; entry 15:30 flat 17:30; gate=3\u00d70.72=2.16; session-flat; \u2260 N156/N149/N154/N138/N103/N40/N21",
+      "meta": {
+        "n_impulse_days": 167,
+        "n_skip_missing_bar": 26,
+        "thr_bp": 40.0
+      }
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N100\u2026N131 (\u22655); pivot ON; bar N75\u2013N157 + XAU-GER/XAU-US100/US100-GER/US30-UKOIL + prior; N158/N159 = NEW_FAMILY CA/CB"
+}

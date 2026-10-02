@@ -1,0 +1,3 @@
+label,n,mean_bp,median_bp,day_t,h1_mean_bp,h2_mean_bp,n_long,n_short,gate_bp,verdict,notes,y2021,y2022,y2023,meta_n_impulse_days,meta_n_skip_missing_bar,meta_thr_bp
+N158_USOIL_NY_IMPULSE_FADE,491,-0.574,0.167,-0.086,-12.371,11.176,221,270,10.02,DIAG_FAIL,NEW_FAMILY CA; USOILcash impulse 15:30→17:00 fade ±40.0bp; entry@17:00 flat 21:00; gate=3×3.34=10.02; session-flat; ≠ N22/N43/N80/N98/N136/N155/CRACK,-9.433,-5.481,12.922,491,0,40.0
+N159_GER40_EUROPE_CLOSE_FADE,141,-4.34,-1.802,-0.91,-1.909,-6.737,70,71,2.16,DIAG_FAIL,NEW_FAMILY CB; GER40cash impulse 12:00→15:00 fade ±40.0bp; entry 15:30 flat 17:30; gate=3×0.72=2.16; session-flat; ≠ N156/N149/N154/N138/N103/N40/N21,,-2.988,-7.131,167,26,40.0

@@ -26,6 +26,13 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-043 — absorb v103 + Faraday 78ee291; N158/N159 DIAG_FAIL (closed — QUIET)
+**Opened/closed:** 2026-10-03 ~01:53 Europe/Amsterdam.  
+**Status:** CLOSED — routine absorb; both OPEN screens DIAG_FAIL; no live PREREG; U2 IDLE; Strateeg needs ≥2 NEW_FAMILY; **no Sandro ping**.
+
+**Facts:** Faraday `78ee291` N156/N157 FAIL + OPEN N158/N159; CTO diag N158 mean −0.57 < 10.02 (n=491) / N159 mean −4.34 < 2.16 (n=141) → DIAG_FAIL. Main v103 absorbed. TRIAL 470. FREEZE OFF. Track-3 PAUSED.
+
+
 ### C-018 — D-094 tracks 3+5 combine + FTMO sizing (C-018 deliverable)
 **Opened:** 2026-10-01 ~08:10 Europe/Amsterdam (CEO D-094/D-094a; Manager NEXT_STEPS v63).  
 **Closed:** 2026-10-01 ~08:15 Europe/Amsterdam by CTO (executable; no CEO wait).
