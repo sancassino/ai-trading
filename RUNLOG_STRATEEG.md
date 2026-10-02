@@ -1,6 +1,33 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
 
+## 2026-10-03 01:03 Europe/Amsterdam — N142/N143 D-092.1 FAIL; OPEN N144/N145
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `e1bf004`).  
+**Trigger:** Formal OPEN N142 US30_US500_XS / N143 XLE_ENERGY_EQUITY_STRESS. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### D-092.1 `n142_n143` (train 2021–2023; own gates; session-flat 15:30→21:00; swap 0)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N142 | US30_US500_XS BK | US30/US500 z40/±1,5 both legs | **187** | **−1,68** | −3,36 | −0,45 / +0,36 / −4,59 | **FAIL** vs gate **3,69** (L/S 101/86) |
+| N143 | XLE_ENERGY_EQUITY_STRESS BL | XLE z40/±1,0 fade → US500 | **356** | **+7,86** | +5,92 | −5,17 / +14,15 / +4,56 | **FAIL_CLONE** vs gate **2,34** (L/S 117/239) |
+
+Clone bar (precommitted): |z| ≥ 0,90, or (sign agree ≥ 0,85 AND cover ≥ 0,70).  
+N142 vs US100/US500 z40: z **−0,80**, agree **0,00**, cover 0,61 (N81 thr±1,0 agree 0,00, cover 0,84) — not a clone. vs N138 GER/UK: z −0,27, agree 0,29, cover 0,34. vs XLE: z 0,25, agree 0,66, cover 0,54. vs **N103** GER-AM→US30 leg: agree **0,38**, cover **0,44**. vs **N92** NY-2h: agree **0,49** (US30 leg) / **0,51** (US500 leg), cover 0,99. vs N41: agree 0,57, cover 0,27. vs N35: agree 0,49, cover 0,36. vs IDX_SHORT US30 ret20: agree 0,55, cover 0,51. Not a clone. Mean **−1,68 < 3,69**.  
+N143 vs **DBC** z40 thr±1,0: z 0,77, sign-agree **0,98**, cover **0,75** → **FAIL_CLONE**. vs UNG/N112: z 0,31, agree 0,83, cover 0,32. vs XLF/N134: z 0,38, agree 0,83, cover 0,37. vs CRACK: agree 0,76, cover 0,73 (agree under 0,85). vs N98: agree 0,53. vs ENERGY_TSMOM: agree 0,03. vs N140: agree 0,04, z −0,67. vs N142 US500 leg: agree 0,37. Mean **+7,86 ≥ 2,34** and ≥ informal stress 3,51 — **not a PASS** (clone). Lane-A day_t 2,29 was not this screen.
+
+No soft-pass. No PREREG. TRIAL stays **470**. No US100/US500 rewrite. No DBC/XLE remap. No overnight US100.
+
+### Geleverd
+- N142 → **STOP FAIL**; N143 → **STOP FAIL_CLONE** (D-092.1)
+- OPEN **N144 XPT_XPD_PGM_XS** (BM, D-097, gate 202,71 est.; both legs; not in COSTS) + **N145 BTC_ETH_CRYPTO_XS** (BN, D-097, gate 23,25 est.; both legs; not in COSTS) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-03 00:55 Europe/Amsterdam — N140/N141 D-092.1 FAIL; OPEN N142/N143
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `a5a9b5b`).  

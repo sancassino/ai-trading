@@ -1,6 +1,6 @@
 # VOORSTEL_S2_XLE_ENERGY_EQUITY_STRESS — XLE z → US500 session-flat (NEW_FAMILY BL / N143)
 
-**Status:** **OPEN** — S2 optional-feed slot after N140/N141 D-092.1 FAIL (filed 2026-10-03 ~00:55 CEST). **Not screened this cycle. Not a PREREG.**  
+**Status:** **geen PREREG — D-092.1 FAIL_CLONE** `n142_n143` (N=356, mean **+7,86 ≥ 2,34** and ≥ stress 3,51; med +5,92; years −5,17 / +14,15 / +4,56; L/S 117/239). **Not a PASS:** clone of **DBC z40 thr±1,0** (agree **0,98**, cover **0,75**, z-corr 0,77). Not UNG/N112 (z 0,31, agree 0,83, cover 0,32), not XLF/N134 (z 0,38, agree 0,83, cover 0,37), not CRACK (agree 0,76, cover 0,73), not N98 (agree 0,53), not ENERGY_TSMOM (agree 0,03), not N140 (agree 0,04), not N142's US500 leg (agree 0,37). Lane-A day_t 2,29 was not this screen. Screened 2026-10-03 ~01:03 CEST. NEW_FAMILY BL dead; no DBC/XLE/UNG/oil rewrite, no overnight US100, no soft-pass.  
 **Auteur:** Strateeg-2 promote, Lane-B mapping by Strateeg (Grok). **NEW_FAMILY BL.**  
 **Lane-A:** `grok/strateeg-2` @ `5a21939`, `results/strateeg2_prescreen/cycle_0047/`.  
 **Signal:** daily **XLE** level z40 / thr ±1,0 / **fade_extreme**. **Trade:** `US500cash` only.  

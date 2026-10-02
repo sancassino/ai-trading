@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N142 — US30_US500_XS session-flat (NEW_FAMILY BK)
 
-**Status:** **OPEN** — D-092.1 refill after N140 FAIL / N141 FAIL_CLONE (filed 2026-10-03 ~00:55 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n142_n143` (N=187, mean **−1,68 < 3,69**; med −3,36; years −0,45 / +0,36 / −4,59; L/S 101/86). Not a clone of N81/US100–US500 (z **−0,80**, agree **0,00**), N138 GER/UK (z −0,27, agree 0,29, cover 0,34), XLE (z 0,25, agree 0,66, cover 0,54), N103 GER→US30 (agree 0,38, cover 0,44), N92 NY-2h (agree 0,49 / 0,51, cover 0,99), N41 (agree 0,57, cover 0,27), N35 (agree 0,49, cover 0,36), or IDX_SHORT ret20 (agree 0,55, cover 0,51). Screened 2026-10-03 ~01:03 CEST. NEW_FAMILY BK dead screen; no US100/US500 rewrite, no GER→US30, no single-leg US30.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BK** (Dow vs S&P **cash-index basis**, two index CFDs, session-flat). **≠ N140/N141** metal–oil (dead this cycle) / **≠ N143** XLE→US500 (signal is a sector ETF level, trade is one leg) / **≠ N81** US100/US500 3d RV / **≠ N138** GER/UK / **≠ IDX_SHORT** same-direction TSMOM / **≠ N87** US30 gap-fade.  
 **Signal:** M5 day-close ratio **US30cash / US500cash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** the industrial-vs-broad basis mean-reverts when the Dow is rich or cheap versus the S&P. Flat inside the US cash session so neither overnight swap is the alpha.
