@@ -1,16 +1,30 @@
 # PREREG_FTMO_N112 — GAS_EQUITY_MACRO (US500cash; session-flat; Lane-B from S2)
 
-**Status:** **OPEN** — frozen for U2 cost-gate + formal trial (Lane-B from S2 Lane-A survivor cycle_2240).  
+**Status:** **STOP FAIL_T** — U2 tip `d1dd863` / results tip `954680a` on `claude/uitvoerder2-r` (TRIAL **460→461**).  
 **Auteur:** Strateeg (Grok) Lane-B on `claude/trusting-faraday-34tsmg`.  
-**Bron Lane-A:** Strateeg-2 (`grok/strateeg-2`) @ **`35e38ac`** — `results/strateeg2_prescreen/cycle_2240/VOORSTEL_S2_GAS_EQUITY_MACRO.md`.  
+**Bron Lane-A:** Strateeg-2 (`grok/strateeg-2`) @ **`35e38ac`** — cycle_2240.  
 **Instrument (primary):** `US500cash` (SPY proxy). **Geen** gas/NATGAS CFD trade leg (signal-only).  
-**NEW_FAMILY:** `GAS_EQUITY_MACRO` — UNG (US natural-gas ETF) z-stress → US500 session-flat.  
-**Config freeze:** **z40 / thr1.5 / stress_buy** — Lane-A hold=5d non-overlap **mapped** to **session-flat** (D-100). **Geen retune.**  
-**Hold:** **session-flat** 15:30→21:00 CET (D-100 — US500 overnight swap long 1,36 / short 0,81 bp/nacht; 5-night drag dominates RT).  
-**TRIAL_COUNT book:** **460** (deze PREREG telt nog niet).  
-**Reserve 2025+:** **onaangeroerd.**
+**NEW_FAMILY:** `GAS_EQUITY_MACRO` — **DEAD** (no UNG→US500 / gas-equity / gas-CFD clones; no retune).  
+**Hold:** session-flat 15:30→21:00 CET (was freeze).  
+**TRIAL_COUNT book:** **461** after this trial.  
+**Reserve 2025+:** **onaangeroerd.**  
+**Dead += N112.** No gas equity UNG→US500 / gas CFD clones.
 
-Pointer: `results/lane_b/GAS_EQUITY_MACRO_SOURCE.md` → S2 artefacts @ `35e38ac` (geen CSV-rewrite).
+Pointer: `results/lane_b/GAS_EQUITY_MACRO_SOURCE.md` → S2 @ `35e38ac`. Board: U2 `results/R2/n112_gas_equity_macro/n112_gate_board.json`.
+
+---
+
+## U2 result (authoritative)
+
+| Post | Waarde |
+|------|--------|
+| Verdict | **FAIL_T** (cost+stress **PASS**) |
+| Train 2021–23 | N=**188**, mean bruto **+7,83** ≥2,34/3,51; t/NW **1,07/1,04** <2 |
+| Test 2024 | N=**71**, bruto **−4,34** |
+| Trial | **460→461**; counts_as_trial=true |
+| Retune | **verboden** (geen thr-grid, geen gas CFD twin, geen overnight rewrite) |
+
+Live PREREG-pointer **cleared**.
 
 ---
 
@@ -94,9 +108,9 @@ Lane-A proxy span **~2007–2024 (~17,6y)** op UNG/SPY ≥5j ✔. Reden **(b)**:
 
 ## 6. Bestanden / catalogus-ID
 
-- **PREREG:** `PREREG_FTMO_N112_GAS_EQUITY_MACRO.md` (**N112** — **OPEN**)
+- **PREREG:** `PREREG_FTMO_N112_GAS_EQUITY_MACRO.md` (**N112** — **STOP FAIL_T**)
 - **Source pointer:** `results/lane_b/GAS_EQUITY_MACRO_SOURCE.md`
 - **Lane-A:** `git show 35e38ac:results/strateeg2_prescreen/cycle_2240/…`
 - **Catalogus-ID:** **N112** / NEW_FAMILY **GAS_EQUITY_MACRO**
 - **Branch:** `claude/trusting-faraday-34tsmg`
-- **TRIAL_COUNT (book):** **460**
+- **TRIAL_COUNT (book):** **461**

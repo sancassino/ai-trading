@@ -1,16 +1,30 @@
 # PREREG_FTMO_N113 — SILVER_GOLD_RATIO (US500cash; session-flat; Lane-B from S2)
 
-**Status:** **OPEN** — frozen for U2 cost-gate + formal trial (Lane-B from S2 Lane-A survivor cycle_2240).  
+**Status:** **STOP FAIL_COST_GATE** — U2 tip `954680a` on `claude/uitvoerder2-r` (2026-10-02).  
 **Auteur:** Strateeg (Grok) Lane-B on `claude/trusting-faraday-34tsmg`.  
-**Bron Lane-A:** Strateeg-2 (`grok/strateeg-2`) @ **`35e38ac`** — `results/strateeg2_prescreen/cycle_2240/VOORSTEL_S2_SILVER_GOLD_RATIO.md`.  
-**Instrument (primary):** `US500cash` (SPY proxy). **Geen** silver/XAG CFD trade leg (signal-only metals ratio).  
-**NEW_FAMILY:** `SILVER_GOLD_RATIO` — SLV/GLD (silver vs gold ETF ratio) extreme fade → US500 session-flat.  
-**Config freeze:** **z40 / thr1.0 / fade_extreme** — Lane-A hold=5d non-overlap **mapped** to **session-flat** (D-100). **Geen retune.**  
-**Hold:** **session-flat** 15:30→21:00 CET (D-100 — US500 overnight swap long 1,36 / short 0,81 bp/nacht; 5-night worse-side drag dominates RT).  
-**TRIAL_COUNT book:** **460** (deze PREREG telt nog niet).  
-**Reserve 2025+:** **onaangeroerd.**
+**Bron Lane-A:** Strateeg-2 (`grok/strateeg-2`) @ **`35e38ac`** — cycle_2240.  
+**Instrument (primary):** `US500cash` (SPY proxy). **Geen** silver/XAG CFD trade leg.  
+**NEW_FAMILY:** `SILVER_GOLD_RATIO` — **DEAD** (no SLV/GLD→US500 / silver-gold ratio / silver CFD clones; no retune).  
+**Hold:** session-flat 15:30→21:00 CET (was freeze).  
+**TRIAL_COUNT book:** **461** (geen trial — cost-gate FAIL; geen TRIALS-append).  
+**Reserve 2025+:** **onaangeroerd.**  
+**Dead += N113.** No silver/gold ratio → US500 / silver CFD clones.
 
-Pointer: `results/lane_b/SILVER_GOLD_RATIO_SOURCE.md` → S2 artefacts @ `35e38ac` (geen CSV-rewrite).
+Pointer: `results/lane_b/SILVER_GOLD_RATIO_SOURCE.md` → S2 @ `35e38ac`. Board: U2 `results/R2/n113_silver_gold_ratio/n113_gate_board.json`.
+
+---
+
+## U2 result (authoritative)
+
+| Post | Waarde |
+|------|--------|
+| Verdict | **FAIL_COST_GATE** STOP |
+| Train 2021–23 | N=**305**, mean bruto **+1,60 bp < gate 2,34** |
+| Trial id | **geen** — TRIAL_COUNT blijft **461**; geen TRIALS-append |
+| Dead label | `N113_SILVER_GOLD_RATIO` |
+| Retune | **verboden** (geen thr-grid, geen silver CFD twin, geen overnight rewrite) |
+
+Live PREREG-pointer **cleared**. Parent: **geen** U2 wake for N113 (FAIL_COST_GATE ≠ PASS→PREREG). Quiet.
 
 ---
 
@@ -95,9 +109,9 @@ Lane-A proxy span **~2006–2024 (~18,6y)** op SLV/GLD/SPY ≥5j ✔. Reden **(b
 
 ## 6. Bestanden / catalogus-ID
 
-- **PREREG:** `PREREG_FTMO_N113_SILVER_GOLD_RATIO.md` (**N113** — **OPEN**)
+- **PREREG:** `PREREG_FTMO_N113_SILVER_GOLD_RATIO.md` (**N113** — **STOP FAIL_COST_GATE**)
 - **Source pointer:** `results/lane_b/SILVER_GOLD_RATIO_SOURCE.md`
 - **Lane-A:** `git show 35e38ac:results/strateeg2_prescreen/cycle_2240/…`
 - **Catalogus-ID:** **N113** / NEW_FAMILY **SILVER_GOLD_RATIO**
 - **Branch:** `claude/trusting-faraday-34tsmg`
-- **TRIAL_COUNT (book):** **460**
+- **TRIAL_COUNT (book):** **461**

@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N115 — EURUSD Lon-AM → US500 NY macro-beta session-flat (NEW_FAMILY AJ)
 
-**Status:** **OPEN** — pipeline refill after C-036 closed N104–N111 (filed 2026-10-02 ~22:57 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** `n114_n115` (N=126, mean **−3,43 < 2,34**; years −31,88/+2,78/−10,50); screened 2026-10-02 ~23:05 CEST. Dead += N115. No thr-grid / no DXY substitute → N110 clone / no N83 opposite rewrite / no overnight / no soft gate.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AJ** (EURUSD Lon-AM impulse → same-dir US500 NY cash-session continuation — FX macro-beta → equity, EOD flat).  
 **Signal:** `EURUSD` (Lon-AM impulse). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 2 + D-100:** EUR strength (USD weakness) in Lon morning as risk-on / global-growth proxy → US equity afternoon same-dir; intradag-vlak.
