@@ -148,3 +148,4 @@
 09:57 UTC — geen nieuws; wacht op Sandro.
 10:12 UTC — geen nieuws; snapshot.
 10:26 UTC — geen nieuws; wacht op Sandro.
+10:41 UTC — geen nieuws; snapshot.
