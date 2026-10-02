@@ -112,3 +112,4 @@
 01:26 UTC — geen nieuws; calendar-snapshot.
 01:42 UTC — geen nieuws; snapshot. Wacht op forward-paper ORB + Grok-herstart 4 okt; Sandro: FTMO-voorwaarden verifiëren.
 01:56 UTC — geen nieuws.
+02:11 UTC — geen nieuws; snapshot.
