@@ -104,3 +104,4 @@
 23:26 UTC — AUDIT_5 binnen: code-structuur PASS, numeriek geblokkeerd (data op main gewezen); thr-fix vooraf vast. Wacht op her-run.
 23:42 UTC — ORB-meta drempel bevroren (thr=0.690 bp, mediaan OOS 2022-24) + eindmodel 5 seeds t/m 2024 (orb_meta_final.py). Reserve nog dicht; wacht op AUDIT_5 numeriek.
 23:57 UTC — D-104: ORB-meta reserve FAIL (filter averechts, EV≈0). Gesloten.
+00:12 UTC — geen nieuw bij andere agents. Volgende: PREREG surprise/consensus-nieuwsdata (databron zoeken); ML op prijsfeatures gesloten (D-104).
