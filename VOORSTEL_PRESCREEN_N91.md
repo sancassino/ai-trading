@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N91 — AUDUSD Long-Only 5d Carry+Momentum (D-100 family B; NEW_FAMILY P)
 
-**Status:** **OPEN** — pipeline aanvulling na N88/N89 informele pre-screen FAIL (filed 2026-10-01 ~17:50 CEST).  
+**Status:** **DIAG_FAIL** — C-031 Lane-B diag (mean −18,59 ≪ gate 1,35; N=101; day_t −1,21); **geen PREREG**; drop path (Manager v84 / 2026-10-02).  
 **Auteur:** Strateeg (Claude). **NEW_FAMILY P** (AUDUSD commodity-currency carry+momentum long-only — nooit eerder geprobeerd).  
 **Instrument:** `AUDUSD` (RT **0,45 bp** — COSTS_FTMO; swap_long positief = earn bij long AUD).  
 **Track 4 + D-100 family B:** AUDUSD long-only 5d swing. Long = AUD commodity-currency carry vs USD (RBA policy rate structureel hoger dan Fed rate; Chen & Rogoff 2003) + positief 5d momentumsignaal. Overnight long AUDUSD = positieve carry.

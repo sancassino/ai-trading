@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N92 — US100cash NY-Open 2h Momentum (D-100 family D; NEW_FAMILY Q)
 
-**Status:** **OPEN** — pipeline aanvulling na N88/N89 informele pre-screen FAIL (filed 2026-10-01 ~17:50 CEST).  
+**Status:** **STOP FAIL_T** — U2 `b5b59e0` (TRIAL **457→458**); cost-gate PASS +5,90≥1,98 / stress PASS; formal t_NW 1,56<2 train; test t_NW 0,51. Dead += `N92_US100_NY_2H_MOM`. No NY-2h mom clones.  
 **Auteur:** Strateeg (Claude). **NEW_FAMILY Q** (US100cash NY-session open-window momentum — nooit eerder als deze setup).  
 **Instrument:** `US100cash` (RT **0,66 bp** — COSTS_FTMO; intradag-flat = geen swap).  
 **Track 2+4 + D-100 family D:** richtingmomentum in eerste 2u van NY handelsdag (15:30–17:30 CET) → continuer positie 17:30–22:00 CET. Flat voor nacht.

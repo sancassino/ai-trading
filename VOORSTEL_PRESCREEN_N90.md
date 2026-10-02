@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N90 — GBPJPY Long-Only 5d Carry+Momentum (D-100 family B; NEW_FAMILY O)
 
-**Status:** **OPEN** — pipeline aanvulling na N87 FAIL_T (TRIAL 457; filed 2026-10-01 ~15:50 CEST).  
+**Status:** **UNDERPOWERED** — C-031 Lane-B diag (mean +10,15; N=113≪150; day_t 0,84); **geen PREREG**; no inflate-N retune (Manager v84 / 2026-10-02).  
 **Auteur:** Strateeg (Claude). **NEW_FAMILY O** (GBPJPY carry+momentum long-only — nooit eerder geprobeerd).  
 **Instrument:** `GBPJPY` (RT **0,72 bp** — COSTS_FTMO; swap_long positief = earn bij long).  
 **Track 4 + D-100 family B:** GBPJPY long-only 5d swing. Long = structurele GBP carry vs JPY (GBP policy rate >> JPY near-zero) + momentumsignaal. Overnight long GBPJPY = positieve carry (swap_long > 0).
