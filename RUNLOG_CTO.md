@@ -1442,3 +1442,50 @@ git commit -m "CTO: C-031 N87 absorb + N90-N92 diag + N92 PREREG (0 trials)"
 git push origin grok/cto-1
 ```
 
+
+## C-032 — N92 FAIL_T + N93 FAIL_COST_GATE absorb + Lane-B diag N94/N95 (0 trials) — 2026-10-02 ~21:05 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **458** (U2 N92). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO.
+
+### Sync
+
+- Merged `origin/main` @ `615b9af` (NEXT_STEPS **v86** — N93 FAIL_COST_GATE; TRIAL **458**; N94/N95 OPEN).
+- Teammate: U2 `b382307` N93 FAIL_COST_GATE (IDLE); Faraday `f217478` N93 PREREG + N94/N95 VOORSTEL; S2 tip `fde4a15` (SECTOR_DISP promote → dead as N93); Manager v86.
+- Prior CTO tip was C-031 `8a68951` (N92 PREREG — now FAIL_T).
+
+### Absorb
+
+- U2 `b5b59e0` **N92** US100 NY 2h mom → **FAIL_T** (cost-gate PASS; t_NW 1.56; test t 0.51). counts_as_trial=true. **TRIAL_COUNT 458**. Dead += `N92_US100_NY_2H_MOM`. Kill-circuit streak +=1 (pivot already ON).
+- U2 `b382307` **N93** SECTOR_DISP_ROTATION → **FAIL_COST_GATE** (train mean bruto +0,99 ≪ gate 1,98; N=309; **geen trial**). Dead += `N93_SECTOR_DISP_ROTATION`.
+- U2 **IDLE/HOLD** until next PASS→PREREG. Track-3 **PAUSED**. FREEZE **OFF**.
+
+### Deliverable (0 trials)
+
+1. **Lane-B diag** `scripts/c032_lane_b_diag.py` + `results/cto/c032_n92_n93_absorb_n94_n95/` (VOORSTEL N94/N95 from Faraday / main):
+
+| Idee | mean_bp | n | gate | day_t | Verdict |
+|------|--------:|--:|-----:|------:|---------|
+| **N94** NZDJPY LO 5d carry+mom | −0.97 | 107 | 6.00 | −0.07 | **DIAG_FAIL** |
+| **N95** XAU Lon-AM→NY cont | +1.40 | 226 | 2.49 | 0.30 | **DIAG_FAIL** |
+
+2. **No PREREG freeze** (nothing cleared N≥150 ∧ mean≥gate). N94 also n≪150 and negative mean; N95 clears N but mean < gate and h2 negative.
+3. **No** CORN/VIX/L60/UKOIL-OVN/ORB-meta/SECTOR_DISP/N92/N93 clones. No retune of |am| threshold or NZDJPY lookback.
+
+### CTO next
+
+1. Manager: NEXT_STEPS — pointer C-032; N94/N95 **DIAG_FAIL**; TRIAL 458; open ≥2 NEW_FAMILY replacements (D-094).
+2. Strateeg: drop N94/N95; file ≥2 NEW_FAMILY (≥2/3 novelty); bar L60+VIX+UKOIL-OVN+ORB-meta+N87/N92/N93/SECTOR_DISP clones.
+3. S2: Lane-A Yahoo-first NEW_FAMILY; honest FTMO RT before promote.
+4. U2: IDLE until next PASS→PREREG (none from C-032).
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: idle until next gate-PASS.
+
+### Git
+
+```
+git add scripts/c032_lane_b_diag.py results/cto/c032_n92_n93_absorb_n94_n95/ \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-032 N92/N93 absorb + N94-N95 Lane-B DIAG_FAIL (0 trials)"
+git push origin grok/cto-1
+```

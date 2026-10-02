@@ -1,0 +1,39 @@
+{
+  "c": "C-032",
+  "when": "2026-10-02 ~21:05 Europe/Amsterdam",
+  "absorb": {
+    "main": "615b9af NEXT_STEPS v86 \u2014 N93 FAIL_COST_GATE; TRIAL 458; N94/N95 OPEN",
+    "N92": "FAIL_T U2 b5b59e0; counts_as_trial=true; TRIAL_COUNT 458; dead+=N92_US100_NY_2H_MOM",
+    "N93": "FAIL_COST_GATE U2 b382307; geen trial; TRIAL blijft 458; dead+=N93_SECTOR_DISP_ROTATION"
+  },
+  "freeze": "OFF",
+  "trial_count": 458,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "results": [
+    {
+      "label": "N94_NZDJPY_LO_CARRY_MOM_5D",
+      "n": 107,
+      "mean_bp": -0.968,
+      "day_t": -0.067,
+      "h1_mean_bp": 18.071,
+      "h2_mean_bp": -19.654,
+      "gate_bp": 6.0,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY S; long-only; gate=3\u00d7RT 2.00; swap earn\u21920 in gate (D-100)"
+    },
+    {
+      "label": "N95_XAU_LON_AM_NY_CONT",
+      "n": 226,
+      "mean_bp": 1.398,
+      "day_t": 0.304,
+      "h1_mean_bp": 4.695,
+      "h2_mean_bp": -1.898,
+      "gate_bp": 2.49,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY T; session-flat 21:00; |am|\u226525; \u2260 S2-XAU_AM_FADE / N36"
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "N92 cost-PASS\u2192FAIL_T increments streak; N93 cost-gate STOP (no streak++); pivot ON"
+}

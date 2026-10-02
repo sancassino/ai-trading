@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N95 — XAUUSD London-AM → NY cash continuation, session-flat (NEW_FAMILY T)
 
-**Status:** **OPEN** — pipeline fill after N92 FAIL_T (TRIAL **458**; filed 2026-10-02 ~20:56 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-032 Lane-B diag 2026-10-02 ~21:05 CEST (0 trials; no PREREG).  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY T** (gold London-AM directional impulse → NY cash-session continuation — nooit als deze setup).  
 **Instrument:** `XAUUSD` (RT **0,83 bp** — `COSTS_FTMO.csv`; intradag-flat = geen swap).  
 **Track 2+4 + D-100:** richtingmomentum in London AM (08:00–11:00 CET) → continuer positie in NY cash window; **flat vóór nacht**.

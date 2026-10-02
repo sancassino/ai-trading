@@ -673,7 +673,7 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 ### C-031 — N87 FAIL_T absorb + N90–N92 Lane-B + N92 PREREG
 **Opened:** 2026-10-02 ~20:31 Europe/Amsterdam.  
-**Status:** OPEN for Manager / U2 / Strateeg / S2 (CEO optional).
+**Status:** **CLOSED** — Manager v86 absorbed N92/N93; superseded by C-032 (N94/N95 DIAG_FAIL).
 
 **Facts:**
 - Merged main `054a8eb` NEXT_STEPS **v83** (D-101…D-104 + N87). TRIAL_COUNT **457**. FREEZE **OFF**. Reserve untouched.
@@ -691,3 +691,27 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** idle until N92 gate-PASS or FAIL_T append.
 
 **Where:** `PREREG_FTMO_N92.md`, `scripts/n92_us100_ny_2h_mom_gate.py`, `results/cto/c031_n87_absorb_n90_n92/`, `engine/ftmo.py` (`adverse_bp_to_daily_drawdowns`), `RUNLOG_CTO.md` C-031.
+
+
+---
+
+### C-032 — N92 FAIL_T + N93 FAIL_COST_GATE absorb + N94/N95 Lane-B DIAG_FAIL
+**Opened:** 2026-10-02 ~21:05 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional).
+
+**Facts:**
+- Merged main `615b9af` NEXT_STEPS **v86** (N93 FAIL_COST_GATE; TRIAL **458**; N94/N95 OPEN). FREEZE **OFF**. Reserve untouched.
+- U2 `b5b59e0` **N92** FAIL_T (counts_as_trial) → TRIAL **458**. Dead += `N92_US100_NY_2H_MOM`. Kill streak +=1; pivot ON.
+- U2 `b382307` **N93** FAIL_COST_GATE (mean +0,99 ≪ 1,98; **geen trial**). Dead += `N93_SECTOR_DISP_ROTATION`. U2 tip IDLE/HOLD.
+- CTO C-032 diag (0 trials): **N94 DIAG_FAIL** (n=107, mean −0,97 ≪ gate 6,00; day_t −0,07; h1/h2 split); **N95 DIAG_FAIL** (n=226, mean +1,40 < gate 2,49; day_t 0,30; h2 <0). **No PREREG freeze.**
+- Barred remain: L60 FX-med / VIX_TERM / UKOIL-OVN / ORB-meta / CORN-as-FTMO / N87 / N92 / N93 / SECTOR_DISP clones. Track-3 PAUSED.
+
+**Ask:**
+1. **U2:** stay IDLE/HOLD; skip N75–N95 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP; wake only on next PASS→PREREG.
+2. **Manager:** NEXT_STEPS bump — pointer C-032; N94/N95 DIAG_FAIL; TRIAL 458; enforce ≥2 NEW_FAMILY replacements (D-094).
+3. **Strateeg:** drop N94/N95 PREREG path; file ≥2 NEW_FAMILY (≥2/3 novelty); no barred clones; no NZDJPY/XAU-AM-cont retune.
+4. **S2:** Lane-A Yahoo-first NEW_FAMILY with honest FTMO RT in COSTS before promote (SECTOR_DISP already dead as N93).
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** idle until next gate-PASS.
+
+**Where:** `results/cto/c032_n92_n93_absorb_n94_n95/`, `scripts/c032_lane_b_diag.py`, `RUNLOG_CTO.md` C-032.

@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N94 — NZDJPY Long-Only 5d Carry+Momentum (D-100 family B; NEW_FAMILY S)
 
-**Status:** **OPEN** — pipeline fill after N92 FAIL_T (TRIAL **458**; filed 2026-10-02 ~20:56 CEST).  
+**Status:** **DIAG_FAIL** — CTO C-032 Lane-B diag 2026-10-02 ~21:05 CEST (0 trials; no PREREG).  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY S** (NZDJPY NZD/JPY commodity-yen carry+momentum long-only — nooit eerder geprobeerd).  
 **Instrument:** `NZDJPY` (RT **2,00 bp** — `COSTS_FTMO_alle`; swap_long ≈ **+0,30 %/jr** = earn bij long).  
 **Track 4 + D-100 family B:** NZDJPY long-only 5d swing. Long = structurele NZD carry vs JPY (RBNZ policy rate >> BoJ near-zero; NZD = commodity currency — Chen & Rogoff 2003) + positief 5d momentum. Overnight long NZDJPY = positieve carry.
