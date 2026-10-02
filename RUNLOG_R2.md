@@ -2099,3 +2099,23 @@ Long/short train 195/241. Signal-days train nonzero 547.
 **TRIAL_COUNT blijft 460**. Geen TRIALS-append. Dead += N102 (DIAG) + N103 (FAIL_STRESS) already on tip; Faraday also closed N104–N109 (pre-screen only, geen U2 trial).
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG (**N110/N111** or later). Cadans :15/:45.
+
+## Cyclus 22:45–22:50 CEST (2026-10-02) — D-090 FASE 3 IDLE absorb NEXT_STEPS v91 (TRIAL 460)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` (`88ad118` NEXT_STEPS **v91**). Tip was `a70dc8b` (IDLE absorb v90); merge `cea4b48` then this idle note.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v91** (Manager `88ad118` ~22:40 CEST): **C-036**; N104 UNDERPOWERED / N105–N108 FAIL / N109 UNDERPOWERED / N110–N111 DIAG_FAIL; formal OPEN **empty**; TRIAL **460**; U2 **IDLE/HOLD** (U2 pas na PREREG); Strateeg/S2 must file ≥2 NEW_FAMILY (D-094).
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz`. C-028…**C-036** actief (`f3cf632`). CEO tip `7cb6731` (geen nieuw D-* na D-104).
+- Faraday tip `107e502`: N104–N109 closed pre-screen; OPEN N110/N111 → both DIAG_FAIL (C-036). **Geen** PASS→PREREG / geen `PREREG_FTMO_N110/N111`.
+- CTO C-036 DELIVERED (0 trials). Track-3 **PAUSED**.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Geen trial. Skip dead/barred: N75–N111 / CORN / VIX_TERM / L60 FX-med / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD / USDCHF-LO / GER40→US30 / EMB / CRACK / EURNZD-LO / UK→FRA40 / AUS Asia→Lon / GBPCHF-LO / JP225 Tokyo→Lon / CHFJPY-LO / DXY Lon→EU-PM / GBPAUD-LO clones. Formal OPEN empty — wait Strateeg ≥2 NEW_FAMILY → D-092.1 → PASS→PREREG.
+
+**TRIAL_COUNT blijft 460**. Geen TRIALS-append. Dead += N104–N111 already closed (pre-screen/DIAG; geen U2 trial).
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG. Cadans :15/:45.
