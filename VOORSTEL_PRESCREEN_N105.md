@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N105 — JP225 Tokyo-AM → Lon continuation session-flat (NEW_FAMILY AB)
 
-**Status:** **OPEN** — pipeline replace after U2 N100/N101 FAIL_T (filed 2026-10-02 ~22:05 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** `n104_n105` (N=392, mean **−2,77 < 4,53**); Asia-open fallback [00:00,01:15] CET (filed 2026-10-02 ~22:15 CEST).  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AB** (Nikkei Tokyo-AM impulse → London-hours same-dir continuation, EOD flat — nooit deze setup).  
 **Instrument:** `JP225cash` (RT **est. 1,51** bp — M5 spread_med≈1,51 bp 2024–26; indices commissie 0; **not in** `COSTS_FTMO.csv` — U2 remeasure before any PREREG; swap 0 — **EOD flat**).  
 **Track 2 + D-100:** Asia equity open risk impulse → Europe-hours continuation on same index; intradag-vlak (geen swap).
@@ -17,7 +17,7 @@
 - ≠ **N98** USOIL→US100 / EMB / CRACK / SECTOR_DISP / VIX / ORB / L60 / UKOIL-OVN / CORN / NY-2h / N75–N103 restarts
 
 ## Regel
-1. Tokyo-AM JP impulse: `jp_am_bp = 1e4 × (JP225cash_close@06:00 / JP225cash_close@00:00 − 1)` (first M5 in ±15 min windows; CET).
+1. Tokyo-AM JP impulse: `jp_am_bp = 1e4 × (JP225cash_close@06:00 / JP225cash_close@AsiaOpen − 1)` — AsiaOpen = first M5 in [00:00, 00:15] CET, else first in [00:00, 01:15] (FTMO JP225 often starts ~01:00).
 2. Trade only if `|jp_am_bp| ≥ 40`.
 3. Same-direction: jp_am ≥ +40 → **LONG** JP225; jp_am ≤ −40 → **SHORT** JP225.
 4. Entry: JP225 close of first M5 in **[08:00, 08:15] CET**. If missing, skip day.

@@ -1,6 +1,6 @@
 # PREREG_FTMO_N103 — GER40 Lon-AM → US30 NY industrial lead-lag (NEW_FAMILY Z)
 
-**Status:** **OPEN** — frozen for U2 cost-gate + formal trial (Lane-B D-092.1 PASS).  
+**Status:** **STOP FAIL_STRESS** — U2 `b9af560` (Faraday tip `7059c63`). Cost PASS (train N=286 mean +1,75 ≥ 1,35); stress FAIL vs 2,025; years 2021 +2,29 / 2022 +10,53 / 2023 −14,08; Test 2024 N=74 +1,32 (info). **geen trial**; TRIAL_COUNT **460**. Dead += N103. No retune / no US100 / no GER→US-open clones.  
 **Auteur:** Strateeg (Grok) Lane-B on `claude/trusting-faraday-34tsmg`.  
 **VOORSTEL:** `VOORSTEL_PRESCREEN_N103.md`.  
 **Signal:** `GER40cash` (Lon-AM impulse). **Trade:** `US30cash`.  

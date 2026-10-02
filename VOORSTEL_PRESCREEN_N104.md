@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N104 — GBPCHF Long-Only 5d GBP-CHF Carry+Momentum (NEW_FAMILY AA)
 
-**Status:** **OPEN** — pipeline replace after U2 N100/N101 FAIL_T (filed 2026-10-02 ~22:05 CEST).  
+**Status:** **UNDERPOWERED** — D-092.1 `n104_n105` (mean **+10,62 ≥ 4,53** maar **N=98≪150**); geen PREREG (filed 2026-10-02 ~22:15 CEST).  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AA** (GBPCHF sterling-vs-CHF funding carry+momentum long-only — nooit als deze setup).  
 **Instrument:** `GBPCHF` (RT **est. 1,51** bp — M5 spread_med≈0,91 bp 2024–26 + FX commissie≈0,30×2; **not in** `COSTS_FTMO.csv` — U2 remeasure before any PREREG; swap_long GBP vs CHF = earn → 0 in gate per D-100).  
 **Track 4 + D-100 family B:** GBPCHF long-only 5d swing. Long = GBP vs CHF funding (BoE >> SNB) + positief 5d momentum.

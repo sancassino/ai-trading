@@ -1,0 +1,32 @@
+{
+  "N104": {
+    "id": "N104",
+    "instrument": "GBPCHF",
+    "n": 98,
+    "mean_bruto_bp": 10.6187,
+    "median_bruto_bp": 12.9647,
+    "gate_bp": 4.53,
+    "verdict": "UNDERPOWERED",
+    "hit_rate": 0.5612,
+    "years": {
+      "2021": 16.4855,
+      "2022": 11.2117,
+      "2023": 3.6974
+    }
+  },
+  "N105": {
+    "id": "N105",
+    "instrument": "JP225cash",
+    "n": 392,
+    "mean_bruto_bp": -2.7661,
+    "median_bruto_bp": -4.2412,
+    "gate_bp": 4.53,
+    "verdict": "FAIL",
+    "hit_rate": 0.4464,
+    "years": {
+      "2021": -2.3937,
+      "2022": -14.5887,
+      "2023": 9.3277
+    }
+  }
+}
