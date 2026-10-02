@@ -1,6 +1,32 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
 
+## 2026-10-03 00:38 Europe/Amsterdam — N136/N137 D-092.1 FAIL; OPEN N138/N139
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `d2e8728`).  
+**Trigger:** Formal OPEN N136 BRENT_WTI_XS / N137 USDMXN_EM_CARRY_FADE. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### D-092.1 `n136_n137` (train 2021–2023; own gates, not 2,34; session-flat; swap 0)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N136 | BRENT_WTI_XS BE | UKOIL/USOIL z40/±1,5 both legs 15:30→21:00 | **200** | **−0,51** | +0,19 | −8,38 / +1,26 / −0,03 | **FAIL** vs gate **18,15** (L/S 98/102) |
+| N137 | USDMXN_EM_CARRY_FADE BF | ret5≥150 bp SHORT only 15:30→21:00 | **105** | **+7,34** | +5,39 | +5,36 / +7,79 / +9,49 | **FAIL** vs gate **8,88** and N≪150 (all short) |
+
+Clone bar (precommitted): |z| ≥ 0,90, or (sign agree ≥ 0,85 AND cover ≥ 0,70).  
+N136 vs CRACK (HO/BRENT z60): z-corr **−0,11**, agree **0,39**, cover **0,74**, level corr **0,41** — not a clone. vs UKOIL-OVN: agree **0,50**, cover **0,47** — not a clone. N98 is a different trade leg (diag only).  
+N137 vs USDJPY/EURJPY/CADCHF/CADJPY/AUDCAD/AUDNZD/DXY ret5: max |corr| **0,46** (DXY); sign-agree **0** — not a clone.
+
+No soft-pass. No PREREG. TRIAL stays **470**.
+
+### Geleverd
+- N136 + N137 → **STOP FAIL** (D-092.1)
+- OPEN **N138 GER40_UK100_XS** (BG, gate 6,42) + **N139 JP225_HK50_ASIA_XS** (BH, gate 12,42 est., 03:00–08:00 CET) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
 ## 2026-10-03 00:29 Europe/Amsterdam — N134/N135 D-092.1 FAIL; OPEN N136/N137
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `c19fd24`).  

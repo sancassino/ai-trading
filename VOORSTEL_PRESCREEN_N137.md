@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N137 — USDMXN_EM_CARRY_FADE session-flat (NEW_FAMILY BF)
 
-**Status:** **OPEN** — D-094 refill after N134/N135 D-092.1 FAIL (filed 2026-10-03 ~00:29 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n136_n137` (N=**105≪150**, mean **+7,34 < 8,88**; med +5,39; years +5,36/+7,79/+9,49; all short). Not a G10/DXY clone (DXY ret5 corr 0,46; sign-agree 0). No soft-pass on the positive years. Screened 2026-10-03 ~00:38 CEST. NEW_FAMILY BF dead screen.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BF** (MXN **high-carry EM** stress fade, NY session-flat — peso-crash rebound; **≠ G10 5d LO carry** N90–N111 / **≠ N84** AUDNZD rate-diff / **≠ N77** FX6 XS / **≠ N110** DXY).  
 **Signal + trade:** `USDMXN` (M5 from 2021-01-04). **Not in `COSTS_FTMO.csv`** — RT is an estimate; U2 remeasure before any PREREG. Binding RT = max(est, U2).  
 **Track 4 + D-100 + D-097 carry:** A multi-day USD/MXN jump is a carry unwind; the next NY cash session fades it. Intradag-vlak (no overnight MXN swap).

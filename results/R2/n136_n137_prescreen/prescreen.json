@@ -1,0 +1,152 @@
+{
+  "N136": {
+    "id": "N136",
+    "instrument": "UKOILcash+USOILcash",
+    "n": 200,
+    "mean_bruto_bp": -0.5084,
+    "gate_bp": 18.15,
+    "verdict": "FAIL",
+    "notes": "BRENT_WTI_XS z40/\u00b11.5 both legs session-flat; gate 18.15 = 3*(2.71+3.34); swap 0; NEW_FAMILY BE",
+    "median_bruto_bp": 0.1886,
+    "stress_gate_bp": 27.225,
+    "stress_note": "BELOW_stress_1.5x (info only; catalog states no separate stress gate)",
+    "hit_rate": 0.5,
+    "n_long_basket": 98,
+    "n_short_basket": 102,
+    "years": {
+      "2021": -8.382,
+      "2022": 1.2615,
+      "2023": -0.0283
+    },
+    "clone": {
+      "CRACK": {
+        "peer": "CRACK_z60",
+        "z_corr_train": -0.1068,
+        "sign_agree_both_active": 0.385,
+        "both_active_over_cand": 0.7391,
+        "n_cand_active": 253,
+        "n_both_active": 187,
+        "clone": false
+      },
+      "UKOIL_OVN": {
+        "peer": "UKOIL_OVN_gap",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.5,
+        "both_active_over_cand": 0.47,
+        "n_cand_active": 200,
+        "n_both_active": 94,
+        "clone": false
+      },
+      "N98_diag": {
+        "peer": "N98_USOIL_AM_diag_not_binding",
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.562,
+        "both_active_over_cand": 0.608,
+        "n_cand_active": 199,
+        "n_both_active": 121,
+        "clone": false,
+        "binding": false,
+        "note": "N136 does not trade US100; diag only"
+      }
+    },
+    "ratio_level_corr_vs_crack": 0.4096
+  },
+  "N137": {
+    "id": "N137",
+    "instrument": "USDMXN",
+    "n": 105,
+    "mean_bruto_bp": 7.3372,
+    "gate_bp": 8.88,
+    "verdict": "FAIL",
+    "notes": "USDMXN ret5\u2265150bp SHORT only session-flat; gate 8.88 est (not in COSTS); swap 0; NEW_FAMILY BF",
+    "median_bruto_bp": 5.3879,
+    "stress_gate_bp": 13.32,
+    "stress_note": "BELOW_stress_1.5x (info only; catalog states no separate stress gate)",
+    "hit_rate": 0.5429,
+    "n_long_basket": 0,
+    "n_short_basket": 105,
+    "years": {
+      "2021": 5.363,
+      "2022": 7.7895,
+      "2023": 9.4903
+    },
+    "clone": {
+      "USDJPY": {
+        "peer": "USDJPY_ret5",
+        "z_corr_train": 0.1261,
+        "sign_agree_both_active": 0.0,
+        "both_active_over_cand": 0.6857,
+        "n_cand_active": 105,
+        "n_both_active": 72,
+        "clone": false
+      },
+      "EURJPY": {
+        "peer": "EURJPY_ret5",
+        "z_corr_train": -0.2649,
+        "sign_agree_both_active": 0.0,
+        "both_active_over_cand": 0.3619,
+        "n_cand_active": 105,
+        "n_both_active": 38,
+        "clone": false
+      },
+      "CADCHF": {
+        "peer": "CADCHF_ret5",
+        "z_corr_train": -0.0486,
+        "sign_agree_both_active": 0.0,
+        "both_active_over_cand": 0.4952,
+        "n_cand_active": 105,
+        "n_both_active": 52,
+        "clone": false
+      },
+      "CADJPY": {
+        "peer": "CADJPY_ret5",
+        "z_corr_train": -0.1957,
+        "sign_agree_both_active": 0.0,
+        "both_active_over_cand": 0.4476,
+        "n_cand_active": 105,
+        "n_both_active": 47,
+        "clone": false
+      },
+      "AUDCAD": {
+        "peer": "AUDCAD_ret5",
+        "z_corr_train": -0.2503,
+        "sign_agree_both_active": 0.0,
+        "both_active_over_cand": 0.3429,
+        "n_cand_active": 105,
+        "n_both_active": 36,
+        "clone": false
+      },
+      "AUDNZD": {
+        "peer": "AUDNZD_ret5",
+        "z_corr_train": -0.1313,
+        "sign_agree_both_active": 0.0,
+        "both_active_over_cand": 0.4095,
+        "n_cand_active": 105,
+        "n_both_active": 43,
+        "clone": false
+      },
+      "DXY": {
+        "peer": "DXY_ret5",
+        "z_corr_train": 0.4591,
+        "sign_agree_both_active": 0.0,
+        "both_active_over_cand": 0.8431,
+        "n_cand_active": 102,
+        "n_both_active": 86,
+        "clone": false
+      }
+    },
+    "rt_in_costs": false,
+    "prereg_blocked_reason": null
+  },
+  "gates": {
+    "N136": 18.15,
+    "N137": 8.88,
+    "not_the_2.34_us500_gate": true
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only"
+}

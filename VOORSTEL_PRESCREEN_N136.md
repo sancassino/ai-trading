@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N136 — BRENT_WTI_XS session-flat (NEW_FAMILY BE)
 
-**Status:** **OPEN** — D-094 refill after N134/N135 D-092.1 FAIL (filed 2026-10-03 ~00:29 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n136_n137` (N=200, mean **−0,51 < 18,15**; med +0,19; years −8,38/+1,26/−0,03; L/S 98/102). Not a CRACK clone (z-corr −0,11; sign-agree 0,39). Not UKOIL-OVN (agree 0,50; cover 0,47). Screened 2026-10-03 ~00:38 CEST. NEW_FAMILY BE dead screen.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BE** (Atlantic **Brent–WTI location/quality spread** → two oil CFDs, session-flat — crude-basis XS; **≠ N101 CRACK** product-crack→equity / **≠ N22** UKOIL London-AM fade / **≠ N80** UKOIL OVN-gap / **≠ ENERGY_TSMOM** / **≠ N98** USOIL→US100).  
 **Signal:** M5 day-close ratio **UKOILcash / USOILcash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100 + D-097 commodities XS:** Brent rich vs WTI mean-reverts when the basis is stretched; intradag-vlak (UKOIL short-swap is toxic — no overnight).
