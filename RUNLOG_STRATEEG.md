@@ -1,5 +1,39 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-03 01:35 Europe/Amsterdam — N152/N153 D-092.1 FAIL; OPEN N154/N155
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `7a654e6`).  
+**Trigger:** Formal OPEN N152 GBPUSD_NZDUSD_CABLE_KIWI_XS / N153 EURUSD_USDCAD_ATLANTIC_XS. Gates are COSTS round-trips. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat 15:30→21:00 is the cheap side, so swap in the gate is **0**. Not a session-median spread.
+
+| Book | legs | RT | gate |
+|------|------|---:|-----:|
+| N152 | GBPUSD 0,70 + NZDUSD 1,85 | 2,55 | **7,65** |
+| N153 | EURUSD 0,63 + USDCAD 0,80 | 1,43 | **4,29** |
+
+### D-092.1 `n152_n153` (train 2021–2023; session-flat 15:30→21:00; swap 0; both legs)
+| ID | Family | N | mean | med | years | Verdict |
+|----|--------|--:|-----:|----:|-------|---------|
+| N152 | GBPUSD_NZDUSD_CABLE_KIWI_XS BU | **247** | **−1,71** | −0,39 | +1,71 / −4,46 / −1,69 | **FAIL** vs gate **7,65** (L/S 94/153; 247 signals, 0 missing bars) |
+| N153 | EURUSD_USDCAD_ATLANTIC_XS BV | **263** | **+0,86** | +1,13 | −2,23 / −1,76 / +4,76 | **FAIL** vs gate **4,29** (L/S 160/103; 263 signals, 0 missing bars) |
+
+Clone bar unchanged (|z|≥0,90 or agree≥0,85 and cover≥0,70).  
+N152 vs **GBPNZD L60**: agree **0,05**, cover 0,54 — not an L60-style FX cross. vs GBPUSD L60 agree 0,29 cover 0,45. vs NZDUSD L60 agree 0,14 cover 0,29. vs GBPAUD z40: z **0,76**, agree 1,00, cover **0,60**. vs EURNZD z40: z **0,77**, cover **0,58**; LO agree 0,16. vs N111 GBP-leg agree 0,14 cover 0,59. vs N84 agree 0,72 cover 0,53. vs N90 agree 0,28 cover 0,55. vs N29 cover **0,15**. vs N38 cover **0,17**. Own GBPNZD z is the same ratio (z 1,00) and is not a second peer. Not a clone. Mean **−1,71 < 7,65**.  
+N153 LONG CAD = short USDCAD (currency, not the USDCAD ticker as a long). vs **N151**: z **0,66**, agree **0,98**, cover **0,44** — not that book. vs AUDCAD z 0,35 cover 0,47; LO agree 0,40. vs CADCHF z −0,03; LO agree 0,36 cover 0,49. vs CADJPY LO agree 0,48 cover 0,50. vs EURGBP z −0,09; N88 agree 0,40. vs USDCAD L60 agree 0,77 cover 0,55. vs EURUSD L60 agree 0,29 cover 0,46. vs EURCAD L60 agree 0,44 cover 0,42. vs EURNZD-LO agree 0,67 cover 0,59. vs N149 cover 0,25. Not a clone. Mean **+0,86 < 4,29**.
+
+No soft-pass. No PREREG. No inline replacement. TRIAL stays **470**. No GBP-only / NZD-only. No EUR-only / CAD-only. G10 FX-cross stretch closed (GBP/NZD, EUR/CAD, EURJPY, and the other G10 crosses).
+
+### Geleverd
+- N152 → **STOP FAIL**; N153 → **STOP FAIL** (D-092.1)
+- OPEN **N154 US100_GER40_TRANSATLANTIC_XS** (BW, gate **4,14** = 3×(0,66+0,72), both in COSTS) + **N155 US30_UKOIL_INDUSTRIAL_CRUDE_XS** (BX, gate **9,48** = 3×(0,45+2,71), both in COSTS) — not FX, not silver/index, not metal–oil, not equity-factor z→US500, not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
 ## 2026-10-03 01:29 Europe/Amsterdam — N150/N151 D-092.1 FAIL; OPEN N152/N153
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `aca4d2f`).  

@@ -1,0 +1,6 @@
+# D-092.1 N152/N153 pre-screen (train 2021–2023)
+
+- **N152 GBPUSD_NZDUSD_CABLE_KIWI_XS**: N=247 mean=-1.7076 med=-0.3874 gate=7.65 → **FAIL** years={'2021': 1.7119, '2022': -4.4627, '2023': -1.6865} L/S=94/153 hits=[] meta={'n_signal_days': 247, 'n_skip_missing_bar': 0, 'n_ratio_days': 778, 'ratio_first': '2021-01-04', 'ratio_last': '2023-12-29', 'b_sign': -1, 'train_days': {'GBPUSD': 778, 'NZDUSD': 778}, 'cad_convention': 'n/a', 'rt_in_costs': True, 'swap_bp': 0, 'session': '15:30-21:00 CET cheapest side (overnight swap excluded)'}
+- **N153 EURUSD_USDCAD_ATLANTIC_XS**: N=263 mean=0.8637 med=1.1294 gate=4.29 → **FAIL** years={'2021': -2.2286, '2022': -1.7642, '2023': 4.7636} L/S=160/103 hits=[] meta={'n_signal_days': 263, 'n_skip_missing_bar': 0, 'n_ratio_days': 778, 'ratio_first': '2021-01-04', 'ratio_last': '2023-12-29', 'b_sign': 1, 'train_days': {'EURUSD': 778, 'USDCAD': 778}, 'cad_convention': 'LONG CAD = short USDCAD (same quote sign as EUR leg)', 'rt_in_costs': True, 'swap_bp': 0, 'session': '15:30-21:00 CET cheapest side (overnight swap excluded)'}
+
+Gates from COSTS_FTMO.csv round-trips. Session-flat so swap=0 is in the gate. N153 LONG CAD is short USDCAD. No thr-grid. No 2024+ selection. No softer session spread. No inline replacement.

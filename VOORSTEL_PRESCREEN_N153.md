@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N153 — EURUSD_USDCAD_ATLANTIC_XS session-flat (NEW_FAMILY BV)
 
-**Status:** **OPEN** — D-092.1 refill after N150 FAIL_CLONE / N151 FAIL (filed 2026-10-03 ~01:29 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n152_n153` (N=263, mean **+0,86 < 4,29**; med +1,13; years −2,23 / −1,76 / +4,76; L/S 160/103; 0 missing bars). LONG CAD = short USDCAD. Not N151 (z **0,66**, agree **0,98**, cover **0,44**), not AUDCAD (z 0,35 cover 0,47; LO agree 0,40), not CADCHF (z −0,03; LO agree 0,36 cover 0,49), not CADJPY LO (agree 0,48 cover 0,50), not EURGBP (z −0,09; N88 agree 0,40 cover 0,44), not USDCAD L60 (agree 0,77 cover 0,55), not EURCAD L60 (agree 0,44 cover 0,42), not EURNZD-LO (agree 0,67 cover 0,59), not N149 (cover 0,25). Screened 2026-10-03 ~01:35 CEST. NEW_FAMILY BV dead; no EUR-only, no CAD-only, no G10-cross rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BV** (euro vs Canadian dollar **Atlantic basis**, two G10 CFDs, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not a silver/index book. Not an EURJPY/CHF book. Not AUDCAD, not CADCHF, not EURGBP, not EURNZD.  
 **Signal:** M5 day-close ratio **EURUSD / USDCAD**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** the euro and the loonie dislocate when European rates have outrun, or lagged, the oil-linked dollar. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha.

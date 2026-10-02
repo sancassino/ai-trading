@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N152 — GBPUSD_NZDUSD_CABLE_KIWI_XS session-flat (NEW_FAMILY BU)
 
-**Status:** **OPEN** — D-092.1 refill after N150 FAIL_CLONE / N151 FAIL (filed 2026-10-03 ~01:29 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n152_n153` (N=247, mean **−1,71 < 7,65**; med −0,39; years +1,71 / −4,46 / −1,69; L/S 94/153; 0 missing bars). Not an L60 FX-cross (GBPNZD L60 agree **0,05**, cover 0,54; GBPUSD L60 agree 0,29 cover 0,45; NZDUSD L60 agree 0,14 cover 0,29). Not GBPAUD (z **0,76**, agree 1,00, cover **0,60**), not EURNZD (z **0,77**, cover **0,58**; LO agree 0,16), not N111 GBP-leg (agree 0,14 cover 0,59), not N84 (agree 0,72 cover 0,53), not N90 (agree 0,28 cover 0,55), not N29 (cover 0,15) / N38 (cover 0,17). Own GBPNZD z is the same ratio (z 1,00) and is not a second peer. Screened 2026-10-03 ~01:35 CEST. NEW_FAMILY BU dead; no GBP-only, no NZD-only, no G10-cross rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BU** (sterling vs kiwi **cable–commodity basis**, two G10 CFDs, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not a silver/index book. Not an EURJPY/CHF book. Not GBPAUD, not AUDNZD, not EURNZD, not GBPJPY.  
 **Signal:** M5 day-close ratio **GBPUSD / NZDUSD**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** cable and the kiwi dislocate when UK rates have outrun, or lagged, the commodity dollar. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha.

@@ -1,0 +1,581 @@
+{
+  "N152": {
+    "id": "N152",
+    "instrument": "GBPUSD+NZDUSD",
+    "n": 247,
+    "mean_bruto_bp": -1.7076,
+    "gate_bp": 7.65,
+    "verdict": "FAIL",
+    "notes": "GBPUSD_NZDUSD_CABLE_KIWI_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(0.7+1.85); swap 0; NEW_FAMILY BU",
+    "median_bruto_bp": -0.3874,
+    "stress_gate_bp": 11.475,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4899,
+    "n_long_basket": 94,
+    "n_short_basket": 153,
+    "years": {
+      "2021": 1.7119,
+      "2022": -4.4627,
+      "2023": -1.6865
+    },
+    "meta": {
+      "n_signal_days": 247,
+      "n_skip_missing_bar": 0,
+      "n_ratio_days": 778,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "b_sign": -1,
+      "train_days": {
+        "GBPUSD": 778,
+        "NZDUSD": 778
+      },
+      "cad_convention": "n/a",
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "GBPUSD": 0.7,
+      "NZDUSD": 1.85
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N153": {
+    "id": "N153",
+    "instrument": "EURUSD+USDCAD",
+    "n": 263,
+    "mean_bruto_bp": 0.8637,
+    "gate_bp": 4.29,
+    "verdict": "FAIL",
+    "notes": "EURUSD_USDCAD_ATLANTIC_XS z40/\u00b11.5 both legs 15:30\u219221:00; LONG CAD = short USDCAD; COSTS gate 3*(0.63+0.8); swap 0; NEW_FAMILY BV",
+    "median_bruto_bp": 1.1294,
+    "stress_gate_bp": 6.435,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.5209,
+    "n_long_basket": 160,
+    "n_short_basket": 103,
+    "years": {
+      "2021": -2.2286,
+      "2022": -1.7642,
+      "2023": 4.7636
+    },
+    "meta": {
+      "n_signal_days": 263,
+      "n_skip_missing_bar": 0,
+      "n_ratio_days": 778,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "b_sign": 1,
+      "train_days": {
+        "EURUSD": 778,
+        "USDCAD": 778
+      },
+      "cad_convention": "LONG CAD = short USDCAD (same quote sign as EUR leg)",
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "EURUSD": 0.63,
+      "USDCAD": 0.8
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N152_clones": {
+    "GBPAUD_z40": {
+      "peer": "GBPAUD_z40",
+      "z_corr_train": 0.7561,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.5968,
+      "n_cand_active": 248,
+      "n_both_active": 148,
+      "clone": false,
+      "binding": true
+    },
+    "AUDNZD_z40": {
+      "peer": "AUDNZD_z40",
+      "z_corr_train": 0.238,
+      "sign_agree_both_active": 0.8596,
+      "both_active_over_cand": 0.2298,
+      "n_cand_active": 248,
+      "n_both_active": 57,
+      "clone": false,
+      "binding": true
+    },
+    "EURNZD_z40": {
+      "peer": "EURNZD_z40",
+      "z_corr_train": 0.7656,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.5847,
+      "n_cand_active": 248,
+      "n_both_active": 145,
+      "clone": false,
+      "binding": true
+    },
+    "XAG_US30_N150": {
+      "peer": "XAG_US30_N150",
+      "z_corr_train": -0.0928,
+      "sign_agree_both_active": 0.3667,
+      "both_active_over_cand": 0.3629,
+      "n_cand_active": 248,
+      "n_both_active": 90,
+      "clone": false,
+      "binding": true
+    },
+    "EURJPY_USDCHF_N151": {
+      "peer": "EURJPY_USDCHF_N151",
+      "z_corr_train": 0.0476,
+      "sign_agree_both_active": 0.5769,
+      "both_active_over_cand": 0.3145,
+      "n_cand_active": 248,
+      "n_both_active": 78,
+      "clone": false,
+      "binding": true
+    },
+    "EUR_CAD_N153": {
+      "peer": "EUR_CAD_N153",
+      "z_corr_train": -0.1488,
+      "sign_agree_both_active": 0.3402,
+      "both_active_over_cand": 0.3911,
+      "n_cand_active": 248,
+      "n_both_active": 97,
+      "clone": false,
+      "binding": true
+    },
+    "GBPNZD_own_cross_z40": {
+      "peer": "GBPNZD_own_cross_z40",
+      "z_corr_train": 0.9999,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.9919,
+      "n_cand_active": 248,
+      "n_both_active": 246,
+      "clone": true,
+      "binding": false
+    },
+    "N111_GBPAUD_LO_vs_GBP_leg": {
+      "peer": "N111_GBPAUD_LO_vs_GBP_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.1361,
+      "both_active_over_cand": 0.5927,
+      "n_cand_active": 248,
+      "n_both_active": 147,
+      "clone": false,
+      "binding": true
+    },
+    "N106_EURNZD_LO_vs_basket": {
+      "peer": "N106_EURNZD_LO_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.1644,
+      "both_active_over_cand": 0.5887,
+      "n_cand_active": 248,
+      "n_both_active": 146,
+      "clone": false,
+      "binding": true
+    },
+    "N106_EURNZD_LO_vs_NZD_leg": {
+      "peer": "N106_EURNZD_LO_vs_NZD_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.1644,
+      "both_active_over_cand": 0.5887,
+      "n_cand_active": 248,
+      "n_both_active": 146,
+      "clone": false,
+      "binding": true
+    },
+    "N84_AUDNZD_stretch": {
+      "peer": "N84_AUDNZD_stretch",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.7197,
+      "both_active_over_cand": 0.5323,
+      "n_cand_active": 248,
+      "n_both_active": 132,
+      "clone": false,
+      "binding": true
+    },
+    "N90_GBPJPY_LO_vs_GBP_leg": {
+      "peer": "N90_GBPJPY_LO_vs_GBP_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2794,
+      "both_active_over_cand": 0.5484,
+      "n_cand_active": 248,
+      "n_both_active": 136,
+      "clone": false,
+      "binding": true
+    },
+    "N94_NZDJPY_LO_vs_NZD_leg": {
+      "peer": "N94_NZDJPY_LO_vs_NZD_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4107,
+      "both_active_over_cand": 0.4516,
+      "n_cand_active": 248,
+      "n_both_active": 112,
+      "clone": false,
+      "binding": true
+    },
+    "GBPUSD_L60_vs_GBP_leg": {
+      "peer": "GBPUSD_L60_vs_GBP_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2883,
+      "both_active_over_cand": 0.4476,
+      "n_cand_active": 248,
+      "n_both_active": 111,
+      "clone": false,
+      "binding": true
+    },
+    "NZDUSD_L60_vs_NZD_leg": {
+      "peer": "NZDUSD_L60_vs_NZD_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.137,
+      "both_active_over_cand": 0.2944,
+      "n_cand_active": 248,
+      "n_both_active": 73,
+      "clone": false,
+      "binding": true
+    },
+    "GBPNZD_L60_vs_basket": {
+      "peer": "GBPNZD_L60_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.0519,
+      "both_active_over_cand": 0.5444,
+      "n_cand_active": 248,
+      "n_both_active": 135,
+      "clone": false,
+      "binding": true
+    },
+    "USDJPY_L60_vs_basket": {
+      "peer": "USDJPY_L60_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3564,
+      "both_active_over_cand": 0.7581,
+      "n_cand_active": 248,
+      "n_both_active": 188,
+      "clone": false,
+      "binding": true
+    },
+    "EURJPY_L60_vs_basket": {
+      "peer": "EURJPY_L60_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3544,
+      "both_active_over_cand": 0.6371,
+      "n_cand_active": 248,
+      "n_both_active": 158,
+      "clone": false,
+      "binding": true
+    },
+    "N29_GBP_midday_fade_vs_GBP_leg": {
+      "peer": "N29_GBP_midday_fade_vs_GBP_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.6579,
+      "both_active_over_cand": 0.1532,
+      "n_cand_active": 248,
+      "n_both_active": 38,
+      "clone": false,
+      "binding": true
+    },
+    "N38_GBP_Lon_mom_vs_GBP_leg": {
+      "peer": "N38_GBP_Lon_mom_vs_GBP_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2439,
+      "both_active_over_cand": 0.1653,
+      "n_cand_active": 248,
+      "n_both_active": 41,
+      "clone": false,
+      "binding": true
+    },
+    "N153_sign": {
+      "peer": "N153_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3402,
+      "both_active_over_cand": 0.3911,
+      "n_cand_active": 248,
+      "n_both_active": 97,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "N153_clones": {
+    "AUDCAD_z40": {
+      "peer": "AUDCAD_z40",
+      "z_corr_train": 0.3526,
+      "sign_agree_both_active": 0.7581,
+      "both_active_over_cand": 0.4697,
+      "n_cand_active": 264,
+      "n_both_active": 124,
+      "clone": false,
+      "binding": true
+    },
+    "EURGBP_z40": {
+      "peer": "EURGBP_z40",
+      "z_corr_train": -0.0853,
+      "sign_agree_both_active": 0.4923,
+      "both_active_over_cand": 0.2462,
+      "n_cand_active": 264,
+      "n_both_active": 65,
+      "clone": false,
+      "binding": true
+    },
+    "CADCHF_z40": {
+      "peer": "CADCHF_z40",
+      "z_corr_train": -0.0252,
+      "sign_agree_both_active": 0.4776,
+      "both_active_over_cand": 0.2538,
+      "n_cand_active": 264,
+      "n_both_active": 67,
+      "clone": false,
+      "binding": true
+    },
+    "EUR_GER40_N149": {
+      "peer": "EUR_GER40_N149",
+      "z_corr_train": -0.1242,
+      "sign_agree_both_active": 0.5303,
+      "both_active_over_cand": 0.25,
+      "n_cand_active": 264,
+      "n_both_active": 66,
+      "clone": false,
+      "binding": true
+    },
+    "EURJPY_USDCHF_N151": {
+      "peer": "EURJPY_USDCHF_N151",
+      "z_corr_train": 0.6557,
+      "sign_agree_both_active": 0.9828,
+      "both_active_over_cand": 0.4394,
+      "n_cand_active": 264,
+      "n_both_active": 116,
+      "clone": false,
+      "binding": true
+    },
+    "XAG_US30_N150": {
+      "peer": "XAG_US30_N150",
+      "z_corr_train": 0.298,
+      "sign_agree_both_active": 0.7549,
+      "both_active_over_cand": 0.3864,
+      "n_cand_active": 264,
+      "n_both_active": 102,
+      "clone": false,
+      "binding": true
+    },
+    "GBP_NZD_N152": {
+      "peer": "GBP_NZD_N152",
+      "z_corr_train": -0.1488,
+      "sign_agree_both_active": 0.3402,
+      "both_active_over_cand": 0.3674,
+      "n_cand_active": 264,
+      "n_both_active": 97,
+      "clone": false,
+      "binding": true
+    },
+    "EURCAD_own_cross_z40": {
+      "peer": "EURCAD_own_cross_z40",
+      "z_corr_train": 0.1642,
+      "sign_agree_both_active": 0.6556,
+      "both_active_over_cand": 0.3409,
+      "n_cand_active": 264,
+      "n_both_active": 90,
+      "clone": false,
+      "binding": false
+    },
+    "N97_AUDCAD_LO_vs_basket": {
+      "peer": "N97_AUDCAD_LO_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.396,
+      "both_active_over_cand": 0.3826,
+      "n_cand_active": 264,
+      "n_both_active": 101,
+      "clone": false,
+      "binding": true
+    },
+    "N99_CADCHF_LO_vs_CAD_leg": {
+      "peer": "N99_CADCHF_LO_vs_CAD_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3643,
+      "both_active_over_cand": 0.4886,
+      "n_cand_active": 264,
+      "n_both_active": 129,
+      "clone": false,
+      "binding": true
+    },
+    "N96_CADJPY_LO_vs_CAD_leg": {
+      "peer": "N96_CADJPY_LO_vs_CAD_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4773,
+      "both_active_over_cand": 0.5,
+      "n_cand_active": 264,
+      "n_both_active": 132,
+      "clone": false,
+      "binding": true
+    },
+    "N88_EURGBP_SO_vs_EUR_leg": {
+      "peer": "N88_EURGBP_SO_vs_EUR_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3966,
+      "both_active_over_cand": 0.4394,
+      "n_cand_active": 264,
+      "n_both_active": 116,
+      "clone": false,
+      "binding": true
+    },
+    "USDCAD_L60_vs_CAD_quote": {
+      "peer": "USDCAD_L60_vs_CAD_quote",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.7671,
+      "both_active_over_cand": 0.553,
+      "n_cand_active": 264,
+      "n_both_active": 146,
+      "clone": false,
+      "binding": true
+    },
+    "EURUSD_L60_vs_EUR_leg": {
+      "peer": "EURUSD_L60_vs_EUR_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2869,
+      "both_active_over_cand": 0.4621,
+      "n_cand_active": 264,
+      "n_both_active": 122,
+      "clone": false,
+      "binding": true
+    },
+    "EURCAD_L60_vs_basket": {
+      "peer": "EURCAD_L60_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4414,
+      "both_active_over_cand": 0.4205,
+      "n_cand_active": 264,
+      "n_both_active": 111,
+      "clone": false,
+      "binding": true
+    },
+    "USDJPY_L60_vs_basket": {
+      "peer": "USDJPY_L60_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.682,
+      "both_active_over_cand": 0.822,
+      "n_cand_active": 264,
+      "n_both_active": 217,
+      "clone": false,
+      "binding": true
+    },
+    "EURJPY_L60_vs_basket": {
+      "peer": "EURJPY_L60_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5814,
+      "both_active_over_cand": 0.6515,
+      "n_cand_active": 264,
+      "n_both_active": 172,
+      "clone": false,
+      "binding": true
+    },
+    "EURNZD_LO_vs_EUR_leg": {
+      "peer": "EURNZD_LO_vs_EUR_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.6667,
+      "both_active_over_cand": 0.5909,
+      "n_cand_active": 264,
+      "n_both_active": 156,
+      "clone": false,
+      "binding": true
+    },
+    "N149_sign": {
+      "peer": "N149_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5303,
+      "both_active_over_cand": 0.25,
+      "n_cand_active": 264,
+      "n_both_active": 66,
+      "clone": false,
+      "binding": true
+    },
+    "N151_sign": {
+      "peer": "N151_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.9828,
+      "both_active_over_cand": 0.4394,
+      "n_cand_active": 264,
+      "n_both_active": 116,
+      "clone": false,
+      "binding": true
+    },
+    "N152_sign": {
+      "peer": "N152_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3402,
+      "both_active_over_cand": 0.3674,
+      "n_cand_active": 264,
+      "n_both_active": 97,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N152": 7.65,
+    "N153": 4.29
+  },
+  "costs_rt": {
+    "GBPUSD": 0.7,
+    "NZDUSD": 1.85,
+    "EURUSD": 0.63,
+    "USDCAD": 0.8
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "session": "15:30-21:00 CET",
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "no_inline_replacement": true,
+  "gate_source": "COSTS_FTMO.csv roundtrip_intraday_bp; not a session median",
+  "loaded_days_incl_warmup": {
+    "GBPUSD": 778,
+    "NZDUSD": 778,
+    "EURUSD": 778,
+    "USDCAD": 778,
+    "GBPAUD": 778,
+    "AUDNZD": 778,
+    "EURNZD": 778,
+    "AUDCAD": 778,
+    "EURGBP": 778,
+    "CADCHF": 778,
+    "CADJPY": 778,
+    "GBPJPY": 778,
+    "NZDJPY": 778,
+    "GBPNZD": 778,
+    "EURCAD": 778,
+    "XAGUSD": 774,
+    "US30cash": 775,
+    "EURJPY": 778,
+    "USDCHF": 778,
+    "GER40cash": 768,
+    "USDJPY": 778,
+    "AUDUSD": 778
+  },
+  "train_days": {
+    "GBPUSD": 778,
+    "NZDUSD": 778,
+    "EURUSD": 778,
+    "USDCAD": 778,
+    "GBPAUD": 778,
+    "AUDNZD": 778,
+    "EURNZD": 778,
+    "AUDCAD": 778,
+    "EURGBP": 778,
+    "CADCHF": 778,
+    "CADJPY": 778,
+    "GBPJPY": 778,
+    "NZDJPY": 778,
+    "GBPNZD": 778,
+    "EURCAD": 778,
+    "XAGUSD": 774,
+    "US30cash": 775,
+    "EURJPY": 778,
+    "USDCHF": 778,
+    "GER40cash": 768,
+    "USDJPY": 778,
+    "AUDUSD": 778
+  }
+}
