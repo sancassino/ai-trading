@@ -11,3 +11,4 @@ CEO-T9;2026-10-02;Turn-of-month 7 indices 1990-2024 (PREREG_TOM);FAIL: train net
 CEO-T10;2026-10-02;Pairs mean-reversion 4 index-paren (PREREG_PAIRS);FAIL: test netto negatief alle paren, bruto <=+3bp
 CEO-T11;2026-10-02;Aandelen cross-sectioneel intraday S1-S4, 30 US-CFD (PREREG_STK_XS; eerste run had lookahead-bug in S1, gecorrigeerd);FAIL: alle netto negatief, kosten 5-9bp rondreis > bruto
 CEO-T12;2026-10-02;Crypto US-open momentum BTC/ETH (PREREG_CRYPTO_ID);FAIL: train t 0.7/0.6, test t 1.2/-1.3 (reserve-peek 25-26 t 1.6/1.3 niet gebruikt voor oordeel)
+CEO-T13;2026-10-02;Uur-van-de-dag scan 57 symbolen x 24 uur=736 hypotheses (PREREG_HOUR_SCAN);10 geselecteerd (FX server-uur 0/1) = SPREAD-ARTEFACT in bid-reeks (bar 01:00-01:05: spread 3-7bp -> 0.4bp); niet handelbaar. Overig EURUSD uur14 netto +0.4bp: nihil

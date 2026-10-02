@@ -134,3 +134,4 @@
 06:26 UTC — pairs FAIL. Klassieke dag-anomalieën op indices uitgeput (ORB, TOM, pairs, ML). Volgende: crypto/commodity funding & aandelen-cross-sectie (overnight vs intraday).
 06:43 UTC — aandelen XS intraday FAIL (kosten > bruto).
 06:57 UTC — crypto US-open momentum: FAIL formeel, zwak positief teken; swap crypto 30%/jr => alleen intraday.
+07:13 UTC — uur-scan: enige hits = rollover-spread-artefact in bid-data; geen edge.
