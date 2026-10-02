@@ -1,0 +1,32 @@
+{
+  "N108": {
+    "id": "N108",
+    "instrument": "AUS200cash",
+    "n": 242,
+    "mean_bruto_bp": -4.861,
+    "median_bruto_bp": -5.4656,
+    "gate_bp": 4.38,
+    "verdict": "FAIL",
+    "hit_rate": 0.4421,
+    "years": {
+      "2021": -5.629,
+      "2022": -5.0824,
+      "2023": -3.4928
+    }
+  },
+  "N109": {
+    "id": "N109",
+    "instrument": "CHFJPY",
+    "n": 122,
+    "mean_bruto_bp": 19.6887,
+    "median_bruto_bp": 24.0226,
+    "gate_bp": 4.23,
+    "verdict": "UNDERPOWERED",
+    "hit_rate": 0.6066,
+    "years": {
+      "2021": 13.8683,
+      "2022": 20.201,
+      "2023": 24.744
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "N106": {
+    "id": "N106",
+    "instrument": "EURNZD",
+    "n": 103,
+    "mean_bruto_bp": 3.4519,
+    "median_bruto_bp": -4.5481,
+    "gate_bp": 4.11,
+    "verdict": "FAIL",
+    "hit_rate": 0.4757,
+    "years": {
+      "2021": -7.6025,
+      "2022": 18.6388,
+      "2023": -0.758
+    }
+  },
+  "N107": {
+    "id": "N107",
+    "instrument": "FRA40cash",
+    "n": 255,
+    "mean_bruto_bp": 3.941,
+    "median_bruto_bp": 3.4672,
+    "gate_bp": 5.94,
+    "verdict": "FAIL",
+    "hit_rate": 0.5216,
+    "years": {
+      "2021": 5.4836,
+      "2022": 8.9715,
+      "2023": -6.2897
+    }
+  }
+}

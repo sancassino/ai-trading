@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N107 — UK100 Lon-AM → FRA40 afternoon continuation session-flat (NEW_FAMILY AD)
 
-**Status:** **OPEN** — pipeline replace after U2 N103 FAIL_STRESS (filed 2026-10-02 ~22:15 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** `n106_n107` (N=255, mean **+3,94 < 5,94**; years +5,48/+8,97/−6,29); filed 2026-10-02 ~22:15, screened ~22:20 CEST.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AD** (FTSE Lon-AM impulse → CAC40 EU-afternoon same-dir continuation, EOD flat — nooit deze setup).  
 **Signal:** `UK100cash` (Lon-AM impulse). **Trade:** `FRA40cash` (RT **est. 1,98** bp — M5 spread_med≈1,98 bp 2024–26; indices commissie 0; **not in** `COSTS_FTMO.csv` — U2 remeasure before any PREREG; swap 0 — **EOD flat**).  
 **Track 2 + D-100:** Intra-Europe equity lead–lag (UK morning risk → French equity afternoon); intradag-vlak (geen swap).

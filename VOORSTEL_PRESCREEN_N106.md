@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N106 — EURNZD Long-Only 5d EUR-NZD Carry+Momentum (NEW_FAMILY AC)
 
-**Status:** **OPEN** — pipeline replace after U2 N103 FAIL_STRESS (filed 2026-10-02 ~22:15 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** `n106_n107` (N=103, mean **+3,45 < 4,11**; years −7,60/+18,64/−0,76); filed 2026-10-02 ~22:15, screened ~22:20 CEST.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AC** (EURNZD EUR-vs-NZD dairy/commodity carry+momentum long-only — nooit als deze setup).  
 **Instrument:** `EURNZD` (RT **est. 1,37** bp — M5 spread_med≈0,77 bp 2024–26 + FX commissie≈0,30×2; **not in** `COSTS_FTMO.csv` — U2 remeasure before any PREREG; swap_long EUR vs NZD = typically earn when NZ rates > EUR → 0 in gate per D-100).  
 **Track 4 + D-100 family B:** EURNZD long-only 5d swing. Long = EUR vs NZD (Euro funding vs NZ dairy/commodity FX) + positief 5d momentum.
