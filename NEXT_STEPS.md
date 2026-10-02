@@ -1,4 +1,4 @@
-# NEXT_STEPS v85 — Manager, 2026-10-02 20:55 CEST (N92 FAIL_T; TRIAL 458; U2 IDLE; ≥2 NEW_FAMILY) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v86 — Manager, 2026-10-02 21:00 CEST (N93 FAIL_COST_GATE; TRIAL 458; N94/N95 OPEN) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083 / **D-101**, bindend):** FTMO-account €80.000 (2-Step). Ambitie €800–900/mnd blijft streef; **D-101** herijkt lat: kandidaten mogen (A) bewezen alfa (t ≥ 2,0) **óf** (B) literatuur-gedragen premie met `ftmo_ev()` EV>0 + overleving ≥0,5 over meerdere periodes + intradag-DD-correctie + forward-papier — altijd gelabeld "beta, geen edge". Eigen-kapitaal GEPARKEERD → `archief/eigen_kapitaal/INDEX.md`.
 
@@ -6,7 +6,7 @@
 
 > **⚠ FORWARD ETF-PAPIER:** loopt door (geen hoofdspoor). Uitvoerder-1 cron.
 
-> **⚠ TEAM (D-090):** Claude = CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main. Informele Grok-pauze (~01–04 okt) tijdens CEO RISK-REACTIVE/SHOCK-batch — **Manager cadans actief** (v85); D-094 verbiedt stilstand.
+> **⚠ TEAM (D-090):** Claude = CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main. Informele Grok-pauze (~01–04 okt) tijdens CEO RISK-REACTIVE/SHOCK-batch — **Manager cadans actief** (v86); D-094 verbiedt stilstand.
 
 > **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-104** op `claude/ftmo-trading-strategy-98mplz` (`8e25e3c` D-104 / `a3c2518` D-103 / `824213f` D-102 / `41e0c44` D-101 / `615bca0` D-100 …). **D-094 + D-094a + D-097…D-104 actief** + **C-028** + **C-029** + **C-030** + **C-031** (`8a68951`). CEO tip `7cb6731` ~13:13 CEST 2026-10-02 (geen nieuw D-* na D-104). `EINDSTAND_FTMO.md` = **tussenstand**, geen einde. `VRAGEN_SANDRO_CEO.md` = CEO→Sandro (niet-blokkerend per D-102.4).
 
@@ -22,7 +22,7 @@ Bindend: D-083…**D-104** (CEO) + **C-028** + **C-029** + **C-030** + **C-031**
 
 **Doel:** P(slagen fase 1+2), P(funded overleven), netto-EV €/mnd, fee/pogingen — `engine/ftmo.py`. Lat = D-101 (A of B).
 
-### Cyclus-uitslag (Manager, 2026-10-02 20:55 CEST — **N92 FAIL_T** tip `b5b59e0`; TRIAL_COUNT **458**; U2 IDLE; prio ≥2 NEW_FAMILY)
+### Cyclus-uitslag (Manager, 2026-10-02 21:00 CEST — **N93 FAIL_COST_GATE** tip `b382307`; TRIAL_COUNT **458**; U2 IDLE; N94/N95 OPEN)
 
 **Nieuwe D-*:** **geen** (CEO tip blijft `7cb6731`; D-104 `8e25e3c` tip besluit).
 
@@ -46,34 +46,44 @@ Bindend: D-083…**D-104** (CEO) + **C-028** + **C-029** + **C-030** + **C-031**
 
 **S2 tip `fde4a15` ~20:5x CEST 2026-10-02 — Lane-A:** `VOORSTEL_S2_SECTOR_DISP_ROTATION` (cycle_2046) cost-stressed COST_OK; US100 swap FLAG — Strateeg owns Lane-B PREREG if promoted. Still need ≥2/3 NEW_FAMILY feed; honest RT vóór promote.
 
-**U2 `b5b59e0` ~20:53 CEST — N92 US100 NY 2h mom FAIL_T (TRIAL **457→458**):** PREREG-first `5c4a7e1` / C-031. Cost/stress PASS (train N=**592** mean bruto **+5,90** ≥ 1,98). Formal **FAIL_T**: day-clust t train **1,39** / NW-L5 **1,56** <2; test N=**259** mean **+2,62** t **0,50/0,51**. **Dead += N92_US100_NY_2H_MOM**. Geen clones. Reserve 2025+ onaangeraakt. U2 **IDLE/HOLD** tot next PASS→PREREG. Skip N75–N91 / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta. Freeze **OFF**. Track-3 **PAUSED**.
+**U2 `b5b59e0` ~20:53 CEST — N92 US100 NY 2h mom FAIL_T (TRIAL **457→458**):** PREREG-first `5c4a7e1` / C-031. Cost/stress PASS (train N=**592** mean bruto **+5,90** ≥ 1,98). Formal **FAIL_T**: day-clust t train **1,39** / NW-L5 **1,56** <2; test N=**259** mean **+2,62** t **0,50/0,51**. **Dead += N92_US100_NY_2H_MOM**. Geen clones. Reserve 2025+ onaangeraakt.
 
-**Formal FAIL batch:** …→ EURJPY_MED **456** → N87 **457** → **N92 FAIL_T 458**. Cost-gate STOP (geen trial): TSMOM_DIV · ENERGY · IDX_SHORT · N78 · N80. TRIAL_COUNT **458**.
+**Strateeg Faraday `f217478` ~20:57 CEST — ≥2 NEW_FAMILY + N93 PREREG:** live `PREREG_FTMO_N93_SECTOR_DISP_ROTATION` (NEW_FAMILY R; S2 `fde4a15`; session-flat 15:30→21:00). OPEN **N94/N95** NEW_FAMILY S/T.
+
+| Idee | Family | Gate | Status |
+|------|--------|-----:|--------|
+| **N94** NZDJPY LO 5d carry+mom | NEW_FAMILY S | **6,00** bp | **OPEN** pre-screen |
+| **N95** XAU Lon-AM→NY cont session-flat | NEW_FAMILY T | **2,49** bp | **OPEN** pre-screen |
+
+**U2 `b382307` ~20:59 CEST — N93 SECTOR_DISP_ROTATION FAIL_COST_GATE (**geen trial**; TRIAL blijft **458**):** PREREG-first `bdbd309`/`e91ec85`. Train N=**309** mean bruto **+0,99 ≪ gate 1,98**; stress FAIL; formal PASS-pad niet geopend. Geen TRIALS-append. **Dead += N93_SECTOR_DISP_ROTATION**. Geen retune/clones. Reserve 2025+ onaangeraakt. U2 **IDLE/HOLD** tot next PASS→PREREG (**N94/N95**). Skip N75–N93 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta. Freeze **OFF**. Track-3 **PAUSED**.
+
+**Formal FAIL batch:** …→ EURJPY_MED **456** → N87 **457** → **N92 FAIL_T 458**. Cost-gate STOP (geen trial): TSMOM_DIV · ENERGY · IDX_SHORT · N78 · N80 · **N93**. TRIAL_COUNT **458**.
 
 **Reeds bevestigd:** L60 FX-med **BARRED**; kill-circuit pivot **ON**; ORB-as-robust-edge **closed**; VIX_TERM / UKOIL-OVN / CORN-as-FTMO **BARRED**.
 
-**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18 · P1 · GBPJPY_EU_MOM · N35 · N36 · N40 · N41 · N44 · TSMOM_DIV · ENERGY_TSMOM · IDX_SHORT_TSMOM · FX_EUR_SHORT_TSMOM · FX_USDJPY_MED_TSMOM · FX_EURJPY_MED_TSMOM · N72 · N78_VIX_TERM_VOV · N80 · N87_US30_GAP_FADE · **N92_US100_NY_2H_MOM** · ORB_META (D-104)**. Pre-screen FAIL/DIAG: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34 · N37 · N38 · N39 · N42 · N43 · N45 · N48–N57 · N58 · N60–N65 · N67 · N69–N71 · N73 · N74 · N75 · N76 · N77 · N81 · N82 · N84 · N85 · N86 · N88 · N89 · N91** + CEO T5–T16 (TOM/pairs/XS/crypto/hour/event). UNDERPOWERED: **N79 · N83 · N90**. BARRED: **N46 · N47 · N59 · N68** + **L60 FX-med** + **VIX_TERM clones** + **UKOIL OVN-gap clones** + **ORB-meta / ORB-index-ext clones**. SWAP_HOSTILE: **N58**. Family A overnight index-short **closed**. CORN_F **DEMOTE_LANE_B**.
+**Dood (niet herstarten / geen klonen):** A4 · B1 · A5 · A2 · S2 XAU-overlap/GER40-open/USDJPY/USOIL · **N1 · N2 · MIDDAY_VWAP · S2b · N3 · N4 · N5 · N6 · GER_US_LEAD · VWAP_PB · IB_FADE · S2c-shape · LUNCH_OPEN · N10 · N12 · N11 · N15 · N16 · N17 · N18 · P1 · GBPJPY_EU_MOM · N35 · N36 · N40 · N41 · N44 · TSMOM_DIV · ENERGY_TSMOM · IDX_SHORT_TSMOM · FX_EUR_SHORT_TSMOM · FX_USDJPY_MED_TSMOM · FX_EURJPY_MED_TSMOM · N72 · N78_VIX_TERM_VOV · N80 · N87_US30_GAP_FADE · **N92_US100_NY_2H_MOM · N93_SECTOR_DISP_ROTATION** · ORB_META (D-104)**. Pre-screen FAIL/DIAG: PLM / NR7→ORB / Failed-OR / GS01-pooled; XAU N7+N8; N9; N10; N12–N14; N15–N17; N19; **N20–N34 · N37 · N38 · N39 · N42 · N43 · N45 · N48–N57 · N58 · N60–N65 · N67 · N69–N71 · N73 · N74 · N75 · N76 · N77 · N81 · N82 · N84 · N85 · N86 · N88 · N89 · N91** + CEO T5–T16 (TOM/pairs/XS/crypto/hour/event). UNDERPOWERED: **N79 · N83 · N90**. BARRED: **N46 · N47 · N59 · N68** + **L60 FX-med** + **VIX_TERM clones** + **UKOIL OVN-gap clones** + **ORB-meta / ORB-index-ext clones**. SWAP_HOSTILE: **N58**. Family A overnight index-short **closed**. CORN_F **DEMOTE_LANE_B**.
 
 ### Wekelijkse sporen-tabel (D-094.7 / **D-097–D-104** / **C-028…C-031** — Manager houdt bij)
 
 | Spoor | Inhoud | Eigenaar | Cadans-eis | Status 2026-10-02 |
 |------|--------|----------|------------|-------------------|
-| **1** | Kortere historie / walk-forward; ≥5j default; D-094a; pool N≥150; forward-papier | **Uitvoerder-2** | Gates + land PREREGs | **OPEN** — tip `b5b59e0` N92 **FAIL_T**; TRIAL **458**; **IDLE** tot next PASS→PREREG |
-| **2** | **Lane-B** FTMO markets → PREREG | **Strateeg** + **S2** feed | ≥3 screens/cyclus; **≥2/3 NEW_FAMILY** | **OPEN** — N92 FAIL_T; N91 DIAG_FAIL; N90 UNDERPOWERED; **≥2 NEW_FAMILY** due (D-094); bar L60+VIX+UKOIL-OVN+ORB-meta+N92 |
+| **1** | Kortere historie / walk-forward; ≥5j default; D-094a; pool N≥150; forward-papier | **Uitvoerder-2** | Gates + land PREREGs | **OPEN** — tip `b382307` N93 **FAIL_COST_GATE** (geen trial); TRIAL **458**; **IDLE**; next = N94/N95 PASS→PREREG |
+| **2** | **Lane-B** FTMO markets → PREREG | **Strateeg** + **S2** feed | ≥3 screens/cyclus; **≥2/3 NEW_FAMILY** | **OPEN** — **N94/N95** OPEN; N93 FAIL_COST_GATE; N92 FAIL_T; bar L60+VIX+UKOIL-OVN+ORB-meta+N92/N93 |
 | **3** | Combineren weak+ / ensembles | **CTO** / CEO 3b | Parallel | **PAUSED** tot solo t≥2 (D-097.3) |
-| **4** | **Lane-A→B** + D-102 RISK-REACTIVE / D-103 SHOCK / D-100 carry | **Strateeg + S2** + CEO lat-B | ≥3; **≥2/3 NEW_FAMILY**; kill circuit | **OPEN** — pivot on; N92 dead → **≥2 NEW_FAMILY** same cycle; S2 SECTOR_DISP feed |
+| **4** | **Lane-A→B** + D-102 RISK-REACTIVE / D-103 SHOCK / D-100 carry | **Strateeg + S2** + CEO lat-B | ≥3; **≥2/3 NEW_FAMILY**; kill circuit | **OPEN** — pivot on; N94/N95 filed (S/T); SECTOR_DISP dead as N93 |
 | **5** | FTMO sizing / `recommend_scale` / lat-B `ftmo_ev` | **CTO** | Parallel | **OPEN** — C-031 DELIVERED (0 trials) + intradag-DD helper |
 | **6** | Lane-A data; PROXY_MAP; FTMO-M5; COSTS 166; HistData A-001; calendar-archief | Team / Sandro | Doorlopend | **OPEN** — COSTS_FTMO_alle **166** op main (`f0f9597`); A-001 OPEN |
-| **7** | Coördinatie; novelty + kill circuit; D-*/C-* absorb | **Manager** | :05/:35 | **OPEN** — **v85** |
+| **7** | Coördinatie; novelty + kill circuit; D-*/C-* absorb | **Manager** | :05/:35 | **OPEN** — **v86** |
 
 **C-028…C-031 enforce (Manager):**
-- Novelty: N92 **FAIL_T** → D-094: Strateeg/S2 open **≥2 NEW_FAMILY** this cycle. S2 `fde4a15` SECTOR_DISP_ROTATION = Lane-A candidate (Lane-B = Strateeg).
-- Kill circuit: streak cost-PASS→FAIL_T **≥5** → pivot **ON** (N87+N92 add). Bar L60 / ORB-robust / VIX_TERM / CORN-as-FTMO / UKOIL-OVN / ORB-meta / N87 / **N92** clones.
-- Roles: **S2 = Lane-A**; **Strateeg = Lane-B**; CEO lat-B / SHOCK; U2 IDLE tot PASS→PREREG.
+- Novelty: Faraday `f217478` filed **N94/N95** NEW_FAMILY S/T ✔ (≥2 after N92 die). N93 SECTOR_DISP FAIL_COST_GATE (geen trial).
+- Kill circuit: streak cost-PASS→FAIL_T **≥5** → pivot **ON**. Bar L60 / ORB-robust / VIX_TERM / CORN-as-FTMO / UKOIL-OVN / ORB-meta / N87 / N92 / **N93** clones.
+- Roles: **S2 = Lane-A**; **Strateeg = Lane-B**; U2 IDLE tot PASS→PREREG (N94/N95).
 
 | Prio | Item | Eigenaar | Status |
 |------|------|----------|--------|
-| **1** | Open **≥2 NEW_FAMILY** (D-094 after N92 die) → PASS→PREREG; S2 SECTOR_DISP → Lane-B; **geen** N75–N92/CORN/VIX/L60/UKOIL-OVN/ORB-meta clones | **Strateeg** / **S2** (U2 pas na PREREG) | **OPEN — prio** |
+| **1** | Pre-screen **N94/N95** → PASS→PREREG; **geen** N75–N93/CORN/VIX/L60/UKOIL-OVN/ORB-meta/SECTOR_DISP clones | **Strateeg** / **S2** (U2 pas na PREREG) | **OPEN — prio** |
+| — | **N93** SECTOR_DISP_ROTATION FAIL_COST_GATE (**geen trial**; TRIAL 458) | U2 | **DELIVERED** `b382307` |
 | — | **N92** US100 NY 2h mom FAIL_T (**TRIAL 458**) | U2 | **DELIVERED** `b5b59e0` |
 | — | **C-031** N90 UNDERPOWERED / N91 DIAG_FAIL / N92 PREREG (0 trials) | CTO | **DELIVERED** `8a68951` |
 | — | **D-101…D-104** absorb (doel/lat-B, RISK-REACTIVE, SHOCK, ORB-meta FAIL) | Manager | **DELIVERED** v83 |
@@ -82,23 +92,23 @@ Bindend: D-083…**D-104** (CEO) + **C-028** + **C-029** + **C-030** + **C-031**
 | — | **C-030** N80 absorb + N82–N86 diag (0 trials) | CTO | **DELIVERED** `6174bca` |
 | — | COSTS_FTMO_alle → 166 symb (Spoor 6) | U1 | **DELIVERED** `f0f9597` |
 | — | `VRAGEN_SANDRO_CEO.md` / HistData A-001 / integriteit | CEO / Sandro | OPEN (niet-blokkerend); A-001 OPEN |
-| — | Dead/FAIL + bars t/m N92 + N91 + ORB-meta + CEO T-batch | — | Gesloten als klonen |
+| — | Dead/FAIL + bars t/m N93 + N92 + N91 + ORB-meta + CEO T-batch | — | Gesloten als klonen |
 
 ### Acties (bindend; D-094 / **D-097–D-104** / **C-028…C-031**)
 
 1. **Uitvoerder-2 (`claude/uitvoerder2-r`) — IDLE:**
-   - Tip `b5b59e0`: N92 **FAIL_T** — TRIAL_COUNT **458**. Dead += N92. **HOLD** tot next PASS→PREREG. Skip N75–N91 / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta / N92 clones. No 2025+. Cadans :15/:45.
+   - Tip `b382307`: N93 **FAIL_COST_GATE** (mean +0,99 ≪ 1,98; N=309); **geen trial** — TRIAL_COUNT **458**. Dead += N93. **HOLD** tot PASS→PREREG (**N94/N95**). Skip N75–N93 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta. No 2025+. Cadans :15/:45.
 
 2. **Grok CTO (`grok/cto-1`) — tip C-031 (`8a68951`); next:**
-   - Absorb N92 FAIL_T if needed; support D-101 lat-B/`ftmo_ev`. Track-3 blijft PAUSED. Geen Sandro eval/spend.
+   - Absorb N93 FAIL_COST_GATE if needed; support D-101 lat-B/`ftmo_ev`. Track-3 blijft PAUSED. Geen Sandro eval/spend.
 
 3. **Strateeg (`claude/trusting-faraday-34tsmg`) — Lane-B:**
-   - N92 dead → open **≥2 NEW_FAMILY** same cycle (D-094). Consider S2 SECTOR_DISP_ROTATION for Lane-B PREREG if honest-cost OK. Geen L60 / ORB-robust / VIX / CORN / UKOIL-OVN / ORB-meta / N87 / N92 clones.
+   - Tip `f217478`: N93 dead; run D-092.1 op **N94/N95**; PASS → PREREG. Geen L60 / ORB / VIX / CORN / UKOIL-OVN / ORB-meta / N87 / N92 / N93 / SECTOR_DISP clones.
 
 4. **Strateeg-2 (`grok/strateeg-2`) — Lane-A:**
-   - Tip `fde4a15` SECTOR_DISP_ROTATION promote — keep feeding ≥2/3 NEW_FAMILY; honest FTMO RT in COSTS vóór promote.
+   - SECTOR_DISP → N93 FAIL_COST_GATE. Keep ≥2/3 NEW_FAMILY; honest FTMO RT in COSTS vóór promote (Lane-A day_t ≠ PASS).
 
-5. **Auditor — ACTIEF:** steekproef N92 FAIL_T; novelty/kill flags.
+5. **Auditor — ACTIEF:** steekproef N92 FAIL_T / N93 FAIL_COST_GATE; novelty/kill flags.
 
 6. **Manager (`main`) — volle cadans :05/:35:**
    - Absorbeer D-*/C-*/U2; enforce novelty + kill; U2-freshness; nooit zelf bevriezen. CEO-Sandro-vragen **niet** door Manager herhaald (CEO-kanaal).
@@ -112,7 +122,7 @@ Bindend: D-083…**D-104** (CEO) + **C-028** + **C-029** + **C-030** + **C-031**
 ### Teamcadans (D-088 / D-090 / **D-094 volle cadans**)
 - CEO (Claude): elke 30 min; beslist + BESLUITEN; lat-B / SHOCK / ensemble-PREREGs (3b)
 - Auditor (Claude): elke 30 min / steekproef
-- Manager (Grok → `main`): elke 30 min (:05/:35) — **v85**
+- Manager (Grok → `main`): elke 30 min (:05/:35) — **v86**
 - Uitvoerder-2 (Grok → `claude/uitvoerder2-r`): elke 30 min (:15/:45) — gates + spoor 1 (**IDLE**)
 - Strateeg (Grok → `claude/trusting-faraday-34tsmg`): elke cyclus — sporen 2+4
 - Strateeg-2 (Grok → `grok/strateeg-2`): elke cyclus — sporen 2+4
