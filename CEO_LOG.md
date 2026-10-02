@@ -133,3 +133,4 @@
 06:13 UTC — TOM FAIL (effect weggevallen 2016+, swap). Volgende: pairs/relatieve waarde en kosten-arme structuren.
 06:26 UTC — pairs FAIL. Klassieke dag-anomalieën op indices uitgeput (ORB, TOM, pairs, ML). Volgende: crypto/commodity funding & aandelen-cross-sectie (overnight vs intraday).
 06:43 UTC — aandelen XS intraday FAIL (kosten > bruto).
+06:57 UTC — crypto US-open momentum: FAIL formeel, zwak positief teken; swap crypto 30%/jr => alleen intraday.

@@ -27,3 +27,6 @@ Test 2016–24 netto (5bp/dag kosten): −2,4/−4,5/−2,2/−12,6bp (h=1); bru
 
 ## Aandelen cross-sectioneel intraday (PREREG_STK_XS; stk_xs.py; 30 US-CFD's, 2021–2024)
 S1 reversal(prev-ret) −6,4/−4,8bp/dag (train/test); S2 gap-momentum −15,7/−4,0; S3 gap-reversal −1,4/−12,6; S4 reversal(last30) −10,0/−6,2 (netto, kosten 5–9bp rondreis per been). Alles negatief; bruto < kosten. (Eerste run S1 had same-day lookahead, −108bp: bug gevonden en gerepareerd vóór conclusie.) FAIL.
+
+## Crypto intraday US-open-momentum (PREREG_CRYPTO_ID, BTC/ETH, 14:30–15:00 UTC → 15:00–17:00)
+BTC: train +3,9bp (t 0,7), test +10,1bp (t 1,2); ETH: train +4,0 (t 0,6), test −10,4 (t −1,3). Beschrijvend 2025–26: BTC +9,8 (t 1,6), ETH +11,4 (t 1,3) — niet voor oordeel. Formeel FAIL (t<2), maar teken overwegend positief: kandidaat voor een grotere test (meer crypto's, meerdere sessietijden) mits vooraf vastgelegd; swap crypto 11,9bp/dag dwingt intraday.
