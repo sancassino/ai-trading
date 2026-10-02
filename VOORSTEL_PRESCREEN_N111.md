@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N111 — GBPAUD Long-Only 5d GBP-AUD Carry+Momentum (NEW_FAMILY AH)
 
-**Status:** **OPEN** — pipeline replace after N108 FAIL / N109 UNDERPOWERED (filed 2026-10-02 ~22:25 CEST).  
+**Status:** **DIAG_FAIL** C-036 (`f3cf632`) — mean **+3,24 < 4,38** (N=104≪150; day_t 0,35; h1 −4,15 / h2 +10,64). Geen PREREG. Dead += N111; no GBPAUD-LO clones. Filed OPEN 2026-10-02 ~22:25; closed ~22:57 CEST.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AH** (GBPAUD sterling-vs-AUD commodity carry+momentum long-only — nooit als deze setup).  
 **Instrument:** `GBPAUD` (RT **est. 1,46** bp — M5 spread_med≈0,86 bp 2024–26 + FX commissie≈0,30×2; **not in** `COSTS_FTMO.csv` — U2 remeasure before any PREREG; swap_long GBP vs AUD = typically earn when AU rates > UK? U2 check — if long pays, fail-closed; assume earn → 0 in gate per D-100 pending U2).  
 **Track 4 + D-100 family B:** GBPAUD long-only 5d swing. Long = GBP vs AUD (BoE vs RBA / commodity FX) + positief 5d momentum.

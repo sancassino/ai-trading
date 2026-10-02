@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N110 — DXYcash Lon-AM → EU-afternoon continuation session-flat (NEW_FAMILY AG)
 
-**Status:** **OPEN** — pipeline replace after N108 FAIL / N109 UNDERPOWERED (filed 2026-10-02 ~22:25 CEST).  
+**Status:** **DIAG_FAIL** C-036 (`f3cf632`) — DATA_GAP: DXYcash M5 starts 2024-11-26; train 2021–23 empty (n=0). Geen PREREG; geen soft gate on 2024-only. Dead += N110; no DXY Lon→EU-PM clones. Filed OPEN 2026-10-02 ~22:25; closed ~22:57 CEST.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AG** (DXY Lon-AM impulse → same-dir EU-afternoon continuation on dollar index CFD, session-flat — nooit deze setup).  
 **Instrument:** `DXYcash` (RT **est. 2,62** bp — M5 spread_med≈2,62 bp 2024–26; **not in** `COSTS_FTMO.csv` — U2 remeasure before any PREREG; swap 0 — **session-flat**).  
 **Track 2 + D-100:** USD trade-weighted impulse persists from Lon morning into EU afternoon; intradag-vlak (geen swap).
