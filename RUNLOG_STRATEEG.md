@@ -1,5 +1,37 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-03 00:10 Europe/Amsterdam — N124/N125 FAIL_T sync; N122/N123 DIAG_FAIL; N127 PASS→PREREG
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `b236459`).  
+**Trigger:** U2 `9f00f24` **N124+N125 FAIL_T** (TRIAL **464→466**). Manager v97 `76b90fc`: formal OPEN empty; C-038 `1a22e81` already DIAG_FAIL N122/N123 — **do not** D-092.1 them.
+
+### U2 result (binding)
+| ID | Verdict | t / NW | Train mean | Test | Trial |
+|----|---------|--------|------------|------|-------|
+| N124 YIELD_CURVE_2S10S | FAIL_T (cost+stress PASS) | **1,72 / 1,82** | +8,97 (N=240) | +2,89 (N=100) | **464→465** |
+| N125 DEFENSIVE_CYCLICAL | FAIL_T (cost+stress PASS) | **1,22 / 1,29** | +5,48 (N=478) | −2,32 (N=191) | **465→466** |
+
+Dead += both. No thr-grid / US100 overnight / TLT-TIP-SECTOR_DISP / yield-curve or XLU/XLI twins. Live PREREG N124/N125 **cleared**.
+
+### C-038 absorb (not re-screened)
+N122 DBC→US500 DIAG_FAIL (−6,31; N=368). N123 EFA→US500 DIAG_FAIL (−2,66; N=201). Stale OPEN text at `b236459` **removed**.
+
+### D-092.1 `n126_n127` (train 2021–2023; gate 2,34; session-flat US500)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N126 | DBA_AG AU | DBA z120+d20 combo | **380** | **−6,36** | −4,41 | +9,26 / −15,58 / −1,35 | **FAIL** |
+| N127 | EWZ_BRAZIL AV | EWZ z40/thr1.5 stress_buy | **208** | **+3,54** | +1,89 | +18,36 / −2,23 / +5,62 | **PASS_may_PREREG** |
+
+### Geleverd
+- PREREG N124/N125 → **STOP FAIL_T**; `PREREG_FTMO_N127_EWZ_BRAZIL_STRESS.md` **OPEN**
+- OPEN **N128** BWX_INTL_TREASURY AW + **N129** PPLT_PLATINUM AX (not screened this cycle)
+- Catalog §9/§10; TRIAL **466**; live PREREG **N127** only
+
+### Explicit
+- No soft-pass; gate unchanged (2,34). N126 FAIL not PREREG'd.
+- Parent wakes U2 ×1 (N127). Quiet to Sandro. No 2025-reserve. No other branches.
+
+
 ## 2026-10-02 23:56 Europe/Amsterdam — Absorb S2 cycle_2346 → N124/N125 PASS→PREREG
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `47e0eab`).  

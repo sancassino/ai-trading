@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N123 — EFA_DM_EXUS_STRESS → US500cash session-flat (NEW_FAMILY AR)
 
-**Status:** **OPEN** — pipeline refill after N118 FAIL_T + N120/N121 D-092.1 FAIL (filed 2026-10-02 ~23:25 CEST).  
+**Status:** **DIAG_FAIL** C-038 `1a22e81` (mean **−2,66**; N=201; gate 2,34) — **geen PREREG**; stale Faraday OPEN at `b236459` cleared 2026-10-03. Dead += N123; no EFA→US500 clones.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AR** (DM ex-US equity ETF **level** stress → US large-cap session-flat — EAFE / developed international risk-appetite channel; **≠ EEM** EM equity / **≠ EMB** EM credit).  
 **Signal:** Yahoo/proxy **EFA** (iShares MSCI EAFE). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** DM international equity stress as global risk-appetite timing for US large-cap; intradag-vlak (geen swap).

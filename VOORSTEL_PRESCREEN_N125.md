@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N125 — DEFENSIVE_CYCLICAL → US500cash session-flat twin (NEW_FAMILY AT)
 
-**Status:** **PASS → PREREG** — D-092.1 `n124_n125` train N=**478** mean bruto **+5,48** ≥ gate **2,34** (filed 2026-10-02 ~23:56 CEST). Live: `PREREG_FTMO_N125_DEFENSIVE_CYCLICAL.md`.  
+**Status:** **STOP FAIL_T** U2 `9f00f24` (TRIAL **465→466**; cost+stress PASS; t/NW **1,22/1,29** <2; test −2,32). Dead += N125; no XLU/XLI defensive twin / US100 overnight / SECTOR_DISP clones.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AT** from S2 `13fe10c` cycle_2346.  
 **Signal:** Yahoo/proxy **XLU/XLI** relative. **Trade:** `US500cash` (**US500 twin** per S2 FLAG — not US100 overnight).  
 **Track 4 + D-100:** Defensive-vs-cyclical relative as risk-appetite timing; intradag-vlak (geen swap).

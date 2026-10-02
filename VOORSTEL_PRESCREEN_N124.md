@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N124 — YIELD_CURVE_2S10S → US500cash session-flat (NEW_FAMILY AS)
 
-**Status:** **PASS → PREREG** — D-092.1 `n124_n125` train N=**240** mean bruto **+8,97** ≥ gate **2,34** (filed 2026-10-02 ~23:56 CEST). Live: `PREREG_FTMO_N124_YIELD_CURVE_2S10S.md`.  
+**Status:** **STOP FAIL_T** U2 `9f00f24` (TRIAL **464→465**; cost+stress PASS; t/NW **1,72/1,82** <2; test +2,89). Dead += N124; no yield-curve / thr-grid / US100 overnight / TLT-TIP-SECTOR_DISP clones.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AS** from S2 `13fe10c` cycle_2346.  
 **Signal:** US Treasury **10Y−3M** slope. **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** Curve-shape / growth-expectations timing for DM large-cap; intradag-vlak (geen swap).

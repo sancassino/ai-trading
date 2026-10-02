@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N122 — DBC_COMMODITY_STRESS → US500cash session-flat (NEW_FAMILY AQ)
 
-**Status:** **OPEN** — pipeline refill after N118 FAIL_T + N120/N121 D-092.1 FAIL (filed 2026-10-02 ~23:25 CEST).  
+**Status:** **DIAG_FAIL** C-038 `1a22e81` (mean **−6,31**; N=368; gate 2,34) — **geen PREREG**; stale Faraday OPEN at `b236459` cleared 2026-10-03. Dead += N122; no DBC→US500 clones.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AQ** (broad commodity ETF **level** stress → equity session-flat — multi-commodity risk channel; **≠ CPER** copper solo / **≠ GAS** / **≠ SILVER** / **≠ CRACK** / **≠ USO** oil solo).  
 **Signal:** Yahoo/proxy **DBC** (Invesco DB Commodity Index Tracking). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** Broad commodity complex stress as global growth / inflation-risk timing for DM large-cap; intradag-vlak (geen swap).
