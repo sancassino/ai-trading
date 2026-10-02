@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N135 — QUAL_QUALITY_STRESS → US500cash session-flat (NEW_FAMILY BD)
 
-**Status:** **OPEN** — D-094 refill after N132/N133 D-092.1 FAIL + N130/N131 FAIL_T (filed 2026-10-03 ~00:24 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** — `n134_n135` train N=**211** mean bruto **−5,03** < gate **2,34** (med −6,86; years +10,50/−4,31/−9,58; L/S 86/125); stress informal < 3,51. Screened 2026-10-03 ~00:29 CEST. **Not an EQW/IWM clone** (EQW z-corr −0,18; IWM z-corr 0,72, sign agree 0,99 but cover 0,52 < 0,70). Dead screen; no QUAL/quality-factor clone.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BD** (US **quality-factor** ETF stress → equity session-flat — profitability/low-leverage channel; **≠ MTUM** momentum / **≠ EQW** breadth ratio / **≠ XLU** defensive / **≠ USMV** min-vol).  
 **Signal:** Yahoo/proxy **QUAL**. **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100 + D-097 XS:** Quality-factor extremes as a balance-sheet regime for the US cash session; intradag-vlak.
@@ -29,4 +29,5 @@
 ## Pre-screen
 - Data: `data/daily/QUAL.csv` + `data/m5gz/US500cash.csv.gz`; train **2021-01-01 … 2023-12-31**.
 - Gate: signed mean bruto ≥ **2,34** bp, **N ≥ 150**.
-- PASS → PREREG_FTMO_N135. FAIL → STOP (geen MTUM/EQW rewrite, geen USMV/XLU twin, geen thr-grid, geen overnight, geen soft gate).
+- Result: `results/R2/n134_n135_prescreen/` — **FAIL** (N=211, −5,03 < 2,34). Clone check: vs EQW z-corr **−0,18** / agree 0,25 / cover 0,32; vs IWM z-corr **0,72** / both-active sign agree **0,99** / cover **0,52** (below 0,70 cover bar; not a clone). No PREREG.
+- STOP (geen MTUM/EQW rewrite, geen USMV/XLU/IWM twin, geen thr-grid, geen overnight, geen soft gate).

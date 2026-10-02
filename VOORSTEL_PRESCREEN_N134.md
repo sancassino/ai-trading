@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N134 — XLF_FINANCIAL_STRESS → US500cash session-flat (NEW_FAMILY BC)
 
-**Status:** **OPEN** — D-094 refill after N132/N133 D-092.1 FAIL + N130/N131 FAIL_T (filed 2026-10-03 ~00:24 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** — `n134_n135` train N=**184** mean bruto **−1,46** < gate **2,34** (med −6,04; years +11,62/+0,27/−5,66; L/S 82/102); stress informal < 3,51. Screened 2026-10-03 ~00:29 CEST. **Not a SECTOR_DISP clone** (both-active sign agree 0,38; cover 0,65). Dead screen; no XLF/financials-level clone.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BC** (US **financial-sector equity level** stress → equity session-flat — bank/broker balance-sheet channel; **≠ HYG** credit ETF / **≠ EMB** / **≠ SECTOR_DISP** XL* dispersion / **≠ XLU/XLI** ratio / **≠ MTUM** momentum factor).  
 **Signal:** Yahoo/proxy **XLF**. **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100 + D-097:** Financials lead the cash session when bank equity is stretched or washed out; intradag-vlak.
@@ -29,4 +29,5 @@
 ## Pre-screen
 - Data: `data/daily/XLF.csv` + `data/m5gz/US500cash.csv.gz`; train **2021-01-01 … 2023-12-31**.
 - Gate: signed mean bruto ≥ **2,34** bp, **N ≥ 150**.
-- PASS → PREREG_FTMO_N134. FAIL → STOP (geen HYG/EMB rewrite, geen SECTOR_DISP/XLU-XLI twin, geen thr-grid, geen overnight, geen soft gate).
+- Result: `results/R2/n134_n135_prescreen/` — **FAIL** (N=184, −1,46 < 2,34). Clone check vs SECTOR_DISP proxy (XL* 10d xs-std z40 fade +1,0/−0,5): sign agree **0,38**, cover **0,65** — not a clone (bar: agree≥0,85 AND cover≥0,70, or z-corr≥0,90). vs XLU/XLI z-corr **−0,44**.
+- STOP (geen HYG/EMB rewrite, geen SECTOR_DISP/XLU-XLI twin, geen thr-grid, geen overnight, geen soft gate).

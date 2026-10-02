@@ -1,5 +1,32 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+
+## 2026-10-03 00:29 Europe/Amsterdam — N134/N135 D-092.1 FAIL; OPEN N136/N137
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `c19fd24`).  
+**Trigger:** Formal OPEN N134 XLF / N135 QUAL. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### D-092.1 `n134_n135` (train 2021–2023; gate 2,34; stress informal 3,51; session-flat US500 15:30→21:00)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N134 | XLF_FINANCIAL BC | XLF z40/thr±1,5 stress_buy | **184** | **−1,46** | −6,04 | +11,62 / +0,27 / −5,66 | **FAIL** (L/S 82/102) |
+| N135 | QUAL_QUALITY BD | QUAL z40/thr±1,5 stress_buy | **211** | **−5,03** | −6,86 | +10,50 / −4,31 / −9,58 | **FAIL** (L/S 86/125) |
+
+Clone bar (precommitted): z-corr ≥ 0,90, or (sign agree ≥ 0,85 AND cover ≥ 0,70).  
+N134 vs SECTOR_DISP proxy: agree **0,38**, cover **0,65** — not a clone. vs XLU/XLI z-corr **−0,44**.  
+N135 vs EQW: z-corr **−0,18**. vs IWM: z-corr **0,72**, agree **0,99**, cover **0,52** — not a clone (cover below bar).
+
+Both means < 2,34 and < 3,51. No soft-pass. No PREREG. TRIAL stays **470**.
+
+### Geleverd
+- N134 + N135 → **STOP FAIL** (D-092.1)
+- OPEN **N136 BRENT_WTI_XS** (BE, gate 18,15) + **N137 USDMXN_EM_CARRY_FADE** (BF, gate 8,88 est.) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
 ## 2026-10-03 00:24 Europe/Amsterdam — N130/N131 FAIL_T sync; N132/N133 FAIL; OPEN N134/N135
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `0af85da`).  

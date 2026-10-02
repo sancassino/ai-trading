@@ -1,0 +1,86 @@
+{
+  "N134": {
+    "id": "N134",
+    "instrument": "US500cash",
+    "n": 184,
+    "mean_bruto_bp": -1.4568,
+    "median_bruto_bp": -6.0398,
+    "gate_bp": 2.34,
+    "stress_gate_bp": 3.51,
+    "stress_note": "BELOW_stress_1.5x (info only; D-092.1 cost-gate is binding)",
+    "verdict": "FAIL",
+    "hit_rate": 0.4457,
+    "n_long": 82,
+    "n_short": 102,
+    "years": {
+      "2021": 11.6166,
+      "2022": 0.2655,
+      "2023": -5.6574
+    },
+    "notes": "XLF_FINANCIAL z40/thr1.5 stress_buy; NEW_FAMILY BC; D-100 session-flat; \u2260SECTOR_DISP/HYG/XLU-XLI",
+    "clone": {
+      "SECTOR_DISP": {
+        "z_corr_train": null,
+        "sign_agree_both_active": 0.3831,
+        "both_active_over_cand": 0.6471,
+        "n_cand_active": 238,
+        "n_both_active": 154,
+        "clone": false
+      },
+      "XLU_XLI": {
+        "z_corr_train": -0.4378,
+        "sign_agree_both_active": 0.1519,
+        "both_active_over_cand": 0.3319,
+        "n_cand_active": 238,
+        "n_both_active": 79,
+        "clone": false
+      },
+      "_any_clone": false
+    }
+  },
+  "N135": {
+    "id": "N135",
+    "instrument": "US500cash",
+    "n": 211,
+    "mean_bruto_bp": -5.0289,
+    "median_bruto_bp": -6.8561,
+    "gate_bp": 2.34,
+    "stress_gate_bp": 3.51,
+    "stress_note": "BELOW_stress_1.5x (info only; D-092.1 cost-gate is binding)",
+    "verdict": "FAIL",
+    "hit_rate": 0.4502,
+    "n_long": 86,
+    "n_short": 125,
+    "years": {
+      "2021": 10.4984,
+      "2022": -4.3141,
+      "2023": -9.578
+    },
+    "notes": "QUAL_QUALITY z40/thr1.5 stress_buy; NEW_FAMILY BD; D-100 session-flat; \u2260EQW/IWM/MTUM/USMV",
+    "clone": {
+      "EQW": {
+        "z_corr_train": -0.1824,
+        "sign_agree_both_active": 0.25,
+        "both_active_over_cand": 0.3217,
+        "n_cand_active": 286,
+        "n_both_active": 92,
+        "clone": false
+      },
+      "IWM": {
+        "z_corr_train": 0.7197,
+        "sign_agree_both_active": 0.9867,
+        "both_active_over_cand": 0.5245,
+        "n_cand_active": 286,
+        "n_both_active": 150,
+        "clone": false
+      },
+      "_any_clone": false
+    }
+  },
+  "clone_rule": {
+    "z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "both_over_cand_ge": 0.7,
+    "sector_disp_proxy": "XL* 10d xs-std z40 fade +1.0/-0.5 (XLC/XLRE absent)"
+  }
+}
