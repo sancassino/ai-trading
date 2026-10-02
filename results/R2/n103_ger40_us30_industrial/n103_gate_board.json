@@ -1,0 +1,66 @@
+{
+  "prereg": "PREREG_FTMO_N103_GER40_US30_INDUSTRIAL",
+  "new_family": "Z",
+  "config": "GER40 Lon-AM |ger_am|\u226540 \u2192 same-dir US30cash session-flat 15:30\u219221:00 CET; swap=0",
+  "signal": "GER40cash",
+  "instrument": "US30cash",
+  "rt_bp": 0.45,
+  "gate_bp": 1.35,
+  "stress_gate_bp": 2.0250000000000004,
+  "swap_bp": 0.0,
+  "ger_am_thr_bp": 40.0,
+  "faraday_tip_sha": "7059c63eb39ac93a35fc29b64821cf16a745da03",
+  "train": {
+    "label": "train_2021_2023",
+    "n": 286,
+    "mean_bruto": 1.7488,
+    "mean_netto": 1.2988,
+    "t_netto": 0.2824,
+    "t_nw5": 0.2448,
+    "median_bruto": -1.1305,
+    "mean_mae_bp": 55.3792,
+    "n_long": 146,
+    "n_short": 140,
+    "hit_rate": 0.4895,
+    "years": {
+      "2021": {
+        "n": 57,
+        "mean_bruto": 2.2947
+      },
+      "2022": {
+        "n": 146,
+        "mean_bruto": 10.5327
+      },
+      "2023": {
+        "n": 83,
+        "mean_bruto": -14.0771
+      }
+    }
+  },
+  "test": {
+    "label": "test_2024",
+    "n": 74,
+    "mean_bruto": 1.3225,
+    "mean_netto": 0.8725,
+    "t_netto": 0.1281,
+    "t_nw5": 0.1455,
+    "median_bruto": 9.1818,
+    "mean_mae_bp": 45.1176,
+    "n_long": 46,
+    "n_short": 28,
+    "hit_rate": 0.5676,
+    "years": {
+      "2024": {
+        "n": 74,
+        "mean_bruto": 1.3225
+      }
+    }
+  },
+  "cost_pass": true,
+  "stress_pass": false,
+  "verdict": "FAIL_STRESS",
+  "counts_as_trial": false,
+  "reserve_2025": "untouched",
+  "dead_label": "N103_GER40_US30_INDUSTRIAL",
+  "note": "Cost PASS but stress FAIL (mean < 2.025). counts_as_trial=false (no formal t). No thr-grid / year-split reported. Dead += N103_GER40_US30_INDUSTRIAL. Reserve 2025 untouched."
+}
