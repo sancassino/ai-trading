@@ -83,3 +83,5 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-10-01 | N87/PREREG_FTMO_N87: US30cash opening-gap fade |gap|>30bp intradag-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.63 <2.0 train; test N=27 mean -17.71 bp; 1 variant) | 1 | 457 |
 | 2026-10-02 | N92/PREREG_FTMO_N92: US100cash NY-open 2h mom intradag-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.56 <2.0 train; test t_NW 0.51; 1 variant) | 1 | 458 |
 | 2026-10-02 | N93/PREREG_FTMO_N93: SECTOR_DISP_ROTATION US100 session-flat (kostenpoort STOP mean bruto 0.99 < 1.98; **ongeldig/telt niet** per NEXT_STEPS v86 / C-029 — FAIL_COST_GATE ≠ trial) | 0 | 458 |
+| 2026-10-02 | N100/PREREG_FTMO_N100: EMB_CREDIT_STRESS US100 session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 0.38 <2.0 train; test N=154 mean -2.57 bp; 1 variant) | 1 | 459 |
+| 2026-10-02 | N101/PREREG_FTMO_N101: CRACK_SPREAD_MACRO US100 session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.21 <2.0 train; test N=184 mean -5.00 bp; 1 variant) | 1 | 460 |

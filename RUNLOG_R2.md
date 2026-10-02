@@ -2026,3 +2026,39 @@ Year-split bruto train: 2021 +2,03 (n=46) / 2022 −5,24 (n=125) / 2023 +6,28 (n
 **TRIAL_COUNT blijft 458**. Geen TRIALS-append. Dead set ongewijzigd t.o.v. N93 tip (+ C-033/C-034 diag-only closes).
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG (Strateeg/S2 ≥2 NEW_FAMILY or CEO lat-B). Cadans :15/:45.
+
+## Cyclus 21:59 CEST (2026-10-02) — N100 EMB_CREDIT_STRESS FAIL_T (TRIAL 458→459)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `edbd2ee` (`claude/trusting-faraday-34tsmg`): `PREREG_FTMO_N100_EMB_CREDIT_STRESS.md` + `results/lane_b/EMB_CREDIT_STRESS_SOURCE.md` (S2 `67a9be1` cycle_2140); script `scripts/n100_emb_credit_stress_gate.py` frozen vóór run.
+
+**Config freeze:** EMB z120/combo thr ±0,5 → US100cash session-flat **15:30→21:00 CET**; RT 0,66 bp; gate **1,98**; stress 2,97; swap=0 (D-100). NEW_FAMILY **EMB_CREDIT_STRESS**. Lane-A day_t 3,00 / mean 21,42 = overnight Yahoo proxy hold=3d — **niet** formele PASS.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 378 | **+2,973 bp** | +2,313 bp | 0,37 / 0,38 | cost PASS (≥1,98); stress PASS (≥2,97) |
+| Test 2024 | 154 | −2,57 bp | −3,23 bp | −0,43 / −0,44 | formal t <2 |
+
+Long/short train 85/293. Signal-days train nonzero 443.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 458→459**. Dead += `N100_EMB_CREDIT_STRESS`. Geen retune / geen klonen (geen thr-grid, geen overnight rewrite, geen HYG/LQD/EEM twin). Board: `results/R2/n100_emb_credit_stress/n100_gate_board.json`.
+
+## Cyclus 21:59 CEST (2026-10-02) — N101 CRACK_SPREAD_MACRO FAIL_T (TRIAL 459→460)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `edbd2ee`: `PREREG_FTMO_N101_CRACK_SPREAD_MACRO.md` + `results/lane_b/CRACK_SPREAD_MACRO_SOURCE.md` (S2 `67a9be1` cycle_2140); script `scripts/n101_crack_spread_macro_gate.py` frozen vóór run.
+
+**Config freeze:** HO/BRENT crack z60 / thr ±0,5 / crack_fade → US100cash session-flat **15:30→21:00 CET**; RT 0,66 bp; gate **1,98**; stress 2,97; swap=0; **geen** oil CFD leg (D-100). NEW_FAMILY **CRACK_SPREAD_MACRO**. Lane-A day_t 2,26 / mean 23,09 = overnight Yahoo proxy hold=5d — **niet** formele PASS.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 436 | **+6,299 bp** | +5,639 bp | 1,05 / 1,21 | cost PASS (≥1,98); stress PASS (≥2,97) |
+| Test 2024 | 184 | −5,00 bp | −5,66 bp | −0,87 / −0,97 | formal t <2 |
+
+Long/short train 195/241. Signal-days train nonzero 547.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 459→460**. Dead += `N101_CRACK_SPREAD_MACRO`. Geen retune / geen klonen (geen thr-grid, geen oil-CFD twin, geen overnight rewrite, geen N98 lead-lag rewrite). Board: `results/R2/n101_crack_spread_macro/n101_gate_board.json`.
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG. Skip N75–N101 / VIX / ORB-meta / L60 / UKOIL-OVN / CORN / SECTOR_DISP / NY-2h / EMB / CRACK clones. Cadans :15/:45. TRIAL_COUNT **460**.
