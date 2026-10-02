@@ -1,0 +1,317 @@
+{
+  "N148": {
+    "id": "N148",
+    "instrument": "USDJPY+US100cash",
+    "n": 217,
+    "mean_bruto_bp": 3.3053,
+    "gate_bp": 4.32,
+    "verdict": "FAIL",
+    "notes": "USDJPY_US100_RISK_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(0.78+0.66); swap 0; NEW_FAMILY BQ",
+    "median_bruto_bp": 0.9616,
+    "stress_gate_bp": 6.48,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.5023,
+    "n_long_basket": 106,
+    "n_short_basket": 111,
+    "years": {
+      "2021": 23.984,
+      "2022": 8.5469,
+      "2023": -6.6712
+    },
+    "meta": {
+      "n_signal_days": 262,
+      "n_skip_missing_bar": 45,
+      "n_ratio_days": 775,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "train_days": {
+        "USDJPY": 778,
+        "US100cash": 775
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "USDJPY": 0.78,
+      "US100cash": 0.66
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N149": {
+    "id": "N149",
+    "instrument": "EURUSD+GER40cash",
+    "n": 140,
+    "mean_bruto_bp": 2.0462,
+    "gate_bp": 4.05,
+    "verdict": "FAIL",
+    "notes": "EURUSD_GER40_EUROPE_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(0.63+0.72); swap 0; NEW_FAMILY BR",
+    "median_bruto_bp": 5.3309,
+    "stress_gate_bp": 6.075,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.5214,
+    "n_long_basket": 70,
+    "n_short_basket": 70,
+    "years": {
+      "2022": 1.2005,
+      "2023": 3.3148
+    },
+    "meta": {
+      "n_signal_days": 215,
+      "n_skip_missing_bar": 75,
+      "n_ratio_days": 768,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "train_days": {
+        "EURUSD": 778,
+        "GER40cash": 768
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "EURUSD": 0.63,
+      "GER40cash": 0.72
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N148_clones": {
+    "US100_US500_z40": {
+      "peer": "US100_US500_z40",
+      "z_corr_train": -0.701,
+      "sign_agree_both_active": 0.0082,
+      "both_active_over_cand": 0.4639,
+      "n_cand_active": 263,
+      "n_both_active": 122,
+      "clone": false,
+      "binding": true
+    },
+    "US30_US500_z40_N142": {
+      "peer": "US30_US500_z40_N142",
+      "z_corr_train": 0.687,
+      "sign_agree_both_active": 0.9919,
+      "both_active_over_cand": 0.4677,
+      "n_cand_active": 263,
+      "n_both_active": 123,
+      "clone": false,
+      "binding": true
+    },
+    "EUR_GER40_z40_N149": {
+      "peer": "EUR_GER40_z40_N149",
+      "z_corr_train": 0.425,
+      "sign_agree_both_active": 0.859,
+      "both_active_over_cand": 0.2966,
+      "n_cand_active": 263,
+      "n_both_active": 78,
+      "clone": false,
+      "binding": true
+    },
+    "N81_US100_leg": {
+      "peer": "N81_US100_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.9684,
+      "both_active_over_cand": 0.3612,
+      "n_cand_active": 263,
+      "n_both_active": 95,
+      "clone": false,
+      "binding": true
+    },
+    "N142_sign": {
+      "peer": "N142_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.9919,
+      "both_active_over_cand": 0.4677,
+      "n_cand_active": 263,
+      "n_both_active": 123,
+      "clone": false,
+      "binding": true
+    },
+    "N131_US500_day_sign_vs_US100_leg": {
+      "peer": "N131_US500_day_sign_vs_US100_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2088,
+      "both_active_over_cand": 0.692,
+      "n_cand_active": 263,
+      "n_both_active": 182,
+      "clone": false,
+      "binding": true
+    },
+    "N92_US100_NY2H_vs_US100_leg": {
+      "peer": "N92_US100_NY2H_vs_US100_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3871,
+      "both_active_over_cand": 0.8251,
+      "n_cand_active": 263,
+      "n_both_active": 217,
+      "clone": false,
+      "binding": true
+    },
+    "N149_sign": {
+      "peer": "N149_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.859,
+      "both_active_over_cand": 0.2966,
+      "n_cand_active": 263,
+      "n_both_active": 78,
+      "clone": false,
+      "binding": true
+    },
+    "USDJPY_L60_LO_vs_JPY_leg": {
+      "peer": "USDJPY_L60_LO_vs_JPY_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4808,
+      "both_active_over_cand": 0.7909,
+      "n_cand_active": 263,
+      "n_both_active": 208,
+      "clone": false,
+      "binding": true
+    },
+    "US100_OVN_20d_vs_US100_leg": {
+      "peer": "US100_OVN_20d_vs_US100_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.0228,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 263,
+      "n_both_active": 263,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "N149_clones": {
+    "GER40_UK100_z40_N138": {
+      "peer": "GER40_UK100_z40_N138",
+      "z_corr_train": -0.5536,
+      "sign_agree_both_active": 0.1058,
+      "both_active_over_cand": 0.4837,
+      "n_cand_active": 215,
+      "n_both_active": 104,
+      "clone": false,
+      "binding": true
+    },
+    "USDJPY_US100_z40_N148": {
+      "peer": "USDJPY_US100_z40_N148",
+      "z_corr_train": 0.4279,
+      "sign_agree_both_active": 0.859,
+      "both_active_over_cand": 0.3628,
+      "n_cand_active": 215,
+      "n_both_active": 78,
+      "clone": false,
+      "binding": true
+    },
+    "US30_US500_z40_N142": {
+      "peer": "US30_US500_z40_N142",
+      "z_corr_train": 0.2391,
+      "sign_agree_both_active": 0.6495,
+      "both_active_over_cand": 0.4512,
+      "n_cand_active": 215,
+      "n_both_active": 97,
+      "clone": false,
+      "binding": true
+    },
+    "N138_sign": {
+      "peer": "N138_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.1068,
+      "both_active_over_cand": 0.4791,
+      "n_cand_active": 215,
+      "n_both_active": 103,
+      "clone": false,
+      "binding": true
+    },
+    "N103_GER_day_sign_vs_GER_leg": {
+      "peer": "N103_GER_day_sign_vs_GER_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3289,
+      "both_active_over_cand": 0.3535,
+      "n_cand_active": 215,
+      "n_both_active": 76,
+      "clone": false,
+      "binding": true
+    },
+    "N142_sign": {
+      "peer": "N142_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.6495,
+      "both_active_over_cand": 0.4512,
+      "n_cand_active": 215,
+      "n_both_active": 97,
+      "clone": false,
+      "binding": true
+    },
+    "N148_sign": {
+      "peer": "N148_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.859,
+      "both_active_over_cand": 0.3628,
+      "n_cand_active": 215,
+      "n_both_active": 78,
+      "clone": false,
+      "binding": true
+    },
+    "EURNZD_LO_5d_vs_EUR_leg": {
+      "peer": "EURNZD_LO_5d_vs_EUR_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.6018,
+      "both_active_over_cand": 0.5256,
+      "n_cand_active": 215,
+      "n_both_active": 113,
+      "clone": false,
+      "binding": true
+    },
+    "N115_EUR_LonAM_vs_EUR_leg": {
+      "peer": "N115_EUR_LonAM_vs_EUR_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5435,
+      "both_active_over_cand": 0.214,
+      "n_cand_active": 215,
+      "n_both_active": 46,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N148": 4.32,
+    "N149": 4.05
+  },
+  "costs_rt": {
+    "USDJPY": 0.78,
+    "US100cash": 0.66,
+    "EURUSD": 0.63,
+    "GER40cash": 0.72
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "session": "15:30-21:00 CET",
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "gate_source": "COSTS_FTMO.csv roundtrip_intraday_bp; not a session median",
+  "loaded_days_incl_warmup": {
+    "USDJPY": 778,
+    "US100cash": 775,
+    "EURUSD": 778,
+    "GER40cash": 768,
+    "US500cash": 775,
+    "US30cash": 775,
+    "UK100cash": 754,
+    "EURNZD": 778
+  },
+  "train_days": {
+    "USDJPY": 778,
+    "US100cash": 775,
+    "EURUSD": 778,
+    "GER40cash": 768,
+    "US500cash": 775,
+    "US30cash": 775,
+    "UK100cash": 754,
+    "EURNZD": 778
+  }
+}

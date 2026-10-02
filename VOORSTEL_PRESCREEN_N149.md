@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N149 — EURUSD_GER40_EUROPE_XS session-flat (NEW_FAMILY BR)
 
-**Status:** **OPEN** — D-092.1 refill after N146 FAIL / N147 FAIL_CLONE (filed 2026-10-03 ~01:18 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n148_n149` (N=140, mean **+2,05 < 4,05**; med +5,33; years — / +1,20 / +3,31; L/S 70/70; 215 signals, 75 missing bars). 2021 GER40 M5 has almost no 15:30 bar, so that year contributes no fills — not DIAG (2022–23 full) and not UNDERPOWERED (mean is under the gate; N<150 is extra, not a pass). Not N138 (z −0,55, agree 0,11, cover 0,48), not N103 GER day-sign (agree 0,33, cover 0,35), not EURNZD-LO (agree 0,60, cover 0,53), not N115 EUR Lon-AM (agree 0,54, cover 0,21), not N148 (z 0,43, agree 0,86, cover 0,36). Screened 2026-10-03 ~01:23 CEST. NEW_FAMILY BR dead; no EUR-only, no GER-only, no FX/index twin.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BR** (euro vs DAX **Europe-local basis**, two CFDs, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an FX/metal twin of N146. Not an FX/oil twin of N147. Not a GER/UK index pair and not GER→US30 lead-lag.  
 **Signal:** M5 day-close ratio **EURUSD / GER40cash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** the euro and the cash DAX dislocate when Europe's currency has outrun, or lagged, its own equity. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha.

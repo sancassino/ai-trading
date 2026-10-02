@@ -1,6 +1,40 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
 
+## 2026-10-03 01:23 Europe/Amsterdam — N148/N149 D-092.1 FAIL; OPEN N150/N151
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `b1f1347`).  
+**Trigger:** Formal OPEN N148 USDJPY_US100_RISK_XS / N149 EURUSD_GER40_EUROPE_XS. Gates are COSTS round-trips. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat 15:30→21:00 is the cheap side, so swap in the gate is **0**. Not a session-median spread.
+
+| Book | legs | RT | gate |
+|------|------|---:|-----:|
+| N148 | USDJPY 0,78 + US100cash 0,66 | 1,44 | **4,32** |
+| N149 | EURUSD 0,63 + GER40cash 0,72 | 1,35 | **4,05** |
+
+### D-092.1 `n148_n149` (train 2021–2023; session-flat 15:30→21:00; swap 0; both legs)
+| ID | Family | N | mean | med | years | Verdict |
+|----|--------|--:|-----:|----:|-------|---------|
+| N148 | USDJPY_US100_RISK_XS BQ | **217** | **+3,31** | +0,96 | +23,98 / +8,55 / −6,67 | **FAIL** vs **4,32** (L/S 106/111; 262 signals, 45 missing bars) |
+| N149 | EURUSD_GER40_EUROPE_XS BR | **140** | **+2,05** | +5,33 | — / +1,20 / +3,31 | **FAIL** vs **4,05** (L/S 70/70; 215 signals, 75 missing bars) |
+
+Clone bar unchanged (|z|≥0,90 or agree≥0,85 and cover≥0,70).  
+N148 vs US100/US500 z40: z **−0,70**, agree 0,01, cover 0,46. vs N142: z **0,69**, agree **0,99**, cover **0,47** (cover under 0,70 — not a clone). vs N81 US100-leg agree 0,97, cover 0,36. vs N92 agree **0,39**, cover 0,83. vs USDJPY L60 agree **0,48**, cover 0,79. vs US100 20d overnight agree **0,02**, cover 1,00. vs N149 z 0,43, cover 0,30. Not a clone. Mean **+3,31 < 4,32**.  
+N149 vs N138 GER/UK: z **−0,55**, agree 0,11, cover 0,48. vs N103 GER day-sign agree **0,33**, cover 0,35. vs EURNZD-LO agree **0,60**, cover 0,53. vs N115 EUR Lon-AM agree **0,54**, cover 0,21. vs N148 z 0,43, agree 0,86, cover 0,36. Not a clone. Mean **+2,05 < 4,05**. 2021 GER40 M5 has almost no 15:30 bar (session coverage ~1%), so that year has no fills — not DIAG (2022–23 are full) and not UNDERPOWERED (the mean fails; N=140<150 is not a pass).
+
+No soft-pass. No PREREG. TRIAL stays **470**. No USDJPY-only / US100-only. No EUR-only / GER-only. No FX/index twin. No N92, L60, US100-overnight, N103, EURNZD-LO, N115, or EU-index-XS rewrite.
+
+### Geleverd
+- N148 → **STOP FAIL**; N149 → **STOP FAIL** (D-092.1)
+- OPEN **N150 XAGUSD_US30_METAL_INDUSTRIAL_XS** (BS, gate **16,56** = 3×(5,07+0,45), both in COSTS) + **N151 EURJPY_USDCHF_FUNDING_XS** (BT, gate **6,33** = 3×(1,10+1,01), both in COSTS) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
 ## 2026-10-03 01:18 Europe/Amsterdam — N146/N147 D-092.1 FAIL; OPEN N148/N149
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `5d87ae3`).  

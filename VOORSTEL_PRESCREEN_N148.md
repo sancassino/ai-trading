@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N148 — USDJPY_US100_RISK_XS session-flat (NEW_FAMILY BQ)
 
-**Status:** **OPEN** — D-092.1 refill after N146 FAIL / N147 FAIL_CLONE (filed 2026-10-03 ~01:18 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n148_n149` (N=217, mean **+3,31 < 4,32**; med +0,96; years +23,98 / +8,55 / −6,67; L/S 106/111; 262 signals, 45 missing bars). Not a clone: N142 agree 0,99 but cover **0,47**; N81 agree 0,97 cover 0,36; US100/US500 z **−0,70**; N92 agree 0,39 cover 0,83; USDJPY L60 agree 0,48 cover 0,79; US100 20d overnight agree **0,02** cover 1,00; N149 z 0,43 cover 0,30. Screened 2026-10-03 ~01:23 CEST. NEW_FAMILY BQ dead; no USDJPY-only, no US100-only, no FX/index twin.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BQ** (yen vs Nasdaq **risk basis**, two CFDs, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an FX/metal twin of N146. Not an FX/oil twin of N147. Not an index–index pair. Not an equity-factor z→US500.  
 **Signal:** M5 day-close ratio **USDJPY / US100cash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** the funding currency and the cash Nasdaq dislocate when one has outrun the other. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha.
