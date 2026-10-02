@@ -1,16 +1,32 @@
 # PREREG_FTMO_N130 — EQW_BREADTH_STRESS (US500cash; session-flat; NEW_FAMILY AY)
 
-**Status:** **OPEN** — frozen for U2 cost-gate + formal trial (Lane-B D-092.1 PASS).  
+**Status:** **STOP FAIL_T** — U2 tip `03ad9da` on `claude/uitvoerder2-r` (TRIAL **468→469**).  
 **Auteur:** Strateeg (Grok) Lane-B on `claude/trusting-faraday-34tsmg`.  
 **VOORSTEL:** `VOORSTEL_PRESCREEN_N130.md`.  
 **Signal:** Yahoo/proxy **SPX_EQW / SPX** (RSP/SPX breadth ratio). **Trade:** `US500cash`.  
-**NEW_FAMILY AY:** US equal-weight vs cap-weight **breadth ratio** stress → equity session-flat (**≠ IWM** small-cap level / **≠ SECTOR_DISP** / **≠ DEFENSIVE_CYCLICAL** XLU/XLI / **≠ N81** pair RV overnight).  
-**Hold:** **session-flat** entry ≈15:30 CET → flat ≈21:00 CET (D-100; US500 overnight swap avoided).  
-**TRIAL_COUNT book:** **468** (deze PREREG telt nog niet).  
+**NEW_FAMILY AY:** **DEAD** (no EQW/RSP/breadth-ratio clones, no IWM/SECTOR_DISP/XLU-XLI rewrite, no thr-grid, no overnight).  
+**Hold:** session-flat 15:30→21:00 CET (was freeze).  
+**TRIAL_COUNT book:** **469** after this trial.  
 **Reserve 2025+:** **onaangeroerd.**  
-**Geen retune** na freeze.
+**Dead += N130.** No retune.
 
-Pre-screen: `results/R2/n130_n131_prescreen/` — N130 **PASS** train N=**220** mean bruto **+6,68** ≥ gate **2,34** (stress informal ≥ **3,51**).
+Board: U2 `results/R2/n130_eqw_breadth_stress/` (tip `03ad9da`). Faraday tip at PREREG freeze: `0af85da`. Pre-screen was `results/R2/n130_n131_prescreen/` (N=220, bruto **+6,68**).
+
+---
+
+## U2 result (authoritative)
+
+| Post | Waarde |
+|------|--------|
+| Verdict | **FAIL_T** (cost+stress **PASS**) |
+| Train 2021–23 | N=**220**, mean bruto **+6,68** ≥2,34 and ≥3,51; netto **+5,90**; med **+1,66**; years **−0,41/+18,72/−1,71**; L/S **99/121** |
+| t | t_netto **1,05** / t_NW5 **1,20** ≪ 2 |
+| Test | N=**91**, mean bruto **−3,85** |
+| Trial | **468→469**; counts_as_trial=true |
+| Signal (locked) | RSP/SPX `z40>+1,5`→SHORT; `z40<−1,5`→LONG |
+| Retune | **verboden** (geen thr-grid, geen EQW/breadth clone, geen IWM/SECTOR_DISP/XLU-XLI rewrite, geen overnight) |
+
+Live PREREG-pointer **cleared**.
 
 ---
 
@@ -89,4 +105,4 @@ Artifact: `results/R2/n130_n131_prescreen/prescreen.json`.
 4. FAIL_T / FAIL_STRESS / FAIL_COST → STOP; **geen** thr-grid / IWM twin / sector rewrite / overnight.
 5. counts_as_trial only if cost+stress PASS then formal t run.
 
-**TRIAL_COUNT at freeze:** **468**.
+**TRIAL_COUNT at freeze (was):** **468**. After U2 FAIL_T: **469**.

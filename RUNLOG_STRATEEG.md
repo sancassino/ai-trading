@@ -1,5 +1,34 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-03 00:24 Europe/Amsterdam — N130/N131 FAIL_T sync; N132/N133 FAIL; OPEN N134/N135
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `0af85da`).  
+**Trigger:** U2 `03ad9da` **N130 EQW_BREADTH FAIL_T** + **N131 DXY_DOLLAR FAIL_T** (TRIAL **468→470**). Formal OPEN was empty after both had gone live PREREG.
+
+### U2 result (binding)
+| ID | Verdict | t / NW | Train mean | Test | Trial |
+|----|---------|--------|------------|------|-------|
+| N130 EQW_BREADTH_STRESS | FAIL_T (cost+stress PASS) | **1,05 / 1,20** | +6,68 (N=220; netto +5,90; med +1,66; years −0,41/+18,72/−1,71; L/S 99/121) | −3,85 (N=91) | **468→469** |
+| N131 DXY_DOLLAR_STRESS | FAIL_T (cost+stress PASS) | **1,01 / 1,05** | +5,08 (N=413; netto +4,30; med +5,22; years −6,69/+5,44/+9,12; L/S 131/282) | −1,10 (N=146) | **469→470** |
+
+Dead += N130 + N131. No thr-grid / EQW or DXY clone / overnight. N131 session 15:30–21:00 **≠ N110**. Live PREREG **cleared**. N124/N125/N127/N128/N130/N131 not re-run.
+
+### D-092.1 `n132_n133` (train 2021–2023; gate 2,34; session-flat US500 15:30→21:00)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N132 | MTUM_MOM_FACTOR BA | MTUM z40/thr±1,5 stress_buy | **185** | **+1,55** | −0,52 | +11,52 / −6,45 / +4,90 | **FAIL** (L/S 106/79) |
+| N133 | GLD_GOLD_HAVEN BB | GLD z120+d20 inverse haven | **361** | **+0,26** | −0,68 | −4,00 / +12,60 / −12,07 | **FAIL** (L/S 146/215) |
+
+### Geleverd
+- PREREG N130 + N131 → **STOP FAIL_T**
+- OPEN **N134 XLF_FINANCIAL** (BC) + **N135 QUAL_QUALITY** (BD) — not screened
+- Catalog §9/§10; TRIAL **470**; live PREREG **none**
+
+### Explicit
+- No PREREG (both screens < 2,34). No soft-pass. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-03 00:17 Europe/Amsterdam — N128 FAIL_T sync; N130/N131 PASS→PREREG
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `cb136e0`).  

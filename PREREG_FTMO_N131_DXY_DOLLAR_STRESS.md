@@ -1,16 +1,32 @@
 # PREREG_FTMO_N131 — DXY_DOLLAR_STRESS (US500cash; session-flat; NEW_FAMILY AZ)
 
-**Status:** **OPEN** — frozen for U2 cost-gate + formal trial (Lane-B D-092.1 PASS).  
+**Status:** **STOP FAIL_T** — U2 tip `03ad9da` on `claude/uitvoerder2-r` (TRIAL **469→470**).  
 **Auteur:** Strateeg (Grok) Lane-B on `claude/trusting-faraday-34tsmg`.  
 **VOORSTEL:** `VOORSTEL_PRESCREEN_N131.md`.  
 **Signal:** Yahoo/proxy **DXY** (DX-Y.NYB daily level). **Trade:** `US500cash`.  
-**NEW_FAMILY AZ:** broad **US dollar index level** stress → equity session-flat (financial-conditions / dollar-smile). **≠ N110** DXYcash Lon-AM→EU-PM (different clock, instrument, and map — see §2).  
-**Hold:** **session-flat** entry ≈15:30 CET → flat ≈21:00 CET (D-100; US500 overnight swap avoided).  
-**TRIAL_COUNT book:** **468** (deze PREREG telt nog niet).  
+**NEW_FAMILY AZ:** **DEAD** (no DXY/dollar-index clones, no N110 Lon→EU-PM rewrite, no thr-grid, no overnight). **≠ N110** remains (session 15:30–21:00, not DXYcash 13:00–17:00).  
+**Hold:** session-flat 15:30→21:00 CET (was freeze).  
+**TRIAL_COUNT book:** **470** after this trial.  
 **Reserve 2025+:** **onaangeroerd.**  
-**Geen retune** na freeze.
+**Dead += N131.** No retune.
 
-Pre-screen: `results/R2/n130_n131_prescreen/` — N131 **PASS** train N=**413** mean bruto **+5,08** ≥ gate **2,34** (stress informal ≥ **3,51**).
+Board: U2 `results/R2/n131_dxy_dollar_stress/` (tip `03ad9da`). Faraday tip at PREREG freeze: `0af85da`. Pre-screen was `results/R2/n130_n131_prescreen/` (N=413, bruto **+5,08**).
+
+---
+
+## U2 result (authoritative)
+
+| Post | Waarde |
+|------|--------|
+| Verdict | **FAIL_T** (cost+stress **PASS**) |
+| Train 2021–23 | N=**413**, mean bruto **+5,08** ≥2,34 and ≥3,51; netto **+4,30**; med **+5,22**; years **−6,69/+5,44/+9,12**; L/S **131/282** |
+| t | t_netto **1,01** / t_NW5 **1,05** ≪ 2 |
+| Test | N=**146**, mean bruto **−1,10** |
+| Trial | **469→470**; counts_as_trial=true |
+| Signal (locked) | DXY `(z120>+0,5)&(d20>0)`→SHORT; `(z120<−0,5)&(d20<0)`→LONG; session **15:30–21:00** ≠ N110 |
+| Retune | **verboden** (geen thr-grid, geen DXY clone, geen N110 rewrite, geen overnight) |
+
+Live PREREG-pointer **cleared**.
 
 ---
 
@@ -92,4 +108,4 @@ Artifact: `results/R2/n130_n131_prescreen/prescreen.json`.
 4. FAIL_T / FAIL_STRESS / FAIL_COST → STOP; **geen** thr-grid / N110 rewrite / EWZ clone / overnight.
 5. counts_as_trial only if cost+stress PASS then formal t run.
 
-**TRIAL_COUNT at freeze:** **468**.
+**TRIAL_COUNT at freeze (was):** **468**. After U2 FAIL_T: **470**.
