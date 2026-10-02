@@ -393,3 +393,26 @@
 - **MATERIAL:** true (nieuwe VOORSTEL/survivor pack na STALE tip + failed 19:49 recover).
 - Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag SECTOR_DISP_ROTATION oppakken; S2 blijft Lane-A novelty.
 
+## 2026-10-02 ~21:40 Europe/Amsterdam — Hourly cycle (:40 slot) / C-028 Lane-A + POST-N78
+
+- `git fetch`; tip vóór commit `grok/strateeg-2` @ fde4a15 (SECTOR_DISP promote → later N93 FAIL_COST; family now dead/skipped). Branch ≠ main/uitvoerder.
+- **Refresh (read-only):** NEXT_STEPS **v88** (`origin/main`): C-033/C-034; N96 UNDERPOWERED / N97–N99 DIAG_FAIL; formal OPEN empty; TRIAL **458**; U2 IDLE; skip N75–N99 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF / CADJPY / AUDCAD. EDGE_SEARCH_UPGRADE C-028 bindend. FREEZE OFF; Track-3 PAUSED.
+- **Dead-set / clone guard:** prior Lane-A VIX_TERM_VOV / SECTOR_DISP / PC_RATIO / BREAKEVEN / COPPER_GOLD / CREDIT HYG-LQD / RATE_CURVE / EM_DM + Faraday N75–N99 + CEO T5–T16. **No PREREG_S2** (Lane-B = Strateeg).
+- **C-028 Lane-A screens** (proxy daily ≤2024-12-31; **non-overlapping** multi-day holds; day_t bruto + early RT/swap×hold; artefacts `results/strateeg2_prescreen/cycle_2140/`; script `scripts/s2_c028_lane_a_cycle2140.py`):
+
+  | Family (NEW_FAMILY) | Best symbols | Config | years | mean_bp | day_t | n | cost | Uitkomst |
+  |---------------------|--------------|--------|------:|--------:|------:|--:|------|----------|
+  | **EMB_CREDIT_STRESS** | EMB→**NDX** | z120/combo\|hold=3d | 16.86 | +21.42 | **3.00** | 998 | **COST_OK** (US100; drag 6.51; net 14.90) | **PROMOTE** |
+  | **CRACK_SPREAD_MACRO** | HO/BRENT→**NDX** | z60/thr0.5/crack_fade\|hold=5d | 17.33 | +23.09 | **2.26** | 773 | **COST_OK** (US100; drag 10.41; net 12.68) | **PROMOTE** |
+  | REIT_RATE_CHANNEL | VNQ/TLT→SPY | z40/thr1.0/fade_extreme\|hold=3d | 19.90 | +10.54 | 1.75 | 1021 | — | FAIL day_t |
+  | PGM_RATIO_CYCLE | PALL/PLAT→NDX | z120/thr1.5/z_level\|hold=5d | 19.81 | +16.34 | 1.07 | 357 | — | FAIL day_t |
+
+- **Novelty:** **4/4 NEW_FAMILY** (≥2/3 ✔). 567 configs; 13 promote-configs / **2** promote-families. EMB also has hold=1d COST_OK twins (day_t≈2.45) — lower swap drag.
+- **Cost-stress:** survivors cleared mean≥3×RT + net_after_drag≥1 with **swap×hold** on worse side; **FLAG** US100 overnight long swap — Lane-B prefer session-flat / D-100 cheap side. No oil/agri CFD mapping (crack is signal-only).
+- **Survivor packs (VOORSTEL + CSV, geen PREREG):**
+  - `VOORSTEL_S2_EMB_CREDIT_STRESS.md` + EMB→NDX hold=3d daily (+ hold=1d twin CSV)
+  - `VOORSTEL_S2_CRACK_SPREAD_MACRO.md` + HO/BRENT→NDX hold=5d daily
+  - FTMO map: NDX→**US100cash** — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1.
+- **MATERIAL:** true (2 survivor packs).
+- Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag EMB_CREDIT_STRESS / CRACK_SPREAD_MACRO oppakken; S2 blijft Lane-A novelty.
+
