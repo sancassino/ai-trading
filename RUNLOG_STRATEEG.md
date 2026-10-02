@@ -1,6 +1,40 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
 
+## 2026-10-03 01:18 Europe/Amsterdam — N146/N147 D-092.1 FAIL; OPEN N148/N149
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `5d87ae3`).  
+**Trigger:** Formal OPEN N146 AUD_XAU_COMMODITY_XS / N147 GBP_UKOIL_PETRO_XS. Gates are COSTS round-trips, not estimates. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat 15:30→21:00 is the cheap side, so swap in the gate is **0**. Not a session-median spread.
+
+| Book | legs | RT | gate |
+|------|------|---:|-----:|
+| N146 | AUDUSD 1,22 + XAUUSD 0,83 | 2,05 | **6,15** |
+| N147 | GBPUSD 0,70 + UKOILcash 2,71 | 3,41 | **10,23** |
+
+### D-092.1 `n146_n147` (train 2021–2023; session-flat 15:30→21:00; swap 0; both legs)
+| ID | Family | N | mean | med | years | Verdict |
+|----|--------|--:|-----:|----:|-------|---------|
+| N146 | AUD_XAU_COMMODITY_XS BO | **200** | **−1,56** | −2,11 | −0,51 / −0,37 / −3,19 | **FAIL** vs **6,15** (L/S 138/62) |
+| N147 | GBP_UKOIL_PETRO_XS BP | **188** | **−3,22** | +0,71 | −45,72 / +15,82 / −8,60 | **FAIL_CLONE** vs **10,23** (L/S 107/81; 231 signals, 43 missing bars) |
+
+Clone bar unchanged (|z|≥0,90 or agree≥0,85 and cover≥0,70).  
+N146 vs XAU/XAG z40: z **0,20**, agree 0,81, cover 0,21. vs XAU/UKOIL: z **−0,18**, agree 0,35, cover 0,34. vs GLD z **−0,61**, agree 0,00, cover 0,55. vs N147 z **0,04**, agree 0,61, cover 0,34. vs N75 agree 0,70, cover 0,28. vs N91 AUD day-sign agree **0,61**, cover 0,48. Not a clone. Mean **−1,56 < 6,15**.  
+N147 vs **N140 XAU/UKOIL**: z **0,92**, agree **1,00**, cover **0,81** → **FAIL_CLONE** (GBP leg does not make a new book; same oil-basis sign). vs N136 Brent/WTI: z 0,51, agree 0,96, cover **0,48**. vs N146 z 0,04. vs N22 UKOIL Lon→NY day-sign agree **0,52**, cover 0,51. Mean also **−3,22 < 10,23**.
+
+No soft-pass. No PREREG. TRIAL stays **470**. No AUD-only / XAU-only. No GBP-only / UKOIL-only. No FX/metal or FX/oil twin. No XPT/XPD, BTC/ETH, XLE/DBC, metal–oil, or US30/US500 rewrite.
+
+### Geleverd
+- N146 → **STOP FAIL**; N147 → **STOP FAIL_CLONE** (D-092.1)
+- OPEN **N148 USDJPY_US100_RISK_XS** (BQ, gate **4,32** = 3×(0,78+0,66), both in COSTS) + **N149 EURUSD_GER40_EUROPE_XS** (BR, gate **4,05** = 3×(0,63+0,72), both in COSTS) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
 ## 2026-10-03 01:13 Europe/Amsterdam — N144/N145 D-092.1 FAIL; OPEN N146/N147
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `93cb002`).  

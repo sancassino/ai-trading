@@ -1,0 +1,243 @@
+{
+  "N146": {
+    "id": "N146",
+    "instrument": "AUDUSD+XAUUSD",
+    "n": 200,
+    "mean_bruto_bp": -1.5592,
+    "gate_bp": 6.15,
+    "verdict": "FAIL",
+    "notes": "AUD_XAU_COMMODITY_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(1.22+0.83); swap 0; NEW_FAMILY BO",
+    "median_bruto_bp": -2.1091,
+    "stress_gate_bp": 9.225,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.495,
+    "n_long_basket": 138,
+    "n_short_basket": 62,
+    "years": {
+      "2021": -0.5091,
+      "2022": -0.3658,
+      "2023": -3.1873
+    },
+    "meta": {
+      "n_signal_days": 200,
+      "n_skip_missing_bar": 0,
+      "n_ratio_days": 773,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "train_days": {
+        "AUDUSD": 778,
+        "XAUUSD": 774
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "AUDUSD": 1.22,
+      "XAUUSD": 0.83
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N147": {
+    "id": "N147",
+    "instrument": "GBPUSD+UKOILcash",
+    "n": 188,
+    "mean_bruto_bp": -3.2171,
+    "gate_bp": 10.23,
+    "verdict": "FAIL_CLONE",
+    "notes": "GBP_UKOIL_PETRO_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(0.7+2.71); swap 0; NEW_FAMILY BP | CLONE of XAU_UKOIL_z40_N140,N140_XAU_UKOIL_sign \u2014 no PREREG",
+    "median_bruto_bp": 0.7085,
+    "stress_gate_bp": 15.345,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.5,
+    "n_long_basket": 107,
+    "n_short_basket": 81,
+    "years": {
+      "2021": -45.7238,
+      "2022": 15.8204,
+      "2023": -8.5982
+    },
+    "meta": {
+      "n_signal_days": 231,
+      "n_skip_missing_bar": 43,
+      "n_ratio_days": 773,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "train_days": {
+        "GBPUSD": 778,
+        "UKOILcash": 773
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (UKOIL short swap 27.03 not in alpha)"
+    },
+    "costs_rt": {
+      "GBPUSD": 0.7,
+      "UKOILcash": 2.71
+    },
+    "rt_in_costs": true,
+    "clone_hits": [
+      "XAU_UKOIL_z40_N140",
+      "N140_XAU_UKOIL_sign"
+    ]
+  },
+  "N146_clones": {
+    "XAU_XAG_z40": {
+      "peer": "XAU_XAG_z40",
+      "z_corr_train": 0.1993,
+      "sign_agree_both_active": 0.8095,
+      "both_active_over_cand": 0.21,
+      "n_cand_active": 200,
+      "n_both_active": 42,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_UKOIL_z40_N140": {
+      "peer": "XAU_UKOIL_z40_N140",
+      "z_corr_train": -0.183,
+      "sign_agree_both_active": 0.3529,
+      "both_active_over_cand": 0.34,
+      "n_cand_active": 200,
+      "n_both_active": 68,
+      "clone": false,
+      "binding": true
+    },
+    "GLD_z40": {
+      "peer": "GLD_z40",
+      "z_corr_train": -0.6076,
+      "sign_agree_both_active": 0.0,
+      "both_active_over_cand": 0.55,
+      "n_cand_active": 200,
+      "n_both_active": 110,
+      "clone": false,
+      "binding": true
+    },
+    "GBP_UKOIL_z40_N147": {
+      "peer": "GBP_UKOIL_z40_N147",
+      "z_corr_train": 0.0424,
+      "sign_agree_both_active": 0.6119,
+      "both_active_over_cand": 0.335,
+      "n_cand_active": 200,
+      "n_both_active": 67,
+      "clone": false,
+      "binding": true
+    },
+    "N75_XAU_XAG_one_side": {
+      "peer": "N75_XAU_XAG_one_side",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.6964,
+      "both_active_over_cand": 0.28,
+      "n_cand_active": 200,
+      "n_both_active": 56,
+      "clone": false,
+      "binding": true
+    },
+    "N140_XAU_UKOIL_sign": {
+      "peer": "N140_XAU_UKOIL_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3529,
+      "both_active_over_cand": 0.34,
+      "n_cand_active": 200,
+      "n_both_active": 68,
+      "clone": false,
+      "binding": true
+    },
+    "N91_AUD_day_sign": {
+      "peer": "N91_AUD_day_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.6105,
+      "both_active_over_cand": 0.475,
+      "n_cand_active": 200,
+      "n_both_active": 95,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "N147_clones": {
+    "UKOIL_USOIL_z40_N136": {
+      "peer": "UKOIL_USOIL_z40_N136",
+      "z_corr_train": 0.5149,
+      "sign_agree_both_active": 0.9636,
+      "both_active_over_cand": 0.4762,
+      "n_cand_active": 231,
+      "n_both_active": 110,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_UKOIL_z40_N140": {
+      "peer": "XAU_UKOIL_z40_N140",
+      "z_corr_train": 0.9201,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.8139,
+      "n_cand_active": 231,
+      "n_both_active": 188,
+      "clone": true,
+      "binding": true
+    },
+    "AUD_XAU_z40_N146": {
+      "peer": "AUD_XAU_z40_N146",
+      "z_corr_train": 0.0424,
+      "sign_agree_both_active": 0.6119,
+      "both_active_over_cand": 0.29,
+      "n_cand_active": 231,
+      "n_both_active": 67,
+      "clone": false,
+      "binding": true
+    },
+    "N136_BRENT_WTI_sign": {
+      "peer": "N136_BRENT_WTI_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.9636,
+      "both_active_over_cand": 0.4762,
+      "n_cand_active": 231,
+      "n_both_active": 110,
+      "clone": false,
+      "binding": true
+    },
+    "N140_XAU_UKOIL_sign": {
+      "peer": "N140_XAU_UKOIL_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.8139,
+      "n_cand_active": 231,
+      "n_both_active": 188,
+      "clone": true,
+      "binding": true
+    },
+    "N22_UKOIL_LonNY_day_sign": {
+      "peer": "N22_UKOIL_LonNY_day_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5169,
+      "both_active_over_cand": 0.5108,
+      "n_cand_active": 231,
+      "n_both_active": 118,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N146": 6.15,
+    "N147": 10.23
+  },
+  "costs_rt": {
+    "AUDUSD": 1.22,
+    "XAUUSD": 0.83,
+    "GBPUSD": 0.7,
+    "UKOILcash": 2.71,
+    "USOILcash": 3.34,
+    "XAGUSD": 5.07
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "session": "15:30-21:00 CET",
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "gate_source": "COSTS_FTMO.csv roundtrip_intraday_bp; not a session median"
+}

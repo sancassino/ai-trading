@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N146 — AUD_XAU_COMMODITY_XS session-flat (NEW_FAMILY BO)
 
-**Status:** **OPEN** — D-092.1 refill after N144 FAIL / N145 FAIL (filed 2026-10-03 ~01:13 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n146_n147` (N=200, mean **−1,56 < 6,15**; med −2,11; years −0,51 / −0,37 / −3,19; L/S 138/62). Gate **6,15** = 3×(AUDUSD RT 1,22 + XAUUSD RT 0,83), both in COSTS; swap 0 (session-flat). Not a clone of XAU/XAG (z 0,20, agree 0,81, cover 0,21), XAU/UKOIL (z −0,18, agree 0,35, cover 0,34), GLD (z −0,61, agree 0,00, cover 0,55), N147 (z 0,04, agree 0,61, cover 0,34), N75 (agree 0,70, cover 0,28), or N91 AUD day-sign (agree 0,61, cover 0,48). Screened 2026-10-03 ~01:18 CEST. NEW_FAMILY BO dead; no AUD-only, no XAU-only, no FX/metal twin, no metal–oil.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BO** (Aussie vs gold **commodity-complex basis**, two CFDs, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an estimated-gate placeholder. Not an equity-factor z→US500. Not a metal–oil twin.  
 **Signal:** M5 day-close ratio **AUDUSD / XAUUSD**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** the commodity-currency vs the monetary metal mean-reverts when the Aussie is rich or cheap versus gold. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha. Not a single-name FX fade (D-098 barred those at ~3 bp).

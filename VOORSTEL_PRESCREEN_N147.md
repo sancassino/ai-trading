@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N147 — GBP_UKOIL_PETRO_XS session-flat (NEW_FAMILY BP)
 
-**Status:** **OPEN** — D-092.1 refill after N144 FAIL / N145 FAIL (filed 2026-10-03 ~01:13 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL_CLONE** `n146_n147` (N=188, mean **−3,22 < 10,23**; med +0,71; years −45,72 / +15,82 / −8,60; L/S 107/81; 231 signals, 43 skipped missing bar). Gate **10,23** = 3×(GBPUSD RT 0,70 + UKOIL RT 2,71), both in COSTS; swap 0. Clone of **N140 XAU/UKOIL** (z **0,92**, agree **1,00**, cover **0,81**). Not N136 (z 0,51, agree 0,96, cover 0,48), not N146 (z 0,04), not N22 UKOIL day-sign (agree 0,52, cover 0,51). Screened 2026-10-03 ~01:18 CEST. NEW_FAMILY BP dead; no GBP-only, no UKOIL-only, no FX/oil twin.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BP** (sterling vs Brent **petrocurrency basis**, two CFDs, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an estimated-gate placeholder. Not an equity-factor z→US500. Not a metal–oil twin and not Brent–WTI.  
 **Signal:** M5 day-close ratio **GBPUSD / UKOILcash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** cable vs Brent mean-reverts when sterling is rich or cheap versus the oil leg the UK still prices. Flat inside 15:30→21:00 CET so the UKOIL overnight swap is not the alpha.
