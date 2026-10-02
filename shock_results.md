@@ -10,3 +10,8 @@ corr(surprise,reactie) −0,2; vervolgbeweging na eerste uur: |t| ≤ 1,4 voor U
 
 ## Ongefilterd ORB B4a — FTMO-EV (orb_full_ev.py, beschrijvend)
 2021-24 SR 0.98; reserve 2025-26 SR 0.64 (nog positief, maar reserve is nu voor ORB-meta verbruikt; geen nieuwe test mogelijk). Schaal 0.3: EV €155/mnd, survive 0.87 (alles); 0.4: €284, 0.67. Hoofdvraag voor Sandro: ~€150–280/mnd bij 13–33% kans op verlies van de fee-cyclus — alleen als paper-forward (vanaf 2 okt) bevestigt.
+
+## ORB regime- en tijdstop-onderzoek (2 okt; orb_regime.py, orb_timestop.py)
+**Correctie:** B4a ORB is door het project zelf AFGEWEZEN (B4_output: +1,73bp, t test 1,14, DSR 0,54, jaren+ 4/6). Per jaar: 2021 −1,4 | 2022 +6,0 | 2023 +1,6 | 2024 +0,2 | 2025 +2,9 | 2026 −1,1. Per symbool: US100 +5,9 (t 2,5), GER40 +4,0 (t 2,2), US500 +2,4, XAU +1,5, US30 +0,3, UK100 −0,8, EURUSD −0,4. De eerdere "SR 0,88"-EV is optiewaarde uit een zwakke, niet-gevalideerde edge — niet als kansrijk spoor presenteren.
+**Regime-splitsing (vaste mediaan per symbool op ≤2024; features: vol-niveau, gisteren-range-ratio, |20d-trend|, |gap|):** lage trend/gap/range-ratio lijkt beter in 2021–24 (t 2,7–2,9, +3,5…+4,1bp), maar (a) bijna volledig 2022 (+10…+12bp; andere jaren ≈ 0), (b) omkering in 2025–26 (hoog beter). 8 cellen, geen robuust regime. NUL.
+**Tijdstop (uitstap open+2u / +4u i.p.v. sessieslot):** 21–24 +0,5bp (t 0,7) / +1,0bp (t 1,2) vs baseline +2,0 (t 2,0); 25–26 negatief. Verslechtert. Mechanisme "impuls dooft uit" niet bevestigd; edge zit in de late-dag-drift. Kosten ORB klein (0,4–1,1bp/trade; bruto ≈ +2,7bp).

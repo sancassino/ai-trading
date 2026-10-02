@@ -127,3 +127,4 @@
 05:13 UTC — geen nieuws; snapshot.
 05:26 UTC — geen nieuws.
 05:42 UTC — geen nieuws; snapshot.
+05:57 UTC — ORB regime/tijdstop: null; correctie: B4a ORB was afgewezen (DSR .54). Volgende: breder universum (crypto, aandelen, grondstoffen) met vooraf vastgelegde ORB/late-dag-drift.
