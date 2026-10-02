@@ -1672,3 +1672,52 @@ git add scripts/c036_lane_b_diag.py results/cto/c036_absorb_v90_n104_n111/ \
 git commit -m "CTO: C-036 absorb v90 + N104–N109; N110/N111 DIAG_FAIL (0 CTO trials)"
 git push origin grok/cto-1
 ```
+
+
+## C-037 — absorb main v92 + U2 N112/N113 + N114 DIAG_PASS→PREREG / N115 DIAG_FAIL (0 CTO trials) — 2026-10-02 ~23:05 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **461** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO.
+
+### Sync
+
+- Merged `origin/main` `e988749` (NEXT_STEPS **v92** — Faraday N112/N113 PREREG + OPEN N114/N115; U2 N112 FAIL_T + N113 FAIL_COST_GATE; TRIAL **461**).
+- Faraday `791a17c`: PREREG N112/N113 from S2 `35e38ac` cycle_2240; OPEN **N114/N115** NEW_FAMILY AI/AJ.
+- U2 `d1dd863` N112 GAS_EQUITY_MACRO **FAIL_T** (TRIAL 460→461); `954680a` N113 SILVER_GOLD_RATIO **FAIL_COST_GATE** (geen trial; TRIAL stays 461); IDLE/HOLD.
+- Prior CTO tip C-036 `f3cf632`. FREEZE **OFF**. Track-3 **PAUSED**.
+- Kill: cost-PASS→FAIL_T streak **≥5** (N87→N92→N100→N101→N112) → pivot **ON**; bar GAS_EQUITY / SILVER_GOLD / N75–N113 + prior; keep HYG≠EMB; EURUSD→US500 ≠ DXY Lon→EU / N83.
+
+### Deliverable (0 CTO trials)
+
+1. **Absorb** U2 N112 FAIL_T + N113 FAIL_COST_GATE into CTO board (formal already on U2 branch / TRIALS).
+2. **Lane-B diag** `scripts/c037_lane_b_diag.py` + `results/cto/c037_absorb_v92_n112_n115/` (VOORSTEL N114/N115 from Faraday):
+
+| Idee | mean_bp | n | gate | day_t | Verdict |
+|------|--------:|--:|-----:|------:|---------|
+| **N114** HYG→US500 session-flat | +3.812 | 371 | 2.34 | 0.85 | **DIAG_PASS** |
+| **N115** EURUSD Lon-AM→US500 NY | −3.428 | 126 | 2.34 | −0.40 | **DIAG_FAIL** |
+
+3. **PREREG freeze** `PREREG_FTMO_N114_HYG_CREDIT_STRESS.md` + U2 gate `scripts/n114_hyg_credit_stress_gate.py` (smoke: cost PASS / stress PASS 3.81≥3.51; t_nw≈0.71; test 2024 mean −2.16 — honest FAIL_T risk). N115 drop (no PREREG; no thr-grid / DXY substitute / US100 rewrite / soft gate).
+4. Copied `VOORSTEL_PRESCREEN_N114.md` + `VOORSTEL_PRESCREEN_N115.md` (+ Faraday N112/N113 PREREG + lane_b SOURCE) onto `grok/cto-1`.
+
+### CTO next
+
+1. **U2:** wake on **N114** PASS→PREREG (this commit). Run cost-gate + formal; skip N75–N113 / N115 / GAS_EQUITY / SILVER_GOLD / EMB / CRACK / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / barred clones. No 2025+.
+2. Manager: NEXT_STEPS bump — pointer **C-037**; TRIAL **461**; N112 FAIL_T; N113 FAIL_COST_GATE; N114 PREREG live; N115 DIAG_FAIL; formal OPEN = N114.
+3. Strateeg: drop N115 PREREG path; file ≥1 NEW_FAMILY replace for N115 death (D-094; keep ≥2/3 novelty vs N114); bar EURUSD Lon-AM→US500 / DXY Lon→EU twin / N83 opposite rewrite + prior.
+4. S2: Lane-A Yahoo-first NEW_FAMILY; do not re-promote GAS/SILVER/EMB/CRACK as FTMO.
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: sample N112 FAIL_T + N113 FAIL_COST_GATE + N114 gate when U2 lands.
+
+### Git
+
+```
+git add scripts/c037_lane_b_diag.py scripts/n114_hyg_credit_stress_gate.py \
+  results/cto/c037_absorb_v92_n112_n115/ PREREG_FTMO_N114_HYG_CREDIT_STRESS.md \
+  VOORSTEL_PRESCREEN_N114.md VOORSTEL_PRESCREEN_N115.md \
+  PREREG_FTMO_N112_GAS_EQUITY_MACRO.md PREREG_FTMO_N113_SILVER_GOLD_RATIO.md \
+  results/lane_b/GAS_EQUITY_MACRO_SOURCE.md results/lane_b/SILVER_GOLD_RATIO_SOURCE.md \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-037 absorb v92 + N112/N113; N114 PREREG / N115 DIAG_FAIL (0 CTO trials)"
+git push origin grok/cto-1
+```

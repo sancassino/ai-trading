@@ -1,0 +1,64 @@
+{
+  "c": "C-037",
+  "when": "2026-10-02 ~23:05 Europe/Amsterdam",
+  "absorb": {
+    "main": "e988749 NEXT_STEPS v92 \u2014 N112 FAIL_T + N113 FAIL_COST_GATE; TRIAL 461; OPEN N114/N115",
+    "faraday": "791a17c PREREG N112/N113 + OPEN N114/N115 NEW_FAMILY AI/AJ",
+    "u2": "d1dd863 N112 FAIL_T (TRIAL 461); 954680a N113 FAIL_COST_GATE (TRIAL stays 461); IDLE/HOLD",
+    "s2": "35e38ac cycle_2240 GAS+SILVER promote \u2192 died at U2",
+    "prior_cto": "f3cf632 C-036 N110/N111 DIAG_FAIL"
+  },
+  "u2_results": [
+    {
+      "id": "N112",
+      "verdict": "FAIL_T",
+      "n_train": 188,
+      "mean_bp": 7.827,
+      "gate_bp": 2.34,
+      "trial": 461,
+      "note": "GAS_EQUITY_MACRO; U2 d1dd863; cost/stress PASS; formal t<2; TRIAL 460\u2192461"
+    },
+    {
+      "id": "N113",
+      "verdict": "FAIL_COST_GATE",
+      "n_train": 305,
+      "mean_bp": 1.601,
+      "gate_bp": 2.34,
+      "trial": 461,
+      "note": "SILVER_GOLD_RATIO; U2 954680a; mean < gate; geen trial; TRIAL blijft 461"
+    }
+  ],
+  "freeze": "OFF",
+  "trial_count": 461,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "results": [
+    {
+      "label": "N114_HYG_CREDIT_STRESS_US500_SESSION",
+      "n": 371,
+      "mean_bp": 3.812,
+      "day_t": 0.85,
+      "h1_mean_bp": 2.5,
+      "h2_mean_bp": 5.117,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_PASS",
+      "notes": "NEW_FAMILY AI; HYG z120/combo \u2192 US500 15:30\u219221:00; gate=3\u00d7RT 0.78=2.34; \u2260 N100 EMB; session-flat"
+    },
+    {
+      "label": "N115_EURUSD_LON_AM_US500_NY_MACRO",
+      "n": 126,
+      "mean_bp": -3.428,
+      "day_t": -0.4,
+      "h1_mean_bp": -5.504,
+      "h2_mean_bp": -1.352,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY AJ; EURUSD Lon-AM |bp|\u226525 \u2192 same-dir US500 15:30\u219221:00; gate=3\u00d7RT 0.78=2.34; \u2260 N110 DXY Lon\u2192EU / N83 opposite"
+    }
+  ],
+  "promote_to_prereg": [
+    "N114_HYG_CREDIT_STRESS_US500_SESSION"
+  ],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N87\u2192N92\u2192N100\u2192N101\u2192N112 (\u22655); pivot ON; N103 cost-PASS\u2192FAIL_STRESS; N113 FAIL_COST_GATE; bar GAS_EQUITY / SILVER_GOLD / N75\u2013N113 + prior clones; keep HYG\u2260EMB; EURUSD\u2192US500 \u2260 DXY Lon\u2192EU / N83"
+}

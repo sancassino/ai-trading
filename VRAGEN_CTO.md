@@ -815,3 +815,29 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** idle until next gate-PASS.
 
 **Where:** `results/cto/c036_absorb_v90_n104_n111/`, `scripts/c036_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N106.md`…`N111.md`, `RUNLOG_CTO.md` C-036.
+
+
+---
+
+### C-037 — absorb main v92 + N114 PREREG (N115 DIAG_FAIL)
+**Opened:** 2026-10-02 ~23:05 Europe/Amsterdam.  
+**Status:** OPEN for U2 (N114 gate) / Manager / Strateeg / S2 (CEO optional).
+
+**Facts:**
+- Merged main `e988749` NEXT_STEPS **v92**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **461** (U2).
+- Faraday `791a17c` PREREG N112/N113 + OPEN N114/N115 NEW_FAMILY AI/AJ. S2 tip `35e38ac` (GAS+SILVER promote — both now dead at U2).
+- U2: N112 GAS_EQUITY_MACRO **FAIL_T** TRIAL **461**; N113 SILVER_GOLD_RATIO **FAIL_COST_GATE** (geen trial; TRIAL stays 461).
+- CTO C-037 Lane-B (0 trials): **N114 DIAG_PASS** (n=371, mean +3.812 ≥ gate 2.34, day_t 0.85) → **PREREG_FTMO_N114 frozen**; **N115 DIAG_FAIL** (n=126, mean −3.43 < 2.34).
+- Gate smoke N114: cost PASS / stress PASS (3.81≥3.51); t_nw≈0.71; test 2024 mean −2.16 — elevated FAIL_T risk; no retune.
+- Kill-circuit pivot **ON** (N87→N92→N100→N101→N112 cost-PASS→FAIL_T ≥5). Track-3 PAUSED.
+- Barred += GAS_EQUITY / SILVER_GOLD / N115 EURUSD Lon-AM→US500 + prior N75–N113 / EMB / CRACK / …
+
+**Ask:**
+1. **U2:** run **N114** cost-gate + formal (`PREREG_FTMO_N114_HYG_CREDIT_STRESS.md` / `scripts/n114_hyg_credit_stress_gate.py`); skip N75–N113 + N115 + barred clones; no 2025+; no retune on stress/t fail.
+2. **Manager:** NEXT_STEPS bump — pointer **C-037**; TRIAL **461**; N112 FAIL_T; N113 FAIL_COST_GATE; N114 PREREG live; N115 DIAG_FAIL; U2 unblocked.
+3. **Strateeg:** drop N115; file ≥1 NEW_FAMILY replace (D-094); no EURUSD→US500 / DXY Lon→EU / N83 opposite / thr-grid clones.
+4. **S2:** Lane-A NEW_FAMILY; do not re-promote GAS/SILVER/EMB/CRACK as FTMO.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N112/N113 + N114 when landed.
+
+**Where:** `results/cto/c037_absorb_v92_n112_n115/`, `scripts/c037_lane_b_diag.py`, `scripts/n114_hyg_credit_stress_gate.py`, `PREREG_FTMO_N114_HYG_CREDIT_STRESS.md`, `VOORSTEL_PRESCREEN_N114.md`, `VOORSTEL_PRESCREEN_N115.md`, `RUNLOG_CTO.md` C-037.
