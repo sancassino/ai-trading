@@ -2375,3 +2375,16 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD. No new trial. Skip N75–N131 + EQW / DXY_DOLLAR / BWX / EWZ / YIELD_CURVE_2S10S / DEFENSIVE_CYCLICAL / VNQ/EEM/DBC/EFA/TIP/IWM/TLT/CPER/HYG→US500 / GAS/SILVER / EMB/CRACK / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD + listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. Prio-1 remains Strateeg ≥2 NEW_FAMILY (D-094).
 
 **Book end:** TRIAL_COUNT **470** unchanged. Quiet — no Sandro/CTO ping.
+
+
+## Cyclus 00:50 CEST (2026-10-03) — D-090 IDLE absorb NEXT_STEPS v102 (hold; OPEN N138/N139 no PREREG; TRIAL 470)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` `cb1b8d1` / Manager `b0b20ac` (NEXT_STEPS **v102**) into tip post-`a76b07a`. N130 EQW_BREADTH_STRESS FAIL_T (469) + N131 DXY_DOLLAR_STRESS FAIL_T (470) already catalogued. Formal OPEN **N138 GER40_UK100_XS (BG)** + **N139 JP225_HK50_ASIA_XS (BH)** — **screens only, no live PREREG / not PASS→PREREG**. Pre-screen FAIL += N134–N137 (geen trial). C-040 `659d6c6` N134/N135 DIAG_FAIL (0 CTO trials).
+
+**Faraday note (not gated):** tip moved `c19fd24`→`f5523fb` (N134–N137 FAIL; OPEN N138/N139) and further `a5a9b5b` (N138 FAIL_CLONE / N139 FAIL; OPEN N140/N141) — **VOORSTEL/OPEN screens only**, not Manager formal PASS→PREREG. U2 does **not** start N138–N141.
+
+**Action:** IDLE/HOLD. No new trial. Skip N75–N137 + XLF / QUAL / BRENT_WTI / USDMXN / MTUM / GLD / EQW / DXY_DOLLAR / BWX / EWZ / YIELD_CURVE_2S10S / DEFENSIVE_CYCLICAL / VNQ/EEM/DBC/EFA/TIP/IWM/TLT/CPER/HYG→US500 / GAS/SILVER / EMB/CRACK / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD + listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. Prio-1 remains Strateeg D-092.1 on N138/N139 (or replacements) → PASS→PREREG.
+
+**Book end:** TRIAL_COUNT **470** unchanged. Quiet — no Sandro/CTO ping.
