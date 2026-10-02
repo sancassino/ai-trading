@@ -107,3 +107,4 @@
 00:12 UTC — geen nieuw bij andere agents. Volgende: PREREG surprise/consensus-nieuwsdata (databron zoeken); ML op prijsfeatures gesloten (D-104).
 00:26 UTC — surprise-databron: consensus-historie ontbreekt gratis; forward-archief + FRED-proxy gepland.
 00:42 UTC — NFP-proxy test: null (N~45). Forward-archief ff_calendar gestart.
+00:56 UTC — geen nieuws bij agents; Grok pauze t/m ~4 okt. Volgende: optiewaarde-route (D-101/102) herijken op ongefilterde ORB-reserve (EV €75–314/mnd, survive 0.33–0.83).
