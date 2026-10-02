@@ -485,3 +485,25 @@
   - FTMO map: SPY→**US500cash** — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1.
 - **MATERIAL:** true (1 survivor pack).
 - Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag XLE_ENERGY_EQUITY_STRESS oppakken; S2 blijft Lane-A novelty.
+
+## 2026-10-03 ~01:47 Europe/Amsterdam — Hourly cycle (:40→:47 slot) / C-028 Lane-A + POST-N78/N93
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ 5a21939 (XLE promote → later N143 FAIL_CLONE of DBC; family now DEAD). Merged `origin/main` @ ddb929c (v103). Branch ≠ main/uitvoerder.
+- **Refresh (read-only):** NEXT_STEPS **v103** (`origin/main` @ ddb929c, 01:41 CEST): Faraday `9c4ee71` N138–N153 FAIL/FAIL_CLONE; formal OPEN **N154 US100_GER40_TRANSATLANTIC_XS / N155 US30_UKOIL_INDUSTRIAL_CRUDE_XS** (Lane-B Strateeg — **not** S2); C-041 `7041e8a` + C-042 `d5311f9` (N143 PREREG retracted); TRIAL **470**; U2 IDLE/HOLD; FREEZE OFF; Track-3 PAUSED; prio = ≥2 NEW_FAMILY for Strateeg/S2. EDGE_SEARCH_UPGRADE C-028 bindend. Dead += N138–N153 + prior bars (XLE→US500 / DBC / GER-UK / JP-HK / XAU-UKOIL / XAG-UKOIL / US30-US500 / PGM / BTC-ETH / AUD-XAU / GBP-UKOIL / USDJPY-US100 / EUR-GER40 / XAG-US30 / EURJPY-USDCHF / GBP-NZD / EUR-CAD + prior).
+- **Dead-set / clone guard:** XLE_ENERGY / VLUE / XLB / EURJPY_RISK / YIELD_CURVE / DEFENSIVE / GAS / SILVER / EMB / CRACK / SECTOR_DISP / VIX_TERM / HYG / TLT / TIP / CPER / VNQ / EEM / DBC / EFA / IWM→US500 / EQW / DXY / MTUM / GLD / XLF / QUAL / BRENT_WTI / USDMXN / EWZ / DBA / BWX / PPLT / SOFTS_RATIO / ORB/TSMOM/L60 FX-med / CORN / UKOIL-OVN / ORB-meta / N75–N153 / FX LO carry / OPEN N154/N155 (do not pre-empt) / CEO T5–T16. **No PREREG_S2** (Lane-B = Strateeg).
+- **C-028 Lane-A screens** (proxy daily ≤2024-12-31; **non-overlapping** multi-day holds; day_t bruto + early RT/swap×hold; promote=**COST_OK only**; artefacts `results/strateeg2_prescreen/cycle_0147/`; script `scripts/s2_c028_lane_a_cycle0147.py`):
+
+  | Family (NEW_FAMILY) | Best symbols | Config | years | mean_bp | day_t | n | cost | Uitkomst |
+  |---------------------|--------------|--------|------:|--------:|------:|--:|------|----------|
+  | **XLK_TECH_SECTOR_STRESS** | XLK→**NDX** | z120/thr0.5/mom_confirm\|hold=3d | 19.82 | +12.23 | **2.05** | 1246 | **COST_OK** (US100; drag 6.51; net 5.72) | **PROMOTE** |
+  | COCOA_FOOD_SOFT_MACRO | COCOA→SPY | z60/thr0.5/fade_extreme\|hold=1d | 19.91 | +3.54 | 1.83 | 3791 | — | FAIL day_t |
+  | XLV_HEALTHCARE_STRESS | XLV→NDX | z40/thr1.5/fade_extreme\|hold=1d | 19.91 | +6.58 | 1.78 | 1693 | — | FAIL day_t |
+  | AUDUSD_COMMODITY_FX | AUDUSD→EURUSD | z120/thr1.5/mom_confirm\|hold=3d | 18.47 | +5.34 | 1.29 | 570 | — | FAIL day_t |
+
+- **Novelty:** **4/4 NEW_FAMILY** (≥2/3 ✔). 1350 configs; 1 promote-config / **1** promote-family. COST_HOSTILE bruto-ok: 0; COST_TIGHT: 0. No SPY/US500 twin cleared day_t≥2.
+- **Cost-stress:** survivor cleared mean≥2×3RT + net_after_drag≥1 with **swap×hold** (worse-side long US100). **FLAG** US100 overnight long swap (drag 6.51) — prefer session-flat / D-100; no US500 twin this cycle.
+- **Survivor pack (VOORSTEL + CSV, geen PREREG):**
+  - `VOORSTEL_S2_XLK_TECH_SECTOR_STRESS.md` + XLK→NDX hold=3d daily
+  - FTMO map: NDX→**US100cash** (**FLAG** overnight long) — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1.
+- **MATERIAL:** true (1 survivor pack).
+- Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag XLK_TECH_SECTOR_STRESS oppakken; S2 blijft Lane-A novelty.
