@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N154 — US100_GER40_TRANSATLANTIC_XS session-flat (NEW_FAMILY BW)
 
-**Status:** **OPEN** — D-092.1 refill after N152 FAIL / N153 FAIL (filed 2026-10-03 ~01:35 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n154_n155` (2026-10-03 ~01:41 CEST). N=177, mean **−2,79 < 4,14**. Not a clone. No US100-only / GER-only / US–US / GER–UK / FX rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BW** (Nasdaq vs DAX **transatlantic cash-index basis**, two index CFDs, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an FX book. Not a G10 cross. Not silver/index. Not metal–oil. Not an equity-factor z→US500.  
 **Signal:** M5 day-close ratio **US100cash / GER40cash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** US tech and the cash DAX dislocate when the New York growth complex has outrun, or lagged, European industrials. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha.

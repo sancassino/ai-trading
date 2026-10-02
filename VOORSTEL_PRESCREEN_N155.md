@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N155 — US30_UKOIL_INDUSTRIAL_CRUDE_XS session-flat (NEW_FAMILY BX)
 
-**Status:** **OPEN** — D-092.1 refill after N152 FAIL / N153 FAIL (filed 2026-10-03 ~01:35 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL_CLONE** `n154_n155` (2026-10-03 ~01:41 CEST). N=206, mean **−4,31 < 9,48**. Clone of N147 (z **0,94**, agree **1,00**, cover **0,78**). No UKOIL-only / Brent–WTI / metal–oil / FX rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BX** (Dow vs Brent **industrial–crude basis**, one cash index and one oil CFD, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an FX book. Not a G10 cross. Not silver/index. Not metal–oil (no bullion leg). Not an equity-factor z→US500.  
 **Signal:** M5 day-close ratio **US30cash / UKOILcash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** the Dow and Brent dislocate when industrial equities have outrun, or lagged, the crude complex. Flat inside 15:30→21:00 CET. Overnight long-UKOIL receives and short-UKOIL pays ~27 bp; a two-sided book cannot lock the receiving side, so swap in the gate is 0.

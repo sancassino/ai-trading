@@ -1,0 +1,441 @@
+{
+  "N154": {
+    "id": "N154",
+    "instrument": "US100cash+GER40cash",
+    "n": 177,
+    "mean_bruto_bp": -2.7903,
+    "gate_bp": 4.14,
+    "verdict": "FAIL",
+    "notes": "US100_GER40_TRANSATLANTIC_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(0.66+0.72); swap 0; NEW_FAMILY BW",
+    "median_bruto_bp": -0.4891,
+    "stress_gate_bp": 6.21,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4915,
+    "n_long_basket": 87,
+    "n_short_basket": 90,
+    "years": {
+      "2022": -6.8322,
+      "2023": 2.2236
+    },
+    "meta": {
+      "n_signal_days": 239,
+      "n_skip_missing_bar": 62,
+      "n_ratio_days": 767,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "b_sign": -1,
+      "train_days": {
+        "US100cash": 775,
+        "GER40cash": 768
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "US100cash": 0.66,
+      "GER40cash": 0.72
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N155": {
+    "id": "N155",
+    "instrument": "US30cash+UKOILcash",
+    "n": 206,
+    "mean_bruto_bp": -4.3081,
+    "gate_bp": 9.48,
+    "verdict": "FAIL_CLONE",
+    "notes": "US30_UKOIL_INDUSTRIAL_CRUDE_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(0.45+2.71); swap 0; NEW_FAMILY BX | CLONE of GBP_UKOIL_z40_N147,N147_sign \u2014 no PREREG",
+    "median_bruto_bp": -10.6065,
+    "stress_gate_bp": 14.22,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4757,
+    "n_long_basket": 111,
+    "n_short_basket": 95,
+    "years": {
+      "2021": -40.1362,
+      "2022": 11.5349,
+      "2023": -9.2382
+    },
+    "meta": {
+      "n_signal_days": 250,
+      "n_skip_missing_bar": 44,
+      "n_ratio_days": 773,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "b_sign": -1,
+      "train_days": {
+        "US30cash": 775,
+        "UKOILcash": 773
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "US30cash": 0.45,
+      "UKOILcash": 2.71
+    },
+    "rt_in_costs": true,
+    "clone_hits": [
+      "GBP_UKOIL_z40_N147",
+      "N147_sign"
+    ]
+  },
+  "N154_clones": {
+    "US30_US500_z40_N142": {
+      "peer": "US30_US500_z40_N142",
+      "z_corr_train": -0.7746,
+      "sign_agree_both_active": 0.0,
+      "both_active_over_cand": 0.5481,
+      "n_cand_active": 239,
+      "n_both_active": 131,
+      "clone": false,
+      "binding": true
+    },
+    "US100_US500_z40": {
+      "peer": "US100_US500_z40",
+      "z_corr_train": 0.8113,
+      "sign_agree_both_active": 0.9811,
+      "both_active_over_cand": 0.6653,
+      "n_cand_active": 239,
+      "n_both_active": 159,
+      "clone": false,
+      "binding": true
+    },
+    "GER40_UK100_z40_N138": {
+      "peer": "GER40_UK100_z40_N138",
+      "z_corr_train": 0.0694,
+      "sign_agree_both_active": 0.5844,
+      "both_active_over_cand": 0.3222,
+      "n_cand_active": 239,
+      "n_both_active": 77,
+      "clone": false,
+      "binding": true
+    },
+    "EU50_UK100_z40": {
+      "peer": "EU50_UK100_z40",
+      "z_corr_train": 0.1966,
+      "sign_agree_both_active": 0.7273,
+      "both_active_over_cand": 0.4142,
+      "n_cand_active": 239,
+      "n_both_active": 99,
+      "clone": false,
+      "binding": true
+    },
+    "EUR_GER40_z40_N149": {
+      "peer": "EUR_GER40_z40_N149",
+      "z_corr_train": 0.0303,
+      "sign_agree_both_active": 0.519,
+      "both_active_over_cand": 0.3305,
+      "n_cand_active": 239,
+      "n_both_active": 79,
+      "clone": false,
+      "binding": true
+    },
+    "US30_UKOIL_N155": {
+      "peer": "US30_UKOIL_N155",
+      "z_corr_train": 0.2091,
+      "sign_agree_both_active": 0.7442,
+      "both_active_over_cand": 0.3598,
+      "n_cand_active": 239,
+      "n_both_active": 86,
+      "clone": false,
+      "binding": true
+    },
+    "N81_short_US100_vs_US100_leg": {
+      "peer": "N81_short_US100_vs_US100_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.4184,
+      "n_cand_active": 239,
+      "n_both_active": 100,
+      "clone": false,
+      "binding": true
+    },
+    "N103_GER_AM_vs_GER_leg": {
+      "peer": "N103_GER_AM_vs_GER_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4316,
+      "both_active_over_cand": 0.3975,
+      "n_cand_active": 239,
+      "n_both_active": 95,
+      "clone": false,
+      "binding": true
+    },
+    "N92_US100_NY2H_vs_US100_leg": {
+      "peer": "N92_US100_NY2H_vs_US100_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4433,
+      "both_active_over_cand": 0.8117,
+      "n_cand_active": 239,
+      "n_both_active": 194,
+      "clone": false,
+      "binding": true
+    },
+    "N138_sign": {
+      "peer": "N138_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5789,
+      "both_active_over_cand": 0.318,
+      "n_cand_active": 239,
+      "n_both_active": 76,
+      "clone": false,
+      "binding": true
+    },
+    "N149_sign": {
+      "peer": "N149_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.519,
+      "both_active_over_cand": 0.3305,
+      "n_cand_active": 239,
+      "n_both_active": 79,
+      "clone": false,
+      "binding": true
+    },
+    "N142_sign": {
+      "peer": "N142_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.0,
+      "both_active_over_cand": 0.5481,
+      "n_cand_active": 239,
+      "n_both_active": 131,
+      "clone": false,
+      "binding": true
+    },
+    "N155_sign": {
+      "peer": "N155_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.7442,
+      "both_active_over_cand": 0.3598,
+      "n_cand_active": 239,
+      "n_both_active": 86,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "N155_clones": {
+    "UKOIL_USOIL_z40_N136": {
+      "peer": "UKOIL_USOIL_z40_N136",
+      "z_corr_train": 0.548,
+      "sign_agree_both_active": 0.9583,
+      "both_active_over_cand": 0.48,
+      "n_cand_active": 250,
+      "n_both_active": 120,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_UKOIL_z40_N140": {
+      "peer": "XAU_UKOIL_z40_N140",
+      "z_corr_train": 0.8637,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.676,
+      "n_cand_active": 250,
+      "n_both_active": 169,
+      "clone": false,
+      "binding": true
+    },
+    "XAG_UKOIL_z40_N141": {
+      "peer": "XAG_UKOIL_z40_N141",
+      "z_corr_train": 0.7302,
+      "sign_agree_both_active": 0.9804,
+      "both_active_over_cand": 0.612,
+      "n_cand_active": 250,
+      "n_both_active": 153,
+      "clone": false,
+      "binding": true
+    },
+    "GBP_UKOIL_z40_N147": {
+      "peer": "GBP_UKOIL_z40_N147",
+      "z_corr_train": 0.938,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.784,
+      "n_cand_active": 250,
+      "n_both_active": 196,
+      "clone": true,
+      "binding": true
+    },
+    "US30_US500_z40_N142": {
+      "peer": "US30_US500_z40_N142",
+      "z_corr_train": -0.2278,
+      "sign_agree_both_active": 0.2794,
+      "both_active_over_cand": 0.272,
+      "n_cand_active": 250,
+      "n_both_active": 68,
+      "clone": false,
+      "binding": true
+    },
+    "XAG_US30_z40_N150": {
+      "peer": "XAG_US30_z40_N150",
+      "z_corr_train": -0.1898,
+      "sign_agree_both_active": 0.3333,
+      "both_active_over_cand": 0.336,
+      "n_cand_active": 250,
+      "n_both_active": 84,
+      "clone": false,
+      "binding": true
+    },
+    "CRACK_z60": {
+      "peer": "CRACK_z60",
+      "z_corr_train": -0.2632,
+      "sign_agree_both_active": 0.256,
+      "both_active_over_cand": 0.672,
+      "n_cand_active": 250,
+      "n_both_active": 168,
+      "clone": false,
+      "binding": true
+    },
+    "US100_GER40_N154": {
+      "peer": "US100_GER40_N154",
+      "z_corr_train": 0.2073,
+      "sign_agree_both_active": 0.7442,
+      "both_active_over_cand": 0.344,
+      "n_cand_active": 250,
+      "n_both_active": 86,
+      "clone": false,
+      "binding": true
+    },
+    "UKOIL_OVN_vs_oil_leg": {
+      "peer": "UKOIL_OVN_vs_oil_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4148,
+      "both_active_over_cand": 0.54,
+      "n_cand_active": 250,
+      "n_both_active": 135,
+      "clone": false,
+      "binding": true
+    },
+    "N98_USOIL_AM_vs_oil_leg": {
+      "peer": "N98_USOIL_AM_vs_oil_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4855,
+      "both_active_over_cand": 0.552,
+      "n_cand_active": 250,
+      "n_both_active": 138,
+      "clone": false,
+      "binding": true
+    },
+    "N140_sign": {
+      "peer": "N140_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.676,
+      "n_cand_active": 250,
+      "n_both_active": 169,
+      "clone": false,
+      "binding": true
+    },
+    "N141_sign": {
+      "peer": "N141_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.9804,
+      "both_active_over_cand": 0.612,
+      "n_cand_active": 250,
+      "n_both_active": 153,
+      "clone": false,
+      "binding": true
+    },
+    "N147_sign": {
+      "peer": "N147_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.784,
+      "n_cand_active": 250,
+      "n_both_active": 196,
+      "clone": true,
+      "binding": true
+    },
+    "N136_sign": {
+      "peer": "N136_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.9583,
+      "both_active_over_cand": 0.48,
+      "n_cand_active": 250,
+      "n_both_active": 120,
+      "clone": false,
+      "binding": true
+    },
+    "N142_sign": {
+      "peer": "N142_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2794,
+      "both_active_over_cand": 0.272,
+      "n_cand_active": 250,
+      "n_both_active": 68,
+      "clone": false,
+      "binding": true
+    },
+    "N150_sign": {
+      "peer": "N150_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3333,
+      "both_active_over_cand": 0.336,
+      "n_cand_active": 250,
+      "n_both_active": 84,
+      "clone": false,
+      "binding": true
+    },
+    "N154_sign": {
+      "peer": "N154_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.7442,
+      "both_active_over_cand": 0.344,
+      "n_cand_active": 250,
+      "n_both_active": 86,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N154": 4.14,
+    "N155": 9.48
+  },
+  "costs_rt": {
+    "US100cash": 0.66,
+    "GER40cash": 0.72,
+    "US30cash": 0.45,
+    "UKOILcash": 2.71
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "session": "15:30-21:00 CET",
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "no_inline_replacement": true,
+  "gate_source": "COSTS_FTMO.csv roundtrip_intraday_bp; not a session median",
+  "loaded_days_incl_warmup": {
+    "US100cash": 775,
+    "GER40cash": 768,
+    "US30cash": 775,
+    "UKOILcash": 773,
+    "US500cash": 775,
+    "UK100cash": 754,
+    "EU50cash": 768,
+    "EURUSD": 778,
+    "USOILcash": 774,
+    "XAUUSD": 774,
+    "XAGUSD": 774,
+    "GBPUSD": 778
+  },
+  "train_days": {
+    "US100cash": 775,
+    "GER40cash": 768,
+    "US30cash": 775,
+    "UKOILcash": 773,
+    "US500cash": 775,
+    "UK100cash": 754,
+    "EU50cash": 768,
+    "EURUSD": 778,
+    "USOILcash": 774,
+    "XAUUSD": 774,
+    "XAGUSD": 774,
+    "GBPUSD": 778
+  }
+}

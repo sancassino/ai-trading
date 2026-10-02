@@ -1,5 +1,40 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-03 01:41 Europe/Amsterdam — N154/N155 D-092.1 FAIL; OPEN N156/N157
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `9c4ee71`).  
+**Trigger:** Formal OPEN N154 US100_GER40_TRANSATLANTIC_XS / N155 US30_UKOIL_INDUSTRIAL_CRUDE_XS. Gates are COSTS round-trips. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat 15:30→21:00 is the cheap side, so swap in the gate is **0**. Not a session-median spread.
+
+| Book | legs | RT | gate |
+|------|------|---:|-----:|
+| N154 | US100cash 0,66 + GER40cash 0,72 | 1,38 | **4,14** |
+| N155 | US30cash 0,45 + UKOILcash 2,71 | 3,16 | **9,48** |
+
+### D-092.1 `n154_n155` (train 2021–2023; session-flat 15:30→21:00; swap 0; both legs)
+| ID | Family | N | mean | med | years | Verdict |
+|----|--------|--:|-----:|----:|-------|---------|
+| N154 | US100_GER40_TRANSATLANTIC_XS BW | **177** | **−2,79** | −0,49 | — / −6,83 / +2,22 | **FAIL** vs gate **4,14** (L/S 87/90; 239 signals, 62 missing bars; 2021 GER 15:30 unfilled — not DIAG) |
+| N155 | US30_UKOIL_INDUSTRIAL_CRUDE_XS BX | **206** | **−4,31** | −10,61 | −40,14 / +11,53 / −9,24 | **FAIL_CLONE** vs gate **9,48** (L/S 111/95; 250 signals, 44 missing bars) |
+
+Clone bar unchanged (|z|≥0,90 or agree≥0,85 and cover≥0,70).  
+N154 vs **N142** US30/US500: z **−0,77**, agree **0,00**, cover 0,55. vs US100/US500 z40: z **0,81**, agree **0,98**, cover **0,67** — not a clone (cover under 0,70). vs N138 GER/UK: z **0,07**, cover **0,32**; EU50/UK z **0,20**, cover **0,41**. vs N149: z **0,03**, agree 0,52, cover **0,33**. vs N103 GER-AM on the GER leg: agree **0,43**, cover **0,40**. vs N92 NY-2h on the US100 leg: agree **0,44**, cover 0,81. vs N81 short-US100: agree **1,00**, cover **0,42**. vs N155 z 0,21, cover 0,36. Not a clone. Mean **−2,79 < 4,14**.  
+N155 vs **N147** GBP/UKOIL: z **0,94**, agree **1,00**, cover **0,78** → **FAIL_CLONE** (same oil-rich days; the Dow leg does not make a new book). vs N140: z **0,86**, agree 1,00, cover **0,68**. vs N141: z **0,73**, agree 0,98, cover **0,61**. vs N136 Brent–WTI: z **0,55**, agree 0,96, cover **0,48**. vs N142: z **−0,23**, cover 0,27. vs N150: z **−0,19**, cover 0,34. vs CRACK z60: z **−0,26**, agree 0,26, cover 0,67. vs UKOIL-OVN on the oil leg: agree **0,41**, cover 0,54. vs N98 oil morning: agree **0,49**, cover 0,55. vs N154 z 0,21, cover 0,34. Mean **−4,31 < 9,48** as well — not a soft-pass.
+
+No soft-pass. No PREREG. No inline replacement. TRIAL stays **470**. No US100-only / GER-only. No US30-only / UKOIL-only. No transatlantic index twin. No index/oil twin.
+
+### Geleverd
+- N154 → **STOP FAIL**; N155 → **STOP FAIL_CLONE** (D-092.1)
+- OPEN **N156 XAU_GER40_HAVEN_DAX_XS** (BY, gate **4,65** = 3×(0,83+0,72), both in COSTS) + **N157 XAU_US100_HAVEN_NASDAQ_XS** (BZ, gate **4,47** = 3×(0,83+0,66), both in COSTS) — not FX, not silver/index, not metal–oil, not equity-factor z→US500, not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-03 01:35 Europe/Amsterdam — N152/N153 D-092.1 FAIL; OPEN N154/N155
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `7a654e6`).  
