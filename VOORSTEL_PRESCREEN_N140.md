@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N140 — XAU_UKOIL_XS session-flat (NEW_FAMILY BI)
 
-**Status:** **OPEN** — D-097 refill after N138/N139 D-092.1 FAIL (filed 2026-10-03 ~00:46 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** — `n140_n141` train N=**203** mean bruto **+4,72** < gate **10,62** (med +10,97; years −28,27/+27,39/−8,85; L/S 112/91). Screened 2026-10-03 ~00:55 CEST. Not a clone of N136 (z 0,46; cover 0,43), N113 (z −0,00), CRACK (z −0,27; agree 0,28), GAS (z −0,38), PPLT (z 0,07), N95 (agree 0,57; cover 0,28), N10 (agree 0,51; cover 0,20), or UKOIL-OVN (agree 0,48; cover 0,51). Dead screen; no XAU–UKOIL rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BI** (gold–Brent **real-asset basis**, two CFDs, session-flat — bullion vs crude, not an equity index and not a single-leg metal fade). **≠ N136** Brent–WTI (second leg is XAU, not WTI) / **≠ N101** crack→equity / **≠ N75** XAU/XAG 3d / **≠ N113** SLV/GLD→US500 / **≠ N95** XAU Lon→NY single leg / **≠ N80** UKOIL OVN-gap / **≠ N138** DAX/FTSE / **≠ N139** Nikkei/Hang Seng.  
 **Signal:** M5 day-close ratio **XAUUSD / UKOILcash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100 + D-097:** gold rich vs Brent mean-reverts when the real basis is stretched. Intraday-flat so the UKOIL long-swap credit is not the alpha.

@@ -1,6 +1,35 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
 
+## 2026-10-03 00:55 Europe/Amsterdam — N140/N141 D-092.1 FAIL; OPEN N142/N143
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `a5a9b5b`).  
+**Trigger:** Formal OPEN N140 XAU_UKOIL_XS / N141 XAG_UKOIL_XS. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### D-092.1 `n140_n141` (train 2021–2023; own gates, not 2,34; session-flat 15:30→21:00; swap 0)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N140 | XAU_UKOIL_XS BI | XAU/UKOIL z40/±1,5 both legs | **203** | **+4,72** | +10,97 | −28,27 / +27,39 / −8,85 | **FAIL** vs gate **10,62** (L/S 112/91) |
+| N141 | XAG_UKOIL_XS BJ | XAG/UKOIL z40/±1,5 both legs | **208** | **+6,35** | +15,33 | −30,81 / +23,80 / +3,83 | **FAIL_CLONE** vs gate **23,34** (L/S 111/97) |
+
+Clone bar (precommitted): |z| ≥ 0,90, or (sign agree ≥ 0,85 AND cover ≥ 0,70).  
+N140 vs N136 Brent/WTI: z **0,46**, agree 0,96, cover **0,43** — not a clone. vs N113 SLV/GLD: z **−0,00**. vs CRACK: z **−0,27**, agree 0,28. vs GAS: z **−0,38**. vs PPLT: z **0,07**. vs N95 XAU Lon→NY: agree **0,57**, cover **0,28**. vs UKOIL-OVN: agree **0,48**, cover **0,51**. vs XAU/XAG z40: z **0,00**. Not a clone. Mean **+4,72 < 10,62**.  
+N141 vs N140: z **0,87** (<0,90) but sign-agree **1,00** and cover **0,73** → **FAIL_CLONE** (metal swapped, same book). vs N113: z 0,41, agree 0,82, cover 0,52 — not a clone. vs CPER: z 0,12, cover 0,26. vs CuAu: z −0,15. vs N82: agree 0,48, cover 0,44. Mean also **+6,35 < 23,34**.
+
+Twin path (rules frozen before PnL): USDCHF/USDJPY XS, gate **5,37** = 3×(1,01+0,78), both RTs in COSTS. N=**227**, mean **−3,19**, med −1,71, years −4,30/−3,85/−1,60. **FAIL_CLONE** of USDJPY ret5 (agree **0,86**, cover **0,78**; z −0,42). Not N140 (z 0,09). DXYcash M5 starts 2024-11 so that peer is unmeasured, not a pass. **Not reopened** (D-098 intradag FX; do not rescreen).
+
+No soft-pass. No PREREG. TRIAL stays **470**. XLE not screened this push.
+
+### Geleverd
+- N140 → **STOP FAIL**; N141 → **STOP FAIL_CLONE** (D-092.1)
+- OPEN **N142 US30_US500_XS** (BK, gate 3,69; both RTs in COSTS) + **N143 XLE_ENERGY_EQUITY_STRESS** (BL, S2 `5a21939` cycle_0047; session-flat US500; gate 2,34; Lane-A day_t 2,29 is not a PASS) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No US100 overnight remap. No other branches.
+
+
+
 ## 2026-10-03 00:46 Europe/Amsterdam — N138/N139 D-092.1 FAIL; OPEN N140/N141
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `f5523fb`).  

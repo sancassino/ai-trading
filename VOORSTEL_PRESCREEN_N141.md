@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N141 — XAG_UKOIL_XS session-flat (NEW_FAMILY BJ)
 
-**Status:** **OPEN** — D-097 refill after N138/N139 D-092.1 FAIL (filed 2026-10-03 ~00:46 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL_CLONE** — `n140_n141` train N=**208** mean bruto **+6,35** < gate **23,34** (med +15,33; years −30,81/+23,80/+3,83; L/S 111/97). Twin of N140: z-corr **0,87** (<0,90) but sign-agree **1,00** and cover **0,73**. Not N113 (z 0,41; agree 0,82; cover 0,52), not CPER (z 0,12; cover 0,26), not CuAu (z −0,15). Inline non-metal-oil substitute USDCHF/USDJPY XS also **FAIL_CLONE** (mean −3,19 < 5,37; N=227; USDJPY ret5 agree 0,86 cover 0,78) — not reopened. Screened 2026-10-03 ~00:55 CEST.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BJ** (silver–Brent **industrial-precious vs crude basis**, two CFDs, session-flat). **≠ N140** gold–Brent (do not pool; silver’s industrial beta is the point) / **≠ N75** XAU/XAG pair / **≠ N82** XAG London fade / **≠ N113** SLV/GLD→US500 / **≠ N136** Brent–WTI / **≠ N129** PPLT→equity.  
 **Signal:** M5 day-close ratio **XAGUSD / UKOILcash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100 + D-097:** silver rich vs Brent mean-reverts on the stretch. Flat inside the US afternoon so the hold is not overnight and not a swap credit.

@@ -1,0 +1,396 @@
+{
+  "N140": {
+    "id": "N140",
+    "instrument": "XAUUSD+UKOILcash",
+    "n": 203,
+    "mean_bruto_bp": 4.7151,
+    "gate_bp": 10.62,
+    "verdict": "FAIL",
+    "notes": "XAU_UKOIL_XS z40/\u00b11.5 both legs 15:30\u219221:00; gate 10.62 = 3*(0.83+2.71); swap 0; NEW_FAMILY BI; RTs in COSTS",
+    "median_bruto_bp": 10.9706,
+    "stress_gate_bp": 15.93,
+    "stress_note": "BELOW_stress_1.5x (info only; catalog states no separate stress gate)",
+    "hit_rate": 0.532,
+    "n_long_basket": 112,
+    "n_short_basket": 91,
+    "years": {
+      "2021": -28.2672,
+      "2022": 27.3885,
+      "2023": -8.8535
+    },
+    "meta": {
+      "n_signal_days": 239,
+      "n_skip_missing_bar": 36
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N141": {
+    "id": "N141",
+    "instrument": "XAGUSD+UKOILcash",
+    "n": 208,
+    "mean_bruto_bp": 6.3541,
+    "gate_bp": 23.34,
+    "verdict": "FAIL_CLONE",
+    "notes": "XAG_UKOIL_XS z40/\u00b11.5 both legs 15:30\u219221:00; gate 23.34 = 3*(5.07+2.71); swap 0; NEW_FAMILY BJ; RTs in COSTS | CLONE of N140_XAU_UKOIL \u2014 no PREREG",
+    "median_bruto_bp": 15.3308,
+    "stress_gate_bp": 35.01,
+    "stress_note": "BELOW_stress_1.5x (info only; catalog states no separate stress gate)",
+    "hit_rate": 0.524,
+    "n_long_basket": 111,
+    "n_short_basket": 97,
+    "years": {
+      "2021": -30.8099,
+      "2022": 23.8045,
+      "2023": 3.8256
+    },
+    "meta": {
+      "n_signal_days": 239,
+      "n_skip_missing_bar": 31
+    },
+    "rt_in_costs": true,
+    "clone_hits": [
+      "N140_XAU_UKOIL"
+    ],
+    "twin_of_N140": true
+  },
+  "N140_clones": {
+    "BRENT_WTI_N136": {
+      "peer": "BRENT_WTI_N136",
+      "z_corr_train": 0.4555,
+      "sign_agree_both_active": 0.9608,
+      "both_active_over_cand": 0.4268,
+      "n_cand_active": 239,
+      "n_both_active": 102,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_XAG_z40": {
+      "peer": "XAU_XAG_z40",
+      "z_corr_train": 0.0031,
+      "sign_agree_both_active": 0.56,
+      "both_active_over_cand": 0.2092,
+      "n_cand_active": 239,
+      "n_both_active": 50,
+      "clone": false,
+      "binding": true
+    },
+    "N75_XAU_XAG_onesided": {
+      "peer": "N75_XAU_XAG_onesided",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4583,
+      "both_active_over_cand": 0.2008,
+      "n_cand_active": 239,
+      "n_both_active": 48,
+      "clone": false,
+      "binding": true
+    },
+    "SILVER_GOLD_N113": {
+      "peer": "SILVER_GOLD_N113",
+      "z_corr_train": -0.0042,
+      "sign_agree_both_active": 0.4815,
+      "both_active_over_cand": 0.4519,
+      "n_cand_active": 239,
+      "n_both_active": 108,
+      "clone": false,
+      "binding": true
+    },
+    "CRACK_N101": {
+      "peer": "CRACK_N101",
+      "z_corr_train": -0.2724,
+      "sign_agree_both_active": 0.2798,
+      "both_active_over_cand": 0.7029,
+      "n_cand_active": 239,
+      "n_both_active": 168,
+      "clone": false,
+      "binding": true
+    },
+    "GAS_UNG_N112": {
+      "peer": "GAS_UNG_N112",
+      "z_corr_train": -0.3835,
+      "sign_agree_both_active": 0.0988,
+      "both_active_over_cand": 0.3389,
+      "n_cand_active": 239,
+      "n_both_active": 81,
+      "clone": false,
+      "binding": true
+    },
+    "PPLT_N129": {
+      "peer": "PPLT_N129",
+      "z_corr_train": 0.0662,
+      "sign_agree_both_active": 0.3939,
+      "both_active_over_cand": 0.2762,
+      "n_cand_active": 239,
+      "n_both_active": 66,
+      "clone": false,
+      "binding": true
+    },
+    "N95_XAU_LonNY_vs_XAU_leg": {
+      "peer": "N95",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5714,
+      "both_active_over_cand": 0.2759,
+      "n_cand_active": 203,
+      "n_both_active": 56,
+      "clone": false,
+      "binding": true
+    },
+    "N10_XAU_fade_vs_XAU_leg": {
+      "peer": "N10",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5122,
+      "both_active_over_cand": 0.202,
+      "n_cand_active": 203,
+      "n_both_active": 41,
+      "clone": false,
+      "binding": true
+    },
+    "UKOIL_OVN_vs_UK_leg": {
+      "peer": "N80",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4808,
+      "both_active_over_cand": 0.5123,
+      "n_cand_active": 203,
+      "n_both_active": 104,
+      "clone": false,
+      "binding": true
+    },
+    "CPER_diag": {
+      "peer": "CPER",
+      "z_corr_train": -0.0506,
+      "sign_agree_both_active": 0.3793,
+      "both_active_over_cand": 0.2427,
+      "n_cand_active": 239,
+      "n_both_active": 58,
+      "clone": false,
+      "binding": false
+    },
+    "CuAu_diag": {
+      "peer": "CuAu",
+      "z_corr_train": -0.241,
+      "sign_agree_both_active": 0.1837,
+      "both_active_over_cand": 0.205,
+      "n_cand_active": 239,
+      "n_both_active": 49,
+      "clone": false,
+      "binding": false
+    }
+  },
+  "N141_clones": {
+    "N140_XAU_UKOIL": {
+      "peer": "N140_XAU_UKOIL",
+      "z_corr_train": 0.8686,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.728,
+      "n_cand_active": 239,
+      "n_both_active": 174,
+      "clone": true,
+      "binding": true
+    },
+    "BRENT_WTI_N136": {
+      "peer": "BRENT_WTI_N136",
+      "z_corr_train": 0.2499,
+      "sign_agree_both_active": 0.907,
+      "both_active_over_cand": 0.3598,
+      "n_cand_active": 239,
+      "n_both_active": 86,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_XAG_z40": {
+      "peer": "XAU_XAG_z40",
+      "z_corr_train": -0.4083,
+      "sign_agree_both_active": 0.1127,
+      "both_active_over_cand": 0.2971,
+      "n_cand_active": 239,
+      "n_both_active": 71,
+      "clone": false,
+      "binding": true
+    },
+    "N75_XAU_XAG_onesided": {
+      "peer": "N75_XAU_XAG_onesided",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.125,
+      "both_active_over_cand": 0.2343,
+      "n_cand_active": 239,
+      "n_both_active": 56,
+      "clone": false,
+      "binding": true
+    },
+    "SILVER_GOLD_N113": {
+      "peer": "SILVER_GOLD_N113",
+      "z_corr_train": 0.4087,
+      "sign_agree_both_active": 0.824,
+      "both_active_over_cand": 0.523,
+      "n_cand_active": 239,
+      "n_both_active": 125,
+      "clone": false,
+      "binding": true
+    },
+    "CRACK_N101": {
+      "peer": "CRACK_N101",
+      "z_corr_train": -0.1982,
+      "sign_agree_both_active": 0.3046,
+      "both_active_over_cand": 0.728,
+      "n_cand_active": 239,
+      "n_both_active": 174,
+      "clone": false,
+      "binding": true
+    },
+    "GAS_UNG_N112": {
+      "peer": "GAS_UNG_N112",
+      "z_corr_train": -0.4121,
+      "sign_agree_both_active": 0.075,
+      "both_active_over_cand": 0.3347,
+      "n_cand_active": 239,
+      "n_both_active": 80,
+      "clone": false,
+      "binding": true
+    },
+    "PPLT_N129": {
+      "peer": "PPLT_N129",
+      "z_corr_train": 0.3419,
+      "sign_agree_both_active": 0.7164,
+      "both_active_over_cand": 0.2803,
+      "n_cand_active": 239,
+      "n_both_active": 67,
+      "clone": false,
+      "binding": true
+    },
+    "CPER_N117": {
+      "peer": "CPER_N117",
+      "z_corr_train": 0.1221,
+      "sign_agree_both_active": 0.6935,
+      "both_active_over_cand": 0.2594,
+      "n_cand_active": 239,
+      "n_both_active": 62,
+      "clone": false,
+      "binding": true
+    },
+    "CuAu_COPPER_GOLD": {
+      "peer": "CuAu_COPPER_GOLD",
+      "z_corr_train": -0.1489,
+      "sign_agree_both_active": 0.4054,
+      "both_active_over_cand": 0.1548,
+      "n_cand_active": 239,
+      "n_both_active": 37,
+      "clone": false,
+      "binding": true
+    },
+    "N82_XAG_fade_vs_XAG_leg": {
+      "peer": "N82",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4835,
+      "both_active_over_cand": 0.4375,
+      "n_cand_active": 208,
+      "n_both_active": 91,
+      "clone": false,
+      "binding": true
+    },
+    "UKOIL_OVN_vs_UK_leg": {
+      "peer": "N80",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4615,
+      "both_active_over_cand": 0.5,
+      "n_cand_active": 208,
+      "n_both_active": 104,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "replacement": {
+    "id": "N142_slot",
+    "instrument": "USDCHF+USDJPY",
+    "n": 227,
+    "mean_bruto_bp": -3.1949,
+    "gate_bp": 5.37,
+    "verdict": "FAIL_CLONE",
+    "notes": "REPLACEMENT after N141 twin: USDCHF_USDJPY_XS z40/\u00b11.5 both legs 15:30\u219221:00; gate 5.37 = 3*(1.01+0.78); swap 0; NEW_FAMILY BK; RTs in COSTS; not metal-oil | CLONE of USDJPY_ret5 \u2014 no PREREG",
+    "median_bruto_bp": -1.7135,
+    "stress_gate_bp": 8.055,
+    "stress_note": "BELOW_stress_1.5x (info only; catalog states no separate stress gate)",
+    "hit_rate": 0.4714,
+    "n_long_basket": 173,
+    "n_short_basket": 54,
+    "years": {
+      "2021": -4.3024,
+      "2022": -3.8498,
+      "2023": -1.5955
+    },
+    "meta": {
+      "n_signal_days": 227,
+      "n_skip_missing_bar": 0
+    },
+    "rt_in_costs": true,
+    "triggered_because": "N141 twin of N140",
+    "clone_hits": [
+      "USDJPY_ret5"
+    ]
+  },
+  "replacement_clones": {
+    "DXY_z40": {
+      "peer": "DXY_z40",
+      "z_corr_train": null,
+      "sign_agree_both_active": null,
+      "both_active_over_cand": 0.0,
+      "n_cand_active": 227,
+      "n_both_active": 0,
+      "clone": false,
+      "binding": true
+    },
+    "EURJPY_z40": {
+      "peer": "EURJPY_z40",
+      "z_corr_train": -0.7579,
+      "sign_agree_both_active": 0.0204,
+      "both_active_over_cand": 0.6476,
+      "n_cand_active": 227,
+      "n_both_active": 147,
+      "clone": false,
+      "binding": true
+    },
+    "N140_XAU_UKOIL": {
+      "peer": "N140_XAU_UKOIL",
+      "z_corr_train": 0.0901,
+      "sign_agree_both_active": 0.5472,
+      "both_active_over_cand": 0.2335,
+      "n_cand_active": 227,
+      "n_both_active": 53,
+      "clone": false,
+      "binding": true
+    },
+    "USDJPY_ret5": {
+      "peer": "USDJPY_ret5",
+      "z_corr_train": -0.4242,
+      "sign_agree_both_active": 0.858,
+      "both_active_over_cand": 0.7753,
+      "n_cand_active": 227,
+      "n_both_active": 176,
+      "clone": true,
+      "binding": true
+    },
+    "USDMXN_ret5_N137": {
+      "peer": "USDMXN_ret5_N137",
+      "z_corr_train": 0.1209,
+      "sign_agree_both_active": 0.2833,
+      "both_active_over_cand": 0.2643,
+      "n_cand_active": 227,
+      "n_both_active": 60,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N140": 10.62,
+    "N141": 23.34,
+    "replacement_if_twin": 5.37
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "session": "15:30-21:00 CET"
+}
