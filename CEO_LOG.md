@@ -139,3 +139,4 @@
 07:42 UTC — VRAGEN_SANDRO_CEO.md geschreven (FTMO-voorwaarden, data, Debian, beslissing).
 07:56 UTC — geen nieuws; snapshot. Wacht op Sandro (VRAGEN_SANDRO_CEO.md).
 08:12 UTC — geen nieuws; snapshot.
+08:27 UTC — geen nieuws; wacht op Sandro.
