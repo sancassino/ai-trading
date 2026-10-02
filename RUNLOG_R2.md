@@ -2183,3 +2183,20 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 462→463**. Dead += `N116_TLT_DURATION_STRESS`. Geen retune / geen klonen (geen thr-grid, geen IEF twin, geen HYG rewrite, geen overnight). Board: `results/R2/n116_tlt_duration_stress/n116_gate_board.json`.
 
+## Cyclus 23:15 CEST (2026-10-02) — N117 CPER_COPPER_STRESS FAIL_STRESS (TRIAL_COUNT blijft 463)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `754e24e`: `PREREG_FTMO_N117_CPER_COPPER_STRESS.md` + screen in `results/R2/n116_n117_prescreen/` (D-092.1 PASS N=152 mean +2.89 ≥ 2.34); script `scripts/n117_cper_copper_stress_gate.py` frozen vóór run. Book starts at TRIAL **463** (post-N116).
+
+**Config freeze:** CPER z40 stress_buy thr ±1,5 → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress **3,51**; swap=0; **geen** copper CFD leg. NEW_FAMILY **AL**. CPER level ≠ SILVER_GOLD / CuAu ratio.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 152 | **+2,893 bp** | +2,113 bp | 0,31 / 0,29 | cost PASS (≥2,34); **stress FAIL** (<3,51) |
+| Test 2024 (info) | 87 | +2,20 bp | +1,42 bp | 0,23 / 0,26 | n/a (stress STOP) |
+
+**Year-split train mean bruto:** 2021 **+0,52** (N=11) / 2022 **+11,84** (N=70) / 2023 **−5,56** (N=71). Median train **−2,21**. Long/short 82/70. Signal-days train nonzero 195.
+
+**Verdict: FAIL_STRESS.** counts_as_trial=**false** → **geen TRIALS-append, geen TRIAL_COUNT bump** (N78/N93/N103 pattern). TRIAL_COUNT blijft **463**. Dead += `N117_CPER_COPPER_STRESS`. Geen retune / geen klonen (geen thr-grid, geen copper CFD twin, geen Cu/Au rewrite, geen overnight). Board: `results/R2/n117_cper_copper_stress/n117_gate_board.json`.
+
