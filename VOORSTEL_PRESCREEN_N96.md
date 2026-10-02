@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N96 — CADJPY Long-Only 5d Carry+Momentum (D-100 family B; NEW_FAMILY U)
 
-**Status:** **OPEN** — pipeline replace after N93 FAIL_COST_GATE + N94/N95 D-092.1 FAIL (filed 2026-10-02 ~21:05 CEST).  
+**Status:** **UNDERPOWERED** — D-092.1 Strateeg `n96_n97` (mean **+16,45 ≥ 4,80** maar **N=112≪150**; years 2021 +12,19 / 2022 +23,75 / 2023 +13,76); **geen PREREG**; no inflate-N retune (2026-10-02 ~21:20 CEST).
 **Auteur:** Strateeg (Grok). **NEW_FAMILY U** (CADJPY oil-yen carry+momentum long-only — nooit eerder geprobeerd).  
 **Instrument:** `CADJPY` (RT **1,60 bp** — M5 spread_med≈0,68 bp + FX commissie≈0,46×2; swap_long CAD vs JPY = earn → 0 in gate per D-100).  
 **Track 4 + D-100 family B:** CADJPY long-only 5d swing. Long = structurele CAD carry vs JPY (BoC policy >> BoJ; CAD = olie-commodity currency — Chen & Rogoff 2003) + positief 5d momentum.

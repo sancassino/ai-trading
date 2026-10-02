@@ -1,0 +1,32 @@
+{
+  "N96": {
+    "id": "N96",
+    "instrument": "CADJPY",
+    "n": 112,
+    "mean_bruto_bp": 16.4527,
+    "median_bruto_bp": 11.5706,
+    "gate_bp": 4.8,
+    "verdict": "UNDERPOWERED",
+    "hit_rate": 0.5625,
+    "years": {
+      "2021": 12.1925,
+      "2022": 23.7536,
+      "2023": 13.7552
+    }
+  },
+  "N97": {
+    "id": "N97",
+    "instrument": "AUDCAD",
+    "n": 101,
+    "mean_bruto_bp": -8.8728,
+    "median_bruto_bp": 5.3487,
+    "gate_bp": 4.5,
+    "verdict": "FAIL",
+    "hit_rate": 0.5149,
+    "years": {
+      "2021": -13.0417,
+      "2022": 1.2617,
+      "2023": -15.7236
+    }
+  }
+}

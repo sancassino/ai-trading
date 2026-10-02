@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N97 — AUDCAD Long-Only 5d Commodity-XS Momentum (NEW_FAMILY V)
 
-**Status:** **OPEN** — pipeline replace after N93 FAIL_COST_GATE + N94/N95 D-092.1 FAIL (filed 2026-10-02 ~21:05 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** — Strateeg `n96_n97` (N=101, mean **−8,87 < 4,50**; years 2021 −13,04 / 2022 +1,26 / 2023 −15,72); STOP (2026-10-02 ~21:20 CEST).
 **Auteur:** Strateeg (Grok). **NEW_FAMILY V** (AUDCAD commodity-currency relative 5d momentum long-only — nooit als deze setup).  
 **Instrument:** `AUDCAD` (RT **1,50 bp** — M5 spread_med≈0,56 bp + FX commissie≈0,46×2; long AUD vs CAD — swap near-neutral / mild earn → 0 in gate per D-100).  
 **Track 4 + XS:** AUD vs CAD relative commodity-cycle / rate-diff momentum (Australia iron ore / China-beta vs Canada oil). Long-only when 5d AUDCAD momentum positief.
