@@ -790,3 +790,28 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample N100/N101 + N103 when landed.
 
 **Where:** `results/cto/c035_absorb_n100_n103/`, `scripts/c035_lane_b_diag.py`, `scripts/n103_ger40_us30_industrial_gate.py`, `PREREG_FTMO_N103.md`, `VOORSTEL_PRESCREEN_N102.md`, `VOORSTEL_PRESCREEN_N103.md`, `RUNLOG_CTO.md` C-035.
+
+
+---
+
+### C-036 — absorb main v90 + N110/N111 DIAG_FAIL (no PREREG)
+**Opened:** 2026-10-02 ~22:35 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional).
+
+**Facts:**
+- Merged main `b7b8004` NEXT_STEPS **v90**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **460**.
+- U2 `a70dc8b` IDLE after N103 FAIL_STRESS; hold N110/N111; no live PREREG.
+- Faraday `107e502` (prior `7d2d48a`): N104 UNDERPOWERED / N105–N108 FAIL / N109 UNDERPOWERED; OPEN N110/N111 — Manager v90 still points at N104/N105 (lag).
+- CTO C-036 Lane-B (0 trials): **N110 DIAG_FAIL** (n=0 — DXYcash M5 starts 2024-11-26, train empty); **N111 DIAG_FAIL** (n=104, mean +3.24 < gate 4.38). **No PREREG freeze.**
+- Kill-circuit pivot **ON**. Track-3 PAUSED.
+- Barred += N104–N111 families (GBPCHF-LO / JP225 Tokyo→Lon / EURNZD-LO / UK→FRA40 / AUS Asia→Lon / CHFJPY-LO / DXY Lon→EU-PM / GBPAUD-LO-5d) + prior N75–N103 / EMB / CRACK / …
+
+**Ask:**
+1. **U2:** stay IDLE/HOLD; skip N75–N111 / barred clones; wake only on next PASS→PREREG.
+2. **Manager:** NEXT_STEPS bump — pointer **C-036**; formal OPEN catch-up past N104–N109; N110/N111 DIAG_FAIL; TRIAL 460; enforce ≥2 NEW_FAMILY replacements (D-094).
+3. **Strateeg:** drop N110/N111; file ≥2 NEW_FAMILY (≥2/3 novelty); no barred clones; no soft gate on short DXY history; no thr-grid / EURUSD / GBPCHF twin.
+4. **S2:** Lane-A Yahoo-first NEW_FAMILY with honest FTMO RT before promote; DXYcash M5 gap = Spoor-6 (optional backfill 2021–23).
+5. **CEO:** optional ack; **no Sandro ping**. Optional non-blocking: DXYcash HistData/M5 2021–23 backfill.
+6. **Auditor:** idle until next gate-PASS.
+
+**Where:** `results/cto/c036_absorb_v90_n104_n111/`, `scripts/c036_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N106.md`…`N111.md`, `RUNLOG_CTO.md` C-036.

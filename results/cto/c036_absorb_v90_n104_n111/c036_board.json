@@ -1,0 +1,98 @@
+{
+  "c": "C-036",
+  "when": "2026-10-02 ~22:35 Europe/Amsterdam",
+  "absorb": {
+    "main": "b7b8004 NEXT_STEPS v90 \u2014 C-035 + N102 DIAG_FAIL / N103 FAIL_STRESS; TRIAL 460; OPEN N104/N105",
+    "faraday": "107e502 N106\u2013N109 D-092.1 + OPEN N110/N111; prior 7d2d48a N104 UNDERPOWERED / N105 FAIL",
+    "u2": "a70dc8b IDLE absorb v90; hold N110/N111; prior b9af560 N103 FAIL_STRESS (TRIAL 460 unchanged)",
+    "prior_cto": "f7af392 C-035 N102 DIAG_FAIL / N103 DIAG_PASS\u2192PREREG (U2 then FAIL_STRESS)"
+  },
+  "faraday_prescreen": [
+    {
+      "id": "N104",
+      "verdict": "UNDERPOWERED",
+      "n": 98,
+      "mean_bp": 10.62,
+      "gate_bp": 4.53,
+      "note": "GBPCHF LO 5d; Faraday 7d2d48a"
+    },
+    {
+      "id": "N105",
+      "verdict": "FAIL",
+      "n": 392,
+      "mean_bp": -2.77,
+      "gate_bp": 4.53,
+      "note": "JP225 Tokyo\u2192Lon; Faraday 7d2d48a"
+    },
+    {
+      "id": "N106",
+      "verdict": "FAIL",
+      "n": 103,
+      "mean_bp": 3.45,
+      "gate_bp": 4.11,
+      "note": "EURNZD LO; Faraday 107e502"
+    },
+    {
+      "id": "N107",
+      "verdict": "FAIL",
+      "n": 255,
+      "mean_bp": 3.94,
+      "gate_bp": 5.94,
+      "note": "UK100\u2192FRA40; Faraday 107e502"
+    },
+    {
+      "id": "N108",
+      "verdict": "FAIL",
+      "n": 242,
+      "mean_bp": -4.86,
+      "gate_bp": 4.38,
+      "note": "AUS200 Asia\u2192Lon; Faraday 107e502"
+    },
+    {
+      "id": "N109",
+      "verdict": "UNDERPOWERED",
+      "n": 122,
+      "mean_bp": 19.69,
+      "gate_bp": 4.23,
+      "note": "CHFJPY LO 5d; Faraday 107e502"
+    }
+  ],
+  "freeze": "OFF",
+  "trial_count": 460,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "results": [
+    {
+      "label": "N110_DXY_LON_AM_EU_PM_CONT",
+      "n": 0,
+      "mean_bp": null,
+      "day_t": null,
+      "h1_mean_bp": null,
+      "h2_mean_bp": null,
+      "gate_bp": 7.86,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY AG; DXY Lon-AM\u2192EU-PM same-dir; |am|\u226525; session-flat 17:00; gate=3\u00d7RT 2.62=7.86; \u2260 N108/N105 Asia\u2192Lon equity; DATA_GAP: DXYcash M5 starts 2024-11-26 \u2014 train 2021\u201323 empty \u2192 n=0 (not soft-pass; no 2025+ reserve; no Yahoo rewrite this cycle)"
+    },
+    {
+      "label": "N111_GBPAUD_LO_GBP_AUD_CARRY_MOM_5D",
+      "n": 104,
+      "mean_bp": 3.244,
+      "day_t": 0.351,
+      "h1_mean_bp": -4.152,
+      "h2_mean_bp": 10.639,
+      "gate_bp": 4.38,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY AH; long-only; gate=3\u00d7RT 1.46; swap earn\u21920 in gate (D-100); \u2260 N97 AUDCAD / N104 GBPCHF / N106 EURNZD"
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N87\u2192N92\u2192N100\u2192N101 (4 formal); N103 cost-PASS\u2192FAIL_STRESS; pivot ON; bar N104\u2013N109 families + EURNZD-LO / UK\u2192FRA40 / AUS Asia\u2192Lon / GBPCHF-LO / JP225 Tokyo\u2192Lon / CHFJPY-LO clones",
+  "n110_data_gap": {
+    "instrument": "DXYcash",
+    "m5_start": "2024-11-26",
+    "m5_end": "2026-10-01",
+    "train_2021_2023_rows": 0,
+    "action": "DROP PREREG path; Strateeg replace NEW_FAMILY or S2 Lane-A Yahoo DX-Y proxy with honest FTMO RT before promote; no soft gate on 2024-only"
+  }
+}

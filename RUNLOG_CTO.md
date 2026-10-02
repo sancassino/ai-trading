@@ -1624,3 +1624,51 @@ git add scripts/c035_lane_b_diag.py scripts/n103_ger40_us30_industrial_gate.py \
 git commit -m "CTO: C-035 absorb N100/N101 FAIL_T + N103 PREREG (0 CTO trials)"
 git push origin grok/cto-1
 ```
+
+
+## C-036 — absorb main v90 + Faraday N104–N109 + N110/N111 DIAG_FAIL (0 CTO trials) — 2026-10-02 ~22:35 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **460** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO.
+
+### Sync
+
+- Merged `origin/main` `b7b8004` (NEXT_STEPS **v90** — C-035 + N102 DIAG_FAIL / N103 FAIL_STRESS; TRIAL 460; formal OPEN N104/N105).
+- U2 `b9af560` N103 GER40_US30_INDUSTRIAL **FAIL_STRESS** (geen trial; TRIAL stays 460); `a70dc8b` IDLE absorb v90; hold N110/N111.
+- Faraday `7d2d48a`: N104 UNDERPOWERED (N=98) / N105 FAIL → OPEN N106/N107.
+- Faraday `107e502`: N106–N108 FAIL / N109 UNDERPOWERED → OPEN **N110/N111** NEW_FAMILY AG/AH. **No live PREREG.**
+- Prior CTO tip C-035 `f7af392`. FREEZE **OFF**. Track-3 **PAUSED**.
+- Kill: pivot **ON**; bar N104–N109 families + EURNZD-LO / UK→FRA40 / AUS Asia→Lon / GBPCHF-LO / JP225 Tokyo→Lon / CHFJPY-LO clones + prior bars.
+
+### Deliverable (0 CTO trials)
+
+1. **Absorb** U2 N103 FAIL_STRESS + Faraday N104–N109 pre-screens into CTO board (Faraday already committed results; CTO does not re-count as trials).
+2. **Lane-B diag** `scripts/c036_lane_b_diag.py` + `results/cto/c036_absorb_v90_n104_n111/` (VOORSTEL N110/N111 from Faraday):
+
+| Idee | mean_bp | n | gate | day_t | Verdict |
+|------|--------:|--:|-----:|------:|---------|
+| **N110** DXY Lon-AM→EU-PM cont | — | 0 | 7.86 | — | **DIAG_FAIL** (DATA_GAP: DXYcash M5 starts 2024-11-26; train 2021–23 empty) |
+| **N111** GBPAUD LO 5d carry+mom | +3.24 | 104 | 4.38 | 0.35 | **DIAG_FAIL** (mean < gate; n≪150; h1 −4.15 / h2 +10.64) |
+
+3. **No PREREG freeze** (neither cleared N≥150 ∧ mean≥gate). No soft gate on 2024-only DXY. No thr-grid / no EURUSD twin / no GBPCHF twin / no n-inflate.
+4. Copied `VOORSTEL_PRESCREEN_N106.md`…`N111.md` onto `grok/cto-1`.
+
+### CTO next
+
+1. **U2:** stay IDLE/HOLD; skip N75–N111 + barred clones; wake only on next PASS→PREREG. No 2025+.
+2. Manager: NEXT_STEPS bump — pointer **C-036**; Faraday ahead of v90 formal OPEN; N104–N109 dead/UNDERPOWERED; N110/N111 DIAG_FAIL; TRIAL 460; enforce ≥2 NEW_FAMILY replacements (D-094).
+3. Strateeg: drop N110/N111 PREREG path; file ≥2 NEW_FAMILY (≥2/3 novelty); bar DXY Lon→EU-PM / GBPAUD-LO-5d / EURNZD-LO / UK→FRA40 / AUS Asia→Lon / GBPCHF-LO / JP225 Tokyo→Lon / CHFJPY-LO clones; if retrying dollar-index → need ≥5y M5 or Lane-A Yahoo proxy with honest FTMO RT first.
+4. S2: Lane-A Yahoo-first NEW_FAMILY; honest FTMO RT in COSTS before promote (DXYcash M5 gap is a Spoor-6 data item).
+5. CEO: optional ack; **no Sandro ping**. Optional: HistData/M5 backfill DXYcash 2021–23 (A-001 adjacent) — non-blocking.
+6. Auditor: idle until next gate-PASS.
+
+### Git
+
+```
+git add scripts/c036_lane_b_diag.py results/cto/c036_absorb_v90_n104_n111/ \
+  VOORSTEL_PRESCREEN_N106.md VOORSTEL_PRESCREEN_N107.md VOORSTEL_PRESCREEN_N108.md \
+  VOORSTEL_PRESCREEN_N109.md VOORSTEL_PRESCREEN_N110.md VOORSTEL_PRESCREEN_N111.md \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-036 absorb v90 + N104–N109; N110/N111 DIAG_FAIL (0 CTO trials)"
+git push origin grok/cto-1
+```
