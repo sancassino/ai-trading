@@ -7,3 +7,6 @@ faireconomy ff_calendar: alleen lopende week (forecast+actual), geen historie �
 
 ## NFP-surprise-proxy (nfp_proxy.py, FRED PAYEMS, N≈40–47, <2025)
 corr(surprise,reactie) −0,2; vervolgbeweging na eerste uur: |t| ≤ 1,4 voor US500/US100/XAU/EURUSD, geen consistent teken. Proxy-surprise zwak en N te klein; NUL. Geen vervolg zonder echte consensus-historie. Forward-archief ff_calendar gestart (data/calendar/).
+
+## Ongefilterd ORB B4a — FTMO-EV (orb_full_ev.py, beschrijvend)
+2021-24 SR 0.98; reserve 2025-26 SR 0.64 (nog positief, maar reserve is nu voor ORB-meta verbruikt; geen nieuwe test mogelijk). Schaal 0.3: EV €155/mnd, survive 0.87 (alles); 0.4: €284, 0.67. Hoofdvraag voor Sandro: ~€150–280/mnd bij 13–33% kans op verlies van de fee-cyclus — alleen als paper-forward (vanaf 2 okt) bevestigt.
