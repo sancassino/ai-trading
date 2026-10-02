@@ -2170,3 +2170,16 @@ Long/short train 176/129. Signal-days train nonzero 395.
 **Year-split train mean bruto:** 2021 **−10,03** (N=59) / 2022 **+7,69** (N=175) / 2023 **+4,82** (N=137). Long/short train 92/279. Signal-days train nonzero 468.
 
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 461→462**. Dead += `N114_HYG_CREDIT_STRESS`. Geen retune / geen klonen (geen thr-grid, geen EMB rewrite, geen LQD twin, geen overnight). Skip N115 FAIL / N116–N117 OPEN screens. Board: `results/R2/n114_hyg_credit_stress/n114_gate_board.json`.
+
+## 2026-10-02 — N116 TLT_DURATION_STRESS (PREREG_FTMO_N116 / NEW_FAMILY AK) — FAIL_T
+
+Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo thr±0.5 → US500cash session-flat 15:30→21:00 CET; RT 0.78 → gate 2.34 / stress 3.51; swap=0. Train 2021–2023; test 2024; reserve 2025+ untouched.
+
+**Train:** N=**386** mean bruto **+6,01** ≥ 2,34 (cost PASS); ≥ 3,51 (stress PASS). mean netto +5,23; day-clust t **1,16** / NW-L5 **1,17** both <2,0. Long/short 69/317. Signal-days train nonzero 493.
+
+**Test 2024:** N=124 mean bruto **+3,46** / netto +2,68; t 0,44 / NW 0,42 both <2.
+
+**Year-split train mean bruto:** 2021 **+3,39** (N=38) / 2022 **+9,62** (N=198) / 2023 **+1,92** (N=150).
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 462→463**. Dead += `N116_TLT_DURATION_STRESS`. Geen retune / geen klonen (geen thr-grid, geen IEF twin, geen HYG rewrite, geen overnight). Board: `results/R2/n116_tlt_duration_stress/n116_gate_board.json`.
+
