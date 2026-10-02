@@ -2136,3 +2136,20 @@ Long/short train 195/241. Signal-days train nonzero 547.
 Long/short train 118/70. Signal-days train nonzero 251.
 
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 460→461**. Dead += `N112_GAS_EQUITY_MACRO`. Geen retune / geen klonen (geen thr-grid, geen NATGAS/OIL CFD twin, geen overnight rewrite, geen US100-first). Board: `results/R2/n112_gas_equity_macro/n112_gate_board.json`.
+
+## Cyclus 23:02 CEST (2026-10-02) — N113 SILVER_GOLD_RATIO FAIL_COST_GATE (TRIAL_COUNT blijft 461)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `791a17c`: `PREREG_FTMO_N113_SILVER_GOLD_RATIO.md` + `results/lane_b/SILVER_GOLD_RATIO_SOURCE.md` (S2 `35e38ac` cycle_2240); script `scripts/n113_silver_gold_ratio_gate.py` frozen vóór run. Book starts at TRIAL **461** (post-N112).
+
+**Config freeze:** SLV/GLD ratio z40 / thr ±1,0 / fade_extreme → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress 3,51; swap=0; **geen** silver/XAG CFD leg (D-100). NEW_FAMILY **SILVER_GOLD_RATIO**. Lane-A day_t 2,10 / mean 22,41 = overnight Yahoo proxy hold=5d — **niet** formele PASS.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 305 | **+1,601 bp** | +0,821 bp | 0,17 / 0,16 | **FAIL** (<2,34); N≥150 ✔ |
+| Test 2024 (info) | 137 | +10,85 bp | +10,07 bp | 1,99 / 2,08 | n/a (cost-gate STOP) |
+
+Long/short train 176/129. Signal-days train nonzero 395.
+
+**Verdict: FAIL_COST_GATE.** counts_as_trial=**false** → **geen TRIALS-append, geen TRIAL_COUNT bump** (N78/N93 pattern). TRIAL_COUNT blijft **461**. Dead += `N113_SILVER_GOLD_RATIO`. Geen retune / geen klonen (geen thr-grid, geen XAG-CFD twin, geen overnight rewrite, geen N75 ratio-MR rewrite). Board: `results/R2/n113_silver_gold_ratio/n113_gate_board.json`.

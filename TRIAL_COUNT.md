@@ -86,3 +86,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-10-02 | N100/PREREG_FTMO_N100: EMB_CREDIT_STRESS US100 session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 0.38 <2.0 train; test N=154 mean -2.57 bp; 1 variant) | 1 | 459 |
 | 2026-10-02 | N101/PREREG_FTMO_N101: CRACK_SPREAD_MACRO US100 session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.21 <2.0 train; test N=184 mean -5.00 bp; 1 variant) | 1 | 460 |
 | 2026-10-02 | N112/PREREG_FTMO_N112: GAS_EQUITY_MACRO US500 session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.04 <2.0 train; test N=71 mean -4.34 bp; 1 variant) | 1 | 461 |
+| 2026-10-02 | N113/PREREG_FTMO_N113: SILVER_GOLD_RATIO US500 session-flat (kostenpoort STOP mean bruto 1.60 < 2.34; **ongeldig/telt niet** — FAIL_COST_GATE ≠ trial) | 0 | 461 |
