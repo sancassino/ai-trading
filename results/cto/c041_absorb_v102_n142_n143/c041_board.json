@@ -1,0 +1,61 @@
+{
+  "c": "C-041",
+  "when": "2026-10-03 ~01:03 Europe/Amsterdam",
+  "absorb": {
+    "main": "cb1b8d1 tip (NEXT_STEPS v102 at b0b20ac \u2014 N134\u2013N137 FAIL; OPEN N138/N139 stale vs Faraday; TRIAL 470; FREEZE OFF) + forward P1 daily",
+    "faraday": "e1bf004 \u2014 N140 FAIL / N141 FAIL_CLONE; prior N138 FAIL_CLONE / N139 FAIL; OPEN N142 US30_US500_XS / N143 XLE\u2192US500 (Manager v102 still had tip f5523fb / OPEN N138/N139)",
+    "u2": "78775a2 IDLE/HOLD absorb v102; TRIAL 470; OPEN N138/N139 no PREREG (stale vs Faraday e1bf004)",
+    "s2": "5a21939 cycle_0047 XLE_ENERGY_EQUITY_STRESS (Lane-A feed for N143)",
+    "prior_cto": "659d6c6 C-040 N134/N135 DIAG_FAIL (0 CTO trials)"
+  },
+  "freeze": "OFF",
+  "trial_count": 470,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "live_prereg": "PREREG_FTMO_N143_XLE_ENERGY_EQUITY_STRESS",
+  "results": [
+    {
+      "label": "N142_US30_US500_XS_SESSION",
+      "n": 187,
+      "mean_bp": -1.681,
+      "median_bp": -3.357,
+      "day_t": -0.709,
+      "h1_mean_bp": 2.284,
+      "h2_mean_bp": -5.604,
+      "n_long": 101,
+      "n_short": 86,
+      "gate_bp": 3.69,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": -0.452,
+        "2022": 0.362,
+        "2023": -4.593
+      },
+      "notes": "NEW_FAMILY BK; US30/US500 ratio z40/thr1.5 basis fade both legs 15:30\u219221:00; gate=3\u00d7(0.45+0.78)=3.69; \u2260 N81/N138/N143/IDX_SHORT/N87"
+    },
+    {
+      "label": "N143_XLE_ENERGY_EQUITY_STRESS_US500_SESSION",
+      "n": 356,
+      "mean_bp": 7.856,
+      "median_bp": 5.92,
+      "day_t": 1.809,
+      "h1_mean_bp": 12.455,
+      "h2_mean_bp": 3.257,
+      "n_long": 117,
+      "n_short": 239,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_PASS",
+      "years": {
+        "2021": -5.17,
+        "2022": 14.148,
+        "2023": 4.563
+      },
+      "notes": "NEW_FAMILY BL; XLE z40/thr1.0 fade_extreme \u2192 US500 15:30\u219221:00; gate=3\u00d7RT 0.78=2.34; S2 5a21939 cycle_0047; \u2260 GAS/CRACK/N98/N134/N140/N142"
+    }
+  ],
+  "promote_to_prereg": [
+    "N143_XLE_ENERGY_EQUITY_STRESS_US500_SESSION"
+  ],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N100+N101+N112+N114+N116+N118+N124+N125+N127+N128+N130+N131 (\u22655); pivot ON; bar N75\u2013N141 + XLF/QUAL/BRENT_WTI/USDMXN/GER40_UK/JP_HK/XAU_UKOIL/XAG_UKOIL + prior; N142/N143 = NEW_FAMILY BK/BL (US cash-index basis / XLE\u2192US500 \u2014 not clones of dead ETF-stress or EU XS)"
+}

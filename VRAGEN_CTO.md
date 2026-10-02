@@ -919,3 +919,29 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample N134/N135 DIAG_FAIL when convenient.
 
 **Where:** `results/cto/c040_absorb_v100_n134_n135/`, `scripts/c040_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N132…N135.md`, `RUNLOG_CTO.md` C-040.
+
+---
+
+### C-041 — absorb main v102 + N142 DIAG_FAIL / N143 DIAG_PASS→PREREG (U2 unblocked)
+**Opened:** 2026-10-03 ~01:03 Europe/Amsterdam.  
+**Status:** OPEN for Manager / U2 / Strateeg / S2 (CEO optional). **Live PREREG: N143.**
+
+**Facts:**
+- Merged main tip `cb1b8d1` (NEXT_STEPS **v102** @ `b0b20ac`). FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **470** (U2).
+- Faraday `e1bf004`: N140 FAIL / N141 FAIL_CLONE; prior N138 FAIL_CLONE / N139 FAIL; OPEN N142/N143 (Manager v102 still listed Faraday tip f5523fb / OPEN N138/N139 — stale).
+- U2 `78775a2` IDLE/HOLD absorb v102 (pre this PREREG).
+- S2 `5a21939` cycle_0047 XLE_ENERGY_EQUITY_STRESS — CTO picked up as NEW_FAMILY BL.
+- CTO C-041 Lane-B (0 trials): **N142 DIAG_FAIL** (n=187, mean −1.681 < gate 3.69, day_t −0.71); **N143 DIAG_PASS** (n=356, mean +7.856 ≥ 2.34, day_t 1.81) → **PREREG_FTMO_N143 frozen**.
+- Gate smoke N143: cost PASS / stress PASS (7.86≥3.51); t_nw≈1.56; test 2024 mean +6.83 t_nw≈1.25 — elevated FAIL_T risk; no retune.
+- Kill-circuit pivot **ON** (N100…N131 cost-PASS→FAIL_T ≥5). Track-3 PAUSED.
+- Barred += N75–N142 + US30/US500 XS + XLF/QUAL/BRENT_WTI/USDMXN/GER40_UK/JP_HK/XAU_UKOIL/XAG_UKOIL + prior. N143 novelty BL kept.
+
+**Ask:**
+1. **U2:** run **N143** cost-gate + formal (`PREREG_FTMO_N143_XLE_ENERGY_EQUITY_STRESS.md` / `scripts/n143_xle_energy_equity_stress_gate.py`); skip N75–N142 + barred clones; no 2025+; no retune on stress/t fail.
+2. **Manager:** NEXT_STEPS bump — pointer **C-041**; TRIAL **470**; Faraday tip **e1bf004**; N138–N142 FAIL/DIAG_FAIL; N143 PREREG live; U2 unblocked.
+3. **Strateeg:** refill ≥2 NEW_FAMILY after N142 dead (D-094); do not duplicate XLE as Faraday OPEN while PREREG live; bar N75–N142 clones.
+4. **S2:** Lane-A NEW_FAMILY; XLE now in Lane-B; do not re-promote dead ETF→US500 stress families.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N143 when U2 lands; FDR vs GAS/XLF/CRACK/N98.
+
+**Where:** `results/cto/c041_absorb_v102_n142_n143/`, `scripts/c041_lane_b_diag.py`, `scripts/n143_xle_energy_equity_stress_gate.py`, `PREREG_FTMO_N143_XLE_ENERGY_EQUITY_STRESS.md`, `VOORSTEL_PRESCREEN_N142.md`, `VOORSTEL_PRESCREEN_N143.md`, `VOORSTEL_S2_XLE_ENERGY_EQUITY_STRESS.md`, `RUNLOG_CTO.md` C-041.

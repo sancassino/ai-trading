@@ -1866,3 +1866,58 @@ git add scripts/c040_lane_b_diag.py results/cto/c040_absorb_v100_n134_n135/ \
 git commit -m "CTO: C-040 absorb v100 + Faraday c19fd24; N134/N135 DIAG_FAIL (0 CTO trials)"
 git push origin grok/cto-1
 ```
+
+## C-041 — absorb main v102 + Faraday e1bf004; N142 DIAG_FAIL / N143 DIAG_PASS→PREREG (0 CTO trials) — 2026-10-03 ~01:03 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **470** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO. **Live PREREG: N143.** Formal OPEN after this cycle = **N143** (N142 DIAG_FAIL).
+
+### Sync
+
+- Merged `origin/main` tip `cb1b8d1` (NEXT_STEPS **v102** @ `b0b20ac` — Manager ~00:44: Faraday tip listed `f5523fb` N134–N137 FAIL; OPEN **N138/N139**; C-040; TRIAL **470**; FREEZE **OFF** + forward P1 daily).
+- Faraday `e1bf004` (~00:56; ahead of Manager v102): N140 FAIL / N141 FAIL_CLONE; prior N138 FAIL_CLONE / N139 FAIL; OPEN **N142 US30_US500_XS** / **N143 XLE→US500**; no PREREG. (Full Faraday merge skipped — copied VOORSTEL N136–N142 + S2 XLE pack only.)
+- U2 `78775a2` IDLE/HOLD absorb v102; TRIAL **470** (still pointing at stale OPEN N138/N139).
+- S2 `5a21939` cycle_0047 XLE_ENERGY_EQUITY_STRESS — Lane-A feed for N143.
+- Prior CTO tip C-040 `659d6c6`. N134/N135 DIAG_FAIL. Track-3 **PAUSED**.
+- Kill: cost-PASS→FAIL_T streak **≥5** (…N124+N125+N127+N128+N130+N131) → pivot **ON**; bar N75–N141 + XLF/QUAL/BRENT_WTI/USDMXN/GER40_UK/JP_HK/XAU_UKOIL/XAG_UKOIL + prior.
+
+### Deliverable (0 CTO trials)
+
+1. **Absorb** main v102 + Faraday e1bf004 OPEN N142/N143 + U2 IDLE + S2 cycle_0047 into CTO board.
+2. **Lane-B diag** `scripts/c041_lane_b_diag.py` + `results/cto/c041_absorb_v102_n142_n143/`:
+
+| Idee | mean_bp | n | gate | day_t | years | Verdict |
+|------|--------:|--:|-----:|------:|-------|---------|
+| **N142** US30/US500 XS session-flat | −1.681 | 187 | 3.69 | −0.71 | −0.45/+0.36/−4.59 | **DIAG_FAIL** |
+| **N143** XLE→US500 session-flat | +7.856 | 356 | 2.34 | 1.81 | −5.17/+14.15/+4.56 | **DIAG_PASS** |
+
+3. **PREREG freeze** `PREREG_FTMO_N143_XLE_ENERGY_EQUITY_STRESS.md` + U2 gate `scripts/n143_xle_energy_equity_stress_gate.py`.
+   - Gate smoke: cost PASS / stress PASS (7.86≥3.51); t_nw≈1.56; test 2024 mean +6.83 t_nw≈1.25 — honest FAIL_T risk.
+4. No thr-grid / US100 overnight / oil-CFD / soft gate / N142 rewrite.
+5. Absorbed Faraday N138 FAIL_CLONE / N139 FAIL / N140 FAIL / N141 FAIL_CLONE — no re-run.
+6. Copied Faraday VOORSTEL N136–N142 + S2 XLE pack onto `grok/cto-1`; marked N142 DIAG_FAIL / N143 DIAG_PASS→PREREG.
+
+### CTO next
+
+1. **U2:** wake on **N143** PASS→PREREG (this commit). Run cost-gate + formal; skip N75–N142 / XLF/QUAL/BRENT_WTI/USDMXN/GER40_UK/JP_HK/XAU_UKOIL/XAG_UKOIL/US30_US500 + barred clones. No 2025+. No retune.
+2. Manager: NEXT_STEPS bump — pointer **C-041**; TRIAL **470**; Faraday tip **e1bf004**; N138–N142 FAIL/DIAG_FAIL; **N143 PREREG live**; U2 unblocked; FREEZE OFF.
+3. Strateeg: refill **≥2 NEW_FAMILY** after N142 dead (D-094) — keep novelty ≥2/3; bar N75–N142 + US30/US500 XS / XLE→US500 clones once U2 lands; do not refile XLE as Faraday OPEN duplicate while PREREG live.
+4. S2: Lane-A Yahoo-first NEW_FAMILY; XLE now in Lane-B; do not re-promote dead ETF→US500 stress families.
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: sample N143 gate when U2 lands; FDR vs GAS/XLF/CRACK/N98.
+
+### Git
+
+```
+git add scripts/c041_lane_b_diag.py scripts/n143_xle_energy_equity_stress_gate.py \
+  results/cto/c041_absorb_v102_n142_n143/ results/R2/n143_xle_energy_equity_stress/ \
+  results/lane_b/XLE_ENERGY_EQUITY_STRESS_SOURCE.md \
+  PREREG_FTMO_N143_XLE_ENERGY_EQUITY_STRESS.md \
+  VOORSTEL_PRESCREEN_N136.md VOORSTEL_PRESCREEN_N137.md VOORSTEL_PRESCREEN_N138.md \
+  VOORSTEL_PRESCREEN_N139.md VOORSTEL_PRESCREEN_N140.md VOORSTEL_PRESCREEN_N141.md \
+  VOORSTEL_PRESCREEN_N142.md VOORSTEL_PRESCREEN_N143.md \
+  VOORSTEL_S2_XLE_ENERGY_EQUITY_STRESS.md \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-041 absorb v102 + Faraday e1bf004; N142 DIAG_FAIL / N143 DIAG_PASS→PREREG (0 CTO trials)"
+git push origin grok/cto-1
+```
