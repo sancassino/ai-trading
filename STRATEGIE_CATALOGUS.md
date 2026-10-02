@@ -438,10 +438,12 @@ Per heropende regel de volgende metriek berekenen:
 | N113 | SILVER_GOLD_RATIO → US500 session-flat | S2 `35e38ac` | **STOP FAIL_COST_GATE** U2 `954680a` (geen trial); TRIAL **461** | dead; no SLV/GLD→US500 clones |
 | N114 | HYG_CREDIT_STRESS → US500 session-flat | faraday PREREG | **STOP FAIL_T** U2 `527e46e` (TRIAL **461→462**) | dead; no HYG/LQD/EMB clones |
 | N115 | EURUSD Lon-AM → US500 NY macro-beta | faraday VOORSTEL | **geen PREREG** D-092.1 FAIL (−3,43<2,34; N=126) | NEW_FAMILY AJ dead screen |
-| N116 | TLT_DURATION_STRESS → US500 session-flat | faraday PREREG | **OPEN PREREG** D-092.1 PASS (+6,01≥2,34; N=386) | NEW_FAMILY AK; ≠ HYG/EMB |
-| N117 | CPER_COPPER_STRESS → US500 session-flat | faraday PREREG | **OPEN PREREG** D-092.1 PASS (+2,89≥2,34; N=152) | NEW_FAMILY AL; ≠ Ag/Au / CuAu |
-| N118 | TIP_REALRATE_STRESS → US500 session-flat | faraday VOORSTEL | **OPEN** NEW_FAMILY AM gate 2,34 | ≠ TLT N116 / HYG / EMB |
-| N119 | IWM_SMALLCAP_STRESS → US500 session-flat | faraday VOORSTEL | **OPEN** NEW_FAMILY AN gate 2,34 | ≠ SECTOR_DISP N93 / pair RV |
+| N116 | TLT_DURATION_STRESS → US500 session-flat | faraday PREREG | **STOP FAIL_T** U2 `d0aa317` (TRIAL **462→463**) | dead; no TLT→US500 / IEF twin / TIP rewrite |
+| N117 | CPER_COPPER_STRESS → US500 session-flat | faraday PREREG | **STOP FAIL_STRESS** U2 `d8b97d0` (geen trial); TRIAL **463** | dead; no CPER/CuAu/copper CFD clones |
+| N118 | TIP_REALRATE_STRESS → US500 session-flat | faraday PREREG | **OPEN PREREG** D-092.1 PASS (+5,38≥2,34; N=359) | NEW_FAMILY AM; TIP≠TLT |
+| N119 | IWM_SMALLCAP_STRESS → US500 session-flat | faraday VOORSTEL | **geen PREREG** D-092.1 FAIL (−0,48<2,34; N=186) | NEW_FAMILY AN dead screen |
+| N120 | VNQ_REIT_STRESS → US500 session-flat | faraday VOORSTEL | **OPEN** NEW_FAMILY AO gate 2,34 | ≠ TLT/TIP / VNQ/TLT ratio |
+| N121 | EEM_EM_EQUITY_STRESS → US500 session-flat | faraday VOORSTEL | **OPEN** NEW_FAMILY AP gate 2,34 | ≠ EMB N100 / IWM N119 |
 | TSMOM_DIV | CEO 12-1 multi-asset TSMOM | ftmo-strategy CEO | **STOP FAIL_COST_GATE** U2 `e5d23c5` | geen trial |
 | ENERGY_TSMOM | UKOIL+USOIL L20/H10 LO | CTO C-023 | **STOP FAIL_COST_GATE** U2 `c1499ce` | geen trial |
 | IDX_SHORT | US100+US30 short-only L20/H10 | CTO C-024 / D-100 | **STOP FAIL_COST_GATE** U2 `72f40d3` | family A closed |
