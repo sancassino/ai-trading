@@ -1,0 +1,32 @@
+{
+  "N116": {
+    "id": "N116",
+    "instrument": "US500cash",
+    "n": 386,
+    "mean_bruto_bp": 6.0142,
+    "median_bruto_bp": 5.2899,
+    "gate_bp": 2.34,
+    "verdict": "PASS_may_PREREG",
+    "hit_rate": 0.5337,
+    "years": {
+      "2021": 3.3894,
+      "2022": 9.6166,
+      "2023": 1.9241
+    }
+  },
+  "N117": {
+    "id": "N117",
+    "instrument": "US500cash",
+    "n": 152,
+    "mean_bruto_bp": 2.8932,
+    "median_bruto_bp": -2.2098,
+    "gate_bp": 2.34,
+    "verdict": "PASS_may_PREREG",
+    "hit_rate": 0.4803,
+    "years": {
+      "2021": 0.5222,
+      "2022": 11.8374,
+      "2023": -5.5576
+    }
+  }
+}

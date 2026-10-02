@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N114 — HYG_CREDIT_STRESS → US500cash session-flat (NEW_FAMILY AI)
 
-**Status:** **PASS → PREREG** D-092.1 `n114_n115` (N=371, mean **+3,81 ≥ 2,34**; years −10,03/+7,69/+4,82) → `PREREG_FTMO_N114_HYG_CREDIT_STRESS.md`. Screened 2026-10-02 ~23:05 CEST.  
+**Status:** **STOP FAIL_T** U2 `527e46e` (TRIAL **461→462**; cost+stress PASS; t/NW 0,68/0,71; test −2,16; years −10,03/+7,69/+4,82). Dead += N114. No HYG/LQD/EMB clones. Screened→PREREG 23:05; formal FAIL ~23:08 CEST.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AI** (US domestic HY credit stress → equity session-flat — nooit als EMB-twin).  
 **Signal:** Yahoo/proxy **HYG** (US high-yield corporate bond ETF). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** Domestic HY credit level+trend as risk-appetite timing for DM equity; intradag-vlak (geen swap).

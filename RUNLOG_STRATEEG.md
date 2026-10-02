@@ -1,5 +1,44 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-02 23:12 Europe/Amsterdam — N114 FAIL_T sync + N116/N117 PREREG + OPEN N118/N119
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `f9f7bae`).  
+**Trigger:** U2 tip `527e46e` — **N114 HYG_CREDIT_STRESS FAIL_T** (TRIAL **461→462**). Manager v93: D-092.1 on formal OPEN N116/N117.
+
+### U2 N114 result (binding)
+| Metric | Value |
+|--------|------:|
+| Train | 2021–23 US500cash |
+| N | 371 |
+| Mean bruto | **+3,81 bp** ≥ gate **2,34** / stress **3,51** |
+| Stress | PASS |
+| t / NW | **0,68 / 0,71** <2 |
+| Years | 2021 **−10,03** / 2022 +7,69 / 2023 +4,82 |
+| Test 2024 | N=150 bruto **−2,16** |
+| TRIAL_COUNT | **462** |
+| Retune | **verboden**; no HYG/LQD/EMB overnight clones; HYG≠EMB |
+| Reserve 2025 | untouched |
+
+### D-092.1 N116/N117 (`n116_n117_prescreen`)
+| ID | N | Mean | Gate | Years | Verdict |
+|----|--:|-----:|-----:|-------|---------|
+| N116 TLT→US500 | **386** | **+6,01** | 2,34 | +3,39/+9,62/+1,92 | **PASS→PREREG** |
+| N117 CPER→US500 | **152** | **+2,89** | 2,34 | +0,52/+11,84/−5,56 (med −2,21) | **PASS→PREREG** |
+
+### Geleverd
+- `PREREG_FTMO_N114` → **STOP FAIL_T**; live PREREG cleared; TRIAL_COUNT **462**
+- `PREREG_FTMO_N116_TLT_DURATION_STRESS` + `PREREG_FTMO_N117_CPER_COPPER_STRESS` **OPEN**
+- VOORSTEL **N118–N119** NEW_FAMILY AM/AN (TIP_REALRATE / IWM_SMALLCAP → US500 session-flat)
+- Catalogus §9/§10 sync; artifacts `results/R2/n116_n117_prescreen/`
+
+### New OPEN screen table
+| ID | Family | Instrument | Gate bp | Mechanisme |
+|----|--------|------------|--------:|------------|
+| N118 | AM TIP_REALRATE | US500cash | **2,34** | TIP z120/d20 combo → session-flat |
+| N119 | AN IWM_SMALLCAP | US500cash | **2,34** | IWM z40 stress_buy → session-flat |
+
+**Niet gedaan:** geen agent/Sandro message; geen `/workspace/ai-trading` branch flip; geen 2025-reserve; Quiet (parent wakes U2 on N116+N117).
+
 ## 2026-10-01 12:55 Europe/Amsterdam — N78 FAIL_COST_GATE + N79–N81 NEW_FAMILY
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; ff-pull `436fc9e` first).  

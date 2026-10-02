@@ -1,0 +1,4 @@
+# D-092.1 N116/N117 pre-screen (train 2021–2023)
+
+- **N116** TLT_DURATION_STRESS→US500: N=386 mean=6.0142 med=5.2899 gate=2.34 → **PASS_may_PREREG** years={'2021': 3.3894, '2022': 9.6166, '2023': 1.9241}
+- **N117** CPER_COPPER_STRESS→US500: N=152 mean=2.8932 med=-2.2098 gate=2.34 → **PASS_may_PREREG** years={'2021': 0.5222, '2022': 11.8374, '2023': -5.5576}
