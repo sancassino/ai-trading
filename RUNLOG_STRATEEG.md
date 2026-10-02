@@ -1,6 +1,48 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
 
+## 2026-10-03 01:13 Europe/Amsterdam — N144/N145 D-092.1 FAIL; OPEN N146/N147
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `93cb002`).  
+**Trigger:** Formal OPEN N144 XPT_XPD_PGM_XS / N145 BTC_ETH_CRYPTO_XS. Stated gates were estimates. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### Honest gates (frozen before PnL; COSTS convention)
+All-hours M5 median spread 2024-01-01…2026-09-30, spread>0. Method reproduces US500 0,78 / XAU 0,72 / XAG 4,92.
+| Leg | spread med | comm/side | RT | note |
+|-----|----------:|----------:|---:|------|
+| XPTUSD | 23,63 | 0,20 | **24,02** | €2/lot as XAU in COSTS; contract 100 |
+| XPDUSD | 43,94 | 0,20 | **44,33** | same |
+| BTCUSD | **0,85** | 3,25 | **7,35** | stated 0,17 kept spread=0 (6,3% of bars) |
+| ETHUSD | 7,58 | 3,25 | **14,08** | 0,0325%/side; gz contract=10 |
+
+N144 gate **205,06** = 3×(24,02+44,33). Stated est **202,71** (spread-only).  
+N145 gate **64,31** = 3×(7,35+14,08). Spread-only would be **25,31**. Stated est **23,25**.  
+Session medians logged, not used (would cheapen XPT/XPD vs the COSTS convention).
+
+### D-092.1 `n144_n145` (train 2021–2023; session-flat 15:30→21:00; swap 0; both legs)
+| ID | Family | N | mean | med | years | Verdict |
+|----|--------|--:|-----:|----:|-------|---------|
+| N144 | XPT_XPD_PGM_XS BM | **228** | **−0,69** | +14,57 | −10,45 / −21,07 / +27,30 | **FAIL** vs **205,06** (also < 202,71; L/S 71/157) |
+| N145 | BTC_ETH_CRYPTO_XS BN | **293** | **−9,65** | −9,17 | −24,59 / −2,02 / −4,89 | **FAIL** vs **64,31** (also < 23,25; L/S 114/179) |
+
+Clone bar unchanged (|z|≥0,90 or agree≥0,85 and cover≥0,70).  
+N144 vs XAU/XAG z40: z **−0,06**, agree 0,55, cover 0,32. vs XAU/UKOIL: z 0,12, agree 0,62, cover 0,43. vs PPLT z 0,10. vs GLD z 0,05. vs N75 agree 0,29 cover 0,20. vs N113 agree 0,47 cover 0,58. vs N145 z 0,04. Not a clone.  
+N145 vs XPT/XPD z 0,06. vs XAU/XAG z 0,01. vs N45 ETH-leg agree 0,42 cover 0,14. vs BTC ORB 15:30–16:00 agree **0,55** cover 0,89 (agree under 0,85). Not a clone.
+
+Data: XPT `symbol_history` D1 bars=0, but M5 train days **773/773** from 2021-01-04 — not DIAG, not UNDERPOWERED. BTC+ETH are Crypto I CFDs on `SymbolList_FTMO`, M5 from 2021-01-01, **1092** days — not DIAG. Not in `COSTS_FTMO.csv`.
+
+No soft-pass. No PREREG. TRIAL stays **470**. No PPLT/XAU-XAG/metal–oil rewrite. No ETH-only / BTC ORB / US500 remap.
+
+### Geleverd
+- N144 → **STOP FAIL**; N145 → **STOP FAIL** (D-092.1)
+- OPEN **N146 AUD_XAU_COMMODITY_XS** (BO, gate **6,15** = 3×(1,22+0,83), both in COSTS) + **N147 GBP_UKOIL_PETRO_XS** (BP, gate **10,23** = 3×(0,70+2,71), both in COSTS) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-03 01:03 Europe/Amsterdam — N142/N143 D-092.1 FAIL; OPEN N144/N145
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `e1bf004`).  

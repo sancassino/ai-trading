@@ -1,0 +1,322 @@
+{
+  "N144": {
+    "id": "N144",
+    "instrument": "XPTUSD+XPDUSD",
+    "n": 228,
+    "mean_bruto_bp": -0.6917,
+    "gate_bp": 205.0584,
+    "verdict": "FAIL",
+    "notes": "XPT_XPD_PGM_XS z40/\u00b11.5 both legs 15:30\u219221:00; honest gate 3*(24.0199+44.3329); stated est was 202.71 spread-only; swap 0; NEW_FAMILY BM",
+    "median_bruto_bp": 14.5741,
+    "stress_gate_bp": 307.5876,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.5219,
+    "n_long_basket": 71,
+    "n_short_basket": 157,
+    "years": {
+      "2021": -10.4454,
+      "2022": -21.0687,
+      "2023": 27.298
+    },
+    "meta": {
+      "n_signal_days": 228,
+      "n_skip_missing_bar": 0,
+      "n_ratio_days": 773,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "train_days_xpt": 773,
+      "train_days_xpd": 773,
+      "symbol_history_XPT_d1_bars": 0,
+      "symbol_history_note": "symbol_history_FTMO.csv XPTUSD first_d1='-' bars=0; M5 gz is populated"
+    },
+    "rt": {
+      "XPTUSD": {
+        "symbol": "XPTUSD",
+        "point": 0.01,
+        "contract": 100.0,
+        "n_bars": 192772,
+        "zero_spread_share": 0.0001,
+        "spread_med_all_hours_bp": 23.6265,
+        "spread_med_session_1530_2100_bp": 20.448,
+        "median_close": 1057.46,
+        "comm_bp_per_side": 0.1967,
+        "comm_source": "EUR2/lot/side at EURUSD 1.04 on cost-window median close (COSTS XAG assumption)",
+        "rt_bp": 24.0199,
+        "session_not_used_in_gate": true
+      },
+      "XPDUSD": {
+        "symbol": "XPDUSD",
+        "point": 0.01,
+        "contract": 100.0,
+        "n_bars": 192414,
+        "zero_spread_share": 0.0,
+        "spread_med_all_hours_bp": 43.942,
+        "spread_med_session_1530_2100_bp": 38.8956,
+        "median_close": 1064.1,
+        "comm_bp_per_side": 0.1955,
+        "comm_source": "EUR2/lot/side at EURUSD 1.04 on cost-window median close (COSTS XAG assumption)",
+        "rt_bp": 44.3329,
+        "session_not_used_in_gate": true
+      }
+    },
+    "stated_gate_bp": 202.71,
+    "rt_in_costs": false,
+    "clone_hits": []
+  },
+  "N145": {
+    "id": "N145",
+    "instrument": "BTCUSD+ETHUSD",
+    "n": 293,
+    "mean_bruto_bp": -9.6529,
+    "gate_bp": 64.3104,
+    "verdict": "FAIL",
+    "notes": "BTC_ETH_CRYPTO_XS z40/\u00b11.5 both legs 15:30\u219221:00; honest gate 3*(7.3531+14.0837); stated est was 23.25 (BTC median kept spread=0); swap 0; NEW_FAMILY BN; both legs in SymbolList_FTMO Crypto I CFD; M5 from 2021-01-01",
+    "median_bruto_bp": -9.1658,
+    "stress_gate_bp": 96.4656,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4608,
+    "n_long_basket": 114,
+    "n_short_basket": 179,
+    "years": {
+      "2021": -24.5886,
+      "2022": -2.0217,
+      "2023": -4.8914
+    },
+    "meta": {
+      "n_signal_days": 332,
+      "n_skip_missing_bar": 39,
+      "n_ratio_days": 1092,
+      "ratio_first": "2021-01-01",
+      "ratio_last": "2023-12-31",
+      "train_days_btc": 1092,
+      "train_days_eth": 1092,
+      "in_symbol_list": true,
+      "in_costs_ftmo": false
+    },
+    "rt": {
+      "BTCUSD": {
+        "symbol": "BTCUSD",
+        "point": 0.01,
+        "contract": 1.0,
+        "n_bars": 275859,
+        "zero_spread_share": 0.0629,
+        "spread_med_all_hours_bp": 0.8531,
+        "spread_med_session_1530_2100_bp": 0.5671,
+        "median_close": 76946.47,
+        "comm_bp_per_side": 3.25,
+        "comm_source": "FTMO crypto 0.0325%/side (gz contract matches the Jul 2025 schedule)",
+        "rt_bp": 7.3531,
+        "session_not_used_in_gate": true
+      },
+      "ETHUSD": {
+        "symbol": "ETHUSD",
+        "point": 0.01,
+        "contract": 10.0,
+        "n_bars": 275215,
+        "zero_spread_share": 0.0002,
+        "spread_med_all_hours_bp": 7.5837,
+        "spread_med_session_1530_2100_bp": 7.6187,
+        "median_close": 2664.65,
+        "comm_bp_per_side": 3.25,
+        "comm_source": "FTMO crypto 0.0325%/side (gz contract matches the Jul 2025 schedule)",
+        "rt_bp": 14.0837,
+        "session_not_used_in_gate": true
+      }
+    },
+    "stated_gate_bp": 23.25,
+    "rt_in_costs": false,
+    "clone_hits": []
+  },
+  "N144_clones": {
+    "XAU_XAG_z40": {
+      "peer": "XAU_XAG_z40",
+      "z_corr_train": -0.0606,
+      "sign_agree_both_active": 0.5479,
+      "both_active_over_cand": 0.3202,
+      "n_cand_active": 228,
+      "n_both_active": 73,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_UKOIL_z40_N140": {
+      "peer": "XAU_UKOIL_z40_N140",
+      "z_corr_train": 0.1237,
+      "sign_agree_both_active": 0.6162,
+      "both_active_over_cand": 0.4342,
+      "n_cand_active": 228,
+      "n_both_active": 99,
+      "clone": false,
+      "binding": true
+    },
+    "PPLT_z40_N129": {
+      "peer": "PPLT_z40_N129",
+      "z_corr_train": 0.0964,
+      "sign_agree_both_active": 0.5949,
+      "both_active_over_cand": 0.3465,
+      "n_cand_active": 228,
+      "n_both_active": 79,
+      "clone": false,
+      "binding": true
+    },
+    "GLD_z40": {
+      "peer": "GLD_z40",
+      "z_corr_train": 0.0474,
+      "sign_agree_both_active": 0.5522,
+      "both_active_over_cand": 0.2939,
+      "n_cand_active": 228,
+      "n_both_active": 67,
+      "clone": false,
+      "binding": true
+    },
+    "N145_BTC_ETH": {
+      "peer": "N145_BTC_ETH",
+      "z_corr_train": 0.0353,
+      "sign_agree_both_active": 0.5606,
+      "both_active_over_cand": 0.2895,
+      "n_cand_active": 228,
+      "n_both_active": 66,
+      "clone": false,
+      "binding": true
+    },
+    "N75_XAU_XAG_one_side": {
+      "peer": "N75_XAU_XAG_one_side",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2889,
+      "both_active_over_cand": 0.1974,
+      "n_cand_active": 228,
+      "n_both_active": 45,
+      "clone": false,
+      "binding": true
+    },
+    "N113_SLV_GLD_fade": {
+      "peer": "N113_SLV_GLD_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4662,
+      "both_active_over_cand": 0.5833,
+      "n_cand_active": 228,
+      "n_both_active": 133,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "N145_clones": {
+    "XPT_XPD_z40_N144": {
+      "peer": "XPT_XPD_z40_N144",
+      "z_corr_train": 0.0567,
+      "sign_agree_both_active": 0.5745,
+      "both_active_over_cand": 0.2831,
+      "n_cand_active": 332,
+      "n_both_active": 94,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_XAG_z40": {
+      "peer": "XAU_XAG_z40",
+      "z_corr_train": 0.008,
+      "sign_agree_both_active": 0.4167,
+      "both_active_over_cand": 0.2169,
+      "n_cand_active": 332,
+      "n_both_active": 72,
+      "clone": false,
+      "binding": true
+    },
+    "N45_ETH_asia_cont_vs_ETH_leg": {
+      "peer": "N45_ETH_asia_cont_vs_ETH_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4167,
+      "both_active_over_cand": 0.1446,
+      "n_cand_active": 332,
+      "n_both_active": 48,
+      "clone": false,
+      "binding": true
+    },
+    "BTC_ORB_1530_1600_vs_BTC_leg": {
+      "peer": "BTC_ORB_1530_1600_vs_BTC_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5458,
+      "both_active_over_cand": 0.8886,
+      "n_cand_active": 332,
+      "n_both_active": 295,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N144": 205.0584,
+    "N145": 64.3104,
+    "stated": {
+      "N144": 202.71,
+      "N145": 23.25
+    }
+  },
+  "rt": {
+    "XPTUSD": {
+      "symbol": "XPTUSD",
+      "point": 0.01,
+      "contract": 100.0,
+      "n_bars": 192772,
+      "zero_spread_share": 0.0001,
+      "spread_med_all_hours_bp": 23.6265,
+      "spread_med_session_1530_2100_bp": 20.448,
+      "median_close": 1057.46,
+      "comm_bp_per_side": 0.1967,
+      "comm_source": "EUR2/lot/side at EURUSD 1.04 on cost-window median close (COSTS XAG assumption)",
+      "rt_bp": 24.0199,
+      "session_not_used_in_gate": true
+    },
+    "XPDUSD": {
+      "symbol": "XPDUSD",
+      "point": 0.01,
+      "contract": 100.0,
+      "n_bars": 192414,
+      "zero_spread_share": 0.0,
+      "spread_med_all_hours_bp": 43.942,
+      "spread_med_session_1530_2100_bp": 38.8956,
+      "median_close": 1064.1,
+      "comm_bp_per_side": 0.1955,
+      "comm_source": "EUR2/lot/side at EURUSD 1.04 on cost-window median close (COSTS XAG assumption)",
+      "rt_bp": 44.3329,
+      "session_not_used_in_gate": true
+    },
+    "BTCUSD": {
+      "symbol": "BTCUSD",
+      "point": 0.01,
+      "contract": 1.0,
+      "n_bars": 275859,
+      "zero_spread_share": 0.0629,
+      "spread_med_all_hours_bp": 0.8531,
+      "spread_med_session_1530_2100_bp": 0.5671,
+      "median_close": 76946.47,
+      "comm_bp_per_side": 3.25,
+      "comm_source": "FTMO crypto 0.0325%/side (gz contract matches the Jul 2025 schedule)",
+      "rt_bp": 7.3531,
+      "session_not_used_in_gate": true
+    },
+    "ETHUSD": {
+      "symbol": "ETHUSD",
+      "point": 0.01,
+      "contract": 10.0,
+      "n_bars": 275215,
+      "zero_spread_share": 0.0002,
+      "spread_med_all_hours_bp": 7.5837,
+      "spread_med_session_1530_2100_bp": 7.6187,
+      "median_close": 2664.65,
+      "comm_bp_per_side": 3.25,
+      "comm_source": "FTMO crypto 0.0325%/side (gz contract matches the Jul 2025 schedule)",
+      "rt_bp": 14.0837,
+      "session_not_used_in_gate": true
+    }
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "session": "15:30-21:00 CET",
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "cost_sample": "2024-01-01..2026-09-30 all hours, spread>0"
+}

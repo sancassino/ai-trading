@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N145 — BTC_ETH_CRYPTO_XS session-flat (NEW_FAMILY BN)
 
-**Status:** **OPEN** — D-092.1 refill after N142 FAIL / N143 FAIL_CLONE (filed 2026-10-03 ~01:03 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n144_n145` (N=293, mean **−9,65 < 64,31**; med −9,17; years −24,59 / −2,02 / −4,89; L/S 114/179). Both legs are FTMO Crypto I CFDs (`SymbolList_FTMO`) with M5 from 2021-01-01 (1092/1092 train days) — not DIAG. Honest gate **64,31** = 3×(BTC RT 7,35 + ETH RT 14,08): spread medians **0,85** (zeros dropped; stated 0,17 kept spread=0) and **7,58**, plus 0,0325%/side = 6,50 bp commission each (gz contract matches that schedule). Spread-only gate would be **25,31** and the stated gate **23,25**; mean is below both. Not a clone of XPT/XPD (z 0,06), XAU/XAG (z 0,01), N45 ETH-leg (agree 0,42, cover 0,14), or BTC ORB 15:30–16:00 (agree 0,55, cover 0,89). Screened 2026-10-03 ~01:13 CEST. NEW_FAMILY BN dead; no ETH-only, no BTC ORB, no US500 remap.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BN** (bitcoin vs ether **crypto basis**, two crypto CFDs, session-flat). **D-097** high-vol book that is **not** an equity-factor z→US500 and **not** a metal–oil twin.  
 **Signal:** M5 day-close ratio **BTCUSD / ETHUSD**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** the BTC/ETH basis mean-reverts when bitcoin is rich or cheap versus ether. Flat inside 15:30→21:00 CET so funding/overnight swap is not the alpha. The clock is the swap-flat window, not an Asia→EU continuation and not an ORB.

@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N144 — XPT_XPD_PGM_XS session-flat (NEW_FAMILY BM)
 
-**Status:** **OPEN** — D-092.1 refill after N142 FAIL / N143 FAIL_CLONE (filed 2026-10-03 ~01:03 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n144_n145` (N=228, mean **−0,69 < 205,06**; med +14,57; years −10,45 / −21,07 / +27,30; L/S 71/157). Honest gate **205,06** = 3×(XPT RT 24,02 + XPD RT 44,33): all-hours spread medians 23,63 / 43,94 (the stated 202,71) plus €2/lot/side. Mean also **< stated 202,71**. Not a clone of XAU/XAG (z −0,06, agree 0,55, cover 0,32), XAU/UKOIL (z 0,12, agree 0,62, cover 0,43), PPLT (z 0,10), GLD (z 0,05), N75 (agree 0,29, cover 0,20), N113 (agree 0,47, cover 0,58), or N145 (z 0,04). M5 train days 773/773 (symbol_history D1 for XPT is 0 bars — not used; not DIAG). Screened 2026-10-03 ~01:13 CEST. NEW_FAMILY BM dead; no PPLT→US500, no XAU/XAG, no metal–oil.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BM** (platinum vs palladium **PGM cash basis**, two metal CFDs, session-flat). **D-097** metals book that is **not** an equity-factor z→US500 and **not** a metal–oil twin.  
 **Signal:** M5 day-close ratio **XPTUSD / XPDUSD**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** the platinum/palladium basis mean-reverts when autocatalyst palladium is rich or cheap versus platinum. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha. The clock is the swap-flat window, not a US-cash lead-lag.
