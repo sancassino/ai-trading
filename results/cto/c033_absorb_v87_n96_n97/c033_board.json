@@ -1,0 +1,40 @@
+{
+  "c": "C-033",
+  "when": "2026-10-02 ~21:15 Europe/Amsterdam",
+  "absorb": {
+    "main": "6775e28 NEXT_STEPS v87 \u2014 C-032 + N94/N95 DIAG_FAIL; N96/N97 OPEN; TRIAL 458",
+    "faraday": "b2ab614 N96/N97 VOORSTEL OPEN; no D-092.1 results yet for N96/N97",
+    "u2": "b382307 IDLE after N93 FAIL_COST_GATE; TRIAL_COUNT 458",
+    "prior_cto": "f6b0c60 C-032 N94/N95 DIAG_FAIL"
+  },
+  "freeze": "OFF",
+  "trial_count": 458,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "results": [
+    {
+      "label": "N96_CADJPY_LO_CARRY_MOM_5D",
+      "n": 112,
+      "mean_bp": 16.453,
+      "day_t": 1.28,
+      "h1_mean_bp": 27.566,
+      "h2_mean_bp": 5.339,
+      "gate_bp": 4.8,
+      "verdict": "UNDERPOWERED",
+      "notes": "NEW_FAMILY U; long-only; gate=3\u00d7RT 1.60; swap earn\u21920 in gate (D-100); \u2260 N94 NZDJPY"
+    },
+    {
+      "label": "N97_AUDCAD_LO_COMMODITY_XS_MOM_5D",
+      "n": 101,
+      "mean_bp": -8.873,
+      "day_t": -0.879,
+      "h1_mean_bp": -5.124,
+      "h2_mean_bp": -12.548,
+      "gate_bp": 4.5,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY V; long-only; gate=3\u00d7RT 1.50; swap earn/neutral\u21920; \u2260 N84/N91/N94/N96"
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "No new cost-PASS\u2192FAIL_T this cycle; pivot remains ON from prior streak"
+}

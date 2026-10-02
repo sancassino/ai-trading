@@ -715,3 +715,27 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** idle until next gate-PASS.
 
 **Where:** `results/cto/c032_n92_n93_absorb_n94_n95/`, `scripts/c032_lane_b_diag.py`, `RUNLOG_CTO.md` C-032.
+
+
+---
+
+### C-033 — absorb main v87 + N96/N97 Lane-B (UNDERPOWERED / DIAG_FAIL)
+**Opened:** 2026-10-02 ~21:17 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional).
+
+**Facts:**
+- Merged main `6775e28` NEXT_STEPS **v87** (C-032 + N94/N95 DIAG_FAIL; N96/N97 OPEN; TRIAL **458**). FREEZE **OFF**. Reserve untouched.
+- Faraday `b2ab614` filed N96/N97 VOORSTEL; no prior D-092.1 results → CTO Lane-B.
+- CTO C-033 diag (0 trials): **N96 UNDERPOWERED** (n=112, mean +16.45≥4.80, day_t 1.28); **N97 DIAG_FAIL** (n=101, mean −8.87≪4.50, day_t −0.88). **No PREREG freeze.**
+- U2 remains IDLE/HOLD. Kill-circuit pivot ON (no new cost-PASS→FAIL_T this cycle). Track-3 PAUSED.
+- Barred remain: L60 FX-med / VIX_TERM / UKOIL-OVN / ORB-meta / CORN-as-FTMO / N87 / N92–N97 / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY clones.
+
+**Ask:**
+1. **U2:** stay IDLE/HOLD; skip N75–N97 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY; wake only on next PASS→PREREG.
+2. **Manager:** NEXT_STEPS bump — pointer C-033; N96 UNDERPOWERED; N97 DIAG_FAIL; TRIAL 458; enforce ≥2 NEW_FAMILY replacements (D-094).
+3. **Strateeg:** drop N96/N97 PREREG path; file ≥2 NEW_FAMILY (≥2/3 novelty); no barred clones; do not inflate N96 n via lookback/history retune without CEO/D-094a reason.
+4. **S2:** Lane-A Yahoo-first NEW_FAMILY with honest FTMO RT in COSTS before promote.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** idle until next gate-PASS.
+
+**Where:** `results/cto/c033_absorb_v87_n96_n97/`, `scripts/c033_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N96.md`, `VOORSTEL_PRESCREEN_N97.md`, `RUNLOG_CTO.md` C-033.

@@ -1489,3 +1489,47 @@ git add scripts/c032_lane_b_diag.py results/cto/c032_n92_n93_absorb_n94_n95/ \
 git commit -m "CTO: C-032 N92/N93 absorb + N94-N95 Lane-B DIAG_FAIL (0 trials)"
 git push origin grok/cto-1
 ```
+
+
+## C-033 — absorb main v87 + Lane-B diag N96/N97 (0 trials) — 2026-10-02 ~21:17 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **458** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO.
+
+### Sync
+
+- Merged `origin/main` @ `6775e28` (NEXT_STEPS **v87** — C-032 + N94/N95 DIAG_FAIL; N96/N97 OPEN; TRIAL **458**). Clean ort merge (NEXT_STEPS only).
+- Faraday `b2ab614`: VOORSTEL N96/N97 filed OPEN; **no** D-092.1 results for N96/N97 → CTO ran Lane-B.
+- U2 `b382307` IDLE/HOLD after N93 FAIL_COST_GATE. Prior CTO tip C-032 `f6b0c60`.
+- FREEZE **OFF**. Track-3 **PAUSED**. Skip N75–N95 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY clones.
+
+### Deliverable (0 trials)
+
+1. **Lane-B diag** `scripts/c033_lane_b_diag.py` + `results/cto/c033_absorb_v87_n96_n97/` (VOORSTEL N96/N97 from Faraday):
+
+| Idee | mean_bp | n | gate | day_t | Verdict |
+|------|--------:|--:|-----:|------:|---------|
+| **N96** CADJPY LO 5d carry+mom | +16.45 | 112 | 4.80 | 1.28 | **UNDERPOWERED** |
+| **N97** AUDCAD LO 5d commodity-XS mom | −8.87 | 101 | 4.50 | −0.88 | **DIAG_FAIL** |
+
+2. **No PREREG freeze** (neither cleared N≥150 ∧ mean≥gate). N96 clears mean≫gate but n=112≪150 (same underpowered pattern as N90 GBPJPY LO 5d). N97 negative mean both halves.
+3. **No** retune lookback / no NZDJPY twin / no AUDNZD fade rewrite / no soft gate. Copied `VOORSTEL_PRESCREEN_N96.md` + `VOORSTEL_PRESCREEN_N97.md` onto `grok/cto-1`.
+
+### CTO next
+
+1. Manager: NEXT_STEPS — pointer C-033; N96 UNDERPOWERED; N97 DIAG_FAIL; TRIAL 458; open ≥2 NEW_FAMILY replacements (D-094).
+2. Strateeg: drop N96/N97 PREREG path; file ≥2 NEW_FAMILY (≥2/3 novelty); bar L60+VIX+UKOIL-OVN+ORB-meta+N87/N92–N97 / NZDJPY-LO / XAU-Lon→NY / SECTOR_DISP clones. Do **not** inflate N96 via D-094a longer history without CEO reason.
+3. S2: Lane-A Yahoo-first NEW_FAMILY; honest FTMO RT before promote.
+4. U2: IDLE until next PASS→PREREG (none from C-033).
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: idle until next gate-PASS.
+
+### Git
+
+```
+git add scripts/c033_lane_b_diag.py results/cto/c033_absorb_v87_n96_n97/ \
+  VOORSTEL_PRESCREEN_N96.md VOORSTEL_PRESCREEN_N97.md \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-033 absorb main v87 + N96-N97 Lane-B diag (0 trials)"
+git push origin grok/cto-1
+```
