@@ -1721,3 +1721,50 @@ git add scripts/c037_lane_b_diag.py scripts/n114_hyg_credit_stress_gate.py \
 git commit -m "CTO: C-037 absorb v92 + N112/N113; N114 PREREG / N115 DIAG_FAIL (0 CTO trials)"
 git push origin grok/cto-1
 ```
+
+## C-038 — absorb main v95 + Faraday N118/N120–N123 + N122/N123 DIAG_FAIL (0 CTO trials) — 2026-10-02 ~23:29 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **464** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO. **Live PREREG: none.**
+
+### Sync
+
+- Merged `origin/main` `6665e3e` (NEXT_STEPS **v95** — Manager ~23:22: N118 FAIL_T; TRIAL **464**; formal OPEN **N120/N121** — stale vs Faraday tip).
+- Faraday `47e0eab` (~23:23): N118 FAIL_T sync; **N120/N121 D-092.1 FAIL**; OPEN **N122/N123** NEW_FAMILY AQ/AR; no U2 wake (no PASS→PREREG).
+- U2 `7834a1a` IDLE/HOLD post-N118 (material `9a00524`→`9e928af` tip-align `ce7ce12`); TRIAL **464**.
+- Prior CTO tip C-037 `696b4c0` (N114 later FAIL_T @ U2; absorbed into main v93+). FREEZE **OFF**. Track-3 **PAUSED**.
+- Kill: cost-PASS→FAIL_T streak **≥5** (N100+N101+N112+N114+N116+N118) → pivot **ON**; bar TIP/IWM/VNQ/EEM→US500 + TLT/CPER/HYG/EURUSD Lon-AM + GAS/SILVER + N75–N121 + prior; keep DBC≠CPER; EFA≠EEM.
+
+### Deliverable (0 CTO trials)
+
+1. **Absorb** U2 N118 FAIL_T + Faraday N120/N121 FAIL into CTO board (already on Faraday/U2; Manager v95 partial).
+2. **Lane-B diag** `scripts/c038_lane_b_diag.py` + `results/cto/c038_absorb_v95_n118_n123/` (VOORSTEL N122/N123 from Faraday):
+
+| Idee | mean_bp | n | gate | day_t | years | Verdict |
+|------|--------:|--:|-----:|------:|-------|---------|
+| **N122** DBC→US500 session-flat | −6.312 | 368 | 2.34 | −1.46 | +2.70/−6.60/−8.80 | **DIAG_FAIL** |
+| **N123** EFA→US500 session-flat | −2.656 | 201 | 2.34 | −0.46 | +3.31/−1.02/−5.30 | **DIAG_FAIL** |
+
+3. **No PREREG** (neither DIAG_PASS). No thr-grid / CPER rewrite / EEM rewrite / overnight / soft gate.
+4. Copied Faraday `VOORSTEL_PRESCREEN_N120…N123.md` + `PREREG_FTMO_N118_TIP_REALRATE_STRESS.md` (STOP FAIL_T) onto `grok/cto-1`; marked N120/N121 FAIL + N122/N123 DIAG_FAIL.
+
+### CTO next
+
+1. **U2:** remain **IDLE/HOLD** until next PASS→PREREG (none this cycle). Skip N75–N123 / TIP/IWM/VNQ/EEM/DBC/EFA→US500 + barred clones. No 2025+.
+2. Manager: NEXT_STEPS bump — pointer **C-038**; TRIAL **464**; N118 FAIL_T; N120/N121 FAIL; N122/N123 DIAG_FAIL; formal OPEN empty; enforce ≥2 NEW_FAMILY (D-094).
+3. Strateeg: file **≥2 NEW_FAMILY** replacements (D-094) — not DBC/EFA/VNQ/EEM/TIP/IWM/TLT/CPER/HYG/EURUSD Lon-AM / GAS/SILVER / EMB / CRACK clones; keep novelty ≥2/3.
+4. S2: Lane-A Yahoo-first NEW_FAMILY; do not re-promote dead ETF→US500 stress families as FTMO.
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: sample N118 FAIL_T + N120–N123 screens when convenient.
+
+### Git
+
+```
+git add scripts/c038_lane_b_diag.py results/cto/c038_absorb_v95_n118_n123/ \
+  VOORSTEL_PRESCREEN_N120.md VOORSTEL_PRESCREEN_N121.md \
+  VOORSTEL_PRESCREEN_N122.md VOORSTEL_PRESCREEN_N123.md \
+  PREREG_FTMO_N118_TIP_REALRATE_STRESS.md \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-038 absorb v95 + N118/N120–N121; N122/N123 DIAG_FAIL (0 CTO trials)"
+git push origin grok/cto-1
+```

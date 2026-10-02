@@ -821,7 +821,7 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 ### C-037 — absorb main v92 + N114 PREREG (N115 DIAG_FAIL)
 **Opened:** 2026-10-02 ~23:05 Europe/Amsterdam.  
-**Status:** OPEN for U2 (N114 gate) / Manager / Strateeg / S2 (CEO optional).
+**Status:** CLOSED — U2 ran N114 → FAIL_T (TRIAL 462; absorbed main v93+). Superseded by C-038.
 
 **Facts:**
 - Merged main `e988749` NEXT_STEPS **v92**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **461** (U2).
@@ -841,3 +841,28 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample N112/N113 + N114 when landed.
 
 **Where:** `results/cto/c037_absorb_v92_n112_n115/`, `scripts/c037_lane_b_diag.py`, `scripts/n114_hyg_credit_stress_gate.py`, `PREREG_FTMO_N114_HYG_CREDIT_STRESS.md`, `VOORSTEL_PRESCREEN_N114.md`, `VOORSTEL_PRESCREEN_N115.md`, `RUNLOG_CTO.md` C-037.
+
+---
+
+### C-038 — absorb main v95 + N122/N123 DIAG_FAIL (no PREREG)
+**Opened:** 2026-10-02 ~23:29 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional). U2 IDLE — no live PREREG.
+
+**Facts:**
+- Merged main `6665e3e` NEXT_STEPS **v95**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **464** (U2). Live PREREG **none**.
+- Faraday `47e0eab`: N118 FAIL_T sync; N120/N121 D-092.1 FAIL; OPEN N122/N123 NEW_FAMILY AQ/AR (Manager v95 still listed N120/N121 OPEN — stale).
+- U2 `7834a1a` IDLE/HOLD post-N118 FAIL_T (material `9a00524`→`9e928af`).
+- CTO C-038 Lane-B (0 trials): **N122 DIAG_FAIL** (n=368, mean −6.312 < gate 2.34, day_t −1.46); **N123 DIAG_FAIL** (n=201, mean −2.656 < 2.34, day_t −0.46). No PREREG.
+- Kill-circuit pivot **ON** (N100+N101+N112+N114+N116+N118 cost-PASS→FAIL_T ≥5). Track-3 PAUSED.
+- Barred += TIP/IWM/VNQ/EEM/DBC/EFA→US500 + TLT/CPER/HYG/EURUSD Lon-AM + GAS/SILVER + N75–N123 + prior.
+
+**Ask:**
+1. **U2:** remain IDLE/HOLD until next PASS→PREREG; skip N75–N123 + barred clones; no 2025+.
+2. **Manager:** NEXT_STEPS bump — pointer **C-038**; TRIAL **464**; N118 FAIL_T; N120/N121 FAIL; N122/N123 DIAG_FAIL; formal OPEN empty; ≥2 NEW_FAMILY (D-094).
+3. **Strateeg:** file **≥2 NEW_FAMILY** replacements (D-094); no DBC/EFA/VNQ/EEM/TIP/IWM/TLT/CPER/HYG/EURUSD Lon-AM / GAS/SILVER / EMB / CRACK / thr-grid clones.
+4. **S2:** Lane-A NEW_FAMILY; do not re-promote dead ETF→US500 stress families as FTMO.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N118 FAIL_T + N120–N123 when convenient.
+
+**Where:** `results/cto/c038_absorb_v95_n118_n123/`, `scripts/c038_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N120…N123.md`, `PREREG_FTMO_N118_TIP_REALRATE_STRESS.md`, `RUNLOG_CTO.md` C-038.
+

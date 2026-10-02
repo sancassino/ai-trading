@@ -1,0 +1,73 @@
+{
+  "c": "C-038",
+  "when": "2026-10-02 ~23:29 Europe/Amsterdam",
+  "absorb": {
+    "main": "6665e3e NEXT_STEPS v95 \u2014 N118 FAIL_T; TRIAL 464; OPEN N120/N121 (stale vs Faraday)",
+    "faraday": "47e0eab N118 FAIL_T sync; N120/N121 D-092.1 FAIL; OPEN N122/N123 NEW_FAMILY AQ/AR",
+    "u2": "7834a1a IDLE/HOLD post-N118 FAIL_T (TRIAL 464); tip 9e928af material 9a00524",
+    "prior_cto": "696b4c0 C-037 N114 PREREG / N115 DIAG_FAIL"
+  },
+  "faraday_prescreen": {
+    "N120": {
+      "n": 342,
+      "mean_bp": -0.38,
+      "gate_bp": 2.34,
+      "verdict": "FAIL"
+    },
+    "N121": {
+      "n": 172,
+      "mean_bp": 0.08,
+      "gate_bp": 2.34,
+      "verdict": "FAIL"
+    },
+    "N118": {
+      "verdict": "FAIL_T",
+      "trial": 464,
+      "note": "TIP_REALRATE_STRESS; cost+stress PASS; t/NW 0.99; test \u22124.20"
+    }
+  },
+  "freeze": "OFF",
+  "trial_count": 464,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "live_prereg": null,
+  "results": [
+    {
+      "label": "N122_DBC_COMMODITY_STRESS_US500_SESSION",
+      "n": 368,
+      "mean_bp": -6.312,
+      "median_bp": -7.479,
+      "day_t": -1.463,
+      "h1_mean_bp": -8.495,
+      "h2_mean_bp": -4.129,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": 2.698,
+        "2022": -6.601,
+        "2023": -8.802
+      },
+      "notes": "NEW_FAMILY AQ; DBC z120/d20 combo \u2192 US500 15:30\u219221:00; gate=3\u00d7RT 0.78=2.34; \u2260 CPER/GAS/SILVER/CRACK"
+    },
+    {
+      "label": "N123_EFA_DM_EXUS_STRESS_US500_SESSION",
+      "n": 201,
+      "mean_bp": -2.656,
+      "median_bp": -6.856,
+      "day_t": -0.455,
+      "h1_mean_bp": -0.56,
+      "h2_mean_bp": -4.731,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": 3.306,
+        "2022": -1.024,
+        "2023": -5.301
+      },
+      "notes": "NEW_FAMILY AR; EFA z40 stress_buy \u2192 US500 15:30\u219221:00; gate=3\u00d7RT 0.78=2.34; \u2260 EEM/EMB/IWM"
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N100+N101+N112+N114+N116+N118 (\u22655); pivot ON; N103+N117 FAIL_STRESS; N113 FAIL_COST_GATE; bar TIP/IWM/VNQ/EEM\u2192US500 + TLT/CPER/HYG/EURUSD Lon-AM + GAS/SILVER + prior"
+}
