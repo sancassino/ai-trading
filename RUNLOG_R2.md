@@ -1922,3 +1922,23 @@ counts_as_trial = **true**. **TRIAL_COUNT = 457**. Dead += N87_US30_GAP_FADE. Ge
 **Geen nieuwe PREREG.** Pipeline ongewijzigd. **TRIAL_COUNT blijft 457**.
 
 **U2 next:** IDLE. Wacht CEO-PREREG na Grok-pauze (~04-10) of Strateeg PREREG voor N90/N91/N92.
+
+## Cyclus 20:20 CEST (2026-10-02) — D-090 FASE 3 IDLE absorb NEXT_STEPS v83 (TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Recover:** lokale tip was stale `052ed78` (2026-10-01 IDLE v81) terwijl `origin/claude/uitvoerder2-r` al op `4de01a9` stond (N87 FAIL_T + uurcyclus syncs). FF `052ed78→4de01a9`, daarna ort-merge `origin/main` (`054a8eb` NEXT_STEPS v83). Prior 19:45-cadanspoging faalde vermoedelijk op deze stale local tip / niet-gesynchroniseerde worktree — hersteld door fetch + FF + main-absorb.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v83** (Manager `054a8eb` ~20:11 CEST 2026-10-02): D-101…D-104 + N87 FAIL_T absorb; TRIAL **457**; formal OPEN queue **empty**; U2 **IDLE/HOLD**.
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz` (D-104 ORB-meta FAIL). C-028/C-029/C-030 actief (`6174bca`).
+- Strateeg Faraday `45403f1`: **N90/N91/N92** VOORSTEL_PRESCREEN only (geen PASS→PREREG).
+- CTO tip blijft C-030; geen nieuwe C-*. CEO tip `7cb6731` batch null/FAIL (aparte `TRIALS_CEO.csv`).
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Geen trial. Skip dead/barred: N75–N89 / CORN / VIX_TERM / L60 FX-med / UKOIL-OVN / ORB-meta clones. Track-3 **PAUSED**. D-095 S2-BTC wacht CEO (niet U2).
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG (N90–N92 of CEO lat-B). Cadans :15/:45 hervat.
