@@ -1,0 +1,62 @@
+{
+  "c": "C-035",
+  "when": "2026-10-02 ~22:05 Europe/Amsterdam",
+  "absorb": {
+    "main": "a74ca46 NEXT_STEPS v89 \u2014 N100+N101 FAIL_T; TRIAL 460; OPEN N102/N103",
+    "faraday": "edbd2ee PREREG N100/N101 from S2 67a9be1 + OPEN N102/N103 NEW_FAMILY Y/Z",
+    "u2": "d09d00a N101 FAIL_T TRIAL 460 (prior 2ffb9af N100 FAIL_T TRIAL 459); no live PREREG",
+    "s2": "67a9be1 Lane-A EMB_CREDIT_STRESS + CRACK_SPREAD_MACRO promote (both now FAIL_T)",
+    "prior_cto": "3ebdea2 C-034 N98/N99 DIAG_FAIL"
+  },
+  "u2_formal": [
+    {
+      "id": "N100",
+      "family": "EMB_CREDIT_STRESS",
+      "verdict": "FAIL_T",
+      "trial": 459,
+      "train_t": "0.3726/0.3799 NW",
+      "note": "cost-gate PASS mean +2.97 \u2265 1.98; stress PASS; t\u226a2"
+    },
+    {
+      "id": "N101",
+      "family": "CRACK_SPREAD_MACRO",
+      "verdict": "FAIL_T",
+      "trial": 460,
+      "train_t": "1.0535/1.2064 NW",
+      "note": "cost-gate PASS mean +6.30 \u2265 1.98; stress PASS; t\u226a2; test mean \u22125.0"
+    }
+  ],
+  "freeze": "OFF",
+  "trial_count": 460,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "results": [
+    {
+      "label": "N102_USDCHF_LO_USD_CHF_CARRY_MOM_5D",
+      "n": 104,
+      "mean_bp": 2.94,
+      "day_t": 0.273,
+      "h1_mean_bp": 19.12,
+      "h2_mean_bp": -13.241,
+      "gate_bp": 3.03,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY Y; long-only; gate=3\u00d7RT 1.01; swap earn\u21920 in gate (D-100); \u2260 N99 CADCHF / N74 L60"
+    },
+    {
+      "label": "N103_GER40_LON_AM_US30_NY_INDUSTRIAL",
+      "n": 286,
+      "mean_bp": 1.749,
+      "day_t": 0.38,
+      "h1_mean_bp": -1.922,
+      "h2_mean_bp": 5.419,
+      "gate_bp": 1.35,
+      "verdict": "DIAG_PASS",
+      "notes": "NEW_FAMILY Z; GER\u2192US30 same-day; |am|\u226540; session-flat 21:00; \u2260 N98 oil\u2192tech / S2-GER_US / N85"
+    }
+  ],
+  "promote_to_prereg": [
+    "N103_GER40_LON_AM_US30_NY_INDUSTRIAL"
+  ],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak continues: N87\u2192N92\u2192N100\u2192N101 (4 formal); prior EURJPY_MED/N41 also FAIL_T; pivot ON; bar EMB_CREDIT / CRACK_SPREAD clones",
+  "prereg_frozen": "PREREG_FTMO_N103.md"
+}

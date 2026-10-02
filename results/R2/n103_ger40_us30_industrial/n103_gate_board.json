@@ -1,0 +1,31 @@
+{
+  "prereg": "PREREG_FTMO_N103",
+  "rt_bp": 0.45,
+  "gate_bp": 1.35,
+  "stress_gate_bp": 2.0250000000000004,
+  "train": {
+    "label": "train_2021_2023",
+    "n": 286,
+    "mean_bruto": 1.7488,
+    "mean_netto": 1.2988,
+    "t_netto": 0.2824,
+    "t_nw5": 0.2448,
+    "median_bruto": -1.1305,
+    "mean_mae_bp": 55.3792
+  },
+  "test": {
+    "label": "test_2024",
+    "n": 74,
+    "mean_bruto": 1.3225,
+    "mean_netto": 0.8725,
+    "t_netto": 0.1281,
+    "t_nw5": 0.1455,
+    "median_bruto": 9.1818,
+    "mean_mae_bp": 45.1176
+  },
+  "cost_pass": true,
+  "stress_pass": false,
+  "verdict": "FAIL_STRESS",
+  "reserve_2025": "untouched",
+  "note": "U2 owns TRIALS/TRIAL_COUNT append. CTO C-035 frozen this script; do not retune."
+}

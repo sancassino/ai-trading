@@ -1,0 +1,3 @@
+label,n,mean_bp,day_t,h1_mean_bp,h2_mean_bp,gate_bp,verdict,notes
+N102_USDCHF_LO_USD_CHF_CARRY_MOM_5D,104,2.94,0.273,19.12,-13.241,3.03,DIAG_FAIL,NEW_FAMILY Y; long-only; gate=3×RT 1.01; swap earn→0 in gate (D-100); ≠ N99 CADCHF / N74 L60
+N103_GER40_LON_AM_US30_NY_INDUSTRIAL,286,1.749,0.38,-1.922,5.419,1.35,DIAG_PASS,NEW_FAMILY Z; GER→US30 same-day; |am|≥40; session-flat 21:00; ≠ N98 oil→tech / S2-GER_US / N85

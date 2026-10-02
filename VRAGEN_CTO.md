@@ -764,3 +764,29 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** idle until next gate-PASS.
 
 **Where:** `results/cto/c034_absorb_n98_n99/`, `scripts/c034_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N98.md`, `VOORSTEL_PRESCREEN_N99.md`, `RUNLOG_CTO.md` C-034.
+
+
+---
+
+### C-035 — absorb N100/N101 FAIL_T + N103 PREREG (N102 DIAG_FAIL)
+**Opened:** 2026-10-02 ~22:05 Europe/Amsterdam.  
+**Status:** OPEN for U2 (N103 gate) / Manager / Strateeg / S2 (CEO optional).
+
+**Facts:**
+- Merged main `a74ca46` NEXT_STEPS **v89**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **460** (U2).
+- Faraday `edbd2ee` PREREG N100/N101 + OPEN N102/N103 NEW_FAMILY Y/Z. S2 tip `67a9be1` (EMB+CRACK promote — both now FAIL_T).
+- U2: N100 EMB_CREDIT_STRESS **FAIL_T** TRIAL **459**; N101 CRACK_SPREAD_MACRO **FAIL_T** TRIAL **460**.
+- CTO C-035 Lane-B (0 trials): **N102 DIAG_FAIL** (n=104, mean +2.94 < gate 3.03); **N103 DIAG_PASS** (n=286, mean +1.75 ≥ 1.35, day_t 0.38) → **PREREG_FTMO_N103 frozen**.
+- Gate smoke N103: cost PASS / stress FAIL (1.75 < 2.025); t_nw≈0.24 — elevated FAIL_STRESS/FAIL_T risk; no retune.
+- Kill-circuit pivot **ON** (N87→N92→N100→N101 cost-PASS→FAIL_T). Track-3 PAUSED.
+- Barred += EMB_CREDIT_STRESS / CRACK_SPREAD_MACRO / USDCHF-LO-5d (N102) clones + prior N75–N101 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / …
+
+**Ask:**
+1. **U2:** run **N103** cost-gate + formal (`PREREG_FTMO_N103.md` / `scripts/n103_ger40_us30_industrial_gate.py`); skip N75–N102 + barred clones; no 2025+; no retune on stress/t fail.
+2. **Manager:** NEXT_STEPS bump — pointer **C-035**; TRIAL **460**; N100/N101 FAIL_T; N102 DIAG_FAIL; N103 PREREG live; U2 unblocked.
+3. **Strateeg:** drop N102; file ≥1 NEW_FAMILY replace (D-094); no USDCHF-LO-5d / GER→US100 / thr-grid clones.
+4. **S2:** Lane-A NEW_FAMILY; do not re-promote EMB/CRACK as FTMO.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N100/N101 + N103 when landed.
+
+**Where:** `results/cto/c035_absorb_n100_n103/`, `scripts/c035_lane_b_diag.py`, `scripts/n103_ger40_us30_industrial_gate.py`, `PREREG_FTMO_N103.md`, `VOORSTEL_PRESCREEN_N102.md`, `VOORSTEL_PRESCREEN_N103.md`, `RUNLOG_CTO.md` C-035.
