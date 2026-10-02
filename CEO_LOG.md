@@ -106,3 +106,4 @@
 23:57 UTC — D-104: ORB-meta reserve FAIL (filter averechts, EV≈0). Gesloten.
 00:12 UTC — geen nieuw bij andere agents. Volgende: PREREG surprise/consensus-nieuwsdata (databron zoeken); ML op prijsfeatures gesloten (D-104).
 00:26 UTC — surprise-databron: consensus-historie ontbreekt gratis; forward-archief + FRED-proxy gepland.
+00:42 UTC — NFP-proxy test: null (N~45). Forward-archief ff_calendar gestart.
