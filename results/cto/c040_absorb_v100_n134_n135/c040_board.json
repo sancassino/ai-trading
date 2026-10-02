@@ -1,0 +1,62 @@
+{
+  "c": "C-040",
+  "when": "2026-10-03 ~00:30 Europe/Amsterdam",
+  "absorb": {
+    "main": "b8a1450 NEXT_STEPS v100 \u2014 N130+N131 FAIL_T; TRIAL 470; formal OPEN empty; FREEZE OFF",
+    "faraday": "c19fd24 \u2014 N132/N133 D-092.1 FAIL; OPEN N134 XLF / N135 QUAL (Manager v100 still had tip 0af85da)",
+    "u2": "a76b07a IDLE/HOLD absorb v100; TRIAL 470; last material 03ad9da N130+N131 FAIL_T",
+    "s2": "13fe10c cycle_2346 (no newer Lane-A tip)",
+    "prior_cto": "e34ae09 C-039 N124/N125 DIAG_PASS\u2192PREREG (both later FAIL_T @ U2)"
+  },
+  "freeze": "OFF",
+  "trial_count": 470,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "live_prereg": null,
+  "results": [
+    {
+      "label": "N134_XLF_FINANCIAL_STRESS_US500_SESSION",
+      "n": 184,
+      "mean_bp": -1.457,
+      "median_bp": -6.04,
+      "day_t": -0.239,
+      "h1_mean_bp": 2.507,
+      "h2_mean_bp": -5.421,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": 11.617,
+        "2022": 0.266,
+        "2023": -5.657
+      },
+      "notes": "NEW_FAMILY BC; XLF z40/thr1.5 stress_buy \u2192 US500 15:30\u219221:00; gate=3\u00d7RT 0.78=2.34; \u2260 HYG/EMB/SECTOR_DISP/XLU-XLI/MTUM"
+    },
+    {
+      "label": "N135_QUAL_QUALITY_STRESS_US500_SESSION",
+      "n": 211,
+      "mean_bp": -5.029,
+      "median_bp": -6.856,
+      "day_t": -1.039,
+      "h1_mean_bp": -2.236,
+      "h2_mean_bp": -7.796,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": 10.498,
+        "2022": -4.314,
+        "2023": -9.578
+      },
+      "notes": "NEW_FAMILY BD; QUAL z40/thr1.5 stress_buy \u2192 US500 15:30\u219221:00; gate=3\u00d7RT 0.78=2.34; \u2260 MTUM/EQW/XLU/USMV/IWM"
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N100+N101+N112+N114+N116+N118+N124+N125+N127+N128+N130+N131 (\u22655); pivot ON; bar N75\u2013N133 + EQW/DXY_DOLLAR/BWX/EWZ/YIELD/DEFENSIVE + prior; N134/N135 = NEW_FAMILY BC/BD (XLF level / QUAL level \u2014 not HYG/EMB/SECTOR_DISP/MTUM/EQW clones)",
+  "formal_open": "empty",
+  "closed": [
+    "N134 DIAG_FAIL",
+    "N135 DIAG_FAIL",
+    "N132 FAIL absorb",
+    "N133 FAIL absorb"
+  ]
+}

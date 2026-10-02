@@ -893,3 +893,29 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample N124/N125 when U2 lands; FDR vs TLT/SECTOR_DISP.
 
 **Where:** `results/cto/c039_absorb_v96_n124_n125/`, `scripts/c039_lane_b_diag.py`, `scripts/n124_yield_curve_2s10s_gate.py`, `scripts/n125_defensive_cyclical_gate.py`, `PREREG_FTMO_N124_YIELD_CURVE_2S10S.md`, `PREREG_FTMO_N125_DEFENSIVE_CYCLICAL.md`, `VOORSTEL_PRESCREEN_N124.md`, `VOORSTEL_PRESCREEN_N125.md`, `RUNLOG_CTO.md` C-039.
+
+---
+
+### C-040 — absorb main v100 + N134/N135 DIAG_FAIL (no PREREG)
+**Opened:** 2026-10-03 ~00:30 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional). U2 IDLE — no live PREREG.
+
+**Facts:**
+- Merged main `b8a1450` NEXT_STEPS **v100**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **470** (U2). Live PREREG **none**.
+- Faraday `c19fd24`: N132/N133 D-092.1 FAIL; OPEN N134/N135 (Manager v100 still listed Faraday tip 0af85da / OPEN empty — stale).
+- U2 `a76b07a` IDLE/HOLD post-N130+N131 FAIL_T (material `03ad9da`).
+- CTO C-040 Lane-B (0 trials): **N134 DIAG_FAIL** (n=184, mean −1.457 < gate 2.34, day_t −0.24); **N135 DIAG_FAIL** (n=211, mean −5.029 < 2.34, day_t −1.04). No PREREG.
+- Absorbed N132 MTUM FAIL / N133 GLD FAIL from Faraday (no re-run).
+- Kill-circuit pivot **ON** (N100…N131 cost-PASS→FAIL_T ≥5). Track-3 PAUSED.
+- Barred += XLF→US500 / QUAL→US500 + N75–N135 + EQW/DXY_DOLLAR/BWX/EWZ/YIELD/DEFENSIVE + prior.
+- Faraday local WIP (uncommitted): draft VOORSTEL N136 BRENT_WTI_XS / N137 USDMXN_EM_CARRY_FADE — Strateeg to file/screen.
+
+**Ask:**
+1. **U2:** remain IDLE/HOLD until next PASS→PREREG; skip N75–N135 + barred clones; no 2025+.
+2. **Manager:** NEXT_STEPS bump — pointer **C-040**; TRIAL **470**; Faraday tip **c19fd24**; N132/N133 FAIL; N134/N135 DIAG_FAIL; formal OPEN empty; ≥2 NEW_FAMILY (D-094).
+3. **Strateeg:** file **≥2 NEW_FAMILY** replacements (D-094); prefer non-ETF→US500 stress; WIP N136/N137 ok if distinct; no XLF/QUAL/MTUM/GLD/EQW/DXY/HYG/SECTOR_DISP clones.
+4. **S2:** Lane-A NEW_FAMILY; do not re-promote dead ETF→US500 stress families as FTMO.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N134/N135 DIAG_FAIL when convenient.
+
+**Where:** `results/cto/c040_absorb_v100_n134_n135/`, `scripts/c040_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N132…N135.md`, `RUNLOG_CTO.md` C-040.
