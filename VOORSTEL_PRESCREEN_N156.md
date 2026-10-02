@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N156 — XAU_GER40_HAVEN_DAX_XS session-flat (NEW_FAMILY BY)
 
-**Status:** **OPEN** — D-092.1 refill after N154 FAIL / N155 FAIL_CLONE (filed 2026-10-03 ~01:41 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n156_n157` (2026-10-03 ~01:47 CEST). N=146, mean **−2,46 < 4,65** (also N<150). Not a clone of N95 / N146 / N140 / N133 / N149 / N157 (cover 0,57). No XAU-only / GER-only / gold–index / FX / oil rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BY** (bullion vs cash DAX **haven–Europe basis**, one metal CFD and one index CFD, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an FX book. Not a G10 cross. Not silver/index (gold, not silver; DAX, not a US500 factor). Not metal–oil. Not an equity-factor z→US500.  
 **Signal:** M5 day-close ratio **XAUUSD / GER40cash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** gold and the cash DAX dislocate when the bullion haven has outrun, or lagged, European equities. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha.

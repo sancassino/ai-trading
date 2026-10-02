@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N157 — XAU_US100_HAVEN_NASDAQ_XS session-flat (NEW_FAMILY BZ)
 
-**Status:** **OPEN** — D-092.1 refill after N154 FAIL / N155 FAIL_CLONE (filed 2026-10-03 ~01:41 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n156_n157` (2026-10-03 ~01:47 CEST). N=174, mean **−1,82 < 4,47**. Not a twin of N156 (z 0,68, agree 1,00, cover 0,55). Not N92 (agree 0,38) or N148 (cover 0,47). No XAU-only / US100-only / gold–index rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BZ** (bullion vs Nasdaq **haven–growth basis**, one metal CFD and one index CFD, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an FX book. Not a G10 cross. Not silver/index (gold, not silver). Not metal–oil. Not an equity-factor z→US500 (both legs; Nasdaq, not a factor ETF into the S&P).  
 **Signal:** M5 day-close ratio **XAUUSD / US100cash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** gold and the Nasdaq dislocate when the haven has outrun, or lagged, US growth equities. Flat inside 15:30→21:00 CET. Overnight long-XAU is 2,15 and long-US100 is 1,95; a two-sided book cannot lock a receiving side, so swap in the gate is 0.

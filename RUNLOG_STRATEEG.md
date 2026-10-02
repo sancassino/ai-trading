@@ -1,5 +1,40 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-03 01:47 Europe/Amsterdam — N156/N157 D-092.1 FAIL; OPEN N158/N159
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `363033c`).  
+**Trigger:** Formal OPEN N156 XAU_GER40_HAVEN_DAX_XS / N157 XAU_US100_HAVEN_NASDAQ_XS. Gates are COSTS round-trips. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat 15:30→21:00 is the cheap side, so swap in the gate is **0**. Not a session-median spread.
+
+| Book | legs | RT | gate |
+|------|------|---:|-----:|
+| N156 | XAUUSD 0,83 + GER40cash 0,72 | 1,55 | **4,65** |
+| N157 | XAUUSD 0,83 + US100cash 0,66 | 1,49 | **4,47** |
+
+### D-092.1 `n156_n157` (train 2021–2023; session-flat 15:30→21:00; swap 0; both legs)
+| ID | Family | N | mean | med | years | Verdict |
+|----|--------|--:|-----:|----:|-------|---------|
+| N156 | XAU_GER40_HAVEN_DAX_XS BY | **146** | **−2,46** | −3,79 | — / −13,15 / +9,47 | **FAIL** vs gate **4,65** (L/S 66/80; 205 signals, 59 missing bars; 2021 GER 15:30 unfilled — not DIAG; N also <150) |
+| N157 | XAU_US100_HAVEN_NASDAQ_XS BZ | **174** | **−1,82** | −1,06 | +22,79 / −3,16 / −7,04 | **FAIL** vs gate **4,47** (L/S 69/105; 216 signals, 42 missing bars) |
+
+Clone bar unchanged (|z|≥0,90 or agree≥0,85 and cover≥0,70).  
+N156 vs **N95** XAU Lon→NY on the XAU leg: agree **0,46**, cover **0,35**. vs **N146** AUD/XAU: z **−0,61**, agree **0,01**, cover **0,40**. vs **N140** XAU/UKOIL: z **0,09**, agree 0,72, cover **0,39**. vs **N133** GLD gold day-sign: agree **0,20**, cover **0,63** (equity side agree 0,80, cover 0,63; GLD z120 corr 0,32). vs **N149** EUR/GER: z **0,78**, agree **1,00**, cover **0,57**. vs N154 z **−0,00**, cover 0,41. vs N150 z 0,66, agree 0,99, cover **0,51**. vs N75 z −0,16, cover 0,24. vs N157 z **0,68**, agree 1,00, cover **0,57**. Not a clone. Mean **−2,46 < 4,65**.  
+N157 vs **N156**: z **0,68**, agree **1,00**, cover **0,55** — not a twin (cover under 0,70). vs **N92** NY-2h on the US100 leg: agree **0,38**, cover 0,80. vs **N148** USDJPY/US100: z **0,65**, agree **1,00**, cover **0,47**. vs N81 agree 0,99, cover **0,35**. vs N154 z −0,64, agree 0,06, cover 0,53. vs N150 cover 0,47. Not a clone. Mean **−1,82 < 4,47**.
+
+No soft-pass. No PREREG. No inline replacement. TRIAL stays **470**. No XAU-only / GER-only / US100-only. No gold/index twin.
+
+### Geleverd
+- N156 → **STOP FAIL**; N157 → **STOP FAIL** (D-092.1)
+- OPEN **N158 USOIL_NY_IMPULSE_FADE** (CA, gate **10,02** = 3×3,34, USOIL in COSTS) + **N159 GER40_EUROPE_CLOSE_FADE** (CB, gate **2,16** = 3×0,72, GER40 in COSTS) — not gold/index, not FX-cross, not metal–oil, not silver/index, not factor→US500, not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-03 01:41 Europe/Amsterdam — N154/N155 D-092.1 FAIL; OPEN N156/N157
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `9c4ee71`).  

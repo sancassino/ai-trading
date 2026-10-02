@@ -1,0 +1,483 @@
+{
+  "N156": {
+    "id": "N156",
+    "instrument": "XAUUSD+GER40cash",
+    "n": 146,
+    "mean_bruto_bp": -2.4554,
+    "gate_bp": 4.65,
+    "verdict": "FAIL",
+    "notes": "XAU_GER40_HAVEN_DAX_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(0.83+0.72); swap 0; NEW_FAMILY BY",
+    "median_bruto_bp": -3.787,
+    "stress_gate_bp": 6.975,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4795,
+    "n_long_basket": 66,
+    "n_short_basket": 80,
+    "years": {
+      "2022": -13.1458,
+      "2023": 9.4745
+    },
+    "meta": {
+      "n_signal_days": 205,
+      "n_skip_missing_bar": 59,
+      "n_ratio_days": 767,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "b_sign": -1,
+      "train_days": {
+        "XAUUSD": 774,
+        "GER40cash": 768
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "XAUUSD": 0.83,
+      "GER40cash": 0.72
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N157": {
+    "id": "N157",
+    "instrument": "XAUUSD+US100cash",
+    "n": 174,
+    "mean_bruto_bp": -1.8206,
+    "gate_bp": 4.47,
+    "verdict": "FAIL",
+    "notes": "XAU_US100_HAVEN_NASDAQ_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(0.83+0.66); swap 0; NEW_FAMILY BZ",
+    "median_bruto_bp": -1.0583,
+    "stress_gate_bp": 6.705,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4885,
+    "n_long_basket": 69,
+    "n_short_basket": 105,
+    "years": {
+      "2021": 22.7932,
+      "2022": -3.1616,
+      "2023": -7.0394
+    },
+    "meta": {
+      "n_signal_days": 216,
+      "n_skip_missing_bar": 42,
+      "n_ratio_days": 773,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "b_sign": -1,
+      "train_days": {
+        "XAUUSD": 774,
+        "US100cash": 775
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "XAUUSD": 0.83,
+      "US100cash": 0.66
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N156_clones": {
+    "AUD_XAU_z40_N146": {
+      "peer": "AUD_XAU_z40_N146",
+      "z_corr_train": -0.6056,
+      "sign_agree_both_active": 0.0122,
+      "both_active_over_cand": 0.4,
+      "n_cand_active": 205,
+      "n_both_active": 82,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_UKOIL_z40_N140": {
+      "peer": "XAU_UKOIL_z40_N140",
+      "z_corr_train": 0.0861,
+      "sign_agree_both_active": 0.7215,
+      "both_active_over_cand": 0.3854,
+      "n_cand_active": 205,
+      "n_both_active": 79,
+      "clone": false,
+      "binding": true
+    },
+    "EUR_GER40_z40_N149": {
+      "peer": "EUR_GER40_z40_N149",
+      "z_corr_train": 0.7781,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.5707,
+      "n_cand_active": 205,
+      "n_both_active": 117,
+      "clone": false,
+      "binding": true
+    },
+    "US100_GER40_z40_N154": {
+      "peer": "US100_GER40_z40_N154",
+      "z_corr_train": -0.0025,
+      "sign_agree_both_active": 0.5294,
+      "both_active_over_cand": 0.4146,
+      "n_cand_active": 205,
+      "n_both_active": 85,
+      "clone": false,
+      "binding": true
+    },
+    "XAG_US30_z40_N150": {
+      "peer": "XAG_US30_z40_N150",
+      "z_corr_train": 0.6563,
+      "sign_agree_both_active": 0.9905,
+      "both_active_over_cand": 0.5122,
+      "n_cand_active": 205,
+      "n_both_active": 105,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_XAG_z40_N75": {
+      "peer": "XAU_XAG_z40_N75",
+      "z_corr_train": -0.1641,
+      "sign_agree_both_active": 0.2041,
+      "both_active_over_cand": 0.239,
+      "n_cand_active": 205,
+      "n_both_active": 49,
+      "clone": false,
+      "binding": true
+    },
+    "GLD_z120_N133": {
+      "peer": "GLD_z120_N133",
+      "z_corr_train": 0.3233,
+      "sign_agree_both_active": 0.797,
+      "both_active_over_cand": 0.6488,
+      "n_cand_active": 205,
+      "n_both_active": 133,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_US100_N157": {
+      "peer": "XAU_US100_N157",
+      "z_corr_train": 0.6841,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.5707,
+      "n_cand_active": 205,
+      "n_both_active": 117,
+      "clone": false,
+      "binding": true
+    },
+    "N95_XAU_LonNY_vs_XAU_leg": {
+      "peer": "N95_XAU_LonNY_vs_XAU_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4583,
+      "both_active_over_cand": 0.3512,
+      "n_cand_active": 205,
+      "n_both_active": 72,
+      "clone": false,
+      "binding": true
+    },
+    "N133_gold_day_sign_vs_XAU_leg": {
+      "peer": "N133_gold_day_sign_vs_XAU_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2,
+      "both_active_over_cand": 0.6341,
+      "n_cand_active": 205,
+      "n_both_active": 130,
+      "clone": false,
+      "binding": true
+    },
+    "N133_equity_side_vs_XAU_leg": {
+      "peer": "N133_equity_side_vs_XAU_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.8,
+      "both_active_over_cand": 0.6341,
+      "n_cand_active": 205,
+      "n_both_active": 130,
+      "clone": false,
+      "binding": true
+    },
+    "N146_sign": {
+      "peer": "N146_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.0122,
+      "both_active_over_cand": 0.4,
+      "n_cand_active": 205,
+      "n_both_active": 82,
+      "clone": false,
+      "binding": true
+    },
+    "N140_sign": {
+      "peer": "N140_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.7215,
+      "both_active_over_cand": 0.3854,
+      "n_cand_active": 205,
+      "n_both_active": 79,
+      "clone": false,
+      "binding": true
+    },
+    "N149_sign": {
+      "peer": "N149_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.5707,
+      "n_cand_active": 205,
+      "n_both_active": 117,
+      "clone": false,
+      "binding": true
+    },
+    "N154_sign": {
+      "peer": "N154_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5294,
+      "both_active_over_cand": 0.4146,
+      "n_cand_active": 205,
+      "n_both_active": 85,
+      "clone": false,
+      "binding": true
+    },
+    "N150_sign": {
+      "peer": "N150_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.9905,
+      "both_active_over_cand": 0.5122,
+      "n_cand_active": 205,
+      "n_both_active": 105,
+      "clone": false,
+      "binding": true
+    },
+    "N75_sign": {
+      "peer": "N75_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2812,
+      "both_active_over_cand": 0.1561,
+      "n_cand_active": 205,
+      "n_both_active": 32,
+      "clone": false,
+      "binding": true
+    },
+    "N157_sign": {
+      "peer": "N157_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.5707,
+      "n_cand_active": 205,
+      "n_both_active": 117,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "N157_clones": {
+    "XAU_GER40_N156": {
+      "peer": "XAU_GER40_N156",
+      "z_corr_train": 0.6844,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.5463,
+      "n_cand_active": 216,
+      "n_both_active": 118,
+      "clone": false,
+      "binding": true
+    },
+    "USDJPY_US100_z40_N148": {
+      "peer": "USDJPY_US100_z40_N148",
+      "z_corr_train": 0.654,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.4722,
+      "n_cand_active": 216,
+      "n_both_active": 102,
+      "clone": false,
+      "binding": true
+    },
+    "US100_GER40_z40_N154": {
+      "peer": "US100_GER40_z40_N154",
+      "z_corr_train": -0.6412,
+      "sign_agree_both_active": 0.0609,
+      "both_active_over_cand": 0.5324,
+      "n_cand_active": 216,
+      "n_both_active": 115,
+      "clone": false,
+      "binding": true
+    },
+    "XAG_US30_z40_N150": {
+      "peer": "XAG_US30_z40_N150",
+      "z_corr_train": 0.6428,
+      "sign_agree_both_active": 0.9706,
+      "both_active_over_cand": 0.4722,
+      "n_cand_active": 216,
+      "n_both_active": 102,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_XAG_z40_N75": {
+      "peer": "XAU_XAG_z40_N75",
+      "z_corr_train": -0.2601,
+      "sign_agree_both_active": 0.1296,
+      "both_active_over_cand": 0.25,
+      "n_cand_active": 216,
+      "n_both_active": 54,
+      "clone": false,
+      "binding": true
+    },
+    "AUD_XAU_z40_N146": {
+      "peer": "AUD_XAU_z40_N146",
+      "z_corr_train": -0.52,
+      "sign_agree_both_active": 0.0435,
+      "both_active_over_cand": 0.4259,
+      "n_cand_active": 216,
+      "n_both_active": 92,
+      "clone": false,
+      "binding": true
+    },
+    "GLD_z120_N133": {
+      "peer": "GLD_z120_N133",
+      "z_corr_train": 0.2252,
+      "sign_agree_both_active": 0.7438,
+      "both_active_over_cand": 0.5602,
+      "n_cand_active": 216,
+      "n_both_active": 121,
+      "clone": false,
+      "binding": true
+    },
+    "N92_US100_NY2H_vs_US100_leg": {
+      "peer": "N92_US100_NY2H_vs_US100_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3757,
+      "both_active_over_cand": 0.8009,
+      "n_cand_active": 216,
+      "n_both_active": 173,
+      "clone": false,
+      "binding": true
+    },
+    "N81_short_US100_vs_US100_leg": {
+      "peer": "N81_short_US100_vs_US100_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.9868,
+      "both_active_over_cand": 0.3519,
+      "n_cand_active": 216,
+      "n_both_active": 76,
+      "clone": false,
+      "binding": true
+    },
+    "N95_XAU_LonNY_vs_XAU_leg": {
+      "peer": "N95_XAU_LonNY_vs_XAU_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4583,
+      "both_active_over_cand": 0.3333,
+      "n_cand_active": 216,
+      "n_both_active": 72,
+      "clone": false,
+      "binding": true
+    },
+    "N133_gold_day_sign_vs_XAU_leg": {
+      "peer": "N133_gold_day_sign_vs_XAU_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2542,
+      "both_active_over_cand": 0.5463,
+      "n_cand_active": 216,
+      "n_both_active": 118,
+      "clone": false,
+      "binding": true
+    },
+    "N148_sign": {
+      "peer": "N148_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.4722,
+      "n_cand_active": 216,
+      "n_both_active": 102,
+      "clone": false,
+      "binding": true
+    },
+    "N156_sign": {
+      "peer": "N156_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.5417,
+      "n_cand_active": 216,
+      "n_both_active": 117,
+      "clone": false,
+      "binding": true
+    },
+    "N154_sign": {
+      "peer": "N154_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.0609,
+      "both_active_over_cand": 0.5324,
+      "n_cand_active": 216,
+      "n_both_active": 115,
+      "clone": false,
+      "binding": true
+    },
+    "N150_sign": {
+      "peer": "N150_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.9706,
+      "both_active_over_cand": 0.4722,
+      "n_cand_active": 216,
+      "n_both_active": 102,
+      "clone": false,
+      "binding": true
+    },
+    "N75_sign": {
+      "peer": "N75_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2647,
+      "both_active_over_cand": 0.1574,
+      "n_cand_active": 216,
+      "n_both_active": 34,
+      "clone": false,
+      "binding": true
+    },
+    "N146_sign": {
+      "peer": "N146_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.0435,
+      "both_active_over_cand": 0.4259,
+      "n_cand_active": 216,
+      "n_both_active": 92,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N156": 4.65,
+    "N157": 4.47
+  },
+  "costs_rt": {
+    "XAUUSD": 0.83,
+    "GER40cash": 0.72,
+    "US100cash": 0.66
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "session": "15:30-21:00 CET",
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "no_inline_replacement": true,
+  "gate_source": "COSTS_FTMO.csv roundtrip_intraday_bp; not a session median",
+  "loaded_days_incl_warmup": {
+    "XAUUSD": 774,
+    "GER40cash": 768,
+    "US100cash": 775,
+    "US500cash": 775,
+    "US30cash": 775,
+    "UKOILcash": 773,
+    "AUDUSD": 778,
+    "EURUSD": 778,
+    "USDJPY": 778,
+    "XAGUSD": 774
+  },
+  "train_days": {
+    "XAUUSD": 774,
+    "GER40cash": 768,
+    "US100cash": 775,
+    "US500cash": 775,
+    "US30cash": 775,
+    "UKOILcash": 773,
+    "AUDUSD": 778,
+    "EURUSD": 778,
+    "USDJPY": 778,
+    "XAGUSD": 774
+  }
+}
