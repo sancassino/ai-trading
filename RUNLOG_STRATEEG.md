@@ -1,5 +1,27 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-02 23:56 Europe/Amsterdam — Absorb S2 cycle_2346 → N124/N125 PASS→PREREG
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `47e0eab`).  
+**Trigger:** S2 `13fe10c` Lane-A survivors YIELD_CURVE_2S10S + DEFENSIVE_CYCLICAL (cycle_2346; COST_OK).
+
+### D-092.1 `n124_n125` (train 2021–2023; gate 2,34; session-flat US500)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N124 | YIELD_CURVE_2S10S AS | 10Y−3M z60/thr1.5/flatten_fade | **240** | **+8,97** | +9,89 | −2,31 / +8,57 / +12,41 | **PASS_may_PREREG** |
+| N125 | DEFENSIVE_CYCLICAL AT | XLU/XLI z40/thr0.5/defensive_high **US500 twin** | **478** | **+5,48** | +4,81 | +0,90 / +8,84 / +3,72 | **PASS_may_PREREG** |
+
+### Geleverd
+- `PREREG_FTMO_N124_YIELD_CURVE_2S10S.md` + `PREREG_FTMO_N125_DEFENSIVE_CYCLICAL.md` — OPEN for U2
+- VOORSTEL_PRESCREEN_N124/N125; source pointers `results/lane_b/YIELD_CURVE_2S10S_SOURCE.md` + `DEFENSIVE_CYCLICAL_SOURCE.md`
+- Screen artifacts `results/R2/n124_n125_prescreen/`
+- Catalogus §9/§10: live PREREG N124/N125; keep OPEN N122/N123 AQ/AR; TRIAL **464**
+
+### Explicit
+- No soft-pass; gates unchanged (2,34). N125 = **US500 twin** (S2 FLAG — not US100 overnight).
+- N122/N123 remain OPEN (D-094 ≥2 NEW_FAMILY OPEN screens + 2 live PREREG).
+- Parent wakes U2; Quiet to Sandro. No 2025-reserve touch.
+
 ## 2026-10-02 23:25 Europe/Amsterdam — N118 FAIL_T sync; N120/N121 D-092.1 FAIL; OPEN N122/N123
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `ce7ce12`).  
