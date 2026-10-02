@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N103 — GER40 Lon-AM → US30 NY industrial lead-lag (NEW_FAMILY Z)
 
-**Status:** **OPEN** — pipeline replace after C-034 N98/N99 DIAG_FAIL (filed 2026-10-02 ~21:56 CEST).  
+**Status:** **OPEN PREREG** — D-092.1 PASS `n102_n103` (mean +1,75 ≥ 1,35; N=286); `PREREG_FTMO_N103_GER40_US30_INDUSTRIAL.md` (filed 2026-10-02 ~22:05 CEST).  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY Z** (EU industrial equity AM impulse → US industrial PM same-dir session-flat — nooit deze setup).  
 **Signal:** `GER40cash` (Lon-AM impulse). **Trade:** `US30cash` (RT **0,45** bp; swap 0 — **EOD flat**).  
 **Track 2 + D-102 adjacent:** EU industrial risk impulse → Dow afternoon continuation; intradag-vlak (geen swap).

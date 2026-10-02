@@ -1,0 +1,32 @@
+{
+  "N102": {
+    "id": "N102",
+    "instrument": "USDCHF",
+    "n": 104,
+    "mean_bruto_bp": 2.9398,
+    "median_bruto_bp": 8.1385,
+    "gate_bp": 3.03,
+    "verdict": "FAIL",
+    "hit_rate": 0.5288,
+    "years": {
+      "2021": 4.5968,
+      "2022": 10.7291,
+      "2023": -7.3151
+    }
+  },
+  "N103": {
+    "id": "N103",
+    "instrument": "US30cash",
+    "n": 286,
+    "mean_bruto_bp": 1.7488,
+    "median_bruto_bp": -1.1305,
+    "gate_bp": 1.35,
+    "verdict": "PASS_may_PREREG",
+    "hit_rate": 0.4895,
+    "years": {
+      "2021": 2.2947,
+      "2022": 10.5327,
+      "2023": -14.0771
+    }
+  }
+}

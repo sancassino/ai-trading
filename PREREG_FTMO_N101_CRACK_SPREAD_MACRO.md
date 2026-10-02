@@ -1,16 +1,30 @@
 # PREREG_FTMO_N101 — CRACK_SPREAD_MACRO (US100cash; session-flat; Lane-B from S2)
 
-**Status:** **OPEN** — frozen for U2 cost-gate + formal trial (Lane-B from S2 Lane-A survivor cycle_2140).  
+**Status:** **STOP FAIL_T** — U2 tip `d09d00a` on `claude/uitvoerder2-r` (TRIAL **459→460**).  
 **Auteur:** Strateeg (Grok) Lane-B on `claude/trusting-faraday-34tsmg`.  
-**Bron Lane-A:** Strateeg-2 (`grok/strateeg-2`) @ **`67a9be1`** — `results/strateeg2_prescreen/cycle_2140/VOORSTEL_S2_CRACK_SPREAD_MACRO.md`.  
+**Bron Lane-A:** Strateeg-2 (`grok/strateeg-2`) @ **`67a9be1`** — cycle_2140.  
 **Instrument (primary):** `US100cash` (NDX proxy). **Geen** UKOIL/USOIL trade leg.  
-**NEW_FAMILY:** `CRACK_SPREAD_MACRO` — heating-oil/Brent refining crack → US100 session-flat fade.  
-**Config freeze:** **z60 / thr ±0,5 / crack_fade** — **execution = session-flat** (D-100). **Geen retune.**  
-**Hold:** **session-flat** 15:30→21:00 CET (D-100 verplicht — US100 long overnight swap ≈1,95 bp/nacht).  
-**TRIAL_COUNT book:** **458** (deze PREREG telt nog niet).  
-**Reserve 2025+:** **onaangeroerd.**
+**NEW_FAMILY:** `CRACK_SPREAD_MACRO` — **DEAD** (no HO/BRENT crack→NDX / oil CFD clones; no retune).  
+**Hold:** session-flat 15:30→21:00 CET (was freeze).  
+**TRIAL_COUNT book:** **460**.  
+**Reserve 2025+:** **onaangeroerd.**  
+**Dead += N101.** No crack-spread / oil-CFD-leg clones.
 
-Pointer: `results/lane_b/CRACK_SPREAD_MACRO_SOURCE.md` → S2 artefacts @ `67a9be1` (geen CSV-rewrite).
+Pointer: `results/lane_b/CRACK_SPREAD_MACRO_SOURCE.md` → S2 @ `67a9be1`. Board: U2 `results/R2/n101_crack_spread_macro/n101_gate_board.json`.
+
+---
+
+## U2 result (authoritative)
+
+| Post | Waarde |
+|------|--------|
+| Verdict | **FAIL_T** (cost+stress **PASS**) |
+| Train 2021–23 | N=**436**, mean bruto **+6,30** ≥1,98/2,97; t/NW **1,05/1,21** <2 |
+| Test 2024 | N=**184**, bruto **−5,00** |
+| Trial | **459→460**; counts_as_trial=true |
+| Retune | **verboden** (geen oil CFD clones) |
+
+Live PREREG-pointer **cleared**.
 
 ---
 

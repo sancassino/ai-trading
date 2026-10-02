@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N102 — USDCHF Long-Only 5d USD-CHF Carry+Momentum (NEW_FAMILY Y)
 
-**Status:** **OPEN** — pipeline replace after C-034 N98/N99 DIAG_FAIL (filed 2026-10-02 ~21:56 CEST).  
+**Status:** **geen PREREG** — D-092.1 FAIL `n102_n103` (mean +2,94 < 3,03; N=104≪150); filed 2026-10-02 ~22:05 CEST.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY Y** (USDCHF USD-vs-CHF funding carry+momentum long-only — nooit als deze setup).  
 **Instrument:** `USDCHF` (RT **1,01** bp — `COSTS_FTMO.csv`; swap_long **−0,39** = earn → 0 in gate per D-100).  
 **Track 4 + D-100 family B:** USDCHF long-only 5d swing. Long = USD vs CHF funding (Fed >> SNB) + positief 5d momentum.
