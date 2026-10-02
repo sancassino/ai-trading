@@ -2309,3 +2309,21 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Year-split train mean bruto:** 2021 **+18,36** (N=24) / 2022 **−2,23** (N=94) / 2023 **+5,62** (N=90). Long/short train 86/122. Median train +1,89.
 
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 466→467**. Dead += `N127_EWZ_BRAZIL_STRESS`. Geen retune / geen klonen (geen thr-grid, geen EEM/EMB/EFA rewrite, geen overnight). Board: `results/R2/n127_ewz_brazil_stress/n127_gate_board.json`.
+
+
+## Cyclus 00:13 CEST (2026-10-03) — N128 BWX_INTL_TREASURY_STRESS FAIL_T (TRIAL 467→468)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `cb136e0`: `PREREG_FTMO_N128_BWX_INTL_TREASURY_STRESS.md` + VOORSTEL + `results/R2/n128_n129_prescreen/` (D-092.1 PASS N128 N=419 mean +6.63 ≥ 2.34; N129 PPLT FAIL not gated). Script frozen vóór run. Book starts at TRIAL **467**.
+
+**Config freeze:** BWX z120 + d20 combo thr ±0,5 → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress **3,51**; swap=0; **geen** BWX CFD leg (D-100). NEW_FAMILY **AW**. BWX ≠ TLT/TIP/EMB/YIELD_CURVE. Combo: (z>+0,5)&(d20>0) LONG; (z<−0,5)&(d20<0) SHORT.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 419 | **+6,6302 bp** | +5,8502 bp | 1,40 / 1,43 | cost PASS (≥2,34); stress PASS (≥3,51) |
+| Test 2024 | 136 | −2,3738 bp | −3,1538 bp | −0,58 / −0,55 | formal t <2 |
+
+**Year-split train mean bruto:** 2021 **−8,07** (N=62) / 2022 **+8,89** (N=197) / 2023 **+9,55** (N=160). Long/short train 96/323. Median train +8,58. **Stress/year risk:** 2021 negatief.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 467→468**. Dead += `N128_BWX_INTL_TREASURY_STRESS`. Geen retune / geen klonen (geen thr-grid, geen TLT/TIP/EMB/yield rewrite, geen overnight). Board: `results/R2/n128_bwx_intl_treasury_stress/n128_gate_board.json`.
