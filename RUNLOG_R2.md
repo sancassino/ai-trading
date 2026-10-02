@@ -2327,3 +2327,38 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Year-split train mean bruto:** 2021 **−8,07** (N=62) / 2022 **+8,89** (N=197) / 2023 **+9,55** (N=160). Long/short train 96/323. Median train +8,58. **Stress/year risk:** 2021 negatief.
 
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 467→468**. Dead += `N128_BWX_INTL_TREASURY_STRESS`. Geen retune / geen klonen (geen thr-grid, geen TLT/TIP/EMB/yield rewrite, geen overnight). Board: `results/R2/n128_bwx_intl_treasury_stress/n128_gate_board.json`.
+
+
+## Cyclus 00:20 CEST (2026-10-03) — N130 EQW_BREADTH + N131 DXY_DOLLAR FAIL_T (TRIAL 468→470)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `0af85da`: `PREREG_FTMO_N130_EQW_BREADTH_STRESS.md` + `PREREG_FTMO_N131_DXY_DOLLAR_STRESS.md` + VOORSTEL + `results/R2/n130_n131_prescreen/` (D-092.1 PASS N130 N=220 mean +6.68 / N131 N=413 mean +5.08 ≥ 2.34). Scripts frozen vóór run. Book starts at TRIAL **468**. Do **not** gate N129.
+
+### N130 EQW_BREADTH_STRESS (NEW_FAMILY AY)
+
+**Config freeze:** SPX_EQW/SPX z40 / thr ±1,5 / stress_buy → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress **3,51**; swap=0. ≠ IWM / SECTOR_DISP / DEFENSIVE / N81.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 220 | **+6,6849 bp** | +5,9049 bp | 1,05 / 1,20 | cost PASS (≥2,34); stress PASS (≥3,51) |
+| Test 2024 | 91 | −3,8475 bp | −4,6275 bp | −0,65 / −0,67 | formal t <2 |
+
+**Year-split train mean bruto:** 2021 **−0,41** (N=22) / 2022 **+18,72** (N=89) / 2023 **−1,71** (N=109). Long/short 99/121. Median +1,66.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 468→469**. Dead += `N130_EQW_BREADTH_STRESS`. Board: `results/R2/n130_eqw_breadth_stress/n130_gate_board.json`.
+
+### N131 DXY_DOLLAR_STRESS (NEW_FAMILY AZ)
+
+**Config freeze:** DXY daily z120+d20 **inverse** combo → US500cash session-flat **15:30→21:00 CET** (≠ N110 DXYcash Lon-AM→EU-PM 13:00–17:00 same-dir). Gate **2,34**; stress **3,51**.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 413 | **+5,0764 bp** | +4,2964 bp | 1,01 / 1,05 | cost PASS (≥2,34); stress PASS (≥3,51) |
+| Test 2024 | 146 | −1,0996 bp | −1,8796 bp | −0,37 / −0,35 | formal t <2 |
+
+**Year-split train mean bruto:** 2021 **−6,69** (N=62) / 2022 **+5,44** (N=187) / 2023 **+9,12** (N=164). Long/short 131/282. Median +5,22.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 469→470**. Dead += `N131_DXY_DOLLAR_STRESS`. Geen N110 rewrite. Board: `results/R2/n131_dxy_dollar_stress/n131_gate_board.json`.
+
+**Book end:** TRIAL_COUNT **470**. Quiet.

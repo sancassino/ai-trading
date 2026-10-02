@@ -1,0 +1,57 @@
+{
+  "prereg": "PREREG_FTMO_N130_EQW_BREADTH_STRESS",
+  "new_family": "AY",
+  "config": "SPX_EQW/SPX z40/thr\u00b11.5/stress_buy \u2192 US500cash session-flat 15:30\u219221:00 CET",
+  "rt_bp": 0.78,
+  "gate_bp": 2.34,
+  "stress_gate_bp": 3.51,
+  "swap_bp": 0.0,
+  "n_signal_days_train_nonzero": 271,
+  "train": {
+    "label": "train_2021_2023",
+    "n": 220,
+    "mean_bruto": 6.6849,
+    "mean_netto": 5.9049,
+    "t_netto": 1.0509,
+    "t_nw5": 1.2,
+    "median_bruto": 1.6634,
+    "mean_mae_bp": 59.2102,
+    "n_long": 99,
+    "n_short": 121
+  },
+  "test": {
+    "label": "test_2024",
+    "n": 91,
+    "mean_bruto": -3.8475,
+    "mean_netto": -4.6275,
+    "t_netto": -0.6469,
+    "t_nw5": -0.6697,
+    "median_bruto": -1.5078,
+    "mean_mae_bp": 46.763,
+    "n_long": 75,
+    "n_short": 16
+  },
+  "year_split_train": {
+    "2021": {
+      "n": 22,
+      "mean_bruto": -0.41,
+      "mean_netto": -1.19
+    },
+    "2022": {
+      "n": 89,
+      "mean_bruto": 18.7245,
+      "mean_netto": 17.9445
+    },
+    "2023": {
+      "n": 109,
+      "mean_bruto": -1.7136,
+      "mean_netto": -2.4936
+    }
+  },
+  "cost_pass": true,
+  "stress_pass": true,
+  "verdict": "FAIL_T",
+  "reserve_2025": "untouched",
+  "faraday_tip_sha": "0af85da1eaa1727ca275842d7c6ac7bc9155c688",
+  "note": "U2 owns TRIALS/TRIAL_COUNT append. FAIL_COST_GATE/FAIL_STRESS \u2192 no bump. FAIL_T \u2192 bump +1. \u2260IWM/SECTOR_DISP/DEFENSIVE/N81. No thr-grid. No overnight. No retune."
+}

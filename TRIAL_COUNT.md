@@ -95,3 +95,5 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-10-02 | N125/PREREG_FTMO_N125: DEFENSIVE_CYCLICAL US500 twin session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.29 <2.0 train; test N=191 mean -2.32 bp; 1 variant) | 1 | 466 |
 | 2026-10-03 | N127/PREREG_FTMO_N127: EWZ_BRAZIL_STRESS US500 session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 0.50 <2.0 train; test N=85 mean +1.85 bp; 1 variant) | 1 | 467 |
 | 2026-10-03 | N128/PREREG_FTMO_N128: BWX_INTL_TREASURY_STRESS US500 session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.43 <2.0 train; test N=136 mean -2.37 bp; 1 variant) | 1 | 468 |
+| 2026-10-03 | N130/PREREG_FTMO_N130: EQW_BREADTH_STRESS US500 session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.20 <2.0 train; test N=91 mean -3.85 bp; 1 variant) | 1 | 469 |
+| 2026-10-03 | N131/PREREG_FTMO_N131: DXY_DOLLAR_STRESS US500 session-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.05 <2.0 train; test N=146 mean -1.10 bp; 1 variant) | 1 | 470 |
