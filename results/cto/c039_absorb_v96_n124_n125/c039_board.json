@@ -1,0 +1,62 @@
+{
+  "c": "C-039",
+  "when": "2026-10-02 ~23:56 Europe/Amsterdam",
+  "absorb": {
+    "main": "d6b9867 NEXT_STEPS v96 \u2014 absorb C-038; TRIAL 464; OPEN empty; FREEZE OFF",
+    "faraday": "47e0eab (unchanged) \u2014 N122/N123 OPEN died at C-038 DIAG_FAIL; no new OPEN",
+    "u2": "6ed73cf IDLE/HOLD absorb v96; TRIAL 464; no live PREREG",
+    "s2": "13fe10c cycle_2346 PROMOTE YIELD_CURVE_2S10S + DEFENSIVE_CYCLICAL",
+    "prior_cto": "1a22e81 C-038 N122/N123 DIAG_FAIL"
+  },
+  "freeze": "OFF",
+  "trial_count": 464,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "live_prereg": [
+    "PREREG_FTMO_N124_YIELD_CURVE_2S10S",
+    "PREREG_FTMO_N125_DEFENSIVE_CYCLICAL"
+  ],
+  "results": [
+    {
+      "label": "N124_YIELD_CURVE_2S10S_US500_SESSION",
+      "n": 240,
+      "mean_bp": 8.971,
+      "median_bp": 9.895,
+      "day_t": 1.886,
+      "h1_mean_bp": 11.117,
+      "h2_mean_bp": 6.826,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_PASS",
+      "years": {
+        "2021": -2.305,
+        "2022": 8.565,
+        "2023": 12.405
+      },
+      "notes": "NEW_FAMILY AS; 10Y-3M z60/thr1.5 flatten_fade \u2192 US500 15:30\u219221:00; gate=3\u00d7RT 0.78=2.34; \u2260 TLT/TIP/REIT_RATE/RATE_CURVE"
+    },
+    {
+      "label": "N125_DEFENSIVE_CYCLICAL_US500_SESSION",
+      "n": 478,
+      "mean_bp": 5.479,
+      "median_bp": 4.81,
+      "day_t": 1.427,
+      "h1_mean_bp": 6.309,
+      "h2_mean_bp": 4.648,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_PASS",
+      "years": {
+        "2021": 0.903,
+        "2022": 8.841,
+        "2023": 3.721
+      },
+      "notes": "NEW_FAMILY AT; XLU/XLI z40/thr0.5 defensive_high \u2192 US500 15:30\u219221:00; gate=3\u00d7RT 0.78=2.34; \u2260 SECTOR_DISP; prefer US500 twin vs NDX"
+    }
+  ],
+  "promote_to_prereg": [
+    "N124_YIELD_CURVE_2S10S_US500_SESSION",
+    "N125_DEFENSIVE_CYCLICAL_US500_SESSION"
+  ],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N100+N101+N112+N114+N116+N118 (\u22655); pivot ON; bar TIP/IWM/VNQ/EEM/DBC/EFA\u2192US500 + TLT/CPER/HYG/EURUSD Lon-AM + GAS/SILVER + N75\u2013N123; N124/N125 = NEW_FAMILY AS/AT (yield-curve slope / defensive-cyclical relative \u2014 not ETF\u2192US500 stress clones)",
+  "u2_status": "UNBLOCKED N124 then N125"
+}

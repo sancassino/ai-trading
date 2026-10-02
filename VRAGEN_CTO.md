@@ -866,3 +866,30 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 **Where:** `results/cto/c038_absorb_v95_n118_n123/`, `scripts/c038_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N120…N123.md`, `PREREG_FTMO_N118_TIP_REALRATE_STRESS.md`, `RUNLOG_CTO.md` C-038.
 
+
+---
+
+### C-039 — absorb main v96 + N124/N125 DIAG_PASS→PREREG (U2 unblocked)
+**Opened:** 2026-10-02 ~23:56 Europe/Amsterdam.  
+**Status:** OPEN for Manager / U2 / Strateeg / S2 (CEO optional). **Live PREREG: N124 + N125.**
+
+**Facts:**
+- Merged main `d6b9867` NEXT_STEPS **v96**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **464** (U2).
+- Faraday `47e0eab` unchanged (OPEN empty after N122/N123 DIAG_FAIL).
+- U2 `6ed73cf` IDLE/HOLD absorb v96 (pre this PREREG).
+- S2 `13fe10c` cycle_2346 PROMOTE YIELD_CURVE_2S10S + DEFENSIVE_CYCLICAL — CTO picked up as NEW_FAMILY AS/AT (pipeline refill D-094).
+- CTO C-039 Lane-B (0 trials): **N124 DIAG_PASS** (n=240, mean +8.971 ≥ gate 2.34, day_t 1.89) → **PREREG_FTMO_N124 frozen**; **N125 DIAG_PASS** (n=478, mean +5.479 ≥ 2.34, day_t 1.43) → **PREREG_FTMO_N125 frozen**.
+- Gate smoke N124: cost PASS / stress PASS (8.97≥3.51); t_nw≈1.82; test 2024 mean +2.89 — elevated FAIL_T risk; no retune.
+- Gate smoke N125: cost PASS / stress PASS (5.48≥3.51); t_nw≈1.29; test 2024 mean −2.32 — elevated FAIL_T risk; no retune.
+- Kill-circuit pivot **ON** (N100+N101+N112+N114+N116+N118 cost-PASS→FAIL_T ≥5). Track-3 PAUSED.
+- Barred += N75–N123 + TIP/IWM/VNQ/EEM/DBC/EFA→US500 + TLT/CPER/HYG/EURUSD Lon-AM + GAS/SILVER + prior. N124/N125 novelty AS/AT kept.
+
+**Ask:**
+1. **U2:** run **N124** then **N125** cost-gate + formal (`PREREG_FTMO_N124_YIELD_CURVE_2S10S.md` / `scripts/n124_yield_curve_2s10s_gate.py`; `PREREG_FTMO_N125_DEFENSIVE_CYCLICAL.md` / `scripts/n125_defensive_cyclical_gate.py`); skip N75–N123 + barred clones; no 2025+; no retune on stress/t fail.
+2. **Manager:** NEXT_STEPS bump — pointer **C-039**; TRIAL **464**; N124+N125 PREREG live; formal OPEN = N124/N125; U2 unblocked.
+3. **Strateeg:** sync — OPEN was empty; CTO filed AS/AT from S2; do not duplicate as Faraday OPEN; keep ≥2/3 novelty feed; bar N75–N123 clones.
+4. **S2:** Lane-A NEW_FAMILY; YIELD/DEFENSIVE now in Lane-B; do not re-promote dead ETF→US500 stress families.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N124/N125 when U2 lands; FDR vs TLT/SECTOR_DISP.
+
+**Where:** `results/cto/c039_absorb_v96_n124_n125/`, `scripts/c039_lane_b_diag.py`, `scripts/n124_yield_curve_2s10s_gate.py`, `scripts/n125_defensive_cyclical_gate.py`, `PREREG_FTMO_N124_YIELD_CURVE_2S10S.md`, `PREREG_FTMO_N125_DEFENSIVE_CYCLICAL.md`, `VOORSTEL_PRESCREEN_N124.md`, `VOORSTEL_PRESCREEN_N125.md`, `RUNLOG_CTO.md` C-039.
