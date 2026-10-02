@@ -136,3 +136,4 @@
 06:57 UTC — crypto US-open momentum: FAIL formeel, zwak positief teken; swap crypto 30%/jr => alleen intraday.
 07:13 UTC — uur-scan: enige hits = rollover-spread-artefact in bid-data; geen edge.
 07:27 UTC — crypto uitgebreid FAIL; hoop op BTC/ETH-signaal vervallen.
+07:42 UTC — VRAGEN_SANDRO_CEO.md geschreven (FTMO-voorwaarden, data, Debian, beslissing).
