@@ -2291,3 +2291,21 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 465→466**. Dead += `N125_DEFENSIVE_CYCLICAL`. Geen retune / geen klonen (geen thr-grid, geen US100 overnight rewrite, geen SECTOR_DISP clone). Board: `results/R2/n125_defensive_cyclical/n125_gate_board.json`.
 
 **Book end:** TRIAL_COUNT **466**. Quiet.
+
+
+## Cyclus 00:06 CEST (2026-10-03) — N127 EWZ_BRAZIL_STRESS FAIL_T (TRIAL 466→467)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `3a96125`: `PREREG_FTMO_N127_EWZ_BRAZIL_STRESS.md` + VOORSTEL + `results/R2/n126_n127_prescreen/` (D-092.1 PASS N127 N=208 mean +3.54 ≥ 2.34; N126 DBA FAIL not gated). Script frozen vóór run. Book starts at TRIAL **466**.
+
+**Config freeze:** EWZ z40 / thr ±1,5 / stress_buy → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress **3,51**; swap=0; **geen** EWZ CFD leg (D-100). NEW_FAMILY **AV**. EWZ ≠ EEM/EMB/EFA.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 208 | **+3,5446 bp** | +2,7646 bp | 0,57 / 0,50 | cost PASS (≥2,34); stress PASS (≥3,51) |
+| Test 2024 | 85 | +1,8502 bp | +1,0702 bp | 0,18 / 0,15 | formal t <2 |
+
+**Year-split train mean bruto:** 2021 **+18,36** (N=24) / 2022 **−2,23** (N=94) / 2023 **+5,62** (N=90). Long/short train 86/122. Median train +1,89.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 466→467**. Dead += `N127_EWZ_BRAZIL_STRESS`. Geen retune / geen klonen (geen thr-grid, geen EEM/EMB/EFA rewrite, geen overnight). Board: `results/R2/n127_ewz_brazil_stress/n127_gate_board.json`.

@@ -1,0 +1,57 @@
+{
+  "prereg": "PREREG_FTMO_N127_EWZ_BRAZIL_STRESS",
+  "new_family": "AV",
+  "config": "EWZ z40/thr\u00b11.5/stress_buy \u2192 US500cash session-flat 15:30\u219221:00 CET",
+  "rt_bp": 0.78,
+  "gate_bp": 2.34,
+  "stress_gate_bp": 3.51,
+  "swap_bp": 0.0,
+  "n_signal_days_train_nonzero": 263,
+  "train": {
+    "label": "train_2021_2023",
+    "n": 208,
+    "mean_bruto": 3.5446,
+    "mean_netto": 2.7646,
+    "t_netto": 0.5676,
+    "t_nw5": 0.4959,
+    "median_bruto": 1.8945,
+    "mean_mae_bp": 51.9876,
+    "n_long": 86,
+    "n_short": 122
+  },
+  "test": {
+    "label": "test_2024",
+    "n": 85,
+    "mean_bruto": 1.8502,
+    "mean_netto": 1.0702,
+    "t_netto": 0.1792,
+    "t_nw5": 0.1494,
+    "median_bruto": 6.6257,
+    "mean_mae_bp": 42.1803,
+    "n_long": 72,
+    "n_short": 13
+  },
+  "year_split_train": {
+    "2021": {
+      "n": 24,
+      "mean_bruto": 18.3639,
+      "mean_netto": 17.5839
+    },
+    "2022": {
+      "n": 94,
+      "mean_bruto": -2.2293,
+      "mean_netto": -3.0093
+    },
+    "2023": {
+      "n": 90,
+      "mean_bruto": 5.6233,
+      "mean_netto": 4.8433
+    }
+  },
+  "cost_pass": true,
+  "stress_pass": true,
+  "verdict": "FAIL_T",
+  "reserve_2025": "untouched",
+  "faraday_tip_sha": "3a96125dcf369e5de3f080981c269b5cbb93ea13",
+  "note": "U2 owns TRIALS/TRIAL_COUNT append. FAIL_COST_GATE/FAIL_STRESS \u2192 no bump. FAIL_T \u2192 bump +1. EWZ\u2260EEM/EMB/EFA. No EWZ CFD leg. No thr-grid. No overnight. No retune."
+}
