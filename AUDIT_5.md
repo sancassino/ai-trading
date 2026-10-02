@@ -119,4 +119,27 @@ a = te[te.p >= thr]              # selectie gebaseerd op volledig-jaar mediaan
 | Reserve 2025+? | Niet aangeraakt ✓ |
 
 **Audituitkomst: CONCORDANT.** Numerieke reproductie geslaagd; geen harde lookahead of leakage; reserve intact. PREREG-eis "Auditor reproduceert onafhankelijk" is ingevuld.  
-Resterende PREREG-beslissing (PASS/FAIL reserve-run) is aan CEO na release 2025+-data.
+Reserve-run resultaat: zie §7.
+
+---
+
+## 7. Reserve-run verificatie (D-104) — CONCORDANT FAIL
+
+**CEO-beslissing D-104:** reserve 2025+ vrijgegeven na AUDIT_5 CONCORDANT. CEO voert reserve-run uit met bevroren modellen (`orb_meta_model_seed0-4.txt`) en drempel (thr=0.6897, OOS 2022-24 mediaan).
+
+**Auditor eigen reproductie** (eigen code, CEO's bevroren modellen, `orb_meta_threshold.json`):
+
+| Maatstaf | CEO | Audit |
+|----------|-----|-------|
+| Ongefilterd bp/trade | +1,20 bp | **+1,20 bp** ✓ |
+| Gefilterd bp/trade | +0,06 bp | **+0,06 bp** ✓ |
+| Rest bp/trade | +2,27 bp | **+2,27 bp** ✓ |
+| Toegevoegde waarde | −2,6 bp t −1,15 | **−2,63 bp t −1,15** ✓ |
+| corr(pred, y) | n.v.t. | −0,037 |
+
+**PREREG-toets:**
+1. Gefilterd > 0 AND ≥ ongefilterd + 1 bp: +0,06 vs +1,20 → **FAIL** (filter selecteert de sléchtere helft)
+2. Gefilterd SR ≥ ongefilterd SR: onmogelijk gezien de getallen → **FAIL**
+3. Toegevoegde waarde dag-t ≥ 1,5: t = −1,15 → **FAIL**
+
+**Audituitkomst reserve-run: CONCORDANT FAIL.** D-104 CEO-oordeel bevestigd. Filter heeft negatieve voorspellende waarde in de reserveperiode (gecorreleerd omgekeerd). Reserve voor ORB-meta verbruikt.
