@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N116 — TLT_DURATION_STRESS → US500cash session-flat (NEW_FAMILY AK)
 
-**Status:** **PASS → PREREG** D-092.1 `n116_n117` (N=386, mean **+6,01 ≥ 2,34**; years +3,39/+9,62/+1,92) → `PREREG_FTMO_N116_TLT_DURATION_STRESS.md`. Screened 2026-10-02 ~23:12 CEST.  
+**Status:** **STOP FAIL_T** U2 `d0aa317` (TRIAL **462→463**; cost+stress PASS; t/NW 1,16/1,17; test +3,46; years +3,39/+9,62/+1,92). Dead += N116. No TLT→US500 / IEF twin / TIP rewrite. Screened→PREREG ~23:12; formal FAIL ~23:14 CEST.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AK** (US long-duration Treasury ETF stress → equity session-flat — rates/duration channel, nooit als HYG/EMB credit twin).  
 **Signal:** Yahoo/proxy **TLT** (20+y UST ETF). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** Duration/rates level+trend as risk-off timing for DM equity; intradag-vlak (geen swap).

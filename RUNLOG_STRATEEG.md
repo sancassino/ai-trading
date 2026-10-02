@@ -1,5 +1,55 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-02 23:16 Europe/Amsterdam — N116 FAIL_T + N117 FAIL_STRESS sync; N118 PREREG; OPEN N120/N121
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `754e24e`).  
+**Trigger:** U2 `d0aa317` **N116 FAIL_T** (TRIAL **462→463**) + U2 `d8b97d0` **N117 FAIL_STRESS** (TRIAL blijft **463**). Manager v94: D-092.1 on formal OPEN N118/N119.
+
+### U2 N116 result (binding)
+| Metric | Value |
+|--------|------:|
+| Train | 2021–23 US500cash |
+| N | 386 |
+| Mean bruto | **+6,01 bp** ≥ gate **2,34** / stress **3,51** |
+| Stress | PASS |
+| t / NW | **1,16 / 1,17** <2 |
+| Years | 2021 **+3,39** / 2022 +9,62 / 2023 +1,92 |
+| Test 2024 | N=124 bruto **+3,46** |
+| TRIAL_COUNT | **463** |
+| Retune | **verboden**; no TLT→US500 / IEF twin / TIP rewrite; TIP≠TLT |
+| Reserve 2025 | untouched |
+
+### U2 N117 result (binding)
+| Metric | Value |
+|--------|------:|
+| Verdict | **FAIL_STRESS** (cost PASS) |
+| N | 152 |
+| Mean bruto | **+2,89** ≥2,34 but **< 3,51** stress |
+| Median | **−2,21** |
+| Years | +0,52 / +11,84 / −5,56 |
+| TRIAL_COUNT | **463** (geen trial) |
+| Retune | **verboden**; no CPER→US500 / CuAu / copper CFD |
+
+### D-092.1 N118/N119 (`n118_n119_prescreen`)
+| ID | N | Mean | Gate | Years | Verdict |
+|----|--:|-----:|-----:|-------|---------|
+| N118 TIP→US500 | **359** | **+5,38** | 2,34 | −7,40/+7,92/+5,27 | **PASS→PREREG** |
+| N119 IWM→US500 | **186** | **−0,48** | 2,34 | +14,29/−1,04/−3,20 | **FAIL** (geen PREREG) |
+
+### Geleverd
+- `PREREG_FTMO_N116` → **STOP FAIL_T**; `PREREG_FTMO_N117` → **STOP FAIL_STRESS**; live PREREGs cleared; TRIAL_COUNT **463**
+- `PREREG_FTMO_N118_TIP_REALRATE_STRESS` **OPEN** (TIP≠TLT)
+- VOORSTEL **N120–N121** NEW_FAMILY AO/AP (VNQ_REIT / EEM_EM_EQUITY → US500 session-flat)
+- Catalogus §9/§10 sync; artifacts `results/R2/n118_n119_prescreen/`
+
+### New OPEN screen table
+| ID | Family | Instrument | Gate bp | Mechanisme |
+|----|--------|------------|--------:|------------|
+| N120 | AO VNQ_REIT | US500cash | **2,34** | VNQ z120/d20 combo → session-flat |
+| N121 | AP EEM_EM_EQUITY | US500cash | **2,34** | EEM z40 stress_buy → session-flat |
+
+**Niet gedaan:** geen agent/Sandro/U2 message (Quiet; parent wakes U2 on N118 PASS→PREREG); geen `/workspace/ai-trading` branch flip; geen 2025-reserve; geen thr-grid on N119 FAIL.
+
 ## 2026-10-02 23:12 Europe/Amsterdam — N114 FAIL_T sync + N116/N117 PREREG + OPEN N118/N119
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `f9f7bae`).  

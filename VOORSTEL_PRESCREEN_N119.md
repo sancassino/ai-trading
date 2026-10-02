@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N119 — IWM_SMALLCAP_STRESS → US500cash session-flat (NEW_FAMILY AN)
 
-**Status:** **OPEN** — pipeline refill after N114 FAIL_T + N116/N117 PASS→PREREG (filed 2026-10-02 ~23:12 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** `n118_n119` (N=186, mean **−0,48 < 2,34**; med −3,47; years +14,29/−1,04/−3,20). Dead screen NEW_FAMILY AN. No IWM→US500 / SECTOR_DISP rewrite / IWM CFD twin. Screened 2026-10-02 ~23:16 CEST.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AN** (Russell 2000 / small-cap ETF stress → large-cap equity session-flat — breadth / risk-appetite channel, nooit als SECTOR_DISP twin).  
 **Signal:** Yahoo/proxy **IWM** (Russell 2000 ETF). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** Small-cap breadth stress as risk-appetite timing for large-cap DM equity; intradag-vlak (geen swap).

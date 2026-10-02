@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N118 — TIP_REALRATE_STRESS → US500cash session-flat (NEW_FAMILY AM)
 
-**Status:** **OPEN** — pipeline refill after N114 FAIL_T + N116/N117 PASS→PREREG (filed 2026-10-02 ~23:12 CEST).  
+**Status:** **PASS → PREREG** D-092.1 `n118_n119` (N=359, mean **+5,38 ≥ 2,34**; years −7,40/+7,92/+5,27) → `PREREG_FTMO_N118_TIP_REALRATE_STRESS.md`. Screened 2026-10-02 ~23:16 CEST.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AM** (US TIPS / real-rate ETF stress → equity session-flat — inflation-linked real rates channel, nooit als TLT nominal-duration twin).  
 **Signal:** Yahoo/proxy **TIP** (TIPS ETF). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** Real-rate / inflation-expectations level+trend as risk-off timing for DM equity; intradag-vlak (geen swap).
