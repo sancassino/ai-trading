@@ -1942,3 +1942,27 @@ counts_as_trial = **true**. **TRIAL_COUNT = 457**. Dead += N87_US30_GAP_FADE. Ge
 **TRIAL_COUNT blijft 457**. Geen TRIALS-append.
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG (N90–N92 of CEO lat-B). Cadans :15/:45 hervat.
+
+## Cyclus 20:51 CEST (2026-10-02) — D-090 FASE 3 WAKE N92 FAIL_T (TRIAL 457→458)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` (`8e0e8f6` NEXT_STEPS **v84** + `PREREG_FTMO_N92.md`). PREREG vóór resultaat: script `scripts/n92_us100_ny_2h_mom_gate.py` from `grok/cto-1` / C-031 (`8a68951`).
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v84** (Manager `8e0e8f6` ~20:38 CEST): C-031 absorb; N90 UNDERPOWERED / N91 DIAG_FAIL; **N92 PREREG OPEN** → U2 WAKE; TRIAL was **457**.
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz`. C-028…**C-031** actief.
+- Skip N75–N91 / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta / N87 clones. Track-3 **PAUSED**.
+
+### Gate N92 (NEW_FAMILY Q — US100cash NY 15:30–17:30 mom → hold 22:00 intradag-flat)
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 592 | +5.90 bp | +5.24 bp | 1.39 / **1.56** | cost PASS (≥1.98); stress PASS (≥2.97) |
+| Test 2024 | 259 | +2.62 bp | +1.96 bp | 0.50 / **0.51** | formal t <2 |
+
+**Verdict: FAIL_T.** counts_as_trial=true → **TRIAL_COUNT 457→458**. Dead += `N92_US100_NY_2H_MOM`. Geen klonen (geen venster-/drempel-/US500-variatie). Board: `results/R2/n92_us100_ny_2h_mom/n92_gate_board.json`.
+
+**Kill circuit:** N92 = next cost-PASS→FAIL_T na N87 → streak blijft ≥5; pivot **ON** (bar L60/ORB-meta/VIX/UKOIL-OVN/N87 clones; Strateeg ≥2 NEW_FAMILY if N92 dies — per v84).
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG (Strateeg replacements / CEO lat-B). Cadans :15/:45.

@@ -81,3 +81,4 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-10-01 | N78/PREREG_FTMO_N78_VIX_TERM_VOV: US100cash vov10/combo (kostenpoort STOP mean bruto 2.21 < 7.83; **ongeldig/telt niet** per NEXT_STEPS v78 / C-028 — FAIL_COST_GATE ≠ trial) | 0 | 456 |
 | 2026-10-01 | N80/PREREG_FTMO_N80: UKOIL OVN-gap cont EOD-flat (kostenpoort STOP mean bruto 7.56 < 8.13; **ongeldig/telt niet** per NEXT_STEPS v81 / C-029 — FAIL_COST_GATE ≠ trial) | 0 | 456 |
 | 2026-10-01 | N87/PREREG_FTMO_N87: US30cash opening-gap fade |gap|>30bp intradag-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.63 <2.0 train; test N=27 mean -17.71 bp; 1 variant) | 1 | 457 |
+| 2026-10-02 | N92/PREREG_FTMO_N92: US100cash NY-open 2h mom intradag-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.56 <2.0 train; test t_NW 0.51; 1 variant) | 1 | 458 |
