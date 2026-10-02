@@ -150,3 +150,4 @@
 10:26 UTC — geen nieuws; wacht op Sandro.
 10:41 UTC — geen nieuws; snapshot.
 10:56 UTC — geen nieuws; wacht op Sandro.
+11:13 UTC — nieuws-reactiestudie: continuation omgekeerd (train/test), fade op ongeziene reserve FAIL (t 0.15). Gratis nieuws-spoor gesloten op M5-niveau.

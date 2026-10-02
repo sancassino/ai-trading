@@ -36,3 +36,7 @@ BTC: train +3,9bp (t 0,7), test +10,1bp (t 1,2); ETH: train +4,0 (t 0,6), test �
 
 ## Crypto US-open-momentum uitgebreid (PREREG_CRYPTO_ID2, 9 coins; SOL zonder data)
 Gepoold train −5,8bp (dag-t −0,7), test −6,5bp (t −1,8); 3/9 coins positief in test. Het zwakke BTC-signaal was ruis/selectie. FAIL, gesloten.
+
+## Nieuws-reactie (gratis tijdstippen: NFP/CPI via ALFRED first-release data, FOMC-datums; M5, 6 instrumenten)
+**Continuation (PREREG_EVENT_DRIFT, T+10→T+70 min in richting van eerste 10 min): FAIL, teken omgekeerd.** NFP train −8,8bp (t −2,1) / test −10,5bp (t −2,0); CPI −5,7 / −10,3bp; 0/6 instrumenten positief; FOMC wisselt van teken (N klein). Alles 2021–24: −9,0bp, t −3,1 (N 686).
+**Fade (PREREG_EVENT_FADE, teken data-gezien, eenmalige bevestiging op ongezien 2025-01..2026-09, 40 events/226 obs): FAIL.** Netto +0,85bp (t 0,15), bij +2bp extra kosten −1,15bp (t −0,7); alleen US100 positief bij stress. De omkering uit 2021–24 bevestigt niet → exploratieve ruis/regime. D-105: kandidaat gesloten. Beperking: M5 mist de eerste minuten; consensus ontbreekt; ALFRED-datums met kleine ruis (revisiedatums). Betaalde consensus/M1-data zou deze test pas verfijnen, niet redden.
