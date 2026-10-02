@@ -2256,3 +2256,38 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **TRIAL_COUNT blijft 464**. Geen TRIALS-append.
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG (≥2 NEW_FAMILY from Strateeg/S2). Cadans :15/:45. Quiet — no Sandro/CTO ping.
+
+
+## Cyclus 00:00 CEST (2026-10-03) — N124 YIELD_CURVE_2S10S + N125 DEFENSIVE_CYCLICAL FAIL_T (TRIAL 464→466)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `b236459` (S2 `13fe10c` cycle_2346): `PREREG_FTMO_N124_YIELD_CURVE_2S10S.md` + `PREREG_FTMO_N125_DEFENSIVE_CYCLICAL.md` + VOORSTEL + lane_b SOURCE + `results/R2/n124_n125_prescreen/` (D-092.1 PASS N124 N=240 mean +8.97 / N125 N=478 mean +5.48 ≥ 2.34). Scripts frozen vóór run. Book starts at TRIAL **464**.
+
+### N124 YIELD_CURVE_2S10S (NEW_FAMILY AS)
+
+**Config freeze:** 10Y−3M slope z60 / thr ±1,5 / flatten_fade → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress **3,51**; swap=0; **geen** TLT/TIP/IEF CFD leg (D-100).
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 240 | **+8,9715 bp** | +8,1915 bp | 1,72 / 1,82 | cost PASS (≥2,34); stress PASS (≥3,51) |
+| Test 2024 | 100 | +2,8901 bp | +2,1101 bp | 0,31 / 0,33 | formal t <2 |
+
+**Year-split train mean bruto:** 2021 **−2,31** (N=26) / 2022 **+8,57** (N=115) / 2023 **+12,41** (N=99). **Stress/year risk:** 2021 negatief (PREREG flag). Long/short train 132/108. Median train +9,89.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 464→465**. Dead += `N124_YIELD_CURVE_2S10S`. Geen retune / geen klonen (geen thr-grid, geen TLT/TIP rewrite, geen overnight). Board: `results/R2/n124_yield_curve_2s10s/n124_gate_board.json`.
+
+### N125 DEFENSIVE_CYCLICAL (NEW_FAMILY AT)
+
+**Config freeze:** XLU/XLI z40 / thr ±0,5 / defensive_high → **US500cash twin** session-flat **15:30→21:00 CET** (S2 FLAG: **not** US100 overnight); RT 0,78 bp; gate **2,34**; stress **3,51**; swap=0; **geen** XLU/XLI CFD leg.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 478 | **+5,4790 bp** | +4,6990 bp | 1,22 / 1,29 | cost PASS (≥2,34); stress PASS (≥3,51) |
+| Test 2024 | 191 | −2,3203 bp | −3,1003 bp | −0,81 / −0,77 | formal t <2 |
+
+**Year-split train mean bruto:** 2021 **+0,90** (N=67) / 2022 **+8,84** (N=201) / 2023 **+3,72** (N=210). Long/short train 249/229. Median train +4,81.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 465→466**. Dead += `N125_DEFENSIVE_CYCLICAL`. Geen retune / geen klonen (geen thr-grid, geen US100 overnight rewrite, geen SECTOR_DISP clone). Board: `results/R2/n125_defensive_cyclical/n125_gate_board.json`.
+
+**Book end:** TRIAL_COUNT **466**. Quiet.
