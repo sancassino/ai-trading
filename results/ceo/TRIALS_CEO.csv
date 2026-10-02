@@ -8,3 +8,4 @@ CEO-T6;2026-10-02;ORB regime-splits (4 features x2);null (2022-gedreven, omkerin
 CEO-T7;2026-10-02;ORB tijdstop 2u/4u;slechter
 CEO-T8;2026-10-02;ORB extra indices EU50/FRA40/JP225 (PREREG_ORB_INDEX_EXT);FAIL t=1.09 @1.5bp; 25-26 negatief
 CEO-T9;2026-10-02;Turn-of-month 7 indices 1990-2024 (PREREG_TOM);FAIL: train netto +22.7bp t 1.6; test (2016-24) bruto +7.2bp netto -3.8bp t -0.14; effect weggevallen + swap 10bp
+CEO-T10;2026-10-02;Pairs mean-reversion 4 index-paren (PREREG_PAIRS);FAIL: test netto negatief alle paren, bruto <=+3bp

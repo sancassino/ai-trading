@@ -21,3 +21,6 @@ corr(surprise,reactie) −0,2; vervolgbeweging na eerste uur: |t| ≤ 1,4 voor U
 
 ## Turn-of-month (PREREG_TOM, 7 indices, 1990–2024): FAIL
 Train 1990–2015 bruto +33,7bp/trade (5 nachten), netto (11bp: spread+swap) +22,7bp, gem. t 1,6; test 2016–2024 bruto +7,2bp, netto −3,8bp, t −0,1; DAX/FTSE/N225/STOXX negatief. Klassiek verdwenen effect; swap (≈10bp/5 nachten long) eet de rest. Gesloten.
+
+## Index-pairs mean-reversion (PREREG_PAIRS, NDX–SPX, DAX–STOXX, DJI–SPX, FTSE–DAX, 1995–2024): FAIL
+Test 2016–24 netto (5bp/dag kosten): −2,4/−4,5/−2,2/−12,6bp (h=1); bruto ≤ +3bp. Train alleen NDX–SPX licht positief (+8bp, t 1,6), test weg. Spreads te klein t.o.v. kosten.
