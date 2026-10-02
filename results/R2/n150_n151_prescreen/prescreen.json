@@ -1,0 +1,413 @@
+{
+  "N150": {
+    "id": "N150",
+    "instrument": "XAGUSD+US30cash",
+    "n": 225,
+    "mean_bruto_bp": 10.0457,
+    "gate_bp": 16.56,
+    "verdict": "FAIL_CLONE",
+    "notes": "XAGUSD_US30_METAL_INDUSTRIAL_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(5.07+0.45); swap 0; NEW_FAMILY BS | CLONE of SILVER_GOLD_N113 \u2014 no PREREG",
+    "median_bruto_bp": 3.5882,
+    "stress_gate_bp": 24.84,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.5111,
+    "n_long_basket": 131,
+    "n_short_basket": 94,
+    "years": {
+      "2021": 13.1446,
+      "2022": -7.5645,
+      "2023": 29.2181
+    },
+    "meta": {
+      "n_signal_days": 225,
+      "n_skip_missing_bar": 0,
+      "n_ratio_days": 773,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "train_days": {
+        "XAGUSD": 774,
+        "US30cash": 775
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "XAGUSD": 5.07,
+      "US30cash": 0.45
+    },
+    "rt_in_costs": true,
+    "clone_hits": [
+      "SILVER_GOLD_N113"
+    ]
+  },
+  "N151": {
+    "id": "N151",
+    "instrument": "EURJPY+USDCHF",
+    "n": 221,
+    "mean_bruto_bp": -0.5972,
+    "gate_bp": 6.33,
+    "verdict": "FAIL",
+    "notes": "EURJPY_USDCHF_FUNDING_XS z40/\u00b11.5 both legs 15:30\u219221:00; COSTS gate 3*(1.1+1.01); swap 0; NEW_FAMILY BT",
+    "median_bruto_bp": -1.4905,
+    "stress_gate_bp": 9.495,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4842,
+    "n_long_basket": 77,
+    "n_short_basket": 144,
+    "years": {
+      "2021": 1.207,
+      "2022": 4.685,
+      "2023": -5.4296
+    },
+    "meta": {
+      "n_signal_days": 221,
+      "n_skip_missing_bar": 0,
+      "n_ratio_days": 778,
+      "ratio_first": "2021-01-04",
+      "ratio_last": "2023-12-29",
+      "train_days": {
+        "EURJPY": 778,
+        "USDCHF": 778
+      },
+      "rt_in_costs": true,
+      "swap_bp": 0,
+      "session": "15:30-21:00 CET cheapest side (overnight swap excluded)"
+    },
+    "costs_rt": {
+      "EURJPY": 1.1,
+      "USDCHF": 1.01
+    },
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N150_clones": {
+    "SILVER_GOLD_N113": {
+      "peer": "SILVER_GOLD_N113",
+      "z_corr_train": 0.731,
+      "sign_agree_both_active": 0.9941,
+      "both_active_over_cand": 0.7556,
+      "n_cand_active": 225,
+      "n_both_active": 170,
+      "clone": true,
+      "binding": true
+    },
+    "XAG_UKOIL_N141": {
+      "peer": "XAG_UKOIL_N141",
+      "z_corr_train": 0.4245,
+      "sign_agree_both_active": 0.8929,
+      "both_active_over_cand": 0.3733,
+      "n_cand_active": 225,
+      "n_both_active": 84,
+      "clone": false,
+      "binding": true
+    },
+    "US30_US500_N142": {
+      "peer": "US30_US500_N142",
+      "z_corr_train": 0.1691,
+      "sign_agree_both_active": 0.5942,
+      "both_active_over_cand": 0.3067,
+      "n_cand_active": 225,
+      "n_both_active": 69,
+      "clone": false,
+      "binding": true
+    },
+    "CPER_N117": {
+      "peer": "CPER_N117",
+      "z_corr_train": 0.2887,
+      "sign_agree_both_active": 0.8833,
+      "both_active_over_cand": 0.2667,
+      "n_cand_active": 225,
+      "n_both_active": 60,
+      "clone": false,
+      "binding": true
+    },
+    "CuAu_COPPER_GOLD": {
+      "peer": "CuAu_COPPER_GOLD",
+      "z_corr_train": -0.1509,
+      "sign_agree_both_active": 0.4444,
+      "both_active_over_cand": 0.28,
+      "n_cand_active": 225,
+      "n_both_active": 63,
+      "clone": false,
+      "binding": true
+    },
+    "XAU_XAG_z40": {
+      "peer": "XAU_XAG_z40",
+      "z_corr_train": -0.7304,
+      "sign_agree_both_active": 0.008,
+      "both_active_over_cand": 0.5556,
+      "n_cand_active": 225,
+      "n_both_active": 125,
+      "clone": false,
+      "binding": true
+    },
+    "USDJPY_US100_N148": {
+      "peer": "USDJPY_US100_N148",
+      "z_corr_train": 0.149,
+      "sign_agree_both_active": 0.6712,
+      "both_active_over_cand": 0.3244,
+      "n_cand_active": 225,
+      "n_both_active": 73,
+      "clone": false,
+      "binding": true
+    },
+    "N75_XAU_XAG_onesided": {
+      "peer": "N75_XAU_XAG_onesided",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.0,
+      "both_active_over_cand": 0.2533,
+      "n_cand_active": 225,
+      "n_both_active": 57,
+      "clone": false,
+      "binding": true
+    },
+    "EURJPY_USDCHF_N151": {
+      "peer": "EURJPY_USDCHF_N151",
+      "z_corr_train": 0.2914,
+      "sign_agree_both_active": 0.7778,
+      "both_active_over_cand": 0.32,
+      "n_cand_active": 225,
+      "n_both_active": 72,
+      "clone": false,
+      "binding": true
+    },
+    "N133_GLD_vs_US30_leg": {
+      "peer": "N133_GLD_vs_US30_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.1258,
+      "both_active_over_cand": 0.6711,
+      "n_cand_active": 225,
+      "n_both_active": 151,
+      "clone": false,
+      "binding": true
+    },
+    "N141_sign": {
+      "peer": "N141_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.8929,
+      "both_active_over_cand": 0.3733,
+      "n_cand_active": 225,
+      "n_both_active": 84,
+      "clone": false,
+      "binding": true
+    },
+    "N142_sign": {
+      "peer": "N142_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5942,
+      "both_active_over_cand": 0.3067,
+      "n_cand_active": 225,
+      "n_both_active": 69,
+      "clone": false,
+      "binding": true
+    },
+    "N75_vs_XAG_leg": {
+      "peer": "N75_vs_XAG_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.0,
+      "both_active_over_cand": 0.2533,
+      "n_cand_active": 225,
+      "n_both_active": 57,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "N151_clones": {
+    "USDCHF_USDJPY_inline": {
+      "peer": "USDCHF_USDJPY_inline",
+      "z_corr_train": -0.6643,
+      "sign_agree_both_active": 0.0165,
+      "both_active_over_cand": 0.5475,
+      "n_cand_active": 221,
+      "n_both_active": 121,
+      "clone": false,
+      "binding": true
+    },
+    "USDJPY_US100_N148": {
+      "peer": "USDJPY_US100_N148",
+      "z_corr_train": -0.2118,
+      "sign_agree_both_active": 0.2414,
+      "both_active_over_cand": 0.3937,
+      "n_cand_active": 221,
+      "n_both_active": 87,
+      "clone": false,
+      "binding": true
+    },
+    "EUR_GER40_N149": {
+      "peer": "EUR_GER40_N149",
+      "z_corr_train": 0.0427,
+      "sign_agree_both_active": 0.6842,
+      "both_active_over_cand": 0.2579,
+      "n_cand_active": 221,
+      "n_both_active": 57,
+      "clone": false,
+      "binding": true
+    },
+    "XAG_US30_N150": {
+      "peer": "XAG_US30_N150",
+      "z_corr_train": 0.2924,
+      "sign_agree_both_active": 0.7808,
+      "both_active_over_cand": 0.3303,
+      "n_cand_active": 221,
+      "n_both_active": 73,
+      "clone": false,
+      "binding": true
+    },
+    "inline_USDCHF_USDJPY_sign": {
+      "peer": "inline_USDCHF_USDJPY_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.0165,
+      "both_active_over_cand": 0.5475,
+      "n_cand_active": 221,
+      "n_both_active": 121,
+      "clone": false,
+      "binding": true
+    },
+    "N28_EURJPY_Lon_vs_EURJPY_leg": {
+      "peer": "N28_EURJPY_Lon_vs_EURJPY_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3636,
+      "both_active_over_cand": 0.2489,
+      "n_cand_active": 221,
+      "n_both_active": 55,
+      "clone": false,
+      "binding": true
+    },
+    "EURJPY_L60_vs_EURJPY_leg": {
+      "peer": "EURJPY_L60_vs_EURJPY_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2197,
+      "both_active_over_cand": 0.7828,
+      "n_cand_active": 221,
+      "n_both_active": 173,
+      "clone": false,
+      "binding": true
+    },
+    "USDCHF_L60_vs_USDCHF_leg": {
+      "peer": "USDCHF_L60_vs_USDCHF_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5327,
+      "both_active_over_cand": 0.4842,
+      "n_cand_active": 221,
+      "n_both_active": 107,
+      "clone": false,
+      "binding": true
+    },
+    "USDJPY_L60_vs_EURJPY_leg": {
+      "peer": "USDJPY_L60_vs_EURJPY_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3105,
+      "both_active_over_cand": 0.8597,
+      "n_cand_active": 221,
+      "n_both_active": 190,
+      "clone": false,
+      "binding": true
+    },
+    "USDCAD_L60_vs_basket": {
+      "peer": "USDCAD_L60_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4065,
+      "both_active_over_cand": 0.5566,
+      "n_cand_active": 221,
+      "n_both_active": 123,
+      "clone": false,
+      "binding": true
+    },
+    "EURNZD_LO_5d_vs_EURJPY_leg": {
+      "peer": "EURNZD_LO_5d_vs_EURJPY_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3051,
+      "both_active_over_cand": 0.5339,
+      "n_cand_active": 221,
+      "n_both_active": 118,
+      "clone": false,
+      "binding": true
+    },
+    "AUDCAD_LO_5d_vs_basket": {
+      "peer": "AUDCAD_LO_5d_vs_basket",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2333,
+      "both_active_over_cand": 0.4072,
+      "n_cand_active": 221,
+      "n_both_active": 90,
+      "clone": false,
+      "binding": true
+    },
+    "N148_sign": {
+      "peer": "N148_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.2414,
+      "both_active_over_cand": 0.3937,
+      "n_cand_active": 221,
+      "n_both_active": 87,
+      "clone": false,
+      "binding": true
+    },
+    "N150_sign": {
+      "peer": "N150_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.7778,
+      "both_active_over_cand": 0.3258,
+      "n_cand_active": 221,
+      "n_both_active": 72,
+      "clone": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N150": 16.56,
+    "N151": 6.33
+  },
+  "costs_rt": {
+    "XAGUSD": 5.07,
+    "US30cash": 0.45,
+    "EURJPY": 1.1,
+    "USDCHF": 1.01
+  },
+  "clone_rule": {
+    "abs_z_corr_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "session": "15:30-21:00 CET",
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "no_inline_replacement": true,
+  "gate_source": "COSTS_FTMO.csv roundtrip_intraday_bp; not a session median",
+  "loaded_days_incl_warmup": {
+    "XAGUSD": 774,
+    "US30cash": 775,
+    "EURJPY": 778,
+    "USDCHF": 778,
+    "XAUUSD": 774,
+    "UKOILcash": 773,
+    "US500cash": 775,
+    "USDJPY": 778,
+    "US100cash": 775,
+    "EURUSD": 778,
+    "GER40cash": 768,
+    "EURNZD": 778,
+    "AUDCAD": 778,
+    "USDCAD": 778
+  },
+  "train_days": {
+    "XAGUSD": 774,
+    "US30cash": 775,
+    "EURJPY": 778,
+    "USDCHF": 778,
+    "XAUUSD": 774,
+    "UKOILcash": 773,
+    "US500cash": 775,
+    "USDJPY": 778,
+    "US100cash": 775,
+    "EURUSD": 778,
+    "GER40cash": 768,
+    "EURNZD": 778,
+    "AUDCAD": 778,
+    "USDCAD": 778
+  }
+}

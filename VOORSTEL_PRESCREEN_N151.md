@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N151 — EURJPY_USDCHF_FUNDING_XS session-flat (NEW_FAMILY BT)
 
-**Status:** **OPEN** — D-092.1 refill after N148 FAIL / N149 FAIL (filed 2026-10-03 ~01:23 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n150_n151` (N=221, mean **−0,60 < 6,33**; med −1,49; years +1,21 / +4,69 / −5,43; L/S 77/144; 0 missing bars). Not the inline USDCHF/USDJPY book (z **−0,66**, agree **0,02**, cover 0,55). Not L60 (EURJPY agree 0,22 cover 0,78; USDCHF agree 0,53 cover 0,48), not EURNZD-LO (agree 0,31 cover 0,53), not AUDCAD-LO (agree 0,23 cover 0,41), not N28 (agree 0,36 cover 0,25). Screened 2026-10-03 ~01:29 CEST. NEW_FAMILY BT dead; no EURJPY-only, no USDCHF-only, no EURJPY/CHF twin.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BT** (yen-cross vs Swiss **funding basis**, two G10 CFDs, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an FX/index twin of N148 or N149. Not the dead inline USDCHF/USDJPY pair. Not L60 FX-med. Not a single-name EURJPY or USDCHF fade.  
 **Signal:** M5 day-close ratio **EURJPY / USDCHF**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** the euro-yen cross and the dollar-swiss dislocate when one funding pair has outrun the other. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha.

@@ -1,5 +1,73 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-03 01:29 Europe/Amsterdam — N150/N151 D-092.1 FAIL; OPEN N152/N153
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `aca4d2f`).  
+**Trigger:** Formal OPEN N150 XAGUSD_US30_METAL_INDUSTRIAL_XS / N151 EURJPY_USDCHF_FUNDING_XS. Gates are COSTS round-trips. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat 15:30→21:00 is the cheap side, so swap in the gate is **0**. Not a session-median spread.
+
+| Book | legs | RT | gate |
+|------|------|---:|-----:|
+| N150 | XAGUSD 5,07 + US30cash 0,45 | 5,52 | **16,56** |
+| N151 | EURJPY 1,10 + USDCHF 1,01 | 2,11 | **6,33** |
+
+### D-092.1 `n150_n151` (train 2021–2023; session-flat 15:30→21:00; swap 0; both legs)
+| ID | Family | N | mean | med | years | Verdict |
+|----|--------|--:|-----:|----:|-------|---------|
+| N150 | XAGUSD_US30_METAL_INDUSTRIAL_XS BS | **225** | **+10,05** | +3,59 | +13,14 / −7,56 / +29,22 | **FAIL_CLONE** vs gate **16,56** (L/S 131/94; 225 signals, 0 missing bars) |
+| N151 | EURJPY_USDCHF_FUNDING_XS BT | **221** | **−0,60** | −1,49 | +1,21 / +4,69 / −5,43 | **FAIL** vs gate **6,33** (L/S 77/144; 221 signals, 0 missing bars) |
+
+Clone bar unchanged (|z|≥0,90 or agree≥0,85 and cover≥0,70).  
+N150 vs **N113 SLV/GLD** z40 thr±1,0: z **0,73**, agree **0,99**, cover **0,76** → **FAIL_CLONE** (same silver-rich days; the Dow leg does not make a new book). vs N141 XAG/UKOIL: z **0,42**, agree 0,89, cover **0,37**. vs N142 US30/US500: z **0,17**, agree 0,59, cover 0,31. vs CPER: z 0,29, agree 0,88, cover 0,27. vs CuAu: z **−0,15**, agree 0,44, cover 0,28. vs XAU/XAG: z **−0,73**, agree 0,01, cover 0,56. vs N133 US30-leg agree 0,13, cover 0,67. Mean **+10,05 < 16,56** as well — not a soft-pass and not a near-miss that gets rewritten. No inline silver/index substitute.  
+N151 vs inline **USDCHF/USDJPY**: z **−0,66**, agree **0,02**, cover 0,55 — not that twin. vs N148 z **−0,21**, agree 0,24, cover 0,39. vs N149 z **0,04**, agree 0,68, cover 0,26. vs N28 EURJPY London impulse agree **0,36**, cover 0,25. vs EURJPY L60 agree **0,22**, cover 0,78. vs USDCHF L60 agree **0,53**, cover 0,48. vs USDJPY L60 agree 0,31, cover 0,86. vs EURNZD-LO agree **0,31**, cover 0,53. vs AUDCAD-LO agree **0,23**, cover 0,41. vs N150 z 0,29, cover 0,33. Not a clone. Mean **−0,60 < 6,33**.
+
+No soft-pass. No PREREG. No inline replacement screen. TRIAL stays **470**. No XAG-only / US30-only. No EURJPY-only / USDCHF-only. No silver/index twin. No EURJPY/CHF twin. No L60, EURNZD-LO, or AUDCAD-LO rewrite.
+
+### Geleverd
+- N150 → **STOP FAIL_CLONE**; N151 → **STOP FAIL** (D-092.1)
+- OPEN **N152 GBPUSD_NZDUSD_CABLE_KIWI_XS** (BU, gate **7,65** = 3×(0,70+1,85), both in COSTS) + **N153 EURUSD_USDCAD_ATLANTIC_XS** (BV, gate **4,29** = 3×(0,63+0,80), both in COSTS) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+## 2026-10-03 01:29 Europe/Amsterdam — N150/N151 D-092.1 FAIL; OPEN N152/N153
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `aca4d2f`).  
+**Trigger:** Formal OPEN N150 XAGUSD_US30_METAL_INDUSTRIAL_XS / N151 EURJPY_USDCHF_FUNDING_XS. Gates are COSTS round-trips. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat 15:30→21:00 is the cheap side, so swap in the gate is **0**. Not a session-median spread.
+
+| Book | legs | RT | gate |
+|------|------|---:|-----:|
+| N150 | XAGUSD 5,07 + US30cash 0,45 | 5,52 | **16,56** |
+| N151 | EURJPY 1,10 + USDCHF 1,01 | 2,11 | **6,33** |
+
+### D-092.1 `n150_n151` (train 2021–2023; session-flat 15:30→21:00; swap 0; both legs)
+| ID | Family | N | mean | med | years | Verdict |
+|----|--------|--:|-----:|----:|-------|---------|
+| N150 | XAGUSD_US30_METAL_INDUSTRIAL_XS BS | **225** | **+10,05** | +3,59 | +13,14 / −7,56 / +29,22 | **FAIL_CLONE** vs gate **16,56** (L/S 131/94; 225 signals, 0 missing bars) |
+| N151 | EURJPY_USDCHF_FUNDING_XS BT | **221** | **−0,60** | −1,49 | +1,21 / +4,69 / −5,43 | **FAIL** vs gate **6,33** (L/S 77/144; 221 signals, 0 missing bars) |
+
+Clone bar unchanged (|z|≥0,90 or agree≥0,85 and cover≥0,70).  
+N150 vs **N113 SLV/GLD** z40 thr±1,0: z **0,73**, agree **0,99**, cover **0,76** → **FAIL_CLONE** (same silver-rich days; the Dow leg does not make a new book). vs N141 XAG/UKOIL: z **0,42**, agree 0,89, cover **0,37**. vs N142 US30/US500: z **0,17**, agree 0,59, cover 0,31. vs CPER: z 0,29, agree 0,88, cover 0,27. vs CuAu: z **−0,15**, agree 0,44, cover 0,28. vs XAU/XAG: z **−0,73**, agree 0,01, cover 0,56. vs N133 US30-leg agree 0,13, cover 0,67. Mean **+10,05 < 16,56** as well — not a soft-pass and not a near-miss that gets rewritten. No inline silver/index substitute.  
+N151 vs inline **USDCHF/USDJPY**: z **−0,66**, agree **0,02**, cover 0,55 — not that twin. vs N148 z **−0,21**, agree 0,24, cover 0,39. vs N149 z **0,04**, agree 0,68, cover 0,26. vs N28 EURJPY London impulse agree **0,36**, cover 0,25. vs EURJPY L60 agree **0,22**, cover 0,78. vs USDCHF L60 agree **0,53**, cover 0,48. vs USDJPY L60 agree 0,31, cover 0,86. vs EURNZD-LO agree **0,31**, cover 0,53. vs AUDCAD-LO agree **0,23**, cover 0,41. vs N150 z 0,29, cover 0,33. Not a clone. Mean **−0,60 < 6,33**.
+
+No soft-pass. No PREREG. No inline replacement screen. TRIAL stays **470**. No XAG-only / US30-only. No EURJPY-only / USDCHF-only. No silver/index twin. No EURJPY/CHF twin. No L60, EURNZD-LO, or AUDCAD-LO rewrite.
+
+### Geleverd
+- N150 → **STOP FAIL_CLONE**; N151 → **STOP FAIL** (D-092.1)
+- OPEN **N152 GBPUSD_NZDUSD_CABLE_KIWI_XS** (BU, gate **7,65** = 3×(0,70+1,85), both in COSTS) + **N153 EURUSD_USDCAD_ATLANTIC_XS** (BV, gate **4,29** = 3×(0,63+0,80), both in COSTS) — not screened
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
 
 ## 2026-10-03 01:23 Europe/Amsterdam — N148/N149 D-092.1 FAIL; OPEN N150/N151
 

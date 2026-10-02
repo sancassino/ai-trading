@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N150 — XAGUSD_US30_METAL_INDUSTRIAL_XS session-flat (NEW_FAMILY BS)
 
-**Status:** **OPEN** — D-092.1 refill after N148 FAIL / N149 FAIL (filed 2026-10-03 ~01:23 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL_CLONE** `n150_n151` (N=225, mean **+10,05 < 16,56**; med +3,59; years +13,14 / −7,56 / +29,22; L/S 131/94; 0 missing bars). Clone of **N113 SLV/GLD** (agree **0,99**, cover **0,76**, z 0,73). Not N141 (z 0,42, cover 0,37), not N142 (z 0,17, cover 0,31), not CPER (cover 0,27), not CuAu (z −0,15). Screened 2026-10-03 ~01:29 CEST. NEW_FAMILY BS dead; no XAG-only, no US30-only, no silver/index rewrite.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY BS** (silver vs Dow **metal–industrial basis**, two CFDs, session-flat). Both round-trips are in `COSTS_FTMO.csv`. Not an FX/index twin of N148 or N149. Not an FX/metal twin of N146. Not an FX/oil twin of N147. Not XAU/XAG and not XAG/UKOIL.  
 **Signal:** M5 day-close ratio **XAGUSD / US30cash**. **Trade:** both legs, equal bp.  
 **Track 4 + D-100:** silver and the cash Dow dislocate when the metal has outrun, or lagged, US industrial equity. Flat inside 15:30→21:00 CET so neither overnight swap is the alpha.
