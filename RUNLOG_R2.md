@@ -1724,3 +1724,264 @@ Year-split train bruto: 2021 **+25.26** / 2022 **−0.46** / 2023 **−3.63**. L
 **Geen nieuwe PREREG.** N82/N83 zijn pre-screen VOORSTELs (D-092.1 pending; Strateeg beslist). Geen gates gerund. TRIAL_COUNT **456** onveranderd.
 
 **U2 next:** IDLE wacht N82/N83 PASS→PREREG of NEW_FAMILY non-clone uit Strateeg/CTO/Manager.
+
+## Cyclus 14:26 CEST (2026-10-01) — uurcyclus sync v82 (TRIAL 456; IDLE)
+
+**Branch:** `claude/uitvoerder2-r` — FF tot `e16f4d4` (NEXT_STEPS **v82**). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (Manager 13:38 CEST): U2 IDLE — C-030 DELIVERED (0 trials; N82/N84/N85/N86 DIAG_FAIL; N83 UNDERPOWERED); Dead += N82/N84–N86; UNDERPOWERED += N83. Formal OPEN queue **leeg**. HOLD tot next PASS→PREREG (Strateeg ≥2 NEW_FAMILY nodig). TRIAL_COUNT **456** onveranderd.
+- CTO `6174bca` C-030: N80 absorb + N82–N86 Lane-B diag; Bar UKOIL OVN-gap clones. Kill circuit: FAIL_COST_GATE telt niet in streak.
+- Strateeg Faraday `6c9c1e5`: N84–N86 NEW_FAMILY I/J/K filed → C-030 DIAG_FAIL. Drop N82–N86 PREREG-pad. File ≥2 replacements.
+
+**Geen nieuwe PREREG.** N82–N86 volledig afgesloten (C-030). Geen gates gerund. TRIAL_COUNT **456** onveranderd.
+
+**U2 next:** IDLE wacht Strateeg ≥2 NEW_FAMILY non-clone → PASS→PREREG. Skip N75–N86/CORN/VIX_TERM/L60/UKOIL-OVN.
+
+## Cyclus 15:25 CEST (2026-10-01) — N87 US30cash gap-fade FAIL_T (TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r` — tip pre-cycle `f37bf04` (main merge U1 COSTS 166 symb). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (no v83 issued): U2 IDLE — wacht PASS→PREREG. Formal OPEN queue was empty.
+- CEO `42821c9` (branch `claude/ftmo-trading-strategy-98mplz`) ~15:50 CEST: **PREREG_FTMO_N87** vastgelegd (US30cash opening-gap fade |gap|>30bp intradag-flat; RT 0.45 bp; gate 1.35 bp; train 2021–2023, test 2024). Pre-screen N87/N88/N89 in `results/ceo/prescreen_n87_n89.md`: N87 gate-PASS (N=158, mean=+8.73 bp), N88/N89 FAIL.
+- CEO_LOG `8a0552f`: N87-N89 kostenpoort bevestigd. SUPERVISOR_LOG `3911eed`: gates bevestigd; TRIAL 456 stabiel.
+- PREREG-vóór-resultaat voldaan: CEO commit `42821c9` is vóór deze gate-run.
+
+### Gate N87 — US30cash opening-gap fade
+
+**Regel:** prev_close = laatste M5-bar close ≤ 23:00 servertime vorige dag; open = eerste M5-bar open ≥ 08:00 servertime vandaag; gap_bp = 1e4×(open−prev_close)/prev_close; |gap_bp|>30 → fade (SHORT als gap↑, LONG als gap↓); exit = laatste M5-bar close ≤ 22:55 servertime; geen stop; max 1 trade/dag; geen swap (intradag-flat). Script: `scripts/n87_us30_gap_fade_gate.py`.
+
+| Venster | N | mean bruto (bp) | gate (1.35) | stress (2.03) | t NW-L5 (netto) | Uitkomst |
+|---|---:|---:|---:|---:|---:|---|
+| **Train** 2021–2023 | 162 | **+11.7745** | **PASS** | **PASS** | 1.6322 | t < 2.0 |
+| **Test** 2024 | 27 | **−17.7059** | FAIL | FAIL | −1.3049 | Negatief |
+
+**Uitkomst: FAIL_T** — cost-gate PASS (train mean +11.77 ≥ 1.35), maar:
+- t_NW train 1.6322 < 2.0 (formele drempel niet gehaald)
+- Test 2024 N=27 sterk negatief (mean −17.71 bp, t=−1.30); gap-gedrag reversed in 2024
+
+counts_as_trial = **true**. **TRIAL_COUNT = 457**. Dead += N87_US30_GAP_FADE. Geen klonen (geen drempel-/tijd-variatie per PREREG §3). Reserve 2025 onaangeraakt.
+
+**U2 next:** IDLE wacht Strateeg ≥2 NEW_FAMILY non-clone → PASS→PREREG. N88/N89 zijn FAIL in CEO pre-screen (N88 N<150 + negatief; N89 mean +1.06 < gate). Kill circuit: streak 5× cost-PASS→FAIL_T telt mee (N87 is een bijdrage).
+
+## Cyclus 16:26 CEST (2026-10-01) — uurcyclus sync v82 (N87 FAIL_T delivered; TRIAL 457; IDLE)
+
+**Branch:** `claude/uitvoerder2-r` — tip `3a9108e` (N87 FAIL_T; TRIAL **457**). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (no v83): U2 IDLE — wacht PASS→PREREG. Formal OPEN queue was empty t.t.v. v82.
+- CEO `078ac8b` ~15:58 CEST: bevestigt N87 FAIL_T onafhankelijk (train N=158 t=1,08; test 2024 −19 bp; "verzoekt U2: TRIAL_COUNT +1 → 457" → **reeds gedaan** in `3a9108e`).
+- Strateeg `0dec90f` ~16:20 CEST: pipeline **N88/N89/N90 OPEN** (geen PREREG). N90 = GBPJPY long-only 5d carry+momentum; NEW_FAMILY O; RT=0,72 bp; gate=2,16 bp.
+- CEO_LOG `e11b27c` ~16:45 CEST: N87 FAIL_T formeel bevestigd; N90 open; N88/N89 queued; U2 IDLE; TRIAL 457 stabiel.
+- SUPERVISOR_LOG `2c0bcf9`: N90 GBPJPY nieuw; TRIAL 457 stabiel.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** N88/N89 waren FAIL in CEO pre-screen (N88 N<150 + negatief; N89 mean+1,06 << gate 2,16). N90 is VOORSTEL-fase, geen formele PREREG beschikbaar. NEXT_STEPS v82 blijft actief — Manager nog geen v83.
+
+**TRIAL_COUNT blijft 457** (N87 FAIL_T = +1 al verwerkt). Geen TRIALS-append.
+
+**U2 next:** IDLE wacht Strateeg/CTO Lane-B PASS→PREREG (N88 kans laag; N89 kans laag; N90 nieuw — wacht op pre-screen + PREREG filing). Of Manager NEXT_STEPS v83 met nieuwe directief.
+
+## Cyclus 17:25 CEST (2026-10-01) — D-101/D-102 absorb; RISK-REACTIVE framework; IDLE (TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r` — tip `57d3b86` (TRIAL **457**). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (no v83 — Manager/Grok pauzeert ~3 dagen per CEO-notitie D-101).
+- **D-101** (CEO `41e0c44` ~17:35 CEST): doel herijkt — dubbele lat voor FTMO-kandidaten:
+  - (A) bewezen alfa-sleeve: t ≥ 2,0 in train EN test (ongewijzigd)
+  - (B) literatuur-gedragen premie (equity-beta, trend, carry): `ftmo_ev()` over meerdere periodes (2000+/2011+/2015+) + intradag-DD-correctie → net EV > 0 EN overleving ≥ 0,5 + forward-papier; label altijd "beta, geen edge"
+- **D-102** (CEO `824213f` ~18:15 CEST): programma "RISK-REACTIVE" — kern = F2-ORB (CTO C-018; SR ≈ 1,06 train, schaal 4,2 → EV ≈ €680/mnd, overleving 0,43) als D-101-lat-B-kandidaat; CEO bouwt intradag-DD-model uit M5; uitbreiding pas na positieve EV; FTMO-regel-verificatie niet-blokkerend; geen agent FTMO-signup.
+- CEO beta-referentie `results/ceo/beta_ev.md` + `results/ceo/option_value.md`: long-only beta geeft €60–240/mnd (17–50% overleving); optiewaarde = positieve EV bij ~20–30%/jr vol, zero-edge (close-only onderschat breach).
+- Strateeg `e2a1e0c` ~17:20 CEST: pipeline **N88/N89/N90 OPEN** (geen PREREG). N88: N<150+negatief pre-screen; N89: mean+1,06<<gate. N90 GBPJPY nieuw.
+- CEO_LOG `ef39b29` ~19:15 CEST: pipeline N88-N90 open; TRIAL 457; geen CEO-beslissing.
+- BESLUITEN tip: D-101/D-102 zijn nu de hoogste actieve CEO-besluiten (bovenop D-083…D-100).
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** D-102 legt CEO als bouwer van de intradag-DD-module vast; U2 wacht op CEO-PREREG voor F2-ORB of nieuwe Strateeg PREREG voor N88/N89/N90. Pipeline:
+- N88 EURGBP: pre-screen FAIL (N=107<150, mean −5,76 bp < gate 3,12) → PREREG onwaarschijnlijk
+- N89 GER40: pre-screen FAIL (mean +1,06 << gate 2,16) → PREREG onwaarschijnlijk
+- N90 GBPJPY carry+mom: VOORSTEL-fase, geen pre-screen resultaat nog
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE. Wacht CEO-PREREG voor F2-ORB/intradag-DD OF Strateeg PREREG voor N90 (of nieuw). Manager NEXT_STEPS v83 verwacht na Grok-pauze (~04-10).
+
+## Cyclus 18:25 CEST (2026-10-01) — uurcyclus sync v82 (IDLE; TRIAL 457; news pre-screen)
+
+**Branch:** `claude/uitvoerder2-r` — tip `d17573c` (TRIAL **457**). Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (no v83 — Manager Grok op pauze).
+- CEO `fc46d7e` ~17:57 CEST: **nieuws-reactie pre-screen** (NFP/CPI/FOMC, train 2021–23, 4 symbolen, 30/60 min, cont/fade; `results/ceo/news_prescreen.md`). Geen enkele combo haalt gate+t≥2.0; US100/US500 60min fade (+13,8/+8,1 bp) haalt gate maar t≈1,2–1,5 (ruis). Geen PREREG. CEO advies: meer events (ECB/BoE/EIA/GDP) of langere historie ≥2015.
+- Strateeg `7690342` ~18:20 CEST: pipeline **N90/N91/N92 OPEN**. N91/N92 = NEW_FAMILY P/Q (geen details, geen pre-screen). N88/N89 bevestigd pre-FAIL.
+- CEO_LOG `a3bd3eb` ~20:15 CEST: N88/N89 pre-FAIL; N91/N92 nieuwe familie open; TRIAL 457.
+- SUPERVISOR_LOG `b20ff1d`: D-101/D-102 koerswijziging; N91/N92 nieuw.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Nieuws-pre-screen gate PASS maar t<2.0 → CEO gaat door met groter events-pool/langere periode. N90/N91/N92 in VOORSTEL-fase; geen pre-screen resultaten voor N91/N92 nog.
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE wacht CEO-PREREG voor nieuws-reactie (na groter events-pool) OF Strateeg PREREG voor N90/N91/N92. Kill circuit teller: N87 cost-PASS→FAIL_T bijdrage.
+
+## Cyclus 19:25 CEST (2026-10-01) — uurcyclus sync v82 (IDLE; TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (geen v83 — Manager Grok op pauze tot ~04-10).
+- CEO_LOG `6123553` ~19:27 CEST: **geen nieuws**. Grok-pauze lopende; geen CEO-activiteit.
+- CEO-branch: geen nieuwe commits na `6123553` (17:27 UTC), zijnde CEO_LOG-only.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Pipeline ongewijzigd:
+- N90 GBPJPY carry+mom: VOORSTEL-fase, geen pre-screen nog
+- N91/N92 NEW_FAMILY P/Q: VOORSTEL-fase, geen pre-screen nog
+- F2-ORB RISK-REACTIVE kern (D-102): CEO intradag-DD model in bouw; PREREG volgt na Grok-pauze
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE. Wacht CEO-PREREG na Grok-pauze (~04-10) of Strateeg PREREG voor N90/N91/N92.
+
+## Cyclus 20:25 CEST (2026-10-01) — uurcyclus sync v82 (IDLE; TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (geen v83 — Manager Grok op pauze tot ~04-10).
+- CEO_LOG `09c9bdc` ~19:56 CEST: **geen nieuws**. Grok-pauze lopende.
+- Strateeg `09e1761` ~20:20 CEST: geen nieuws; pipeline **N90/N91/N92 OPEN** (VOORSTEL-fase).
+- SUPERVISOR `13e9dbf` ~20:05 CEST: Grok-pauze; pipeline N90-N92 open; TRIAL 457.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Pipeline ongewijzigd:
+- N90 GBPJPY carry+mom: VOORSTEL-fase
+- N91/N92 NEW_FAMILY P/Q: VOORSTEL-fase
+- F2-ORB RISK-REACTIVE (D-102): CEO intradag-DD model in bouw; PREREG wacht op Grok-pauze einde
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE. Wacht CEO-PREREG na Grok-pauze (~04-10) of Strateeg PREREG voor N90/N91/N92.
+
+## Cyclus 21:25 CEST (2026-10-01) — uurcyclus sync v82 (IDLE; TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (geen v83 — Manager Grok op pauze tot ~04-10).
+- CEO_LOG `3260c51` ~20:56 CEST: **geen nieuws**. Grok-pauze lopende.
+- Strateeg `067fa7d` ~21:20 CEST: geen nieuws; pipeline **N90/N91/N92 OPEN** (VOORSTEL-fase).
+- SUPERVISOR `ae67e6d` ~21:05 CEST: Grok-pauze; N90-N92 open; TRIAL 457 stabiel.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Pipeline ongewijzigd:
+- N90/N91/N92: VOORSTEL-fase, geen pre-screen resultaten
+- F2-ORB RISK-REACTIVE (D-102): CEO intradag-DD model in bouw; PREREG wacht op Grok-pauze einde (~04-10)
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE. Wacht CEO-PREREG na Grok-pauze of Strateeg PREREG voor N90/N91/N92.
+
+## Cyclus 22:25 CEST (2026-10-01) — uurcyclus sync v82 (IDLE; TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (geen v83 — Manager Grok op pauze tot ~04-10).
+- CEO_LOG `77b4f5a` ~21:56 CEST: **geen nieuws**.
+- Strateeg `a7a350c` ~22:20 CEST: geen nieuws; pipeline **N90/N91/N92 OPEN**.
+- SUPERVISOR `812e0f6` ~22:05 CEST: Grok-pauze; N90-N92 open; TRIAL 457 stabiel.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Pipeline ongewijzigd; N90/N91/N92 in VOORSTEL-fase.
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE. Wacht CEO-PREREG na Grok-pauze (~04-10) of Strateeg PREREG voor N90/N91/N92.
+
+## Cyclus 23:25 CEST (2026-10-01) — uurcyclus sync v82 (IDLE; TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v82** (geen v83 — Manager Grok op pauze tot ~04-10).
+- CEO_LOG `276cf66` ~22:57 CEST: **geen nieuws**.
+- Strateeg/Supervisor: alle branches IDLE; N90/N91/N92 in VOORSTEL-fase.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Pipeline ongewijzigd. **TRIAL_COUNT blijft 457**.
+
+**U2 next:** IDLE. Wacht CEO-PREREG na Grok-pauze (~04-10) of Strateeg PREREG voor N90/N91/N92.
+
+## Cyclus 20:20 CEST (2026-10-02) — D-090 FASE 3 IDLE absorb NEXT_STEPS v83 (TRIAL 457)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Recover:** lokale tip was stale `052ed78` (2026-10-01 IDLE v81) terwijl `origin/claude/uitvoerder2-r` al op `4de01a9` stond (N87 FAIL_T + uurcyclus syncs). FF `052ed78→4de01a9`, daarna ort-merge `origin/main` (`054a8eb` NEXT_STEPS v83). Prior 19:45-cadanspoging faalde vermoedelijk op deze stale local tip / niet-gesynchroniseerde worktree — hersteld door fetch + FF + main-absorb.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v83** (Manager `054a8eb` ~20:11 CEST 2026-10-02): D-101…D-104 + N87 FAIL_T absorb; TRIAL **457**; formal OPEN queue **empty**; U2 **IDLE/HOLD**.
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz` (D-104 ORB-meta FAIL). C-028/C-029/C-030 actief (`6174bca`).
+- Strateeg Faraday `45403f1`: **N90/N91/N92** VOORSTEL_PRESCREEN only (geen PASS→PREREG).
+- CTO tip blijft C-030; geen nieuwe C-*. CEO tip `7cb6731` batch null/FAIL (aparte `TRIALS_CEO.csv`).
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Geen trial. Skip dead/barred: N75–N89 / CORN / VIX_TERM / L60 FX-med / UKOIL-OVN / ORB-meta clones. Track-3 **PAUSED**. D-095 S2-BTC wacht CEO (niet U2).
+
+**TRIAL_COUNT blijft 457**. Geen TRIALS-append.
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG (N90–N92 of CEO lat-B). Cadans :15/:45 hervat.
+
+## Cyclus 20:51 CEST (2026-10-02) — D-090 FASE 3 WAKE N92 FAIL_T (TRIAL 457→458)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` (`8e0e8f6` NEXT_STEPS **v84** + `PREREG_FTMO_N92.md`). PREREG vóór resultaat: script `scripts/n92_us100_ny_2h_mom_gate.py` from `grok/cto-1` / C-031 (`8a68951`).
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v84** (Manager `8e0e8f6` ~20:38 CEST): C-031 absorb; N90 UNDERPOWERED / N91 DIAG_FAIL; **N92 PREREG OPEN** → U2 WAKE; TRIAL was **457**.
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz`. C-028…**C-031** actief.
+- Skip N75–N91 / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta / N87 clones. Track-3 **PAUSED**.
+
+### Gate N92 (NEW_FAMILY Q — US100cash NY 15:30–17:30 mom → hold 22:00 intradag-flat)
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 592 | +5.90 bp | +5.24 bp | 1.39 / **1.56** | cost PASS (≥1.98); stress PASS (≥2.97) |
+| Test 2024 | 259 | +2.62 bp | +1.96 bp | 0.50 / **0.51** | formal t <2 |
+
+**Verdict: FAIL_T.** counts_as_trial=true → **TRIAL_COUNT 457→458**. Dead += `N92_US100_NY_2H_MOM`. Geen klonen (geen venster-/drempel-/US500-variatie). Board: `results/R2/n92_us100_ny_2h_mom/n92_gate_board.json`.
+
+**Kill circuit:** N92 = next cost-PASS→FAIL_T na N87 → streak blijft ≥5; pivot **ON** (bar L60/ORB-meta/VIX/UKOIL-OVN/N87 clones; Strateeg ≥2 NEW_FAMILY if N92 dies — per v84).
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG (Strateeg replacements / CEO lat-B). Cadans :15/:45.
+
+## Cyclus 20:58 CEST (2026-10-02) — N93 SECTOR_DISP_ROTATION FAIL_COST_GATE (TRIAL_COUNT blijft 458)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** FF-merge `origin/main` (`b83edc9` NEXT_STEPS **v85**). PREREG vóór resultaat: `PREREG_FTMO_N93_SECTOR_DISP_ROTATION.md` + source pointer from Faraday `f217478` (S2 Lane-A `fde4a15`); script `scripts/n93_sector_disp_rotation_gate.py` frozen vóór run.
+
+**Config freeze:** XL* (9 sector ETFs) lb=10 / disp_fade thr +1,0 / −0,5 → US100cash session-flat **15:30→21:00 CET**; RT 0,66 bp; gate **1,98**; stress 2,97; swap=0 (D-100). NEW_FAMILY **R**. Lane-A day_t 2,11 / mean 6,02 = overnight Yahoo proxy — **niet** formele PASS.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 309 | **+0,99 bp** | +0,33 bp | 0,05 / 0,06 | **FAIL** (<1,98); N≥150 ✔ |
+| Test 2024 (info) | 124 | −10,99 bp | −11,65 bp | −1,49 / −1,63 | n/a (cost-gate STOP) |
+
+Year-split bruto train: 2021 +2,03 (n=46) / 2022 −5,24 (n=125) / 2023 +6,28 (n=138). Long/short train 227/82.
+
+**Verdict: FAIL_COST_GATE.** counts_as_trial=**false** → **geen TRIALS-append, geen TRIAL_COUNT bump** (N78/N80 erratum). TRIAL_COUNT blijft **458**. Dead += `N93_SECTOR_DISP_ROTATION`. Geen retune / geen klonen (geen thr-grid, geen overnight rewrite, geen US500-first). Board: `results/R2/n93_sector_disp_rotation/n93_gate_board.json`.
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG. Skip N75–N93 / VIX / ORB-meta / L60 / UKOIL-OVN / CORN / NY-2h clones.
