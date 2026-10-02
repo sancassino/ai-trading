@@ -1,0 +1,9 @@
+id;datum;beschrijving;resultaat
+CEO-T1;2026-10-01;SHOCK modellen 1-3 (LightGBM);null
+CEO-T2;2026-10-01;dagmodel cross-sectioneel;null
+CEO-T3;2026-10-01;COT H1/H2;null
+CEO-T4;2026-10-01;ORB-meta filter (reserve);FAIL D-104
+CEO-T5;2026-10-02;NFP-surprise proxy (4 instrumenten);null
+CEO-T6;2026-10-02;ORB regime-splits (4 features x2);null (2022-gedreven, omkering 25-26)
+CEO-T7;2026-10-02;ORB tijdstop 2u/4u;slechter
+CEO-T8;2026-10-02;ORB extra indices EU50/FRA40/JP225 (PREREG_ORB_INDEX_EXT);FAIL t=1.09 @1.5bp; 25-26 negatief
