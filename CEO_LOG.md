@@ -110,3 +110,4 @@
 00:56 UTC — geen nieuws bij agents; Grok pauze t/m ~4 okt. Volgende: optiewaarde-route (D-101/102) herijken op ongefilterde ORB-reserve (EV €75–314/mnd, survive 0.33–0.83).
 01:12 UTC — ORB B4a ongefilterd: SR 0.88 (2021-26), EV €155/mnd @schaal 0.3, surv 0.87; reserve-SR 0.64. Bevestiging via forward-paper.
 01:26 UTC — geen nieuws; calendar-snapshot.
+01:42 UTC — geen nieuws; snapshot. Wacht op forward-paper ORB + Grok-herstart 4 okt; Sandro: FTMO-voorwaarden verifiëren.
