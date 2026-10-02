@@ -32,7 +32,7 @@ CAL_END = pd.Timestamp("2024-12-31")  # reserve 2025+ untouched
 Z_WIN = 120
 D_LB = 20
 Z_THR = 0.5
-FARADAY_TIP_SHA = "42b29e5888ed50e4b80e0658fe57326d123e74be"
+FARADAY_TIP_SHA = "ce7ce122b303d78f408ee1eabd232d5f46dc0711"
 
 
 def load_tip_close() -> pd.Series:

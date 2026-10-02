@@ -52,6 +52,7 @@
   "stress_pass": true,
   "verdict": "FAIL_T",
   "reserve_2025": "untouched",
-  "faraday_tip_sha": "42b29e5888ed50e4b80e0658fe57326d123e74be",
-  "note": "U2 owns TRIALS/TRIAL_COUNT append. FAIL_COST_GATE/FAIL_STRESS \u2192 no bump. FAIL_T \u2192 bump +1. TIP\u2260TLT (N116 DEAD). No TIP/TLT CFD leg. No retune."
+  "faraday_tip_sha": "ce7ce122b303d78f408ee1eabd232d5f46dc0711",
+  "note": "U2 owns TRIALS/TRIAL_COUNT append. FAIL_COST_GATE/FAIL_STRESS \u2192 no bump. FAIL_T \u2192 bump +1. TIP\u2260TLT (N116 DEAD). No TIP/TLT CFD leg. No retune.",
+  "faraday_tip_note": "live tip ce7ce12; material identical to 42b29e5 (PREREG/prescreen unchanged)"
 }

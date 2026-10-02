@@ -2205,7 +2205,7 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 
 **Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
 
-**Absorb:** PREREG vóór resultaat from Faraday tip `42b29e5`: `PREREG_FTMO_N118_TIP_REALRATE_STRESS.md` + screen in `results/R2/n118_n119_prescreen/` (D-092.1 PASS N=359 mean +5.38 ≥ 2.34); script `scripts/n118_tip_realrate_stress_gate.py` frozen vóór run. Book starts at TRIAL **463** (post-N117 FAIL_STRESS no-bump).
+**Absorb:** PREREG vóór resultaat from Faraday tip `ce7ce12` (ff from `42b29e5`; PREREG/prescreen identical): `PREREG_FTMO_N118_TIP_REALRATE_STRESS.md` + screen in `results/R2/n118_n119_prescreen/` (D-092.1 PASS N=359 mean +5.38 ≥ 2.34); script `scripts/n118_tip_realrate_stress_gate.py` frozen vóór run. Book starts at TRIAL **463** (post-N117 FAIL_STRESS no-bump).
 
 **Config freeze:** TIP z120 / d20 / combo thr ±0,5 → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress **3,51**; swap=0; **geen** TIP/TLT CFD leg (D-100). NEW_FAMILY **AM**. TIP ≠ TLT (N116 DEAD — real-rate/TIPS ≠ nominal duration).
 
