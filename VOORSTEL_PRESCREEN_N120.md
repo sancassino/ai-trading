@@ -1,16 +1,16 @@
 # VOORSTEL_PRESCREEN_N120 — VNQ_REIT_STRESS → US500cash session-flat (NEW_FAMILY AO)
 
-**Status:** **OPEN** — pipeline refill after N116 FAIL_T + N117 FAIL_STRESS + N118 PASS→PREREG + N119 D-092.1 FAIL (filed 2026-10-02 ~23:16 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** `n120_n121` (N=342, mean **−0,38 < 2,34**; years +0,48/−0,00/−1,12). NEW_FAMILY AO dead screen. No retune; no VNQ/TLT ratio / TIP twin.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AO** (US REIT ETF **level** stress → equity session-flat — commercial real-estate / rate-sensitive equity channel; ≠ TLT/TIP bond duration; ≠ VNQ/TLT **ratio**).  
 **Signal:** Yahoo/proxy **VNQ** (US REIT ETF). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** REIT equity-beta stress as risk-appetite timing for DM large-cap; intradag-vlak (geen swap).
 
 **Gate:** 3 × US500 RT = 3 × 0,78 = **2,34** bp.
 
-**D-094a:** train 2021–2023. Reden **(b)**: VNQ **level** as commercial RE / rate-sensitive equity stress into US500 beta — distinct from TLT nominal duration (N116 DEAD), TIP real-rate (N118), and from VNQ/TLT **ratio** rewrite. FTMO-M5 for costs. Herhaal in PREREG.
+**D-094a:** train 2021–2023. Reden **(b)**: VNQ **level** as commercial RE / rate-sensitive equity stress into US500 beta — distinct from TLT nominal duration (N116 DEAD), TIP real-rate (N118 DEAD), and from VNQ/TLT **ratio** rewrite. FTMO-M5 for costs. Herhaal in PREREG.
 
 **Onderscheid:**
-- ≠ **N116 TLT** FAIL_T / **N118 TIP** live PREREG (bond duration/real-rate ≠ REIT **equity** level)
+- ≠ **N116 TLT** FAIL_T / **N118 TIP** FAIL_T (bond duration/real-rate ≠ REIT **equity** level)
 - ≠ REIT_RATE **VNQ/TLT ratio** (this = VNQ level alone → equity)
 - ≠ **N114 HYG** / **N100 EMB** / **N112 GAS** / **N113 SILVER_GOLD** / **N117 CPER**
 - ≠ **N119 IWM** FAIL / SECTOR_DISP / VIX / L60 / ORB-meta / UKOIL-OVN / CORN / N75–N119 clones / VNQ CFD trade leg

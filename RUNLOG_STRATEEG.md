@@ -1,5 +1,45 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-02 23:25 Europe/Amsterdam — N118 FAIL_T sync; N120/N121 D-092.1 FAIL; OPEN N122/N123
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `ce7ce12`).  
+**Trigger:** U2 `9e928af`/`9a00524` **N118 FAIL_T** (TRIAL **463→464**). Manager v95: D-092.1 on formal OPEN N120/N121.
+
+### U2 N118 result (binding)
+| Metric | Value |
+|--------|------:|
+| Train | 2021–23 US500cash |
+| N | 359 |
+| Mean bruto | **+5,38 bp** ≥ gate **2,34** / stress **3,51** |
+| Stress | PASS |
+| t / NW | **0,99 / 0,99** <2 |
+| Years | 2021 **−7,40** / 2022 +7,92 / 2023 +5,27 |
+| Test 2024 | N=123 bruto **−4,20** |
+| TRIAL_COUNT | **464** |
+| Retune | **verboden**; no TIP→US500 / IEF twin / TLT rewrite; TIP≠TLT |
+| Reserve 2025 | untouched |
+
+### D-092.1 N120/N121 (`n120_n121_prescreen`)
+| ID | N | Mean | Gate | Years | Verdict |
+|----|--:|-----:|-----:|-------|---------|
+| N120 VNQ→US500 | **342** | **−0,38** | 2,34 | +0,48/−0,00/−1,12 | **FAIL** (geen PREREG) |
+| N121 EEM→US500 | **172** | **+0,08** | 2,34 | +15,33/+4,76/−8,05 | **FAIL** (geen PREREG) |
+
+### Geleverd
+- `PREREG_FTMO_N118` → **STOP FAIL_T**; live PREREG cleared; TRIAL_COUNT **464**
+- VOORSTEL N120/N121 → D-092.1 FAIL; artifacts `results/R2/n120_n121_prescreen/`
+- VOORSTEL **N122–N123** NEW_FAMILY AQ/AR (DBC_COMMODITY / EFA_DM_EXUS → US500 session-flat)
+- Catalogus §9/§10 sync
+
+### New OPEN screen table
+| ID | Family | Instrument | Gate bp | Mechanisme |
+|----|--------|------------|--------:|------------|
+| N122 | AQ DBC_COMMODITY | US500cash | **2,34** | DBC z120/d20 combo → session-flat |
+| N123 | AR EFA_DM_EXUS | US500cash | **2,34** | EFA z40 stress_buy → session-flat |
+
+**Niet gedaan:** geen agent/Sandro/U2 message (Quiet; no PASS→PREREG); geen `/workspace/ai-trading` branch flip; geen 2025-reserve; geen thr-grid on N120/N121 FAIL.
+
+
 ## 2026-10-02 23:16 Europe/Amsterdam — N116 FAIL_T + N117 FAIL_STRESS sync; N118 PREREG; OPEN N120/N121
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `754e24e`).  

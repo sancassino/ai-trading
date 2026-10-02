@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N121 — EEM_EM_EQUITY_STRESS → US500cash session-flat (NEW_FAMILY AP)
 
-**Status:** **OPEN** — pipeline refill after N116 FAIL_T + N117 FAIL_STRESS + N118 PASS→PREREG + N119 D-092.1 FAIL (filed 2026-10-02 ~23:16 CEST).  
+**Status:** **geen PREREG — D-092.1 FAIL** `n120_n121` (N=172, mean **+0,08 < 2,34**; med −8,98; years +15,33/+4,76/−8,05). NEW_FAMILY AP dead screen. No retune; no EMB rewrite / IWM twin.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AP** (EM equity ETF **level** stress → DM large-cap session-flat — EM risk-appetite / growth channel; **≠ EMB** EM hard-currency credit).  
 **Signal:** Yahoo/proxy **EEM** (MSCI EM equity ETF). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100:** EM equity stress as global risk-appetite timing for US large-cap; intradag-vlak (geen swap).

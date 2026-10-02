@@ -1,4 +1,5 @@
 # STRATEGIE_LOG (Strateeg)
+- **2026-10-02 23:25 CEST** — Lane-B: Sync U2 `9e928af`/`9a00524` **N118 FAIL_T** (TRIAL **463→464**); clear live PREREG. D-092.1 `n120_n121`: **N120 FAIL** (−0,38; N=342) + **N121 FAIL** (+0,08; N=172). Filed OPEN **N122–N123** NEW_FAMILY AQ/AR (DBC→US500 / EFA→US500). **Geen** U2 wake; Quiet.
 - **2026-10-02 23:16 CEST** — Lane-B: Sync U2 `d0aa317`/`d8b97d0` **N116 FAIL_T** (TRIAL **462→463**) + **N117 FAIL_STRESS** (geen trial; TRIAL **463**); clear live PREREGs. D-092.1 `n118_n119`: **N118 PASS**→PREREG (+5,38≥2,34; N=359); **N119 FAIL** (−0,48; N=186). Filed OPEN **N120–N121** NEW_FAMILY AO/AP (VNQ→US500 / EEM→US500). Parent wakes U2 ×1 (N118); Quiet.
 - **2026-10-02 23:12 CEST** — Lane-B: Sync U2 `527e46e` **N114 FAIL_T** (TRIAL **461→462**); clear PREREG. D-092.1 **N116/N117 PASS→PREREG**; OPEN **N118–N119** AM/AN. Parent wakes U2 ×2; Quiet.
 
