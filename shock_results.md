@@ -33,3 +33,6 @@ BTC: train +3,9bp (t 0,7), test +10,1bp (t 1,2); ETH: train +4,0 (t 0,6), test �
 
 ## Uur-van-de-dag scan (PREREG_HOUR_SCAN; hour_scan.py; 736 symbool-uur-combinaties, train 2021–23, test 2024)
 10 combinaties haalden |t|≥4 en |gem|≥2×kosten, 9 daarvan FX-paren op servertijd-uur 0/1 (+2…+4bp/uur, train t 7–16, test zelfde teken, t 2–9). **Spread-artefact, geen edge:** de volledige drift zit in één M5-bar (01:00–01:05: GBPUSD +1,4bp, USDCHF +2,8bp) waarin de spread terugvalt van 2–7bp (rollover, uur 0) naar 0,3–0,5bp; de (bid-)reeks stijgt mee omdat de bid na de verbreding terugkeert naar mid. Instappen aan de wijde ask vóór de bar kost de hele spread; na de bar is de drift 0. Waarschuwing voor alle bid-gebaseerde FX-backtests die rond servertijd 00:00–01:00 positie houden. Overig: EURUSD uur 14 netto +0,4bp (nihil). Geen handelbare uur-effecten.
+
+## Crypto US-open-momentum uitgebreid (PREREG_CRYPTO_ID2, 9 coins; SOL zonder data)
+Gepoold train −5,8bp (dag-t −0,7), test −6,5bp (t −1,8); 3/9 coins positief in test. Het zwakke BTC-signaal was ruis/selectie. FAIL, gesloten.
