@@ -1985,3 +1985,24 @@ Year-split bruto train: 2021 +2,03 (n=46) / 2022 −5,24 (n=125) / 2023 +6,28 (n
 **Verdict: FAIL_COST_GATE.** counts_as_trial=**false** → **geen TRIALS-append, geen TRIAL_COUNT bump** (N78/N80 erratum). TRIAL_COUNT blijft **458**. Dead += `N93_SECTOR_DISP_ROTATION`. Geen retune / geen klonen (geen thr-grid, geen overnight rewrite, geen US500-first). Board: `results/R2/n93_sector_disp_rotation/n93_gate_board.json`.
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG. Skip N75–N93 / VIX / ORB-meta / L60 / UKOIL-OVN / CORN / NY-2h clones.
+
+## Cyclus 21:21 CEST (2026-10-02) — D-090 FASE 3 IDLE absorb NEXT_STEPS v87 (TRIAL 458)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** FF `b382307→6775e28` (`origin/main` NEXT_STEPS **v87** + N94/N95 VOORSTEL + N93 FAIL_COST_GATE bookkeeping). Tip was already N93-delivered; no local lag.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v87** (Manager `6775e28` ~21:12 CEST): **C-032** + Faraday N94/N95 DIAG_FAIL; **N96/N97 OPEN** pre-screen only; TRIAL **458**; U2 **IDLE/HOLD**.
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz`. C-028…**C-032** actief (`f6b0c60`). CEO tip `7cb6731` (geen nieuw D-* na D-104).
+- Strateeg Faraday `b2ab614`: VOORSTEL_PRESCREEN **N96/N97** (NEW_FAMILY U/V) — **geen** PASS→PREREG / geen `PREREG_FTMO_N96|N97`.
+- CTO C-032 DELIVERED (0 trials). Track-3 **PAUSED**.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Geen trial. Skip dead/barred: N75–N95 / CORN / VIX_TERM / L60 FX-med / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO-5d / XAU-Lon→NY-cont clones. N96/N97 blijven Strateeg/S2 pre-screen (U2 pas na PREREG).
+
+**TRIAL_COUNT blijft 458**. Geen TRIALS-append. Dead set ongewijzigd t.o.v. N93 tip.
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG (**N96/N97**). Cadans :15/:45.
+
