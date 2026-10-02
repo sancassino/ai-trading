@@ -2153,3 +2153,20 @@ Long/short train 118/70. Signal-days train nonzero 251.
 Long/short train 176/129. Signal-days train nonzero 395.
 
 **Verdict: FAIL_COST_GATE.** counts_as_trial=**false** → **geen TRIALS-append, geen TRIAL_COUNT bump** (N78/N93 pattern). TRIAL_COUNT blijft **461**. Dead += `N113_SILVER_GOLD_RATIO`. Geen retune / geen klonen (geen thr-grid, geen XAG-CFD twin, geen overnight rewrite, geen N75 ratio-MR rewrite). Board: `results/R2/n113_silver_gold_ratio/n113_gate_board.json`.
+
+## Cyclus 23:06 CEST (2026-10-02) — N114 HYG_CREDIT_STRESS FAIL_T (TRIAL 461→462)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `f9f7bae`: `PREREG_FTMO_N114_HYG_CREDIT_STRESS.md` + `results/R2/n114_n115_prescreen/` (D-092.1 PASS N=371 mean +3.81 ≥ 2.34); script `scripts/n114_hyg_credit_stress_gate.py` frozen vóór run. Book starts at TRIAL **461** (post-N113).
+
+**Config freeze:** HYG z120 / d20 / combo thr ±0,5 → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress 3,51; swap=0; **geen** HYG/LQD CFD leg (D-100). NEW_FAMILY **AI**. HYG ≠ EMB (geen N100 rewrite).
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 371 | **+3,812 bp** | +3,032 bp | 0,68 / 0,71 | cost PASS (≥2,34); stress PASS (≥3,51) |
+| Test 2024 | 150 | −2,16 bp | −2,94 bp | −0,62 / −0,60 | formal t <2 |
+
+**Year-split train mean bruto:** 2021 **−10,03** (N=59) / 2022 **+7,69** (N=175) / 2023 **+4,82** (N=137). Long/short train 92/279. Signal-days train nonzero 468.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 461→462**. Dead += `N114_HYG_CREDIT_STRESS`. Geen retune / geen klonen (geen thr-grid, geen EMB rewrite, geen LQD twin, geen overnight). Skip N115 FAIL / N116–N117 OPEN screens. Board: `results/R2/n114_hyg_credit_stress/n114_gate_board.json`.

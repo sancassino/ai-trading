@@ -1,0 +1,57 @@
+{
+  "prereg": "PREREG_FTMO_N114_HYG_CREDIT_STRESS",
+  "new_family": "AI",
+  "config": "HYG z120/combo thr\u00b10.5 \u2192 US500cash session-flat 15:30\u219221:00 CET",
+  "rt_bp": 0.78,
+  "gate_bp": 2.34,
+  "stress_gate_bp": 3.51,
+  "swap_bp": 0.0,
+  "n_signal_days_train_nonzero": 468,
+  "train": {
+    "label": "train_2021_2023",
+    "n": 371,
+    "mean_bruto": 3.8123,
+    "mean_netto": 3.0323,
+    "t_netto": 0.6764,
+    "t_nw5": 0.7054,
+    "median_bruto": 3.9763,
+    "mean_mae_bp": 60.1001,
+    "n_long": 92,
+    "n_short": 279
+  },
+  "test": {
+    "label": "test_2024",
+    "n": 150,
+    "mean_bruto": -2.16,
+    "mean_netto": -2.94,
+    "t_netto": -0.6197,
+    "t_nw5": -0.5971,
+    "median_bruto": -0.1283,
+    "mean_mae_bp": 43.9708,
+    "n_long": 140,
+    "n_short": 10
+  },
+  "year_split_train": {
+    "2021": {
+      "n": 59,
+      "mean_bruto": -10.0307,
+      "mean_netto": -10.8107
+    },
+    "2022": {
+      "n": 175,
+      "mean_bruto": 7.6895,
+      "mean_netto": 6.9095
+    },
+    "2023": {
+      "n": 137,
+      "mean_bruto": 4.8212,
+      "mean_netto": 4.0412
+    }
+  },
+  "cost_pass": true,
+  "stress_pass": true,
+  "verdict": "FAIL_T",
+  "reserve_2025": "untouched",
+  "faraday_tip_sha": "f9f7baeabea5f6fc97271f599ee3abd9fdea34fa",
+  "note": "U2 owns TRIALS/TRIAL_COUNT append. FAIL_COST_GATE/FAIL_STRESS \u2192 no bump. FAIL_T \u2192 bump +1. HYG\u2260EMB. No retune."
+}
