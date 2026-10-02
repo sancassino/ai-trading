@@ -1,0 +1,251 @@
+{
+  "N158": {
+    "id": "N158",
+    "instrument": "USOILcash",
+    "n": 491,
+    "mean_bruto_bp": -0.5736,
+    "gate_bp": 10.02,
+    "verdict": "FAIL",
+    "notes": "USOIL_NY_IMPULSE_FADE \u00b140 15:30\u219217:00 entry 17:00 flat 21:00; COSTS gate 3*3.34; swap 0; one leg; NEW_FAMILY CA",
+    "median_bruto_bp": 0.1668,
+    "stress_gate_bp": 15.03,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.501,
+    "n_long": 221,
+    "n_short": 270,
+    "years": {
+      "2021": -9.4327,
+      "2022": -5.4813,
+      "2023": 12.9216
+    },
+    "meta": {
+      "n_impulse_days": 491,
+      "n_skip_missing_bar": 0,
+      "n_trades": 491,
+      "swap_bp": 0,
+      "overnight": false,
+      "train_days": 774,
+      "session": "signal 15:30\u219217:00 entry at 17:00 flat 21:00 CET",
+      "rt_in_costs": true
+    },
+    "costs_rt": 3.34,
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N159": {
+    "id": "N159",
+    "instrument": "GER40cash",
+    "n": 141,
+    "mean_bruto_bp": -4.3397,
+    "gate_bp": 2.16,
+    "verdict": "FAIL",
+    "notes": "GER40_EUROPE_CLOSE_FADE \u00b140 12:00\u219215:00 entry 15:30 flat 17:30; COSTS gate 3*0.72; swap 0; one leg; NEW_FAMILY CB",
+    "median_bruto_bp": -1.802,
+    "stress_gate_bp": 3.24,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4894,
+    "n_long": 70,
+    "n_short": 71,
+    "years": {
+      "2022": -2.988,
+      "2023": -7.1312
+    },
+    "meta": {
+      "n_impulse_days": 167,
+      "n_skip_missing_bar": 26,
+      "n_trades": 141,
+      "swap_bp": 0,
+      "overnight": false,
+      "train_days": 768,
+      "session": "signal 12:00\u219215:00 entry 15:30 flat 17:30 CET",
+      "rt_in_costs": true
+    },
+    "costs_rt": 0.72,
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N158_clones": {
+    "N22_UKOIL_LonAM_fade": {
+      "peer": "N22_UKOIL_LonAM_fade",
+      "sign_agree_both_active": 0.5614,
+      "both_active_over_cand": 0.5804,
+      "n_cand_active": 491,
+      "n_both_active": 285,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N43_UKOIL_NY_cont": {
+      "peer": "N43_UKOIL_NY_cont",
+      "sign_agree_both_active": 0.1296,
+      "both_active_over_cand": 0.22,
+      "n_cand_active": 491,
+      "n_both_active": 108,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N80_UKOIL_OVN": {
+      "peer": "N80_UKOIL_OVN",
+      "sign_agree_both_active": 0.4769,
+      "both_active_over_cand": 0.5295,
+      "n_cand_active": 491,
+      "n_both_active": 260,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N98_USOIL_morning": {
+      "peer": "N98_USOIL_morning",
+      "sign_agree_both_active": 0.4354,
+      "both_active_over_cand": 0.5988,
+      "n_cand_active": 491,
+      "n_both_active": 294,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N136_USOIL_leg": {
+      "peer": "N136_USOIL_leg",
+      "sign_agree_both_active": 0.5419,
+      "both_active_over_cand": 0.3157,
+      "n_cand_active": 491,
+      "n_both_active": 155,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N155_UKOIL_leg": {
+      "peer": "N155_UKOIL_leg",
+      "sign_agree_both_active": 0.4713,
+      "both_active_over_cand": 0.3198,
+      "n_cand_active": 491,
+      "n_both_active": 157,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "CRACK_z60": {
+      "peer": "CRACK_z60",
+      "sign_agree_both_active": 0.5694,
+      "both_active_over_cand": 0.7189,
+      "n_cand_active": 491,
+      "n_both_active": 353,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "N159_clones": {
+    "N156_GER_leg": {
+      "peer": "N156_GER_leg",
+      "sign_agree_both_active": 0.4773,
+      "both_active_over_cand": 0.3121,
+      "n_cand_active": 141,
+      "n_both_active": 44,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N149_GER_leg": {
+      "peer": "N149_GER_leg",
+      "sign_agree_both_active": 0.475,
+      "both_active_over_cand": 0.2837,
+      "n_cand_active": 141,
+      "n_both_active": 40,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N154_GER_leg": {
+      "peer": "N154_GER_leg",
+      "sign_agree_both_active": 0.4314,
+      "both_active_over_cand": 0.3617,
+      "n_cand_active": 141,
+      "n_both_active": 51,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N138_GER_leg": {
+      "peer": "N138_GER_leg",
+      "sign_agree_both_active": 0.4694,
+      "both_active_over_cand": 0.3475,
+      "n_cand_active": 141,
+      "n_both_active": 49,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N103_GER_AM": {
+      "peer": "N103_GER_AM",
+      "sign_agree_both_active": 0.5395,
+      "both_active_over_cand": 0.539,
+      "n_cand_active": 141,
+      "n_both_active": 76,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "neg_N40_continuation": {
+      "peer": "neg_N40_continuation",
+      "sign_agree_both_active": 0.4932,
+      "both_active_over_cand": 0.5177,
+      "n_cand_active": 141,
+      "n_both_active": 73,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N21_GER_afternoon_fade": {
+      "peer": "N21_GER_afternoon_fade",
+      "sign_agree_both_active": 0.8298,
+      "both_active_over_cand": 0.6667,
+      "n_cand_active": 141,
+      "n_both_active": 94,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N9_GER_morning_fade_info": {
+      "peer": "N9_GER_morning_fade_info",
+      "sign_agree_both_active": 0.4151,
+      "both_active_over_cand": 0.3759,
+      "n_cand_active": 141,
+      "n_both_active": 53,
+      "clone": false,
+      "clone_raw": false,
+      "binding": false
+    }
+  },
+  "gates": {
+    "N158": 10.02,
+    "N159": 2.16
+  },
+  "costs_rt": {
+    "USOILcash": 3.34,
+    "GER40cash": 0.72
+  },
+  "clone_rule": {
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7,
+    "z_corr": "not used; one-leg books have no ratio z (VOORSTEL bar is sign\u00d7cover)"
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "no_inline_replacement": true,
+  "gate_source": "COSTS_FTMO.csv roundtrip_intraday_bp; session-flat so swap=0",
+  "train_days": {
+    "USOILcash": 774,
+    "UKOILcash": 773,
+    "GER40cash": 768,
+    "US100cash": 775,
+    "US30cash": 775,
+    "XAUUSD": 774,
+    "EURUSD": 778,
+    "UK100cash": 754
+  }
+}

@@ -1,5 +1,40 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-03 01:53 Europe/Amsterdam — N158/N159 D-092.1 FAIL; OPEN N160/N161
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `78ee291`).  
+**Trigger:** Formal OPEN N158 USOIL_NY_IMPULSE_FADE / N159 GER40_EUROPE_CLOSE_FADE. Gates are COSTS round-trips. U2 IDLE. No live PREREG. TRIAL **470**.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat, so swap in the gate is **0**. Not a session-median spread. USOIL short-swap 24,53 is not in the gate because the book is flat by 21:00.
+
+| Book | leg | RT | gate |
+|------|-----|---:|-----:|
+| N158 | USOILcash | 3,34 | **10,02** |
+| N159 | GER40cash | 0,72 | **2,16** |
+
+### D-092.1 `n158_n159` (train 2021–2023; swap 0; one leg)
+| ID | Family | N | mean | med | years | Verdict |
+|----|--------|--:|-----:|----:|-------|---------|
+| N158 | USOIL_NY_IMPULSE_FADE CA | **491** | **−0,57** | +0,17 | −9,43 / −5,48 / +12,92 | **FAIL** vs gate **10,02** (L/S 221/270; 491 impulses, 0 missing bars) |
+| N159 | GER40_EUROPE_CLOSE_FADE CB | **141** | **−4,34** | −1,80 | — / −2,99 / −7,13 | **FAIL** vs gate **2,16** (also N<150; L/S 70/71; 167 impulses, 26 missing bars; 2021 GER 15:30 unfilled — not DIAG) |
+
+Clone bar (sign agree ≥ 0,85 AND cover ≥ 0,70; one-leg books have no ratio z).  
+N158 vs **N80** UKOIL-OVN: agree **0,48**, cover **0,53**. vs **N98** oil-morning: agree **0,44**, cover **0,60**. vs **CRACK**: agree **0,57**, cover **0,72**. vs **N136** USOIL leg: agree **0,54**, cover **0,32**. vs **N155** UKOIL leg: agree **0,47**, cover **0,32**. vs N22 agree 0,56 cover 0,58. vs N43 agree 0,13 cover 0,22. Not an overnight-oil clone. Mean **−0,57 < 10,02**.  
+N159 vs **N103** GER-AM: agree **0,54**, cover **0,54**. vs **N138** GER leg: agree **0,47**, cover **0,35**. vs **N154** GER leg: agree **0,43**, cover **0,36**. vs **N149** GER leg: agree **0,48**, cover **0,28**. vs N156 GER leg cover **0,31**. vs −N40 agree 0,49 cover 0,52. vs **N21** nearest: agree **0,83**, cover **0,67** (both under the bar). Not a GER40-session clone. Mean **−4,34 < 2,16**.
+
+No soft-pass. No PREREG. No inline replacement. TRIAL stays **470**. No Brent twin. No XAU/GER remap. No oil-overnight. No GER40-session rewrite.
+
+### Geleverd
+- N158 → **STOP FAIL**; N159 → **STOP FAIL** (D-092.1)
+- OPEN **N160 XAG_NY_IMPULSE_FADE** (CC, gate **15,21** = 3×5,07, XAG in COSTS; one silver leg) + **N161 XLK_TECH_SECTOR_STRESS** (CD, gate **1,98** = 3×0,66, US100 in COSTS; S2 `51b24bf` cycle_0147; session-flat, not overnight long US100; Lane-A day_t **2,05 is not a PASS**). Pre-file clone check vs SECTOR_DISP / XLE / DBC / XLF / XLU-XLI / UNG: no hit (XLU/XLI cover 0,81 but agree 0,64). Not cost-screened.
+- Catalog §9/§10; live PREREG **none**
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-03 01:47 Europe/Amsterdam — N156/N157 D-092.1 FAIL; OPEN N158/N159
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `363033c`).  

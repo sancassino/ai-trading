@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N159 — GER40_EUROPE_CLOSE_FADE session-flat (NEW_FAMILY CB)
 
-**Status:** **OPEN** — D-092.1 refill after N156 FAIL / N157 FAIL (filed 2026-10-03 ~01:47 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n158_n159` (2026-10-03 ~01:53 CEST). N=141, mean **−4,34 < 2,16** (also N<150; med −1,80; years —/−2,99/−7,13; L/S 70/71; 167 impulses, 26 missing bars; 2021 GER 15:30 unfilled — not DIAG). Not a clone of N156/N149/N154/N138 GER legs, N103 GER-AM, −N40, or N21 (N21 nearest: agree 0,83 cover 0,67, both under 0,85/0,70; N103 agree 0,54 cover 0,54; N154 GER-leg agree 0,43 cover 0,36). No XAU/GER remap, no thr-grid, no overnight.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CB** (DAX **Europe-close fade**, one index CFD, session-flat). Round-trip is in `COSTS_FTMO.csv`. Not a gold/index pair. Not an FX book. Not a G10 cross. Not silver/index. Not metal–oil. Not an equity-factor z→US500. Not a transatlantic index pair.  
 **Signal:** M5 impulse on **GER40cash** 12:00→15:00 CET. **Trade:** the same leg, 15:30→17:30.  
 **Track 4 + D-100:** the cash DAX into the Europe close overshoots; fade it across the US handoff and be flat before the US afternoon. Swap stays 0.

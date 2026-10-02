@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N158 — USOIL_NY_IMPULSE_FADE session-flat (NEW_FAMILY CA)
 
-**Status:** **OPEN** — D-092.1 refill after N156 FAIL / N157 FAIL (filed 2026-10-03 ~01:47 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n158_n159` (2026-10-03 ~01:53 CEST). N=491, mean **−0,57 < 10,02** (med +0,17; years −9,43/−5,48/+12,92; L/S 221/270). Not an overnight-oil clone and not N22/N43/N80/N98/N136/N155/CRACK (UKOIL-OVN agree 0,48 cover 0,53; N98 agree 0,44 cover 0,60; CRACK agree 0,57 cover 0,72; N136 USOIL-leg agree 0,54 cover 0,32; N155 oil-leg agree 0,47 cover 0,32). No Brent twin, no index leg, no gold leg, no thr-grid, no overnight.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CA** (WTI **NY-hour impulse fade**, one oil CFD, session-flat). Round-trip is in `COSTS_FTMO.csv`. Not a gold/index pair. Not an FX book. Not a G10 cross. Not silver/index. Not metal–oil (no bullion leg). Not an equity-factor z→US500. Not Brent–WTI. Not an index/oil pair.  
 **Signal:** M5 impulse on **USOILcash** 15:30→17:00 CET. **Trade:** the same leg, flat by 21:00.  
 **Track 2 + D-100:** the NY energy hour overshoots; fade it inside the same cash session. Flat before the roll so the short-side swap (~24,53 bp) is not the alpha.
