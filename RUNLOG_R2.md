@@ -2119,3 +2119,20 @@ Long/short train 195/241. Signal-days train nonzero 547.
 **TRIAL_COUNT blijft 460**. Geen TRIALS-append. Dead += N104–N111 already closed (pre-screen/DIAG; geen U2 trial).
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG. Cadans :15/:45.
+
+## Cyclus 23:00 CEST (2026-10-02) — N112 GAS_EQUITY_MACRO FAIL_T (TRIAL 460→461)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `791a17c`: `PREREG_FTMO_N112_GAS_EQUITY_MACRO.md` + `results/lane_b/GAS_EQUITY_MACRO_SOURCE.md` (S2 `35e38ac` cycle_2240); script `scripts/n112_gas_equity_macro_gate.py` frozen vóór run.
+
+**Config freeze:** UNG z40 / thr ±1,5 / stress_buy → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress 3,51; swap=0; **geen** gas/NATGAS CFD leg (D-100). NEW_FAMILY **GAS_EQUITY_MACRO**. Lane-A day_t 3,61 / mean 47,70 = overnight Yahoo proxy hold=5d — **niet** formele PASS.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 188 | **+7,827 bp** | +7,047 bp | 1,07 / 1,04 | cost PASS (≥2,34); stress PASS (≥3,51) |
+| Test 2024 | 71 | −4,34 bp | −5,12 bp | −0,86 / −0,95 | formal t <2 |
+
+Long/short train 118/70. Signal-days train nonzero 251.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 460→461**. Dead += `N112_GAS_EQUITY_MACRO`. Geen retune / geen klonen (geen thr-grid, geen NATGAS/OIL CFD twin, geen overnight rewrite, geen US100-first). Board: `results/R2/n112_gas_equity_macro/n112_gate_board.json`.
