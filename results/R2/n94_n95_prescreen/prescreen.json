@@ -1,0 +1,32 @@
+{
+  "N94": {
+    "id": "N94",
+    "instrument": "NZDJPY",
+    "n": 107,
+    "mean_bruto_bp": -0.9679,
+    "median_bruto_bp": -2.0544,
+    "gate_bp": 6.0,
+    "verdict": "FAIL",
+    "hit_rate": 0.4953,
+    "years": {
+      "2021": 6.7825,
+      "2022": 9.2266,
+      "2023": -20.1963
+    }
+  },
+  "N95": {
+    "id": "N95",
+    "instrument": "XAUUSD",
+    "n": 226,
+    "mean_bruto_bp": 1.3984,
+    "median_bruto_bp": -0.9739,
+    "gate_bp": 2.49,
+    "verdict": "FAIL",
+    "hit_rate": 0.4867,
+    "years": {
+      "2021": 0.3426,
+      "2022": 2.0606,
+      "2023": 1.8555
+    }
+  }
+}
