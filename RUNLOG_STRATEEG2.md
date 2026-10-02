@@ -362,3 +362,34 @@
   - FTMO map indicatief: NDX→US100.cash, SPY→US500.cash — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1 cost.
 - **MATERIAL:** true (nieuwe VOORSTEL/survivor pack).
 - Geen engine-run / geen 2025+ touch / geen TRIALS append / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag VIX_TERM_VOV oppakken; S2 blijft Lane-A novelty.
+
+## 2026-10-02 ~20:46 Europe/Amsterdam — Hourly cycle (:40 slot recover) / C-028 Lane-A + POST-N78
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ b765613 (**STALE** ~32h; last = VIX_TERM_VOV promote → later N78 FAIL_COST_GATE). Branch bevestigd ≠ main/uitvoerder.
+- **Prior failed run ~19:49 CEST:** geen partial artefacts op branch/working tree (geen cycle_1940*); oorzaak = agent timeout/abort vóór commit. Deze cyclus = full recover + complete.
+- **Refresh (read-only):**
+  - `NEXT_STEPS` **v84** (`origin/main` @ 8e0e8f6, 20:38 CEST): C-031 absorb; N92 PREREG OPEN; N90 UNDERPOWERED / N91 DIAG_FAIL; TRIAL **457**; S2 tip STALE → herstart Lane-A; U2 wake N92; FREEZE OFF; Track-3 PAUSED; VIX_TERM / L60 / UKOIL-OVN / ORB-meta / N87 clones **BARRED**.
+  - `EDGE_SEARCH_UPGRADE.md` via `origin/grok/cto-1`: Lane-A Yahoo day_t≥2 bruto vóór FTMO; ≥2/3 NEW_FAMILY; S2 = VOORSTEL only.
+  - CTO C-029/C-031: N78 FAIL_COST_GATE absorb; CORN demote; POST-N78 = honest RT vóór promote; N92 PREREG frozen (Faraday/CTO — niet gekloond).
+  - U2 tip `6f6ef86` IDLE→wake N92; Faraday `f7164ad` catalog catch-up.
+  - Dead-set (niet gekloond): ORB/TSMOM/L60 FX-med/ENERGY/IDX_SHORT/FX_*_MED/SHORT/**VIX_TERM_VOV**/CORN-as-FTMO/UKOIL-OVN/ORB-meta/N87 + prior S2 CREDIT/RATE_CURVE/EM_DM + CTO C-028 families + N75–N77 + N92 mechanism.
+- **SymbolList_FTMO / costs (POST-N78 stress):** US100 RT **0,66** / US500 **0,78** / XAU **0,83**; US100 long swap ≈ −7,12%/jr (~1,95 bp/night) — stressed as worse side.
+- **C-028 Lane-A screens** (proxy daily ≤2024-12-31; day_t bruto + early RT/swap; artefacts `results/strateeg2_prescreen/cycle_2046/`; script `scripts/s2_c028_lane_a_cycle2046.py`):
+
+  | Family (NEW_FAMILY) | Best symbols | Config | years | mean_bp | day_t | n | cost | Uitkomst |
+  |---------------------|--------------|--------|------:|--------:|------:|--:|------|----------|
+  | **SECTOR_DISP_ROTATION** | XL*disp→**NDX** | lb10/disp_fade\|1d | 19.62 | +6.02 | **2.11** | 2558 | **COST_OK** (US100; drag 2.61; net 3.41) | **PROMOTE** |
+  | SECTOR_DISP_ROTATION | →SPY | lb10/disp_fade\|1d | 19.62 | +5.05 | 1.99 | 2550 | — | FAIL near-miss day_t |
+  | PC_RATIO_STRESS | CBOE_PUT→NDX | z120/put_trend\|1d | 19.83 | +2.52 | 1.60 | 4987 | — | FAIL |
+  | BREAKEVEN_REALRATE | TIP/IEF→GLD | z40/thr1.5\|1d | 19.91 | +3.58 | 1.19 | 1656 | — | FAIL |
+  | COPPER_GOLD_MACRO | Cu/Au→SPY | z120/thr0.5\|1d | 19.83 | +2.28 | 1.12 | 3868 | — | FAIL |
+
+- **Novelty:** **4/4 NEW_FAMILY** (≥2/3 ✔). 84 configs; 1 promote-config / 1 promote-family.
+- **Cost-stress:** survivor cleared mean≥3×RT + net_after_drag≥1; **FLAG** US100 overnight long swap — Lane-B prefer session-flat / D-100 cheap side. No agri CFD mapping.
+- **Survivor pack (VOORSTEL + CSV, geen PREREG):**
+  - `results/strateeg2_prescreen/cycle_2046/VOORSTEL_S2_SECTOR_DISP_ROTATION.md`
+  - `SECTOR_DISP_ROTATION_NDX_lb10_disp_fade_daily.csv` (+ SPY twin)
+  - FTMO map: NDX→**US100cash** — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1.
+- **MATERIAL:** true (nieuwe VOORSTEL/survivor pack na STALE tip + failed 19:49 recover).
+- Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag SECTOR_DISP_ROTATION oppakken; S2 blijft Lane-A novelty.
+

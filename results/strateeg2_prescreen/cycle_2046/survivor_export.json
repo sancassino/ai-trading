@@ -1,0 +1,26 @@
+{
+  "survivors": [
+    {
+      "family": "SECTOR_DISP_ROTATION",
+      "symbols": "XL*disp\u2192NDX",
+      "lookback_hold": "lb10/disp_fade_spy|hold=1d",
+      "train_years": 19.62,
+      "mean_bp": 6.016,
+      "day_t": 2.108,
+      "n_days": 2558,
+      "mean_bp_alldays": 3.116,
+      "day_t_alldays": 2.107,
+      "n_alldays": 4939,
+      "ftmo_symbol": "US100cash",
+      "rt_bp": 0.66,
+      "swap_bp_n": 1.951,
+      "drag_bp": 2.611,
+      "gate_3rt": 1.98,
+      "net_after_drag": 3.405,
+      "cost_flag": "COST_OK",
+      "promote_to_lane_b": "yes",
+      "notes": "NEW_FAMILY; sector cross-section dispersion / rotation; \u2260 classic TSMOM; bruto trade-cond; short_hist=no; \u22642024; cost=COST_OK"
+    }
+  ],
+  "hostile_count": 0
+}
