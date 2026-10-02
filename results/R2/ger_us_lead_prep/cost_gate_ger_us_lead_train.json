@@ -1,0 +1,18 @@
+{
+  "N": 314,
+  "mean_bruto": -1.4318,
+  "tw_rt": 0.72,
+  "gate": 2.16,
+  "gate_stress50": 3.24,
+  "outcome": "FAIL",
+  "by_sym": {
+    "US100cash": {
+      "N": 157,
+      "mean_bruto": -2.027
+    },
+    "US500cash": {
+      "N": 157,
+      "mean_bruto": -0.8365
+    }
+  }
+}

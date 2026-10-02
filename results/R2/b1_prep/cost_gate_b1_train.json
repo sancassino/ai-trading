@@ -1,0 +1,26 @@
+{
+  "prereg": "PREREG_FTMO_B1.md",
+  "prereg_sha256": "8b0cc6beb6937982e8005079d526681bf08b1af9bb16b8ae8268e2095df3303c",
+  "train": "2021-01-01..2023-12-31",
+  "reserve": "2025-01-01\u2192 ONAANGERAAKT",
+  "n_pair_months": 216,
+  "mean_bruto_bp_signed": -16.935024743263433,
+  "mean_cost_bp": 12.016108490915046,
+  "mean_cost_bp_swap50": 17.848237821709912,
+  "threshold_3x_cost_bp": 36.04832547274514,
+  "median_abs_bruto_bp_info": 107.80676064779445,
+  "mean_unit_cost_bp_info": 16.823379629629628,
+  "threshold_3x_unit_info": 50.47013888888888,
+  "gate": "signed_mean_bruto >= 3 * mean(turn+swap cost) on pair-months",
+  "PASS": false,
+  "ratio_bruto_over_cost": -1.409360173143194,
+  "engine_ftmo_blob": "ac7abef6cbaa0bb0c10139374f8d6fb03cc3b840",
+  "pairs": [
+    "FX_EURUSD",
+    "FX_GBPUSD",
+    "FX_USDJPY",
+    "FX_AUDUSD",
+    "FX_USDCAD",
+    "FX_USDCHF"
+  ]
+}

@@ -44,3 +44,13 @@
 2026-09-30 20:10 Amsterdam — cyclus :05: D-080/D-081, ALLOCATIE_V1.2 (P-ETF-lite), R2-007 verwerkt; NEXT_STEPS v33 (PREREG_PORT3-naamconflict → lite = PORT4, kiesrisico 6+ portefeuilles, lite ≠ bewezen regel, licentie-discipline).
 2026-09-30 20:40 Amsterdam — cyclus :35: ALLOCATIE_V1.3 (lite niet geselecteerd, D1 beste kosten/SR), PORT3/4-uitkomst, run 8 (EM/USD) verwerkt; NEXT_STEPS v34 (winnaarsvloek D1, simulator-SR, reserve-run-scope, forward-volledigheid).
 2026-09-30 20:50 Amsterdam — Sandro: doel = FTMO-€80k, niet eigen kapitaal (Doel v2 misverstand). M-013 (URGENT) voor CEO; NEXT_STEPS/EINDVERSLAG gemarkeerd.
+
+- 2026-09-30 21:05 Amsterdam — cyclus :05 (na pauze Sandro): D-082…D-086 verwerkt (FTMO-koerscorrectie, Auditor D-082/H7, M-013 BESLOTEN); NEXT_STEPS v35 (FTMO-doel hersteld, eigen-kapitaal-cijfers informatief, §0a Manager-QA koerscorrectie, Uitvoerder-2 FTMO-focus na reserve-run); VRAGEN_MANAGER M-013 → BESLOTEN (D-083…D-086); reserve-run 01-10 12:00 en forward 22:25 UTC lopen ongewijzigd door.
+
+2026-09-30 22:05 Amsterdam — cyclus :05: BESLUITEN op `origin/claude/upbeat-dirac-g2810q` gelezen (max D-086; CEO_LOG 21:41 geen nieuw D-*); D-087…D-090 al verwerkt op main (v36/v37 via `ftmo-trading-strategy`); geen D-091+. Uitvoerder-2 actief (`43b6ba2` 22:04 CEST, A4 C17 cost-gate FAIL). Geen M-item. NEXT_STEPS al v37 (post-A4 prio B1→A2). Geen verdere wijziging.
+
+2026-09-30 22:35 Amsterdam — cyclus :35: fetch ok. BESLUITEN `upbeat-dirac-g2810q` max D-086; `ftmo-trading-strategy-98mplz` max D-090; CEO_LOG 22:12 geen nieuw D-*; geen D-091+. NEXT_STEPS blijft v39 (B1 STOP, prio A2+M5). Uitvoerder-2 actief (`18c7996` 22:26 CEST, B1 cost-gate FAIL). Geen VRAGEN_MANAGER M-item. Geen NEXT_STEPS-bump.
+
+2026-09-30 23:05–23:11 Amsterdam — cyclus :05: fetch ok. BESLUITEN `upbeat-dirac-g2810q` max D-086; `ftmo-trading-strategy-98mplz` max D-090; CEO_LOG 22:50 geen nieuw D-*; geen D-091+. U2 actief (`ce5abdc` 22:49 CEST, A5 FAIL). CTO `7bac598` (23:09): S2 XAU/GER40/USDJPY cost-gate FAIL. NEXT_STEPS **v40→v41** (prio US41-M5gz → A2; A4/B1/A5/S2-XAU/GER40/USDJPY dood). Geen VRAGEN_MANAGER M-item. U-006 vervolg: US41-M5gz (~40 MB) aan Uitvoerder-1.
+
+2026-09-30 23:45 Amsterdam — cyclus :35: fetch ok. BESLUITEN `upbeat-dirac-g2810q` max D-086; `ftmo-trading-strategy-98mplz` **D-091** (zoekrichting na uitputting A/S2; commit `d64f668` 23:39 CEST). CEO_LOG upbeat 23:45 MIJLPAAL (alle sleeves gestopt) — richting via D-091, geen Sandro-vraag (D-091.6). NEXT_STEPS **v41→v42** (prio S2b BTC+ETH → cost/vol-screen → nieuwe PREREGs; A2/USOIL dood). Uitvoerder-2 actief (`290f0a5` 23:32 CEST, A2 FAIL / wacht richting). Geen VRAGEN_MANAGER M-item.

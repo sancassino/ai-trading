@@ -1,0 +1,31 @@
+{
+  "prereg_commit": "42821c9 (claude/ftmo-trading-strategy-98mplz)",
+  "gate_script": "scripts/n87_us30_gap_fade_gate.py",
+  "run_date": "2026-10-01",
+  "instrument": "US30cash",
+  "rule": "opening-gap fade |gap|>30bp intradag-flat 08:00-22:55 server time",
+  "rt_bp": 0.45,
+  "gate_threshold_bp": 1.35,
+  "outcome": "FAIL_T",
+  "counts_as_trial": true,
+  "train": {
+    "period": "2021-01-01 to 2023-12-31",
+    "N": 162,
+    "mean_bruto_bp": 11.7745,
+    "gate_pass": true,
+    "stress_pass": true,
+    "mean_netto_bp": 11.3245,
+    "t_nw_L5_netto": 1.6322,
+    "formal_t_pass": false
+  },
+  "test": {
+    "period": "2024-01-01 to 2024-12-31",
+    "N": 27,
+    "mean_bruto_bp": -17.7059,
+    "gate_pass": false,
+    "mean_netto_bp": -18.1559,
+    "t_nw_L5_netto": -1.3049,
+    "formal_t_pass": false
+  },
+  "notes": "Cost gate PASS (train), maar t_NW=1.63 < 2.0 in train EN test sterk negatief (N=27, mean=-17.7 bp). FAIL_T. Geen klonen (geen drempel-/tijd-variatie per PREREG §3). Reserve 2025 onaangeraakt."
+}

@@ -1,16 +1,16 @@
 datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
-2026-09-30;rep_b2b_rsi2;basis;D2 (replicatie, telt niet als nieuwe trial);ontdekking;0.520;3.211;0.000661;0.0028;door G-ontdekking
-2026-09-30;C01_tsmom12;basis;D2 [cfd];ontdekking;-0.012;-0.118;0.547148;0.5471;afgewezen
-2026-09-30;C02_faber;basis;D2 [cfd];ontdekking;0.318;3.140;0.000844;0.0028;door G-ontdekking
-2026-09-30;C03_donchian;basis;D2 [cfd];ontdekking;0.134;0.971;0.165844;0.1947;afgewezen
-2026-09-30;C05_tsmom_mix;basis;D2 [cfd];ontdekking;0.129;1.270;0.102069;0.1312;afgewezen
-2026-09-30;C07_xmom;basis;D2 [cfd];ontdekking;0.002;0.024;0.490413;0.5093;afgewezen
-2026-09-30;C12_carry_trend;basis;D2 [cfd];ontdekking;0.012;0.092;0.463344;0.5004;afgewezen
-2026-09-30;C17_fomc_cycle;basis;D2 [cfd];ontdekking;0.520;2.850;0.002189;0.0042;afgewezen
-2026-09-30;C51_volmanaged;basis;D2 [etf];ontdekking;0.314;2.827;0.002347;0.0042;afgewezen
-2026-09-30;C52_allweather;basis;D2 [etf];ontdekking;0.651;3.030;0.001224;0.0028;door G-ontdekking
-2026-09-30;C52_allweather;lang;D2 [etf];ontdekking;0.786;3.828;0.000065;0.0006;door G-ontdekking
-2026-09-30;C53_gem;basis;D2 [etf];ontdekking;0.558;2.827;0.002350;0.0042;afgewezen
+2026-09-30;rep_b2b_rsi2;basis;D2 (replicatie, telt niet als nieuwe trial);ontdekking;0.520;3.211;0.000661;0.0029;door G-ontdekking
+2026-09-30;C01_tsmom12;basis;D2 [cfd];ontdekking;-0.012;-0.118;0.547148;0.5654;afgewezen
+2026-09-30;C02_faber;basis;D2 [cfd];ontdekking;0.318;3.140;0.000844;0.0029;door G-ontdekking
+2026-09-30;C03_donchian;basis;D2 [cfd];ontdekking;0.134;0.971;0.165844;0.2056;afgewezen
+2026-09-30;C05_tsmom_mix;basis;D2 [cfd];ontdekking;0.129;1.270;0.102069;0.1376;afgewezen
+2026-09-30;C07_xmom;basis;D2 [cfd];ontdekking;0.002;0.024;0.490413;0.5242;afgewezen
+2026-09-30;C12_carry_trend;basis;D2 [cfd];ontdekking;0.012;0.092;0.463344;0.5130;afgewezen
+2026-09-30;C17_fomc_cycle;basis;D2 [cfd];ontdekking;0.520;2.850;0.002189;0.0043;afgewezen
+2026-09-30;C51_volmanaged;basis;D2 [etf];ontdekking;0.314;2.827;0.002347;0.0043;afgewezen
+2026-09-30;C52_allweather;basis;D2 [etf];ontdekking;0.651;3.030;0.001224;0.0029;door G-ontdekking
+2026-09-30;C52_allweather;lang;D2 [etf];ontdekking;0.786;3.828;0.000065;0.0007;door G-ontdekking
+2026-09-30;C53_gem;basis;D2 [etf];ontdekking;0.558;2.827;0.002350;0.0043;afgewezen
 2026-09-30;C54_carver;basis;D2 [future];ontdekking;0.439;4.149;;;"ongeldig: future-model FX/grondstof fout (tooling, herrun na engine-fix; telt niet)"
 2026-09-30;C54_carver;qa;D2 [future];ontdekking;0.422;2.450;;;"ongeldig: future-model FX/grondstof fout (tooling, herrun na engine-fix; telt niet)"
 2026-09-30;C51_volmanaged;basis;D2 [future];ontdekking-vehikelrapport;0.321;2.891;;;vehikelrapport (geen extra trial); benchmark beter
@@ -21,17 +21,17 @@ datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
 2026-09-30;C05_tsmom_mix;basis;D2 [future];ontdekking-vehikelrapport;0.442;4.243;;;"ongeldig: future-model FX/grondstof fout (tooling, herrun na engine-fix; telt niet)"; benchmark beter
 2026-09-30;C17_fomc_cycle;basis;D2 [etf];ontdekking-vehikelrapport;0.696;3.816;;;vehikelrapport (geen extra trial); benchmark beter
 2026-09-30;C17_fomc_cycle;basis;D2 [future];ontdekking-vehikelrapport;0.736;4.033;;;vehikelrapport (geen extra trial); benchmark beter
-2026-09-30;C54_carver;basis;D2 [future];ontdekking;0.467;4.425;0.000005;0.0001;door G-ontdekking
-2026-09-30;C54_carver;qa;D2 [future];ontdekking;0.573;3.317;0.000456;0.0025;door G-ontdekking
+2026-09-30;C54_carver;basis;D2 [future];ontdekking;0.467;4.425;0.000005;0.0002;door G-ontdekking
+2026-09-30;C54_carver;qa;D2 [future];ontdekking;0.573;3.317;0.000456;0.0028;door G-ontdekking
 2026-09-30;C05_tsmom_mix;basis;D2 [future];ontdekking-vehikelrapport;0.412;4.017;;;vehikelrapport (geen extra trial); benchmark beter
-2026-09-30;C04_ema;basis;D2 [future];ontdekking;0.311;1.808;0.035301;0.0502;afgewezen
-2026-09-30;C16_halloween;basis;D2 [etf];ontdekking;0.409;3.894;0.000049;0.0006;door G-ontdekking
-2026-09-30;C29_bollinger_fx;basis;D2 [future];ontdekking;0.368;1.967;0.024607;0.0391;afgewezen
-2026-09-30;C33_trend_lowvol;basis;D2 [future];ontdekking;0.374;3.636;0.000138;0.0009;door G-ontdekking
-2026-09-30;C43_rente_signaal;basis;D2 [future];ontdekking;0.159;1.006;0.157088;0.1928;afgewezen
-2026-09-30;C44_krediet;basis;D2 [etf];ontdekking;0.742;3.174;0.000752;0.0028;door G-ontdekking
-2026-09-30;C45_rentecurve;basis;D2 [etf];ontdekking;0.376;3.064;0.001092;0.0028;door G-ontdekking
-2026-09-30;C55_daa;basis;D2 [etf];ontdekking;0.635;3.050;0.001142;0.0028;door G-ontdekking
+2026-09-30;C04_ema;basis;D2 [future];ontdekking;0.311;1.808;0.035301;0.0521;afgewezen
+2026-09-30;C16_halloween;basis;D2 [etf];ontdekking;0.409;3.894;0.000049;0.0007;door G-ontdekking
+2026-09-30;C29_bollinger_fx;basis;D2 [future];ontdekking;0.368;1.967;0.024607;0.0401;afgewezen
+2026-09-30;C33_trend_lowvol;basis;D2 [future];ontdekking;0.374;3.636;0.000138;0.0011;door G-ontdekking
+2026-09-30;C43_rente_signaal;basis;D2 [future];ontdekking;0.159;1.006;0.157088;0.2029;afgewezen
+2026-09-30;C44_krediet;basis;D2 [etf];ontdekking;0.742;3.174;0.000752;0.0029;door G-ontdekking
+2026-09-30;C45_rentecurve;basis;D2 [etf];ontdekking;0.376;3.064;0.001092;0.0029;door G-ontdekking
+2026-09-30;C55_daa;basis;D2 [etf];ontdekking;0.635;3.050;0.001142;0.0029;door G-ontdekking
 2026-09-30;C54_carver;basis;D2 [cfd_retail];ontdekking-vehikelrapport;0.320;3.053;;;vehikelrapport (geen extra trial); benchmark beter
 2026-09-30;C54_carver;qa;D2 [cfd_retail];ontdekking-vehikelrapport;0.368;2.133;;;vehikelrapport (geen extra trial); benchmark niet beter
 2026-09-30;C54_carver;basis;D2 [cfd_retail_hi];ontdekking-vehikelrapport;0.211;2.027;;;vehikelrapport (geen extra trial); benchmark beter
@@ -46,8 +46,43 @@ datum;regel_id;variant;dataset;fase;netto_SR;t_geclusterd;p;FDR_q;beslissing
 2026-09-30;C52_allweather;lang;D2 [cfd_retail];ontdekking-vehikelrapport;0.623;3.035;;;vehikelrapport (geen extra trial); benchmark beter
 2026-09-30;C52_allweather;basis;D2 [cfd_retail_hi];ontdekking-vehikelrapport;0.292;1.362;;;vehikelrapport (geen extra trial); benchmark niet beter
 2026-09-30;C52_allweather;lang;D2 [cfd_retail_hi];ontdekking-vehikelrapport;0.470;2.287;;;vehikelrapport (geen extra trial); benchmark beter
-2026-09-30;C57_gtaa;basis;D2 [etf];ontdekking;0.638;3.107;0.000946;0.0028;door G-ontdekking
-2026-09-30;C58_goudtrend;basis;D2 [etf];ontdekking;0.400;1.818;0.034558;0.0502;afgewezen
-2026-09-30;C59_grondstoftrend;basis;D2 [etf];ontdekking;0.177;0.757;0.224483;0.2525;afgewezen
-2026-09-30;C60_bondtiming;basis;D2 [etf];ontdekking;0.263;1.766;0.038735;0.0523;afgewezen
-2026-09-30;C61_ls_inverse;basis;D2 [etf_inverse];ontdekking;0.214;2.143;0.016068;0.0271;afgewezen
+2026-09-30;C57_gtaa;basis;D2 [etf];ontdekking;0.638;3.107;0.000946;0.0029;door G-ontdekking
+2026-09-30;C58_goudtrend;basis;D2 [etf];ontdekking;0.400;1.818;0.034558;0.0521;afgewezen
+2026-09-30;C59_grondstoftrend;basis;D2 [etf];ontdekking;0.177;0.757;0.224483;0.2677;afgewezen
+2026-09-30;C60_bondtiming;basis;D2 [etf];ontdekking;0.263;1.766;0.038735;0.0546;afgewezen
+2026-09-30;C61_ls_inverse;basis;D2 [etf_inverse];ontdekking;0.214;2.143;0.016068;0.0277;afgewezen
+2026-09-30;S11_crossmarket_C02;basis;D2b [etf, 12 markten];ontdekking;0.299;;0.459000;0.5130;niet gerepliceerd op SR, alleen DD-beschermend
+2026-09-30;C67_landenrotatie;basis;D2b [etf, 12 markten USD];ontdekking;0.120;-0.970;0.833869;0.8339;afgewezen
+2026-09-30;C02_faber;basis;D2 [cfd];ontdekking;0.318;3.140;0.000844;0.0029;door G-ontdekking
+2026-09-30;C17_fomc_cycle;basis;D2 [cfd];ontdekking;0.520;2.850;0.002189;0.0043;afgewezen
+2026-09-30;C33_trend_lowvol;basis;D2 [cfd];ontdekking-vehikelrapport;0.145;1.410;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C54_carver;basis;D2 [cfd];ontdekking-vehikelrapport;0.191;1.821;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C54_carver;qa;D2 [cfd];ontdekking-vehikelrapport;0.014;0.083;;;vehikelrapport (geen extra trial); benchmark niet beter
+2026-09-30;C55_daa;basis;D2 [cfd];ontdekking-vehikelrapport;0.522;2.494;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C52_allweather;basis;D2 [cfd];ontdekking-vehikelrapport;0.421;2.152;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C52_allweather;lang;D2 [cfd];ontdekking-vehikelrapport;0.327;1.633;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C16_halloween;basis;D2 [cfd];ontdekking-vehikelrapport;0.296;2.827;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C44_krediet;basis;D2 [cfd];ontdekking-vehikelrapport;0.569;2.435;;;vehikelrapport (geen extra trial); benchmark beter
+2026-09-30;C17_fomc_cycle;FTMO_A4_basis;FTMO D1 US500cash/US100cash/GER40cash train2021-23 (PREREG_FTMO_C17 amend 5fc3fb9);kostenpoort;;;;stop: kostenpoort (median bruto 20.79 bp < 3× cost 45.12 bp; geen verdere analyse; reserve 2025 onaangeraakt)
+2026-09-30;C05_tsmom_mix_FX;FTMO_B1_basis;FTMO D1 FX6 (EUR/GBP/JPY/AUD/CAD/CHF) train2021-23 (PREREG_FTMO_B1 @05caced/fcaf8bc);kostenpoort;;;;stop: kostenpoort (signed mean bruto -16.94 bp < 3× cost 36.05 bp; n=216 pair-months; geen verdere analyse; reserve 2025 onaangeraakt)
+2026-09-30;FX_london_orb_intradag;FTMO_A5_basis;FTMO M5gz EUR/GBP/JPY/CHF train2021-23 (PREREG_FTMO_FX_INTRADAG);kostenpoort;;;;stop: kostenpoort (median bruto -5.91 bp < 3× mean cost 3.93 bp; n=3106; geen TRIAL_COUNT per PREREG §5; reserve 2025 onaangeraakt)
+2026-09-30;US41_stocks_in_play_orb;FTMO_A2_basis;FTMO M5gz US41 earnings train2021-23 (PREREG_FTMO_A2 @6aaa6238);kostenpoort;;;;stop: kostenpoort (mean bruto +3.77 bp < 3× trade-weighted mean RT 26.74 bp; n=365; median bruto -23.78 bp; geen TRIAL_COUNT per PREREG §3; reserve 2025 onaangeraakt)
+2026-10-01;N1_open_fade;FTMO_N1_basis;FTMO M5 US100/US30/US500 train2021-23 (PREREG 474a33c);kostenpoort;;;;stop: N=0 triggers (30m drive never reaches 1.5× D1-ATR; max ratio~0.29; reserve 2025 untouched)
+2026-10-01;N2_rel_flat;FTMO_N2_basis;FTMO M5 US100↔US500 train2021-23 (PREREG 474a33c);kostenpoort;;;;stop: kostenpoort (signed mean bruto -0.84 bp < 3× pair RT 4.32 bp; n=112; reserve 2025 untouched)
+2026-10-01;S2_midday_vwap;S2_MIDDAY_VWAP;FTMO M5 US100/US30 train2021-23 (PREREG 1b2e975);kostenpoort;;;;stop: kostenpoort (signed mean bruto -66.2 bp < 3× RT; n=3; D1-ATR filter almost never fires; reserve 2025 untouched)
+2026-10-01;S2_xau_am_fade;S2_XAU_AM_FADE;FTMO M5 XAUUSD train2021-23 (PREREG 1b2e975);kostenpoort;;;;pass:kostenpoort (signed mean bruto +18.70 bp >= 3×0.83; n=12) — power short of PREREG N>=120; no ftmo_ev yet; reserve 2025 untouched)
+2026-10-01;S2_lunch_open;S2_LUNCH_OPEN;FTMO M5 US30/US100 train2021-23+test2024 (PREREG 4689b9e);trial;;1.14/0.05;;stop: FAIL_T (cost-gate PASS mean bruto +4.72 bp ≥ stress 2.43; day-clust t train 1.14 test 0.05 both <2.0; N=233/100; median bruto −13.17; TRIAL_COUNT 445; reserve 2025 untouched)
+2026-10-01;N11_ger40_xetra_orb;FTMO_N11_basis;FTMO M5 GER40cash train2021-23 (PREREG 564ee5e);trial;;0.92/0.85 NW;;stop: FAIL_T (cost-gate PASS mean bruto +2.74 bp ≥ 2.16; stress FAIL 2.74 < 3.24; day-clust t 0.92 NW-L5 0.85 both <2.0; N=475; median −14.32; entry cutoff 10:30 PREREG; TRIAL_COUNT 446; reserve 2025 untouched)
+2026-10-01;N18_us500_ovn_gap_cont;FTMO_N18_basis;FTMO M5 US500cash train2021-23 (PREREG c715e06);trial;;0.64/0.67 NW;;stop: FAIL_T (cost-gate PASS mean bruto +3.52 bp ≥ 2.34; stress PASS 3.52 ≥ 3.51; day-clust t 0.64 NW-L5 0.67 both <2.0; N=279; median +2.77; year-split 2021 +12.97 / 2022 +6.66 / 2023 −12.17; TRIAL_COUNT 447; reserve 2025 untouched)
+2026-10-01;FTMO_P1_ORB_BTC;P1_eqvol_frozen;FTMO M5 ORB(F2)+BTCUSOPEN reserve2025-01→2026-09 (PREREG_FTMO_P1_ORB_BTC / D-096);reserve;0.195;0.24 NW;;FAIL: P1 ORB+BTC reserve one-shot (D-096); mean=0.000159507 t_NW5=0.24 SR=0.195 p1p2=0.780 EV€/m=242.2 legs A_mean=0.000164587 B_mean=-0.000284398 BTC_N=119; Auditor pending AUDIT_4; TRIAL_COUNT 448; reserve 2025+ consumed for P1 only
+2026-10-01;S2_GBPJPY_EU_MOM;FTMO_S2_GBPJPY_EU_MOM;FTMO M5 GBPJPY train2021-23 + test2024 (PREREG_S2_GBPJPY_EU_MOM / S2 6444d30);trial;;1.0409/1.0447 NW;;stop: FAIL_STRESS_then_FAIL_T (cost-gate PASS mean bruto +3.4082 bp ≥ 3.33; stress FAIL 3.4082 < 4.995; day-clust t train 1.0409 NW-L5 1.0447; test N=59 mean bruto -1.0482 t -0.6357; year-split 2021 +6.59 / 2022 +0.18 / 2023 +6.21; TRIAL_COUNT 449; reserve 2025 untouched)
+2026-10-01;N35_us100_eu_us_cont;FTMO_N35_basis;FTMO M5 US100cash train2021-23 + test2024 (PREREG_FTMO_N35 / Strateeg 1d5bdb2);trial;;1.2232/1.1649 NW;;stop: FAIL_T (cost-gate PASS mean bruto +6.5995 bp ≥ 1.98; stress PASS 6.5995 ≥ 2.97; day-clust t train 1.2232 NW-L5 1.1649 both <2.0; test N=42 mean bruto 3.6342 t 0.2882/0.3364; N_train=214; TRIAL_COUNT 450; reserve 2025 untouched)
+2026-10-01;N36_xau_ny_open_drive;FTMO_N36_basis;FTMO M5 XAUUSD train2021-23 + test2024 (PREREG_FTMO_N36 / Strateeg 1d5bdb2);trial;;0.643/0.7244 NW;;stop: FAIL_STRESS_then_FAIL_T (cost-gate PASS mean bruto +2.801 bp ≥ 2.49; stress FAIL 2.801 < 3.74; day-clust t train 0.643 NW-L5 0.7244; test N=42 mean bruto 5.1776 t 0.6791/0.6678; N_train=150; TRIAL_COUNT 451; reserve 2025 untouched)
+2026-10-01;N40_ger40_mid_morning_mom;FTMO_N40_basis;FTMO M5 GER40cash train2021-23 + test2024 (PREREG_FTMO_N40 / Strateeg 6ef46a7);trial;;0.5532/0.5622 NW;;stop: FAIL_STRESS_then_FAIL_T (cost-gate PASS mean bruto +2.4282 bp ≥ 2.16; stress FAIL 2.4282 < 3.24; day-clust t train 0.5532 NW-L5 0.5622; test N=53 mean bruto -0.0035 t -0.2282/-0.2147; N_train=205 median -2.28; year-split 2022 +3.08 / 2023 +1.14; TRIAL_COUNT 452; reserve 2025 untouched)
+2026-10-01;N41_us30_eu_us_cont;FTMO_N41_basis;FTMO M5 US30cash train2021-23 + test2024 (PREREG_FTMO_N41 / Strateeg 6ef46a7);trial;;2.0145/1.8509 NW;;stop: FAIL_T (cost-gate PASS mean bruto +8.6507 bp ≥ 1.35; stress PASS 8.6507 ≥ 2.025; day-clust t train 2.0145 ≥2 but NW-L5 1.8509 <2.0; test N=14 mean bruto -4.3916 t -0.3855/-0.4884; N_train=160; year-split 2021 +9.71 / 2022 +11.67 / 2023 −3.21; TRIAL_COUNT 453; reserve 2025 untouched)
+2026-10-01;FX_EUR_SHORT_TSMOM;FTMO_FX_EUR_SHORT_TSMOM;proxy daily EURUSD+EURAUD train2010-16 + test2017-24 (PREREG_FTMO_FX_EUR_SHORT_TSMOM / CTO C-025 0644107);trial;;1.8961/1.8706 NW;;stop: FAIL_T (cost-gate PASS mean bruto +21.958 bp ≥ 2.6068; stress PASS; day-clust t train 1.8961 NW-L5 1.8706 both <2.0; test N=239 mean bruto -3.4206 t -0.1381/-0.1317; EURAUD test bruto -8.09 <0; N_train=227; TRIAL_COUNT 454; reserve 2025 untouched)
+2026-10-01;FX_USDJPY_MED_TSMOM;FTMO_FX_USDJPY_MED_TSMOM;proxy daily USDJPY train2000-16 + test2017-24 (PREREG_FTMO_FX_USDJPY_MED_TSMOM / CTO C-026 2488aba);trial;;1.1508/1.1616 NW;;stop: FAIL_T (cost-gate PASS mean bruto +10.9746 bp ≥ 2.34; stress PASS; day-clust t train 1.1508 NW-L5 1.1616 both <2.0; test N=121 mean bruto +17.2497 t 1.3188/1.4608; test h1 bruto -11.88 <0; N_train=237; TRIAL_COUNT 455; reserve 2025 untouched)
+2026-10-01;FX_EURJPY_MED_TSMOM;FTMO_FX_EURJPY_MED_TSMOM;proxy daily EURJPY train2003-16 + test2017-24 (PREREG_FTMO_FX_EURJPY_MED_TSMOM / CTO C-027 e0f3c44);trial;;0.5525/0.5882 NW;;stop: FAIL_T (cost-gate PASS mean bruto +7.812 bp ≥ 3.30; stress PASS; day-clust t train 0.5525 NW-L5 0.5882 both <2.0; test N=132 mean bruto +4.130 t 0.3316/0.3934; test h2 bruto +1.94 weak; N_train=209; TRIAL_COUNT 456; reserve 2025 untouched)
+2026-10-01;N78_vix_term_vov;FTMO_N78_VIX_TERM_VOV;FTMO US100cash D1 + Yahoo VIX9D/VIX3M/VIX train2021-23 + test2024 (PREREG_FTMO_N78_VIX_TERM_VOV / Lane-B Faraday 6c9cdca / S2 b765613c);ongeldig;;0.1184/0.1418 NW;;"ongeldig: FAIL_COST_GATE telt niet (NEXT_STEPS v78 / C-028; zelfde patroon ENERGY/IDX_SHORT/TSMOM_DIV); was foutief als TRIAL 457 geboekt; TRIAL_COUNT blijft 456; train mean bruto +2.2095 bp < gate 7.83; N=492>=150; stress FAIL 2.21<11.75; day-clust t bruto 0.4483 NW 0.5372; netto t 0.1184/0.1418; test N=150 mean bruto +8.0079 t netto 0.8127/0.7972; year-split 2021 +3.43 / 2022 -8.25 / 2023 +9.21; Lane-A NDX 6.80!=PASS; reserve 2025 untouched; no retune"
+2026-10-01;N87_US30_GAP_FADE;FTMO_N87_US30_GAP_FADE;US30cash M5 train2021-23 + test2024 (PREREG_FTMO_N87 / CEO 42821c9 claude/ftmo-trading-strategy-98mplz);trial;;1.6322 NW;;stop: FAIL_T (cost-gate PASS train mean bruto +11.7745 bp ≥ 1.35; stress PASS; t_NW_L5 train 1.6322 <2.0; test N=27 mean bruto -17.7059 bp strongly negative t_NW -1.3049; N_train=162; TRIAL_COUNT 457; reserve 2025 untouched; no clones per PREREG §3)
+2026-10-02;N92_US100_NY_2H_MOM;FTMO_N92_US100_NY_2H_MOM;US100cash M5 train2021-23 + test2024 (PREREG_FTMO_N92 / CTO C-031 8a68951 NEW_FAMILY Q);trial;;1.3857/1.5636 NW;;stop: FAIL_T (cost-gate PASS train mean bruto +5.9036 bp ≥ 1.98; stress PASS 5.90 ≥ 2.97; day-clust t train 1.3857 NW-L5 1.5636 both <2.0; test N=259 mean bruto +2.6218 t 0.5032/0.5076 both <2; N_train=592; TRIAL_COUNT 458; reserve 2025 untouched; no clones per PREREG §3)

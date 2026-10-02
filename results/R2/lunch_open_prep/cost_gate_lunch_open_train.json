@@ -1,0 +1,35 @@
+{
+  "N": 233,
+  "mean_bruto": 4.7154,
+  "median_bruto": -13.1693,
+  "skew": 1.522,
+  "tw_rt": 0.5392,
+  "gate": 1.6177,
+  "gate_stress50": 2.4265,
+  "base_pass": true,
+  "stress50_pass": true,
+  "outcome": "PASS",
+  "by_sym": {
+    "US30cash": {
+      "N": 134,
+      "mean_bruto": 5.7354,
+      "rt": 0.45,
+      "gate_sym": 1.35
+    },
+    "US100cash": {
+      "N": 99,
+      "mean_bruto": 3.3347,
+      "rt": 0.66,
+      "gate_sym": 1.98
+    }
+  },
+  "reasons": {
+    "target": 32,
+    "stop": 129,
+    "time": 72
+  },
+  "date_min": "2021-01-27",
+  "date_max": "2023-12-22",
+  "n_long": 112,
+  "n_short": 121
+}

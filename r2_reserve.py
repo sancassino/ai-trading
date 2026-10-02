@@ -34,7 +34,7 @@ def main():
         if rsel.sum() < 60: continue
         sd = ex[dsel].mean() / ex[dsel].std() * math.sqrt(252); sr, ci, bci, n = sr_stats(ex[rsel], rng)
         rows.append((k, days[rsel.argmax()], days[-1], n, sd, sr, ci, bci, ex[rsel].mean() * 252))
-    P = FP.all_portfolios()
+    P = dict(FP.all_portfolios(1)); P.update(FP.all_portfolios(2))   # PREREG_PORT (P-ETF-a/b, P1, P-breed) + PREREG_PORT2 (P-ETF+, P-breed-2)
     for p, (days, tot, x, lev) in P.items():
         ok = np.isfinite(x); dsel = np.array([d <= DISC for d in days]) & ok; rsel = np.array([d >= START for d in days]) & ok
         if rsel.sum() < 60: continue

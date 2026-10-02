@@ -1,0 +1,48 @@
+{
+  "n_trades": 197,
+  "symbol": "BTCUSD",
+  "train": "2021-01-01..2024-12-31",
+  "prereg": "PREREG_S2_BTC_USOPEN",
+  "mean_gross_bp": 15.755737713361382,
+  "median_gross_bp": -38.94440659775806,
+  "mean_cost_bp": 3.4968359802538247,
+  "mean_cost_stress_bp": 5.045253970380737,
+  "fixed_rt_bp": 1.25,
+  "gate_2x_fixed_1_25": true,
+  "gate_2x_realized": true,
+  "gate_cost_share_lt_50pct": true,
+  "gate_stress_2x": true,
+  "gate_stress_share_lt_50pct": true,
+  "power_n_ge_150": true,
+  "cost_share_pct": 22.19404793269942,
+  "verdict": "PASS",
+  "reserve_2025_touched": false,
+  "note": "D-095 stap1 U2; window 2021-2024-12; formal P1 reserve only if PASS + CEO vrijgave",
+  "info_day_clust_t_gross_nw5": 1.4915605112863726,
+  "info_day_clust_t_net_nw5": 1.166778027093381,
+  "info_skew_gross": 2.7250191285297634,
+  "info_half_2021_22_mean_net_bp": 36.132475604893266,
+  "info_half_2023_24_mean_net_bp": -4.411438642880732,
+  "info_year": {
+    "2021": {
+      "n": 23,
+      "mean_gross_bp": 53.26092881104208,
+      "mean_net_bp": 47.5513760860132
+    },
+    "2022": {
+      "n": 58,
+      "mean_gross_bp": 35.336816100232625,
+      "mean_net_bp": 31.60429093134571
+    },
+    "2023": {
+      "n": 51,
+      "mean_gross_bp": -4.910722340741069,
+      "mean_net_bp": -9.400337292177591
+    },
+    "2024": {
+      "n": 65,
+      "mean_gross_bp": 1.2275457298850125,
+      "mean_net_bp": -0.49707201035550375
+    }
+  }
+}

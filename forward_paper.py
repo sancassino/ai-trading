@@ -158,7 +158,10 @@ def main():
     if "--no-push" not in sys.argv:
         subprocess.run(["git", "-C", DIR, "add", "forward/paper_daily.csv", "forward/paper_trades.csv", "forward/state.json"], check=False)
         subprocess.run(["git", "-C", DIR, "commit", "-q", "-m", msg, "-m", "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"], check=False)
-        subprocess.run(["git", "-C", DIR, "push", "-q", "origin", "HEAD:main"], check=False)
+        for _ in range(3):   # andere agents pushen ook naar main: rebase + opnieuw
+            if subprocess.run(["git", "-C", DIR, "push", "-q", "origin", "HEAD:main"], check=False).returncode == 0:
+                break
+            subprocess.run(["git", "-C", DIR, "pull", "-q", "--rebase", "--autostash", "origin", "main"], check=False)
 
 
 if __name__ == "__main__":

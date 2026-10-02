@@ -1,0 +1,6 @@
+N2 REL_FLAT train gate
+N=112
+mean_bruto_bp=-0.839134229620399
+pair_rt=1.44
+gate_3x=4.32
+result=FAIL

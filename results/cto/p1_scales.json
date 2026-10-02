@@ -1,0 +1,20 @@
+{
+  "when_frozen": "2026-10-01 ~08:57 Europe/Amsterdam (CEST / UTC+2)",
+  "train_window": "2021-01-01..2023-12-31",
+  "method": "eqvol_to_ORB_train_std then recommend_scale; sA/sB absorb 1/2 weights",
+  "target_daily_std_orb_train": 0.002882453400299788,
+  "fA_vol": 1.0,
+  "fB_vol": 0.4221940579220671,
+  "port_recommend_scale": 7.166236958303908,
+  "recommend_binding": "max",
+  "recommend_p95_daily_loss": 0.01639008343535058,
+  "recommend_max_daily_loss": 0.04,
+  "sA": 3.583118479151954,
+  "sB": 1.512771330728709,
+  "max_daily_loss_cap": 0.04,
+  "btc_train_n_trades": 132,
+  "orb_train_n_days": 779,
+  "prereg": "PREREG_FTMO_P1_ORB_BTC",
+  "besluit": "D-096",
+  "note": "Frozen once from train; never re-estimated on reserve."
+}

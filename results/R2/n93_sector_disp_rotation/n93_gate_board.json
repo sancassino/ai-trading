@@ -1,0 +1,39 @@
+{
+  "prereg": "PREREG_FTMO_N93_SECTOR_DISP_ROTATION",
+  "new_family": "R",
+  "config": "lb=10 / disp_fade +1.0/\u22120.5 / XL*\u2192US100cash session-flat 15:30\u219221:00 CET",
+  "rt_bp": 0.66,
+  "gate_bp": 1.98,
+  "stress_gate_bp": 2.9699999999999998,
+  "swap_bp": 0.0,
+  "n_signal_days_train_nonzero": 386,
+  "train": {
+    "label": "train_2021_2023",
+    "n": 309,
+    "mean_bruto": 0.9891,
+    "mean_netto": 0.3291,
+    "t_netto": 0.0533,
+    "t_nw5": 0.0577,
+    "median_bruto": 8.3317,
+    "mean_mae_bp": 80.6306,
+    "n_long": 227,
+    "n_short": 82
+  },
+  "test": {
+    "label": "test_2024",
+    "n": 124,
+    "mean_bruto": -10.9876,
+    "mean_netto": -11.6476,
+    "t_netto": -1.491,
+    "t_nw5": -1.6304,
+    "median_bruto": -8.5088,
+    "mean_mae_bp": 65.7971,
+    "n_long": 78,
+    "n_short": 46
+  },
+  "cost_pass": false,
+  "stress_pass": false,
+  "verdict": "FAIL_COST_GATE",
+  "reserve_2025": "untouched",
+  "note": "U2 owns TRIALS/TRIAL_COUNT append. FAIL_COST_GATE \u2192 no bump (N78/N80). No retune."
+}

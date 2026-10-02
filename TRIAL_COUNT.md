@@ -61,3 +61,25 @@ omdat veel varianten buren van elkaar zijn). Bijwerken na elke nieuwe test.
 | 2026-09-30 | R2/CAT2: C51 (1), C52 (2 varianten), C53 (1), C54 (basis + qa = 2; eerdere 2 rijen ongeldig door future-model-fout, tellen niet) | 6 | 427 |
 | 2026-09-30 | R3/CAT3: C04, C16, C29, C33, C43, C44, C45, C55 (1 variant elk; vehikelrapporten cfd_retail zonder trial) | 8 | 435 |
 | 2026-09-30 | R4/CAT4: C57, C58, C59, C60, C61 (v1.2-diversifiers; screen/frontier/decompositie zonder trial) | 5 | 440 |
+| 2026-09-30 | R5/CAT5: S11 cross-market-replicatie C02 (één familie, 12 markten; regionale C52 informatief zonder trial) | 1 | 441 |
+| 2026-09-30 | R7/CAT7: C67 landenrotatie (C66 VRP-proxy = evidentie zonder trial; C65/C68/PutWrite wachten op data) | 1 | 442 |
+| 2026-09-30 | A4/PREREG_FTMO_C17 amend 5fc3fb9: C17 FOMC op FTMO-index-CFD (kostenpoort STOP, 1 variant) | 1 | 443 |
+| 2026-09-30 | B1/PREREG_FTMO_B1: C05 TSMOM-mix FX6 (kostenpoort STOP, signed-mean poort, 1 variant) | 1 | 444 |
+| 2026-09-30 | A2/PREREG_FTMO_A2: US41 SIP-ORB earnings (kostenpoort STOP, mean-poort; **geen** TRIAL_COUNT++ per PREREG §3) | 0 | 444 |
+| 2026-10-01 | S2/PREREG_S2_LUNCH_OPEN: lunch open-anchor fade US30/US100 (cost-gate PASS + formal trial FAIL_T, 1 variant) | 1 | 445 |
+| 2026-10-01 | N11/PREREG_FTMO_N11: GER40 XETRA ORB (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 446 |
+| 2026-10-01 | N18/PREREG_FTMO_N18: US500 OVN Gap Cont (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 447 |
+| 2026-10-01 | P1/PREREG_FTMO_P1_ORB_BTC: ORB+BTC eqvol reserve one-shot (FAIL, D-096; 1 variant) | 1 | 448 |
+| 2026-10-01 | S2/PREREG_S2_GBPJPY_EU_MOM: Europe-morning session mom (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 449 |
+| 2026-10-01 | N35/PREREG_FTMO_N35: US100 EU→US cont (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 450 |
+| 2026-10-01 | N36/PREREG_FTMO_N36: XAU NY-open drive (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 451 |
+| 2026-10-01 | N40/PREREG_FTMO_N40: GER40 mid-morning mom cont (cost-gate PASS + stress FAIL + formal FAIL_T, 1 variant) | 1 | 452 |
+| 2026-10-01 | N41/PREREG_FTMO_N41: US30 EU→US cont (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 453 |
+| 2026-10-01 | FX_EUR_SHORT/PREREG_FTMO_FX_EUR_SHORT_TSMOM: EURUSD+EURAUD short-only L20/H10 (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 454 |
+| 2026-10-01 | FX_USDJPY_MED/PREREG_FTMO_FX_USDJPY_MED_TSMOM: USDJPY long-only L60/H10 (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 455 |
+| 2026-10-01 | FX_EURJPY_MED/PREREG_FTMO_FX_EURJPY_MED_TSMOM: EURJPY long-only L60/H10 (cost-gate PASS + stress PASS + formal FAIL_T, 1 variant) | 1 | 456 |
+| 2026-10-01 | N78/PREREG_FTMO_N78_VIX_TERM_VOV: US100cash vov10/combo (kostenpoort STOP mean bruto 2.21 < 7.83; **ongeldig/telt niet** per NEXT_STEPS v78 / C-028 — FAIL_COST_GATE ≠ trial) | 0 | 456 |
+| 2026-10-01 | N80/PREREG_FTMO_N80: UKOIL OVN-gap cont EOD-flat (kostenpoort STOP mean bruto 7.56 < 8.13; **ongeldig/telt niet** per NEXT_STEPS v81 / C-029 — FAIL_COST_GATE ≠ trial) | 0 | 456 |
+| 2026-10-01 | N87/PREREG_FTMO_N87: US30cash opening-gap fade |gap|>30bp intradag-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.63 <2.0 train; test N=27 mean -17.71 bp; 1 variant) | 1 | 457 |
+| 2026-10-02 | N92/PREREG_FTMO_N92: US100cash NY-open 2h mom intradag-flat (cost-gate PASS + stress PASS train; formal FAIL_T: t_NW 1.56 <2.0 train; test t_NW 0.51; 1 variant) | 1 | 458 |
+| 2026-10-02 | N93/PREREG_FTMO_N93: SECTOR_DISP_ROTATION US100 session-flat (kostenpoort STOP mean bruto 0.99 < 1.98; **ongeldig/telt niet** per NEXT_STEPS v86 / C-029 — FAIL_COST_GATE ≠ trial) | 0 | 458 |

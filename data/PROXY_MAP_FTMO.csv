@@ -1,0 +1,168 @@
+# FTMO-symbool → langste proxyreeks in de repo (D-097/spoor 6; alleen beschikbaarheid). 'jaren_tm_2024' = jaren historie t/m 2024-12-31.
+ftmo_symbol;categorie;proxy;proxy_start;jaren_tm_2024;10j_plus;m5gz;opmerking
+AAPL;stock;AAPL;1998-01-02;27.0;ja;ja;
+AAVUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+ADAUSD;crypto;ADA_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+ADSGn;stock;ADS.DE;1998-06-24;26.5;ja;nee;
+AIRF;stock;AF.PA;2000-01-03;25.0;ja;nee;
+ALGUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+ALVG;stock;ALV.DE;1998-01-01;27.0;ja;nee;
+AMD;stock;AMD;1998-01-02;27.0;ja;ja;
+AMZN;stock;AMZN;1998-01-02;27.0;ja;ja;
+ARM;stock;ARM;2023-09-14;1.3;nee;nee;
+ASML;stock;ASML;1998-01-02;27.0;ja;ja;
+AUDCAD;fx;FXBIS_AUD+FXBIS_CAD;1971-01-04;54.0;ja;nee;cross uit BIS (lokaal per USD): AUDCAD = FXBIS_CAD / FXBIS_AUD
+AUDCHF;fx;FXBIS_AUD+FXBIS_CHF;1971-01-04;54.0;ja;nee;cross uit BIS (lokaal per USD): AUDCHF = FXBIS_CHF / FXBIS_AUD
+AUDJPY;fx;FXBIS_AUD+FXBIS_JPY;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): AUDJPY = FXBIS_JPY / FXBIS_AUD
+AUDNZD;fx;;;0.0;nee;nee;
+AUDUSD;fx;FX_AUDUSD;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): AUDUSD = 1 / FXBIS_AUD
+AUS200.cash;index;AXJO;1992-11-22;32.1;ja;ja;
+AVAUSD;crypto;AVAX_USD;2020-07-13;4.5;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+AVGO;stock;AVGO;2009-08-06;15.4;ja;ja;
+AZN;stock;AZN;1998-01-02;27.0;ja;ja;
+BA;stock;BA;1998-01-02;27.0;ja;ja;
+BABA;stock;BABA;2014-09-19;10.3;ja;ja;
+BAC;stock;BAC;1998-01-02;27.0;ja;ja;
+BARUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+BAYGn;stock;BAYN.DE;1998-01-01;27.0;ja;nee;
+BCHUSD;crypto;BCH_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+BMW;stock;BMW_DE;1996-11-08;28.1;ja;nee;
+BNBUSD;crypto;BNB_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+BRK.B;stock;BRK-B;1998-01-02;27.0;ja;ja;
+BTCUSD;crypto;BTC_USD;2014-09-17;10.3;ja;ja;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+CADCHF;fx;FXBIS_CAD+FXBIS_CHF;1953-09-01;71.3;ja;nee;cross uit BIS (lokaal per USD): CADCHF = FXBIS_CHF / FXBIS_CAD
+CADJPY;fx;FXBIS_CAD+FXBIS_JPY;1969-12-01;55.1;ja;nee;cross uit BIS (lokaal per USD): CADJPY = FXBIS_JPY / FXBIS_CAD
+CHFJPY;fx;FXBIS_CHF+FXBIS_JPY;1969-12-01;55.1;ja;nee;cross uit BIS (lokaal per USD): CHFJPY = FXBIS_JPY / FXBIS_CHF
+COCOA.c;commodity/metal;COCOA_F;2000-01-03;25.0;ja;nee;
+COFFEE.c;commodity/metal;COFFEE_F;2000-01-03;25.0;ja;nee;
+CORN.c;commodity/metal;CORN_F;2000-07-17;24.5;ja;nee;
+COTTON.c;commodity/metal;COTTON_F;2000-01-03;25.0;ja;nee;
+CSCO;stock;CSCO;1998-01-02;27.0;ja;ja;
+CVX;stock;CVX;1998-01-02;27.0;ja;ja;
+DASHUSD;crypto;DASH_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+DBKGn;stock;DBK.DE;1998-01-01;27.0;ja;nee;
+DIS;stock;DIS;1998-01-02;27.0;ja;ja;
+DOGEUSD;crypto;DOGE_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+DOTUSD;crypto;DOT_USD;2020-08-20;4.4;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+DXY.cash;index;DXY;1971-01-04;54.0;ja;nee;
+ETCUSD;crypto;ETC_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+ETHUSD;crypto;ETH_USD;2017-11-09;7.1;nee;ja;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+EU50.cash;index;STOXX50;2007-03-30;17.8;ja;ja;
+EURAUD;fx;FXBIS_EUR+FXBIS_AUD;1974-06-28;50.5;ja;ja;cross uit BIS (lokaal per USD): EURAUD = FXBIS_AUD / FXBIS_EUR
+EURCAD;fx;FXBIS_EUR+FXBIS_CAD;1974-06-28;50.5;ja;nee;cross uit BIS (lokaal per USD): EURCAD = FXBIS_CAD / FXBIS_EUR
+EURCHF;fx;FXBIS_EUR+FXBIS_CHF;1974-06-28;50.5;ja;ja;cross uit BIS (lokaal per USD): EURCHF = FXBIS_CHF / FXBIS_EUR
+EURCZK;fx;;;0.0;nee;nee;
+EURGBP;fx;FXBIS_EUR+FXBIS_GBP;1974-06-28;50.5;ja;ja;cross uit BIS (lokaal per USD): EURGBP = FXBIS_GBP / FXBIS_EUR
+EURHUF;fx;;;0.0;nee;nee;
+EURJPY;fx;FXBIS_EUR+FXBIS_JPY;1974-06-28;50.5;ja;ja;cross uit BIS (lokaal per USD): EURJPY = FXBIS_JPY / FXBIS_EUR
+EURNOK;fx;FXBIS_EUR+FXBIS_NOK;1974-06-28;50.5;ja;nee;cross uit BIS (lokaal per USD): EURNOK = FXBIS_NOK / FXBIS_EUR
+EURNZD;fx;;;0.0;nee;nee;
+EURPLN;fx;;;0.0;nee;nee;
+EURUSD;fx;FX_EURUSD;1999-01-04;26.0;ja;ja;cross uit BIS (lokaal per USD): EURUSD = 1 / FXBIS_EUR
+FDX;stock;FDX;1998-01-02;27.0;ja;ja;
+FRA40.cash;index;CAC40;1990-03-01;34.8;ja;ja;
+GALUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+GBPAUD;fx;FXBIS_GBP+FXBIS_AUD;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): GBPAUD = FXBIS_AUD / FXBIS_GBP
+GBPCAD;fx;FXBIS_GBP+FXBIS_CAD;1953-08-10;71.4;ja;nee;cross uit BIS (lokaal per USD): GBPCAD = FXBIS_CAD / FXBIS_GBP
+GBPCHF;fx;FXBIS_GBP+FXBIS_CHF;1953-09-01;71.3;ja;nee;cross uit BIS (lokaal per USD): GBPCHF = FXBIS_CHF / FXBIS_GBP
+GBPJPY;fx;FXBIS_GBP+FXBIS_JPY;1969-12-01;55.1;ja;ja;cross uit BIS (lokaal per USD): GBPJPY = FXBIS_JPY / FXBIS_GBP
+GBPNZD;fx;;;0.0;nee;nee;
+GBPUSD;fx;FX_GBPUSD;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): GBPUSD = 1 / FXBIS_GBP
+GE;stock;GE;1998-01-02;27.0;ja;ja;
+GER40.cash;index;DAX;1987-12-30;37.0;ja;ja;
+GM;stock;GM;2010-11-18;14.1;ja;nee;
+GME;stock;GME;2002-02-13;22.9;ja;ja;
+GOOG;stock;GOOG;2004-08-19;20.4;ja;ja;
+GRTUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+HEATOIL.c;commodity/metal;HEATOIL_F;2000-09-01;24.3;ja;nee;
+HK50.cash;index;HSI;1986-12-31;38.0;ja;ja;
+IBE;stock;IBE.MC;2000-01-03;25.0;ja;nee;
+IBM;stock;IBM;1998-01-02;27.0;ja;ja;
+ICPUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+IMXUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+INTC;stock;INTC;1998-01-02;27.0;ja;ja;
+JNJ;stock;JNJ;1998-01-02;27.0;ja;ja;
+JP225.cash;index;N225;1965-01-05;60.0;ja;ja;
+JPM;stock;JPM;1998-01-02;27.0;ja;ja;
+KO;stock;KO;1998-01-02;27.0;ja;ja;
+LMT;stock;LMT;1998-01-02;27.0;ja;ja;
+LNKUSD;crypto;LINK_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+LTCUSD;crypto;LTC_USD;2014-09-17;10.3;ja;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+LVMH;stock;MC.PA;2000-01-03;25.0;ja;nee;
+MANUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+MBG;stock;MBG_DE;1996-10-30;28.2;ja;nee;
+MCD;stock;MCD;1966-07-05;58.5;ja;nee;
+META;stock;META;2012-05-18;12.6;ja;ja;
+MSFT;stock;MSFT;1998-01-02;27.0;ja;ja;
+MSTR;stock;MSTR;1998-06-11;26.6;ja;ja;
+N25.cash;index;AEX;1992-10-12;32.2;ja;ja;
+NATGAS.cash;commodity/metal;NATGAS_F;2000-08-30;24.3;ja;nee;
+NEOUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+NERUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+NFLX;stock;NFLX;2002-05-23;22.6;ja;ja;
+NKE;stock;NKE;1998-01-02;27.0;ja;ja;
+NVDA;stock;NVDA;1999-01-22;25.9;ja;ja;
+NZDCAD;fx;;;0.0;nee;nee;
+NZDCHF;fx;;;0.0;nee;nee;
+NZDJPY;fx;;;0.0;nee;nee;
+NZDUSD;fx;FX_NZDUSD;1971-01-04;54.0;ja;ja;
+PFE;stock;PFE;1998-01-02;27.0;ja;ja;
+PLTR;stock;PLTR;2020-09-30;4.3;nee;ja;
+QCOM;stock;QCOM;1998-01-02;27.0;ja;ja;
+RACE;stock;RACE;2015-10-21;9.2;nee;ja;
+RTX;stock;RTX;1998-01-02;27.0;ja;ja;
+SAN;stock;SAN;1987-07-30;37.4;ja;nee;
+SANUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+SBUX;stock;SBUX;1998-01-02;27.0;ja;ja;
+SIEGn;stock;SIE_DE;1996-11-08;28.1;ja;nee;
+SNOW;stock;SNOW;2020-09-16;4.3;nee;nee;
+SOLUSD;crypto;SOL_USD;2020-04-10;4.7;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+SOYBEAN.c;commodity/metal;SOY_F;2000-09-15;24.3;ja;nee;
+SPCX;stock;;;0.0;nee;nee;
+SPN35.cash;index;IBEX;1993-07-12;31.5;ja;ja;
+SUGAR.c;commodity/metal;SUGAR_F;2000-03-01;24.8;ja;nee;
+T;stock;T;1998-01-02;27.0;ja;ja;
+TSLA;stock;TSLA;2010-06-29;14.5;ja;ja;
+TTE;stock;TTE;1991-10-25;33.2;ja;nee;
+UK100.cash;index;FTSE;1984-01-03;41.0;ja;ja;
+UKOIL.cash;commodity/metal;BRENT_F;2007-07-30;17.4;ja;ja;
+UNIUSD;crypto;UNI_USD;2020-09-18;4.3;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+US100.cash;index;NDX;1985-10-01;39.2;ja;ja;
+US2000.cash;index;RUT;1987-09-10;37.3;ja;ja;
+US30.cash;index;DJI;1992-01-02;33.0;ja;ja;
+US500.cash;index;SPX_TR;1988-01-04;37.0;ja;ja;
+USDCAD;fx;FX_USDCAD;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): USDCAD = FXBIS_CAD / 1
+USDCHF;fx;FX_USDCHF;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): USDCHF = FXBIS_CHF / 1
+USDCNH;fx;FXBIS_CNY;1981-01-02;44.0;ja;nee;cross uit BIS (lokaal per USD): USDCNH = FXBIS_CNY / 1
+USDCZK;fx;;;0.0;nee;nee;
+USDHKD;fx;FXBIS_HKD;1981-01-02;44.0;ja;nee;cross uit BIS (lokaal per USD): USDHKD = FXBIS_HKD / 1
+USDHUF;fx;;;0.0;nee;nee;
+USDILS;fx;;;0.0;nee;nee;
+USDJPY;fx;FX_USDJPY;1971-01-04;54.0;ja;ja;cross uit BIS (lokaal per USD): USDJPY = FXBIS_JPY / 1
+USDMXN;fx;FXBIS_MXN;1954-04-19;70.7;ja;nee;cross uit BIS (lokaal per USD): USDMXN = FXBIS_MXN / 1
+USDNOK;fx;FXBIS_NOK;1953-12-14;71.0;ja;nee;cross uit BIS (lokaal per USD): USDNOK = FXBIS_NOK / 1
+USDPLN;fx;;;0.0;nee;nee;
+USDSEK;fx;FXBIS_SEK;1953-09-01;71.3;ja;nee;cross uit BIS (lokaal per USD): USDSEK = FXBIS_SEK / 1
+USDSGD;fx;FXBIS_SGD;1981-01-02;44.0;ja;nee;cross uit BIS (lokaal per USD): USDSGD = FXBIS_SGD / 1
+USDZAR;fx;FXBIS_ZAR;1970-01-02;55.0;ja;nee;cross uit BIS (lokaal per USD): USDZAR = FXBIS_ZAR / 1
+USOIL.cash;commodity/metal;WTI_F;2000-08-23;24.4;ja;ja;
+V;stock;V;2008-03-19;16.8;ja;ja;
+VECUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+VOWG_p;stock;VOW3.DE;1998-07-22;26.4;ja;nee;
+WHEAT.c;commodity/metal;WHEAT_F;2000-07-17;24.5;ja;nee;
+WMT;stock;WMT;1998-01-02;27.0;ja;ja;
+XAGAUD;commodity/metal;SILVER_F+FXBIS_AUD;2000-08-30;24.3;ja;nee;
+XAGEUR;commodity/metal;SILVER_F+FXBIS_EUR;2000-08-30;24.3;ja;nee;
+XAGUSD;commodity/metal;SILVER_F;2000-08-30;24.3;ja;ja;
+XAUAUD;commodity/metal;GOLD_F+FXBIS_AUD;2000-08-30;24.3;ja;nee;
+XAUEUR;commodity/metal;GOLD_F+FXBIS_EUR;2000-08-30;24.3;ja;nee;
+XAUUSD;commodity/metal;GOLD_F;2000-08-30;24.3;ja;ja;
+XCUUSD;commodity/metal;COPPER_F;2000-08-30;24.3;ja;nee;
+XLMUSD;crypto;XLM_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+XMRUSD;crypto;XMR_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+XOM;stock;XOM;1998-01-02;27.0;ja;ja;
+XPDUSD;commodity/metal;PALL_F;1998-09-28;26.3;ja;nee;
+XPTUSD;commodity/metal;PLAT_F;1997-10-29;27.2;ja;nee;
+XRPUSD;crypto;XRP_USD;2017-11-09;7.1;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+XTZUSD;crypto;;;0.0;nee;nee;crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)
+ZM;stock;ZM;2019-04-18;5.7;nee;ja;

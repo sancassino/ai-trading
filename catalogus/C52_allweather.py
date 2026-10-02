@@ -7,22 +7,22 @@ RULE = {"id": "C52_allweather", "naam": "All-weather / risicopariteit: aandelen,
         "bron": "Dalio (All Weather); Asness–Frazzini–Pedersen (2012) risk parity", "varianten": {"basis": {}, "lang": {"assets": ["SPY", "BOND10_SYN", "GOLD_F"], "start_jaar": 2001, "benchmark": {"naam": "60/40 SPY/BOND10_SYN", "gewichten": {"SPY": 0.6, "BOND10_SYN": 0.4}}}}}
 def positions_all(data, p):
     names = p.get("assets", ["SPY", "IEF", "GLD", "DBC"])
-    allnames = list(data)
+    allnames = list(data); W = int(p.get("win", 60)); TGT = p.get("tgt", 0.08); GM = p.get("gold_mult", 1.0)   # R6: gevoeligheidsparameters; defaults = bevroren regel
     names = [n for n in names if n in data]
     ret = {}
     for n in names:
         c = data[n]["close"]; ret[n] = dict(zip(data[n]["date"][1:], c[1:] / c[:-1] - 1))
     cal = sorted(set().union(*[set(data[n]["date"]) for n in names])); me = month_end(np.array(cal)); w = {}
     for k, d in enumerate(cal):
-        if not me[k] or k < 61:
+        if not me[k] or k < W + 1:
             continue
-        win = cal[k - 60:k + 1]
+        win = cal[k - W:k + 1]
         avail = [n for n in names if all(x in ret[n] for x in win[1:])]
         if len(avail) < 2:
             continue
         R = np.array([[ret[n][x] for x in win[1:]] for n in avail]); sd = R.std(axis=1, ddof=1) * np.sqrt(252)
-        iv = 1 / sd; wt = iv / iv.sum(); sp = float(np.sqrt(wt @ (np.cov(R) * 252) @ wt))
-        sc = min(1.0, 0.08 / sp)
+        iv = 1 / sd; iv = np.array([v * (GM if n in ("GOLD_F", "GLD") else 1.0) for v, n in zip(iv, avail)]); wt = iv / iv.sum(); sp = float(np.sqrt(wt @ (np.cov(R) * 252) @ wt))
+        sc = min(1.0, TGT / sp)
         w[d] = {n: float(a * sc) for n, a in zip(avail, wt)}
     pos = weights_to_positions({n: data[n] for n in names}, w)
     for n in allnames:

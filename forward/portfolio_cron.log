@@ -1,0 +1,26 @@
+/home/sandro_cassino/ai-trading/forward_portfolio.py:104: RuntimeWarning: Mean of empty slice
+  avg = np.nanmean(ks * X, axis=0)
+/home/sandro_cassino/ai-trading/catalogus/C33_trend_lowvol.py:13: RuntimeWarning: divide by zero encountered in divide
+  return hold_monthly(s * np.minimum(3.0, 0.10 / sg) * calm, month_end(df["date"]))
+forward_portfolio[1]: 0 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 0
+forward_portfolio[2]: 0 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 0
+port3 forward: 0 nieuwe dag(en)
+port4 forward: 0 nieuwe dag(en)
+/home/sandro_cassino/ai-trading/forward_portfolio.py:104: RuntimeWarning: Mean of empty slice
+  avg = np.nanmean(ks * X, axis=0)
+/home/sandro_cassino/ai-trading/catalogus/C33_trend_lowvol.py:13: RuntimeWarning: divide by zero encountered in divide
+  return hold_monthly(s * np.minimum(3.0, 0.10 / sg) * calm, month_end(df["date"]))
+forward_portfolio[1]: 0 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 0
+forward_portfolio[2]: 0 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 0
+port3 forward: 0 nieuwe dag(en)
+port4 forward: 0 nieuwe dag(en)
+Created autostash: 2f7f780
+Applied autostash.
+/home/sandro_cassino/ai-trading/forward_portfolio.py:104: RuntimeWarning: Mean of empty slice
+  avg = np.nanmean(ks * X, axis=0)
+/home/sandro_cassino/ai-trading/catalogus/C33_trend_lowvol.py:13: RuntimeWarning: divide by zero encountered in divide
+  return hold_monthly(s * np.minimum(3.0, 0.10 / sg) * calm, month_end(df["date"]))
+forward_portfolio[1]: 1 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 1
+forward_portfolio[2]: 1 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 1
+port3 forward: 1 nieuwe dag(en)
+port4 forward: 1 nieuwe dag(en)

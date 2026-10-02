@@ -1,0 +1,5 @@
+N1 OPEN_FADE train gate
+N=0
+mean_bruto_bp=nan
+note=zero triggers: 30-min drive never reaches 1.5× D1-ATR (max |drive|/atr_bp ≈ 0.29 on US100 train)
+result=FAIL_STOP

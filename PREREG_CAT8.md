@@ -1,0 +1,6 @@
+# PREREG CAT8 — run 8: S11-secundair (EM) + USD-rijen STI/KOSPI/TWII (D-071.3; R2-006 afgehandeld door Uitvoerder-1: BIS-FX) — vastgelegd vóór berekening, 2026-09-30 (≈ 20:30 Amsterdam)
+
+Uitbreiding van PREREG_CAT5 (dezelfde bevroren regel, **geen nieuwe trial**, informatief; telt niet mee in de beslisregel/het label van run 5). Ontdekking ≤ 2024-12-31.
+- **Markten (vooraf):** EM secundair: BVSP (vanaf 1995-01-01; BRL-hyperinflatie ervoor), MXX (vanaf 1997-01-01), JKSE (vanaf 1990), SENSEX (vanaf 1997); aanvulling USD-rijen voor STI (SGD), KOSPI (KRW), TWII (TWD). FX = BIS WS_XRU (`FXBIS_*`, lokale valuta per USD, dagelijks), ffill zonder lookahead.
+- **Regel:** C02 Faber exact als CAT5 (10-mnd-SMA op maandeinden, long/cash), **in USD-termen** (signaal én rendement op de USD-koers = lokale prijsindex ÷ USD/lokaal), **USD-rf (gelabeld)**, kosten 13 bp/TER 0,07%; B&H in USD. Per markt: SR Faber/B&H, ΔSR, maxDD, ΔmaxDD, NW-t verschil, per decennium; gepoold (EM-4, en de 7 markten samen) met jaar-blok-bootstrap-BI.
+- **Lezing vooraf:** EM-drawdowns (1997–98 Azië, 2008, BRL/MXN-crises) zijn dieper → grotere ΔmaxDD verwacht; ΔSR ≈ 0 ± 0,3; geen label 'gerepliceerd' uit deze markten (te veel valuta-ruis); alleen toevoeging aan het cross-market-beeld.

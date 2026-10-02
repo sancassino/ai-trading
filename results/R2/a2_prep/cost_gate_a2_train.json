@@ -1,0 +1,34 @@
+{
+  "prereg": "PREREG_FTMO_A2",
+  "variant": "b (stop=10% ATR14, OR-direction, EOD)",
+  "train": "2021-01-01..2023-12-31",
+  "reserve_2025": "onaangeraakt",
+  "n_trades": 365,
+  "missing_m5": [],
+  "mean_bruto_bp": 3.7720842999262794,
+  "median_bruto_bp": -23.77761611211282,
+  "mean_table_rt_bp": 8.913753424657534,
+  "gate_3x_mean_rt_bp": 26.7412602739726,
+  "mean_bar_cost_bp": 1.5481164789239013,
+  "mean_bruto_without_top5pct_winners_bp": -25.87692676095424,
+  "pass_mean_gate": false,
+  "pass_plus50pct_spread_sensitivity": false,
+  "by_year": {
+    "2021": {
+      "n": 89,
+      "mean_bruto_bp": 38.82985854852608,
+      "median_bruto_bp": -19.653940191837194
+    },
+    "2022": {
+      "n": 138,
+      "mean_bruto_bp": 0.6846275638264409,
+      "median_bruto_bp": -29.015169633948567
+    },
+    "2023": {
+      "n": 138,
+      "mean_bruto_bp": -15.75018293589695,
+      "median_bruto_bp": -20.74087865973795
+    }
+  },
+  "verdict": "FAIL"
+}

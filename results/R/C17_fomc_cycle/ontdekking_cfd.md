@@ -11,5 +11,5 @@ Bron: Cieslak, Morse, Vissing-Jorgensen (2019)
 - per jaar (%): 1994:-1.5 1995:+1.2 1996:+6.7 1997:+20.7 1998:+40.5 1999:+20.3 2000:+3.8 2001:-4.2 2002:-30.5 2003:+40.4 2004:-5.4 2005:+8.3 2006:+0.5 2007:+9.1 2008:+7.2 2009:+16.6 2010:+13.3 2011:-3.7 2012:+16.2 2013:+17.5 2014:-0.7 2015:+11.9 2016:+9.8 2017:+6.1 2018:-17.5 2019:+10.0 2020:+9.2 2021:+3.9 2022:+0.9 2023:+8.4 2024:+4.9
 - kosten: bruto +1701.1% | spread/commissie 33.0% | financiering +664.8% (som over instrument-dagen) → kostenpoort (bruto ≥ 3× spread/commissie) DOOR
 - 5-jaarsvensters positief: 100% (6/6)
-- G-benchmark (vehikel cfd): regel SR +0.52, CAGR +6.3%, maxDD 41.7% | buy-and-hold SR +0.26, CAGR +2.9%, maxDD 73.4% → BETER (SR én maxDD)
+- G-benchmark (vehikel cfd): regel SR +0.52, CAGR +6.3%, maxDD 41.7%, Calmar 0.15 | buy-and-hold (gelijk gewogen) SR +0.26, CAGR +2.9%, maxDD 73.4%, Calmar 0.04 → BETER (SR én maxDD)
 - beslissing: afgewezen (poort; min(NW, bootstrap) ≥ 3; H1, H2 > 0; SR ≥ 0,3; ≥ 60% 5j-vensters +; N ≥ 500 of lage omloop)

@@ -1,0 +1,58 @@
+{
+  "t_ok": false,
+  "cost_ok": true,
+  "skew_ok": true,
+  "ftmo": {
+    "p95_daily_loss_frac": 0.015287,
+    "p95_daily_loss_ok": true,
+    "train_only": {
+      "p_pass_1": 0.9948,
+      "p_pass_2": 0.9606,
+      "p_survive": 0.400977,
+      "exp_payout_monthly": 615.546329,
+      "net_ev": 13522.255886,
+      "attempts_mean": 2.3164,
+      "horizon_months": 24.0,
+      "n_funded": 4803
+    },
+    "train_test_sens": {
+      "p_pass_1": 0.9912,
+      "p_pass_2": 0.938,
+      "p_survive": 0.246218,
+      "exp_payout_monthly": 521.316439,
+      "net_ev": 10895.806524
+    },
+    "net_ev_monthly": 563.43,
+    "net_ev_per_attempt": 5837.62,
+    "ev_per_attempt_ok": true
+  },
+  "stats": {
+    "train": {
+      "N_trades": 233,
+      "N_days": 191,
+      "mean_netto_trade": 4.1761,
+      "mean_day_netto_bp": 5.0945,
+      "std_day_netto_bp": 61.8293,
+      "t_day_clustered": 1.1387,
+      "skew_day": 2.4325,
+      "cost_share": 0.0269,
+      "mean_bruto": 4.7154,
+      "frac_cost_of_bruto": 0.1144,
+      "window": "train"
+    },
+    "test": {
+      "N_trades": 100,
+      "N_days": 80,
+      "mean_netto_trade": 0.1662,
+      "mean_day_netto_bp": 0.2077,
+      "std_day_netto_bp": 36.0718,
+      "t_day_clustered": 0.0515,
+      "skew_day": 0.4378,
+      "cost_share": 0.0419,
+      "mean_bruto": 0.7149,
+      "frac_cost_of_bruto": 0.7676,
+      "window": "test"
+    }
+  },
+  "outcome": "FAIL_T"
+}
