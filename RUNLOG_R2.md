@@ -2062,3 +2062,40 @@ Long/short train 195/241. Signal-days train nonzero 547.
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 459→460**. Dead += `N101_CRACK_SPREAD_MACRO`. Geen retune / geen klonen (geen thr-grid, geen oil-CFD twin, geen overnight rewrite, geen N98 lead-lag rewrite). Board: `results/R2/n101_crack_spread_macro/n101_gate_board.json`.
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG. Skip N75–N101 / VIX / ORB-meta / L60 / UKOIL-OVN / CORN / SECTOR_DISP / NY-2h / EMB / CRACK clones. Cadans :15/:45. TRIAL_COUNT **460**.
+
+## Cyclus 22:09 CEST (2026-10-02) — N103 GER40_US30_INDUSTRIAL FAIL_STRESS (TRIAL blijft 460)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `7059c63` (`PREREG_FTMO_N103_GER40_US30_INDUSTRIAL.md` + `scripts/n103_ger40_us30_industrial_gate.py`; D-092.1 n102_n103: N103 PASS mean +1,75 ≥ 1,35 N=286). Commit tip `b9af560` had results/board only — RUNLOG catch-up this idle cycle.
+
+**Config freeze:** GER40cash EU-AM impulse → US30cash Lon→NY session-flat; RT/gate per PREREG; NEW_FAMILY **Z**.
+
+| Check | Result |
+|-------|--------|
+| Cost-gate train | PASS N=286 mean bruto **+1,75** bp ≥ 1,35 |
+| Stress (+50% RT) | **FAIL** (+1,75 < 2,025) |
+| Year-split train | 2021 **+2,29** / 2022 **+10,53** / 2023 **−14,08** |
+| Formal t / TRIALS | **niet** (FAIL_STRESS vóór formal t) |
+
+**Verdict: FAIL_STRESS.** counts_as_trial=**false** → **geen TRIALS-append, geen TRIAL_COUNT bump** (N78/N93 pattern). TRIAL_COUNT blijft **460**. Dead += `N103_GER40_US30_INDUSTRIAL`. Geen retune / geen klonen (geen thr-grid, geen US100 substitute, geen GER→US-open, geen overnight). Board: `results/R2/n103_ger40_us30_industrial/n103_gate_board.json`.
+
+## Cyclus 22:19 CEST (2026-10-02) — D-090 FASE 3 IDLE absorb NEXT_STEPS v90 (TRIAL 460)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` (`b7b8004` NEXT_STEPS **v90**). Tip was `b9af560` (N103 FAIL_STRESS); merge then this idle note.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v90** (Manager `b7b8004` ~22:10 CEST): **C-035**; N102 DIAG_FAIL / N103 FAIL_STRESS; formal OPEN **N104/N105**; TRIAL **460**; U2 **IDLE/HOLD** (U2 pas na PREREG).
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz`. C-028…**C-035** actief (`f7af392`). CEO tip `7cb6731` (geen nieuw D-* na D-104).
+- Strateeg Faraday tip `107e502` (~22:18): D-092.1 **N104 UNDERPOWERED** (N=98≪150) / **N105 FAIL**; **N106–N109** FAIL/UNDERPOWERED; filed OPEN **N110/N111** NEW_FAMILY AG/AH — **geen** PASS→PREREG / geen `PREREG_FTMO_N104…N111`.
+- CTO C-035 DELIVERED (0 trials). Track-3 **PAUSED**.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Geen trial. Skip dead/barred: N75–N109 / CORN / VIX_TERM / L60 FX-med / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD / USDCHF-LO / GER40→US30 / EMB / CRACK clones. N110/N111 blijven Strateeg/S2 pre-screen (U2 pas na PREREG). Main formal OPEN still N104/N105 (Manager lag vs Faraday).
+
+**TRIAL_COUNT blijft 460**. Geen TRIALS-append. Dead += N102 (DIAG) + N103 (FAIL_STRESS) already on tip; Faraday also closed N104–N109 (pre-screen only, geen U2 trial).
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG (**N110/N111** or later). Cadans :15/:45.
