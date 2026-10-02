@@ -1966,3 +1966,22 @@ counts_as_trial = **true**. **TRIAL_COUNT = 457**. Dead += N87_US30_GAP_FADE. Ge
 **Kill circuit:** N92 = next cost-PASS→FAIL_T na N87 → streak blijft ≥5; pivot **ON** (bar L60/ORB-meta/VIX/UKOIL-OVN/N87 clones; Strateeg ≥2 NEW_FAMILY if N92 dies — per v84).
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG (Strateeg replacements / CEO lat-B). Cadans :15/:45.
+
+## Cyclus 20:58 CEST (2026-10-02) — N93 SECTOR_DISP_ROTATION FAIL_COST_GATE (TRIAL_COUNT blijft 458)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** FF-merge `origin/main` (`b83edc9` NEXT_STEPS **v85**). PREREG vóór resultaat: `PREREG_FTMO_N93_SECTOR_DISP_ROTATION.md` + source pointer from Faraday `f217478` (S2 Lane-A `fde4a15`); script `scripts/n93_sector_disp_rotation_gate.py` frozen vóór run.
+
+**Config freeze:** XL* (9 sector ETFs) lb=10 / disp_fade thr +1,0 / −0,5 → US100cash session-flat **15:30→21:00 CET**; RT 0,66 bp; gate **1,98**; stress 2,97; swap=0 (D-100). NEW_FAMILY **R**. Lane-A day_t 2,11 / mean 6,02 = overnight Yahoo proxy — **niet** formele PASS.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 309 | **+0,99 bp** | +0,33 bp | 0,05 / 0,06 | **FAIL** (<1,98); N≥150 ✔ |
+| Test 2024 (info) | 124 | −10,99 bp | −11,65 bp | −1,49 / −1,63 | n/a (cost-gate STOP) |
+
+Year-split bruto train: 2021 +2,03 (n=46) / 2022 −5,24 (n=125) / 2023 +6,28 (n=138). Long/short train 227/82.
+
+**Verdict: FAIL_COST_GATE.** counts_as_trial=**false** → **geen TRIALS-append, geen TRIAL_COUNT bump** (N78/N80 erratum). TRIAL_COUNT blijft **458**. Dead += `N93_SECTOR_DISP_ROTATION`. Geen retune / geen klonen (geen thr-grid, geen overnight rewrite, geen US500-first). Board: `results/R2/n93_sector_disp_rotation/n93_gate_board.json`.
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG. Skip N75–N93 / VIX / ORB-meta / L60 / UKOIL-OVN / CORN / NY-2h clones.
