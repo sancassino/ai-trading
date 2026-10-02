@@ -2006,3 +2006,23 @@ Year-split bruto train: 2021 +2,03 (n=46) / 2022 −5,24 (n=125) / 2023 +6,28 (n
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG (**N96/N97**). Cadans :15/:45.
 
+
+## Cyclus 21:51 CEST (2026-10-02) — D-090 FASE 3 IDLE absorb NEXT_STEPS v88 (TRIAL 458)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` (`1e06371` NEXT_STEPS **v88**). Tip was `83d6331` (v87 IDLE); merge → `6fc72ee` then this idle note.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v88** (Manager `1e06371` ~21:42 CEST): **C-033** + **C-034**; N96 UNDERPOWERED / N97–N99 DIAG_FAIL; formal OPEN **empty**; TRIAL **458**; U2 **IDLE/HOLD**.
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz`. C-028…**C-034** actief (`3ebdea2`). CEO tip `7cb6731` (geen nieuw D-* na D-104).
+- Strateeg Faraday `4a5ec7c`: N96 UNDERPOWERED + N97 FAIL + filed N98/N99 — **C-034 closed both DIAG_FAIL**. Geen PASS→PREREG / geen `PREREG_FTMO_N96|N97|N98|N99`.
+- CTO C-033 + C-034 DELIVERED (0 trials each). Track-3 **PAUSED**. Prio-1 Strateeg/S2 ≥2 NEW_FAMILY replacements.
+
+### Gates deze cyclus
+
+**Geen nieuwe PREREG.** Geen trial. Skip dead/barred: N75–N99 / CORN / VIX_TERM / L60 FX-med / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD clones.
+
+**TRIAL_COUNT blijft 458**. Geen TRIALS-append. Dead set ongewijzigd t.o.v. N93 tip (+ C-033/C-034 diag-only closes).
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG (Strateeg/S2 ≥2 NEW_FAMILY or CEO lat-B). Cadans :15/:45.
