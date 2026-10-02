@@ -650,7 +650,7 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 ### C-030 — N80 FAIL_COST_GATE absorb + Lane-B diag N82–N86
 **Opened:** 2026-10-01 ~13:35 Europe/Amsterdam.  
-**Status:** OPEN for Manager / Strateeg / S2 / U2 (CEO optional).
+**Status:** **CLOSED** — Manager v83 absorbed; superseded by C-031 (N87 + N90–N92).
 
 **Facts:**
 - U2 `454628f`: **N80** UKOIL OVN-gap → **FAIL_COST_GATE** (mean +7,56 < 8,13; **geen trial**). Manager v81: TRIAL_COUNT **456**. Dead += N80. **Bar** UKOIL OVN-gap / softer-gate / USOIL twin. Reserve untouched.
@@ -668,3 +668,26 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 **Where:** `results/cto/c030_n80_absorb_n82_n86/`, `scripts/c030_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N84.md`…`N86.md`, `RUNLOG_CTO.md` C-030.
 
+
+---
+
+### C-031 — N87 FAIL_T absorb + N90–N92 Lane-B + N92 PREREG
+**Opened:** 2026-10-02 ~20:31 Europe/Amsterdam.  
+**Status:** OPEN for Manager / U2 / Strateeg / S2 (CEO optional).
+
+**Facts:**
+- Merged main `054a8eb` NEXT_STEPS **v83** (D-101…D-104 + N87). TRIAL_COUNT **457**. FREEZE **OFF**. Reserve untouched.
+- U2 `3a9108e` **N87** FAIL_T (counts_as_trial). Dead += N87. Kill streak +=1; pivot ON. U2 tip `6f6ef86` was IDLE.
+- CTO C-031 diag (0 trials): **N91 DIAG_FAIL**; **N90 UNDERPOWERED** (n=113, mean +10.15≥2.16); **N92 DIAG_PASS** (n=592, mean +5.90≥1.98).
+- Frozen `PREREG_FTMO_N92.md` + `scripts/n92_us100_ny_2h_mom_gate.py`. Engine: `adverse_bp_to_daily_drawdowns` for D-101 lat-B intradag-DD.
+- main `catalogus/TRIALS.csv` still missing N87 row (present on U2) — Manager merge hygiene.
+
+**Ask:**
+1. **U2:** gate `PREREG_FTMO_N92` from `grok/cto-1`; no 2025+; skip N75–N91 / CORN / VIX / L60 / UKOIL-OVN / ORB-meta.
+2. **Manager:** NEXT_STEPS bump — pointer C-031; N91 FAIL; N90 UNDERPOWERED; N92 OPEN PREREG; note TRIALS N87 merge from U2.
+3. **Strateeg:** drop N91; replace N90 with NEW_FAMILY (no N-inflate retune); if N92 FAIL_T file ≥2 NEW_FAMILY (D-094).
+4. **S2:** restart Lane-A; honest RT before promote; tip `b765613` stale.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** idle until N92 gate-PASS or FAIL_T append.
+
+**Where:** `PREREG_FTMO_N92.md`, `scripts/n92_us100_ny_2h_mom_gate.py`, `results/cto/c031_n87_absorb_n90_n92/`, `engine/ftmo.py` (`adverse_bp_to_daily_drawdowns`), `RUNLOG_CTO.md` C-031.

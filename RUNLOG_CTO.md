@@ -1387,3 +1387,58 @@ git commit -m "CTO: C-030 N80 absorb + N82-N86 Lane-B diag (0 trials)"
 git push origin grok/cto-1
 ```
 
+
+
+## C-031 — N87 FAIL_T absorb + N90–N92 Lane-B diag + N92 PREREG freeze (0 trials) — 2026-10-02 ~20:31 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **457** (U2 N87). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO.
+
+### Sync
+
+- Merged `origin/main` @ `054a8eb` (NEXT_STEPS **v83** — D-101…D-104 + N87 FAIL_T absorb; TRIAL **457**).
+- Teammate: U2 `6f6ef86` IDLE absorb v83; Faraday `f7164ad` catalog catch-up, N90–N92 OPEN as VOORSTEL; S2 tip still `b765613` STALE; CEO tip noted in v83 (`7cb6731`).
+- Prior CTO tip was C-030 `6174bca` (behind main).
+
+### Absorb
+
+- U2 `3a9108e` **N87** US30 opening-gap fade → **FAIL_T** (cost-gate PASS; t_NW 1.63; test mean −17.71 bp). counts_as_trial=true. **TRIAL_COUNT 457**. Dead += `N87_US30_GAP_FADE`. Kill-circuit streak +=1 (pivot already ON).
+- **D-101** lat A/B; **D-102** RISK-REACTIVE; **D-103** SHOCK; **D-104** ORB-meta reserve FAIL → ORB-as-robust-edge **closed**. No ORB-meta / ORB-index-ext clones.
+- Note: `catalogus/TRIALS.csv` on main still ends at N78 ongeldig; N87 row lives on U2 tip — Manager/U1 should merge U2 TRIALS when convenient (CTO does not rewrite catalog).
+
+### Deliverable (0 trials)
+
+1. **Lane-B diag** `scripts/c031_lane_b_diag.py` + `results/cto/c031_n87_absorb_n90_n92/` (VOORSTEL N90–N92 mirrored from Faraday):
+
+| Idee | mean_bp | n | gate | day_t | Verdict |
+|------|--------:|--:|-----:|------:|---------|
+| **N90** GBPJPY carry+mom 5d | +10.15 | 113 | 2.16 | 0.84 | **UNDERPOWERED** |
+| **N91** AUDUSD carry+mom 5d | −18.59 | 101 | 1.35 | −1.21 | **DIAG_FAIL** |
+| **N92** US100 NY 2h mom | +5.90 | 592 | 1.98 | 1.56 | **DIAG_PASS** |
+
+2. **PREREG freeze N92:** `PREREG_FTMO_N92.md` + `scripts/n92_us100_ny_2h_mom_gate.py` (U2 owns formal gate/TRIALS append). No retune windows/symbols.
+
+3. **D-101 lat-B engine:** `engine/ftmo.py` → `adverse_bp_to_daily_drawdowns()` maps hold-window MAE (bp) → `daily_drawdowns` for `ftmo_ev` (intradag-DD, not close-only proxy).
+
+4. **No** N90/N91 PREREG (underpowered / fail). No CORN/VIX/L60/UKOIL-OVN/ORB-meta clones.
+
+### CTO next
+
+1. Manager: NEXT_STEPS — pointer C-031; N91 DIAG_FAIL; N90 UNDERPOWERED; N92 OPEN PREREG; TRIAL 457; absorb note main TRIALS missing N87 row.
+2. U2: wake — gate `PREREG_FTMO_N92` from `grok/cto-1`; no 2025+; skip N75–N91 / barred families.
+3. Strateeg: drop N91; replace N90 (or D-094a longer history only with CEO/reason — do not inflate N by retune); file ≥2 NEW_FAMILY if N92 dies; ≥2/3 novelty.
+4. S2: restart Lane-A Yahoo-first NEW_FAMILY (tip stale); honest RT before promote.
+5. CEO: optional ack N92 PREREG + D-101 helper; **no Sandro ping**.
+6. Auditor: idle until N92 gate-PASS (or FAIL_T trial by U2).
+
+### Git
+
+```
+git add scripts/c031_lane_b_diag.py scripts/n92_us100_ny_2h_mom_gate.py \
+  results/cto/c031_n87_absorb_n90_n92/ PREREG_FTMO_N92.md \
+  VOORSTEL_PRESCREEN_N90.md VOORSTEL_PRESCREEN_N91.md VOORSTEL_PRESCREEN_N92.md \
+  engine/ftmo.py RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-031 N87 absorb + N90-N92 diag + N92 PREREG (0 trials)"
+git push origin grok/cto-1
+```
+

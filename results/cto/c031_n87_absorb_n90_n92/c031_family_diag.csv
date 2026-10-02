@@ -1,0 +1,4 @@
+label,n,mean_bp,day_t,h1_mean_bp,h2_mean_bp,gate_bp,verdict,notes
+N90_GBPJPY_CARRY_MOM_5D,113,10.154,0.843,22.175,-1.657,2.16,UNDERPOWERED,NEW_FAMILY O; long-only; gate=3×RT 0.72; swap earn→0 in gate (D-100)
+N91_AUDUSD_CARRY_MOM_5D,101,-18.591,-1.207,-31.68,-5.759,1.35,DIAG_FAIL,NEW_FAMILY P; long-only; gate=3×RT 0.45; swap earn→0 in gate (D-100)
+N92_US100_NY_2H_MOM,592,5.904,1.56,4.181,7.627,1.98,DIAG_PASS,NEW_FAMILY Q; intradag-flat; ≠ ORB / N87 / N89

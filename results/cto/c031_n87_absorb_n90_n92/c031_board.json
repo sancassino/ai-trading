@@ -1,0 +1,55 @@
+{
+  "c": "C-031",
+  "when": "2026-10-02 ~20:31 Europe/Amsterdam",
+  "absorb": {
+    "main": "054a8eb NEXT_STEPS v83 D-101\u2026D-104 + N87 FAIL_T; TRIAL 457",
+    "N87": "FAIL_T U2 3a9108e; counts_as_trial=true; TRIAL_COUNT 457; dead+=N87_US30_GAP_FADE",
+    "D-101": "lat A (t\u22652) or B (lit premie + ftmo_ev EV>0 / surv\u22650.5 + intradag-DD + forward)",
+    "D-102": "RISK-REACTIVE course",
+    "D-103": "SHOCK ML program",
+    "D-104": "ORB-meta reserve FAIL; ORB-as-robust-edge closed"
+  },
+  "freeze": "OFF",
+  "trial_count": 457,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "results": [
+    {
+      "label": "N90_GBPJPY_CARRY_MOM_5D",
+      "n": 113,
+      "mean_bp": 10.154,
+      "day_t": 0.843,
+      "h1_mean_bp": 22.175,
+      "h2_mean_bp": -1.657,
+      "gate_bp": 2.16,
+      "verdict": "UNDERPOWERED",
+      "notes": "NEW_FAMILY O; long-only; gate=3\u00d7RT 0.72; swap earn\u21920 in gate (D-100)"
+    },
+    {
+      "label": "N91_AUDUSD_CARRY_MOM_5D",
+      "n": 101,
+      "mean_bp": -18.591,
+      "day_t": -1.207,
+      "h1_mean_bp": -31.68,
+      "h2_mean_bp": -5.759,
+      "gate_bp": 1.35,
+      "verdict": "DIAG_FAIL",
+      "notes": "NEW_FAMILY P; long-only; gate=3\u00d7RT 0.45; swap earn\u21920 in gate (D-100)"
+    },
+    {
+      "label": "N92_US100_NY_2H_MOM",
+      "n": 592,
+      "mean_bp": 5.904,
+      "day_t": 1.56,
+      "h1_mean_bp": 4.181,
+      "h2_mean_bp": 7.627,
+      "gate_bp": 1.98,
+      "verdict": "DIAG_PASS",
+      "notes": "NEW_FAMILY Q; intradag-flat; \u2260 ORB / N87 / N89"
+    }
+  ],
+  "promote_to_prereg": [
+    "N92_US100_NY_2H_MOM"
+  ],
+  "kill_circuit_note": "N87 cost-PASS\u2192FAIL_T increments streak; pivot already ON"
+}

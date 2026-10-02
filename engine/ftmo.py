@@ -325,6 +325,52 @@ def trades_bp_to_daily(
     return rets, all_days
 
 
+def adverse_bp_to_daily_drawdowns(
+    dates,
+    adverse_bp,
+    *,
+    risk_frac_per_unit_bp: float | None = None,
+    day_index=None,
+):
+    """Map per-trade max adverse excursion (bp) → dense daily_drawdowns for ``ftmo_ev``.
+
+    D-101 lat-B requires intradag-DD correction (not close-only proxy). Feed the
+    hold-window MAE in bp (positive = adverse) aligned with trade dates; same-day
+    trades take the max adverse. Flat days get 0. Scale units match
+    ``trades_bp_to_daily`` (default 1 bp → 1e-4 of account).
+
+    If ``day_index`` is given (e.g. from ``trades_bp_to_daily``), output is aligned
+    to that calendar; otherwise a dense range covering the trade dates is built.
+
+    Returns
+    -------
+    daily_drawdowns : np.ndarray  (fraction of initial account, ≥0)
+    day_index : np.ndarray of datetime64[D]
+    """
+    d = np.asarray(dates, dtype="datetime64[D]")
+    adv = np.maximum(0.0, np.asarray(adverse_bp, dtype=float).ravel())
+    if d.size != adv.size:
+        raise ValueError("dates and adverse_bp must have the same length")
+    unit = 1e-4 if risk_frac_per_unit_bp is None else float(risk_frac_per_unit_bp)
+    if d.size == 0:
+        idx = np.asarray(day_index, dtype="datetime64[D]") if day_index is not None else np.asarray([], dtype="datetime64[D]")
+        return np.zeros(idx.size, float), idx
+    order = np.argsort(d)
+    d, adv = d[order], adv[order]
+    uniq, starts = np.unique(d, return_index=True)
+    # max adverse per calendar day
+    day_adv = np.maximum.reduceat(adv, starts)
+    if day_index is None:
+        all_days = np.arange(uniq[0], uniq[-1] + np.timedelta64(1, "D"), dtype="datetime64[D]")
+    else:
+        all_days = np.asarray(day_index, dtype="datetime64[D]")
+    out = np.zeros(all_days.size, float)
+    pos = np.searchsorted(all_days, uniq)
+    keep = (pos >= 0) & (pos < all_days.size) & (all_days[np.clip(pos, 0, max(all_days.size - 1, 0))] == uniq)
+    out[pos[keep]] = day_adv[keep] * unit
+    return out, all_days
+
+
 def recommend_scale(
     daily_returns,
     daily_drawdowns=None,
