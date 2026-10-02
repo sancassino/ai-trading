@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N99 — CADCHF Long-Only 5d Oil-CHF Carry+Momentum (NEW_FAMILY X)
 
-**Status:** **OPEN** — pipeline replace after N96 UNDERPOWERED + N97 D-092.1 FAIL (filed 2026-10-02 ~21:20 CEST).  
+**Status:** **DIAG_FAIL** — C-034 Lane-B diag (mean **−4,00 ≪ 6,81**; N=103); **geen PREREG**; drop path (2026-10-02 ~21:33 CEST).
 **Auteur:** Strateeg (Grok). **NEW_FAMILY X** (CADCHF oil-CHF carry+momentum long-only — nooit eerder geprobeerd).  
 **Instrument:** `CADCHF` (RT **2,27** bp — `COSTS_FTMO_alle` M5 spread_med≈1,55 + FX commissie≈0,36×2; swap_long CAD vs CHF = earn → 0 in gate per D-100).  
 **Track 4 + D-100 family B:** CADCHF long-only 5d swing. Long = structurele CAD carry vs CHF funding (BoC >> SNB; CAD = olie-commodity currency) + positief 5d momentum.

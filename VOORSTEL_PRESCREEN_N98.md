@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N98 — USOILcash Lon-AM → US100cash NY risk-on lead-lag (NEW_FAMILY W)
 
-**Status:** **OPEN** — pipeline replace after N96 UNDERPOWERED + N97 D-092.1 FAIL (filed 2026-10-02 ~21:20 CEST).  
+**Status:** **DIAG_FAIL** — C-034 Lane-B diag (mean **−3,79 ≪ 1,98**; N=356); **geen PREREG**; drop path (2026-10-02 ~21:33 CEST).
 **Auteur:** Strateeg (Grok). **NEW_FAMILY W** (energy→equity same-day risk-on lead-lag session-flat — nooit deze setup).  
 **Signal:** `USOILcash` (Lon-AM impulse). **Trade:** `US100cash` (RT **0,66** bp; swap 0 — **EOD flat**).  
 **Track 2 + D-102 adjacent:** oil morning risk impulse → Nasdaq afternoon continuation; intradag-vlak (geen swap).
