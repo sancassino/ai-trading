@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N131 — DXY_DOLLAR_STRESS → US500cash session-flat (NEW_FAMILY AZ)
 
-**Status:** **OPEN** — D-094 refill after N129 D-092.1 FAIL + N128 PASS→PREREG (filed 2026-10-03 ~00:12 CEST). Not screened this cycle.  
+**Status:** **PASS → PREREG** — D-092.1 `n130_n131` train N=**413** mean bruto **+5,08** ≥ gate **2,34** (stress informal ≥3,51; med +5,22; years −6,69/+5,44/+9,12; L/S 131/282); screened 2026-10-03 ~00:17 CEST. **≠ N110** (not DXYcash Lon-AM→EU-PM). Live: `PREREG_FTMO_N131_DXY_DOLLAR_STRESS.md`.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AZ** (broad **US dollar index level** stress → equity session-flat — financial-conditions / dollar-smile channel; **≠ N110** DXY Lon-AM→EU-afternoon lead-lag / **≠ EWZ** country equity / **≠ BWX** intl treasury level / **≠ FX 5d LO** carry).  
 **Signal:** Yahoo/proxy **DXY** (DX-Y.NYB). **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100 + D-097:** Dollar uptrend as tighter global conditions into the US cash session; intradag-vlak (geen swap).

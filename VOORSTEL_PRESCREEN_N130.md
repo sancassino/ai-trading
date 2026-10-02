@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N130 — EQW_BREADTH_STRESS → US500cash session-flat (NEW_FAMILY AY)
 
-**Status:** **OPEN** — D-094 refill after N129 D-092.1 FAIL + N128 PASS→PREREG (filed 2026-10-03 ~00:12 CEST). Not screened this cycle.  
+**Status:** **PASS → PREREG** — D-092.1 `n130_n131` train N=**220** mean bruto **+6,68** ≥ gate **2,34** (stress informal ≥3,51; med +1,66; years −0,41/+18,72/−1,71; L/S 99/121); screened 2026-10-03 ~00:17 CEST. Live: `PREREG_FTMO_N130_EQW_BREADTH_STRESS.md`.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY AY** (US **equal-weight vs cap-weight breadth ratio** stress → equity session-flat — participation/concentration channel; **≠ IWM** small-cap level / **≠ SECTOR_DISP** / **≠ DEFENSIVE_CYCLICAL** XLU/XLI / **≠ N81** US100/US500 pair RV overnight).  
 **Signal:** Yahoo/proxy **SPX_EQW** (RSP) / **SPX**. **Trade:** `US500cash` (RT **0,78** bp; swap 0 — **session-flat**).  
 **Track 4 + D-100 + D-097 XS:** Breadth extremes as crowded participation vs mega-cap concentration timing for the US cash session; intradag-vlak.

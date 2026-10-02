@@ -1,16 +1,32 @@
 # PREREG_FTMO_N128 — BWX_INTL_TREASURY_STRESS (US500cash; session-flat; NEW_FAMILY AW)
 
-**Status:** **OPEN** — frozen for U2 cost-gate + formal trial (Lane-B D-092.1 PASS).  
+**Status:** **STOP FAIL_T** — U2 tip `62a7718` on `claude/uitvoerder2-r` (TRIAL **467→468**).  
 **Auteur:** Strateeg (Grok) Lane-B on `claude/trusting-faraday-34tsmg`.  
 **VOORSTEL:** `VOORSTEL_PRESCREEN_N128.md`.  
 **Signal:** Yahoo/proxy **BWX** (SPDR Bloomberg International Treasury Bond). **Trade:** `US500cash`.  
-**NEW_FAMILY AW:** DM ex-US treasury ETF **level** stress → equity session-flat (**≠ TLT** US duration / **≠ TIP** real-rate / **≠ EMB** EM credit / **≠ YIELD_CURVE** 10Y−3M slope).  
-**Hold:** **session-flat** entry ≈15:30 CET → flat ≈21:00 CET (D-100; US500 overnight swap avoided).  
-**TRIAL_COUNT book:** **467** (deze PREREG telt nog niet).  
+**NEW_FAMILY AW:** **DEAD** (no BWX/TLT/TIP/EMB/yield clones, no thr-grid, no overnight).  
+**Hold:** session-flat 15:30→21:00 CET (was freeze).  
+**TRIAL_COUNT book:** **468** after this trial.  
 **Reserve 2025+:** **onaangeroerd.**  
-**Geen retune** na freeze.
+**Dead += N128.** No retune.
 
-Pre-screen: `results/R2/n128_n129_prescreen/` — N128 **PASS** train N=**419** mean bruto **+6,63** ≥ gate **2,34** (stress informal ≥ **3,51**).
+Board: U2 `results/R2/n128_bwx_intl_treasury_stress/` (tip `62a7718`). Faraday tip at PREREG freeze: `cb136e0`. Pre-screen was `results/R2/n128_n129_prescreen/` (N=419, bruto **+6,63**).
+
+---
+
+## U2 result (authoritative)
+
+| Post | Waarde |
+|------|--------|
+| Verdict | **FAIL_T** (cost+stress **PASS**) |
+| Train 2021–23 | N=**419**, mean bruto **+6,63** ≥2,34 and ≥3,51; netto **+5,85**; med **+8,58**; years **−8,07/+8,89/+9,55**; L/S **96/323** |
+| t | t_netto **1,40** / t_NW5 **1,43** ≪ 2 |
+| Test | N=**136**, mean bruto **−2,37** |
+| Trial | **467→468**; counts_as_trial=true |
+| Signal (locked) | `(z>+0,5)&(d20>0)`→LONG; `(z<−0,5)&(d20<0)`→SHORT |
+| Retune | **verboden** (geen thr-grid, geen TLT/TIP/EMB/yield rewrite, geen BWX clone, geen overnight) |
+
+Live PREREG-pointer **cleared**.
 
 ---
 
@@ -89,4 +105,4 @@ Artifact: `results/R2/n128_n129_prescreen/prescreen.json`.
 4. FAIL_T / FAIL_STRESS / FAIL_COST → STOP; **geen** thr-grid / TLT twin / yield-curve rewrite / overnight.
 5. counts_as_trial only if cost+stress PASS then formal t run.
 
-**TRIAL_COUNT at freeze:** **467**.
+**TRIAL_COUNT at freeze (was):** **467**. After U2 FAIL_T: **468**.

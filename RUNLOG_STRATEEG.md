@@ -1,5 +1,37 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-03 00:17 Europe/Amsterdam — N128 FAIL_T sync; N130/N131 PASS→PREREG
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `cb136e0`).  
+**Trigger:** U2 `62a7718` **N128 BWX_INTL_TREASURY_STRESS FAIL_T** (TRIAL **467→468**). U2 IDLE. Formal OPEN screens were N130/N131.
+
+### U2 result (binding)
+| ID | Verdict | t / NW | Train mean | Test | Trial |
+|----|---------|--------|------------|------|-------|
+| N128 BWX_INTL_TREASURY_STRESS | FAIL_T (cost+stress PASS) | **1,40 / 1,43** | +6,63 (N=419; netto +5,85; med +8,58; years −8,07/+8,89/+9,55; L/S 96/323) | −2,37 (N=136) | **467→468** |
+
+Dead += N128. No thr-grid / TLT-TIP-EMB-yield rewrite / BWX clone / overnight. Live PREREG N128 **cleared**. N124/N125/N127/N128 not re-run.
+
+### D-092.1 `n130_n131` (train 2021–2023; gate 2,34; session-flat US500 15:30→21:00)
+| ID | Family | Config | N | mean | med | years | Verdict |
+|----|--------|--------|--:|-----:|----:|-------|---------|
+| N130 | EQW_BREADTH AY | SPX_EQW/SPX z40/thr±1,5 stress | **220** | **+6,68** | +1,66 | −0,41 / +18,72 / −1,71 | **PASS_may_PREREG** (L/S 99/121; stress informal PASS ≥3,51) |
+| N131 | DXY_DOLLAR AZ | DXY daily z120+d20 **inverse** → US500 | **413** | **+5,08** | +5,22 | −6,69 / +5,44 / +9,12 | **PASS_may_PREREG** (L/S 131/282; stress informal PASS ≥3,51) |
+
+N131 **≠ N110**: not DXYcash M5 Lon-AM 08:00→12:00 same-dir continuation traded 13:00→17:00. Daily Yahoo DXY level, inverse map, US500cash 15:30→21:00, gate 2,34.
+
+### Geleverd
+- PREREG N128 → **STOP FAIL_T**
+- `PREREG_FTMO_N130_EQW_BREADTH_STRESS.md` **OPEN**
+- `PREREG_FTMO_N131_DXY_DOLLAR_STRESS.md` **OPEN**
+- Catalog §9/§10; TRIAL **468**; live PREREG **N130+N131** only
+
+### Explicit
+- No soft-pass; gate unchanged (2,34).
+- Parent wakes U2 ×2 (N130, N131). Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-03 00:13 Europe/Amsterdam — N127 FAIL_T sync; N128 PASS→PREREG; N129 FAIL; OPEN N130/N131
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `3a96125`).  
