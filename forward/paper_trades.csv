@@ -1,3 +1,11 @@
 date;leg;symbol;action;detail;pnl_eur
 2026-09-30;RSI2;GER40cash;entry;RSI 6.4 slot 25101.71;
 2026-09-30;RSI2;UK100cash;entry;RSI 5.6 slot 10580.37;
+2026-10-01;RSI2;US30cash;entry;RSI 9.2 slot 50933.23;
+2026-10-01;ORB;US500cash;trade;-40.0 bp (-1.02 R);-19.68
+2026-10-01;ORB;US100cash;trade;-50.3 bp (-1.01 R);-24.71
+2026-10-01;ORB;US30cash;trade;-27.1 bp (-0.37 R);-13.30
+2026-10-01;ORB;XAUUSD;trade;-32.8 bp (-1.03 R);-16.10
+2026-10-01;ORB;GER40cash;trade;-93.2 bp (-1.01 R);-45.81
+2026-10-01;ORB;UK100cash;trade;-76.4 bp (-1.01 R);-37.53
+2026-10-01;ORB;EURUSD;trade;+45.2 bp (+3.52 R);22.21
