@@ -2200,3 +2200,20 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 
 **Verdict: FAIL_STRESS.** counts_as_trial=**false** → **geen TRIALS-append, geen TRIAL_COUNT bump** (N78/N93/N103 pattern). TRIAL_COUNT blijft **463**. Dead += `N117_CPER_COPPER_STRESS`. Geen retune / geen klonen (geen thr-grid, geen copper CFD twin, geen Cu/Au rewrite, geen overnight). Board: `results/R2/n117_cper_copper_stress/n117_gate_board.json`.
 
+
+## Cyclus 23:20 CEST (2026-10-02) — N118 TIP_REALRATE_STRESS FAIL_T (TRIAL 463→464)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `42b29e5`: `PREREG_FTMO_N118_TIP_REALRATE_STRESS.md` + screen in `results/R2/n118_n119_prescreen/` (D-092.1 PASS N=359 mean +5.38 ≥ 2.34); script `scripts/n118_tip_realrate_stress_gate.py` frozen vóór run. Book starts at TRIAL **463** (post-N117 FAIL_STRESS no-bump).
+
+**Config freeze:** TIP z120 / d20 / combo thr ±0,5 → US500cash session-flat **15:30→21:00 CET**; RT 0,78 bp; gate **2,34**; stress **3,51**; swap=0; **geen** TIP/TLT CFD leg (D-100). NEW_FAMILY **AM**. TIP ≠ TLT (N116 DEAD — real-rate/TIPS ≠ nominal duration).
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 359 | **+5,384 bp** | +4,604 bp | 0,99 / 0,99 | cost PASS (≥2,34); stress PASS (≥3,51) |
+| Test 2024 | 123 | −4,20 bp | −4,98 bp | −0,85 / −0,83 | formal t <2 |
+
+**Year-split train mean bruto:** 2021 **−7,40** (N=34) / 2022 **+7,92** (N=178) / 2023 **+5,27** (N=147). **Stress/year risk:** 2021 negatief (PREREG flag). Long/short train 70/289. Signal-days train nonzero 465. Median train +4,46.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 463→464**. Dead += `N118_TIP_REALRATE_STRESS`. Geen retune / geen klonen (geen thr-grid, geen TLT rewrite, geen IEF twin, geen overnight). Skip N119 FAIL / N120–N121 screens. Board: `results/R2/n118_tip_realrate_stress/n118_gate_board.json`.
