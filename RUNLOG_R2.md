@@ -2217,3 +2217,23 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Year-split train mean bruto:** 2021 **−7,40** (N=34) / 2022 **+7,92** (N=178) / 2023 **+5,27** (N=147). **Stress/year risk:** 2021 negatief (PREREG flag). Long/short train 70/289. Signal-days train nonzero 465. Median train +4,46.
 
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 463→464**. Dead += `N118_TIP_REALRATE_STRESS`. Geen retune / geen klonen (geen thr-grid, geen TLT rewrite, geen IEF twin, geen overnight). Skip N119 FAIL / N120–N121 screens. Board: `results/R2/n118_tip_realrate_stress/n118_gate_board.json`.
+
+## Cyclus 23:21–23:22 CEST (2026-10-02) — D-090 FASE 3 IDLE absorb NEXT_STEPS v94 (TRIAL 464)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` (`e74d81d` NEXT_STEPS **v94**). Tip was `9e928af` (N118 tip-SHA align after FAIL_T); merge `f5f9e1a` then this idle note.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v94** (Manager `e74d81d` ~23:15 CEST): Faraday `754e24e` N116/N117 PREREG + OPEN N118/N119; U2 N116 FAIL_T + N117 FAIL_STRESS; TRIAL **463** (Manager board stale vs U2 tip); Freeze **OFF**; Track-3 **PAUSED**. C-028…**C-037** actief.
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz`. CEO tip `7cb6731` (geen nieuw D-* na D-104).
+- Faraday tip `ce7ce12` (ahead of Manager board): N118 PREREG delivered; N119 D-092.1 **FAIL**; OPEN **N120/N121** VOORSTEL only (geen PREREG).
+- U2 tip already ran **N118 TIP_REALRATE_STRESS FAIL_T** @ `9a00524`→`9e928af` → **TRIAL_COUNT 463→464**. Dead += N118. Skip N119 FAIL screen.
+
+### Gates deze cyclus
+
+**Geen live PREREG.** N118 already FAIL_T this evening; N119 FAIL (geen PREREG); N120/N121 = VOORSTEL only (wait Strateeg D-092.1 → PASS→PREREG). Do **not** invent PASS/FAIL on screens. Skip dead/barred: N75–N118 / N119 FAIL / TLT→US500 / CPER→US500 / TIP→US500 / HYG→US500 / EURUSD Lon-AM→US500 / GAS_EQUITY / SILVER_GOLD / EMB / CRACK / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD / USDCHF-LO / GER40→US30 / EURNZD-LO / UK→FRA40 / AUS Asia→Lon / GBPCHF-LO / JP225 Tokyo→Lon / CHFJPY-LO / DXY Lon→EU-PM / GBPAUD-LO / IWM→US500 clones. C17/FX_INTRADAG/B1/A2 **STOP**. Track-3 **PAUSED**.
+
+**TRIAL_COUNT blijft 464**. Geen TRIALS-append.
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG (N120/N121 or newer). Cadans :15/:45. Quiet — Manager should absorb N118 FAIL_T / TRIAL 464 / Faraday OPEN→N120/N121 on next cadans.
