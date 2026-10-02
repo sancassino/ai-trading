@@ -129,3 +129,4 @@
 05:42 UTC — geen nieuws; snapshot.
 05:57 UTC — ORB regime/tijdstop: null; correctie: B4a ORB was afgewezen (DSR .54). Volgende: breder universum (crypto, aandelen, grondstoffen) met vooraf vastgelegde ORB/late-dag-drift.
 05:58 UTC — ORB extra indices FAIL; ORB-familie gesloten als bron van robuuste edge.
+06:05 UTC — TASK_MT5_KALIBRATIE.md voor Debian-uitvoerder klaargezet; Debian-agent actief alleen via cron (forward_p1), geen CEO-contact de afgelopen uren.
