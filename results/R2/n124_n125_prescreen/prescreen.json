@@ -1,0 +1,44 @@
+{
+  "N124": {
+    "id": "N124",
+    "instrument": "US500cash",
+    "n": 240,
+    "mean_bruto_bp": 8.9715,
+    "median_bruto_bp": 9.8945,
+    "gate_bp": 2.34,
+    "stress_gate_bp": 3.51,
+    "stress_note": "PASS_stress_informal",
+    "verdict": "PASS_may_PREREG",
+    "hit_rate": 0.5667,
+    "n_long": 132,
+    "n_short": 108,
+    "years": {
+      "2021": -2.3054,
+      "2022": 8.565,
+      "2023": 12.4053
+    },
+    "notes": "YIELD_CURVE_2S10S 10Y-3M z60/thr1.5/flatten_fade; S2 13fe10c; D-100 session-flat"
+  },
+  "N125": {
+    "id": "N125",
+    "instrument": "US500cash",
+    "n": 478,
+    "mean_bruto_bp": 5.479,
+    "median_bruto_bp": 4.8099,
+    "gate_bp": 2.34,
+    "stress_gate_bp": 3.51,
+    "stress_note": "PASS_stress_informal",
+    "verdict": "PASS_may_PREREG",
+    "hit_rate": 0.5356,
+    "n_long": 249,
+    "n_short": 229,
+    "years": {
+      "2021": 0.9029,
+      "2022": 8.8408,
+      "2023": 3.7212
+    },
+    "notes": "DEFENSIVE_CYCLICAL XLU/XLI z40/thr0.5/defensive_high US500 twin (not US100); S2 FLAG; D-100 session-flat"
+  },
+  "source_s2": "13fe10c",
+  "cycle": "cycle_2346"
+}
