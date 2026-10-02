@@ -132,3 +132,4 @@
 06:05 UTC — TASK_MT5_KALIBRATIE.md voor Debian-uitvoerder klaargezet; Debian-agent actief alleen via cron (forward_p1), geen CEO-contact de afgelopen uren.
 06:13 UTC — TOM FAIL (effect weggevallen 2016+, swap). Volgende: pairs/relatieve waarde en kosten-arme structuren.
 06:26 UTC — pairs FAIL. Klassieke dag-anomalieën op indices uitgeput (ORB, TOM, pairs, ML). Volgende: crypto/commodity funding & aandelen-cross-sectie (overnight vs intraday).
+06:43 UTC — aandelen XS intraday FAIL (kosten > bruto).

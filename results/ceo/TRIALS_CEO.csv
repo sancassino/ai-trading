@@ -9,3 +9,4 @@ CEO-T7;2026-10-02;ORB tijdstop 2u/4u;slechter
 CEO-T8;2026-10-02;ORB extra indices EU50/FRA40/JP225 (PREREG_ORB_INDEX_EXT);FAIL t=1.09 @1.5bp; 25-26 negatief
 CEO-T9;2026-10-02;Turn-of-month 7 indices 1990-2024 (PREREG_TOM);FAIL: train netto +22.7bp t 1.6; test (2016-24) bruto +7.2bp netto -3.8bp t -0.14; effect weggevallen + swap 10bp
 CEO-T10;2026-10-02;Pairs mean-reversion 4 index-paren (PREREG_PAIRS);FAIL: test netto negatief alle paren, bruto <=+3bp
+CEO-T11;2026-10-02;Aandelen cross-sectioneel intraday S1-S4, 30 US-CFD (PREREG_STK_XS; eerste run had lookahead-bug in S1, gecorrigeerd);FAIL: alle netto negatief, kosten 5-9bp rondreis > bruto

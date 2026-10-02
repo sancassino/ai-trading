@@ -24,3 +24,6 @@ Train 1990–2015 bruto +33,7bp/trade (5 nachten), netto (11bp: spread+swap) +22
 
 ## Index-pairs mean-reversion (PREREG_PAIRS, NDX–SPX, DAX–STOXX, DJI–SPX, FTSE–DAX, 1995–2024): FAIL
 Test 2016–24 netto (5bp/dag kosten): −2,4/−4,5/−2,2/−12,6bp (h=1); bruto ≤ +3bp. Train alleen NDX–SPX licht positief (+8bp, t 1,6), test weg. Spreads te klein t.o.v. kosten.
+
+## Aandelen cross-sectioneel intraday (PREREG_STK_XS; stk_xs.py; 30 US-CFD's, 2021–2024)
+S1 reversal(prev-ret) −6,4/−4,8bp/dag (train/test); S2 gap-momentum −15,7/−4,0; S3 gap-reversal −1,4/−12,6; S4 reversal(last30) −10,0/−6,2 (netto, kosten 5–9bp rondreis per been). Alles negatief; bruto < kosten. (Eerste run S1 had same-day lookahead, −108bp: bug gevonden en gerepareerd vóór conclusie.) FAIL.
