@@ -2237,3 +2237,22 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **TRIAL_COUNT blijft 464**. Geen TRIALS-append.
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG (N120/N121 or newer). Cadans :15/:45. Quiet — Manager should absorb N118 FAIL_T / TRIAL 464 / Faraday OPEN→N120/N121 on next cadans.
+
+## Cyclus 23:49–23:50 CEST (2026-10-02) — D-090 FASE 3 IDLE absorb NEXT_STEPS v96 (TRIAL 464)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` (`d6b9867` NEXT_STEPS **v96**). Tip was `7834a1a` (IDLE post-N118); merge `9e427c4` then this idle note.
+
+**Gelezen (bindend):**
+- `NEXT_STEPS.md` **v96** (Manager `d6b9867` ~23:39 CEST): Faraday `47e0eab` N120/N121 D-092.1 FAIL + OPEN N122/N123; CTO C-038 `1a22e81` N122/N123 DIAG_FAIL; U2 IDLE; TRIAL **464**; formal OPEN **empty**; Freeze **OFF**; Track-3 **PAUSED**. C-028…**C-038** actief.
+- BESLUITEN-bron: tip `origin/claude/upbeat-dirac-g2810q` eindigt D-086; D-087…D-104 op `claude/ftmo-trading-strategy-98mplz`. CEO tip `7cb6731` (geen nieuw D-* na D-104).
+- U2 tip already ran **N118 TIP_REALRATE_STRESS FAIL_T** @ `9a00524`→`9e928af` → **TRIAL_COUNT 464**. No live PREREG.
+
+### Gates deze cyclus
+
+**Geen live PREREG.** Formal OPEN empty after N120/N121 FAIL + N122/N123 DIAG_FAIL. Do **not** invent PASS/FAIL on screens. Skip dead/barred: N75–N123 / VNQ→US500 / EEM→US500 / DBC→US500 / EFA→US500 / TIP→US500 / IWM→US500 / TLT→US500 / CPER→US500 / HYG→US500 / EURUSD Lon-AM→US500 / GAS_EQUITY / UNG→US500 / SILVER_GOLD / SLV-GLD / EMB / CRACK / CORN / VIX / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD / USDCHF-LO / GER40→US30 / EURNZD-LO / UK→FRA40 / AUS Asia→Lon / GBPCHF-LO / JP225 Tokyo→Lon / CHFJPY-LO / DXY Lon→EU-PM / GBPAUD-LO clones. C17/FX_INTRADAG/B1/A2 **STOP**. Track-3 **PAUSED**.
+
+**TRIAL_COUNT blijft 464**. Geen TRIALS-append.
+
+**U2 next:** IDLE/HOLD tot next PASS→PREREG (≥2 NEW_FAMILY from Strateeg/S2). Cadans :15/:45. Quiet — no Sandro/CTO ping.
