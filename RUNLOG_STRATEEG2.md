@@ -463,3 +463,25 @@
   - FTMO map: SPY→**US500cash** / NDX→**US100cash** (prefer US500 twin for DEFENSIVE) — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1.
 - **MATERIAL:** true (2 survivor packs).
 - Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag YIELD_CURVE_2S10S / DEFENSIVE_CYCLICAL oppakken; S2 blijft Lane-A novelty.
+
+## 2026-10-03 ~00:47 Europe/Amsterdam — Hourly cycle (:40→:47 slot) / C-028 Lane-A + POST-N78/N93
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ 13fe10c (YIELD_CURVE+DEFENSIVE promote → later N124/N125 FAIL_T; families now DEAD). Branch ≠ main/uitvoerder.
+- **Refresh (read-only):** NEXT_STEPS **v102** (`origin/main` @ cb1b8d1, 00:44 CEST): Faraday `f5523fb` N134–N137 FAIL; formal OPEN **N138 GER40_UK100_XS / N139 JP225_HK50_ASIA_XS** (Lane-B Strateeg — **not** S2); C-040 `659d6c6`; TRIAL **470**; U2 IDLE/HOLD; FREEZE OFF; Track-3 PAUSED; prio = ≥2 NEW_FAMILY for Strateeg/S2. EDGE_SEARCH_UPGRADE C-028 bindend. Dead += N124–N137 + prior bars (YIELD_CURVE / DEFENSIVE / EQW / DXY / MTUM / GLD / XLF / QUAL / BRENT_WTI / USDMXN / EWZ / BWX / PPLT + prior).
+- **Dead-set / clone guard:** YIELD_CURVE_2S10S / DEFENSIVE_CYCLICAL / GAS_EQUITY / SILVER_GOLD / EMB / CRACK / SECTOR_DISP / VIX_TERM / HYG / TLT / TIP / CPER / VNQ / EEM / DBC / EFA / IWM→US500 / EQW / DXY / MTUM / GLD / XLF / QUAL / BRENT_WTI / USDMXN / EWZ / DBA / BWX / PPLT / PC_RATIO / BREAKEVEN / COPPER_GOLD / REIT / PGM / SOFTS_RATIO / ORB/TSMOM/L60 FX-med / CORN / UKOIL-OVN / ORB-meta / N75–N137 / FX LO carry / GER40_UK100_XS / JP225_HK50 (OPEN — do not pre-empt) / CEO T5–T16. **No PREREG_S2** (Lane-B = Strateeg).
+- **C-028 Lane-A screens** (proxy daily ≤2024-12-31; **non-overlapping** multi-day holds; day_t bruto + early RT/swap×hold; promote=**COST_OK only**; artefacts `results/strateeg2_prescreen/cycle_0047/`; script `scripts/s2_c028_lane_a_cycle0047.py`):
+
+  | Family (NEW_FAMILY) | Best symbols | Config | years | mean_bp | day_t | n | cost | Uitkomst |
+  |---------------------|--------------|--------|------:|--------:|------:|--:|------|----------|
+  | **XLE_ENERGY_EQUITY_STRESS** | XLE→**SPY** | z40/thr1.0/fade_extreme\|hold=1d | 19.91 | +5.41 | **2.29** | 2863 | **COST_OK** (US500; drag 1.59; net 3.82) | **PROMOTE** |
+  | EURJPY_RISK_SENTIMENT | EURJPY→SPY | z60/thr1.0/mom_confirm\|hold=3d | 19.90 | +10.64 | 1.66 | 911 | — | FAIL day_t |
+  | VLUE_VALUE_FACTOR_STRESS | VLUE→SPY | z40/thr1.0/fade_extreme\|hold=3d | 11.61 | +11.18 | 1.56 | 656 | — | FAIL day_t |
+  | XLB_MATERIALS_STRESS | XLB→NDX | z40/thr1.5/fade_extreme\|hold=1d | 19.91 | +4.47 | 1.14 | 1601 | — | FAIL day_t |
+
+- **Novelty:** **4/4 NEW_FAMILY** (≥2/3 ✔). 1215 configs; 21 promote-configs / **1** promote-family. COST_HOSTILE bruto-ok: 0; COST_TIGHT: 0. XLE also has hold=3d COST_OK twins (day_t≈2.22 mean≈13.0) and NDX twins (day_t≈2.27 mean≈8.67) — prefer **US500** hold=1d (lower swap).
+- **Cost-stress:** survivor cleared mean≥2×3RT + net_after_drag≥1 with **swap×hold**; XLE = energy-**equity** sector (≠ ENERGY_TSMOM / UNG / CRACK / USOIL→US100). Prefer **US500**. **FLAG** US100 overnight long if Lane-B remaps.
+- **Survivor pack (VOORSTEL + CSV, geen PREREG):**
+  - `VOORSTEL_S2_XLE_ENERGY_EQUITY_STRESS.md` + XLE→SPY hold=1d daily
+  - FTMO map: SPY→**US500cash** — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1.
+- **MATERIAL:** true (1 survivor pack).
+- Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag XLE_ENERGY_EQUITY_STRESS oppakken; S2 blijft Lane-A novelty.
