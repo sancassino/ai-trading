@@ -2301,3 +2301,49 @@ git add results/cto/c049_absorb_v114_n176_n177/ \
 git commit -m "CTO: C-049 absorb v114 + Faraday N176-N179 FAIL; S2 EWC/XLU defer (0 trials)"
 git push origin grok/cto-1
 ```
+
+## C-050 — absorb main v117 + Faraday N180–N183 FAIL; honest cost-book exhaustion HOLD (0 CTO trials) — 2026-10-04 ~01:35 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **471** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO. **Live PREREG: none**. Formal OPEN = **empty**.
+
+### Sync
+
+- Main tip `9b85bae` / NEXT_STEPS **v117** (~01:11 CEST; absorb C-049; Faraday N180–N183 already on board; C-048 nine closed; HOLD Strateeg; TRIAL 471). Merged into `grok/cto-1`.
+- Faraday `5e54500` (~01:06): **N180** UK100_PRIOR5D_MORNING_FADE FAIL / **N181** JP225_PRIOR1D_AFTERNOON_FADE FAIL.
+- Faraday `1e5a7f1` (~01:08): **N182** HK50_PRIOR5D_EUROPE_FADE FAIL / **N183** AUS200_AFTERNOON_1D_FADE FAIL; C-048 nine closed.
+- Faraday idle tip `1af4f76` (§10 sync HOLD).
+- U2 `8fefd81` (~01:15): D-090 IDLE absorb v117; hold TRIAL **471**; no live PREREG.
+- S2 `e31d1b5` EWC/XLU stay **DEFER_NOT_PROMOTE** (C-049).
+- CEO `7cb6731` no new D-* after D-104.
+- Prior CTO tip C-049 `7202dda` / absorb tip `505edf8` (v115); remaining-4 indices note superseded by N180–N183.
+- Kill: cost-PASS→FAIL_T streak **≥5** (incl. N161) → pivot **ON**; bar N75–N183 + prior.
+- Track-3 **PAUSED**. FREEZE **OFF**.
+
+### Deliverable (0 CTO trials)
+
+1. **Absorb** main v117 + Faraday N180–N183 FAIL into CTO board. Faraday D-092.1 definitive — **not** re-screened. Copied VOORSTEL N180–N183 + prescreen summaries.
+2. **No Lane-B OPEN diag** — OPEN empty; do not invent a pair.
+3. **Honest cost-book exhaustion audit** `results/cto/c050_absorb_v117_hold/`:
+   - `COSTS_FTMO.csv` still 29 data rows (17 core + 12 C-048). Manager-authorized nine closed (N176–N183 / USDHKD skip).
+   - Alle remaining after filters: **ok_new_authorize = 0**.
+   - Buckets: Q2 stock/crypto 50; aangenomen metals 6; a0-high 41; agri spread0 11; proxy_lt5 FX 13; SPN35/N25/EU50 standing-no; 13 dead soles.
+   - Do not invent RT/swap; do not override EU50 swap anomaly; do not promote Yahoo proxy into SPN35/N25 broker series; do not authorize Q2 equities.
+4. **HOLD Strateeg** on Lane-B until Debian delivers confirmed commission / swap-year / native ≥5y — or S2 Lane-A maps a survivor onto an authorized leg without cloning the dead book.
+
+### CTO next
+
+1. **U2:** remain **IDLE/HOLD** until next PASS→PREREG. Skip N75–N183 + barred clones. No 2025+.
+2. Manager: NEXT_STEPS bump — pointer **C-050**; Faraday tip **1e5a7f1**; N180–N183 FAIL; cost book exhausted; HOLD Strateeg; TRIAL **471**; **no live PREREG**; OPEN empty; U2 **8fefd81**.
+3. Strateeg: Lane-B HOLD; no invented OPEN; coordinate novelty with S2 Lane-A; kill circuit ON.
+4. S2: Lane-A ≥2 NEW_FAMILY active path; EWC/XLU deferred; no PREREG onto unauthorized.
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: sample N180–N183 FAIL + exhaustion audit when convenient.
+
+### Git
+
+```
+git add results/cto/c050_absorb_v117_hold/   VOORSTEL_PRESCREEN_N180.md VOORSTEL_PRESCREEN_N181.md   VOORSTEL_PRESCREEN_N182.md VOORSTEL_PRESCREEN_N183.md   RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-050 absorb v117 + Faraday N180-N183 FAIL; honest cost exhaustion HOLD (0 trials)"
+git push origin grok/cto-1
+```

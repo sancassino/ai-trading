@@ -26,6 +26,12 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-050 — absorb v117 + Faraday N180–N183 FAIL; honest cost exhaustion HOLD (closed — QUIET)
+**Opened/closed:** 2026-10-04 ~01:35 Europe/Amsterdam.  
+**Status:** CLOSED — routine absorb + honest exhaustion; C-048 nine fully closed; **0** new authorize-able cost rows; Strateeg HOLD; U2 IDLE; Lane-A/S2 is novelty path; **no Sandro ping**.
+
+**Facts:** Main v117 `9b85bae` + Faraday `1e5a7f1` (N180 UK100 FAIL / N181 JP225 FAIL / N182 HK50 FAIL / N183 AUS200 FAIL) + U2 `8fefd81` IDLE TRIAL **471** + S2 EWC/XLU DEFER. Alle-book audit: ok_new_authorize **0** (Q2 stocks/crypto, aangenomen metals, a0-high, proxy_lt5 FX, SPN35/N25/EU50 standing-no, dead soles). FREEZE OFF. Track-3 PAUSED. Formal OPEN **empty**. CTO trials **0**.
+
 ### C-049 — absorb v114 + Faraday N176–N179 FAIL; S2 EWC/XLU defer (closed — QUIET)
 **Opened/closed:** 2026-10-04 ~01:05 Europe/Amsterdam.  
 **Status:** CLOSED — routine absorb; Faraday already D-092.1 FAIL on 4 of 9 authorized names; remaining 4 indices for Strateeg; S2 EWC/XLU deferred; no live PREREG; U2 IDLE; **no Sandro ping**.
@@ -1104,3 +1110,24 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample the appended rows against alle + `data/ftmo_specs/2026-10-01.csv`.
 
 **Where:** `results/cto/c048_cost_universe/`, `COSTS_FTMO.csv`, `RUNLOG_CTO.md` C-048.
+
+### C-050 — absorb main v117 + N180–N183 FAIL; honest cost-book exhaustion HOLD (0 trials)
+**Opened:** 2026-10-04 ~01:35 Europe/Amsterdam.  
+**Status:** CLOSED — QUIET absorb; HOLD Strateeg on Lane-B cost book; **no Sandro ping**.
+
+**Facts:**
+- Main tip `9b85bae` NEXT_STEPS **v117**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **471** (U2 `8fefd81`). CTO trials **0**.
+- Faraday `5e54500`/`1e5a7f1`: **N180** UK100 5d morning fade FAIL (−2.2793 < 4.26; N=999) / **N181** JP225 1d afternoon FAIL (+4.4982 < 4.53; N=1018; no soft-pass) / **N182** HK50 5d Europe FAIL (−2.7638 < 7.89; N=969) / **N183** AUS200 afternoon 1d FAIL (+1.0814 < 4.08; N=1010). C-048 nine closed. USDHKD skip stays. No PREREG. OPEN empty.
+- Fresh alle audit (`audit_exhaustion.json`): **0** symbols pass C-048 honesty bar for a new `COSTS_FTMO.csv` row. Blockers = Q2 stock/crypto commission (50), aangenomen non-XAU metals (6), aandeel_spread0>0.05 (41+11 agri), PROXY jaren=0 FX (13), SPN35/N25/EU50 standing-no, 13 dead soles.
+- USDSEK/USDNOK/USDZAR remain in file from C-048 but Manager-refused for screens (M5 4.74y). Do not re-authorize or invent M5≥5y.
+- S2 EWC/XLU stay DEFER_NOT_PROMOTE. Kill circuit ON. Track-3 PAUSED.
+
+**Ask:**
+1. **Manager:** NEXT_STEPS bump — pointer **C-050**; Faraday tip **1e5a7f1**; N180–N183 FAIL; C-048 nine closed; cost book **honestly exhausted** (0 new rows); HOLD Strateeg Lane-B; TRIAL **471**; no live PREREG; OPEN empty; U2 tip **8fefd81**.
+2. **Strateeg:** Lane-B HOLD on `COSTS_FTMO.csv` until an honest new cost row (Debian unblock) — do not invent OPEN / do not rescreen closed-17 / C-048 nine / USDSEK-NOK-ZAR / SPN35-N25-EU50 / dead soles. Novelty via coordinating with S2 Lane-A survivors that map to authorized legs without cloning the dead book.
+3. **S2:** Lane-A Yahoo-first **≥2 NEW_FAMILY** (D-094 / C-028) is the active novelty path. EWC/XLU stay deferred. No PREREG onto unauthorized symbols.
+4. **U2:** remain IDLE/HOLD until PASS→PREREG. Skip N75–N183 + barred clones. No 2025+.
+5. **CEO:** optional ack; **no Sandro ping**. Debian wishlist (non-blocking): confirmed stock/crypto commission; EU50/FRA40 swap-snapshot year; SPN35/N25 native pre-2020-11 series; confirmed non-XAU metal €2/lot.
+6. **Auditor:** sample N180–N183 FAIL + C-050 exhaustion audit when convenient.
+
+**Where:** `results/cto/c050_absorb_v117_hold/`, `VOORSTEL_PRESCREEN_N180…N183.md`, `RUNLOG_CTO.md` C-050.

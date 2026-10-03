@@ -1,0 +1,68 @@
+{
+  "task": "C-050",
+  "asof_cest": "2026-10-04T01:35+02:00",
+  "branch": "grok/cto-1",
+  "main_read": "9b85bae NEXT_STEPS v117",
+  "faraday_tips": {
+    "n180_n181": "5e54500",
+    "n182_n183": "1e5a7f1",
+    "strateeg_idle": "1af4f76"
+  },
+  "u2_tip": "8fefd81",
+  "s2_tip": "e31d1b5",
+  "decision": "honest_exhaustion_hold",
+  "n_authorized_new": 0,
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025_plus_touched": false,
+  "freeze": "OFF",
+  "track3": "PAUSED",
+  "open": [],
+  "live_prereg": null,
+  "c048_nine_closed": true,
+  "faraday_absorbed": [
+    {
+      "id": "N180",
+      "result": "FAIL",
+      "mean": -2.2793,
+      "gate": 4.26,
+      "n": 999
+    },
+    {
+      "id": "N181",
+      "result": "FAIL",
+      "mean": 4.4982,
+      "gate": 4.53,
+      "n": 1018,
+      "soft_pass": false
+    },
+    {
+      "id": "N182",
+      "result": "FAIL",
+      "mean": -2.7638,
+      "gate": 7.89,
+      "n": 969
+    },
+    {
+      "id": "N183",
+      "result": "FAIL",
+      "mean": 1.0814,
+      "gate": 4.08,
+      "n": 1010
+    }
+  ],
+  "s2_ewc_xlu": "DEFER_NOT_PROMOTE",
+  "hold_strateeg": true,
+  "remaining_authorized_unscreened": [],
+  "manager_refused_still_in_file": [
+    "USDSEK",
+    "USDNOK",
+    "USDZAR"
+  ],
+  "standing_unauthorized": [
+    "SPN35cash",
+    "N25cash",
+    "EU50cash"
+  ],
+  "audit": "results/cto/c050_absorb_v117_hold/audit_exhaustion.json"
+}

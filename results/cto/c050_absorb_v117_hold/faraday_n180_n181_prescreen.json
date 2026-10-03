@@ -1,0 +1,179 @@
+{
+  "N180": {
+    "id": "N180",
+    "instrument": "UK100cash",
+    "n": 999,
+    "mean_bruto_bp": -2.2793,
+    "netto_bp": -3.6993,
+    "gate_bp": 4.26,
+    "rt_bp": 1.42,
+    "verdict": "FAIL",
+    "notes": "UK100_PRIOR5D_MORNING_FADE fade prior 5d, session-flat 09:00\u219212:30; gate 3*1.42=4.26 from C-048 COSTS_FTMO.csv; not N107 Lon-AM\u2192FRA afternoon and not N138 15:30\u219221:00 XS; swap nights 0; M5 5.73y; PnL through 2024-12-31; NEW_FAMILY CW",
+    "short_history_blocks_pass": false,
+    "history_years": 5.73,
+    "traded_years_through_2024": 3.99,
+    "median_bruto_bp": -3.0073,
+    "stress_gate_bp": 6.39,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.4585,
+    "n_long": 435,
+    "n_short": 564,
+    "years": {
+      "2021": -1.9796,
+      "2022": -1.216,
+      "2023": -6.034,
+      "2024": 0.0968
+    },
+    "trade_span_years": 3.96,
+    "meta": {
+      "n_signal_days": 1002,
+      "n_skip_missing_bar": 3,
+      "n_trades": 999,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "rt_in_costs_ftmo_csv": true,
+      "gate_file": "C-048 79d09e0 COSTS_FTMO.csv appended row; not COSTS_FTMO_alle",
+      "d094a": "FTMO M5 file span 5.73y (>=5.73). PnL through 2024-12-31 only (3.99y). 2025+ not loaded.",
+      "history_years": 5.73,
+      "symbol_list": "SymbolList_FTMO.csv UK100cash",
+      "no_2025_plus": true,
+      "session": "prior 5d return fade; entry 09:00 flat 12:30 CET"
+    },
+    "gate_source": "C-048 79d09e0 COSTS_FTMO.csv UK100cash rondreis_bp 1.42 \u00d7 3 = 4.26",
+    "clone_hits": []
+  },
+  "N181": {
+    "id": "N181",
+    "instrument": "JP225cash",
+    "n": 1018,
+    "mean_bruto_bp": 4.4982,
+    "netto_bp": 2.9882,
+    "gate_bp": 4.53,
+    "rt_bp": 1.51,
+    "verdict": "FAIL",
+    "notes": "JP225_PRIOR1D_AFTERNOON_FADE fade prior 1d, session-flat 15:00\u219220:00; gate 3*1.51=4.53 from C-048 COSTS_FTMO.csv; not N105 Tokyo-AM\u2192Lon 08:00\u219214:00 and not N139 Asia XS 03:00\u219208:00; swap nights 0; M5 5.74y; PnL through 2024-12-31; NEW_FAMILY CX",
+    "short_history_blocks_pass": false,
+    "history_years": 5.74,
+    "traded_years_through_2024": 3.99,
+    "median_bruto_bp": 1.8183,
+    "stress_gate_bp": 6.795,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.5118,
+    "n_long": 491,
+    "n_short": 527,
+    "years": {
+      "2021": 0.2129,
+      "2022": 8.8037,
+      "2023": 1.459,
+      "2024": 7.267
+    },
+    "trade_span_years": 3.94,
+    "meta": {
+      "n_signal_days": 1031,
+      "n_skip_missing_bar": 13,
+      "n_trades": 1018,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "rt_in_costs_ftmo_csv": true,
+      "gate_file": "C-048 79d09e0 COSTS_FTMO.csv appended row; not COSTS_FTMO_alle",
+      "d094a": "FTMO M5 file span 5.74y (>=5.73). PnL through 2024-12-31 only (3.99y). 2025+ not loaded.",
+      "history_years": 5.74,
+      "symbol_list": "SymbolList_FTMO.csv JP225cash",
+      "no_2025_plus": true,
+      "session": "prior 1d return fade; entry 15:00 flat 20:00 CET"
+    },
+    "gate_source": "C-048 79d09e0 COSTS_FTMO.csv JP225cash rondreis_bp 1.51 \u00d7 3 = 4.53",
+    "clone_hits": []
+  },
+  "N180_clones": {
+    "N138_UK_leg": {
+      "peer": "N138_UK_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4725,
+      "both_active_over_cand": 0.7457,
+      "n_cand_active": 999,
+      "n_both_active": 745,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N107_UK_impulse_to_FRA": {
+      "peer": "N107_UK_impulse_to_FRA",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4296,
+      "both_active_over_cand": 0.995,
+      "n_cand_active": 999,
+      "n_both_active": 994,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N181_JP_1d_fade": {
+      "peer": "N181_JP_1d_fade",
+      "z_corr_train": 0.223,
+      "sign_agree_both_active": 0.5594,
+      "both_active_over_cand": 0.995,
+      "n_cand_active": 999,
+      "n_both_active": 994,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "N181_clones": {
+    "N139_JP_leg": {
+      "peer": "N139_JP_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5193,
+      "both_active_over_cand": 0.9646,
+      "n_cand_active": 1018,
+      "n_both_active": 982,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N105_Tokyo_to_Lon": {
+      "peer": "N105_Tokyo_to_Lon",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4134,
+      "both_active_over_cand": 0.998,
+      "n_cand_active": 1018,
+      "n_both_active": 1016,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N180_UK_5d_fade": {
+      "peer": "N180_UK_5d_fade",
+      "z_corr_train": 0.223,
+      "sign_agree_both_active": 0.5619,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 1018,
+      "n_both_active": 1018,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "not_screened": {
+    "HK50cash": "Cleared its own clone bar in the pre-check but was not needed once UK100 and JP225 both cleared.",
+    "AUS200cash": "Cleared its own clone bar in the pre-check. Same-rule agree with UK100 was about 0.75, under 0.85, but left unused.",
+    "USDSEK_USDNOK_USDZAR": "M5 4.74y. Not screened.",
+    "USDHKD": "Not given an id."
+  },
+  "gates": {
+    "N180": 4.26,
+    "N181": 4.53
+  },
+  "costs_rt": {
+    "UK100cash": 1.42,
+    "JP225cash": 1.51
+  },
+  "pnl_through": "2024-12-31",
+  "no_2025_plus": true,
+  "min_n": 150,
+  "no_thr_grid": true,
+  "trial_count_unchanged": 471
+}

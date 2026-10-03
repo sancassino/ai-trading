@@ -1,0 +1,1147 @@
+{
+  "task": "C-050",
+  "asof_cest": "2026-10-04T01:35+02:00",
+  "decision": "honest_exhaustion_hold",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025_plus_touched": false,
+  "costs_rows": 29,
+  "c048_nine_closed": [
+    "UK100cash",
+    "JP225cash",
+    "HK50cash",
+    "AUS200cash",
+    "GBPCAD",
+    "AUDJPY",
+    "EURAUD",
+    "EURNOK",
+    "USDHKD"
+  ],
+  "manager_refused_screen_still_in_file": [
+    "USDSEK",
+    "USDNOK",
+    "USDZAR"
+  ],
+  "n_ok_new_authorize": 0,
+  "buckets": {
+    "ok_new_authorize": [],
+    "q2_stock_crypto": [
+      {
+        "symbol": "AAPL",
+        "rt_bp": "3.61",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ADAUSD",
+        "rt_bp": "19.32",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "AIRF",
+        "rt_bp": "36.34",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 25.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ALGUSD",
+        "rt_bp": "18.27",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ALVG",
+        "rt_bp": "3.63",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "AMZN",
+        "rt_bp": "4.30",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ARM",
+        "rt_bp": "8.96",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 1.3,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "AVAUSD",
+        "rt_bp": "8.91",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 4.5,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BABA",
+        "rt_bp": "6.84",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 10.3,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BAC",
+        "rt_bp": "17.14",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BARUSD",
+        "rt_bp": "4.03",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BAYGn",
+        "rt_bp": "13.68",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BCHUSD",
+        "rt_bp": "15.22",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BNBUSD",
+        "rt_bp": "0.56",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "DASHUSD",
+        "rt_bp": "132.54",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "DBKGn",
+        "rt_bp": "16.63",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "DOGEUSD",
+        "rt_bp": "13.33",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "DOTUSD",
+        "rt_bp": "3.33",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 4.4,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ETCUSD",
+        "rt_bp": "2.95",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ETHUSD",
+        "rt_bp": "7.98",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "GALUSD",
+        "rt_bp": "6.12",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "GOOG",
+        "rt_bp": "3.44",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 20.4,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "GRTUSD",
+        "rt_bp": "3.02",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "IBE",
+        "rt_bp": "12.38",
+        "aandeel_spread0": 0.01,
+        "proxy_y": 25.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ICPUSD",
+        "rt_bp": "4.14",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "IMXUSD",
+        "rt_bp": "4.12",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "LNKUSD",
+        "rt_bp": "1.46",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "LTCUSD",
+        "rt_bp": "25.61",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 10.3,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "LVMH",
+        "rt_bp": "2.20",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 25.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "MANUSD",
+        "rt_bp": "1.08",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "META",
+        "rt_bp": "2.52",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 12.6,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "MSFT",
+        "rt_bp": "2.48",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "NEOUSD",
+        "rt_bp": "30.31",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "NERUSD",
+        "rt_bp": "27.38",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "PFE",
+        "rt_bp": "36.95",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "RACE",
+        "rt_bp": "10.89",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 9.2,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "SANUSD",
+        "rt_bp": "29.50",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "SOLUSD",
+        "rt_bp": "2.83",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 4.7,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "SPCX",
+        "rt_bp": "150.01",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "T",
+        "rt_bp": "35.71",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "TSLA",
+        "rt_bp": "2.88",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 14.5,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "UNIUSD",
+        "rt_bp": "2.59",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 4.3,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "V",
+        "rt_bp": "3.59",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 16.8,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "VECUSD",
+        "rt_bp": "8.94",
+        "aandeel_spread0": 0.01,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "VOWG_p",
+        "rt_bp": "27.08",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 26.4,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "WMT",
+        "rt_bp": "9.36",
+        "aandeel_spread0": 0.05,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "XMRUSD",
+        "rt_bp": "77.02",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "XRPUSD",
+        "rt_bp": "34.06",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "XTZUSD",
+        "rt_bp": "44.32",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ZM",
+        "rt_bp": "11.98",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 5.7,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      }
+    ],
+    "aangenomen_metals": [
+      {
+        "symbol": "XAGAUD",
+        "rt_bp": "3.54",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 24.3,
+        "cat": "commodity/metal",
+        "bron": "\u20ac2,00/lot/kant (aangenomen)"
+      },
+      {
+        "symbol": "XAGEUR",
+        "rt_bp": "3.93",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 24.3,
+        "cat": "commodity/metal",
+        "bron": "\u20ac2,00/lot/kant (aangenomen)"
+      },
+      {
+        "symbol": "XAUAUD",
+        "rt_bp": "0.95",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 24.3,
+        "cat": "commodity/metal",
+        "bron": "\u20ac2,00/lot/kant (aangenomen)"
+      },
+      {
+        "symbol": "XAUEUR",
+        "rt_bp": "1.60",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 24.3,
+        "cat": "commodity/metal",
+        "bron": "\u20ac2,00/lot/kant (aangenomen)"
+      },
+      {
+        "symbol": "XPDUSD",
+        "rt_bp": "44.32",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 26.3,
+        "cat": "commodity/metal",
+        "bron": "\u20ac2,00/lot/kant (aangenomen)"
+      },
+      {
+        "symbol": "XPTUSD",
+        "rt_bp": "23.90",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 27.2,
+        "cat": "commodity/metal",
+        "bron": "\u20ac2,00/lot/kant (aangenomen)"
+      }
+    ],
+    "a0_high_or_bad_rt": [
+      {
+        "symbol": "AAVUSD",
+        "rt_bp": "1.48",
+        "aandeel_spread0": 0.14,
+        "proxy_y": 0.0,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ADSGn",
+        "rt_bp": "4.35",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 26.5,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "AMD",
+        "rt_bp": "3.82",
+        "aandeel_spread0": 0.81,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "ASML",
+        "rt_bp": "2.92",
+        "aandeel_spread0": 0.74,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "AVGO",
+        "rt_bp": "3.42",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 15.4,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "AZN",
+        "rt_bp": "7.17",
+        "aandeel_spread0": 0.77,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BA",
+        "rt_bp": "5.96",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BMW",
+        "rt_bp": "4.71",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 28.1,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BRK.B",
+        "rt_bp": "2.97",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "BTCUSD",
+        "rt_bp": "1.25",
+        "aandeel_spread0": 0.06,
+        "proxy_y": 10.3,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "CSCO",
+        "rt_bp": "8.77",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "CVX",
+        "rt_bp": "5.30",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "DIS",
+        "rt_bp": "9.20",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "FDX",
+        "rt_bp": "6.43",
+        "aandeel_spread0": 0.74,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "GE",
+        "rt_bp": "4.40",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "GM",
+        "rt_bp": "11.91",
+        "aandeel_spread0": 0.71,
+        "proxy_y": 14.1,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "GME",
+        "rt_bp": "40.54",
+        "aandeel_spread0": 0.74,
+        "proxy_y": 22.9,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "IBM",
+        "rt_bp": "5.39",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "INTC",
+        "rt_bp": "9.90",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "JNJ",
+        "rt_bp": "4.80",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "JPM",
+        "rt_bp": "3.75",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "KO",
+        "rt_bp": "11.59",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "LMT",
+        "rt_bp": "4.98",
+        "aandeel_spread0": 0.74,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "MBG",
+        "rt_bp": "4.51",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 28.2,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "MCD",
+        "rt_bp": "4.30",
+        "aandeel_spread0": 0.71,
+        "proxy_y": 58.5,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "MSTR",
+        "rt_bp": "8.63",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 26.6,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "NFLX",
+        "rt_bp": "4.00",
+        "aandeel_spread0": 0.06,
+        "proxy_y": 22.6,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "NKE",
+        "rt_bp": "20.96",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "NVDA",
+        "rt_bp": "5.31",
+        "aandeel_spread0": 0.12,
+        "proxy_y": 25.9,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "PLTR",
+        "rt_bp": "6.81",
+        "aandeel_spread0": 0.77,
+        "proxy_y": 4.3,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "QCOM",
+        "rt_bp": "7.20",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "RTX",
+        "rt_bp": "6.53",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "SAN",
+        "rt_bp": "9.69",
+        "aandeel_spread0": 0.76,
+        "proxy_y": 37.4,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "SBUX",
+        "rt_bp": "9.81",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "SIEGn",
+        "rt_bp": "2.67",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 28.1,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "SNOW",
+        "rt_bp": "7.95",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 4.3,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "TTE",
+        "rt_bp": "3.05",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 33.2,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "USDCNH",
+        "rt_bp": "1.36",
+        "aandeel_spread0": 0.45,
+        "proxy_y": 44.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "USDSGD",
+        "rt_bp": "2.60",
+        "aandeel_spread0": 0.45,
+        "proxy_y": 44.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "XLMUSD",
+        "rt_bp": "5.71",
+        "aandeel_spread0": 0.47,
+        "proxy_y": 7.1,
+        "cat": "crypto",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      },
+      {
+        "symbol": "XOM",
+        "rt_bp": "6.41",
+        "aandeel_spread0": 0.75,
+        "proxy_y": 27.0,
+        "cat": "stock",
+        "bron": "0,002%/kant (aandelen/crypto, Q2-aanname)"
+      }
+    ],
+    "proxy_lt5_fx": [
+      {
+        "symbol": "AUDNZD",
+        "rt_bp": "1.38",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "EURCZK",
+        "rt_bp": "5.94",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "EURHUF",
+        "rt_bp": "6.07",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "EURNZD",
+        "rt_bp": "1.22",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "EURPLN",
+        "rt_bp": "5.34",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "GBPNZD",
+        "rt_bp": "0.99",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "NZDCAD",
+        "rt_bp": "2.23",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "NZDCHF",
+        "rt_bp": "2.94",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "NZDJPY",
+        "rt_bp": "2.00",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "USDCZK",
+        "rt_bp": "6.12",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "USDHUF",
+        "rt_bp": "6.34",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "USDILS",
+        "rt_bp": "2.28",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "USDPLN",
+        "rt_bp": "5.29",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 0.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      }
+    ],
+    "standing_unauthorized": [
+      {
+        "symbol": "EU50cash",
+        "rt_bp": "2.96",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 0.0,
+        "cat": "",
+        "bron": "0 (indices/olie"
+      },
+      {
+        "symbol": "N25cash",
+        "rt_bp": "5.62",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 0.0,
+        "cat": "",
+        "bron": "0 (indices/olie"
+      },
+      {
+        "symbol": "SPN35cash",
+        "rt_bp": "4.09",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 0.0,
+        "cat": "",
+        "bron": "0 (indices/olie"
+      }
+    ],
+    "dead_sole_barred": [
+      {
+        "symbol": "AUDCAD",
+        "rt_bp": "1.64",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 54.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "AUDCHF",
+        "rt_bp": "1.94",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 54.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "CADCHF",
+        "rt_bp": "2.27",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 71.3,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "CADJPY",
+        "rt_bp": "1.78",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 55.1,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "CHFJPY",
+        "rt_bp": "1.18",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 55.1,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "EURCAD",
+        "rt_bp": "1.20",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 50.5,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "EURCHF",
+        "rt_bp": "1.20",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 50.5,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "FRA40cash",
+        "rt_bp": "1.98",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 0.0,
+        "cat": "",
+        "bron": "0 (indices/olie"
+      },
+      {
+        "symbol": "GBPAUD",
+        "rt_bp": "1.18",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 54.0,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "GBPCHF",
+        "rt_bp": "1.31",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 71.3,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "GBPJPY",
+        "rt_bp": "1.11",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 55.1,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      },
+      {
+        "symbol": "US2000cash",
+        "rt_bp": "3.49",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 0.0,
+        "cat": "",
+        "bron": "0 (indices/olie"
+      },
+      {
+        "symbol": "USDMXN",
+        "rt_bp": "2.98",
+        "aandeel_spread0": 0.0,
+        "proxy_y": 70.7,
+        "cat": "fx",
+        "bron": "FX \u20ac2,25/lot/kant (MT5-deals)"
+      }
+    ],
+    "agri_spread0": [
+      {
+        "symbol": "COCOA.c",
+        "rt_bp": "19.68",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 25.0,
+        "cat": "commodity/metal",
+        "bron": "0 (grondstof-CFD"
+      },
+      {
+        "symbol": "COFFEE.c",
+        "rt_bp": "9.05",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 25.0,
+        "cat": "commodity/metal",
+        "bron": "0 (grondstof-CFD"
+      },
+      {
+        "symbol": "CORN.c",
+        "rt_bp": "21.24",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 24.5,
+        "cat": "commodity/metal",
+        "bron": "0 (grondstof-CFD"
+      },
+      {
+        "symbol": "COTTON.c",
+        "rt_bp": "55.29",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 25.0,
+        "cat": "commodity/metal",
+        "bron": "0 (grondstof-CFD"
+      },
+      {
+        "symbol": "DXYcash",
+        "rt_bp": "1.93",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 0.0,
+        "cat": "",
+        "bron": "0 (indices/olie"
+      },
+      {
+        "symbol": "HEATOIL.c",
+        "rt_bp": "92.32",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 24.3,
+        "cat": "commodity/metal",
+        "bron": "0 (grondstof-CFD"
+      },
+      {
+        "symbol": "NATGAScash",
+        "rt_bp": "123.34",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 0.0,
+        "cat": "",
+        "bron": "0 (grondstof-CFD"
+      },
+      {
+        "symbol": "SOYBEAN.c",
+        "rt_bp": "18.41",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 24.3,
+        "cat": "commodity/metal",
+        "bron": "0 (grondstof-CFD"
+      },
+      {
+        "symbol": "SUGAR.c",
+        "rt_bp": "75.97",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 24.8,
+        "cat": "commodity/metal",
+        "bron": "0 (grondstof-CFD"
+      },
+      {
+        "symbol": "WHEAT.c",
+        "rt_bp": "22.85",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 24.5,
+        "cat": "commodity/metal",
+        "bron": "0 (grondstof-CFD"
+      },
+      {
+        "symbol": "XCUUSD",
+        "rt_bp": "8.38",
+        "aandeel_spread0": 1.0,
+        "proxy_y": 24.3,
+        "cat": "commodity/metal",
+        "bron": "0 (grondstof-CFD"
+      }
+    ]
+  },
+  "unblock_requires": [
+    "Debian: confirmed MT5 deals commission for stocks/crypto (replace Q2 0.002%/side) before any equity/crypto cost row",
+    "Debian: year of swap snapshots for EU50/FRA40 if dividend-season anomaly hold is to lift",
+    "Debian: native FTMO D1/M5 from before 2020-11 for SPN35/N25 if broker series (not Yahoo proxy) must clear 5y",
+    "Confirmed \u20ac2/lot commission (not aangenomen) before non-XAU metals enter COSTS_FTMO.csv",
+    "USDCNH/USDSGD: aandeel_spread0=0.45 blocks honest RT even with 44y BIS proxy",
+    "Do not invent RT/swap; do not authorize alle-only without confirmed commission"
+  ]
+}
