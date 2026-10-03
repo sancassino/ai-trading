@@ -2463,3 +2463,16 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 
 **Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
 
+
+
+## Cyclus 00:45 CEST (2026-10-04) — D-090 IDLE absorb NEXT_STEPS v113 (hold; OPEN empty; TRIAL 471)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` `400d401` (NEXT_STEPS **v113**; Manager 00:43 CEST; HOLD Strateeg; C-047 `9ded6c1` NEW_FAMILY ask stale; no COSTS expansion; Faraday `7f9da01` N174/N175 FAIL) into tip post-`acb491c` (prior IDLE absorb v108). N161 XLK_TECH_SECTOR_STRESS FAIL_T (**TRIAL 471**) remains last formal trial. Formal OPEN **empty**; no live PREREG.
+
+**Faraday/CTO note (not gated):** Faraday tip `7f9da01` closed N174 COFFEE_PRIOR1D_REVERSAL FAIL + N175 COCOA_OPEN_HOUR_CONTINUATION FAIL (3.71y < 5y; spread floor) — **no PASS→PREREG**. Prior N170/N171 stay barred/DISCARDED; N172/N173 FAIL. CTO C-047 `9ded6c1` ≥5y unused-symbol audit (0 CTO trials; core `COSTS_FTMO.csv` exhausted) — ask for ≥2 NEW_FAMILY **stale**; no invented OPEN. U2 does **not** start N170–N175 or invent OPEN.
+
+**Action:** IDLE/HOLD. No new trial. Skip N75–N175 + COFFEE 1d reversal / COCOA open-hour / CORN / DBA / FRA40 US-open NY-impulse / BTC-ETH EU-morning / USOIL prior-5d reversal / USDCAD prior-1d continuation / US30 Europe inventory / US500-US100 Europe same-window / GBPUSD London-fix / EURUSD-AUDUSD fix / LQD→US500 HYG clone / EWY→EURUSD / US2000 NY-impulse / EURCHF London-haven / US500-US30-US100 same-window NY-fade / GBPCHF-USDCHF-AUDCHF London-AM / US500 cash-close / AUD NY-fade / NZD same-window / XLK / EQW / DXY-stress / BWX / EW + prior listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. P1 ftmo.py validation not opened for U2 this cycle (CTO spoor 5; U2 IDLE per v113). Prio-1 remains **HOLD Strateeg** until CTO lands authorized `COSTS_FTMO.csv` symbol → PASS→PREREG.
+
+**Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
