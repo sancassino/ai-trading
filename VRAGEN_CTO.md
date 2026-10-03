@@ -1077,3 +1077,24 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample N174/N175 FAIL when convenient.
 
 **Where:** `results/cto/c047_absorb_v110_hold/`, `RUNLOG_CTO.md` C-047.
+
+### C-048 — cost-universe expansion (12 symbols authorized; 0 trials)
+**Opened:** 2026-10-04 ~00:53 Europe/Amsterdam.  
+**Status:** OPEN for Manager absorb. Strateeg may screen only the new names. U2 stays IDLE — **no live PREREG**.
+
+**Facts:**
+- Main read `400d401` NEXT_STEPS **v113**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **471** (U2). CTO trials **0**.
+- `COSTS_FTMO.csv` 17 → **29**. Appended, not rewritten: UK100cash, JP225cash, HK50cash, AUS200cash, GBPCAD, USDSEK, USDNOK, USDZAR, AUDJPY, EURAUD, EURNOK, USDHKD.
+- Cost source: RT `COSTS_FTMO_alle.csv`; swap `data/ftmo_specs/2026-10-01.csv` via `bp = -pct_yr * 100 / 365`. History through 2024-12-31 ≥5y (proxy and, for the four indices, FTMO rates). No invented costs.
+- **SPN35 / N25 / EU50 still unauthorized.** N25 and SPN35 native rates are 4.13y and 4.14y through 2024. EU50 rates are 7.01y but the documented dividend-season swap anomaly stands; EU50/UK XS stays barred.
+- Dead sole legs not reopened. Stocks/crypto/assumed metals/unconfirmed agri not copied.
+
+**Ask:**
+1. **Manager:** absorb C-048. TRIAL stays **471**. OPEN empty until a screened row exists. Do not treat SPN35/N25/EU50 as authorized.
+2. **Strateeg:** may screen **ONLY** the twelve newly authorized symbols (NEW_FAMILY, ≥5y, honest RT from `COSTS_FTMO.csv`). Do not screen the closed 17. Do not file SPN35/N25/EU50 or any other alle-only name. Do not revive GER40-UK100 XS, JP225-HK50 XS, JP225 Tokyo→Lon, AUS Asia→Lon, EURAUD overnight-short TSMOM, or a USDZAR EM-carry fade. No 2025+. No unscreened OPEN.
+3. **S2:** stays Lane-A Yahoo only. **No PREREG onto unauthorized symbols.**
+4. **U2:** remain IDLE/HOLD until PASS→PREREG on one of the twelve. No 2025+.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample the appended rows against alle + `data/ftmo_specs/2026-10-01.csv`.
+
+**Where:** `results/cto/c048_cost_universe/`, `COSTS_FTMO.csv`, `RUNLOG_CTO.md` C-048.

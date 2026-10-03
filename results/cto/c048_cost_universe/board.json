@@ -1,0 +1,161 @@
+{
+  "task": "C-048",
+  "asof_cest": "2026-10-04T00:53+02:00",
+  "branch": "grok/cto-1",
+  "main_read": "400d401 NEXT_STEPS v113",
+  "decision": "authorize",
+  "n_authorized": 12,
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025_plus_touched": false,
+  "costs_file": "COSTS_FTMO.csv",
+  "prior_core_symbols": 17,
+  "rows_after": 29,
+  "sources": {
+    "roundtrip": "COSTS_FTMO_alle.csv (M5 bar-spread median 2024-2026 + confirmed commission; costs_ftmo_all.py)",
+    "swap": "data/ftmo_specs/2026-10-01.csv snapshot_utc=2026-10-01T21:30:22Z",
+    "swap_formula": "swap_*_bp_per_nacht = -pct_yr * 100 / 365 (same identity as the original 17, checked on swap_specs_17.csv)",
+    "history_proxy": "data/PROXY_MAP_FTMO.csv jaren_tm_2024 (through 2024-12-31, reserve excluded)",
+    "history_rates": "*_rates.csv first date through 2024-12-31",
+    "history_m5": "data/m5gz first/last bar; usable years cut at 2024-12-31"
+  },
+  "authorized": [
+    {
+      "symbol": "UK100cash",
+      "class": "index",
+      "rt_bp": 1.42,
+      "swap_long_bp_night": 2.28,
+      "swap_short_bp_night": -0.11,
+      "years_usable": 41.0,
+      "history": "FTSE proxy 41.0y; UK100cash_rates 2017-12-28 \u2192 7.01y through 2024-12-31; M5 2021-01-04 (3.99y to 2024)"
+    },
+    {
+      "symbol": "JP225cash",
+      "class": "index",
+      "rt_bp": 1.51,
+      "swap_long_bp_night": 1.33,
+      "swap_short_bp_night": 0.44,
+      "years_usable": 60.0,
+      "history": "N225 proxy 60.0y; JP225cash_rates 2019-01-02 \u2192 6.00y through 2024-12-31; M5 ~4.00y to 2024"
+    },
+    {
+      "symbol": "HK50cash",
+      "class": "index",
+      "rt_bp": 2.63,
+      "swap_long_bp_night": 1.96,
+      "swap_short_bp_night": -0.04,
+      "years_usable": 38.0,
+      "history": "HSI proxy 38.0y; HK50cash_rates 2019-01-02 \u2192 6.00y through 2024-12-31; M5 3.99y to 2024"
+    },
+    {
+      "symbol": "AUS200cash",
+      "class": "index",
+      "rt_bp": 1.36,
+      "swap_long_bp_night": 2.2,
+      "swap_short_bp_night": 0.19,
+      "years_usable": 32.1,
+      "history": "AXJO proxy 32.1y; AUS200cash_rates 2019-02-08 \u2192 5.89y through 2024-12-31; M5 3.99y to 2024"
+    },
+    {
+      "symbol": "EURAUD",
+      "class": "fx",
+      "rt_bp": 1.11,
+      "swap_long_bp_night": 1.01,
+      "swap_short_bp_night": -0.2,
+      "years_usable": 50.5,
+      "history": "PROXY_MAP FXBIS_EUR+FXBIS_AUD 50.5y; M5 2021-01-04 (3.99y to 2024)"
+    },
+    {
+      "symbol": "EURNOK",
+      "class": "fx",
+      "rt_bp": 4.62,
+      "swap_long_bp_night": 0.97,
+      "swap_short_bp_night": -0.2,
+      "years_usable": 50.5,
+      "history": "PROXY_MAP FXBIS_EUR+FXBIS_NOK 50.5y; M5 3.99y to 2024"
+    },
+    {
+      "symbol": "USDNOK",
+      "class": "fx",
+      "rt_bp": 4.76,
+      "swap_long_bp_night": 0.44,
+      "swap_short_bp_night": 0.02,
+      "years_usable": 71.0,
+      "history": "PROXY_MAP FXBIS_NOK 71.0y; M5 from 2022-01-03 (2.99y to 2024)"
+    },
+    {
+      "symbol": "USDSEK",
+      "class": "fx",
+      "rt_bp": 5.52,
+      "swap_long_bp_night": -0.13,
+      "swap_short_bp_night": 0.89,
+      "years_usable": 71.3,
+      "history": "PROXY_MAP FXBIS_SEK 71.3y; M5 from 2022-01-03 (2.99y to 2024)"
+    },
+    {
+      "symbol": "USDZAR",
+      "class": "fx",
+      "rt_bp": 5.75,
+      "swap_long_bp_night": 1.4,
+      "swap_short_bp_night": -0.13,
+      "years_usable": 55.0,
+      "history": "PROXY_MAP FXBIS_ZAR 55.0y; M5 from 2022-01-03 (2.99y to 2024)"
+    },
+    {
+      "symbol": "USDHKD",
+      "class": "fx",
+      "rt_bp": 0.84,
+      "swap_long_bp_night": -0.04,
+      "swap_short_bp_night": 0.6,
+      "years_usable": 44.0,
+      "history": "PROXY_MAP FXBIS_HKD 44.0y; M5 2021-01-04 (3.99y to 2024)"
+    },
+    {
+      "symbol": "GBPCAD",
+      "class": "fx",
+      "rt_bp": 1.08,
+      "swap_long_bp_night": -0.04,
+      "swap_short_bp_night": 0.85,
+      "years_usable": 71.4,
+      "history": "PROXY_MAP FXBIS_GBP+FXBIS_CAD 71.4y; M5 3.99y to 2024"
+    },
+    {
+      "symbol": "AUDJPY",
+      "class": "fx",
+      "rt_bp": 1.57,
+      "swap_long_bp_night": -0.24,
+      "swap_short_bp_night": 1.32,
+      "years_usable": 54.0,
+      "history": "PROXY_MAP FXBIS_AUD+FXBIS_JPY 54.0y; M5 3.99y to 2024"
+    }
+  ],
+  "explicit_exclusions": [
+    {
+      "symbol": "SPN35cash",
+      "authorized": false,
+      "why": "FTMO-native SPN35cash_rates.csv starts 2020-11-09 \u2192 4.14y through 2024-12-31 (<5). M5 usable to 2024-12-31 is 3.99y. IBEX proxy is 31.5y but that does not make the broker series a 5y book; D-094a (b) is a PREREG mechanism claim, not a cost-row promotion. Standing non-authorization (NEXT_STEPS v111/v113). F5 already ran this symbol (ORB t -1.64)."
+    },
+    {
+      "symbol": "N25cash",
+      "authorized": false,
+      "why": "FTMO-native N25cash_rates.csv starts 2020-11-12 \u2192 4.13y through 2024-12-31 (<5). M5 to 2024 is 3.99y. AEX proxy 32.2y is not the FTMO series. Standing non-authorization. F5 ORB t -2.60 on this symbol."
+    },
+    {
+      "symbol": "EU50cash",
+      "authorized": false,
+      "why": "Native rates are long enough (2017-12-29, 7.01y through 2024; STOXX50 proxy 17.8y) and the 2026-10-01 swap print is a normal -6.59%/yr, but still not authorized. RUNLOG documented the FTMO EU50 long-swap as a dividend-season anomaly (+10%/yr) and the team refused that print (substituting GER40 would invent a cost; one later snapshot does not establish a stable swap). EU50/UK XS is a barred clone of closed GER40/UK100. F5 already tested RSI/ORB on EU50. Standing non-authorization in v111/v113; CTO does not override it."
+    }
+  ],
+  "other_exclusions_summary": [
+    "Closed core 17 not re-opened (US500/US100/US30/GER40/XAU/XAG/EURUSD/GBPUSD/USDJPY/AUDUSD/USDCAD/USDCHF/NZDUSD/EURGBP/EURJPY/USOIL/UKOIL).",
+    "Dead sole-leg symbols not re-authorized: US2000cash (N164), FRA40cash (N170 discarded; RUNLOG also recorded a +31%/yr dividend-season long swap), EURCHF (N165), GBPJPY (GBPJPY_EU_MOM), USDMXN (N137), GBPAUD (GBPAUD-LO), CHFJPY (CHFJPY-LO), GBPCHF and AUDCHF (London-AM twins of EURCHF), AUDCAD/CADJPY/CADCHF (named closed screens), EURCAD (EUR-CAD G10 XS barred).",
+    "DXYcash: M5 starts 2024-11-26 (0.10y through 2024-12-31). DXY Lon\u2192EU-PM and DXY dollar-stress are dead. Proxy does not create a new FTMO series.",
+    "USDCNH and USDSGD: alle aandeel_spread0=0.45 and M5 only ~1.0y through 2024, so the spread median is not an honest RT even though BIS proxy is 44y.",
+    "Stocks and crypto: commission is the Q2 0.002%/side assumption, not a confirmed FTMO deal. Not copied.",
+    "Metals other than XAU (XPT/XPD/XCU/XAUAUD/XAUEUR/XAGAUD/XAGEUR): commission \u20ac2/lot is labeled aangenomen in COSTS_FTMO_alle.csv.",
+    "Agri/softs and unconfirmed commodity CFDs (COFFEE/COCOA/CORN/SOY/SUGAR/WHEAT/COTTON/HEATOIL/NATGAS): commissie_bron says NIET bevestigd, and softs are <5y (N174/N175).",
+    "FX with PROXY_MAP jaren_tm_2024 = 0 (AUDNZD, EURCZK, EURHUF, EURNZD, EURPLN, GBPNZD, NZD*, USDCZK, USDHUF, USDILS, USDPLN): M5 usable window through 2024 is \u22643.99y."
+  ],
+  "strateeg_rule": "Screen ONLY the 12 newly authorized symbols, as NEW_FAMILY, using COSTS_FTMO.csv RT+swap, history \u22655y, no 2025+ reserve. Do not rescreen closed families on these names (GER40-UK100 XS, JP225-HK50 XS, JP225 Tokyo\u2192Lon, AUS Asia\u2192Lon, EURAUD overnight-short TSMOM, USDZAR as an N137-style EM-carry fade). SPN35/N25/EU50 stay off the screen list. S2 stays Lane-A Yahoo only; no PREREG onto unauthorized symbols.",
+  "hold_strateeg": false
+}
