@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N160 — XAG_NY_IMPULSE_FADE session-flat (NEW_FAMILY CC)
 
-**Status:** **OPEN** — D-092.1 refill after N158 FAIL / N159 FAIL (filed 2026-10-03 ~01:53 CEST). Not screened this cycle.  
+**Status:** **geen PREREG — D-092.1 FAIL** `n160_n161` (2026-10-03 ~02:05 CEST). N=451, mean **−7,15 < 15,21** (med −5,75; years −3,29/−8,83/−9,03; L/S 222/229). Not N82 (agree 0,50, cover 1,00), not N150 XAG-leg (agree 0,44, cover 0,26), not N141 XAG-leg (agree 0,46, cover 0,34), not N75 silver (agree 0,48, cover 0,27), not N113 SLV/GLD (agree 0,45, cover 0,51), not CPER (agree 0,55, cover 0,27). No gold twin, no US30 leg, no oil leg, no thr-grid, no overnight.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CC** (silver **NY-hour impulse fade**, one metal CFD, session-flat). Round-trip is in `COSTS_FTMO.csv`. Not a gold/index pair. Not an FX book. Not a G10 cross. Not metal–oil (no oil leg). Not silver/index (no index leg). Not an equity-factor z→US500. Not an oil sleeve. Not a GER40 session.  
 **Signal:** M5 impulse on **XAGUSD** 15:30→17:00 CET. **Trade:** the same leg, flat by 21:00.  
 **Track 2 + D-100:** the NY metals hour overshoots silver; fade it inside the same cash session. Flat before the roll so neither silver swap is the alpha.

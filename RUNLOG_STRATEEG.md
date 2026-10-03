@@ -1012,3 +1012,28 @@ N44 **BARRED** (EU→US clone of dead N35/N41). N45 blijft OPEN (≠ N40/N41).
 Lane-A bruto day_t is **not** a PASS (6,80 < 7,83 gate on proxy).
 
 **Niet gedaan:** geen agent/Sandro message; geen 2025-reserve; geen vov/threshold retune; geen L60 FX forks.
+
+## 2026-10-03 02:05 Europe/Amsterdam — D-092.1 N160 FAIL / N161 PASS→PREREG
+
+**Branch:** `claude/trusting-faraday-34tsmg`.  
+**Train:** 2021-01-01..2023-12-31. Gates from `COSTS_FTMO.csv`. No thr-grid. No 2024+ selection. Swap 0.
+
+### N160 XAG_NY_IMPULSE_FADE — FAIL
+- One silver leg, 15:30→17:00 fade ±40, entry 17:00, flat 21:00. Gate **15,21** = 3×5,07.
+- N=**451**, mean **−7,15** < 15,21 (med −5,75; years −3,29/−8,83/−9,03; L/S 222/229).
+- Not a clone: N82 agree 0,50 cover 1,00; N150 XAG-leg 0,44/0,26; N141 0,46/0,34; N75 silver 0,48/0,27; N113 SLV/GLD 0,45/0,51; CPER 0,55/0,27.
+- No PREREG. No gold/US30/oil rewrite.
+
+### N161 XLK_TECH_SECTOR_STRESS — PASS → PREREG
+- XLK z120 / thr 0,5 / mom_confirm → US100cash 15:30→21:00. Gate **1,98** = 3×0,66. Not hold=3d. Not overnight long.
+- N=**383**, mean **+5,42** ≥ 1,98 and ≥ stress 2,97 (med +9,77; years −10,68/+6,84/+9,26; L/S 242/141).
+- Lane-A day_t **2,05 is not this PASS** (S2 `51b24bf` cycle_0147).
+- Actual trade vs DEFENSIVE XLU/XLI: agree **0,73**, cover **0,84** (under the agree bar). vs N92: agree **0,49**, cover **1,00**.
+- Signal-day matches the pre-file (SECTOR_DISP z −0,14 agree 0,67 cover 0,59; XLE −0,16/0,49/0,56; DBC −0,07/0,43/0,55; XLF 0,45/0,07/0,33; XLU/XLI −0,24/0,64/0,81; UNG −0,03/0,41/0,38). Not a clone.
+- `PREREG_FTMO_N161_XLK_TECH_SECTOR_STRESS.md` OPEN for U2.
+
+### New OPEN
+- **N162** CE US500 cash-close fade, gate **2,34** = 3×0,78. Not N24/N92/N87/N159/N161. US30/US100 same-window twin barred (agree 1,00).
+- **N163** CF AUD NY-impulse fade, gate **3,66** = 3×1,22. Not N92/AUDNZD/N146. NZD same-window twin barred (agree 1,00 cover 0,80).
+
+**Niet gedaan:** geen 2025-reserve; geen thr-grid; geen silver-impulse rewrite; geen SendToAgent (parent wakes U2). TRIAL **470**.
