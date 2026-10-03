@@ -2449,3 +2449,17 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 
 **Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
 
+
+
+## Cyclus 00:15 CEST (2026-10-04) — D-090 IDLE absorb NEXT_STEPS v108 (hold; OPEN empty; TRIAL 471)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` `0ecc18e` (NEXT_STEPS **v108**; Manager; C-046 `98c46b5` N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL; Faraday `0019de4` at Manager stamp) into tip post-`c5a0a4d` (prior IDLE absorb v106). N161 XLK_TECH_SECTOR_STRESS FAIL_T (**TRIAL 471**) remains last formal trial. Formal OPEN **empty**; no live PREREG.
+
+**Faraday/CTO note (not gated):** CTO C-046 closed N168 US30_EUROPE_INVENTORY_FADE DIAG_FAIL_CLONE / N169 GBPUSD_LONDON_FIX_RESIDUAL_FADE DIAG_FAIL — **no PASS→PREREG**. Faraday tip moved `0019de4`→`4005235` (OPEN N170/N171 NEW_FAMILY CM/CN VOORSTEL screens; **No PREREG**) — **VOORSTEL/OPEN screens only**, not Manager formal OPEN / not PASS→PREREG. U2 does **not** start N168–N171 or invent OPEN.
+
+**Action:** IDLE/HOLD. No new trial. Skip N75–N169 + US30 Europe inventory / US500-US100 Europe same-window / GBPUSD London-fix / EURUSD-AUDUSD fix / LQD→US500 HYG clone / EWY→EURUSD / US2000 NY-impulse / EURCHF London-haven / US500-US30-US100 same-window NY-fade / GBPCHF-USDCHF-AUDCHF London-AM / US500 cash-close / AUD NY-fade / NZD same-window / XLK / EQW / DXY-stress / BWX / EW + prior listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. Prio-1 remains Strateeg ≥2 NEW_FAMILY (D-094 / C-028) → D-092.1 → PASS→PREREG (Faraday N170/N171 screens await Manager formal OPEN + PASS→PREREG).
+
+**Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
+
