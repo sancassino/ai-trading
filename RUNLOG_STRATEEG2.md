@@ -532,3 +532,28 @@
 - **MATERIAL:** true (2 survivor packs).
 - Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag LQD_IG_CREDIT_STRESS / EWY_KOREA_STRESS oppakken; S2 blijft Lane-A novelty.
 
+
+## 2026-10-04 ~00:46 Europe/Amsterdam — Hourly cycle (:40→:46 slot) / C-028 Lane-A + POST-N78/N93
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ 885090b (LQD+EWY promote → later N166 FAIL_CLONE / N167 FAIL; families now DEAD). Merged `origin/main` @ 400d401 (v113). Branch ≠ main/uitvoerder.
+- **Refresh (read-only):** NEXT_STEPS **v113** (`origin/main` @ 400d401, 00:43 CEST): HOLD Strateeg until CTO adds authorized `COSTS_FTMO.csv` symbol; C-047 NEW_FAMILY ask **stale** — no alle-book invent; formal OPEN **empty**; U2 IDLE/HOLD TRIAL **471**; FREEZE OFF; Track-3 PAUSED. EDGE_SEARCH_UPGRADE C-028 bindend. Dead += N166 LQD / N167 EWY / N168–N175 + prior bars. S2 still Lane-A Yahoo/proxy novelty into already-mapped cheap FTMO (SPY→US500cash, NDX→US100cash, EURUSD, GBPUSD).
+- **Dead-set / clone guard:** LQD_IG / EWY_KOREA / XLK / XLE / XLV / XLY / COCOA / AUDUSD_COMMODITY_FX / VLUE / XLB / EURJPY_RISK / YIELD_CURVE / DEFENSIVE / GAS / SILVER / EMB / CRACK / SECTOR_DISP / VIX_TERM / HYG / TLT / TIP / CPER / VNQ / EEM / DBC / EFA / IWM→US500 / EQW / DXY / MTUM / GLD / XLF / QUAL / BRENT_WTI / USDMXN / EWZ / DBA / BWX / PPLT / SOFTS_RATIO / ORB/TSMOM/L60 FX-med / CORN / UKOIL-OVN / ORB-meta / N75–N175 / FX LO carry / US2000 NY / EURCHF London / US500 cash-close / AUD NY / USDCAD cont / EUR-CAD XS / coffee/cocoa / USOIL swing / London-fix / Europe inventory / CEO T5–T16. Formal OPEN empty — no OPEN ids. **No PREREG_S2** (Lane-B = Strateeg **HOLD** per v113).
+- **C-028 Lane-A screens** (proxy daily ≤2024-12-31; **non-overlapping** multi-day holds; day_t bruto + early RT/swap×hold; promote=**COST_OK only**; artefacts `results/strateeg2_prescreen/cycle_0046/`; script `scripts/s2_c028_lane_a_cycle0046.py`):
+
+  | Family (NEW_FAMILY) | Best symbols | Config | years | mean_bp | day_t | n | cost | Uitkomst |
+  |---------------------|--------------|--------|------:|--------:|------:|--:|------|----------|
+  | **EWC_CANADA_STRESS** | EWC→**EURUSD** | z60/thr1.0/mom_confirm\|hold=5d | 19.89 | +14.22 | **2.78** | 604 | **COST_OK** (EURUSD; drag 6.27; net 7.94) | **PROMOTE** |
+  | **XLU_UTILITIES_STRESS** | XLU→**SPY** | z40/thr1.5/stress_buy\|hold=3d | 19.90 | +17.05 | **2.29** | 708 | **COST_OK** (US500; drag 4.85; net 12.21) | **PROMOTE** |
+  | XLP_STAPLES_STRESS | XLP→NDX | z40/thr1.5/fade_extreme\|hold=1d | 19.91 | +6.04 | 1.70 | 1705 | — | FAIL day_t |
+  | XLI_INDUSTRIALS_STRESS | XLI→NDX | z120/thr0.5/z_level\|hold=3d | 19.82 | +7.34 | 1.27 | 1468 | — | FAIL day_t |
+  | EWA_AUSTRALIA_STRESS | EWA→EURUSD | z40/thr1.0/z_level\|hold=1d | 19.91 | +2.27 | 1.59 | 2466 | — | FAIL day_t |
+
+- **Novelty:** **5/5 NEW_FAMILY** (≥2/3 ✔; optional XLU included). 1215 configs; 9 promote-configs / **2** promote-families. COST_HOSTILE bruto-ok: 0; COST_TIGHT: 0.
+- **Cost-stress:** survivors cleared mean≥2×3RT + net_after_drag≥1 with **swap×hold**. EWC ≠ USDCAD_CONT N173 / EUR_CAD XS N153. XLU alone ≠ DEFENSIVE XLU/XLI ratio. Prefer **EURUSD** (EWC) / **US500** (XLU). No US100 overnight long this cycle. No unauthorized alle-only / USDSEK/EURNOK/USDNOK self-map.
+- **Survivor packs (VOORSTEL + CSV, geen PREREG):**
+  - `VOORSTEL_S2_EWC_CANADA_STRESS.md` + EWC→EURUSD hold=5d daily
+  - `VOORSTEL_S2_XLU_UTILITIES_STRESS.md` + XLU→SPY hold=3d daily
+  - FTMO map: EWC→**EURUSD** / XLU→**US500cash** — packed for later Lane-B; **Strateeg HOLD per v113** — not an immediate PREREG ask.
+- **MATERIAL:** true (2 survivor packs; Strateeg HOLD so no PREREG escalate).
+- Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers / geen alle-book invent. Volgende: stilten; survivors wait for CTO COSTS expansion + Strateeg Lane-B unhold; S2 blijft Lane-A novelty.
+
