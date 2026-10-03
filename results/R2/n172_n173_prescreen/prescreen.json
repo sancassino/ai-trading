@@ -1,0 +1,273 @@
+{
+  "N172": {
+    "id": "N172",
+    "instrument": "USOILcash",
+    "n": 767,
+    "mean_bruto_bp": 4.5516,
+    "netto_bp": 1.2116,
+    "gate_bp": 10.02,
+    "rt_bp": 3.34,
+    "verdict": "FAIL",
+    "notes": "USOIL_PRIOR5D_SWING_REVERSAL sign of prior 5d return, fade, session-flat 15:30\u219221:00; honest COSTS gate 3*3.34=10.02; swap nights 0 (oil swap specs not used); no threshold; not NY-impulse fade (signal is the prior 5d, entry at 15:30 not after a 15:30\u201317:00 impulse); not UKOIL overnight; not Brent\u2013WTI; NEW_FAMILY CO",
+    "median_bruto_bp": 3.1411,
+    "stress_gate_bp": 15.03,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.5059,
+    "n_long": 334,
+    "n_short": 433,
+    "years": {
+      "2021": 3.9731,
+      "2022": 8.2054,
+      "2023": 1.4508
+    },
+    "trade_span_years": 2.96,
+    "meta": {
+      "n_signal_days": 768,
+      "n_skip_missing_bar": 1,
+      "n_trades": 767,
+      "swap_bp": 0,
+      "swap_nights": 0,
+      "overnight": false,
+      "hold": "session-flat 15:30\u219221:00",
+      "threshold": null,
+      "rt_in_costs": true,
+      "symbol_list": "SymbolList_FTMO.csv USOIL.cash; symbol_history_FTMO first_d1 2020-12-31 bars 1482",
+      "d094a_years": 5.76,
+      "d094a": "USOILcash on the FTMO symbol list; D1 history from 2020-12-31 (5.76y through 2026-10-04, >=5y). Train book is 2021-2023.",
+      "session": "prior 5d return fade; entry 15:30 flat 21:00 CET",
+      "oil_swap_unreliable_not_used": "session-flat; long credit -5.40 and short 24.53 not in the gate"
+    },
+    "costs_rt": 3.34,
+    "gate_source": "honest COSTS_FTMO.csv roundtrip_intraday_bp 3.34 \u00d7 3 = 10.02",
+    "clone_hits": []
+  },
+  "N173": {
+    "id": "N173",
+    "instrument": "USDCAD",
+    "n": 776,
+    "mean_bruto_bp": -0.8991,
+    "netto_bp": -1.6991,
+    "gate_bp": 2.4,
+    "rt_bp": 0.8,
+    "verdict": "FAIL",
+    "notes": "USDCAD_PRIOR1D_SWING_CONTINUATION sign of prior 1d return, same sign, session-flat 15:30\u219221:00; honest COSTS gate 3*0.8=2.40 (not the US500 2.34 gate); swap nights 0 inside the gate; long swap credit -0.09 is not alpha and is not subtracted; not L60; not a G10 cross; not N33's London-morning window; NEW_FAMILY CP",
+    "median_bruto_bp": -1.0765,
+    "stress_gate_bp": 3.6,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4794,
+    "n_long": 392,
+    "n_short": 384,
+    "years": {
+      "2021": 1.0529,
+      "2022": -2.6771,
+      "2023": -1.0654
+    },
+    "trade_span_years": 2.98,
+    "meta": {
+      "n_signal_days": 776,
+      "n_skip_missing_bar": 0,
+      "n_trades": 776,
+      "swap_bp": 0,
+      "swap_nights": 0,
+      "overnight": false,
+      "hold": "session-flat 15:30\u219221:00",
+      "threshold": null,
+      "rt_in_costs": true,
+      "symbol_list": "SymbolList_FTMO.csv USDCAD Forex",
+      "d094a_years": 23.03,
+      "d094a": "USDCAD on the FTMO symbol list; daily file span 23.03y (>=5y). Train book is 2021-2023.",
+      "session": "prior 1d return continuation; entry 15:30 flat 21:00 CET",
+      "swap_long_credit_not_in_gate": -0.09,
+      "swap_short_not_in_gate_because_zero_nights": 0.98
+    },
+    "costs_rt": 0.8,
+    "gate_source": "honest COSTS_FTMO.csv roundtrip_intraday_bp 0.80 \u00d7 3 = 2.40; swap nights 0; credit not subtracted",
+    "swap": {
+      "nights": 0,
+      "long_bp_credit": -0.09,
+      "short_bp": 0.98,
+      "in_gate_bp": 0.0,
+      "credit_treated_as_alpha": false
+    },
+    "clone_hits": []
+  },
+  "N172_clones": {
+    "N50_USOIL_TSMOM20_10_LO": {
+      "peer": "N50_USOIL_TSMOM20_10_LO",
+      "z_corr_train": 0.5168,
+      "sign_agree_both_active": 0.4329,
+      "both_active_over_cand": 0.9817,
+      "n_cand_active": 767,
+      "n_both_active": 753,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N49_UKOIL_TSMOM20_10_LO": {
+      "peer": "N49_UKOIL_TSMOM20_10_LO",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4329,
+      "both_active_over_cand": 0.9817,
+      "n_cand_active": 767,
+      "n_both_active": 753,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N158_USOIL_NY_IMPULSE_FADE": {
+      "peer": "N158_USOIL_NY_IMPULSE_FADE",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5567,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 767,
+      "n_both_active": 767,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N22_UKOIL_LonAM_fade": {
+      "peer": "N22_UKOIL_LonAM_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5189,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 767,
+      "n_both_active": 767,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N43_UKOIL_NY_cont": {
+      "peer": "N43_UKOIL_NY_cont",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4482,
+      "both_active_over_cand": 0.7679,
+      "n_cand_active": 767,
+      "n_both_active": 589,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N98_USOIL_LonAM_sign": {
+      "peer": "N98_USOIL_LonAM_sign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5046,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 767,
+      "n_both_active": 767,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "UKOIL_same_rule_5d_reversal_NOT_A_DEAD_ID": {
+      "peer": "UKOIL_same_rule_5d_reversal_NOT_A_DEAD_ID",
+      "z_corr_train": 0.9906,
+      "sign_agree_both_active": 0.9697,
+      "both_active_over_cand": 0.7744,
+      "n_cand_active": 767,
+      "n_both_active": 594,
+      "clone": false,
+      "clone_raw": true,
+      "binding": false
+    },
+    "N173_USDCAD_1d_cont": {
+      "peer": "N173_USDCAD_1d_cont",
+      "z_corr_train": -0.1134,
+      "sign_agree_both_active": 0.5411,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 767,
+      "n_both_active": 767,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "N173_clones": {
+    "N33_USDCAD_Lon_cont_proxy": {
+      "peer": "N33_USDCAD_Lon_cont_proxy",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5323,
+      "both_active_over_cand": 0.9588,
+      "n_cand_active": 776,
+      "n_both_active": 744,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N48_USDJPY_ret10_sign": {
+      "peer": "N48_USDJPY_ret10_sign",
+      "z_corr_train": 0.1044,
+      "sign_agree_both_active": 0.5273,
+      "both_active_over_cand": 0.9897,
+      "n_cand_active": 776,
+      "n_both_active": 768,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "USDCAD_ret20_LO_N73_family": {
+      "peer": "USDCAD_ret20_LO_N73_family",
+      "z_corr_train": 0.2282,
+      "sign_agree_both_active": 0.5743,
+      "both_active_over_cand": 0.5116,
+      "n_cand_active": 776,
+      "n_both_active": 397,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "USDCAD_ret60_LO_L60_family": {
+      "peer": "USDCAD_ret60_LO_L60_family",
+      "z_corr_train": 0.1508,
+      "sign_agree_both_active": 0.5561,
+      "both_active_over_cand": 0.5515,
+      "n_cand_active": 776,
+      "n_both_active": 428,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N172_USOIL_5d_reversal": {
+      "peer": "N172_USOIL_5d_reversal",
+      "z_corr_train": -0.1134,
+      "sign_agree_both_active": 0.5389,
+      "both_active_over_cand": 0.9948,
+      "n_cand_active": 776,
+      "n_both_active": 772,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N172": 10.02,
+    "N173": 2.4
+  },
+  "costs_rt": {
+    "USOILcash": 3.34,
+    "USDCAD": 0.8
+  },
+  "clone_rule": {
+    "sign_agree_hard_ge": 0.9,
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7,
+    "z_corr_ge": 0.9,
+    "agree_exact_ge": 0.98,
+    "agree_exact_min_n": 30
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap_nights": 0,
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "discarded_before_id": {
+    "USDJPY_rate_carry_5d_LO": "agree 1.00 cover 0.92 vs N53/N67/L60 \u2014 clone, no id",
+    "USDCAD_rate_carry_LO": "agree 1.00 cover 0.93 vs L60 \u2014 clone, no id",
+    "GBP_rate_carry_LO": "agree 1.00 cover 0.94 vs ret20 LO \u2014 clone, no id",
+    "UKOIL_same_5d_reversal": "agree 0.97 cover 0.77 vs this USOIL rule \u2014 twin market, not a second id",
+    "XAU_5d_reversal": "same mechanism as N172; not filed",
+    "N170_FRA40_as_filed": "NY impulse fade + gate not in COSTS_FTMO.csv \u2014 discarded, not cost-screened",
+    "N171_BTC_as_filed": "BTC/ETH barred \u2014 discarded, not cost-screened"
+  },
+  "trial_count_unchanged": 471,
+  "tip_seen": "4005235 filed unscreened N170/N171; those mechanisms do not clear the bar"
+}

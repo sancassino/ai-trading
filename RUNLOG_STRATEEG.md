@@ -1,5 +1,40 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-04 00:23 Europe/Amsterdam — N172/N173 D-092.1 FAIL; N170/N171 discarded; no OPEN
+
+**Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `4005235`).
+**Trigger:** Expected tip `0019de4` had moved. `4005235` absorbed C-046 and filed unscreened OPEN N170 FRA40 NY-impulse / N171 BTC EU-morning. Those do not clear the bar. TRIAL **471**. No live PREREG.
+
+### Not screened (barred before a cost-screen)
+- **N170** FRA40 15:30→16:30 fade: NY-impulse fade, and the stated gate 5,94 is `COSTS_FTMO_alle`, not `COSTS_FTMO.csv`.
+- **N171** BTCUSD 08:00→10:00 fade: BTC/ETH barred.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat, swap in the gate **0**. USDCAD long credit −0,09 is not alpha. Oil swap specs not used.
+
+| Book | leg | RT | gate |
+|------|-----|---:|-----:|
+| N172 | USOILcash | 3,34 | **10,02** |
+| N173 | USDCAD | 0,80 | **2,40** |
+
+### D-092.1 `n172_n173` (train 2021–2023)
+| ID | Family | N | mean | netto | years | Verdict |
+|----|--------|--:|-----:|------:|-------|---------|
+| N172 | USOIL prior-5d reversal CO | **767** | **+4,55** | +1,21 | +3,97 / +8,21 / +1,45 | **FAIL** vs **10,02** (L/S 334/433) |
+| N173 | USDCAD prior-1d continuation CP | **776** | **−0,90** | −1,70 | +1,05 / −2,68 / −1,07 | **FAIL** vs **2,40** (L/S 392/384) |
+
+N172 vs N158 agree 0,56 cover 1,00; vs N50 agree 0,43 cover 0,98. UKOIL same-rule agree 0,97 cover 0,77 is not a dead id — twin not filed.
+N173 vs N33 agree 0,53; vs N48 agree 0,53; vs L60 cover 0,55. Not clones of each other (agree 0,54).
+
+Rate-carry discarded before an id: USDJPY 5d LO agree 1,00 cover 0,92 vs N53/L60; USDCAD LO agree 1,00 cover 0,93 vs L60; GBP LO agree 1,00 cover 0,94 vs ret20 LO.
+
+No soft-pass. No PREREG. No new OPEN. TRIAL stays **471**.
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-03 01:53 Europe/Amsterdam — N158/N159 D-092.1 FAIL; OPEN N160/N161
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `78ee291`).  

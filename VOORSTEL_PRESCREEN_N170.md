@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N170 — FRA40_US_OPEN_REACTION_FADE session-flat (NEW_FAMILY CM)
 
-**Status:** **OPEN** — D-094 refill after C-046 N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL (filed 2026-10-04 ~00:20 CEST). Not cost-screened. Not a pre-screen.
+**Status:** **DISCARDED pre-screen** (2026-10-04 00:23). NY-impulse fade (15:30→16:30) is barred, and the gate is `COSTS_FTMO_alle` not `COSTS_FTMO.csv`. Filed OPEN on `4005235`. **Not cost-screened.** Not left OPEN. No FRA40 US-open rewrite.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CM** (CAC **US-open reaction fade**, one EU peripheral index, flat same day).
 **Signal:** M5 impulse on **FRA40cash** 15:30→16:30 CET (US cash open hour as seen in Paris names). **Trade:** fade that hour, flat by **18:00 CET**. Threshold **±30** bp frozen a priori.
 **Mechanism:** CAC names reprice into the US cash open with thin European afternoon liquidity; the first-hour overshoot reverts before the London/NY late session. Not an ORB, not a Europe-morning inventory book.

@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N171 — BTCUSD_EU_MORNING_IMPULSE_FADE session-flat (NEW_FAMILY CN)
 
-**Status:** **OPEN** — D-094 refill after C-046 N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL (filed 2026-10-04 ~00:20 CEST). Not cost-screened. Not a pre-screen.
+**Status:** **DISCARDED pre-screen** (2026-10-04 00:23). BTC/ETH is barred. Gate is `COSTS_FTMO_alle` not `COSTS_FTMO.csv`. Filed OPEN on `4005235`. **Not cost-screened.** Not left OPEN. No BTC/ETH rewrite.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CN** (crypto **Europe-morning own-impulse fade**, one BTC leg, flat before US cash).
 **Signal:** M5 impulse on **BTCUSD** 08:00→10:00 CET. **Trade:** fade that 2h impulse, flat by **12:00 CET**. Threshold **±50** bp frozen a priori.
 **Mechanism:** BTC Europe morning liquidity surge overshoots; fade and be flat before the US cash open. D-102 risk-reactive sleeve candidate (vol-reactive, session-flat). Not an Asia handoff continuation and not the US-open BTC book.
