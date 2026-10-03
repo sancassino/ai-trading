@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N169 — GBPUSD_LONDON_FIX_RESIDUAL_FADE session-flat (NEW_FAMILY CL)
 
-**Status:** **OPEN** — D-094 refill after N166 FAIL_CLONE + N167 FAIL (filed 2026-10-04 ~00:01 CEST). Not cost-screened. Not a pre-screen.
+**Status:** **CLOSED — DIAG_FAIL** C-046 `98c46b5` (n=249 mean −0,262 < gate 2,10; EURUSD/AUDUSD fix twins high agree low cover → bar). Do not rescreen. Do not reopen.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CL** (cable **London-fix residual fade**, one G10 major, not a cross).
 **Signal:** M5 impulse on **GBPUSD** 17:00→18:00 broker time (London 16:00 year-round; broker is UTC+2/+3). **Trade:** fade that hour, flat by **20:30**. Threshold **±15** bp frozen a priori.
 **Mechanism:** the hour into the London fix overshoots; the residual reverts before the late US session. Not an opening-range breakout.

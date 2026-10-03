@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N168 — US30_EUROPE_INVENTORY_FADE session-flat (NEW_FAMILY CK)
 
-**Status:** **OPEN** — D-094 refill after N166 FAIL_CLONE + N167 FAIL (filed 2026-10-04 ~00:01 CEST). Not cost-screened. Not a pre-screen.
+**Status:** **CLOSED — DIAG_FAIL_CLONE** C-046 `98c46b5` (n=214 mean +3,049 ≥ gate 1,35; US500 Europe agree 0,994 cover 0,822; US100 Europe agree 0,981 cover 0,748). Do not rescreen. Do not reopen.
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CK** (Dow CFD **Europe-hours inventory fade**, one index leg, flat before the US cash open).
 **Signal:** M5 impulse on **US30cash** 09:00→12:00 CET. **Trade:** the same leg, flat by **15:00 CET**.
 **Mechanism:** Europe-session drift in the Dow CFD is thin-book inventory, not cash-session information; fade it and be out before 15:30.

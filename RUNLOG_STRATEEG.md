@@ -1085,3 +1085,20 @@ D-094a: LQD history 21,4y; EWY history 23,6y.
 - **N169** CL GBPUSD_LONDON_FIX_RESIDUAL_FADE — gate **2,10** (COSTS 0,70×3). Flat 20:30. thr ±15.
 
 **Niet gedaan:** geen PREREG; geen U2/Sandro ping; geen thr-grid; geen 2025-reserve; TRIAL niet verhoogd.
+
+## 2026-10-04 00:20 Europe/Amsterdam — Hourly FTMO: absorb C-046; OPEN N170/N171 NEW_FAMILY
+
+**Branch:** `claude/trusting-faraday-34tsmg` (tip was `0019de4`).
+**Absorb:** Manager NEXT_STEPS **v108** `0ecc18e` + CTO C-046 `98c46b5`: **N168 DIAG_FAIL_CLONE** (n=214 mean +3,049 ≥ 1,35; US500 Europe agree 0,994 cover 0,822; US100 Europe agree 0,981 cover 0,748) + **N169 DIAG_FAIL** (n=249 mean −0,262 < 2,10; EUR/AUD fix twins high agree low cover → bar). **Not re-screened.** TRIAL_COUNT stays **471**. Freeze **OFF**. No live PREREG. U2 IDLE `c5a0a4d`. Track-3 PAUSED. CEO tip `7cb6731` / D-104 @`8e25e3c` — no new D-*. C17/FX_INTRADAG/B1/A2 remain **STOP**.
+
+**Dead +=** N168 (no US30 Europe inventory / US500-US100 Europe same-window) + N169 (no GBPUSD London-fix / EURUSD-AUDUSD fix same-window).
+
+### New OPEN (not screened) — D-094 ≥2 NEW_FAMILY
+| ID | Family | Gate bp | Window | Notes |
+|----|--------|--------:|--------|-------|
+| **N170** CM | FRA40_US_OPEN_REACTION_FADE | **5,94** (`COSTS_FTMO_alle` RT 1,98×3) | 15:30→16:30 fade, flat 18:00; thr ±30 | ≠ N107/N159/N168 Europe-morning / NY-impulse US indices |
+| **N171** CN | BTCUSD_EU_MORNING_IMPULSE_FADE | **3,75** (`COSTS_FTMO_alle` RT 1,25×3) | 08:00→10:00 fade, flat 12:00; thr ±50 | ≠ N39 Asia cont / S2-BTC US-open / N145 XS |
+
+**§10 vs S2:** `885090b` STALE (LQD+EWY consumed as N166/N167). Faraday novelty refill stronger this hour; S2 idle.
+
+**Niet gedaan:** geen D-092.1 on N170/N171 this cycle (OPEN filed for CTO/next); geen PREREG; geen U2/Sandro ping; geen thr-grid; geen 2025-reserve; geen N168/N169 rescreen; TRIAL niet verhoogd.
