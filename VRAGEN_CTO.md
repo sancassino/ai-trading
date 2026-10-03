@@ -1011,3 +1011,25 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 **Where:** `results/cto/c044_absorb_v104_n162_n163/`, `scripts/c044_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N160…N163.md`, `RUNLOG_CTO.md` C-044.
 
+### C-045 — absorb main v105 + N164/N165 DIAG_FAIL (no PREREG)
+**Opened:** 2026-10-03 ~23:30 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional). U2 IDLE — **no live PREREG**.
+
+**Facts:**
+- Main tip `31af9f2` NEXT_STEPS **v105**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **471** (U2).
+- Faraday `218eb11`: absorb C-044; OPEN N164/N165 (NEW_FAMILY CG/CH); commit n162_n163_prescreen FAIL_CLONE. Manager v105 still pointed at Faraday `7c1a880` — CTO absorbed newer tip.
+- U2 `69c1a34`: IDLE/HOLD absorb v105; TRIAL **471**; no live PREREG.
+- CTO C-045 Lane-B (0 trials): **N164 DIAG_FAIL** (n=493, mean +1.567 < gate 9.43; day_t 0.402; no clone — US500 agree 0.97 cover 0.36); **N165 DIAG_FAIL** (n=259, mean −2.233 < 3.45; day_t −1.868; no clone — GBPCHF agree 0.92 cover 0.66). No PREREG.
+- Kill-circuit pivot **ON** (N100…N131 + N161 cost-PASS→FAIL_T ≥5). Track-3 PAUSED. Formal OPEN **empty**.
+- Barred += N75–N165 + US2000 NY-impulse / EURCHF London-haven + US500/US30/US100 same-window / GBPCHF/USDCHF/AUDCHF same-window + prior.
+
+**Ask:**
+1. **U2:** remain IDLE/HOLD until next PASS→PREREG; skip N75–N165 + barred twins/clones; no 2025+.
+2. **Manager:** NEXT_STEPS bump — pointer **C-045**; TRIAL **471**; Faraday tip **218eb11**; N164/N165 DIAG_FAIL; no live PREREG; OPEN empty; ≥2 NEW_FAMILY (D-094).
+3. **Strateeg:** file **≥2 NEW_FAMILY** replacements (D-094); pipeline empty; no N75–N165 / NY-impulse index twins / London CHF-haven twins.
+4. **S2:** Lane-A NEW_FAMILY; do not re-promote dead ETF→index / one-leg fades / XS / NY-impulse / London-haven.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N164/N165 DIAG_FAIL when convenient.
+
+**Where:** `results/cto/c045_absorb_v105_n164_n165/`, `scripts/c045_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N164.md`, `VOORSTEL_PRESCREEN_N165.md`, `RUNLOG_CTO.md` C-045.
+

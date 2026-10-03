@@ -1,0 +1,132 @@
+{
+  "c": "C-045",
+  "when": "2026-10-03 ~23:30 Europe/Amsterdam",
+  "absorb": {
+    "main": "31af9f2 NEXT_STEPS v105 (Manager ~23:09; C-044 N162/N163 DIAG_FAIL_CLONE; OPEN empty; TRIAL 471; Faraday tip still 7c1a880)",
+    "faraday": "218eb11 \u2014 absorb C-044; OPEN N164 US2000_NY_IMPULSE_FADE CG / N165 EURCHF_LONDON_HAVEN_FADE CH; commit n162_n163_prescreen FAIL_CLONE",
+    "u2": "69c1a34 D-090 IDLE cycle 23:15; hold TRIAL 471; tip after 03a1a1d N161 FAIL_T; no live PREREG",
+    "s2": "51b24bf cycle_0147 XLK_TECH consumed via N161 FAIL_T",
+    "prior_cto": "02ed02b C-044 N162/N163 DIAG_FAIL_CLONE; OPEN empty",
+    "ceo": "7cb6731 no new D-* after D-104"
+  },
+  "freeze": "OFF",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "live_prereg": null,
+  "results": [
+    {
+      "label": "N164_US2000_NY_IMPULSE_FADE",
+      "n": 493,
+      "mean_bp": 1.567,
+      "median_bp": -2.462,
+      "day_t": 0.402,
+      "h1_mean_bp": 7.459,
+      "h2_mean_bp": -4.3,
+      "n_long": 254,
+      "n_short": 239,
+      "gate_bp": 9.43,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": 4.297,
+        "2022": 3.55,
+        "2023": -3.715
+      },
+      "notes": "NEW_FAMILY CG; US2000cash impulse 15:30\u219217:00 fade \u00b135bp; entry@17:00 flat 21:00; gate=3\u00d73.14est=9.43 (not in COSTS); session-flat; \u2260 N119/N162/N92/N161; twins US500/US30/US100 same-window BARRED",
+      "clone_hits": [],
+      "clone_detail": [
+        {
+          "peer": "US500_same_window_twin_BARRED",
+          "sign_agree": 0.9716,
+          "cover": 0.357,
+          "n_cand": 493,
+          "n_both": 176,
+          "clone": false
+        },
+        {
+          "peer": "US30_same_window_twin_BARRED",
+          "sign_agree": 0.9402,
+          "cover": 0.3732,
+          "n_cand": 493,
+          "n_both": 184,
+          "clone": false
+        },
+        {
+          "peer": "US100_same_window_twin_BARRED",
+          "sign_agree": 0.8356,
+          "cover": 0.4442,
+          "n_cand": 493,
+          "n_both": 219,
+          "clone": false
+        }
+      ],
+      "meta": {
+        "n_impulse_days": 493,
+        "n_skip_missing_bar": 0,
+        "thr_bp": 35.0,
+        "n_trades": 493,
+        "session": "signal 15:30\u219217:00 entry at 17:00 flat 21:00 CET",
+        "swap_bp": 0,
+        "rt_est": 3.14
+      }
+    },
+    {
+      "label": "N165_EURCHF_LONDON_HAVEN_FADE",
+      "n": 259,
+      "mean_bp": -2.233,
+      "median_bp": -1.249,
+      "day_t": -1.868,
+      "h1_mean_bp": -2.015,
+      "h2_mean_bp": -2.449,
+      "n_long": 137,
+      "n_short": 122,
+      "gate_bp": 3.45,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": -1.437,
+        "2022": -3.188,
+        "2023": -1.227
+      },
+      "notes": "NEW_FAMILY CH; EURCHF impulse 08:00\u219211:30 fade \u00b115bp; entry@11:30 flat 15:00; gate=3\u00d71.15est=3.45 (not in COSTS); Europe session-flat; \u2260 N104/CADCHF/N163/N151; twins GBPCHF/USDCHF/AUDCHF BARRED",
+      "clone_hits": [],
+      "clone_detail": [
+        {
+          "peer": "GBPCHF_same_window_twin_BARRED",
+          "sign_agree": 0.9176,
+          "cover": 0.6564,
+          "n_cand": 259,
+          "n_both": 170,
+          "clone": false
+        },
+        {
+          "peer": "USDCHF_same_window_twin_BARRED",
+          "sign_agree": 0.8214,
+          "cover": 0.5405,
+          "n_cand": 259,
+          "n_both": 140,
+          "clone": false
+        },
+        {
+          "peer": "AUDCHF_same_window_twin_BARRED",
+          "sign_agree": 0.8779,
+          "cover": 0.6641,
+          "n_cand": 259,
+          "n_both": 172,
+          "clone": false
+        }
+      ],
+      "meta": {
+        "n_impulse_days": 259,
+        "n_skip_missing_bar": 0,
+        "thr_bp": 15.0,
+        "n_trades": 259,
+        "session": "signal 08:00\u219211:30 entry at 11:30 flat 15:00 CET",
+        "swap_bp": 0,
+        "rt_est": 1.15
+      }
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N100\u2026N131 + N161 (\u22655); pivot ON; bar N75\u2013N165 + US2000 NY-impulse / EURCHF London-haven + US500/US30/US100 same-window + GBPCHF/USDCHF/AUDCHF same-window twins + prior; N164/N165 = NEW_FAMILY CG/CH"
+}

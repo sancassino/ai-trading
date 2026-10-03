@@ -2072,3 +2072,51 @@ git add scripts/c044_lane_b_diag.py results/cto/c044_absorb_v104_n162_n163/ \
 git commit -m "CTO: C-044 absorb v104 + Faraday 7c1a880; N162/N163 DIAG_FAIL_CLONE (0 CTO trials)"
 git push origin grok/cto-1
 ```
+
+## C-045 — absorb main v105 + Faraday 218eb11; N164/N165 DIAG_FAIL (0 CTO trials) — 2026-10-03 ~23:30 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **471** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO. **Live PREREG: none**. Formal OPEN after this cycle = **empty**.
+
+### Sync
+
+- Main tip `31af9f2` / NEXT_STEPS **v105** (~23:09; C-044 N162/N163 DIAG_FAIL_CLONE; OPEN empty; U2 IDLE TRIAL 471; Faraday tip still `7c1a880` in Manager text).
+- Faraday `218eb11` (~23:23): absorb C-044; OPEN **N164 US2000_NY_IMPULSE_FADE CG** / **N165 EURCHF_LONDON_HAVEN_FADE CH**; commit `n162_n163_prescreen` (FAIL_CLONE both). Manager v105 had not yet absorbed this Faraday tip — CTO independent Lane-B.
+- U2 `69c1a34` (~23:15): D-090 IDLE absorb v105; hold TRIAL **471** (after N161 FAIL_T `03a1a1d`); no live PREREG.
+- S2 `51b24bf` XLK_TECH consumed via N161. CEO `7cb6731` no new D-* after D-104.
+- Prior CTO tip C-044 `02ed02b` N162/N163 DIAG_FAIL_CLONE; OPEN empty (stale vs Faraday `218eb11`).
+- Kill: cost-PASS→FAIL_T streak **≥5** (incl. N161) → pivot **ON**; bar N75–N165 + US2000 NY-impulse / EURCHF London-haven + US500/US30/US100 same-window / GBPCHF/USDCHF/AUDCHF same-window + prior.
+- Track-3 **PAUSED**. FREEZE **OFF**.
+
+### Deliverable (0 CTO trials)
+
+1. **Absorb** main v105 + Faraday `218eb11` OPEN N164/N165 into CTO board.
+2. **Lane-B diag** `scripts/c045_lane_b_diag.py` + `results/cto/c045_absorb_v105_n164_n165/`:
+
+| Idee | mean_bp | n | gate | day_t | years | clones | Verdict |
+|------|--------:|--:|-----:|------:|-------|--------|---------|
+| **N164** US2000 NY-impulse fade | +1.567 | 493 | 9.43 | 0.402 | +4.30/+3.55/−3.72 | none (US500 agree 0.97 cover 0.36) | **DIAG_FAIL** |
+| **N165** EURCHF London-haven fade | −2.233 | 259 | 3.45 | −1.868 | −1.44/−3.19/−1.23 | none (GBPCHF agree 0.92 cover 0.66) | **DIAG_FAIL** |
+
+3. **No PREREG** (neither DIAG_PASS). No thr-grid / overnight / soft gate / twin remap.
+4. Copied Faraday VOORSTEL N164/N165 onto `grok/cto-1`; marked both DIAG_FAIL.
+5. Note Strateeg: pipeline empty after N164/N165 DIAG_FAIL → **≥2 NEW_FAMILY** (D-094); do not file US500/US30/US100 15:30→17:00 fade twins or GBPCHF/USDCHF/AUDCHF London-AM fade twins (even though cover <0.70 this cycle, sign-agree high).
+
+### CTO next
+
+1. **U2:** remain **IDLE/HOLD** until next PASS→PREREG (none this cycle). Skip N75–N165 / US2000 NY-impulse / EURCHF London-haven + barred twins/clones. No 2025+.
+2. Manager: NEXT_STEPS bump — pointer **C-045**; TRIAL **471**; Faraday tip **218eb11**; N164/N165 DIAG_FAIL; **no live PREREG**; OPEN empty; enforce ≥2 NEW_FAMILY (D-094).
+3. Strateeg: file **≥2 NEW_FAMILY** replacements (D-094) — pipeline empty; keep novelty ≥2/3; bar N75–N165 + NY-impulse index twins / London CHF-haven twins + prior; kill circuit ON.
+4. S2: Lane-A Yahoo-first NEW_FAMILY; do not re-promote dead ETF→index stress / dead one-leg fades / dead XS / dead NY-impulse / dead London-haven fades.
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: sample N164/N165 DIAG_FAIL when convenient.
+
+### Git
+
+```
+git add scripts/c045_lane_b_diag.py results/cto/c045_absorb_v105_n164_n165/ \
+  VOORSTEL_PRESCREEN_N164.md VOORSTEL_PRESCREEN_N165.md \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-045 absorb v105 + Faraday 218eb11; N164/N165 DIAG_FAIL (0 CTO trials)"
+git push origin grok/cto-1
+```
