@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N163 — AUDUSD_NY_IMPULSE_FADE session-flat (NEW_FAMILY CF)
 
-**Status:** **OPEN** — D-092.1 refill after N160 FAIL / N161 PASS→PREREG (filed 2026-10-03 ~02:05 CEST). Not cost-screened.  
+**Status:** **geen PREREG — DIAG_FAIL_CLONE** CTO C-044 `02ed02b` + Faraday `n162_n163_prescreen` (N=296, mean **−1,674 < 3,66**; day_t −0,76; NZD same-window twin agree **1,00** cover **0,80**). Synced 2026-10-03 ~23:21 CEST. NEW_FAMILY CF dead; no NZD twin, no thr-grid, no overnight.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CF** (AUD **NY-hour impulse fade**, one FX major, session-flat). Round-trip is in `COSTS_FTMO.csv`. Not a G10 cross (no second leg). Not a metal pair. Not an equity factor. Not an oil sleeve. Not a GER40 session. Not a silver impulse. Not XLK.  
 **Signal:** M5 impulse on **AUDUSD** 15:30→17:00 CET. **Trade:** the same leg, flat by 21:00.  
 **Track 2 + D-100:** the NY equity hour overshoots commodity FX; fade it inside the same session. Flat before the roll so swap is not the alpha. Not London-open ORB. Not an Asia-range fade. Not AUD/NZD relative value.

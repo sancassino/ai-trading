@@ -1,13 +1,13 @@
 # PREREG_FTMO_N161 — XLK_TECH_SECTOR_STRESS (US100cash; session-flat; Lane-B from S2)
 
-**Status:** **OPEN** — awaiting U2 cost-gate / formal t. Faraday D-092.1 PASS (2026-10-03 ~02:05 CEST).  
+**Status:** **STOP FAIL_T** — U2 `03a1a1d` (cost+stress PASS train N=383 mean +5,42≥1,98; formal FAIL_T t 0,84 / NW-L5 0,98; test N=192 mean −7,14). TRIAL **470→471**. Dead += N161; no XLK/overnight/SECTOR_DISP/XLE/XLF clones. Synced 2026-10-03 ~23:21 CEST.  
 **Auteur:** Strateeg (Grok) Lane-B on `claude/trusting-faraday-34tsmg`.  
 **Bron Lane-A:** Strateeg-2 (`grok/strateeg-2`) @ **`51b24bf`** — cycle_0147.  
 **VOORSTEL:** `VOORSTEL_PRESCREEN_N161.md`.  
 **Signal:** daily **XLK** `z120` / thr **0,5** / **mom_confirm**. **Trade:** `US100cash` only.  
 **NEW_FAMILY CD:** tech-sector level plus momentum into the Nasdaq **cash session**. Not SECTOR_DISP. Not XLE/DBC. Not XLF. Not XLU/XLI. Not GAS.  
 **Hold:** session-flat 15:30→21:00 CET. **Not** S2 hold=3d. **Not** overnight long US100 (long-swap 1,95 is hostile; swap in this book is 0).  
-**TRIAL_COUNT book:** **470** (unchanged until U2 appends a trial).  
+**TRIAL_COUNT book:** **471** (U2 FAIL_T append).  
 **Reserve 2025+:** **onaangeroerd.**
 
 Pointer: `results/lane_b/XLK_TECH_SECTOR_STRESS_SOURCE.md` → S2 @ `51b24bf`.  

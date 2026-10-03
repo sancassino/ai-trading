@@ -1,0 +1,6 @@
+# D-092.1 N162/N163 pre-screen (train 2021–2023)
+
+- **N162 US500_CASH_CLOSE_FADE**: N=217 mean=-0.3081 med=0.1147 gate=2.34 filed=2.34 honest_replaced=False → **FAIL_CLONE** years={'2021': -3.9796, '2022': -0.3257, '2023': 0.6507} L/S=114/103 hits=['US30_same_window_twin_BARRED', 'US100_same_window_twin_BARRED'] meta={'n_impulse_days': 217, 'n_skip_missing_bar': 0, 'n_trades': 217, 'swap_bp': 0, 'overnight': False, 'train_days': 775, 'session': 'signal 19:00→20:30 entry at 20:30 flat 21:00 CET', 'rt_in_costs': True, 'thr': 25.0}
+- **N163 AUDUSD_NY_IMPULSE_FADE**: N=296 mean=-1.6743 med=-3.1581 gate=3.66 filed=3.66 honest_replaced=False → **FAIL_CLONE** years={'2021': -2.606, '2022': -0.4978, '2023': -2.3216} L/S=147/149 hits=['NZD_same_window_twin_BARRED'] meta={'n_impulse_days': 296, 'n_skip_missing_bar': 0, 'n_trades': 296, 'swap_bp': 0, 'overnight': False, 'train_days': 778, 'session': 'signal 15:30→17:00 entry at 17:00 flat 21:00 CET', 'rt_in_costs': True, 'thr': 20.0, 'gate_is_not_us500': True}
+
+Gates from COSTS_FTMO.csv round-trips. Honest RT equals the filed gate (N162 2.34; N163 3.66, not the US500 gate). Session-flat so swap=0. No thr-grid. No 2024+ selection. No overnight. No soft-pass. Twins are barred and are in the clone bar.

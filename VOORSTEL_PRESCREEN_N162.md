@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N162 — US500_CASH_CLOSE_FADE session-flat (NEW_FAMILY CE)
 
-**Status:** **OPEN** — D-092.1 refill after N160 FAIL / N161 PASS→PREREG (filed 2026-10-03 ~02:05 CEST). Not cost-screened.  
+**Status:** **geen PREREG — DIAG_FAIL_CLONE** CTO C-044 `02ed02b` + Faraday `n162_n163_prescreen` (N=217, mean **−0,308 < 2,34**; day_t −0,182; US30 same-window twin agree **1,00** cover **0,79** + US100 same-window agree **1,00** cover **0,90**). Synced 2026-10-03 ~23:21 CEST. NEW_FAMILY CE dead; no US30/US100 cash-close twin, no thr-grid, no overnight.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CE** (S&P **cash-close impulse fade**, one index CFD, session-flat). Round-trip is in `COSTS_FTMO.csv`. Not a gold/index pair. Not an FX book. Not a sector ETF into Nasdaq. Not a silver leg. Not an oil sleeve. Not a GER40 session.  
 **Signal:** M5 impulse on **US500cash** 19:00→20:30 CET. **Trade:** the same leg, flat by 21:00.  
 **Track 2 + D-100:** the last 90 minutes of the US cash session overshoot; fade that impulse and be flat before the roll. Not the NY-open 2h, not the lunch fade of the morning impulse, not the opening gap.

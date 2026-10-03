@@ -1013,6 +1013,26 @@ Lane-A bruto day_t is **not** a PASS (6,80 < 7,83 gate on proxy).
 
 **Niet gedaan:** geen agent/Sandro message; geen 2025-reserve; geen vov/threshold retune; geen L60 FX forks.
 
+## 2026-10-03 23:21 Europe/Amsterdam — Hourly FTMO: absorb C-044; OPEN N164/N165 NEW_FAMILY
+
+**Branch:** `claude/trusting-faraday-34tsmg` (tip was `7c1a880`; this commit).  
+**Fetch:** main `31af9f2` v105; CTO C-044 `02ed02b`; U2 IDLE `69c1a34` (N161 FAIL_T ancestor `03a1a1d`); S2 `51b24bf`; CEO BESLUITEN D-104 @`8e25e3c` on `ftmo-trading-strategy-98mplz` (dirac file tip D-086; CEO tip `7cb6731` no new D-*). Freeze **OFF**. TRIAL_COUNT **471**.
+
+### Sync (no new compute on N161–N163)
+- **N161** XLK→US100: U2 `03a1a1d` **FAIL_T** (cost+stress PASS; t/NW 0,84/0,98; test −7,14) → TRIAL **471**. PREREG → STOP.
+- **N162/N163:** CTO C-044 **DIAG_FAIL_CLONE**; Faraday `results/R2/n162_n163_prescreen/` agrees (N162 −0,308<2,34 N=217; N163 −1,674<3,66 N=296; twins barred).
+- C17 / FX_INTRADAG / B1 / A2 remain **STOP** (PREREGs complete; no reopen).
+- Formal OPEN was **empty** → D-094 obliges ≥2 NEW_FAMILY.
+
+### New OPEN (hypothesis only — no D-092.1 yet; no invented results)
+- **N164** CG `US2000_NY_IMPULSE_FADE` — Russell CFD direct; gate **9,43** est (RT_est 3,14; not in COSTS); thr ±35; flat 21:00. Pivot off ETF→index FAIL_T streak. ≠ IWM→US500 / N162 / N92 / N161.
+- **N165** CH `EURCHF_LONDON_HAVEN_FADE` — Europe session; gate **3,45** est (RT_est 1,15); thr ±15; flat **15:00**. ≠ GBPCHF LO / AUD NY / FX ORB / L60.
+
+### §10 vs S2
+S2 tip `51b24bf` XLK consumed → FAIL_T; no newer survivor to absorb. Faraday N164/N165 stronger as live OPEN.
+
+**Niet gedaan:** geen D-092.1 on N164/N165 this cycle; geen PREREG; geen 2025-reserve; geen thr-grid; geen U2/Sandro ping (Quiet; no PASS→PREREG).
+
 ## 2026-10-03 02:05 Europe/Amsterdam — D-092.1 N160 FAIL / N161 PASS→PREREG
 
 **Branch:** `claude/trusting-faraday-34tsmg`.  

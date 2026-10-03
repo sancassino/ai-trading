@@ -1,0 +1,257 @@
+{
+  "N162": {
+    "id": "N162",
+    "instrument": "US500cash",
+    "n": 217,
+    "mean_bruto_bp": -0.3081,
+    "gate_bp": 2.34,
+    "filed_gate_bp": 2.34,
+    "honest_gate_replaced_filed": false,
+    "verdict": "FAIL_CLONE",
+    "notes": "US500_CASH_CLOSE_FADE \u00b125 19:00\u219220:30 entry 20:30 flat 21:00; COSTS gate 3*0.78 honest=filed; swap 0; one index; NEW_FAMILY CE | CLONE of US30_same_window_twin_BARRED,US100_same_window_twin_BARRED \u2014 no PREREG",
+    "median_bruto_bp": 0.1147,
+    "stress_gate_bp": 3.51,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.5023,
+    "n_long": 114,
+    "n_short": 103,
+    "years": {
+      "2021": -3.9796,
+      "2022": -0.3257,
+      "2023": 0.6507
+    },
+    "meta": {
+      "n_impulse_days": 217,
+      "n_skip_missing_bar": 0,
+      "n_trades": 217,
+      "swap_bp": 0,
+      "overnight": false,
+      "train_days": 775,
+      "session": "signal 19:00\u219220:30 entry at 20:30 flat 21:00 CET",
+      "rt_in_costs": true,
+      "thr": 25.0
+    },
+    "costs_rt": 0.78,
+    "rt_in_costs": true,
+    "clone_hits": [
+      "US30_same_window_twin_BARRED",
+      "US100_same_window_twin_BARRED"
+    ]
+  },
+  "N163": {
+    "id": "N163",
+    "instrument": "AUDUSD",
+    "n": 296,
+    "mean_bruto_bp": -1.6743,
+    "gate_bp": 3.66,
+    "filed_gate_bp": 3.66,
+    "honest_gate_replaced_filed": false,
+    "verdict": "FAIL_CLONE",
+    "notes": "AUDUSD_NY_IMPULSE_FADE \u00b120 15:30\u219217:00 entry 17:00 flat 21:00; COSTS gate 3*1.22 honest=filed; NOT the US500 2.34 gate; swap 0; one major; NEW_FAMILY CF | CLONE of NZD_same_window_twin_BARRED \u2014 no PREREG",
+    "median_bruto_bp": -3.1581,
+    "stress_gate_bp": 5.49,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.473,
+    "n_long": 147,
+    "n_short": 149,
+    "years": {
+      "2021": -2.606,
+      "2022": -0.4978,
+      "2023": -2.3216
+    },
+    "meta": {
+      "n_impulse_days": 296,
+      "n_skip_missing_bar": 0,
+      "n_trades": 296,
+      "swap_bp": 0,
+      "overnight": false,
+      "train_days": 778,
+      "session": "signal 15:30\u219217:00 entry at 17:00 flat 21:00 CET",
+      "rt_in_costs": true,
+      "thr": 20.0,
+      "gate_is_not_us500": true
+    },
+    "costs_rt": 1.22,
+    "rt_in_costs": true,
+    "clone_hits": [
+      "NZD_same_window_twin_BARRED"
+    ]
+  },
+  "N162_clones": {
+    "N24_US500_AM_fade": {
+      "peer": "N24_US500_AM_fade",
+      "sign_agree_both_active": 0.4958,
+      "both_active_over_cand": 0.5484,
+      "n_cand_active": 217,
+      "n_both_active": 119,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N92_US100_NY2H_mom": {
+      "peer": "N92_US100_NY2H_mom",
+      "sign_agree_both_active": 0.5253,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 217,
+      "n_both_active": 217,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N87_US30_gap_fade": {
+      "peer": "N87_US30_gap_fade",
+      "sign_agree_both_active": 0.5205,
+      "both_active_over_cand": 0.3364,
+      "n_cand_active": 217,
+      "n_both_active": 73,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N159_GER40_EU_close_fade": {
+      "peer": "N159_GER40_EU_close_fade",
+      "sign_agree_both_active": 0.4028,
+      "both_active_over_cand": 0.3318,
+      "n_cand_active": 217,
+      "n_both_active": 72,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N161_US100_side": {
+      "peer": "N161_US100_side",
+      "sign_agree_both_active": 0.542,
+      "both_active_over_cand": 0.6037,
+      "n_cand_active": 217,
+      "n_both_active": 131,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "US30_same_window_twin_BARRED": {
+      "peer": "US30_same_window_twin_BARRED",
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.7926,
+      "n_cand_active": 217,
+      "n_both_active": 172,
+      "clone": true,
+      "clone_raw": true,
+      "binding": true
+    },
+    "US100_same_window_twin_BARRED": {
+      "peer": "US100_same_window_twin_BARRED",
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.8986,
+      "n_cand_active": 217,
+      "n_both_active": 195,
+      "clone": true,
+      "clone_raw": true,
+      "binding": true
+    }
+  },
+  "N163_clones": {
+    "N92_US100_NY2H_mom": {
+      "peer": "N92_US100_NY2H_mom",
+      "sign_agree_both_active": 0.3156,
+      "both_active_over_cand": 0.8243,
+      "n_cand_active": 296,
+      "n_both_active": 244,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N91_AUD_sign": {
+      "peer": "N91_AUD_sign",
+      "sign_agree_both_active": 0.4892,
+      "both_active_over_cand": 0.4696,
+      "n_cand_active": 296,
+      "n_both_active": 139,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N146_AUD_leg": {
+      "peer": "N146_AUD_leg",
+      "sign_agree_both_active": 0.5422,
+      "both_active_over_cand": 0.2804,
+      "n_cand_active": 296,
+      "n_both_active": 83,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N84_AUDNZD_AUD_leg": {
+      "peer": "N84_AUDNZD_AUD_leg",
+      "sign_agree_both_active": 0.4521,
+      "both_active_over_cand": 0.6351,
+      "n_cand_active": 296,
+      "n_both_active": 188,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "GS02_AUD_Asia_0000_0700_thr20": {
+      "peer": "GS02_AUD_Asia_0000_0700_thr20",
+      "sign_agree_both_active": 0.5282,
+      "both_active_over_cand": 0.4797,
+      "n_cand_active": 296,
+      "n_both_active": 142,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "NZD_same_window_twin_BARRED": {
+      "peer": "NZD_same_window_twin_BARRED",
+      "sign_agree_both_active": 1.0,
+      "both_active_over_cand": 0.7973,
+      "n_cand_active": 296,
+      "n_both_active": 236,
+      "clone": true,
+      "clone_raw": true,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N162": 2.34,
+    "N163": 3.66
+  },
+  "filed_gates": {
+    "N162": 2.34,
+    "N163": 3.66
+  },
+  "honest_replaced_filed": {
+    "N162": false,
+    "N163": false
+  },
+  "costs_rt": {
+    "US500cash": 0.78,
+    "AUDUSD": 1.22
+  },
+  "clone_rule": {
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7,
+    "twins": "US30/US100 19:00\u219220:30 \u00b125 and NZD 15:30\u219217:00 \u00b120 are binding barred twins, not separate screens",
+    "GS02_proxy": "AUD 00:00\u219207:00 \u00b120 fade (the pre-file Asia-range check; GS02 has no separate frozen clock in this repo)"
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "no_inline_replacement": true,
+  "gate_source": "COSTS_FTMO.csv roundtrip_intraday_bp; session-flat so swap=0; honest gate equals filed",
+  "train_days": {
+    "US500cash": 775,
+    "US30cash": 775,
+    "US100cash": 775,
+    "GER40cash": 768,
+    "AUDUSD": 778,
+    "NZDUSD": 778,
+    "AUDNZD": 778,
+    "XAUUSD": 774
+  },
+  "spec_vs_task": {
+    "N162": "filed matches task: gate 2.34, 19:00\u219220:30 flat 21:00, thr \u00b125, US30/US100 twin barred",
+    "N163": "filed matches task: gate 3.66 own cost gate not US500 2.34, 15:30\u219217:00 flat 21:00, thr \u00b120, NZD twin barred"
+  }
+}
