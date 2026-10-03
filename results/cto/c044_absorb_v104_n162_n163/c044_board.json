@@ -1,0 +1,115 @@
+{
+  "c": "C-044",
+  "when": "2026-10-03 ~22:57 Europe/Amsterdam",
+  "absorb": {
+    "main": "95624bb NEXT_STEPS v104 (Manager ~02:07; Faraday 7c1a880 N154\u2013N160 FAIL + N161 PASS\u2192PREREG; U2 N161 FAIL_T TRIAL 471; OPEN N162/N163)",
+    "faraday": "7c1a880 \u2014 N160 FAIL / N161 PASS\u2192PREREG; OPEN N162/N163; prior N154\u2013N159 FAIL/FAIL_CLONE; WT left n162_n163_prescreen uncommitted (FAIL_CLONE both)",
+    "u2": "03a1a1d N161 XLK_TECH_SECTOR_STRESS FAIL_T TRIAL 470\u2192471; IDLE/HOLD; no live PREREG",
+    "s2": "51b24bf cycle_0147 XLK_TECH_SECTOR_STRESS (consumed \u2192 N161 FAIL_T)",
+    "prior_cto": "c27849d C-043 N158/N159 DIAG_FAIL; OPEN note stale vs Faraday 7c1a880"
+  },
+  "freeze": "OFF",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "live_prereg": null,
+  "results": [
+    {
+      "label": "N162_US500_CASH_CLOSE_FADE",
+      "n": 217,
+      "mean_bp": -0.308,
+      "median_bp": 0.115,
+      "day_t": -0.182,
+      "h1_mean_bp": -2.458,
+      "h2_mean_bp": 1.822,
+      "n_long": 114,
+      "n_short": 103,
+      "gate_bp": 2.34,
+      "verdict": "DIAG_FAIL_CLONE",
+      "years": {
+        "2021": -3.98,
+        "2022": -0.326,
+        "2023": 0.651
+      },
+      "notes": "NEW_FAMILY CE; US500cash impulse 19:00\u219220:30 fade \u00b125bp; entry@20:30 flat 21:00; gate=3\u00d70.78=2.34; session-flat; \u2260 N24/N92/N87/N159; twins US30/US100 same-window BARRED",
+      "clone_hits": [
+        "US30_same_window_twin_BARRED",
+        "US100_same_window_twin_BARRED"
+      ],
+      "clone_detail": [
+        {
+          "peer": "US30_same_window_twin_BARRED",
+          "sign_agree": 1.0,
+          "cover": 0.7926,
+          "n_cand": 217,
+          "n_both": 172,
+          "clone": true
+        },
+        {
+          "peer": "US100_same_window_twin_BARRED",
+          "sign_agree": 1.0,
+          "cover": 0.8986,
+          "n_cand": 217,
+          "n_both": 195,
+          "clone": true
+        }
+      ],
+      "meta": {
+        "n_impulse_days": 217,
+        "n_skip_missing_bar": 0,
+        "thr_bp": 25.0,
+        "n_trades": 217,
+        "session": "signal 19:00\u219220:30 entry at 20:30 flat 21:00 CET",
+        "swap_bp": 0
+      }
+    },
+    {
+      "label": "N163_AUDUSD_NY_IMPULSE_FADE",
+      "n": 296,
+      "mean_bp": -1.674,
+      "median_bp": -3.158,
+      "day_t": -0.76,
+      "h1_mean_bp": 1.472,
+      "h2_mean_bp": -4.821,
+      "n_long": 147,
+      "n_short": 149,
+      "gate_bp": 3.66,
+      "verdict": "DIAG_FAIL_CLONE",
+      "years": {
+        "2021": -2.606,
+        "2022": -0.498,
+        "2023": -2.322
+      },
+      "notes": "NEW_FAMILY CF; AUDUSD impulse 15:30\u219217:00 fade \u00b120bp; entry@17:00 flat 21:00; gate=3\u00d71.22=3.66 (NOT US500 2.34); session-flat; \u2260 N146/N84/N91/GS02; NZD same-window twin BARRED",
+      "clone_hits": [
+        "NZD_same_window_twin_BARRED"
+      ],
+      "clone_detail": [
+        {
+          "peer": "NZD_same_window_twin_BARRED",
+          "sign_agree": 1.0,
+          "cover": 0.7973,
+          "n_cand": 296,
+          "n_both": 236,
+          "clone": true
+        }
+      ],
+      "meta": {
+        "n_impulse_days": 296,
+        "n_skip_missing_bar": 0,
+        "thr_bp": 20.0,
+        "n_trades": 296,
+        "session": "signal 15:30\u219217:00 entry at 17:00 flat 21:00 CET",
+        "swap_bp": 0,
+        "gate_is_not_us500": true
+      }
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N100\u2026N131 + N161 (\u22655); pivot ON; bar N75\u2013N163 + US500 cash-close / AUD NY-fade + US30/US100 same-window / NZD same-window twins + prior; N162/N163 = NEW_FAMILY CE/CF",
+  "agrees_faraday_uncommitted": {
+    "N162": "FAIL_CLONE mean~-0.31 n=217 gate 2.34; twins US30/US100",
+    "N163": "FAIL_CLONE mean~-1.67 n=296 gate 3.66; twin NZD"
+  }
+}

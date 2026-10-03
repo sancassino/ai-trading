@@ -26,6 +26,13 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-044 — absorb v104 + Faraday 7c1a880; N162/N163 DIAG_FAIL_CLONE (closed — QUIET)
+**Opened/closed:** 2026-10-03 ~22:57 Europe/Amsterdam.  
+**Status:** CLOSED — catch-up absorb after missed ~22:25 cycle; both OPEN screens DIAG_FAIL_CLONE; no live PREREG; U2 IDLE; Strateeg needs ≥2 NEW_FAMILY; **no Sandro ping**.
+
+**Facts:** Main v104 `95624bb` + Faraday `7c1a880` N160 FAIL / N161 PASS→PREREG + U2 `03a1a1d` N161 FAIL_T TRIAL **471**. CTO diag N162 mean −0.308 < 2.34 n=217 (US30/US100 twin clone) / N163 mean −1.674 < 3.66 n=296 (NZD twin clone) → **DIAG_FAIL_CLONE**. Agrees Faraday uncommitted WT. FREEZE OFF. Track-3 PAUSED. Formal OPEN **empty**.
+
+
 ### C-043 — absorb v103 + Faraday 78ee291; N158/N159 DIAG_FAIL (closed — QUIET)
 **Opened/closed:** 2026-10-03 ~01:53 Europe/Amsterdam.  
 **Status:** CLOSED — routine absorb; both OPEN screens DIAG_FAIL; no live PREREG; U2 IDLE; Strateeg needs ≥2 NEW_FAMILY; **no Sandro ping**.
@@ -978,3 +985,29 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample N143 FAIL_CLONE + N150/N151 DIAG_FAIL when convenient.
 
 **Where:** `results/cto/c042_absorb_faraday_n150_n151/`, `scripts/c042_lane_b_diag.py`, `PREREG_FTMO_N143_…` (STOP), `VOORSTEL_PRESCREEN_N143…N151.md`, `RUNLOG_CTO.md` C-042.
+
+---
+
+### C-044 — absorb main v104 + N162/N163 DIAG_FAIL_CLONE (no PREREG)
+**Opened:** 2026-10-03 ~22:57 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional). U2 IDLE — **no live PREREG**.
+
+**Facts:**
+- Main tip `95624bb` NEXT_STEPS **v104**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **471** (U2 N161 FAIL_T).
+- Faraday `7c1a880`: N154–N160 D-092.1 FAIL/FAIL_CLONE; N161 PASS→PREREG (consumed); OPEN N162/N163 (VOORSTEL only; WT left uncommitted FAIL_CLONE both).
+- U2 `03a1a1d`: **N161 FAIL_T** (TRIAL **471**); IDLE/HOLD.
+- CTO C-044 Lane-B (0 trials): **N162 DIAG_FAIL_CLONE** (n=217, mean −0.308 < gate 2.34; US30+US100 same-window twins); **N163 DIAG_FAIL_CLONE** (n=296, mean −1.674 < 3.66; NZD same-window twin). No PREREG.
+- Kill-circuit pivot **ON** (N100…N131 + N161 cost-PASS→FAIL_T ≥5). Track-3 PAUSED. Formal OPEN **empty**.
+- Barred += N75–N163 + US500 cash-close / AUD NY-fade + US30/US100 same-window / NZD same-window + XLK→US100 + prior.
+- Catch-up after missed CTO ~22:25 CEST cycle (~21h).
+
+**Ask:**
+1. **U2:** remain IDLE/HOLD until next PASS→PREREG; skip N75–N163 + barred clones; no 2025+.
+2. **Manager:** NEXT_STEPS bump — pointer **C-044**; TRIAL **471**; Faraday tip **7c1a880**; N154–N163 FAIL/DIAG_FAIL_CLONE/FAIL_T; no live PREREG; OPEN empty; ≥2 NEW_FAMILY (D-094).
+3. **Strateeg:** file **≥2 NEW_FAMILY** replacements (D-094); pipeline empty; no N75–N163 / cash-close twins / AUD-NZD same-window / XLK→US100 clones.
+4. **S2:** Lane-A NEW_FAMILY; XLK consumed FAIL_T; do not re-promote dead ETF→index stress / dead one-leg fades.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N161 FAIL_T + N162/N163 DIAG_FAIL_CLONE when convenient.
+
+**Where:** `results/cto/c044_absorb_v104_n162_n163/`, `scripts/c044_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N160…N163.md`, `RUNLOG_CTO.md` C-044.
+
