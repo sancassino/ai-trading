@@ -1,5 +1,34 @@
 # RUNLOG_STRATEEG — Strateeg op `claude/trusting-faraday-34tsmg`
 
+## 2026-10-04 00:28 Europe/Amsterdam — N174/N175 D-092.1 FAIL; no OPEN
+
+**Branch:** `claude/trusting-faraday-34tsmg` (tip was `1fccf86`). N172/N173 not redone. N170/N171 not reopened. TRIAL **471**.
+
+Soft singles that have never been the traded leg. Not CORN. Not DBA. History from 2023-01-19 is **3,71y < 5y**, so PASS is blocked even if a mean had cleared.
+
+### Gates (spread floor; commission unconfirmed)
+From `origin/main` `COSTS_FTMO_alle.csv` rondreis (these names are not in `COSTS_FTMO.csv`). Session-flat, swap 0.
+
+| Book | leg | RT | gate |
+|------|-----|---:|-----:|
+| N174 | COFFEE.c | 9,05 | **27,15** |
+| N175 | COCOA.c | 19,68 | **59,04** |
+
+### D-092.1 `n174_n175` (train window; M5 starts 2023-01-19)
+| ID | Family | N | mean | netto | years | Verdict |
+|----|--------|--:|-----:|------:|-------|---------|
+| N174 | COFFEE prior-1d reversal CQ | **230** | **+13,75** | +4,70 | 2023 +13,75 | **FAIL** vs **27,15** (L/S 113/117) |
+| N175 | COCOA 12:00→13:30 continuation CR | **213** | **−2,84** | −22,52 | 2023 −2,84 | **FAIL** vs **59,04** (L/S 118/95) |
+
+N174 vs N172 agree 0,52; vs DBA agree 0,50 cover 0,61. N175 vs N174 agree 0,51; vs N50 agree 0,55; vs DBA agree 0,55 cover 0,61. Not clones.
+
+No soft-pass. No PREREG. No new OPEN. TRIAL stays **471**.
+
+### Explicit
+- No PREREG. No U2 wake. Quiet to Sandro. No 2025-reserve. No other branches.
+
+
+
 ## 2026-10-04 00:23 Europe/Amsterdam — N172/N173 D-092.1 FAIL; N170/N171 discarded; no OPEN
 
 **Branch:** `claude/trusting-faraday-34tsmg` (worktree `/workspace/ai-trading-faraday`; tip was `4005235`).

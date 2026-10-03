@@ -1,0 +1,229 @@
+{
+  "N174": {
+    "id": "N174",
+    "instrument": "COFFEE.c",
+    "n": 230,
+    "mean_bruto_bp": 13.75,
+    "netto_bp": 4.7,
+    "gate_bp": 27.15,
+    "rt_bp": 9.05,
+    "verdict": "FAIL",
+    "notes": "COFFEE_PRIOR1D_REVERSAL fade prior-day return, session-flat 14:00\u219219:00; gate 3*9.05=27.15 from COSTS_FTMO_alle rondreis (not in COSTS_FTMO.csv; commission 0 unconfirmed, so this is a spread floor); history 3.71y from 2023-01-19 <5y so PASS is blocked; not CORN, not DBA basket, not N172 5d oil reversal; NEW_FAMILY CQ",
+    "short_history_blocks_pass": true,
+    "history_years": 3.71,
+    "median_bruto_bp": 5.0281,
+    "stress_gate_bp": 40.725,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.5217,
+    "n_long": 113,
+    "n_short": 117,
+    "years": {
+      "2023": 13.75
+    },
+    "trade_span_years": 0.93,
+    "meta": {
+      "n_signal_days": 235,
+      "n_skip_missing_bar": 5,
+      "n_trades": 230,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "rt_in_costs_ftmo_csv": false,
+      "gate_file": "origin/main COSTS_FTMO_alle.csv rondreis_bp; absent from COSTS_FTMO.csv",
+      "commission_unconfirmed": true,
+      "commission_bp": 0.0,
+      "d094a": "symbol_history_FTMO first_d1 2023-01-19; 3.71y through 2026-10-04 (<5y). Shorter-history exception: screened, cannot be PASS.",
+      "history_years": 3.71,
+      "symbol_list": "SymbolList_FTMO.csv COFFEE.c Agriculture",
+      "session": "prior 1d return fade; entry 14:00 flat 19:00 CET"
+    },
+    "gate_source": "origin/main COSTS_FTMO_alle.csv COFFEE.c rondreis_bp 9.05 \u00d7 3 = 27.15; commission 0 NIET bevestigd (spread floor). Absent from COSTS_FTMO.csv.",
+    "clone_hits": []
+  },
+  "N175": {
+    "id": "N175",
+    "instrument": "COCOA.c",
+    "n": 213,
+    "mean_bruto_bp": -2.8432,
+    "netto_bp": -22.5232,
+    "gate_bp": 59.04,
+    "rt_bp": 19.68,
+    "verdict": "FAIL",
+    "notes": "COCOA_OPEN_HOUR_CONTINUATION 12:00\u219213:30 sign, entry 13:30 flat 17:00; gate 3*19.68=59.04 from COSTS_FTMO_alle rondreis (not in COSTS_FTMO.csv; commission 0 unconfirmed, spread floor); history 3.71y from 2023-01-19 <5y so PASS is blocked; not the coffee 1d fade, not CORN, not DBA, not an NY-impulse fade; NEW_FAMILY CR",
+    "short_history_blocks_pass": true,
+    "history_years": 3.71,
+    "median_bruto_bp": -3.6075,
+    "stress_gate_bp": 88.56,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.4601,
+    "n_long": 118,
+    "n_short": 95,
+    "years": {
+      "2023": -2.8432
+    },
+    "trade_span_years": 0.94,
+    "meta": {
+      "n_signal_days": 213,
+      "n_skip_missing_bar": 0,
+      "n_trades": 213,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "rt_in_costs_ftmo_csv": false,
+      "gate_file": "origin/main COSTS_FTMO_alle.csv rondreis_bp; absent from COSTS_FTMO.csv",
+      "commission_unconfirmed": true,
+      "commission_bp": 0.0,
+      "d094a": "symbol_history_FTMO first_d1 2023-01-19; 3.71y through 2026-10-04 (<5y). Shorter-history exception: screened, cannot be PASS.",
+      "history_years": 3.71,
+      "symbol_list": "SymbolList_FTMO.csv COCOA.c Agriculture",
+      "session": "open-hour 12:00\u219213:30 continuation; entry 13:30 flat 17:00 CET"
+    },
+    "gate_source": "origin/main COSTS_FTMO_alle.csv COCOA.c rondreis_bp 19.68 \u00d7 3 = 59.04; commission 0 NIET bevestigd (spread floor). Absent from COSTS_FTMO.csv.",
+    "clone_hits": []
+  },
+  "N174_clones": {
+    "N172_USOIL_5d_reversal": {
+      "peer": "N172_USOIL_5d_reversal",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5174,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 230,
+      "n_both_active": 230,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N173_USDCAD_1d_cont": {
+      "peer": "N173_USDCAD_1d_cont",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5435,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 230,
+      "n_both_active": 230,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N50_USOIL_TSMOM_expanded": {
+      "peer": "N50_USOIL_TSMOM_expanded",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4913,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 230,
+      "n_both_active": 230,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N126_DBA_z120_d20": {
+      "peer": "N126_DBA_z120_d20",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4965,
+      "both_active_over_cand": 0.613,
+      "n_cand_active": 230,
+      "n_both_active": 141,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "COCOA_same_1d_fade_NOT_A_DEAD_ID": {
+      "peer": "COCOA_same_1d_fade_NOT_A_DEAD_ID",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5826,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 230,
+      "n_both_active": 230,
+      "clone": false,
+      "clone_raw": false,
+      "binding": false
+    },
+    "N175_COCOA_open_cont": {
+      "peer": "N175_COCOA_open_cont",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 230,
+      "n_both_active": 230,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "N175_clones": {
+    "N174_COFFEE_1d_fade": {
+      "peer": "N174_COFFEE_1d_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5094,
+      "both_active_over_cand": 0.9953,
+      "n_cand_active": 213,
+      "n_both_active": 212,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N172_USOIL_5d_reversal": {
+      "peer": "N172_USOIL_5d_reversal",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4648,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 213,
+      "n_both_active": 213,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N50_USOIL_TSMOM_expanded": {
+      "peer": "N50_USOIL_TSMOM_expanded",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.554,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 213,
+      "n_both_active": 213,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N126_DBA_z120_d20": {
+      "peer": "N126_DBA_z120_d20",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5462,
+      "both_active_over_cand": 0.6103,
+      "n_cand_active": 213,
+      "n_both_active": 130,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N173_USDCAD_1d_cont": {
+      "peer": "N173_USDCAD_1d_cont",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.507,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 213,
+      "n_both_active": 213,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N174": 27.15,
+    "N175": 59.04
+  },
+  "costs_rt": {
+    "COFFEE.c": 9.05,
+    "COCOA.c": 19.68
+  },
+  "history_years": 3.71,
+  "short_history_blocks_pass": true,
+  "train": "2021-01-01..2023-12-31; M5 for these names starts 2023-01-19",
+  "min_n": 150,
+  "no_thr_grid": true,
+  "trial_count_unchanged": 471,
+  "not_redone": [
+    "N172",
+    "N173",
+    "N170",
+    "N171"
+  ]
+}
