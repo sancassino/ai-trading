@@ -1,0 +1,244 @@
+{
+  "N176": {
+    "id": "N176",
+    "instrument": "GBPCAD",
+    "n": 1032,
+    "mean_bruto_bp": 0.017,
+    "netto_bp": -1.063,
+    "gate_bp": 3.24,
+    "rt_bp": 1.08,
+    "verdict": "FAIL",
+    "notes": "GBPCAD_PRIOR5D_REVERSAL fade prior 5d return, session-flat 08:00\u219216:00; gate 3*1.08=3.24 from C-048 COSTS_FTMO.csv (not alle); swap nights 0 (long credit -0.04 not used); not N152/N153 G10 XS; not a dead index leg; M5 file 5.74y; PnL through 2024-12-31 only; NEW_FAMILY CS",
+    "short_history_blocks_pass": false,
+    "history_years": 5.74,
+    "traded_years_through_2024": 3.99,
+    "median_bruto_bp": 0.4601,
+    "stress_gate_bp": 4.86,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.5087,
+    "n_long": 495,
+    "n_short": 537,
+    "years": {
+      "2021": 1.5852,
+      "2022": 1.451,
+      "2023": -0.9906,
+      "2024": -1.9397
+    },
+    "trade_span_years": 3.97,
+    "meta": {
+      "n_signal_days": 1032,
+      "n_skip_missing_bar": 0,
+      "n_trades": 1032,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "rt_in_costs_ftmo_csv": true,
+      "gate_file": "C-048 79d09e0 COSTS_FTMO.csv appended row; not COSTS_FTMO_alle",
+      "d094a": "FTMO M5 file 2021-01-04 \u2192 2026-10-01 is 5.74y (\u22655.73). PnL and signals use only bars through 2024-12-31 (3.99y). 2025+ reserve not read into the book. C-048 79d09e0.",
+      "history_years": 5.74,
+      "symbol_list": "SymbolList_FTMO.csv GBPCAD",
+      "session": "prior 5d return fade; entry 08:00 flat 16:00 CET",
+      "no_2025_plus": true
+    },
+    "gate_source": "C-048 79d09e0 COSTS_FTMO.csv GBPCAD rondreis_bp 1.08 \u00d7 3 = 3.24",
+    "clone_hits": []
+  },
+  "N177": {
+    "id": "N177",
+    "instrument": "EURNOK",
+    "n": 1036,
+    "mean_bruto_bp": 1.7535,
+    "netto_bp": -2.8665,
+    "gate_bp": 13.86,
+    "rt_bp": 4.62,
+    "verdict": "FAIL",
+    "notes": "EURNOK_PRIOR1D_CONTINUATION prior 1d return, session-flat 09:00\u219213:00; gate 3*4.62=13.86 from C-048 COSTS_FTMO.csv (not alle); swap nights 0 (short credit -0.20 not used); not EURAUD overnight-short TSMOM; not N176 (different instrument and mechanism); M5 file 5.74y; PnL through 2024-12-31 only; NEW_FAMILY CT",
+    "short_history_blocks_pass": false,
+    "history_years": 5.74,
+    "traded_years_through_2024": 3.99,
+    "median_bruto_bp": 0.4933,
+    "stress_gate_bp": 20.79,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.5097,
+    "n_long": 517,
+    "n_short": 519,
+    "years": {
+      "2021": 4.9019,
+      "2022": -0.0723,
+      "2023": 1.1863,
+      "2024": 1.0132
+    },
+    "trade_span_years": 3.98,
+    "meta": {
+      "n_signal_days": 1036,
+      "n_skip_missing_bar": 0,
+      "n_trades": 1036,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "rt_in_costs_ftmo_csv": true,
+      "gate_file": "C-048 79d09e0 COSTS_FTMO.csv appended row; not COSTS_FTMO_alle",
+      "d094a": "FTMO M5 file 2021-01-04 \u2192 2026-10-01 is 5.74y (\u22655.73). PnL and signals use only bars through 2024-12-31 (3.99y). 2025+ reserve not read into the book. C-048 79d09e0.",
+      "history_years": 5.74,
+      "symbol_list": "SymbolList_FTMO.csv EURNOK",
+      "session": "prior 1d return continuation; entry 09:00 flat 13:00 CET",
+      "no_2025_plus": true
+    },
+    "gate_source": "C-048 79d09e0 COSTS_FTMO.csv EURNOK rondreis_bp 4.62 \u00d7 3 = 13.86",
+    "clone_hits": []
+  },
+  "N176_clones": {
+    "N152_GBP_NZD_XS": {
+      "peer": "N152_GBP_NZD_XS",
+      "z_corr_train": 0.4049,
+      "sign_agree_both_active": 0.5282,
+      "both_active_over_cand": 0.9632,
+      "n_cand_active": 1032,
+      "n_both_active": 994,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N153_EUR_CAD_XS": {
+      "peer": "N153_EUR_CAD_XS",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5282,
+      "both_active_over_cand": 0.9612,
+      "n_cand_active": 1032,
+      "n_both_active": 992,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N58_AUDJPY_LO_20_10": {
+      "peer": "N58_AUDJPY_LO_20_10",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4833,
+      "both_active_over_cand": 0.9864,
+      "n_cand_active": 1032,
+      "n_both_active": 1018,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N177_EURNOK_1d_cont": {
+      "peer": "N177_EURNOK_1d_cont",
+      "z_corr_train": 0.0252,
+      "sign_agree_both_active": 0.4806,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 1032,
+      "n_both_active": 1032,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "N177_clones": {
+    "N152_GBP_NZD_XS": {
+      "peer": "N152_GBP_NZD_XS",
+      "z_corr_train": -0.0164,
+      "sign_agree_both_active": 0.504,
+      "both_active_over_cand": 0.9595,
+      "n_cand_active": 1036,
+      "n_both_active": 994,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N153_EUR_CAD_XS": {
+      "peer": "N153_EUR_CAD_XS",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.495,
+      "both_active_over_cand": 0.9575,
+      "n_cand_active": 1036,
+      "n_both_active": 992,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N58_AUDJPY_LO_20_10": {
+      "peer": "N58_AUDJPY_LO_20_10",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.501,
+      "both_active_over_cand": 0.9826,
+      "n_cand_active": 1036,
+      "n_both_active": 1018,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N176_GBPCAD_5d_fade": {
+      "peer": "N176_GBPCAD_5d_fade",
+      "z_corr_train": 0.0252,
+      "sign_agree_both_active": 0.4806,
+      "both_active_over_cand": 0.9961,
+      "n_cand_active": 1036,
+      "n_both_active": 1032,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "EURAUD_same_1d_cont_NOT_A_DEAD_ID": {
+      "peer": "EURAUD_same_1d_cont_NOT_A_DEAD_ID",
+      "z_corr_train": 0.5611,
+      "sign_agree_both_active": 0.6844,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 1036,
+      "n_both_active": 1036,
+      "clone": false,
+      "clone_raw": false,
+      "binding": false
+    }
+  },
+  "discarded_before_id": {
+    "USDSEK": "v114 refused; FTMO M5 4.74y < 5.73. Not screened.",
+    "USDNOK": "v114 refused; FTMO M5 4.74y < 5.73. Not screened.",
+    "USDZAR": "v114 refused; FTMO M5 4.74y < 5.73. Not screened.",
+    "USDHKD": {
+      "symbol": "USDHKD",
+      "given_id": false,
+      "why": "peg. 08:00\u219216:00 oracle mean |move| 1.9126 bp < gate 2.52, so that window cannot clear. 00:00\u219223:00 oracle ceiling is 3.233 bp, only 0.71 bp above the gate, so a book would need a near-perfect sign. Not given an id; two other names already cleared history and the clone bar. M5 file span is 5.74y.",
+      "windows": {
+        "08:00-16:00": {
+          "n": 1036,
+          "mean_abs_bp": 1.9126,
+          "p50": 1.2476,
+          "p90": 4.5214,
+          "p99": 8.978,
+          "oracle_le_mean_abs": true
+        },
+        "00:00-23:00": {
+          "n": 1011,
+          "mean_abs_bp": 3.233,
+          "p50": 2.1427,
+          "p90": 7.6522,
+          "p99": 14.2784,
+          "oracle_le_mean_abs": true
+        }
+      },
+      "gate_bp": 2.52
+    }
+  },
+  "gates": {
+    "N176": 3.24,
+    "N177": 13.86
+  },
+  "costs_rt": {
+    "GBPCAD": 1.08,
+    "EURNOK": 4.62,
+    "USDHKD": 0.84
+  },
+  "history_years_m5_file": 5.74,
+  "pnl_through": "2024-12-31",
+  "no_2025_plus": true,
+  "train": "2021-01-01..2024-12-31; 2025+ not loaded",
+  "min_n": 150,
+  "no_thr_grid": true,
+  "trial_count_unchanged": 471,
+  "not_used": [
+    "UK100cash",
+    "JP225cash",
+    "HK50cash",
+    "AUS200cash"
+  ]
+}

@@ -26,6 +26,12 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-049 — absorb v114 + Faraday N176–N179 FAIL; S2 EWC/XLU defer (closed — QUIET)
+**Opened/closed:** 2026-10-04 ~01:05 Europe/Amsterdam.  
+**Status:** CLOSED — routine absorb; Faraday already D-092.1 FAIL on 4 of 9 authorized names; remaining 4 indices for Strateeg; S2 EWC/XLU deferred; no live PREREG; U2 IDLE; **no Sandro ping**.
+
+**Facts:** Main v114 `39c7182` + Faraday `aadaf71` (N176 GBPCAD FAIL / N177 EURNOK FAIL / N178 AUDJPY FAIL / N179 EURAUD FAIL) + U2 `b0b64e9` IDLE TRIAL **471** + S2 `e31d1b5` EWC/XLU packed. Remaining authorized unscreened: UK100/JP225/HK50/AUS200 (+ USDHKD soft-skip). FREEZE OFF. Track-3 PAUSED. Formal OPEN **empty**. CTO trials **0**.
+
 ### C-044 — absorb v104 + Faraday 7c1a880; N162/N163 DIAG_FAIL_CLONE (closed — QUIET)
 **Opened/closed:** 2026-10-03 ~22:57 Europe/Amsterdam.  
 **Status:** CLOSED — catch-up absorb after missed ~22:25 cycle; both OPEN screens DIAG_FAIL_CLONE; no live PREREG; U2 IDLE; Strateeg needs ≥2 NEW_FAMILY; **no Sandro ping**.
@@ -1080,7 +1086,7 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 ### C-048 — cost-universe expansion (12 symbols authorized; 0 trials)
 **Opened:** 2026-10-04 ~00:53 Europe/Amsterdam.  
-**Status:** OPEN for Manager absorb. Strateeg may screen only the new names. U2 stays IDLE — **no live PREREG**.
+**Status:** CLOSED — Manager absorbed as NEXT_STEPS **v114** `39c7182` (authorize **9**/12; refuse USDSEK/USDNOK/USDZAR M5 4.74y). Follow-on Faraday N176–N179 FAIL absorbed as **C-049**.
 
 **Facts:**
 - Main read `400d401` NEXT_STEPS **v113**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **471** (U2). CTO trials **0**.

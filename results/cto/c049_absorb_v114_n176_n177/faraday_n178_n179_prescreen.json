@@ -1,0 +1,271 @@
+{
+  "N178": {
+    "id": "N178",
+    "instrument": "AUDJPY",
+    "n": 1032,
+    "mean_bruto_bp": -1.7211,
+    "netto_bp": -3.2911,
+    "gate_bp": 4.71,
+    "rt_bp": 1.57,
+    "verdict": "FAIL",
+    "notes": "AUDJPY_PRIOR5D_REVERSAL fade prior 5d return, session-flat 08:00\u219216:00; gate 3*1.57=4.71 from C-048 COSTS_FTMO.csv (not alle); swap nights 0 (long credit -0.24 not used); not N58 20/10 LO; not N176 (agree under 0.85); M5 file 5.74y; PnL through 2024-12-31 only; NEW_FAMILY CU",
+    "short_history_blocks_pass": false,
+    "history_years": 5.74,
+    "traded_years_through_2024": 3.99,
+    "median_bruto_bp": -0.3463,
+    "stress_gate_bp": 7.065,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.4922,
+    "n_long": 472,
+    "n_short": 560,
+    "years": {
+      "2021": 0.4927,
+      "2022": -3.5223,
+      "2023": -0.8637,
+      "2024": -2.9437
+    },
+    "trade_span_years": 3.97,
+    "meta": {
+      "n_signal_days": 1032,
+      "n_skip_missing_bar": 0,
+      "n_trades": 1032,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "session": "prior 5d return fade; entry 08:00 flat 16:00 CET",
+      "rt_in_costs_ftmo_csv": true,
+      "gate_file": "C-048 79d09e0 COSTS_FTMO.csv appended row; not COSTS_FTMO_alle",
+      "d094a": "FTMO M5 file 2021-01-04 \u2192 2026-10-01 is 5.74y (\u22655.73). PnL and signals use only bars through 2024-12-31 (3.99y). 2025+ reserve not read into the book. C-048 79d09e0.",
+      "history_years": 5.74,
+      "symbol_list": "SymbolList_FTMO.csv AUDJPY",
+      "no_2025_plus": true
+    },
+    "gate_source": "C-048 79d09e0 COSTS_FTMO.csv AUDJPY rondreis_bp 1.57 \u00d7 3 = 4.71",
+    "clone_hits": []
+  },
+  "N179": {
+    "id": "N179",
+    "instrument": "EURAUD",
+    "n": 1033,
+    "mean_bruto_bp": 0.6108,
+    "netto_bp": -0.4992,
+    "gate_bp": 3.33,
+    "rt_bp": 1.11,
+    "verdict": "FAIL",
+    "notes": "EURAUD_PRIOR1D_FADE fade prior 1d return, session-flat 08:00\u219216:00; gate 3*1.11=3.33 from C-048 COSTS_FTMO.csv (not alle); swap nights 0 (short credit -0.20 not used); not N177 1d continuation; not N66 overnight-short TSMOM; not a twin of N178; M5 file 5.74y; PnL through 2024-12-31 only; NEW_FAMILY CV",
+    "short_history_blocks_pass": false,
+    "history_years": 5.74,
+    "traded_years_through_2024": 3.99,
+    "median_bruto_bp": 1.5173,
+    "stress_gate_bp": 4.995,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.516,
+    "n_long": 532,
+    "n_short": 501,
+    "years": {
+      "2021": 1.3559,
+      "2022": -0.4737,
+      "2023": 0.3828,
+      "2024": 1.1829
+    },
+    "trade_span_years": 3.98,
+    "meta": {
+      "n_signal_days": 1033,
+      "n_skip_missing_bar": 0,
+      "n_trades": 1033,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "session": "prior 1d return fade; entry 08:00 flat 16:00 CET",
+      "rt_in_costs_ftmo_csv": true,
+      "gate_file": "C-048 79d09e0 COSTS_FTMO.csv appended row; not COSTS_FTMO_alle",
+      "d094a": "FTMO M5 file 2021-01-04 \u2192 2026-10-01 is 5.74y (\u22655.73). PnL and signals use only bars through 2024-12-31 (3.99y). 2025+ reserve not read into the book. C-048 79d09e0.",
+      "history_years": 5.74,
+      "symbol_list": "SymbolList_FTMO.csv EURAUD",
+      "no_2025_plus": true
+    },
+    "gate_source": "C-048 79d09e0 COSTS_FTMO.csv EURAUD rondreis_bp 1.11 \u00d7 3 = 3.33",
+    "clone_hits": []
+  },
+  "N178_clones": {
+    "N152_GBP_NZD_XS": {
+      "peer": "N152_GBP_NZD_XS",
+      "z_corr_train": -0.2589,
+      "sign_agree_both_active": 0.4789,
+      "both_active_over_cand": 0.9632,
+      "n_cand_active": 1032,
+      "n_both_active": 994,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N153_EUR_CAD_XS": {
+      "peer": "N153_EUR_CAD_XS",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.494,
+      "both_active_over_cand": 0.9612,
+      "n_cand_active": 1032,
+      "n_both_active": 992,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N176_GBPCAD_5d_fade": {
+      "peer": "N176_GBPCAD_5d_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4738,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 1032,
+      "n_both_active": 1032,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N177_EURNOK_1d_cont": {
+      "peer": "N177_EURNOK_1d_cont",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5514,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 1032,
+      "n_both_active": 1032,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N58_AUDJPY_LO_20_10": {
+      "peer": "N58_AUDJPY_LO_20_10",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4558,
+      "both_active_over_cand": 0.9864,
+      "n_cand_active": 1032,
+      "n_both_active": 1018,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N66_EURAUD_SO_20_10_rebuilt": {
+      "peer": "N66_EURAUD_SO_20_10_rebuilt",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5442,
+      "both_active_over_cand": 0.9864,
+      "n_cand_active": 1032,
+      "n_both_active": 1018,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N179_EURAUD_1d_fade": {
+      "peer": "N179_EURAUD_1d_fade",
+      "z_corr_train": -0.2127,
+      "sign_agree_both_active": 0.4157,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 1032,
+      "n_both_active": 1032,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "N179_clones": {
+    "N152_GBP_NZD_XS": {
+      "peer": "N152_GBP_NZD_XS",
+      "z_corr_train": 0.0025,
+      "sign_agree_both_active": 0.5066,
+      "both_active_over_cand": 0.9593,
+      "n_cand_active": 1033,
+      "n_both_active": 991,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N153_EUR_CAD_XS": {
+      "peer": "N153_EUR_CAD_XS",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4965,
+      "both_active_over_cand": 0.9574,
+      "n_cand_active": 1033,
+      "n_both_active": 989,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N176_GBPCAD_5d_fade": {
+      "peer": "N176_GBPCAD_5d_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5228,
+      "both_active_over_cand": 0.9961,
+      "n_cand_active": 1033,
+      "n_both_active": 1029,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N177_EURNOK_1d_cont": {
+      "peer": "N177_EURNOK_1d_cont",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.3166,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 1033,
+      "n_both_active": 1033,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N58_AUDJPY_LO_20_10": {
+      "peer": "N58_AUDJPY_LO_20_10",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5153,
+      "both_active_over_cand": 0.9826,
+      "n_cand_active": 1033,
+      "n_both_active": 1015,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N66_EURAUD_SO_20_10_rebuilt": {
+      "peer": "N66_EURAUD_SO_20_10_rebuilt",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4847,
+      "both_active_over_cand": 0.9826,
+      "n_cand_active": 1033,
+      "n_both_active": 1015,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N178_AUDJPY_5d_fade": {
+      "peer": "N178_AUDJPY_5d_fade",
+      "z_corr_train": -0.2127,
+      "sign_agree_both_active": 0.4169,
+      "both_active_over_cand": 0.9961,
+      "n_cand_active": 1033,
+      "n_both_active": 1029,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "discarded_before_id": {
+    "USDSEK": "v114; M5 4.74y. Not screened.",
+    "USDNOK": "v114; M5 4.74y. Not screened.",
+    "USDZAR": "v114; M5 4.74y. Not screened.",
+    "USDHKD": "Not given an id. 08:00-16:00 oracle |move| 1.91 bp < gate 2.52. Full-day ceiling 3.23 bp.",
+    "UK100_JP225_HK50_AUS200": "Not used. AUDJPY and EURAUD both cleared history and the clone bar.",
+    "EURAUD_prior1d_continuation": "Same rule as N177 agreed 0.68. Not reused."
+  },
+  "gates": {
+    "N178": 4.71,
+    "N179": 3.33
+  },
+  "costs_rt": {
+    "AUDJPY": 1.57,
+    "EURAUD": 1.11
+  },
+  "history_years_m5_file": 5.74,
+  "pnl_through": "2024-12-31",
+  "no_2025_plus": true,
+  "train": "2021-01-01..2024-12-31; 2025+ not loaded",
+  "min_n": 150,
+  "no_thr_grid": true,
+  "trial_count_unchanged": 471
+}

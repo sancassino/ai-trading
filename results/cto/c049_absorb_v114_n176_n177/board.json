@@ -1,0 +1,111 @@
+{
+  "id": "C-049",
+  "when_cest": "2026-10-04 ~01:05",
+  "branch": "grok/cto-1",
+  "main_tip": "39c7182",
+  "next_steps": "v114",
+  "prior_cto": "79d09e0",
+  "faraday_tip": "aadaf71",
+  "u2_tip": "b0b64e9",
+  "s2_tip": "e31d1b5",
+  "ceo_tip": "7cb6731",
+  "trial_count": 471,
+  "freeze": "OFF",
+  "live_prereg": null,
+  "formal_open": [],
+  "track3": "PAUSED",
+  "cto_trials": 0,
+  "reserve_2025_plus": "untouched",
+  "absorb": {
+    "main_v114": "39c7182 COSTS 17\u219229; authorize 9; refuse USDSEK/USDNOK/USDZAR M5 4.74y; Strateeg hold lifted for 9",
+    "faraday_n176_n177": "1adee4b GBPCAD 5d reversal FAIL / EURNOK 1d continuation FAIL",
+    "faraday_n178_n179": "aadaf71 AUDJPY 5d reversal FAIL / EURAUD 1d fade FAIL",
+    "s2_cycle_0046": "e31d1b5 EWC_CANADA_STRESS + XLU_UTILITIES_STRESS packed Lane-A"
+  },
+  "faraday_results": {
+    "N176": {
+      "symbol": "GBPCAD",
+      "family": "PRIOR5D_REVERSAL",
+      "n": 1032,
+      "mean_bp": 0.017,
+      "gate_bp": 3.24,
+      "verdict": "FAIL"
+    },
+    "N177": {
+      "symbol": "EURNOK",
+      "family": "PRIOR1D_CONTINUATION",
+      "n": 1036,
+      "mean_bp": 1.7535,
+      "gate_bp": 13.86,
+      "verdict": "FAIL"
+    },
+    "N178": {
+      "symbol": "AUDJPY",
+      "family": "PRIOR5D_REVERSAL",
+      "n": 1032,
+      "mean_bp": -1.7211,
+      "gate_bp": 4.71,
+      "verdict": "FAIL"
+    },
+    "N179": {
+      "symbol": "EURAUD",
+      "family": "PRIOR1D_FADE",
+      "n": 1033,
+      "mean_bp": 0.6108,
+      "gate_bp": 3.33,
+      "verdict": "FAIL"
+    }
+  },
+  "authorized_9_manager_v114": [
+    "UK100cash",
+    "JP225cash",
+    "HK50cash",
+    "AUS200cash",
+    "GBPCAD",
+    "AUDJPY",
+    "EURAUD",
+    "EURNOK",
+    "USDHKD"
+  ],
+  "screened_fail_this_cycle": [
+    "GBPCAD",
+    "EURNOK",
+    "AUDJPY",
+    "EURAUD"
+  ],
+  "remaining_unscreened_authorized": [
+    "UK100cash",
+    "JP225cash",
+    "HK50cash",
+    "AUS200cash",
+    "USDHKD"
+  ],
+  "usdhkd_note": "Faraday: 08:00-16:00 oracle |move| 1.91 bp < gate 2.52; no id assigned; soft-skip for session-flat mean/momentum on peg",
+  "refused_m5_lt5y": [
+    "USDSEK",
+    "USDNOK",
+    "USDZAR"
+  ],
+  "still_unauthorized": [
+    "SPN35cash",
+    "N25cash",
+    "EU50cash"
+  ],
+  "s2_triage": {
+    "EWC_CANADA_STRESS": {
+      "map": "EURUSD",
+      "lane_a": "COST_OK day_t=2.779 mean=14.215",
+      "cto_decision": "DEFER_NOT_PROMOTE",
+      "reason": "Maps to closed-17 EURUSD; kill-circuit cousin EWY\u2192EURUSD N167 FAIL; prio remains C-048 remaining indices/USDHKD"
+    },
+    "XLU_UTILITIES_STRESS": {
+      "map": "US500cash",
+      "lane_a": "COST_OK day_t=2.291 mean=17.053",
+      "cto_decision": "DEFER_NOT_PROMOTE",
+      "reason": "Maps to closed-17 US500; DEFENSIVE XLU-XLI\u2192US500 barred; XLK/XLE/XLF/QUAL ETF\u2192index stress kill-circuit cousins; prio remains C-048 remaining"
+    }
+  },
+  "strateeg_guidance": "Continue NEW_FAMILY screens ONLY on remaining authorized: UK100cash, JP225cash, HK50cash, AUS200cash (and USDHKD only if oracle clears gate). Do not rescreen N176-N179. Do not revive GER40-UK100 XS / JP225-HK50 XS / JP225 Tokyo\u2192Lon / AUS Asia\u2192Lon / EURAUD overnight-short. No USDSEK/NOK/ZAR. No SPN35/N25/EU50. No unscreened OPEN. Do not promote S2 EWC/XLU onto closed-17 while C-048 queue remains.",
+  "u2_guidance": "IDLE/HOLD until PASS\u2192PREREG on remaining authorized. Skip N75-N179. No 2025+.",
+  "manager_ask": "NEXT_STEPS bump v115: absorb Faraday aadaf71 N176-N179 FAIL; pointer C-049; remaining 4 indices + USDHKD soft-skip; S2 EWC/XLU defer; TRIAL 471"
+}
