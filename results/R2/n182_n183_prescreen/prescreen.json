@@ -1,0 +1,218 @@
+{
+  "N182": {
+    "id": "N182",
+    "instrument": "HK50cash",
+    "n": 969,
+    "mean_bruto_bp": -2.7638,
+    "netto_bp": -5.3938,
+    "gate_bp": 7.89,
+    "rt_bp": 2.63,
+    "verdict": "FAIL",
+    "notes": "HK50_PRIOR5D_EUROPE_FADE fade prior 5d, session-flat 09:00\u219215:00; gate 3*2.63=7.89 from C-048 COSTS_FTMO.csv; not N64 20/10 short and not N139 Asia XS 03:00\u219208:00; swap nights 0; M5 5.74y; PnL through 2024-12-31; NEW_FAMILY CY",
+    "short_history_blocks_pass": false,
+    "history_years": 5.74,
+    "traded_years_through_2024": 3.99,
+    "median_bruto_bp": -1.7649,
+    "stress_gate_bp": 11.835,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.4768,
+    "n_long": 509,
+    "n_short": 460,
+    "years": {
+      "2021": -1.008,
+      "2022": -1.7655,
+      "2023": -2.0601,
+      "2024": -6.1981
+    },
+    "trade_span_years": 3.96,
+    "meta": {
+      "n_signal_days": 980,
+      "n_skip_missing_bar": 11,
+      "n_trades": 969,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "rt_in_costs_ftmo_csv": true,
+      "gate_file": "C-048 79d09e0 COSTS_FTMO.csv appended row; not COSTS_FTMO_alle",
+      "d094a": "FTMO M5 file span 5.74y (>=5.73). PnL through 2024-12-31 only (3.99y). 2025+ not loaded.",
+      "history_years": 5.74,
+      "symbol_list": "SymbolList_FTMO.csv HK50cash",
+      "no_2025_plus": true,
+      "session": "prior 5d return fade; entry 09:00 flat 15:00 CET"
+    },
+    "gate_source": "C-048 79d09e0 COSTS_FTMO.csv HK50cash rondreis_bp 2.63 \u00d7 3 = 7.89",
+    "clone_hits": []
+  },
+  "N183": {
+    "id": "N183",
+    "instrument": "AUS200cash",
+    "n": 1010,
+    "mean_bruto_bp": 1.0814,
+    "netto_bp": -0.2786,
+    "gate_bp": 4.08,
+    "rt_bp": 1.36,
+    "verdict": "FAIL",
+    "notes": "AUS200_PRIOR1D_AFTERNOON_FADE fade prior 1d, session-flat 14:00\u219218:00; gate 3*1.36=4.08 from C-048 COSTS_FTMO.csv; not N108 Asia-AM\u2192Lon 08:00\u219212:00 and not N61 20/10 short; swap nights 0; M5 5.74y; PnL through 2024-12-31; NEW_FAMILY CZ",
+    "short_history_blocks_pass": false,
+    "history_years": 5.74,
+    "traded_years_through_2024": 3.99,
+    "median_bruto_bp": 0.0,
+    "stress_gate_bp": 6.12,
+    "stress_note": "BELOW_stress_1.5x (info only)",
+    "hit_rate": 0.4941,
+    "n_long": 478,
+    "n_short": 532,
+    "years": {
+      "2021": 0.0228,
+      "2022": 0.214,
+      "2023": -0.1126,
+      "2024": 4.1775
+    },
+    "trade_span_years": 3.98,
+    "meta": {
+      "n_signal_days": 1018,
+      "n_skip_missing_bar": 8,
+      "n_trades": 1010,
+      "swap_nights": 0,
+      "overnight": false,
+      "threshold": null,
+      "rt_in_costs_ftmo_csv": true,
+      "gate_file": "C-048 79d09e0 COSTS_FTMO.csv appended row; not COSTS_FTMO_alle",
+      "d094a": "FTMO M5 file span 5.74y (>=5.73). PnL through 2024-12-31 only (3.99y). 2025+ not loaded.",
+      "history_years": 5.74,
+      "symbol_list": "SymbolList_FTMO.csv AUS200cash",
+      "no_2025_plus": true,
+      "session": "prior 1d return fade; entry 14:00 flat 18:00 CET"
+    },
+    "gate_source": "C-048 79d09e0 COSTS_FTMO.csv AUS200cash rondreis_bp 1.36 \u00d7 3 = 4.08",
+    "clone_hits": []
+  },
+  "N182_clones": {
+    "N139_HK_leg": {
+      "peer": "N139_HK_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5248,
+      "both_active_over_cand": 0.9577,
+      "n_cand_active": 969,
+      "n_both_active": 928,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N64_HK50_SO_20_10": {
+      "peer": "N64_HK50_SO_20_10",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4649,
+      "both_active_over_cand": 0.9701,
+      "n_cand_active": 969,
+      "n_both_active": 940,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N180_UK_5d_fade": {
+      "peer": "N180_UK_5d_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.6511,
+      "both_active_over_cand": 0.9969,
+      "n_cand_active": 969,
+      "n_both_active": 966,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N181_JP_1d_fade": {
+      "peer": "N181_JP_1d_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5598,
+      "both_active_over_cand": 0.9917,
+      "n_cand_active": 969,
+      "n_both_active": 961,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N183_AUS_1d_fade": {
+      "peer": "N183_AUS_1d_fade",
+      "z_corr_train": 0.1666,
+      "sign_agree_both_active": 0.5614,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 969,
+      "n_both_active": 969,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "N183_clones": {
+    "N108_Asia_to_Lon": {
+      "peer": "N108_Asia_to_Lon",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4465,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 1010,
+      "n_both_active": 1010,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N61_AUS_SO_20_10": {
+      "peer": "N61_AUS_SO_20_10",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5225,
+      "both_active_over_cand": 0.9683,
+      "n_cand_active": 1010,
+      "n_both_active": 978,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N180_UK_5d_fade": {
+      "peer": "N180_UK_5d_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5842,
+      "both_active_over_cand": 0.9931,
+      "n_cand_active": 1010,
+      "n_both_active": 1003,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N181_JP_1d_fade": {
+      "peer": "N181_JP_1d_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.7164,
+      "both_active_over_cand": 0.9881,
+      "n_cand_active": 1010,
+      "n_both_active": 998,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N182_HK_5d_fade": {
+      "peer": "N182_HK_5d_fade",
+      "z_corr_train": 0.1666,
+      "sign_agree_both_active": 0.5567,
+      "both_active_over_cand": 0.996,
+      "n_cand_active": 1010,
+      "n_both_active": 1006,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N182": 7.89,
+    "N183": 4.08
+  },
+  "costs_rt": {
+    "HK50cash": 2.63,
+    "AUS200cash": 1.36
+  },
+  "pnl_through": "2024-12-31",
+  "no_2025_plus": true,
+  "min_n": 150,
+  "no_thr_grid": true,
+  "trial_count_unchanged": 471,
+  "closes_c048_nine": true
+}

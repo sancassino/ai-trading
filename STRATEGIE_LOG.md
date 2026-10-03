@@ -173,3 +173,5 @@
 - **2026-10-04 01:04 CEST** — D-092.1 N178 FAIL (AUDJPY 5d reversal −1,72<4,71, N=1032) + N179 FAIL (EURAUD 1d fade +0,61<3,33, N=1033). Not twins (agree 0,42). Not N177 continuation. No PREREG. OPEN empty. TRIAL 471. Quiet; geen U2 wake.
 
 - **2026-10-04 01:06 CEST** — D-092.1 N180 FAIL (UK100 5d morning fade −2,28<4,26, N=999) + N181 FAIL (JP225 1d afternoon fade +4,50<4,53, N=1018, no soft-pass). Not clones. HK50/AUS200 unused. No PREREG. OPEN empty. TRIAL 471. Quiet; geen U2 wake.
+
+- **2026-10-04 01:08 CEST** — D-092.1 N182 FAIL (HK50 5d Europe fade −2,76<7,89, N=969) + N183 FAIL (AUS200 afternoon 1d fade +1,08<4,08, N=1010). Not clones. C-048 nine closed. No PREREG. OPEN empty. TRIAL 471. Quiet; geen U2 wake.

@@ -1240,3 +1240,27 @@ Session-flat, swap nights **0**.
 M5 files 5,73y / 5,74y. PnL through 2024-12-31.
 
 **Niet gedaan:** geen PREREG; geen OPEN; geen thr-grid; TRIAL niet verhoogd.
+
+## 2026-10-04 01:08 Europe/Amsterdam — Lane-B N182 FAIL / N183 FAIL; C-048 nine closed
+
+**Branch:** `claude/trusting-faraday-34tsmg` (tip was `5e54500`).
+**Not redone:** N176–N181. N181 stays FAIL (+4,50 < 4,53), no soft-pass. No 2025+ PnL.
+**TRIAL_COUNT stays 471.**
+
+### Gates (C-048 `COSTS_FTMO.csv`, not alle)
+Session-flat, swap nights **0**.
+
+| Book | leg | RT | gate | window |
+|------|-----|---:|-----:|--------|
+| N182 | HK50cash | 2,63 | **7,89** | prior 5d fade, 09:00→15:00 CET |
+| N183 | AUS200cash | 1,36 | **4,08** | prior 1d fade, 14:00→18:00 CET |
+
+### D-092.1 `n182_n183`
+| ID | Family | N | mean | netto | Verdict |
+|----|--------|--:|-----:|------:|---------|
+| N182 | HK50 5d Europe fade CY | **969** | **−2,76** | −5,39 | **FAIL** vs **7,89**. N139 HK-leg agree 0,52 cover 0,96. N64 agree 0,46 cover 0,97. |
+| N183 | AUS200 afternoon 1d fade CZ | **1010** | **+1,08** | −0,28 | **FAIL** vs **4,08**. N108 agree 0,45 cover 1,00. N61 agree 0,52 cover 0,97. N181 agree 0,72 cover 0,99. |
+
+Mutual agree **0,56**. N180 agree 0,65 / 0,58. M5 **5,74y** both. This closes the C-048 nine.
+
+**Niet gedaan:** geen PREREG; geen OPEN; geen thr-grid; TRIAL niet verhoogd.
