@@ -1166,3 +1166,29 @@ D-094a: LQD history 21,4y; EWY history 23,6y.
 **§10 vs S2:** `885090b` STALE (LQD+EWY consumed as N166/N167). Faraday novelty refill stronger this hour; S2 idle.
 
 **Niet gedaan:** geen D-092.1 on N170/N171 this cycle (OPEN filed for CTO/next); geen PREREG; geen U2/Sandro ping; geen thr-grid; geen 2025-reserve; geen N168/N169 rescreen; TRIAL niet verhoogd.
+
+## 2026-10-04 01:01 Europe/Amsterdam — Lane-B N176 FAIL / N177 FAIL; no OPEN
+
+**Branch:** `claude/trusting-faraday-34tsmg` (tip was `7f9da01`).
+**Read:** CTO C-048 `79d09e0` `results/cto/c048_cost_universe/`. Manager v114 `39c7182` refuses USDSEK, USDNOK, USDZAR (FTMO M5 4,74y). Not screened, no ids, no OPEN.
+**TRIAL_COUNT stays 471.** No 2025+ bar in the signal or the PnL.
+
+### Gates (frozen before PnL; C-048 `COSTS_FTMO.csv`, not alle)
+Session-flat, swap nights **0**. Credits not used as alpha.
+
+| Book | leg | RT | gate | window |
+|------|-----|---:|-----:|--------|
+| N176 | GBPCAD | 1,08 | **3,24** | prior 5d fade, 08:00→16:00 CET |
+| N177 | EURNOK | 4,62 | **13,86** | prior 1d continuation, 09:00→13:00 CET |
+
+### D-092.1 `n176_n177` (train through 2024-12-31)
+| ID | Family | N | mean | netto | years | Verdict |
+|----|--------|--:|-----:|------:|-------|---------|
+| N176 | GBPCAD 5d reversal CS | **1032** | **+0,02** | −1,06 | +1,59 / +1,45 / −0,99 / −1,94 | **FAIL** vs gate **3,24**. N152 agree 0,53 cover 0,96 (z 0,40). N153 agree 0,53 cover 0,96. |
+| N177 | EURNOK 1d continuation CT | **1036** | **+1,75** | −2,87 | +4,90 / −0,07 / +1,19 / +1,01 | **FAIL** vs gate **13,86**. N152 agree 0,50 cover 0,96. N153 agree 0,50 cover 0,96. Mutual agree 0,48. |
+
+D-094a: both M5 files 2021-01-04 → 2026-10-01 = **5,74y**. UK100/JP225/HK50/AUS200 not used.
+
+**Not given an id:** USDHKD. 08:00–16:00 oracle mean |move| 1,91 bp < gate 2,52. Full-day ceiling 3,23 bp, only 0,71 bp over the gate.
+
+**Niet gedaan:** geen PREREG; geen unscreened OPEN; geen index rewrite; geen USDSEK/NOK/ZAR; geen thr-grid; geen U2/Sandro ping. TRIAL niet verhoogd.

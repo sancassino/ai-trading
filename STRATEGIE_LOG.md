@@ -167,3 +167,5 @@
 - **2026-10-03 23:21 CEST** — Hourly FTMO: absorb v105/C-044 N161 FAIL_T (TRIAL **471**) + N162/N163 DIAG_FAIL_CLONE. C17/FX/B1/A2 STOP. OPEN **N164** CG US2000 NY-fade (gate 9,43 est) + **N165** CH EURCHF London-haven fade (gate 3,45 est). S2 `51b24bf` STALE. Quiet; geen U2 wake.
 - **2026-10-04 00:23 CEST** — Tip `4005235` had filed unscreened OPEN N170/N171. Discarded pre-screen (NY-impulse fade / BTC-ETH; gates not in COSTS_FTMO.csv). D-092.1 N172 FAIL (+4,55<10,02, N=767) + N173 FAIL (−0,90<2,40, N=776). No PREREG. Formal OPEN empty. TRIAL 471. Quiet; geen U2 wake.
 - **2026-10-04 00:28 CEST** — D-092.1 N174 FAIL (COFFEE 1d reversal +13,75<27,15, N=230, history 3,71y) + N175 FAIL (COCOA open-hour −2,84<59,04, N=213). Not clones. No PREREG. OPEN empty. TRIAL 471. Quiet; geen U2 wake.
+
+- **2026-10-04 01:01 CEST** — C-048 authorizes twelve names. v114 refuses USDSEK/USDNOK/USDZAR (M5 4,74y). USDHKD not id’d (peg). D-092.1 N176 FAIL (GBPCAD 5d reversal +0,02<3,24, N=1032) + N177 FAIL (EURNOK 1d continuation +1,75<13,86, N=1036). Not clones. No PREREG. OPEN empty. TRIAL 471. Quiet; geen U2 wake.
