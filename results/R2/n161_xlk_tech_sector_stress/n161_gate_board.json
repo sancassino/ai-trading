@@ -1,0 +1,57 @@
+{
+  "prereg": "PREREG_FTMO_N161_XLK_TECH_SECTOR_STRESS",
+  "new_family": "CD",
+  "config": "XLK z120/thr\u00b10.5/mom_confirm \u2192 US100cash session-flat 15:30\u219221:00 CET",
+  "rt_bp": 0.66,
+  "gate_bp": 1.98,
+  "stress_gate_bp": 2.9699999999999998,
+  "swap_bp": 0.0,
+  "n_signal_days_train_nonzero": 503,
+  "train": {
+    "label": "train_2021_2023",
+    "n": 383,
+    "mean_bruto": 5.4198,
+    "mean_netto": 4.7598,
+    "t_netto": 0.841,
+    "t_nw5": 0.976,
+    "median_bruto": 9.77,
+    "mean_mae_bp": 81.0433,
+    "n_long": 242,
+    "n_short": 141
+  },
+  "test": {
+    "label": "test_2024",
+    "n": 192,
+    "mean_bruto": -7.1412,
+    "mean_netto": -7.8012,
+    "t_netto": -1.302,
+    "t_nw5": -1.2119,
+    "median_bruto": -0.3921,
+    "mean_mae_bp": 63.1095,
+    "n_long": 185,
+    "n_short": 7
+  },
+  "year_split_train": {
+    "2021": {
+      "n": 56,
+      "mean_bruto": -10.6781,
+      "mean_netto": -11.3381
+    },
+    "2022": {
+      "n": 146,
+      "mean_bruto": 6.8373,
+      "mean_netto": 6.1773
+    },
+    "2023": {
+      "n": 181,
+      "mean_bruto": 9.2569,
+      "mean_netto": 8.5969
+    }
+  },
+  "cost_pass": true,
+  "stress_pass": true,
+  "verdict": "FAIL_T",
+  "reserve_2025": "untouched",
+  "faraday_tip_sha": "7c1a880",
+  "note": "U2 owns TRIALS/TRIAL_COUNT append. FAIL_COST_GATE/FAIL_STRESS \u2192 no bump. FAIL_T \u2192 bump +1. US100 gate 1.98 not US500 2.34. Signal age >5d does not carry. \u2260SECTOR_DISP/XLE/XLF/DEFENSIVE/N92. No overnight. No thr-grid. No retune."
+}

@@ -2403,3 +2403,21 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD. No new trial. Skip N75–N153 + XLE→US500 / DBC→US500 / GER40-UK100 / JP225-HK50 / XAU-UKOIL / XAG-UKOIL / US30-US500 / XPT-XPD / BTC-ETH / AUD-XAU / GBP-UKOIL / USDJPY-US100 / EUR-GER40 / XAG-US30 / EURJPY-USDCHF / GBP-NZD / EUR-CAD / XLF→US500 / QUAL→US500 / BRENT_WTI XS / USDMXN EM-fade / MTUM→US500 / GLD→US500 / EQW_BREADTH / DXY_DOLLAR / BWX→US500 / EWZ→US500 / DBA→US500 / YIELD_CURVE / DEFENSIVE_CYCLICAL / VNQ/EEM/DBC/EFA/TIP/IWM/TLT/CPER/HYG→US500 / GAS/SILVER / EMB/CRACK / CORN / VIX_TERM / L60 / UKOIL-OVN / ORB-meta / SECTOR_DISP / NZDJPY-LO / XAU-Lon→NY / USOIL→US100 / CADCHF-LO / CADJPY-LO / AUDCAD / USDCHF-LO / GER40→US30 / EURNZD-LO / UK→FRA40 / AUS Asia→Lon / GBPCHF-LO / JP225 Tokyo→Lon / CHFJPY-LO / DXY Lon→EU-PM / GBPAUD-LO / PPLT→US500 + listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. Prio-1 remains Strateeg D-092.1 on N154/N155 (or replacements) → PASS→PREREG. P1 ftmo.py validation not opened for U2 this cycle (CTO spoor 5; U2 IDLE per v103).
 
 **Book end:** TRIAL_COUNT **470** unchanged. Quiet — no Sandro/CTO ping.
+
+
+## Cyclus 02:05 CEST (2026-10-03) — N161 XLK_TECH_SECTOR_STRESS FAIL_T (TRIAL 470→471)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** PREREG vóór resultaat from Faraday tip `7c1a880`: `PREREG_FTMO_N161_XLK_TECH_SECTOR_STRESS.md` + VOORSTEL + lane_b SOURCE + `results/R2/n160_n161_prescreen/` (D-092.1 PASS N161 N=383 mean +5.42 ≥ 1.98; N160 XAG FAIL not gated). Started after D-090 idle tip `c2b7720` (clean; `03ad9da` ancestor). Book starts at TRIAL **470**.
+
+**Config freeze:** XLK z120 / thr ±0,5 / mom_confirm `(z>+0,5 & d20>0)→LONG` / `(z<−0,5 & d20<0)→SHORT` → **US100cash** session-flat **15:30→21:00 CET**; RT **0,66** bp; gate **1,98**; stress **2,97**; swap=0. Signal older than 5 calendar days does not carry. Not hold=3d. Not overnight long. ≠ SECTOR_DISP / XLE / XLF / DEFENSIVE / N92.
+
+| Venster | N | mean bruto | mean netto | t / NW-L5 | Poort |
+|---------|--:|----------:|----------:|----------:|-------|
+| Train 2021–2023 | 383 | **+5,4198 bp** | +4,7598 bp | 0,84 / 0,98 | cost PASS (≥1,98); stress PASS (≥2,97) |
+| Test 2024 | 192 | −7,1412 bp | −7,8012 bp | −1,30 / −1,21 | formal t <2 |
+
+**Year-split train mean bruto:** 2021 **−10,68** (N=56) / 2022 **+6,84** (N=146) / 2023 **+9,26** (N=181). Long/short 242/141. Median +9,77.
+
+**Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 470→471**. Dead += `N161_XLK_TECH_SECTOR_STRESS`. Geen retune / geen klonen. Board: `results/R2/n161_xlk_tech_sector_stress/n161_gate_board.json`.
