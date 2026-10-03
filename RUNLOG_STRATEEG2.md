@@ -507,3 +507,28 @@
   - FTMO map: NDX→**US100cash** (**FLAG** overnight long) — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1.
 - **MATERIAL:** true (1 survivor pack).
 - Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag XLK_TECH_SECTOR_STRESS oppakken; S2 blijft Lane-A novelty.
+
+## 2026-10-03 ~23:44 Europe/Amsterdam — Hourly cycle (:40→:44 slot) / C-028 Lane-A + POST-N78/N93
+
+- `git fetch --all --prune`; tip vóór commit `grok/strateeg-2` @ 51b24bf (XLK promote → later N161 FAIL_T; family now DEAD). Merged `origin/main` @ 03ac200 (v106). Branch ≠ main/uitvoerder. Prior automation @22:42 FAILED — this cycle completes fully.
+- **Refresh (read-only):** NEXT_STEPS **v106** (`origin/main` @ 03ac200, 23:37 CEST): C-045 `71d3b5e` N164/N165 DIAG_FAIL; Faraday `218eb11`; formal OPEN **empty**; U2 IDLE/HOLD tip `69c1a34` TRIAL **471**; FREEZE OFF; Track-3 PAUSED; prio = ≥2 NEW_FAMILY for Strateeg/S2. EDGE_SEARCH_UPGRADE C-028 bindend. Dead += N154–N165 + XLK N161 + prior bars (US2000 NY-impulse / EURCHF London-haven / US500 cash-close / AUD NY-fade / NZD same-window / XLK→US100 + prior).
+- **Dead-set / clone guard:** XLK_TECH / XLE / XLV / COCOA / AUDUSD_COMMODITY_FX / VLUE / XLB / EURJPY_RISK / YIELD_CURVE / DEFENSIVE / GAS / SILVER / EMB / CRACK / SECTOR_DISP / VIX_TERM / HYG / TLT / TIP / CPER / VNQ / EEM / DBC / EFA / IWM→US500 / EQW / DXY / MTUM / GLD / XLF / QUAL / BRENT_WTI / USDMXN / EWZ / DBA / BWX / PPLT / SOFTS_RATIO / ORB/TSMOM/L60 FX-med / CORN / UKOIL-OVN / ORB-meta / N75–N165 / FX LO carry / US2000 NY / EURCHF London / GBPCHF-USDCHF-AUDCHF London-AM / US500 cash-close / AUD NY / NZD same / CEO T5–T16. Formal OPEN empty — no OPEN ids. **No PREREG_S2** (Lane-B = Strateeg).
+- **C-028 Lane-A screens** (proxy daily ≤2024-12-31; **non-overlapping** multi-day holds; day_t bruto + early RT/swap×hold; promote=**COST_OK only**; artefacts `results/strateeg2_prescreen/cycle_2344/`; script `scripts/s2_c028_lane_a_cycle2344.py`):
+
+  | Family (NEW_FAMILY) | Best symbols | Config | years | mean_bp | day_t | n | cost | Uitkomst |
+  |---------------------|--------------|--------|------:|--------:|------:|--:|------|----------|
+  | **LQD_IG_CREDIT_STRESS** | LQD→**NDX** | z120/thr0.5/mom_confirm\|hold=3d | 19.82 | +27.45 | **4.22** | 1170 | **COST_OK** (US100; drag 6.51; net 20.94) | **PROMOTE** |
+  | LQD_IG_CREDIT_STRESS | LQD→**SPY** twin | same | 19.82 | +20.56 | **3.76** | 1168 | **COST_OK** (US500; drag 4.85; net 15.71) | twin CSV |
+  | **EWY_KOREA_STRESS** | EWY→**EURUSD** | z120/thr0.5/z_level\|hold=3d | 19.82 | +7.49 | **2.60** | 1242 | **COST_OK** (EURUSD; drag 4.02; net 3.47) | **PROMOTE** |
+  | USDNOK_OIL_FX | USDNOK→USDNOK | z40/thr1.0/fade_extreme\|hold=1d | 19.91 | +5.65 | **2.10** | 2816 | **COST_HOSTILE** (RT 4.76; drag 4.78; net 0.87) | FAIL cost (prefer EURUSD/SPY map — no bruto≥2 there) |
+  | XLY_DISCRETIONARY_STRESS | XLY→NDX | z120/thr0.5/mom_confirm\|hold=5d | 19.81 | +17.87 | 1.80 | 770 | — | FAIL day_t |
+
+- **Novelty:** **4/4 NEW_FAMILY** (≥2/3 ✔). 1485 configs; 119 promote-configs / **2** promote-families. COST_HOSTILE bruto-ok: 4 (all USDNOK self-map); COST_TIGHT: 7 (LQD→SPY hold=1d + EWY→EURUSD hold=1d).
+- **Cost-stress:** survivors cleared mean≥2×3RT + net_after_drag≥1 with **swap×hold**. LQD ≠ HYG/EMB. EWY ≠ EWZ/EEM/JP225-HK50. Prefer **EURUSD** (EWY) / **US500 twin** (LQD) over US100 overnight long. **FLAG** US100 overnight long swap on LQD→NDX (drag 6.51) — SPY/US500 twin exported.
+- **Survivor packs (VOORSTEL + CSV, geen PREREG):**
+  - `VOORSTEL_S2_LQD_IG_CREDIT_STRESS.md` + LQD→NDX hold=3d daily (+ SPY US500 twin CSV)
+  - `VOORSTEL_S2_EWY_KOREA_STRESS.md` + EWY→EURUSD hold=3d daily
+  - FTMO map: NDX→**US100cash** (**FLAG** overnight long; prefer US500 twin) / EWY→**EURUSD** — **Strateeg Lane-B** fileert PREREG na acceptatie + D-092.1.
+- **MATERIAL:** true (2 survivor packs).
+- Geen engine-run / geen 2025+ touch / geen TRIALS append / geen PREREG_S2 / geen gefabriceerde FTMO-cijfers. Volgende: stilten; Strateeg mag LQD_IG_CREDIT_STRESS / EWY_KOREA_STRESS oppakken; S2 blijft Lane-A novelty.
+

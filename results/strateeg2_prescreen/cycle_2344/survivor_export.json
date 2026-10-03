@@ -1,0 +1,53 @@
+{
+  "survivors": [
+    {
+      "family": "EWY_KOREA_STRESS",
+      "symbols": "EWY->EURUSD",
+      "lookback_hold": "z120/thr0.5/z_level|hold=3d",
+      "train_years": 19.82,
+      "mean_bp": 7.485,
+      "day_t": 2.597,
+      "n_days": 1242,
+      "mean_bp_alldays": 2.124,
+      "day_t_alldays": 2.593,
+      "n_alldays": 4376,
+      "ftmo_symbol": "EURUSD",
+      "rt_bp": 0.63,
+      "swap_bp_n": 3.386,
+      "drag_bp": 4.016,
+      "gate_3rt": 1.89,
+      "net_after_drag": 3.469,
+      "cost_flag": "COST_OK",
+      "promote_to_lane_b": "yes",
+      "notes": "NEW_FAMILY; EWY Korea country z->equity/FX; != EWZ/EEM/JP225-HK50; ORB/TSMOM/L60/ENERGY_TSMOM/VIX_TERM/CORN/UKOIL-OVN/ORB-meta/SECTOR_DISP/EMB/CRACK/GAS/SILVER/HYG/TLT/TIP/CPER/VNQ/EEM/DBC/EFA/IWM/YIELD_CURVE_2S10S/DEFENSIVE_CYCLICAL/EWZ/DBA/BWX/PPLT/EQW/DXY/MTUM/GLD/XLF/QUAL/BRENT_WTI/USDMXN/XLE/VLUE/XLB/EURJPY_RISK/SOFTS_RATIO/XLK/XLV/COCOA/AUDUSD_COMMODITY_FX/N75-N165/CEO-T5-T16/FX-LO/GER40_UK100/JP225_HK50/XAU_UKOIL/US30_US500/BTC_ETH/AUD_XAU/GBP_UKOIL/USDJPY_US100/EUR_GER40/XAG_US30/EURJPY_USDCHF/GBP_NZD/EUR_CAD/US100_GER40/US30_UKOIL/XAU_GER40/XAU_US100/USOIL_NY/GER40_EU_CLOSE/XAG_NY/US500_CASH_CLOSE/AUD_NY/NZD_SAME/US2000_NY/EURCHF_LONDON/GBPCHF_USDCHF_AUDCHF_LONDON; OPEN empty \u2014 no clone; short_hist=no; <=2024; nonoverlap_hold; cost=COST_OK"
+    },
+    {
+      "family": "LQD_IG_CREDIT_STRESS",
+      "symbols": "LQD->NDX",
+      "lookback_hold": "z120/thr0.5/mom_confirm|hold=3d",
+      "train_years": 19.82,
+      "mean_bp": 27.454,
+      "day_t": 4.218,
+      "n_days": 1170,
+      "mean_bp_alldays": 6.436,
+      "day_t_alldays": 4.195,
+      "n_alldays": 4991,
+      "ftmo_symbol": "US100cash",
+      "rt_bp": 0.66,
+      "swap_bp_n": 5.852,
+      "drag_bp": 6.512,
+      "gate_3rt": 1.98,
+      "net_after_drag": 20.941,
+      "cost_flag": "COST_OK",
+      "promote_to_lane_b": "yes",
+      "notes": "NEW_FAMILY; LQD IG-credit z->equity/FX; != HYG/EMB credit; ORB/TSMOM/L60/ENERGY_TSMOM/VIX_TERM/CORN/UKOIL-OVN/ORB-meta/SECTOR_DISP/EMB/CRACK/GAS/SILVER/HYG/TLT/TIP/CPER/VNQ/EEM/DBC/EFA/IWM/YIELD_CURVE_2S10S/DEFENSIVE_CYCLICAL/EWZ/DBA/BWX/PPLT/EQW/DXY/MTUM/GLD/XLF/QUAL/BRENT_WTI/USDMXN/XLE/VLUE/XLB/EURJPY_RISK/SOFTS_RATIO/XLK/XLV/COCOA/AUDUSD_COMMODITY_FX/N75-N165/CEO-T5-T16/FX-LO/GER40_UK100/JP225_HK50/XAU_UKOIL/US30_US500/BTC_ETH/AUD_XAU/GBP_UKOIL/USDJPY_US100/EUR_GER40/XAG_US30/EURJPY_USDCHF/GBP_NZD/EUR_CAD/US100_GER40/US30_UKOIL/XAU_GER40/XAU_US100/USOIL_NY/GER40_EU_CLOSE/XAG_NY/US500_CASH_CLOSE/AUD_NY/NZD_SAME/US2000_NY/EURCHF_LONDON/GBPCHF_USDCHF_AUDCHF_LONDON; OPEN empty \u2014 no clone; short_hist=no; <=2024; nonoverlap_hold; cost=COST_OK"
+    }
+  ],
+  "hostile_count": 4,
+  "tight_count": 7,
+  "exported": [
+    "results/strateeg2_prescreen/cycle_2344/EWY_KOREA_STRESS_EWY-_EURUSD_z120_thr0_5_z_level_hold_3d_daily.csv",
+    "results/strateeg2_prescreen/cycle_2344/LQD_IG_CREDIT_STRESS_LQD-_NDX_z120_thr0_5_mom_confirm_hold_3d_daily.csv",
+    "results/strateeg2_prescreen/cycle_2344/LQD_IG_CREDIT_STRESS_LQD-_SPY_z120_thr0_5_mom_confirm_hold_3d_daily.csv"
+  ]
+}
