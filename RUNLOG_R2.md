@@ -2436,3 +2436,16 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 
 **Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
 
+
+## Cyclus 23:45 CEST (2026-10-03) — D-090 IDLE absorb NEXT_STEPS v106 (hold; OPEN empty; TRIAL 471)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` `03ac200` (NEXT_STEPS **v106**; Manager; C-045 `71d3b5e` N164/N165 DIAG_FAIL; Faraday `218eb11`) into tip post-`69c1a34` (prior IDLE absorb v105). N161 XLK_TECH_SECTOR_STRESS FAIL_T (**TRIAL 471**) remains last formal trial. Formal OPEN **empty**; no live PREREG.
+
+**Faraday/CTO note (not gated):** Faraday tip `218eb11` opened N164 US2000_NY_IMPULSE_FADE / N165 EURCHF_LONDON_HAVEN_FADE then CTO C-045 closed both as **DIAG_FAIL** — **no PASS→PREREG**. Prior C-044 N162/N163 DIAG_FAIL_CLONE already absorbed. U2 does **not** start N162–N165 or invent OPEN.
+
+**Action:** IDLE/HOLD. No new trial. Skip N75–N165 + US2000 NY-impulse / EURCHF London-haven / US500-US30-US100 same-window NY-fade / GBPCHF-USDCHF-AUDCHF London-AM / US500 cash-close / AUD NY-fade / NZD same-window / XLK / EQW / DXY-stress / BWX / EW + prior listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. Prio-1 remains Strateeg ≥2 NEW_FAMILY (D-094 / C-028) → D-092.1 → PASS→PREREG.
+
+**Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
+
