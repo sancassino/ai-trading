@@ -2421,3 +2421,18 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Year-split train mean bruto:** 2021 **−10,68** (N=56) / 2022 **+6,84** (N=146) / 2023 **+9,26** (N=181). Long/short 242/141. Median +9,77.
 
 **Verdict: FAIL_T.** counts_as_trial=**true** → **TRIAL_COUNT 470→471**. Dead += `N161_XLK_TECH_SECTOR_STRESS`. Geen retune / geen klonen. Board: `results/R2/n161_xlk_tech_sector_stress/n161_gate_board.json`.
+
+## Cyclus 23:15 CEST (2026-10-03) — D-090 IDLE absorb NEXT_STEPS v105 (hold; OPEN empty; TRIAL 471)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` `31af9f2` (NEXT_STEPS **v105**; Manager; C-044 `02ed02b` N162/N163 DIAG_FAIL_CLONE) into tip post-`03a1a1d`. N161 XLK_TECH_SECTOR_STRESS FAIL_T (**TRIAL 471**) already catalogued on tip. Formal OPEN **empty**; no live PREREG.
+
+**Prior cycle note:** ~22:46 CEST routine failed (orchestration); working tree / remotes clean at start of this cycle — recover as idle absorb only.
+
+**Faraday note (not gated):** tip still `7c1a880` (N154–N160 FAIL/FAIL_CLONE; N161 PASS→PREREG then FAIL_T @ U2). CTO C-044 closed OPEN N162/N163 as DIAG_FAIL_CLONE — **no PASS→PREREG**. U2 does **not** start N162–N163 or invent OPEN.
+
+**Action:** IDLE/HOLD. No new trial. Skip N75–N161 + XLK / EQW / DXY-stress / BWX / EW + US500 cash-close / AUD NY-fade / US30-US100 same-window / NZD same-window / XAG NY-fade / USOIL NY-fade / GER40 Europe-close / prior listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. Prio-1 remains Strateeg ≥2 NEW_FAMILY (D-094 / C-028) → D-092.1 → PASS→PREREG. P1 ftmo.py validation not opened for U2 this cycle (CTO spoor 5; U2 IDLE per v105).
+
+**Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
+
