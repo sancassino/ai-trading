@@ -1,0 +1,6 @@
+{
+  "reconfirm": true,
+  "source": "results/cto/c050_absorb_v117_hold/audit_exhaustion.json",
+  "n_ok_new_authorize": 0,
+  "note": "No alle / COSTS_FTMO.csv / ftmo_specs delta since C-050; reconfirm HOLD without rewriting audit."
+}

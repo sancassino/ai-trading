@@ -1,0 +1,75 @@
+{
+  "task": "C-051",
+  "asof_cest": "2026-10-04T01:56+0200",
+  "asof_label": "Europe/Amsterdam CEST UTC+2",
+  "decision": "absorb_v118_confirm_exhaustion_hold",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025_plus_touched": false,
+  "live_prereg": null,
+  "formal_open": [],
+  "freeze": "OFF",
+  "kill_circuit": "ON",
+  "track_3": "PAUSED",
+  "main_tip": "c84885b",
+  "main_version": "v118",
+  "prior_cto": "fdc4614",
+  "prior_c": "C-050",
+  "teammates": {
+    "u2": {
+      "tip": "3e33b41",
+      "posture": "IDLE/HOLD absorb v118; TRIAL 471; no live PREREG"
+    },
+    "faraday": {
+      "tip": "1af4f76",
+      "last_results": "1e5a7f1",
+      "posture": "Lane-B HOLD; N180-N183 FAIL; no new N*"
+    },
+    "s2": {
+      "tip": "96de63c",
+      "last_promote": "e31d1b5",
+      "posture": "Lane-A hourly HOLD; EWC/XLU DEFER_NOT_PROMOTE"
+    },
+    "ceo": {
+      "tip": "7cb6731",
+      "new_D": null
+    }
+  },
+  "costs_rows": 29,
+  "c050_exhaustion_reconfirmed": true,
+  "n_ok_new_authorize": 0,
+  "c048_nine_closed": [
+    "UK100cash",
+    "JP225cash",
+    "HK50cash",
+    "AUS200cash",
+    "GBPCAD",
+    "AUDJPY",
+    "EURAUD",
+    "EURNOK",
+    "USDHKD"
+  ],
+  "manager_refused_still_in_file": [
+    "USDSEK",
+    "USDNOK",
+    "USDZAR"
+  ],
+  "still_unauthorized": [
+    "SPN35cash",
+    "N25cash",
+    "EU50cash"
+  ],
+  "s2_defer_not_promote": [
+    "EWC_CANADA_STRESS",
+    "XLU_UTILITIES_STRESS"
+  ],
+  "hold_reason": "C-050 alle-book audit ok_new_authorize=0 unchanged; no new Faraday N*; no S2 survivor mapping to unused authorized leg; do not invent OPEN / RT / swap",
+  "unblock": [
+    "Debian: confirmed MT5 commission for stocks/crypto (kill Q2-assumption bucket)",
+    "Debian: year of swap snapshots for EU50/FRA40 if dividend-season anomaly hold is to lift",
+    "Debian: native FTMO D1/M5 pre-2020-11 for SPN35/N25 (broker series, not Yahoo proxy)",
+    "Debian: confirmed EUR2/lot for non-XAU metals",
+    "S2 Lane-A: NEW_FAMILY survivor that maps onto already-authorized COSTS_FTMO.csv leg without cloning dead book N75-N183"
+  ],
+  "wakeparent": "QUIET"
+}

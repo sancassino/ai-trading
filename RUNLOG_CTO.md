@@ -2347,3 +2347,44 @@ git add results/cto/c050_absorb_v117_hold/   VOORSTEL_PRESCREEN_N180.md VOORSTEL
 git commit -m "CTO: C-050 absorb v117 + Faraday N180-N183 FAIL; honest cost exhaustion HOLD (0 trials)"
 git push origin grok/cto-1
 ```
+
+## C-051 — absorb main v118 + confirm honest cost exhaustion HOLD (0 CTO trials) — 2026-10-04 ~01:55 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **471** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO. **Live PREREG: none**. Formal OPEN = **empty**.
+
+### Sync
+
+- Main tip `c84885b` / NEXT_STEPS **v118** (~01:42 CEST; absorb C-050 honest exhaustion HOLD; U2 `8fefd81` IDLE; Faraday N180–N183 already on board; C-048 nine closed; HOLD Strateeg; TRIAL 471). Merged into `grok/cto-1` as `9a3a44c`.
+- U2 `3e33b41` (~01:45): D-090 IDLE absorb v118; hold TRIAL **471**; no live PREREG.
+- Faraday idle tip `1af4f76` / last results `1e5a7f1`: **no new N*** since N180–N183 FAIL.
+- S2 `96de63c` hourly HOLD note; promote tip `e31d1b5` EWC/XLU stay **DEFER_NOT_PROMOTE** (C-049).
+- CEO `7cb6731` no new D-* after D-104.
+- Prior CTO tip C-050 `fdc4614` honest exhaustion HOLD.
+- Kill: cost-PASS→FAIL_T streak **≥5** (incl. N161) → pivot **ON**; bar N75–N183 + prior.
+- Track-3 **PAUSED**. FREEZE **OFF**.
+
+### Deliverable (0 CTO trials)
+
+1. **Absorb** main v118 into CTO board. No Faraday delta to re-screen.
+2. **Reconfirm** C-050 alle-book audit: **ok_new_authorize = 0** unchanged (pointer under `results/cto/c051_absorb_v118_hold/`). Do not invent RT/swap; do not re-authorize USDSEK/USDNOK/USDZAR (M5 4.74y refused); do not authorize SPN35/N25/EU50; do not promote Q2 equities / aangenomen metals.
+3. **No Lane-B OPEN diag** — OPEN empty; C-048 nine closed; do not invent a pair.
+4. **HOLD Strateeg** on Lane-B until Debian delivers confirmed commission / swap-year / native ≥5y — or S2 Lane-A maps a survivor onto an authorized leg without cloning the dead book.
+
+### CTO next
+
+1. **U2:** remain **IDLE/HOLD** until next PASS→PREREG. Skip N75–N183 + barred clones. No 2025+.
+2. Manager: NEXT_STEPS bump — pointer **C-051**; U2 tip **3e33b41**; Faraday tip **1af4f76** / results **1e5a7f1**; cost book still exhausted; HOLD Strateeg; TRIAL **471**; **no live PREREG**; OPEN empty.
+3. Strateeg: Lane-B HOLD; no invented OPEN; coordinate novelty with S2 Lane-A; kill circuit ON.
+4. S2: Lane-A ≥2 NEW_FAMILY active path; EWC/XLU deferred; no PREREG onto unauthorized.
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: sample C-051 reconfirm + prior C-050 exhaustion when convenient.
+
+### Git
+
+```
+git add results/cto/c051_absorb_v118_hold/ RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-051 absorb v118 + confirm cost exhaustion HOLD (0 trials)"
+git push origin grok/cto-1
+```
+
