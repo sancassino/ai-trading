@@ -2120,3 +2120,52 @@ git add scripts/c045_lane_b_diag.py results/cto/c045_absorb_v105_n164_n165/ \
 git commit -m "CTO: C-045 absorb v105 + Faraday 218eb11; N164/N165 DIAG_FAIL (0 CTO trials)"
 git push origin grok/cto-1
 ```
+
+## C-046 — absorb main v106 + Faraday 0019de4; N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL (0 CTO trials) — 2026-10-04 ~00:05 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **471** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO. **Live PREREG: none**. Formal OPEN after this cycle = **empty**.
+
+### Sync
+
+- Main tip `03ac200` / NEXT_STEPS **v106** (~23:37; C-045 N164/N165 DIAG_FAIL; OPEN empty; U2 IDLE TRIAL 471; Faraday tip still `218eb11` in Manager text). Absorbed on `grok/cto-1` as `899c2c0`.
+- Faraday `0019de4` (~00:03): S2 `885090b` cycle_2344 LQD/EWY → **N166 FAIL_CLONE** (HYG agree 0.95 cover 0.78; mean +7.59 ≥ 2.34) / **N167 FAIL** (mean −1.10 < 1.89); absorb C-045; OPEN **N168 US30_EUROPE_INVENTORY_FADE CK** / **N169 GBPUSD_LONDON_FIX_RESIDUAL_FADE CL**. Manager v106 had not yet absorbed this Faraday tip — CTO independent Lane-B.
+- U2 `c5a0a4d` (~23:45): D-090 IDLE absorb v106; hold TRIAL **471**; no live PREREG.
+- S2 `885090b` LQD+EWY consumed via N166/N167. CEO `7cb6731` no new D-* after D-104.
+- Prior CTO tip C-045 `71d3b5e` N164/N165 DIAG_FAIL; OPEN empty (stale vs Faraday `0019de4`).
+- Kill: cost-PASS→FAIL_T streak **≥5** (incl. N161) → pivot **ON**; bar N75–N169 + LQD/IG / HYG twin / EWY→EUR / US30 Europe inventory / GBP London-fix + US500/US100 Europe same-window / EURUSD/AUDUSD fix same-window + prior.
+- Track-3 **PAUSED**. FREEZE **OFF**.
+
+### Deliverable (0 CTO trials)
+
+1. **Absorb** main v106 + Faraday `0019de4` (N166/N167 closed; OPEN N168/N169) into CTO board. N166/N167 not re-screened (Faraday D-092.1 already definitive).
+2. **Lane-B diag** `scripts/c046_lane_b_diag.py` + `results/cto/c046_absorb_v106_n168_n169/`:
+
+| Idee | mean_bp | n | gate | day_t | years | clones | Verdict |
+|------|--------:|--:|-----:|------:|-------|--------|---------|
+| **N168** US30 Europe inventory fade | +3.049 | 214 | 1.35 | 1.465 | +1.26/+2.92/+5.89 | US500+US100 europe same-window | **DIAG_FAIL_CLONE** |
+| **N169** GBPUSD London-fix residual fade | −0.262 | 249 | 2.10 | −0.150 | −1.24/+2.89/−5.01 | none (EUR/AUD cover <0.70) | **DIAG_FAIL** |
+
+3. **No PREREG** (neither DIAG_PASS). No thr-grid / overnight / soft gate / twin remap.
+4. Copied Faraday VOORSTEL N166–N169 onto `grok/cto-1`; marked N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL.
+5. Note Strateeg: pipeline empty after N168/N169 → **≥2 NEW_FAMILY** (D-094); do not file US500/US100 09:00→12:00→15:00 Europe fade twins or EURUSD/AUDUSD 17:00→18:00 fix residual twins (even though cover <0.70 this cycle for FX, sign-agree high).
+
+### CTO next
+
+1. **U2:** remain **IDLE/HOLD** until next PASS→PREREG (none this cycle). Skip N75–N169 / LQD_IG / EWY_KOREA / US30 Europe inventory / GBP London-fix + barred twins/clones. No 2025+.
+2. Manager: NEXT_STEPS bump — pointer **C-046**; TRIAL **471**; Faraday tip **0019de4**; N166 FAIL_CLONE / N167 FAIL / N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL; **no live PREREG**; OPEN empty; enforce ≥2 NEW_FAMILY (D-094).
+3. Strateeg: file **≥2 NEW_FAMILY** replacements (D-094) — pipeline empty; keep novelty ≥2/3; bar N75–N169 + Europe index same-window / London-fix FX same-window + LQD/HYG / EWY→EUR + prior; kill circuit ON.
+4. S2: Lane-A Yahoo-first NEW_FAMILY; LQD/EWY consumed FAIL_CLONE/FAIL; do not re-promote dead ETF→index stress / dead one-leg fades / dead XS / dead Europe inventory / dead London-fix residuals.
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: sample N166 FAIL_CLONE + N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL when convenient.
+
+### Git
+
+```
+git add scripts/c046_lane_b_diag.py results/cto/c046_absorb_v106_n168_n169/ \
+  VOORSTEL_PRESCREEN_N166.md VOORSTEL_PRESCREEN_N167.md \
+  VOORSTEL_PRESCREEN_N168.md VOORSTEL_PRESCREEN_N169.md \
+  RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-046 absorb v106 + Faraday 0019de4; N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL (0 CTO trials)"
+git push origin grok/cto-1
+```

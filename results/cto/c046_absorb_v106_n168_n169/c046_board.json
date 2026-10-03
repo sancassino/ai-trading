@@ -1,0 +1,159 @@
+{
+  "c": "C-046",
+  "when": "2026-10-04 ~00:05 Europe/Amsterdam",
+  "absorb": {
+    "main": "03ac200 NEXT_STEPS v106 (Manager ~23:37; C-045 N164/N165 DIAG_FAIL; OPEN empty; TRIAL 471; Faraday tip still 218eb11)",
+    "faraday": "0019de4 \u2014 S2 885090b; N166 FAIL_CLONE (HYG) / N167 FAIL; absorb C-045; OPEN N168 US30_EUROPE_INVENTORY_FADE CK / N169 GBPUSD_LONDON_FIX_RESIDUAL_FADE CL",
+    "u2": "c5a0a4d D-090 IDLE cycle 23:45; absorb v106; hold TRIAL 471; no live PREREG",
+    "s2": "885090b cycle_2344 LQD+EWY packed; Lane-B mapped \u2192 N166 FAIL_CLONE / N167 FAIL",
+    "prior_cto": "71d3b5e C-045 N164/N165 DIAG_FAIL; OPEN empty",
+    "ceo": "7cb6731 no new D-* after D-104"
+  },
+  "faraday_n166_n167": {
+    "N166": "FAIL_CLONE HYG mom_confirm agree 0.95 cover 0.78; mean +7.59 \u2265 gate 2.34; no PREREG",
+    "N167": "FAIL mean \u22121.10 < gate 1.89; no PREREG",
+    "note": "Faraday D-092.1 already screened; CTO does not re-screen"
+  },
+  "freeze": "OFF",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025": "untouched",
+  "track_3": "PAUSED",
+  "live_prereg": null,
+  "results": [
+    {
+      "label": "N168_US30_EUROPE_INVENTORY_FADE",
+      "n": 214,
+      "mean_bp": 3.049,
+      "median_bp": 0.594,
+      "day_t": 1.465,
+      "h1_mean_bp": 1.971,
+      "h2_mean_bp": 4.127,
+      "n_long": 110,
+      "n_short": 104,
+      "gate_bp": 1.35,
+      "verdict": "DIAG_FAIL_CLONE",
+      "years": {
+        "2021": 1.264,
+        "2022": 2.915,
+        "2023": 5.891
+      },
+      "notes": "NEW_FAMILY CK; US30cash impulse 09:00\u219212:00 fade \u00b125bp; entry@12:00 flat 15:00; gate=3\u00d70.45=1.35 (COSTS honest); Europe session-flat before cash open; \u2260 N20/N87/N162; twins US500/US100 same-window",
+      "clone_hits": [
+        "US500_europe_same_window_twin",
+        "US100_europe_same_window_twin"
+      ],
+      "clone_detail": [
+        {
+          "peer": "US500_europe_same_window_twin",
+          "sign_agree": 0.9943,
+          "cover": 0.8224,
+          "n_cand": 214,
+          "n_both": 176,
+          "clone": true
+        },
+        {
+          "peer": "US100_europe_same_window_twin",
+          "sign_agree": 0.9812,
+          "cover": 0.7477,
+          "n_cand": 214,
+          "n_both": 160,
+          "clone": true
+        },
+        {
+          "peer": "US30_PM_window_N20_proxy",
+          "sign_agree": 0.4722,
+          "cover": 0.5047,
+          "n_cand": 214,
+          "n_both": 108,
+          "clone": false
+        },
+        {
+          "peer": "US30_cash_close_N162_proxy",
+          "sign_agree": 0.5207,
+          "cover": 0.5654,
+          "n_cand": 214,
+          "n_both": 121,
+          "clone": false
+        }
+      ],
+      "meta": {
+        "n_impulse_days": 214,
+        "n_skip_missing_bar": 0,
+        "thr_bp": 25.0,
+        "n_trades": 214,
+        "session": "signal 09:00\u219212:00 entry at 12:00 flat 15:00 CET",
+        "swap_bp": 0,
+        "rt": 0.45,
+        "gate_source": "COSTS_FTMO.csv US30cash RT 0.45 \u00d7 3"
+      }
+    },
+    {
+      "label": "N169_GBPUSD_LONDON_FIX_RESIDUAL_FADE",
+      "n": 249,
+      "mean_bp": -0.262,
+      "median_bp": -0.952,
+      "day_t": -0.15,
+      "h1_mean_bp": 0.051,
+      "h2_mean_bp": -0.572,
+      "n_long": 123,
+      "n_short": 126,
+      "gate_bp": 2.0999999999999996,
+      "verdict": "DIAG_FAIL",
+      "years": {
+        "2021": -1.241,
+        "2022": 2.887,
+        "2023": -5.006
+      },
+      "notes": "NEW_FAMILY CL; GBPUSD impulse 17:00\u219218:00 fade \u00b115bp; entry@18:00 flat 20:30; gate=3\u00d70.7=2.0999999999999996 (COSTS honest; not US500 2.34); session-flat; \u2260 N29/N38/N46/N163; twins EURUSD/AUDUSD same-window; no swap credit as alpha",
+      "clone_hits": [],
+      "clone_detail": [
+        {
+          "peer": "EURUSD_fix_same_window_twin",
+          "sign_agree": 0.9864,
+          "cover": 0.5904,
+          "n_cand": 249,
+          "n_both": 147,
+          "clone": false
+        },
+        {
+          "peer": "AUDUSD_fix_same_window_twin",
+          "sign_agree": 0.9704,
+          "cover": 0.6787,
+          "n_cand": 249,
+          "n_both": 169,
+          "clone": false
+        },
+        {
+          "peer": "GBPUSD_midday_N29_proxy",
+          "sign_agree": 0.4757,
+          "cover": 0.4137,
+          "n_cand": 249,
+          "n_both": 103,
+          "clone": false
+        },
+        {
+          "peer": "GBPUSD_morning_N38_proxy",
+          "sign_agree": 0.4833,
+          "cover": 0.4819,
+          "n_cand": 249,
+          "n_both": 120,
+          "clone": false
+        }
+      ],
+      "meta": {
+        "n_impulse_days": 249,
+        "n_skip_missing_bar": 0,
+        "thr_bp": 15.0,
+        "n_trades": 249,
+        "session": "signal 17:00\u219218:00 entry at 18:00 flat 20:30 broker",
+        "swap_bp": 0,
+        "rt": 0.7,
+        "gate_source": "COSTS_FTMO.csv GBPUSD RT 0.70 \u00d7 3",
+        "swap_credit_not_alpha": true
+      }
+    }
+  ],
+  "promote_to_prereg": [],
+  "kill_circuit_note": "cost-PASS\u2192FAIL_T streak N100\u2026N131 + N161 (\u22655); pivot ON; bar N75\u2013N167 + LQD/IG-credit / HYG twin / EWY\u2192EUR + prior; N168/N169 = NEW_FAMILY CK/CL"
+}

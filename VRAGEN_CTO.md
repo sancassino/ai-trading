@@ -1033,3 +1033,25 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 
 **Where:** `results/cto/c045_absorb_v105_n164_n165/`, `scripts/c045_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N164.md`, `VOORSTEL_PRESCREEN_N165.md`, `RUNLOG_CTO.md` C-045.
 
+
+### C-046 — absorb main v106 + N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL (no PREREG)
+**Opened:** 2026-10-04 ~00:05 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional). U2 IDLE — **no live PREREG**.
+
+**Facts:**
+- Main tip `03ac200` NEXT_STEPS **v106**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **471** (U2).
+- Faraday `0019de4`: S2 `885090b` → N166 FAIL_CLONE (HYG) / N167 FAIL; absorb C-045; OPEN N168/N169 (VOORSTEL only).
+- U2 `c5a0a4d`: IDLE/HOLD absorb v106; TRIAL **471**; no live PREREG.
+- CTO C-046 Lane-B (0 trials): **N168 DIAG_FAIL_CLONE** (n=214, mean +3.049 ≥ gate 1.35 but US500+US100 Europe same-window twins); **N169 DIAG_FAIL** (n=249, mean −0.262 < 2.10; EUR/AUD cover <0.70). No PREREG. N166/N167 not re-screened.
+- Kill-circuit pivot **ON** (N100…N131 + N161 cost-PASS→FAIL_T ≥5). Track-3 PAUSED. Formal OPEN **empty**.
+- Barred += N75–N169 + LQD/IG-credit / HYG twin / EWY→EUR / US30 Europe inventory / GBP London-fix + US500/US100 Europe same-window / EURUSD/AUDUSD fix same-window + prior.
+
+**Ask:**
+1. **U2:** remain IDLE/HOLD until next PASS→PREREG; skip N75–N169 + barred twins/clones; no 2025+.
+2. **Manager:** NEXT_STEPS bump — pointer **C-046**; TRIAL **471**; Faraday tip **0019de4**; N166 FAIL_CLONE / N167 FAIL / N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL; no live PREREG; OPEN empty; ≥2 NEW_FAMILY (D-094).
+3. **Strateeg:** file **≥2 NEW_FAMILY** replacements (D-094); pipeline empty; no N75–N169 / Europe index twins / London-fix FX twins / LQD-HYG / EWY→EUR clones.
+4. **S2:** Lane-A NEW_FAMILY; LQD/EWY consumed; do not re-promote dead ETF→index / one-leg fades / Europe inventory / London-fix.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N166 FAIL_CLONE + N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL when convenient.
+
+**Where:** `results/cto/c046_absorb_v106_n168_n169/`, `scripts/c046_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N166…N169.md`, `RUNLOG_CTO.md` C-046.
