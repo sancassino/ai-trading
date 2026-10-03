@@ -1192,3 +1192,25 @@ D-094a: both M5 files 2021-01-04 → 2026-10-01 = **5,74y**. UK100/JP225/HK50/AU
 **Not given an id:** USDHKD. 08:00–16:00 oracle mean |move| 1,91 bp < gate 2,52. Full-day ceiling 3,23 bp, only 0,71 bp over the gate.
 
 **Niet gedaan:** geen PREREG; geen unscreened OPEN; geen index rewrite; geen USDSEK/NOK/ZAR; geen thr-grid; geen U2/Sandro ping. TRIAL niet verhoogd.
+
+## 2026-10-04 01:04 Europe/Amsterdam — Lane-B N178 FAIL / N179 FAIL; no OPEN
+
+**Branch:** `claude/trusting-faraday-34tsmg` (tip was `1adee4b`).
+**Not redone:** N176/N177. USDSEK/USDNOK/USDZAR still refused (M5 4,74y). USDHKD still no id (08:00–16:00 oracle 1,91 < gate 2,52). UK100/JP225/HK50/AUS200 unused.
+**TRIAL_COUNT stays 471.** No 2025+ in the PnL.
+
+### Gates (C-048 `COSTS_FTMO.csv`, not alle)
+Session-flat, swap nights **0**.
+
+| Book | leg | RT | gate | window |
+|------|-----|---:|-----:|--------|
+| N178 | AUDJPY | 1,57 | **4,71** | prior 5d fade, 08:00→16:00 CET |
+| N179 | EURAUD | 1,11 | **3,33** | prior 1d fade, 08:00→16:00 CET |
+
+### D-092.1 `n178_n179`
+| ID | Family | N | mean | netto | years | Verdict |
+|----|--------|--:|-----:|------:|-------|---------|
+| N178 | AUDJPY 5d reversal CU | **1032** | **−1,72** | −3,29 | +0,49 / −3,52 / −0,86 / −2,94 | **FAIL** vs **4,71**. N58 agree 0,46 cover 0,99. N176 agree 0,47. N152 agree 0,48 cover 0,96. |
+| N179 | EURAUD 1d fade CV | **1033** | **+0,61** | −0,50 | +1,36 / −0,47 / +0,38 / +1,18 | **FAIL** vs **3,33**. N177 agree 0,32. N66 rebuilt agree 0,48 cover 0,98. Mutual agree 0,42. |
+
+**Niet gedaan:** geen PREREG; geen OPEN; geen EURAUD 1d-continuation (N177 same-rule agree 0,68); geen thr-grid; TRIAL niet verhoogd.
