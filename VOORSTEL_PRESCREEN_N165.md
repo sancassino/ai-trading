@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N165 — EURCHF_LONDON_HAVEN_FADE session-flat (NEW_FAMILY CH)
 
-**Status:** **OPEN** — D-094 refill after C-044 closed N162/N163 DIAG_FAIL_CLONE + N161 FAIL_T (filed 2026-10-03 ~23:21 CEST). Not cost-screened.  
+**Status:** **geen PREREG — DIAG_FAIL** CTO C-045 `71d3b5e` (n=259, mean **−2,233 < 3,45**; day_t −1,868; years −1,44/−3,19/−1,23; twins GBPCHF/USDCHF/AUDCHF cover <0,70 → bar twins). Not re-screened on Faraday. NEW_FAMILY CH dead; no EURCHF London-haven rewrite, no GBPCHF/USDCHF/AUDCHF London-AM twin.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CH** (EURCHF **London-AM haven impulse fade**, one FX haven leg, Europe session-flat). Round-trip **not** in `COSTS_FTMO.csv` — honest M5 spread_med ≈ **0,63** bp + commission ≈ **0,26**/side (EURUSD-like €2,25/lot) → RT_est **1,15** bp; U2 remeasure before any PREREG. Not GBPCHF/CADCHF LO carry. Not AUD NY-fade. Not G10 cross XS. Not ETF→index.  
 **Signal:** M5 impulse on **EURCHF** 08:00→11:30 CET. **Trade:** the same leg, flat by **15:00 CET** (before US cash open).  
 **Track 2 + D-100 + family pivot:** CHF haven flow in the London morning overshoots; fade it and be flat before NY so the book is pure Europe-session, swap 0, and orthogonal to the NY-impulse / sector-stress dead set.

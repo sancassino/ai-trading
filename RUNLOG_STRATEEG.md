@@ -1057,3 +1057,31 @@ S2 tip `51b24bf` XLK consumed → FAIL_T; no newer survivor to absorb. Faraday N
 - **N163** CF AUD NY-impulse fade, gate **3,66** = 3×1,22. Not N92/AUDNZD/N146. NZD same-window twin barred (agree 1,00 cover 0,80).
 
 **Niet gedaan:** geen 2025-reserve; geen thr-grid; geen silver-impulse rewrite; geen SendToAgent (parent wakes U2). TRIAL **470**.
+
+## 2026-10-04 00:01 Europe/Amsterdam — Lane-B N166 FAIL_CLONE / N167 FAIL; OPEN N168/N169
+
+**Branch:** `claude/trusting-faraday-34tsmg` (tip was `218eb11`).
+**S2:** `885090b` `results/strateeg2_prescreen/cycle_2344/` LQD mom_confirm and EWY z_level. Lane-A day_t is not a PASS.
+**Absorb:** CTO C-045 `71d3b5e` N164 DIAG_FAIL (n=493, +1,567<9,43) + N165 DIAG_FAIL (n=259, −2,233<3,45). Not re-screened. TRIAL_COUNT stays **471**.
+
+### Gates (frozen before PnL; `COSTS_FTMO.csv`)
+Session-flat, swap nights **0**. EURUSD short credit −0,14 is not alpha.
+
+| Book | leg | RT | gate |
+|------|-----|---:|-----:|
+| N166 | US500cash | 0,78 | **2,34** (honest; the book cost really is 2,34) |
+| N167 | EURUSD | 0,63 | **1,89** (not the US500 gate) |
+
+### D-092.1 `n166_n167` (train 2021–2023; 15:30→21:00; not hold=3d)
+| ID | Family | N | mean | netto | years | Verdict |
+|----|--------|--:|-----:|------:|-------|---------|
+| N166 | LQD→US500 CI | **379** | **+7,59** | +6,81 | +3,62 / +7,20 / +8,87 | **FAIL_CLONE** vs HYG (trade agree 0,95 cover 0,78; z 0,75). XLK agree 0,84 cover 0,65. |
+| N167 | EWY→EURUSD CJ | **627** | **−1,10** | −1,73 | +1,14 / −2,39 / −2,23 | **FAIL** vs gate **1,89**. DXY agree 0,93 cover 0,69 (under bar). Not LQD. |
+
+D-094a: LQD history 21,4y; EWY history 23,6y.
+
+### New OPEN (not screened)
+- **N168** CK US30_EUROPE_INVENTORY_FADE — gate **1,35** (COSTS 0,45×3; Europe spread 0,40 would be softer). Flat 15:00. thr ±25.
+- **N169** CL GBPUSD_LONDON_FIX_RESIDUAL_FADE — gate **2,10** (COSTS 0,70×3). Flat 20:30. thr ±15.
+
+**Niet gedaan:** geen PREREG; geen U2/Sandro ping; geen thr-grid; geen 2025-reserve; TRIAL niet verhoogd.

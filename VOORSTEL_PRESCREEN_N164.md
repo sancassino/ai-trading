@@ -1,6 +1,6 @@
 # VOORSTEL_PRESCREEN_N164 — US2000_NY_IMPULSE_FADE session-flat (NEW_FAMILY CG)
 
-**Status:** **OPEN** — D-094 refill after C-044 closed N162/N163 DIAG_FAIL_CLONE + N161 FAIL_T (filed 2026-10-03 ~23:21 CEST). Not cost-screened.  
+**Status:** **geen PREREG — DIAG_FAIL** CTO C-045 `71d3b5e` (n=493, mean **+1,567 < 9,43**; day_t 0,402; years +4,30/+3,55/−3,72; twins US500/US30/US100 same-window cover <0,70 so not FAIL_CLONE, high sign-agree → bar twins). Not re-screened on Faraday. NEW_FAMILY CG dead; no US2000 NY-impulse rewrite, no US500/US30/US100 same-window twin.  
 **Auteur:** Strateeg (Grok). **NEW_FAMILY CG** (Russell **2000 cash CFD** NY-hour impulse **fade**, one small-cap index leg, session-flat). Round-trip **not** in `COSTS_FTMO.csv` — honest M5 spread_med ≈ **3,14** bp (all-hours 2021–2026); U2 remeasure before any PREREG. Not an ETF→index stress book. Not US500/US100/US30. Not IWM→US500. Not a cash-close fade. Not AUD/oil/silver impulse.  
 **Signal:** M5 impulse on **US2000cash** 15:30→17:00 CET. **Trade:** the same leg, flat by 21:00.  
 **Track 2 + D-100 + family pivot:** after the XLK/sector→index FAIL_T streak, pivot to a **direct small-cap index CFD** (not a Yahoo ETF mapped into US500/US100). NY open overshoots Russell; fade inside the session. Flat before the roll.
