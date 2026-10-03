@@ -1,0 +1,89 @@
+ftmo_symbol,categorie,proxy,proxy_start,jaren_tm_2024,10j_plus,m5gz,opmerking,ge5y,m5gz_yes,in_COSTS_FTMO,rondreis_bp,dead_explicit
+GBPCAD,fx,FXBIS_GBP+FXBIS_CAD,1953-08-10,71.4,ja,nee,cross uit BIS (lokaal per USD): GBPCAD = FXBIS_CAD / FXBIS_GBP,True,False,False,1.08,False
+USDSEK,fx,FXBIS_SEK,1953-09-01,71.3,ja,nee,cross uit BIS (lokaal per USD): USDSEK = FXBIS_SEK / 1,True,False,False,5.52,False
+USDNOK,fx,FXBIS_NOK,1953-12-14,71.0,ja,nee,cross uit BIS (lokaal per USD): USDNOK = FXBIS_NOK / 1,True,False,False,4.76,False
+USDMXN,fx,FXBIS_MXN,1954-04-19,70.7,ja,nee,cross uit BIS (lokaal per USD): USDMXN = FXBIS_MXN / 1,True,False,False,2.98,False
+JP225.cash,index,N225,1965-01-05,60.0,ja,ja,,True,True,False,,False
+MCD,stock,MCD,1966-07-05,58.5,ja,nee,,True,False,False,4.3,False
+USDZAR,fx,FXBIS_ZAR,1970-01-02,55.0,ja,nee,cross uit BIS (lokaal per USD): USDZAR = FXBIS_ZAR / 1,True,False,False,5.75,False
+DXY.cash,index,DXY,1971-01-04,54.0,ja,nee,,True,False,False,,False
+EURNOK,fx,FXBIS_EUR+FXBIS_NOK,1974-06-28,50.5,ja,nee,cross uit BIS (lokaal per USD): EURNOK = FXBIS_NOK / FXBIS_EUR,True,False,False,4.62,False
+EURAUD,fx,FXBIS_EUR+FXBIS_AUD,1974-06-28,50.5,ja,ja,cross uit BIS (lokaal per USD): EURAUD = FXBIS_AUD / FXBIS_EUR,True,True,False,1.11,False
+USDHKD,fx,FXBIS_HKD,1981-01-02,44.0,ja,nee,cross uit BIS (lokaal per USD): USDHKD = FXBIS_HKD / 1,True,False,False,0.84,False
+USDCNH,fx,FXBIS_CNY,1981-01-02,44.0,ja,nee,cross uit BIS (lokaal per USD): USDCNH = FXBIS_CNY / 1,True,False,False,1.36,False
+USDSGD,fx,FXBIS_SGD,1981-01-02,44.0,ja,nee,cross uit BIS (lokaal per USD): USDSGD = FXBIS_SGD / 1,True,False,False,2.6,False
+UK100.cash,index,FTSE,1984-01-03,41.0,ja,ja,,True,True,False,,False
+US100.cash,index,NDX,1985-10-01,39.2,ja,ja,,True,True,False,,False
+HK50.cash,index,HSI,1986-12-31,38.0,ja,ja,,True,True,False,,False
+SAN,stock,SAN,1987-07-30,37.4,ja,nee,,True,False,False,9.69,False
+US2000.cash,index,RUT,1987-09-10,37.3,ja,ja,,True,True,False,,False
+GER40.cash,index,DAX,1987-12-30,37.0,ja,ja,,True,True,False,,False
+US500.cash,index,SPX_TR,1988-01-04,37.0,ja,ja,,True,True,False,,False
+FRA40.cash,index,CAC40,1990-03-01,34.8,ja,ja,,True,True,False,,False
+TTE,stock,TTE,1991-10-25,33.2,ja,nee,,True,False,False,3.05,False
+US30.cash,index,DJI,1992-01-02,33.0,ja,ja,,True,True,False,,False
+N25.cash,index,AEX,1992-10-12,32.2,ja,ja,,True,True,False,,False
+AUS200.cash,index,AXJO,1992-11-22,32.1,ja,ja,,True,True,False,,False
+SPN35.cash,index,IBEX,1993-07-12,31.5,ja,ja,,True,True,False,,False
+MBG,stock,MBG_DE,1996-10-30,28.2,ja,nee,,True,False,False,4.51,False
+BMW,stock,BMW_DE,1996-11-08,28.1,ja,nee,,True,False,False,4.71,False
+SIEGn,stock,SIE_DE,1996-11-08,28.1,ja,nee,,True,False,False,2.67,False
+SBUX,stock,SBUX,1998-01-02,27.0,ja,ja,,True,True,False,9.81,False
+T,stock,T,1998-01-02,27.0,ja,ja,,True,True,False,35.71,False
+WMT,stock,WMT,1998-01-02,27.0,ja,ja,,True,True,False,9.36,False
+BA,stock,BA,1998-01-02,27.0,ja,ja,,True,True,False,5.96,False
+BAC,stock,BAC,1998-01-02,27.0,ja,ja,,True,True,False,17.14,False
+AZN,stock,AZN,1998-01-02,27.0,ja,ja,,True,True,False,7.17,False
+BAYGn,stock,BAYN.DE,1998-01-01,27.0,ja,nee,,True,False,False,13.68,False
+AMZN,stock,AMZN,1998-01-02,27.0,ja,ja,,True,True,False,4.3,False
+ASML,stock,ASML,1998-01-02,27.0,ja,ja,,True,True,False,2.92,False
+DBKGn,stock,DBK.DE,1998-01-01,27.0,ja,nee,,True,False,False,16.63,False
+DIS,stock,DIS,1998-01-02,27.0,ja,ja,,True,True,False,9.2,False
+ALVG,stock,ALV.DE,1998-01-01,27.0,ja,nee,,True,False,False,3.63,False
+AMD,stock,AMD,1998-01-02,27.0,ja,ja,,True,True,False,3.82,False
+AAPL,stock,AAPL,1998-01-02,27.0,ja,ja,,True,True,False,3.61,False
+RTX,stock,RTX,1998-01-02,27.0,ja,ja,,True,True,False,6.53,False
+XOM,stock,XOM,1998-01-02,27.0,ja,ja,,True,True,False,6.41,False
+BRK.B,stock,BRK-B,1998-01-02,27.0,ja,ja,,True,True,False,2.97,False
+CSCO,stock,CSCO,1998-01-02,27.0,ja,ja,,True,True,False,8.77,False
+CVX,stock,CVX,1998-01-02,27.0,ja,ja,,True,True,False,5.3,False
+JNJ,stock,JNJ,1998-01-02,27.0,ja,ja,,True,True,False,4.8,False
+JPM,stock,JPM,1998-01-02,27.0,ja,ja,,True,True,False,3.75,False
+IBM,stock,IBM,1998-01-02,27.0,ja,ja,,True,True,False,5.39,False
+MSFT,stock,MSFT,1998-01-02,27.0,ja,ja,,True,True,False,2.48,False
+LMT,stock,LMT,1998-01-02,27.0,ja,ja,,True,True,False,4.98,False
+INTC,stock,INTC,1998-01-02,27.0,ja,ja,,True,True,False,9.9,False
+GE,stock,GE,1998-01-02,27.0,ja,ja,,True,True,False,4.4,False
+FDX,stock,FDX,1998-01-02,27.0,ja,ja,,True,True,False,6.43,False
+KO,stock,KO,1998-01-02,27.0,ja,ja,,True,True,False,11.59,False
+NKE,stock,NKE,1998-01-02,27.0,ja,ja,,True,True,False,20.96,False
+QCOM,stock,QCOM,1998-01-02,27.0,ja,ja,,True,True,False,7.2,False
+PFE,stock,PFE,1998-01-02,27.0,ja,ja,,True,True,False,36.95,False
+MSTR,stock,MSTR,1998-06-11,26.6,ja,ja,,True,True,False,8.63,False
+ADSGn,stock,ADS.DE,1998-06-24,26.5,ja,nee,,True,False,False,4.35,False
+VOWG_p,stock,VOW3.DE,1998-07-22,26.4,ja,nee,,True,False,False,27.08,False
+NVDA,stock,NVDA,1999-01-22,25.9,ja,ja,,True,True,False,5.31,False
+LVMH,stock,MC.PA,2000-01-03,25.0,ja,nee,,True,False,False,2.2,False
+IBE,stock,IBE.MC,2000-01-03,25.0,ja,nee,,True,False,False,12.38,False
+AIRF,stock,AF.PA,2000-01-03,25.0,ja,nee,,True,False,False,36.34,False
+USOIL.cash,commodity/metal,WTI_F,2000-08-23,24.4,ja,ja,,True,True,False,,False
+XCUUSD,commodity/metal,COPPER_F,2000-08-30,24.3,ja,nee,,True,False,False,8.38,False
+XAUEUR,commodity/metal,GOLD_F+FXBIS_EUR,2000-08-30,24.3,ja,nee,,True,False,False,1.6,False
+XAGEUR,commodity/metal,SILVER_F+FXBIS_EUR,2000-08-30,24.3,ja,nee,,True,False,False,3.93,False
+NATGAS.cash,commodity/metal,NATGAS_F,2000-08-30,24.3,ja,nee,,True,False,False,,False
+HEATOIL.c,commodity/metal,HEATOIL_F,2000-09-01,24.3,ja,nee,,True,False,False,92.32,False
+XAUAUD,commodity/metal,GOLD_F+FXBIS_AUD,2000-08-30,24.3,ja,nee,,True,False,False,0.95,False
+XAGAUD,commodity/metal,SILVER_F+FXBIS_AUD,2000-08-30,24.3,ja,nee,,True,False,False,3.54,False
+GME,stock,GME,2002-02-13,22.9,ja,ja,,True,True,False,40.54,False
+NFLX,stock,NFLX,2002-05-23,22.6,ja,ja,,True,True,False,4.0,False
+GOOG,stock,GOOG,2004-08-19,20.4,ja,ja,,True,True,False,3.44,False
+EU50.cash,index,STOXX50,2007-03-30,17.8,ja,ja,,True,True,False,,False
+UKOIL.cash,commodity/metal,BRENT_F,2007-07-30,17.4,ja,ja,,True,True,False,,False
+V,stock,V,2008-03-19,16.8,ja,ja,,True,True,False,3.59,False
+AVGO,stock,AVGO,2009-08-06,15.4,ja,ja,,True,True,False,3.42,False
+TSLA,stock,TSLA,2010-06-29,14.5,ja,ja,,True,True,False,2.88,False
+GM,stock,GM,2010-11-18,14.1,ja,nee,,True,False,False,11.91,False
+META,stock,META,2012-05-18,12.6,ja,ja,,True,True,False,2.52,False
+BABA,stock,BABA,2014-09-19,10.3,ja,ja,,True,True,False,6.84,False
+RACE,stock,RACE,2015-10-21,9.2,nee,ja,,True,True,False,10.89,False
+ZM,stock,ZM,2019-04-18,5.7,nee,ja,,True,True,False,11.98,False

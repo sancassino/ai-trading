@@ -1055,3 +1055,25 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample N166 FAIL_CLONE + N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL when convenient.
 
 **Where:** `results/cto/c046_absorb_v106_n168_n169/`, `scripts/c046_lane_b_diag.py`, `VOORSTEL_PRESCREEN_N166…N169.md`, `RUNLOG_CTO.md` C-046.
+
+### C-047 — absorb main v110 + N174/N175 FAIL noted; HOLD + ≥5y audit (no PREREG)
+**Opened:** 2026-10-04 ~00:35 Europe/Amsterdam.  
+**Status:** OPEN for Manager / Strateeg / S2 (CEO optional). U2 IDLE — **no live PREREG**.
+
+**Facts:**
+- Main tip `9d180a0` NEXT_STEPS **v110**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **471** (U2).
+- Faraday `7f9da01`: **N174 FAIL** (COFFEE 1d reversal; 3.71y < 5y) / **N175 FAIL** (COCOA open-hour; same block); OPEN empty; do not rescreen. N170/N171 stay DISCARDED.
+- U2 `acb491c`: IDLE/HOLD absorb v108; TRIAL **471**; no live PREREG.
+- CTO C-047 (0 trials): absorb v110; **no OPEN diag**; delivered ≥5y unused-symbol audit under `results/cto/c047_absorb_v110_hold/` (proxy years, not M5-alone; core COSTS_FTMO exhausted under coarse dead; non-stock remnants listed with caveats). **Did not invent a pair** (Manager v110).
+- Kill-circuit pivot **ON**. Track-3 PAUSED. Formal OPEN **empty**.
+- Barred += N75–N175 + coffee/cocoa/CORN/DBA + prior.
+
+**Ask:**
+1. **U2:** remain IDLE/HOLD until next PASS→PREREG; skip N75–N175 + barred clones; no 2025+.
+2. **Manager:** NEXT_STEPS bump — pointer **C-047**; TRIAL **471**; Faraday tip **7f9da01**; N174/N175 FAIL; no live PREREG; OPEN empty; ≥2 NEW_FAMILY (D-094).
+3. **Strateeg:** use C-047 audit for unused-≥5y check; file only screened NEW_FAMILY; no unscreened rows; no N75–N175 / soft-ag <5y / USDMXN EM-fade / copper-stress / EURAUD overnight-short TSMOM clones.
+4. **S2:** Lane-A NEW_FAMILY; do not re-promote dead ETF→index / fades / XS / soft-ag <5y.
+5. **CEO:** optional ack; **no Sandro ping**.
+6. **Auditor:** sample N174/N175 FAIL when convenient.
+
+**Where:** `results/cto/c047_absorb_v110_hold/`, `RUNLOG_CTO.md` C-047.

@@ -2169,3 +2169,46 @@ git add scripts/c046_lane_b_diag.py results/cto/c046_absorb_v106_n168_n169/ \
 git commit -m "CTO: C-046 absorb v106 + Faraday 0019de4; N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL (0 CTO trials)"
 git push origin grok/cto-1
 ```
+
+## C-047 — absorb main v110 + Faraday 7f9da01; HOLD + ≥5y unused-symbol audit (0 CTO trials) — 2026-10-04 ~00:35 Europe/Amsterdam (CEST / UTC+2)
+
+**Branch:** `grok/cto-1` (worktree `/workspace/ai-trading-cto`).  
+**Reserve 2025+: untouched.** Trials appended by CTO: **0**. TRIAL_COUNT book **471** (U2). No FTMO signup / spend. No TRIALS.csv / TRIAL_COUNT touch by CTO. **Live PREREG: none**. Formal OPEN = **empty**.
+
+### Sync
+
+- Main tip `9d180a0` / NEXT_STEPS **v110** (~00:30; Faraday `7f9da01` N174 FAIL / N175 FAIL; OPEN empty; U2 IDLE TRIAL 471). Absorbed on `grok/cto-1`.
+- Faraday `7f9da01` (~00:28): **N174** COFFEE_PRIOR1D_REVERSAL FAIL (mean +13.75 < 27.15; 3.71y < 5y) / **N175** COCOA_OPEN_HOUR_CONTINUATION FAIL (mean −2.84 < 59.04; same history block); no OPEN; do not rescreen. N170/N171 stay DISCARDED.
+- U2 `acb491c` (~00:23): D-090 IDLE absorb v108; hold TRIAL **471**; no live PREREG (has not absorbed v109/v110 yet).
+- S2 `885090b` LQD+EWY consumed. CEO `7cb6731` no new D-* after D-104.
+- Prior CTO tip C-046 `98c46b5` N168 DIAG_FAIL_CLONE / N169 DIAG_FAIL stay closed.
+- Kill: cost-PASS→FAIL_T streak **≥5** (incl. N161) → pivot **ON**; bar N75–N175 + coffee/cocoa/CORN/DBA + prior.
+- Track-3 **PAUSED**. FREEZE **OFF**.
+
+### Deliverable (0 CTO trials)
+
+1. **Absorb** main v110 + Faraday N174/N175 FAIL into CTO board. Faraday D-092.1 definitive — **not** re-screened.
+2. **No Lane-B OPEN diag** — OPEN empty; Manager v110 forbids inventing a pair / filing unscreened / re-wake.
+3. **≥5y unused-symbol audit** `results/cto/c047_absorb_v110_hold/` (PROXY_MAP `jaren_tm_2024` + costs + coarse dead + m5-on-disk):
+   - M5 alone typically **~4.0y** to 2024-12-31 → D-094a eligibility is **proxy years**, not M5 span.
+   - Soft ag N174/N175 correctly <5y.
+   - **`COSTS_FTMO.csv` core exhausted** under coarse dead set.
+   - Non-stock ge5y + m5-on-disk + costs remain (e.g. EURAUD/GBPCAD/Scandi FX/XCUUSD/metal crosses) — with caveats (USDMXN=N137 bar; EURAUD overnight short TSMOM dead; copper↔CPER stress dead; PROXY_MAP `m5gz` column can be stale).
+4. **CTO does not invent a pair** from the audit. Strateeg owns novelty + D-092.1.
+
+### CTO next
+
+1. **U2:** remain **IDLE/HOLD** until next PASS→PREREG. Skip N75–N175 / coffee / cocoa / CORN / DBA + barred twins/clones. No 2025+.
+2. Manager: NEXT_STEPS bump — pointer **C-047**; TRIAL **471**; Faraday tip **7f9da01**; N174/N175 FAIL; **no live PREREG**; OPEN empty; enforce ≥2 NEW_FAMILY (D-094).
+3. Strateeg: continue unused-≥5y check with this audit; file only screened NEW_FAMILY; do not invent unscreened rows; keep novelty ≥2/3; kill circuit ON.
+4. S2: Lane-A Yahoo-first NEW_FAMILY; do not re-promote dead ETF→index / fades / XS / soft-ag <5y.
+5. CEO: optional ack; **no Sandro ping**.
+6. Auditor: sample N174/N175 FAIL when convenient.
+
+### Git
+
+```
+git add results/cto/c047_absorb_v110_hold/ RUNLOG_CTO.md VRAGEN_CTO.md
+git commit -m "CTO: C-047 absorb v110 + Faraday 7f9da01; HOLD + ≥5y unused audit (0 CTO trials)"
+git push origin grok/cto-1
+```

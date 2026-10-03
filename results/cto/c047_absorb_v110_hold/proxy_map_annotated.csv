@@ -1,0 +1,167 @@
+ftmo_symbol,categorie,proxy,proxy_start,jaren_tm_2024,10j_plus,m5gz,opmerking,ge5y,m5gz_yes,in_COSTS_FTMO,rondreis_bp,dead_explicit
+AAPL,stock,AAPL,1998-01-02,27.0,ja,ja,,True,True,False,3.61,False
+AAVUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,1.48,True
+ADAUSD,crypto,ADA_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,19.32,True
+ADSGn,stock,ADS.DE,1998-06-24,26.5,ja,nee,,True,False,False,4.35,False
+AIRF,stock,AF.PA,2000-01-03,25.0,ja,nee,,True,False,False,36.34,False
+ALGUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,18.27,True
+ALVG,stock,ALV.DE,1998-01-01,27.0,ja,nee,,True,False,False,3.63,False
+AMD,stock,AMD,1998-01-02,27.0,ja,ja,,True,True,False,3.82,False
+AMZN,stock,AMZN,1998-01-02,27.0,ja,ja,,True,True,False,4.3,False
+ARM,stock,ARM,2023-09-14,1.3,nee,nee,,False,False,False,8.96,False
+ASML,stock,ASML,1998-01-02,27.0,ja,ja,,True,True,False,2.92,False
+AUDCAD,fx,FXBIS_AUD+FXBIS_CAD,1971-01-04,54.0,ja,nee,cross uit BIS (lokaal per USD): AUDCAD = FXBIS_CAD / FXBIS_AUD,True,False,False,1.64,True
+AUDCHF,fx,FXBIS_AUD+FXBIS_CHF,1971-01-04,54.0,ja,nee,cross uit BIS (lokaal per USD): AUDCHF = FXBIS_CHF / FXBIS_AUD,True,False,False,1.94,True
+AUDJPY,fx,FXBIS_AUD+FXBIS_JPY,1971-01-04,54.0,ja,ja,cross uit BIS (lokaal per USD): AUDJPY = FXBIS_JPY / FXBIS_AUD,True,True,False,1.57,True
+AUDNZD,fx,,,0.0,nee,nee,,False,False,False,1.38,True
+AUDUSD,fx,FX_AUDUSD,1971-01-04,54.0,ja,ja,cross uit BIS (lokaal per USD): AUDUSD = 1 / FXBIS_AUD,True,True,True,1.22,True
+AUS200.cash,index,AXJO,1992-11-22,32.1,ja,ja,,True,True,False,,False
+AVAUSD,crypto,AVAX_USD,2020-07-13,4.5,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,8.91,True
+AVGO,stock,AVGO,2009-08-06,15.4,ja,ja,,True,True,False,3.42,False
+AZN,stock,AZN,1998-01-02,27.0,ja,ja,,True,True,False,7.17,False
+BA,stock,BA,1998-01-02,27.0,ja,ja,,True,True,False,5.96,False
+BABA,stock,BABA,2014-09-19,10.3,ja,ja,,True,True,False,6.84,False
+BAC,stock,BAC,1998-01-02,27.0,ja,ja,,True,True,False,17.14,False
+BARUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,4.03,True
+BAYGn,stock,BAYN.DE,1998-01-01,27.0,ja,nee,,True,False,False,13.68,False
+BCHUSD,crypto,BCH_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,15.22,True
+BMW,stock,BMW_DE,1996-11-08,28.1,ja,nee,,True,False,False,4.71,False
+BNBUSD,crypto,BNB_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,0.56,True
+BRK.B,stock,BRK-B,1998-01-02,27.0,ja,ja,,True,True,False,2.97,False
+BTCUSD,crypto,BTC_USD,2014-09-17,10.3,ja,ja,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,True,False,1.25,True
+CADCHF,fx,FXBIS_CAD+FXBIS_CHF,1953-09-01,71.3,ja,nee,cross uit BIS (lokaal per USD): CADCHF = FXBIS_CHF / FXBIS_CAD,True,False,False,2.27,True
+CADJPY,fx,FXBIS_CAD+FXBIS_JPY,1969-12-01,55.1,ja,nee,cross uit BIS (lokaal per USD): CADJPY = FXBIS_JPY / FXBIS_CAD,True,False,False,1.78,True
+CHFJPY,fx,FXBIS_CHF+FXBIS_JPY,1969-12-01,55.1,ja,nee,cross uit BIS (lokaal per USD): CHFJPY = FXBIS_JPY / FXBIS_CHF,True,False,False,1.18,True
+COCOA.c,commodity/metal,COCOA_F,2000-01-03,25.0,ja,nee,,True,False,False,19.68,True
+COFFEE.c,commodity/metal,COFFEE_F,2000-01-03,25.0,ja,nee,,True,False,False,9.05,True
+CORN.c,commodity/metal,CORN_F,2000-07-17,24.5,ja,nee,,True,False,False,21.24,True
+COTTON.c,commodity/metal,COTTON_F,2000-01-03,25.0,ja,nee,,True,False,False,55.29,True
+CSCO,stock,CSCO,1998-01-02,27.0,ja,ja,,True,True,False,8.77,False
+CVX,stock,CVX,1998-01-02,27.0,ja,ja,,True,True,False,5.3,False
+DASHUSD,crypto,DASH_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,132.54,True
+DBKGn,stock,DBK.DE,1998-01-01,27.0,ja,nee,,True,False,False,16.63,False
+DIS,stock,DIS,1998-01-02,27.0,ja,ja,,True,True,False,9.2,False
+DOGEUSD,crypto,DOGE_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,13.33,True
+DOTUSD,crypto,DOT_USD,2020-08-20,4.4,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,3.33,True
+DXY.cash,index,DXY,1971-01-04,54.0,ja,nee,,True,False,False,,False
+ETCUSD,crypto,ETC_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,2.95,True
+ETHUSD,crypto,ETH_USD,2017-11-09,7.1,nee,ja,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,True,False,7.98,True
+EU50.cash,index,STOXX50,2007-03-30,17.8,ja,ja,,True,True,False,,False
+EURAUD,fx,FXBIS_EUR+FXBIS_AUD,1974-06-28,50.5,ja,ja,cross uit BIS (lokaal per USD): EURAUD = FXBIS_AUD / FXBIS_EUR,True,True,False,1.11,False
+EURCAD,fx,FXBIS_EUR+FXBIS_CAD,1974-06-28,50.5,ja,nee,cross uit BIS (lokaal per USD): EURCAD = FXBIS_CAD / FXBIS_EUR,True,False,False,1.2,True
+EURCHF,fx,FXBIS_EUR+FXBIS_CHF,1974-06-28,50.5,ja,ja,cross uit BIS (lokaal per USD): EURCHF = FXBIS_CHF / FXBIS_EUR,True,True,False,1.2,True
+EURCZK,fx,,,0.0,nee,nee,,False,False,False,5.94,False
+EURGBP,fx,FXBIS_EUR+FXBIS_GBP,1974-06-28,50.5,ja,ja,cross uit BIS (lokaal per USD): EURGBP = FXBIS_GBP / FXBIS_EUR,True,True,True,1.04,True
+EURHUF,fx,,,0.0,nee,nee,,False,False,False,6.07,False
+EURJPY,fx,FXBIS_EUR+FXBIS_JPY,1974-06-28,50.5,ja,ja,cross uit BIS (lokaal per USD): EURJPY = FXBIS_JPY / FXBIS_EUR,True,True,True,1.1,True
+EURNOK,fx,FXBIS_EUR+FXBIS_NOK,1974-06-28,50.5,ja,nee,cross uit BIS (lokaal per USD): EURNOK = FXBIS_NOK / FXBIS_EUR,True,False,False,4.62,False
+EURNZD,fx,,,0.0,nee,nee,,False,False,False,1.22,True
+EURPLN,fx,,,0.0,nee,nee,,False,False,False,5.34,False
+EURUSD,fx,FX_EURUSD,1999-01-04,26.0,ja,ja,cross uit BIS (lokaal per USD): EURUSD = 1 / FXBIS_EUR,True,True,True,0.63,True
+FDX,stock,FDX,1998-01-02,27.0,ja,ja,,True,True,False,6.43,False
+FRA40.cash,index,CAC40,1990-03-01,34.8,ja,ja,,True,True,False,,False
+GALUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,6.12,True
+GBPAUD,fx,FXBIS_GBP+FXBIS_AUD,1971-01-04,54.0,ja,ja,cross uit BIS (lokaal per USD): GBPAUD = FXBIS_AUD / FXBIS_GBP,True,True,False,1.18,True
+GBPCAD,fx,FXBIS_GBP+FXBIS_CAD,1953-08-10,71.4,ja,nee,cross uit BIS (lokaal per USD): GBPCAD = FXBIS_CAD / FXBIS_GBP,True,False,False,1.08,False
+GBPCHF,fx,FXBIS_GBP+FXBIS_CHF,1953-09-01,71.3,ja,nee,cross uit BIS (lokaal per USD): GBPCHF = FXBIS_CHF / FXBIS_GBP,True,False,False,1.31,True
+GBPJPY,fx,FXBIS_GBP+FXBIS_JPY,1969-12-01,55.1,ja,ja,cross uit BIS (lokaal per USD): GBPJPY = FXBIS_JPY / FXBIS_GBP,True,True,False,1.11,True
+GBPNZD,fx,,,0.0,nee,nee,,False,False,False,0.99,False
+GBPUSD,fx,FX_GBPUSD,1971-01-04,54.0,ja,ja,cross uit BIS (lokaal per USD): GBPUSD = 1 / FXBIS_GBP,True,True,True,0.7,True
+GE,stock,GE,1998-01-02,27.0,ja,ja,,True,True,False,4.4,False
+GER40.cash,index,DAX,1987-12-30,37.0,ja,ja,,True,True,False,,False
+GM,stock,GM,2010-11-18,14.1,ja,nee,,True,False,False,11.91,False
+GME,stock,GME,2002-02-13,22.9,ja,ja,,True,True,False,40.54,False
+GOOG,stock,GOOG,2004-08-19,20.4,ja,ja,,True,True,False,3.44,False
+GRTUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,3.02,True
+HEATOIL.c,commodity/metal,HEATOIL_F,2000-09-01,24.3,ja,nee,,True,False,False,92.32,False
+HK50.cash,index,HSI,1986-12-31,38.0,ja,ja,,True,True,False,,False
+IBE,stock,IBE.MC,2000-01-03,25.0,ja,nee,,True,False,False,12.38,False
+IBM,stock,IBM,1998-01-02,27.0,ja,ja,,True,True,False,5.39,False
+ICPUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,4.14,True
+IMXUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,4.12,True
+INTC,stock,INTC,1998-01-02,27.0,ja,ja,,True,True,False,9.9,False
+JNJ,stock,JNJ,1998-01-02,27.0,ja,ja,,True,True,False,4.8,False
+JP225.cash,index,N225,1965-01-05,60.0,ja,ja,,True,True,False,,False
+JPM,stock,JPM,1998-01-02,27.0,ja,ja,,True,True,False,3.75,False
+KO,stock,KO,1998-01-02,27.0,ja,ja,,True,True,False,11.59,False
+LMT,stock,LMT,1998-01-02,27.0,ja,ja,,True,True,False,4.98,False
+LNKUSD,crypto,LINK_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,1.46,True
+LTCUSD,crypto,LTC_USD,2014-09-17,10.3,ja,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,25.61,True
+LVMH,stock,MC.PA,2000-01-03,25.0,ja,nee,,True,False,False,2.2,False
+MANUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,1.08,True
+MBG,stock,MBG_DE,1996-10-30,28.2,ja,nee,,True,False,False,4.51,False
+MCD,stock,MCD,1966-07-05,58.5,ja,nee,,True,False,False,4.3,False
+META,stock,META,2012-05-18,12.6,ja,ja,,True,True,False,2.52,False
+MSFT,stock,MSFT,1998-01-02,27.0,ja,ja,,True,True,False,2.48,False
+MSTR,stock,MSTR,1998-06-11,26.6,ja,ja,,True,True,False,8.63,False
+N25.cash,index,AEX,1992-10-12,32.2,ja,ja,,True,True,False,,False
+NATGAS.cash,commodity/metal,NATGAS_F,2000-08-30,24.3,ja,nee,,True,False,False,,False
+NEOUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,30.31,True
+NERUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,27.38,True
+NFLX,stock,NFLX,2002-05-23,22.6,ja,ja,,True,True,False,4.0,False
+NKE,stock,NKE,1998-01-02,27.0,ja,ja,,True,True,False,20.96,False
+NVDA,stock,NVDA,1999-01-22,25.9,ja,ja,,True,True,False,5.31,False
+NZDCAD,fx,,,0.0,nee,nee,,False,False,False,2.23,False
+NZDCHF,fx,,,0.0,nee,nee,,False,False,False,2.94,False
+NZDJPY,fx,,,0.0,nee,nee,,False,False,False,2.0,True
+NZDUSD,fx,FX_NZDUSD,1971-01-04,54.0,ja,ja,,True,True,True,1.85,True
+PFE,stock,PFE,1998-01-02,27.0,ja,ja,,True,True,False,36.95,False
+PLTR,stock,PLTR,2020-09-30,4.3,nee,ja,,False,True,False,6.81,False
+QCOM,stock,QCOM,1998-01-02,27.0,ja,ja,,True,True,False,7.2,False
+RACE,stock,RACE,2015-10-21,9.2,nee,ja,,True,True,False,10.89,False
+RTX,stock,RTX,1998-01-02,27.0,ja,ja,,True,True,False,6.53,False
+SAN,stock,SAN,1987-07-30,37.4,ja,nee,,True,False,False,9.69,False
+SANUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,29.5,True
+SBUX,stock,SBUX,1998-01-02,27.0,ja,ja,,True,True,False,9.81,False
+SIEGn,stock,SIE_DE,1996-11-08,28.1,ja,nee,,True,False,False,2.67,False
+SNOW,stock,SNOW,2020-09-16,4.3,nee,nee,,False,False,False,7.95,False
+SOLUSD,crypto,SOL_USD,2020-04-10,4.7,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,2.83,True
+SOYBEAN.c,commodity/metal,SOY_F,2000-09-15,24.3,ja,nee,,True,False,False,18.41,True
+SPCX,stock,,,0.0,nee,nee,,False,False,False,150.01,False
+SPN35.cash,index,IBEX,1993-07-12,31.5,ja,ja,,True,True,False,,False
+SUGAR.c,commodity/metal,SUGAR_F,2000-03-01,24.8,ja,nee,,True,False,False,75.97,True
+T,stock,T,1998-01-02,27.0,ja,ja,,True,True,False,35.71,False
+TSLA,stock,TSLA,2010-06-29,14.5,ja,ja,,True,True,False,2.88,False
+TTE,stock,TTE,1991-10-25,33.2,ja,nee,,True,False,False,3.05,False
+UK100.cash,index,FTSE,1984-01-03,41.0,ja,ja,,True,True,False,,False
+UKOIL.cash,commodity/metal,BRENT_F,2007-07-30,17.4,ja,ja,,True,True,False,,False
+UNIUSD,crypto,UNI_USD,2020-09-18,4.3,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,2.59,True
+US100.cash,index,NDX,1985-10-01,39.2,ja,ja,,True,True,False,,False
+US2000.cash,index,RUT,1987-09-10,37.3,ja,ja,,True,True,False,,False
+US30.cash,index,DJI,1992-01-02,33.0,ja,ja,,True,True,False,,False
+US500.cash,index,SPX_TR,1988-01-04,37.0,ja,ja,,True,True,False,,False
+USDCAD,fx,FX_USDCAD,1971-01-04,54.0,ja,ja,cross uit BIS (lokaal per USD): USDCAD = FXBIS_CAD / 1,True,True,True,0.8,True
+USDCHF,fx,FX_USDCHF,1971-01-04,54.0,ja,ja,cross uit BIS (lokaal per USD): USDCHF = FXBIS_CHF / 1,True,True,True,1.01,True
+USDCNH,fx,FXBIS_CNY,1981-01-02,44.0,ja,nee,cross uit BIS (lokaal per USD): USDCNH = FXBIS_CNY / 1,True,False,False,1.36,False
+USDCZK,fx,,,0.0,nee,nee,,False,False,False,6.12,False
+USDHKD,fx,FXBIS_HKD,1981-01-02,44.0,ja,nee,cross uit BIS (lokaal per USD): USDHKD = FXBIS_HKD / 1,True,False,False,0.84,False
+USDHUF,fx,,,0.0,nee,nee,,False,False,False,6.34,False
+USDILS,fx,,,0.0,nee,nee,,False,False,False,2.28,False
+USDJPY,fx,FX_USDJPY,1971-01-04,54.0,ja,ja,cross uit BIS (lokaal per USD): USDJPY = FXBIS_JPY / 1,True,True,True,0.78,True
+USDMXN,fx,FXBIS_MXN,1954-04-19,70.7,ja,nee,cross uit BIS (lokaal per USD): USDMXN = FXBIS_MXN / 1,True,False,False,2.98,False
+USDNOK,fx,FXBIS_NOK,1953-12-14,71.0,ja,nee,cross uit BIS (lokaal per USD): USDNOK = FXBIS_NOK / 1,True,False,False,4.76,False
+USDPLN,fx,,,0.0,nee,nee,,False,False,False,5.29,False
+USDSEK,fx,FXBIS_SEK,1953-09-01,71.3,ja,nee,cross uit BIS (lokaal per USD): USDSEK = FXBIS_SEK / 1,True,False,False,5.52,False
+USDSGD,fx,FXBIS_SGD,1981-01-02,44.0,ja,nee,cross uit BIS (lokaal per USD): USDSGD = FXBIS_SGD / 1,True,False,False,2.6,False
+USDZAR,fx,FXBIS_ZAR,1970-01-02,55.0,ja,nee,cross uit BIS (lokaal per USD): USDZAR = FXBIS_ZAR / 1,True,False,False,5.75,False
+USOIL.cash,commodity/metal,WTI_F,2000-08-23,24.4,ja,ja,,True,True,False,,False
+V,stock,V,2008-03-19,16.8,ja,ja,,True,True,False,3.59,False
+VECUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,8.94,True
+VOWG_p,stock,VOW3.DE,1998-07-22,26.4,ja,nee,,True,False,False,27.08,False
+WHEAT.c,commodity/metal,WHEAT_F,2000-07-17,24.5,ja,nee,,True,False,False,22.85,True
+WMT,stock,WMT,1998-01-02,27.0,ja,ja,,True,True,False,9.36,False
+XAGAUD,commodity/metal,SILVER_F+FXBIS_AUD,2000-08-30,24.3,ja,nee,,True,False,False,3.54,False
+XAGEUR,commodity/metal,SILVER_F+FXBIS_EUR,2000-08-30,24.3,ja,nee,,True,False,False,3.93,False
+XAGUSD,commodity/metal,SILVER_F,2000-08-30,24.3,ja,ja,,True,True,True,5.07,True
+XAUAUD,commodity/metal,GOLD_F+FXBIS_AUD,2000-08-30,24.3,ja,nee,,True,False,False,0.95,False
+XAUEUR,commodity/metal,GOLD_F+FXBIS_EUR,2000-08-30,24.3,ja,nee,,True,False,False,1.6,False
+XAUUSD,commodity/metal,GOLD_F,2000-08-30,24.3,ja,ja,,True,True,True,0.83,True
+XCUUSD,commodity/metal,COPPER_F,2000-08-30,24.3,ja,nee,,True,False,False,8.38,False
+XLMUSD,crypto,XLM_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,5.71,True
+XMRUSD,crypto,XMR_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,77.02,True
+XOM,stock,XOM,1998-01-02,27.0,ja,ja,,True,True,False,6.41,False
+XPDUSD,commodity/metal,PALL_F,1998-09-28,26.3,ja,nee,,True,False,False,44.32,True
+XPTUSD,commodity/metal,PLAT_F,1997-10-29,27.2,ja,nee,,True,False,False,23.9,True
+XRPUSD,crypto,XRP_USD,2017-11-09,7.1,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",True,False,False,34.06,True
+XTZUSD,crypto,,,0.0,nee,nee,"crypto: < 10 jaar historie bestaat niet (BTC/LTC 2014→, overige 2017/2020→)",False,False,False,44.32,True
+ZM,stock,ZM,2019-04-18,5.7,nee,ja,,True,True,False,11.98,False

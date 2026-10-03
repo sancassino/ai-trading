@@ -1,0 +1,308 @@
+{
+  "n_proxy_rows": 166,
+  "n_ge5y_proxy": 132,
+  "n_ge5y_not_dead_coarse": 88,
+  "n_lane_b_ready_m5_plus_costs": 41,
+  "n_lane_b_in_COSTS_FTMO": 0,
+  "lane_b_core_candidates": [],
+  "lane_b_alle_candidates_top40": [
+    "EURAUD",
+    "AAPL",
+    "AMD",
+    "AMZN",
+    "ASML",
+    "AZN",
+    "BA",
+    "BAC",
+    "BRK.B",
+    "CSCO",
+    "CVX",
+    "DIS",
+    "FDX",
+    "GE",
+    "IBM",
+    "INTC",
+    "JNJ",
+    "JPM",
+    "KO",
+    "LMT",
+    "MSFT",
+    "NKE",
+    "PFE",
+    "QCOM",
+    "RTX",
+    "SBUX",
+    "T",
+    "WMT",
+    "XOM",
+    "MSTR",
+    "NVDA",
+    "GME",
+    "NFLX",
+    "GOOG",
+    "V",
+    "AVGO",
+    "TSLA",
+    "META",
+    "BABA",
+    "RACE"
+  ],
+  "lane_a_top20_by_years": [
+    {
+      "ftmo_symbol": "GBPCAD",
+      "categorie": "fx",
+      "proxy": "FXBIS_GBP+FXBIS_CAD",
+      "jaren_tm_2024": 71.4,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "USDSEK",
+      "categorie": "fx",
+      "proxy": "FXBIS_SEK",
+      "jaren_tm_2024": 71.3,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "USDNOK",
+      "categorie": "fx",
+      "proxy": "FXBIS_NOK",
+      "jaren_tm_2024": 71.0,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "USDMXN",
+      "categorie": "fx",
+      "proxy": "FXBIS_MXN",
+      "jaren_tm_2024": 70.7,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "JP225.cash",
+      "categorie": "index",
+      "proxy": "N225",
+      "jaren_tm_2024": 60.0,
+      "m5gz": "ja"
+    },
+    {
+      "ftmo_symbol": "MCD",
+      "categorie": "stock",
+      "proxy": "MCD",
+      "jaren_tm_2024": 58.5,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "USDZAR",
+      "categorie": "fx",
+      "proxy": "FXBIS_ZAR",
+      "jaren_tm_2024": 55.0,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "DXY.cash",
+      "categorie": "index",
+      "proxy": "DXY",
+      "jaren_tm_2024": 54.0,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "EURNOK",
+      "categorie": "fx",
+      "proxy": "FXBIS_EUR+FXBIS_NOK",
+      "jaren_tm_2024": 50.5,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "EURAUD",
+      "categorie": "fx",
+      "proxy": "FXBIS_EUR+FXBIS_AUD",
+      "jaren_tm_2024": 50.5,
+      "m5gz": "ja"
+    },
+    {
+      "ftmo_symbol": "USDHKD",
+      "categorie": "fx",
+      "proxy": "FXBIS_HKD",
+      "jaren_tm_2024": 44.0,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "USDCNH",
+      "categorie": "fx",
+      "proxy": "FXBIS_CNY",
+      "jaren_tm_2024": 44.0,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "USDSGD",
+      "categorie": "fx",
+      "proxy": "FXBIS_SGD",
+      "jaren_tm_2024": 44.0,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "UK100.cash",
+      "categorie": "index",
+      "proxy": "FTSE",
+      "jaren_tm_2024": 41.0,
+      "m5gz": "ja"
+    },
+    {
+      "ftmo_symbol": "US100.cash",
+      "categorie": "index",
+      "proxy": "NDX",
+      "jaren_tm_2024": 39.2,
+      "m5gz": "ja"
+    },
+    {
+      "ftmo_symbol": "HK50.cash",
+      "categorie": "index",
+      "proxy": "HSI",
+      "jaren_tm_2024": 38.0,
+      "m5gz": "ja"
+    },
+    {
+      "ftmo_symbol": "SAN",
+      "categorie": "stock",
+      "proxy": "SAN",
+      "jaren_tm_2024": 37.4,
+      "m5gz": "nee"
+    },
+    {
+      "ftmo_symbol": "US2000.cash",
+      "categorie": "index",
+      "proxy": "RUT",
+      "jaren_tm_2024": 37.3,
+      "m5gz": "ja"
+    },
+    {
+      "ftmo_symbol": "GER40.cash",
+      "categorie": "index",
+      "proxy": "DAX",
+      "jaren_tm_2024": 37.0,
+      "m5gz": "ja"
+    },
+    {
+      "ftmo_symbol": "US500.cash",
+      "categorie": "index",
+      "proxy": "SPX_TR",
+      "jaren_tm_2024": 37.0,
+      "m5gz": "ja"
+    }
+  ],
+  "m5_note": {
+    "m5_typical_start": "2021-01-04",
+    "m5_years_to_2024": 4.0,
+    "implication": "Almost no FTMO M5 file alone clears D-094a \u22655y; eligibility is PROXY_MAP jaren_tm_2024 (Yahoo/daily). Soft ag like COFFEE/COCOA fail both M5 and often proxy span."
+  },
+  "caveat": "Coarse dead filter only. Does NOT encode all NEXT_STEPS N75\u2013N175 clone bars / session-window twins. Strateeg still owns novelty \u22652/3 NEW_FAMILY. Manager v110: do not invent a pair; do not file unscreened.",
+  "nonstock_m5_ondisk_with_costs": [
+    {
+      "ftmo_symbol": "GBPCAD",
+      "categorie": "fx",
+      "jaren_tm_2024": 71.4,
+      "rondreis_bp": 1.08
+    },
+    {
+      "ftmo_symbol": "USDSEK",
+      "categorie": "fx",
+      "jaren_tm_2024": 71.3,
+      "rondreis_bp": 5.52
+    },
+    {
+      "ftmo_symbol": "USDNOK",
+      "categorie": "fx",
+      "jaren_tm_2024": 71.0,
+      "rondreis_bp": 4.76
+    },
+    {
+      "ftmo_symbol": "USDMXN",
+      "categorie": "fx",
+      "jaren_tm_2024": 70.7,
+      "rondreis_bp": 2.98
+    },
+    {
+      "ftmo_symbol": "USDZAR",
+      "categorie": "fx",
+      "jaren_tm_2024": 55.0,
+      "rondreis_bp": 5.75
+    },
+    {
+      "ftmo_symbol": "EURAUD",
+      "categorie": "fx",
+      "jaren_tm_2024": 50.5,
+      "rondreis_bp": 1.11
+    },
+    {
+      "ftmo_symbol": "EURNOK",
+      "categorie": "fx",
+      "jaren_tm_2024": 50.5,
+      "rondreis_bp": 4.62
+    },
+    {
+      "ftmo_symbol": "USDHKD",
+      "categorie": "fx",
+      "jaren_tm_2024": 44.0,
+      "rondreis_bp": 0.84
+    },
+    {
+      "ftmo_symbol": "USDSGD",
+      "categorie": "fx",
+      "jaren_tm_2024": 44.0,
+      "rondreis_bp": 2.6
+    },
+    {
+      "ftmo_symbol": "USDCNH",
+      "categorie": "fx",
+      "jaren_tm_2024": 44.0,
+      "rondreis_bp": 1.36
+    },
+    {
+      "ftmo_symbol": "HEATOIL.c",
+      "categorie": "commodity/metal",
+      "jaren_tm_2024": 24.3,
+      "rondreis_bp": 92.32
+    },
+    {
+      "ftmo_symbol": "XAGAUD",
+      "categorie": "commodity/metal",
+      "jaren_tm_2024": 24.3,
+      "rondreis_bp": 3.54
+    },
+    {
+      "ftmo_symbol": "XAGEUR",
+      "categorie": "commodity/metal",
+      "jaren_tm_2024": 24.3,
+      "rondreis_bp": 3.93
+    },
+    {
+      "ftmo_symbol": "XAUAUD",
+      "categorie": "commodity/metal",
+      "jaren_tm_2024": 24.3,
+      "rondreis_bp": 0.95
+    },
+    {
+      "ftmo_symbol": "XAUEUR",
+      "categorie": "commodity/metal",
+      "jaren_tm_2024": 24.3,
+      "rondreis_bp": 1.6
+    },
+    {
+      "ftmo_symbol": "XCUUSD",
+      "categorie": "commodity/metal",
+      "jaren_tm_2024": 24.3,
+      "rondreis_bp": 8.38
+    }
+  ],
+  "notes": {
+    "bar_overlap_examples": {
+      "USDMXN": "N137 USDMXN_EM_CARRY_FADE barred \u2014 do not refile EM-carry-fade",
+      "EURAUD": "prior FX_EUR_SHORT_TSMOM / D-100 overnight short dead; session-flat NEW_FAMILY may still be novel \u2014 Strateeg decides",
+      "GBPAUD": "GBPAUD-LO clones barred",
+      "XCUUSD / CPER": "N117 CPER_COPPER_STRESS dead; copper\u2192US500 barred"
+    },
+    "core_COSTS_FTMO_exhausted": true,
+    "soft_ag_N174_N175": "correctly <5y (proxy+m5); do not rescreen",
+    "m5_alone": "typical M5 start 2021-01 \u2192 ~4.0y to 2024-12-31; D-094a \u22655y = PROXY_MAP jaren_tm_2024"
+  },
+  "n_nonstock_ready_ondisk": 16
+}

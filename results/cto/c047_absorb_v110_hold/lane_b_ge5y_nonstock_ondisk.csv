@@ -1,0 +1,17 @@
+ftmo_symbol,categorie,proxy,proxy_start,jaren_tm_2024,10j_plus,m5gz,opmerking,ge5y,m5gz_yes,in_COSTS_FTMO,rondreis_bp,dead_explicit,m5_on_disk
+GBPCAD,fx,FXBIS_GBP+FXBIS_CAD,1953-08-10,71.4,ja,nee,cross uit BIS (lokaal per USD): GBPCAD = FXBIS_CAD / FXBIS_GBP,True,False,False,1.08,False,True
+USDSEK,fx,FXBIS_SEK,1953-09-01,71.3,ja,nee,cross uit BIS (lokaal per USD): USDSEK = FXBIS_SEK / 1,True,False,False,5.52,False,True
+USDNOK,fx,FXBIS_NOK,1953-12-14,71.0,ja,nee,cross uit BIS (lokaal per USD): USDNOK = FXBIS_NOK / 1,True,False,False,4.76,False,True
+USDMXN,fx,FXBIS_MXN,1954-04-19,70.7,ja,nee,cross uit BIS (lokaal per USD): USDMXN = FXBIS_MXN / 1,True,False,False,2.98,False,True
+USDZAR,fx,FXBIS_ZAR,1970-01-02,55.0,ja,nee,cross uit BIS (lokaal per USD): USDZAR = FXBIS_ZAR / 1,True,False,False,5.75,False,True
+EURAUD,fx,FXBIS_EUR+FXBIS_AUD,1974-06-28,50.5,ja,ja,cross uit BIS (lokaal per USD): EURAUD = FXBIS_AUD / FXBIS_EUR,True,True,False,1.11,False,True
+EURNOK,fx,FXBIS_EUR+FXBIS_NOK,1974-06-28,50.5,ja,nee,cross uit BIS (lokaal per USD): EURNOK = FXBIS_NOK / FXBIS_EUR,True,False,False,4.62,False,True
+USDHKD,fx,FXBIS_HKD,1981-01-02,44.0,ja,nee,cross uit BIS (lokaal per USD): USDHKD = FXBIS_HKD / 1,True,False,False,0.84,False,True
+USDSGD,fx,FXBIS_SGD,1981-01-02,44.0,ja,nee,cross uit BIS (lokaal per USD): USDSGD = FXBIS_SGD / 1,True,False,False,2.6,False,True
+USDCNH,fx,FXBIS_CNY,1981-01-02,44.0,ja,nee,cross uit BIS (lokaal per USD): USDCNH = FXBIS_CNY / 1,True,False,False,1.36,False,True
+HEATOIL.c,commodity/metal,HEATOIL_F,2000-09-01,24.3,ja,nee,,True,False,False,92.32,False,True
+XAGAUD,commodity/metal,SILVER_F+FXBIS_AUD,2000-08-30,24.3,ja,nee,,True,False,False,3.54,False,True
+XAGEUR,commodity/metal,SILVER_F+FXBIS_EUR,2000-08-30,24.3,ja,nee,,True,False,False,3.93,False,True
+XAUAUD,commodity/metal,GOLD_F+FXBIS_AUD,2000-08-30,24.3,ja,nee,,True,False,False,0.95,False,True
+XAUEUR,commodity/metal,GOLD_F+FXBIS_EUR,2000-08-30,24.3,ja,nee,,True,False,False,1.6,False,True
+XCUUSD,commodity/metal,COPPER_F,2000-08-30,24.3,ja,nee,,True,False,False,8.38,False,True
