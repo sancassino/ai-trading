@@ -1214,3 +1214,29 @@ Session-flat, swap nights **0**.
 | N179 | EURAUD 1d fade CV | **1033** | **+0,61** | −0,50 | +1,36 / −0,47 / +0,38 / +1,18 | **FAIL** vs **3,33**. N177 agree 0,32. N66 rebuilt agree 0,48 cover 0,98. Mutual agree 0,42. |
 
 **Niet gedaan:** geen PREREG; geen OPEN; geen EURAUD 1d-continuation (N177 same-rule agree 0,68); geen thr-grid; TRIAL niet verhoogd.
+
+## 2026-10-04 01:06 Europe/Amsterdam — Lane-B N180 FAIL / N181 FAIL; no OPEN
+
+**Branch:** `claude/trusting-faraday-34tsmg` (tip was `aadaf71`).
+**Not redone:** N176–N179. No USDSEK/NOK/ZAR, no USDHKD, no 2025+ PnL.
+**TRIAL_COUNT stays 471.**
+
+HK50 and AUS200 cleared their own dead-book clone bar in the pre-check and were not given ids (only two screens). UK100/JP225 are different mechanisms and agree **0,56**.
+
+### Gates (C-048 `COSTS_FTMO.csv`, not alle)
+Session-flat, swap nights **0**.
+
+| Book | leg | RT | gate | window |
+|------|-----|---:|-----:|--------|
+| N180 | UK100cash | 1,42 | **4,26** | prior 5d fade, 09:00→12:30 CET |
+| N181 | JP225cash | 1,51 | **4,53** | prior 1d fade, 15:00→20:00 CET |
+
+### D-092.1 `n180_n181`
+| ID | Family | N | mean | netto | Verdict |
+|----|--------|--:|-----:|------:|---------|
+| N180 | UK100 5d morning fade CW | **999** | **−2,28** | −3,70 | **FAIL** vs **4,26**. N138 UK-leg agree 0,47 cover 0,75. N107 agree 0,43 cover 1,00. |
+| N181 | JP225 1d afternoon fade CX | **1018** | **+4,50** | +2,99 | **FAIL** vs **4,53**. No soft-pass. N139 JP-leg agree 0,52 cover 0,96. N105 agree 0,41 cover 1,00. |
+
+M5 files 5,73y / 5,74y. PnL through 2024-12-31.
+
+**Niet gedaan:** geen PREREG; geen OPEN; geen thr-grid; TRIAL niet verhoogd.
