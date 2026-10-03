@@ -1,0 +1,258 @@
+{
+  "N160": {
+    "id": "N160",
+    "instrument": "XAGUSD",
+    "n": 451,
+    "mean_bruto_bp": -7.1513,
+    "gate_bp": 15.21,
+    "verdict": "FAIL",
+    "notes": "XAG_NY_IMPULSE_FADE \u00b140 15:30\u219217:00 entry 17:00 flat 21:00; COSTS gate 3*5.07; swap 0; one silver leg; NEW_FAMILY CC",
+    "median_bruto_bp": -5.7519,
+    "stress_gate_bp": 22.815,
+    "stress_note": "BELOW_stress_1.5x (info only; own gate is the cost gate)",
+    "hit_rate": 0.4745,
+    "n_long": 222,
+    "n_short": 229,
+    "years": {
+      "2021": -3.29,
+      "2022": -8.8264,
+      "2023": -9.027
+    },
+    "meta": {
+      "n_impulse_days": 451,
+      "n_skip_missing_bar": 0,
+      "n_trades": 451,
+      "swap_bp": 0,
+      "overnight": false,
+      "train_days": 774,
+      "session": "signal 15:30\u219217:00 entry at 17:00 flat 21:00 CET",
+      "rt_in_costs": true
+    },
+    "costs_rt": 5.07,
+    "rt_in_costs": true,
+    "clone_hits": []
+  },
+  "N161": {
+    "id": "N161",
+    "instrument": "US100cash",
+    "n": 383,
+    "mean_bruto_bp": 5.4198,
+    "gate_bp": 1.98,
+    "verdict": "PASS_may_PREREG",
+    "notes": "XLK_TECH_SECTOR_STRESS z120/thr0.5/mom_confirm \u2192 US100 session-flat 15:30\u219221:00; COSTS gate 3*0.66; swap 0; NOT hold=3d; NOT overnight long; Lane-A day_t 2.05 is not a PASS; NEW_FAMILY CD; S2 51b24bf cycle_0147",
+    "median_bruto_bp": 9.77,
+    "stress_gate_bp": 2.97,
+    "stress_note": "PASS_stress_informal",
+    "hit_rate": 0.5405,
+    "n_long": 242,
+    "n_short": 141,
+    "years": {
+      "2021": -10.6781,
+      "2022": 6.8373,
+      "2023": 9.2569
+    },
+    "meta": {
+      "n_signal_days_with_session": 520,
+      "n_skip_missing_bar": 137,
+      "n_trades": 383,
+      "swap_bp": 0,
+      "overnight": false,
+      "hold": "session-flat 15:30\u219221:00 not 3d",
+      "train_days": 775,
+      "rt_in_costs": true,
+      "lane_a_day_t": 2.05,
+      "lane_a_day_t_is_not_a_pass": true
+    },
+    "costs_rt": 0.66,
+    "rt_in_costs": true,
+    "lane_a_day_t_not_a_pass": 2.05,
+    "clone_hits": []
+  },
+  "N160_clones": {
+    "N82_XAG_LonAM_fade": {
+      "peer": "N82_XAG_LonAM_fade",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4967,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 451,
+      "n_both_active": 451,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N150_XAG_leg": {
+      "peer": "N150_XAG_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4359,
+      "both_active_over_cand": 0.2594,
+      "n_cand_active": 451,
+      "n_both_active": 117,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N141_XAG_leg": {
+      "peer": "N141_XAG_leg",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4605,
+      "both_active_over_cand": 0.337,
+      "n_cand_active": 451,
+      "n_both_active": 152,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N75_silver_side": {
+      "peer": "N75_silver_side",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.475,
+      "both_active_over_cand": 0.2661,
+      "n_cand_active": 451,
+      "n_both_active": 120,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N113_SLV_GLD_silver_daysign": {
+      "peer": "N113_SLV_GLD_silver_daysign",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4454,
+      "both_active_over_cand": 0.5078,
+      "n_cand_active": 451,
+      "n_both_active": 229,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "CPER_z40_thr1.5": {
+      "peer": "CPER_z40_thr1.5",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.5537,
+      "both_active_over_cand": 0.2683,
+      "n_cand_active": 451,
+      "n_both_active": 121,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "N161_clones": {
+    "SECTOR_DISP": {
+      "peer": "SECTOR_DISP",
+      "z_corr_train": -0.1424,
+      "sign_agree_both_active": 0.6678,
+      "both_active_over_cand": 0.5865,
+      "n_cand_active": 503,
+      "n_both_active": 295,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "XLE_z40_fade_thr1.0": {
+      "peer": "XLE_z40_fade_thr1.0",
+      "z_corr_train": -0.1643,
+      "sign_agree_both_active": 0.4857,
+      "both_active_over_cand": 0.5567,
+      "n_cand_active": 503,
+      "n_both_active": 280,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "DBC_z40_fade_thr1.0": {
+      "peer": "DBC_z40_fade_thr1.0",
+      "z_corr_train": -0.0714,
+      "sign_agree_both_active": 0.4317,
+      "both_active_over_cand": 0.5527,
+      "n_cand_active": 503,
+      "n_both_active": 278,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "XLF_z40_fade_thr1.5": {
+      "peer": "XLF_z40_fade_thr1.5",
+      "z_corr_train": 0.4517,
+      "sign_agree_both_active": 0.0671,
+      "both_active_over_cand": 0.326,
+      "n_cand_active": 503,
+      "n_both_active": 164,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "XLU_XLI_z40_thr0.5": {
+      "peer": "XLU_XLI_z40_thr0.5",
+      "z_corr_train": -0.2367,
+      "sign_agree_both_active": 0.6446,
+      "both_active_over_cand": 0.8111,
+      "n_cand_active": 503,
+      "n_both_active": 408,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "UNG_z40_stress_thr1.5": {
+      "peer": "UNG_z40_stress_thr1.5",
+      "z_corr_train": -0.0333,
+      "sign_agree_both_active": 0.4062,
+      "both_active_over_cand": 0.3817,
+      "n_cand_active": 503,
+      "n_both_active": 192,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "DEFENSIVE_XLU_XLI_trade": {
+      "peer": "DEFENSIVE_XLU_XLI_trade",
+      "z_corr_train": -0.2367,
+      "sign_agree_both_active": 0.7312,
+      "both_active_over_cand": 0.8355,
+      "n_cand_active": 383,
+      "n_both_active": 320,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    },
+    "N92_US100_NY2H_mom": {
+      "peer": "N92_US100_NY2H_mom",
+      "z_corr_train": null,
+      "sign_agree_both_active": 0.4856,
+      "both_active_over_cand": 1.0,
+      "n_cand_active": 383,
+      "n_both_active": 383,
+      "clone": false,
+      "clone_raw": false,
+      "binding": true
+    }
+  },
+  "gates": {
+    "N160": 15.21,
+    "N161": 1.98
+  },
+  "costs_rt": {
+    "XAGUSD": 5.07,
+    "US100cash": 0.66
+  },
+  "clone_rule": {
+    "sign_agree_ge": 0.85,
+    "cover_ge": 0.7,
+    "z_corr_ge": 0.9,
+    "N160": "sign\u00d7cover only (one-leg impulse; no ratio z)",
+    "N161": "z-corr or sign\u00d7cover; actual trade vs DEFENSIVE and N92 is binding"
+  },
+  "train": "2021-01-01..2023-12-31 entry dates only",
+  "min_n": 150,
+  "swap": 0,
+  "no_thr_grid": true,
+  "no_2024_in_signal": true,
+  "no_inline_replacement": true,
+  "gate_source": "COSTS_FTMO.csv roundtrip_intraday_bp; session-flat so swap=0",
+  "train_days": {
+    "XAGUSD": 774,
+    "XAUUSD": 774,
+    "US30cash": 775,
+    "UKOILcash": 773,
+    "US100cash": 775
+  }
+}
