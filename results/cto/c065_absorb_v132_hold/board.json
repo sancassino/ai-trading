@@ -1,0 +1,87 @@
+{
+  "task": "C-065",
+  "asof_cest": "2026-10-04T08:55+0200",
+  "asof_label": "Europe/Amsterdam CEST UTC+2",
+  "decision": "absorb_v132_confirm_exhaustion_hold",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025_plus_touched": false,
+  "live_prereg": null,
+  "formal_open": [],
+  "freeze": "OFF",
+  "kill_circuit": "ON",
+  "track_3": "PAUSED",
+  "main_tip": "7c11386",
+  "main_version": "v132",
+  "absorb_merge": "651e1e4836406f00798a90a440e1e60dab6dcb3d",
+  "prior_cto": "3591c4e",
+  "prior_c": "C-064",
+  "teammates": {
+    "u2": {
+      "tip": "7dd11ec",
+      "posture": "IDLE/HOLD absorb v132 (~08:45 CEST); TRIAL 471; no live PREREG"
+    },
+    "faraday": {
+      "tip": "d07c0ab",
+      "last_results": "1e5a7f1",
+      "posture": "Lane-B HOLD; N180-N183 FAIL; idle sync v131/C-063; no new N*"
+    },
+    "s2": {
+      "tip": "fac00e9",
+      "last_promote": "e31d1b5",
+      "posture": "Lane-A hourly HOLD note v132; EWC/XLU DEFER_NOT_PROMOTE"
+    },
+    "strateeg_grok": {
+      "tip": "e07617a",
+      "posture": "stale GS01/GS02 research tip; Lane-B HOLD per Manager"
+    },
+    "ceo": {
+      "tip": "7cb6731",
+      "new_D": null
+    },
+    "besluiten_dirac": {
+      "tip": "4753905",
+      "note": "BESLUITEN.md ends D-086; D-087\u2026D-104 on ftmo-trading-strategy tip"
+    }
+  },
+  "costs_rows": 29,
+  "c050_exhaustion_reconfirmed": true,
+  "c051_exhaustion_reconfirmed": true,
+  "c052_exhaustion_reconfirmed": true,
+  "c053_exhaustion_reconfirmed": true,
+  "c054_exhaustion_reconfirmed": true,
+  "c055_exhaustion_reconfirmed": true,
+  "c056_exhaustion_reconfirmed": true,
+  "c057_exhaustion_reconfirmed": true,
+  "c058_exhaustion_reconfirmed": true,
+  "c059_exhaustion_reconfirmed": true,
+  "c060_exhaustion_reconfirmed": true,
+  "c061_exhaustion_reconfirmed": true,
+  "c062_exhaustion_reconfirmed": true,
+  "c063_exhaustion_reconfirmed": true,
+  "c064_exhaustion_reconfirmed": true,
+  "n_ok_new_authorize": 0,
+  "c048_nine_closed": [
+    "UK100cash",
+    "JP225cash",
+    "HK50cash",
+    "AUS200cash",
+    "GBPCAD",
+    "AUDJPY",
+    "EURAUD",
+    "EURNOK",
+    "USDHKD"
+  ],
+  "manager_refused_still_in_file": [
+    "USDSEK",
+    "USDNOK",
+    "USDZAR"
+  ],
+  "still_unauthorized": [
+    "SPN35cash",
+    "N25cash",
+    "EU50cash"
+  ],
+  "prio_1": "HOLD Strateeg until honest new COSTS_FTMO.csv row or S2 Lane-A survivor on authorized leg",
+  "wakeparent": "QUIET"
+}
