@@ -1,0 +1,92 @@
+{
+  "task": "C-059",
+  "asof_cest": "2026-10-04T06:02+0200",
+  "asof_label": "Europe/Amsterdam CEST UTC+2",
+  "decision": "absorb_v126_confirm_exhaustion_hold",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025_plus_touched": false,
+  "live_prereg": null,
+  "formal_open": [],
+  "freeze": "OFF",
+  "kill_circuit": "ON",
+  "track_3": "PAUSED",
+  "main_tip": "5892cc0",
+  "main_version": "v126",
+  "absorb_merge": "b821e4e8af504a5b665675dd549246ee63bfda9c",
+  "prior_cto": "f4f8f44",
+  "prior_c": "C-058",
+  "teammates": {
+    "u2": {
+      "tip": "ea4b47e",
+      "posture": "IDLE/HOLD absorb v126; TRIAL 471; no live PREREG"
+    },
+    "faraday": {
+      "tip": "de2ffdf",
+      "last_results": "1e5a7f1",
+      "posture": "Lane-B HOLD; N180-N183 FAIL; idle sync v125/C-057; no new N*"
+    },
+    "s2": {
+      "tip": "302531c",
+      "last_promote": "e31d1b5",
+      "posture": "Lane-A hourly HOLD note v126; EWC/XLU DEFER_NOT_PROMOTE"
+    },
+    "strateeg_grok": {
+      "tip": "e07617a",
+      "posture": "stale GS01/GS02 research tip; Lane-B HOLD per Manager"
+    },
+    "ceo": {
+      "tip": "7cb6731",
+      "new_D": null
+    },
+    "besluiten_dirac": {
+      "tip": "4753905",
+      "note": "BESLUITEN.md ends D-086; D-087…D-104 on ftmo-trading-strategy tip"
+    }
+  },
+  "costs_rows": 29,
+  "c050_exhaustion_reconfirmed": true,
+  "c051_exhaustion_reconfirmed": true,
+  "c052_exhaustion_reconfirmed": true,
+  "c053_exhaustion_reconfirmed": true,
+  "c054_exhaustion_reconfirmed": true,
+  "c055_exhaustion_reconfirmed": true,
+  "c056_exhaustion_reconfirmed": true,
+  "c057_exhaustion_reconfirmed": true,
+  "c058_exhaustion_reconfirmed": true,
+  "n_ok_new_authorize": 0,
+  "c048_nine_closed": [
+    "UK100cash",
+    "JP225cash",
+    "HK50cash",
+    "AUS200cash",
+    "GBPCAD",
+    "AUDJPY",
+    "EURAUD",
+    "EURNOK",
+    "USDHKD"
+  ],
+  "manager_refused_still_in_file": [
+    "USDSEK",
+    "USDNOK",
+    "USDZAR"
+  ],
+  "still_unauthorized": [
+    "SPN35cash",
+    "N25cash",
+    "EU50cash"
+  ],
+  "s2_defer_not_promote": [
+    "EWC_CANADA_STRESS",
+    "XLU_UTILITIES_STRESS"
+  ],
+  "hold_reason": "C-050…C-058 alle-book audit ok_new_authorize=0 unchanged; no new Faraday N*; no new COSTS_FTMO.csv row; no S2 survivor mapping to unused authorized leg; do not invent OPEN / RT / swap",
+  "unblock": [
+    "Debian: confirmed MT5 commission for stocks/crypto (kill Q2-assumption bucket)",
+    "Debian: year of swap snapshots for EU50/FRA40 if dividend-season anomaly hold is to lift",
+    "Debian: native FTMO D1/M5 pre-2020-11 for SPN35/N25 (broker series, not Yahoo proxy)",
+    "Debian: confirmed EUR2/lot for non-XAU metals",
+    "S2 Lane-A: NEW_FAMILY survivor that maps onto already-authorized COSTS_FTMO.csv leg without cloning dead book N75-N183"
+  ],
+  "wakeparent": "QUIET"
+}
