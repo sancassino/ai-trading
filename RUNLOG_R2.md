@@ -2502,3 +2502,16 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD. No new trial. Skip N75–N183 + UK100 5d morning / JP225 1d afternoon / HK50 5d Europe / AUS200 afternoon 1d / GBPCAD 5d / EURNOK 1d / AUDJPY 5d / EURAUD 1d fade / USDHKD peg skip / COFFEE 1d reversal / COCOA open-hour / CORN / DBA / FRA40 US-open NY-impulse / BTC-ETH EU-morning / USOIL prior-5d reversal / USDCAD prior-1d continuation / US30 Europe inventory / US500-US100 Europe same-window / GBPUSD London-fix / EURUSD-AUDUSD fix / LQD→US500 HYG clone / EWY→EURUSD / US2000 NY-impulse / EURCHF London-haven / US500-US30-US100 same-window NY-fade / GBPCHF-USDCHF-AUDCHF London-AM / US500 cash-close / AUD NY-fade / NZD same-window / XLK / EQW / DXY-stress / BWX / EW + prior listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. P1 ftmo.py validation not opened for U2 this cycle (CTO spoor 5; U2 IDLE per v118). Prio-1 remains **HOLD Strateeg** until honest new `COSTS_FTMO.csv` row (Debian/cost evidence per C-050) **or** S2 Lane-A survivor on authorized leg → PASS→PREREG.
 
 **Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
+
+
+## Cyclus 02:15 CEST (2026-10-04) — D-090 IDLE absorb NEXT_STEPS v119 (hold; OPEN empty; TRIAL 471)
+
+**Branch:** `claude/uitvoerder2-r`. Freeze **OFF**. Reserve 2025→ **niet aangeraakt**.
+
+**Absorb:** ort-merge `origin/main` `313ebb5` (NEXT_STEPS **v119**; Manager 02:14 CEST; absorb CTO **C-051** `484a614` confirm cost exhaustion HOLD; U2 prior tip `3e33b41` IDLE; Faraday N180–N183 unchanged; C-048 nine closed; HOLD) into tip post-`3e33b41` (prior IDLE absorb v118). N161 XLK_TECH_SECTOR_STRESS FAIL_T (**TRIAL 471**) remains last formal trial. Formal OPEN **empty**; no live PREREG.
+
+**Faraday/CTO note (not gated):** Faraday tip `1af4f76` idle / last results `1e5a7f1` (N180–N183 FAIL; C-048 nine closed) — **no PASS→PREREG**. CTO **C-051** `484a614`: reconfirm C-050 exhaustion HOLD; `ok_new_authorize = 0`; 0 CTO trials; OPEN empty; FREEZE OFF. Prior C-050 `fdc4614` / C-049 S2 EWC/XLU **DEFER_NOT_PROMOTE** stay. USDHKD soft-skip (not a trial). U2 does **not** invent OPEN or start any N* trial.
+
+**Action:** IDLE/HOLD. No new trial. Skip N75–N183 + UK100 5d morning / JP225 1d afternoon / HK50 5d Europe / AUS200 afternoon 1d / GBPCAD 5d / EURNOK 1d / AUDJPY 5d / EURAUD 1d fade / USDHKD peg skip / COFFEE 1d reversal / COCOA open-hour / CORN / DBA / FRA40 US-open NY-impulse / BTC-ETH EU-morning / USOIL prior-5d reversal / USDCAD prior-1d continuation / US30 Europe inventory / US500-US100 Europe same-window / GBPUSD London-fix / EURUSD-AUDUSD fix / LQD→US500 HYG clone / EWY→EURUSD / US2000 NY-impulse / EURCHF London-haven / US500-US30-US100 same-window NY-fade / GBPCHF-USDCHF-AUDCHF London-AM / US500 cash-close / AUD NY-fade / NZD same-window / XLK / EQW / DXY-stress / BWX / EW + prior listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. P1 ftmo.py validation not opened for U2 this cycle (CTO spoor 5; U2 IDLE per v119). Prio-1 remains **HOLD Strateeg** until honest new `COSTS_FTMO.csv` row (Debian/cost evidence per C-050/C-051) **or** S2 Lane-A survivor on authorized leg → PASS→PREREG.
+
+**Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
