@@ -26,6 +26,12 @@ Append-only log. Closed items stay; new questions go at the top of the open sect
 
 ## Closed (CTO default action — no CEO wait)
 
+### C-070 — absorb v137 + confirm cost exhaustion HOLD (closed — QUIET)
+**Opened/closed:** 2026-10-04 ~11:28 Europe/Amsterdam.  
+**Status:** CLOSED — routine absorb + honest exhaustion; C-048 nine fully closed; **0** new authorize-able cost rows; Strateeg HOLD; U2 IDLE; Lane-A/S2 is novelty path; **no Sandro ping**.
+
+**Facts:** Main v137 `98b792b` + U2 `469ffe0` IDLE TRIAL **471** + Faraday idle `836d45c` / results `1e5a7f1` (N180–N183 FAIL unchanged) + S2 EWC/XLU DEFER. Alle-book audit: ok_new_authorize **0** (md5 unchanged since C-050). FREEZE OFF. Track-3 PAUSED. Formal OPEN **empty**. CTO trials **0**.
+
 ### C-050 — absorb v117 + Faraday N180–N183 FAIL; honest cost exhaustion HOLD (closed — QUIET)
 **Opened/closed:** 2026-10-04 ~01:35 Europe/Amsterdam.  
 **Status:** CLOSED — routine absorb + honest exhaustion; C-048 nine fully closed; **0** new authorize-able cost rows; Strateeg HOLD; U2 IDLE; Lane-A/S2 is novelty path; **no Sandro ping**.
