@@ -1,0 +1,11 @@
+{
+  "reconfirm": true,
+  "source": "results/cto/c050_absorb_v117_hold/audit_exhaustion.json",
+  "prior_pointer": "results/cto/c061_absorb_v128_hold/exhaustion_pointer.json",
+  "n_ok_new_authorize": 0,
+  "costs_rows": 29,
+  "costs_ftmo_md5": "5ac8f809dea43b1a6577db245a1e2bec",
+  "costs_alle_md5": "c280810150e0bb65db8d745d9d056d35",
+  "ftmo_specs_2026_10_01_md5": "9dcaa15d38c3e1a23bca529199ac14d3",
+  "note": "No alle / COSTS_FTMO.csv / ftmo_specs delta since C-050; C-051/C-052/C-053/C-054/C-055/C-056/C-057/C-058/C-059/C-060/C-061 reconfirm unchanged; HOLD without rewriting audit."
+}
