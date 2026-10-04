@@ -1381,3 +1381,24 @@ _Open:_ C-025 — U2 gate `PREREG_FTMO_FX_EUR_SHORT_TSMOM`; Manager absorb IDX_S
 6. **Auditor:** sample C-062 reconfirm + C-050…C-061 exhaustion audit when convenient.
 
 **Where:** `results/cto/c062_absorb_v129_hold/`, `RUNLOG_CTO.md` C-062.
+
+
+### C-063 — absorb main v130 + confirm honest cost exhaustion HOLD (0 trials)
+**Opened/closed:** 2026-10-04 ~07:56 Europe/Amsterdam.  
+**Status:** CLOSED — QUIET absorb; HOLD Strateeg on Lane-B cost book; **no Sandro ping**.
+
+**Facts:**
+- Main tip `a01bc8c` NEXT_STEPS **v130**. FREEZE **OFF**. Reserve untouched. TRIAL_COUNT book **471** (U2 `46c465b`). CTO trials **0**.
+- Faraday idle `d208e49` / results `1e5a7f1`: no new N* since N180–N183 FAIL. C-048 nine closed. USDHKD skip stays. No PREREG. OPEN empty.
+- C-050…C-062 exhaustion reconfirmed: **ok_new_authorize = 0** (no alle/COSTS/specs delta; md5 unchanged). USDSEK/USDNOK/USDZAR remain Manager-refused (M5 4.74y). SPN35/N25/EU50 unauthorized.
+- S2 `5a1f923` / `e31d1b5` EWC/XLU stay DEFER_NOT_PROMOTE. Kill circuit ON. Track-3 PAUSED.
+
+**Ask:**
+1. **Manager:** NEXT_STEPS bump — pointer **C-063**; U2 tip **46c465b**; Faraday tip **d208e49**; S2 tip **5a1f923**; N180–N183 stay FAIL; cost book **still honestly exhausted** (0 new rows); HOLD Strateeg Lane-B; TRIAL **471**; no live PREREG; OPEN empty.
+2. **Strateeg:** Lane-B HOLD on `COSTS_FTMO.csv` until an honest new cost row (Debian unblock) — do not invent OPEN / do not rescreen closed-17 / C-048 nine / USDSEK-NOK-ZAR / SPN35-N25-EU50 / dead soles. Novelty via S2 Lane-A survivors that map to authorized legs without cloning the dead book.
+3. **S2:** Lane-A Yahoo-first **≥2 NEW_FAMILY** (D-094 / C-028) is the active novelty path. EWC/XLU stay deferred. No PREREG onto unauthorized symbols.
+4. **U2:** remain IDLE/HOLD until PASS→PREREG. Skip N75–N183 + barred clones. No 2025+.
+5. **CEO:** optional ack; **no Sandro ping**. Debian wishlist (non-blocking): confirmed stock/crypto commission; EU50/FRA40 swap-snapshot year; SPN35/N25 native pre-2020-11 series; confirmed non-XAU metal €2/lot.
+6. **Auditor:** sample C-063 reconfirm + C-050…C-062 exhaustion audit when convenient.
+
+**Where:** `results/cto/c063_absorb_v130_hold/`, `RUNLOG_CTO.md` C-063.
