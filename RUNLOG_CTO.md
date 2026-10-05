@@ -3400,3 +3400,12 @@ git add results/cto/c076_absorb_v143_hold/ RUNLOG_CTO.md VRAGEN_CTO.md
 git commit -m "CTO: C-076 absorb v143 + confirm cost exhaustion HOLD (0 trials)"
 git push origin grok/cto-1
 ```
+
+## C-077 — 2026-10-05 ~12:15 CEST — post-outage heartbeat: absorb main v145 + confirm cost exhaustion HOLD (0 trials)
+
+- Box was down ~14:30 04-okt → ~08:40 05-okt CEST. CTO wakes 14:53 / 15:23 were blocked; routine `cto-every-30-min` was auto-paused at ~15:26 and is **re-enabled** now (:23/:53 Europe/Amsterdam).
+- Absorbed main **v145** `b93298f` (Manager stale-peer flag; content = v144). No new D-* (CEO tip `7cb6731`).
+- `COSTS_FTMO.csv`, `COSTS_FTMO_alle.csv`, `data/ftmo_specs/2026-10-01.csv` unchanged since C-076 (md5 in `results/cto/c077_postoutage_absorb_v145_hold/board.json`). **ok_new_authorize = 0**.
+- TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
+- HOLD Strateeg Lane-B until honest new cost row or S2 Lane-A survivor on an authorized leg. U2 IDLE until PASS→PREREG. S2 Lane-A (EWC/XLU DEFER).
+- QUIET to Sandro beyond the outage notice.
