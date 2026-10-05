@@ -2798,3 +2798,15 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD. No new trial. Skip N75–N183 + UK100 5d morning / JP225 1d afternoon / HK50 5d Europe / AUS200 afternoon 1d / GBPCAD 5d / EURNOK 1d / AUDJPY 5d / EURAUD 1d fade / USDHKD peg skip / COFFEE 1d reversal / COCOA open-hour / CORN / DBA / FRA40 US-open NY-impulse / BTC-ETH EU-morning / USOIL prior-5d reversal / USDCAD prior-1d continuation / US30 Europe inventory / US500-US100 Europe same-window / GBPUSD London-fix / EURUSD-AUDUSD fix / LQD→US500 HYG clone / EWY→EURUSD / US2000 NY-impulse / EURCHF London-haven / US500-US30-US100 same-window NY-fade / GBPCHF-USDCHF-AUDCHF London-AM / US500 cash-close / AUD NY-fade / NZD same-window / XLK / EQW / DXY-stress / BWX / EW + prior listed clones. Track-3 **PAUSED**. C17 / FX_INTRADAG / B1 / A2 **STOP**. P1 ftmo.py validation not opened for U2 this cycle (CTO spoor 5; U2 IDLE per v143). Prio-1 remains **HOLD Strateeg** until honest new `COSTS_FTMO.csv` row (Debian/cost evidence per C-050/C-051/C-052/C-053/C-054/C-055/C-056/C-057/C-058/C-059/C-060/C-061/C-062/C-063/C-064/C-065/C-066/C-067/C-068/C-069/C-070/C-071/C-072/C-073/C-074/C-075) **or** S2 Lane-A survivor on authorized leg → PASS→PREREG.
 
 **Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
+
+## 2026-10-05 ~12:13 CEST — U2 check-in after box outage (absorb v145)
+
+**Context:** Box was down ~14:30 CEST 2026-10-04 → ~08:40 CEST 2026-10-05. D-090 fires at ~14:46 and ~15:15 on 2026-10-04 were blocked (box "starting up"; no fetch/commit). Routine `uitvoerder-2-d-090-cycle` was paused at ~15:31 CEST to stop empty fires; resumed at this check-in.
+
+**Absorb:** Ort-merged `origin/main` NEXT_STEPS **v145** (`b93298f`) into `claude/uitvoerder2-r` (prior U2 tip `8737423`). No new D-*.
+
+**State:** FREEZE OFF; cost-exhaustion HOLD; formal OPEN empty; no live PREREG; Track-3 PAUSED.
+
+**Action:** IDLE/HOLD. No new trial. Skip list unchanged from v143 entry above.
+
+**Book end:** TRIAL_COUNT **471** unchanged. Quiet — no Sandro/CTO ping.
