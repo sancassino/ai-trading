@@ -1,0 +1,17 @@
+{
+ "c": "C-082",
+ "ts": "2026-10-05T17:33+02:00",
+ "main": "250cfae v150",
+ "faraday": "8979d5c 17:18 (recovered)",
+ "u2": "6c50fe7",
+ "s2": "dc5d386",
+ "ceo": "7cb6731",
+ "trial_count": 471,
+ "ok_new_authorize": 0,
+ "cost_md5_main": {
+  "COSTS_FTMO.csv": "76a571355a1e66714d480795fd24705e",
+  "COSTS_FTMO_alle.csv": "c280810150e0bb65db8d745d9d056d35",
+  "COSTS_FTMO_per_uur.csv": "5e7a2950fec23a733dc96505ea99dc73",
+  "COSTS_FTMO_alle_per_uur.csv": "c8a1c7de987e393f028189247c3ce8ff"
+ }
+}
