@@ -2830,3 +2830,13 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD. No new trial. Skip list unchanged. No 2025+ touched.
 
 **Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
+
+## 2026-10-05 ~13:51 CEST — D-090 cycle (IDLE/HOLD)
+
+**Fetch:** `origin/main` NEXT_STEPS **v147** (`dc82474`, Manager 13:35 — STALE flag on CTO `grok/cto-1` `6fc5b01`, v146 not absorbed; content = v146 cost-exhaustion HOLD; U2 `8132b28` listed fresh). Merged main into branch. BESLUITEN tip `upbeat-dirac-g2810q` `4753905` (CEO_LOG only; no new D-*). CTO still `6fc5b01` (C-077, 0 trials). Note: the 13:15 U2 slot did not complete (no commit); this cycle catches up.
+
+**State:** FREEZE OFF; cost-exhaustion HOLD (C-077, ok_new_authorize 0); formal OPEN empty; no live PREREG; Track-3 PAUSED. CTO staleness is Manager's escalation path (v147 ~14:05), not U2 scope.
+
+**Action:** IDLE/HOLD. No new trial. Skip list unchanged. No 2025+ touched.
+
+**Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
