@@ -1,0 +1,27 @@
+{
+  "task": "C-078",
+  "asof_cest": "2026-10-05T14:05+0200",
+  "decision": "heartbeat_clear_stale_flag_absorb_v146_v147_confirm_exhaustion_hold",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025_plus_touched": false,
+  "live_prereg": null,
+  "formal_open": [],
+  "freeze": "OFF",
+  "kill_circuit": "ON",
+  "track_3": "PAUSED",
+  "main_tip": "dc82474",
+  "main_version": "v147",
+  "absorbed": ["v146 a57e148", "v147 dc82474"],
+  "prior_cto": "6fc5b01",
+  "prior_c": "C-077",
+  "peers": {"U2": "bfc40bd", "Faraday": "0815761", "S2": "72df4b4", "CEO": "7cb6731"},
+  "cost_files_md5": {
+    "COSTS_FTMO.csv (grok/cto-1, incl C-048 rows)": "5ac8f809dea43b1a6577db245a1e2bec",
+    "COSTS_FTMO_alle.csv": "c280810150e0bb65db8d745d9d056d35",
+    "data/ftmo_specs/2026-10-01.csv": "9dcaa15d38c3e1a23bca529199ac14d3"
+  },
+  "cost_files_changed_since_c077": false,
+  "ok_new_authorize": 0,
+  "stale_note": "CTO wakes 12:31/12:54/13:30 ran but committed nothing (no delta); Manager v147 flagged stale. Policy from C-078: CTO pushes a heartbeat commit at least every wake-hour so Manager sees freshness."
+}
