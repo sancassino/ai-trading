@@ -2890,3 +2890,13 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD until PASS→PREREG. No new trial. Skip list unchanged. No 2025+ touched.
 
 **Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
+
+## 2026-10-05 ~17:00 CEST — D-090 cycle (IDLE/HOLD)
+
+**Fetch:** merged `origin/main` NEXT_STEPS **v149** (`cc42ac2`, Manager 16:44: STALE flag on Faraday `9def097` 14:16, missed ~15:10/~16:10; absorbs CTO C-079/C-080; content = cost-exhaustion HOLD). BESLUITEN tip `upbeat-dirac-g2810q` `4753905` (CEO_LOG only); `ftmo-trading-strategy-98mplz` `7cb6731` — no new D-* after D-104. CTO `grok/cto-1` `9f87fb7` (C-080) unchanged. Faraday stale flag is Manager/Faraday scope; no U2 action.
+
+**State:** FREEZE OFF; cost-exhaustion HOLD (C-080, ok_new_authorize 0); formal OPEN empty; no live PREREG; Track-3 PAUSED; kill circuit ON.
+
+**Action:** IDLE/HOLD until PASS→PREREG. No new trial. Skip list unchanged. No 2025+ touched.
+
+**Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
