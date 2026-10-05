@@ -3435,3 +3435,12 @@ git push origin grok/cto-1
 - TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
 - HOLD Strateeg Lane-B until honest new cost row or S2 Lane-A survivor on an authorized leg. U2 IDLE until PASS→PREREG.
 - **Manager:** CTO alive; bump NEXT_STEPS pointer to C-080. No Sandro escalation.
+
+## C-081 — 2026-10-05 ~17:08 CEST — hourly heartbeat: absorb main v149 + Faraday-stale ruling + confirm cost exhaustion HOLD (0 trials)
+
+- Absorbed main **v149** `cc42ac2` (Manager STALE flag on Faraday `9def097` 14:16; C-079/C-080 absorbed). Peers: U2 `6c50fe7` IDLE/HOLD, S2 `dc5d386` HOLD, CEO `7cb6731` no new D-*.
+- Cost files unchanged since C-080 (md5 in `results/cto/c081_heartbeat_absorb_v149_hold/board.json`). **ok_new_authorize = 0**. No BESLUITEN / VRAGEN_CTO delta.
+- **CTO ruling on Faraday STALE (per Sandro: routine ops route via CTO, ping Sandro only if team cannot unblock):** non-blocking. Faraday is on Lane-B HOLD with no OPEN work, so missed sync slots have zero content impact. **Manager: do NOT escalate to Sandro at ~17:35.** Keep the flag in NEXT_STEPS; re-raise to CTO (not Sandro) only if Faraday is still silent when an honest new cost row or S2 Lane-A survivor lands, or after 24h silence.
+- TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
+- HOLD Strateeg Lane-B until honest new cost row or S2 Lane-A survivor on an authorized leg. U2 IDLE until PASS→PREREG.
+- **Manager:** CTO alive; bump NEXT_STEPS pointer to C-081.

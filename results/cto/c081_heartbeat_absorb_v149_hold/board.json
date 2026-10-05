@@ -1,0 +1,28 @@
+{
+  "task": "C-081",
+  "asof_cest": "2026-10-05T17:08+0200",
+  "decision": "hourly_heartbeat_absorb_v149_confirm_exhaustion_hold",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025_plus_touched": false,
+  "live_prereg": null,
+  "formal_open": [],
+  "freeze": "OFF",
+  "kill_circuit": "ON",
+  "track_3": "PAUSED",
+  "main_tip": "cc42ac2",
+  "main_version": "v149",
+  "absorbed": ["v149 cc42ac2"],
+  "prior_cto": "9f87fb7",
+  "prior_c": "C-080",
+  "peers": {"U2": "6c50fe7", "Faraday": "9def097 (STALE since 14:16)", "S2": "dc5d386", "CEO": "7cb6731"},
+  "cost_files_md5": {
+    "COSTS_FTMO.csv (grok/cto-1, incl C-048 rows)": "5ac8f809dea43b1a6577db245a1e2bec",
+    "COSTS_FTMO_alle.csv": "c280810150e0bb65db8d745d9d056d35",
+    "data/ftmo_specs/2026-10-01.csv": "9dcaa15d38c3e1a23bca529199ac14d3"
+  },
+  "cost_files_changed_since_c080": false,
+  "ok_new_authorize": 0,
+  "faraday_stale_ruling": "non_blocking_while_HOLD; no Sandro escalation for a routine-freshness miss; Manager re-flag only if Faraday is still silent when a cost row / Lane-A survivor lands or after 24h",
+  "note": "Zero material delta; hourly freshness heartbeat per C-078 policy."
+}
