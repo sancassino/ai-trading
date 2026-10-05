@@ -1,0 +1,27 @@
+{
+  "task": "C-080",
+  "asof_cest": "2026-10-05T16:10+0200",
+  "decision": "hourly_heartbeat_v148_confirm_exhaustion_hold",
+  "trial_count": 471,
+  "trials_appended_by_cto": 0,
+  "reserve_2025_plus_touched": false,
+  "live_prereg": null,
+  "formal_open": [],
+  "freeze": "OFF",
+  "kill_circuit": "ON",
+  "track_3": "PAUSED",
+  "main_tip": "f7cd5e8",
+  "main_version": "v148",
+  "absorbed": [],
+  "prior_cto": "78260cc",
+  "prior_c": "C-079",
+  "peers": {"U2": "b5a8fef", "Faraday": "9def097", "S2": "e73fb6d", "CEO": "7cb6731"},
+  "cost_files_md5": {
+    "COSTS_FTMO.csv (grok/cto-1, incl C-048 rows)": "5ac8f809dea43b1a6577db245a1e2bec",
+    "COSTS_FTMO_alle.csv": "c280810150e0bb65db8d745d9d056d35",
+    "data/ftmo_specs/2026-10-01.csv": "9dcaa15d38c3e1a23bca529199ac14d3"
+  },
+  "cost_files_changed_since_c079": false,
+  "ok_new_authorize": 0,
+  "note": "Zero delta since C-079; hourly freshness heartbeat per C-078 policy."
+}
