@@ -586,3 +586,4 @@
 
 - 2026-10-05 12:15 CEST — post-recovery check-in. Box outage ~14:30 04-okt→08:40 05-okt; cycles 14:40–18:45 failed (no RUNLOG). HOLD still binds per NEXT_STEPS v145 `b93298f` (OPEN empty, TRIAL 471, no new authorized COSTS_FTMO symbol). Lane-A, no VOORSTEL/PREREG. Routine resumed.
 - 2026-10-05 12:42 CEST — hourly. HOLD still binds per NEXT_STEPS v146 `a57e148` (absorb C-077 `6fc5b01` cost-exhaustion; ok_new_authorize 0; COSTS_FTMO.csv unchanged; OPEN empty; TRIAL 471). No new screens, no VOORSTEL/PREREG. Quiet.
+- 2026-10-05 13:42 CEST — hourly: HOLD still binds (NEXT_STEPS v147 dc82474; CTO tip 6fc5b01 C-077 cost-exhaustion, ok_new_authorize=0; no new COSTS_FTMO.csv row; TRIAL 471; OPEN empty). Quiet, no VOORSTEL/PREREG.
