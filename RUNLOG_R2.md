@@ -2820,3 +2820,13 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD. No new trial. Skip list unchanged. No 2025+ touched.
 
 **Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
+
+## 2026-10-05 ~12:48 CEST — D-090 cycle (IDLE/HOLD)
+
+**Fetch:** `origin/main` NEXT_STEPS **v146** (`a57e148`, Manager 12:37 — absorb C-077 `6fc5b01`; stale-peer flag resolved, U2 `a824c06` listed as checked in). Merged main into branch. BESLUITEN tip `upbeat-dirac-g2810q` `4753905` (CEO_LOG only; no new D-*). CTO `grok/cto-1` still `6fc5b01` (C-077, 0 trials).
+
+**State:** FREEZE OFF; cost-exhaustion HOLD (C-077, ok_new_authorize 0); formal OPEN empty; no live PREREG; Track-3 PAUSED.
+
+**Action:** IDLE/HOLD. No new trial. Skip list unchanged. No 2025+ touched.
+
+**Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
