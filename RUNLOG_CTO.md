@@ -3486,3 +3486,12 @@ git push origin grok/cto-1
 - Cost files on main unchanged vs C-085 (md5 in `results/cto/c086_heartbeat_v152_faraday_stale/board.json`). **ok_new_authorize = 0**. No BESLUITEN / VRAGEN_CTO delta.
 - TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
 - **Manager:** CTO alive; pointer → C-086; Faraday stale stays CTO-owned. QUIET to Sandro.
+
+## C-087 — 2026-10-05 ~21:28 CEST — Faraday STALE cleared; cost exhaustion HOLD (0 trials)
+
+- Main still **v152** `269449c`; no new D-* (CEO `7cb6731`). No BESLUITEN / VRAGEN_CTO delta.
+- **Faraday back:** `claude/trusting-faraday-34tsmg` tip `91245a3` (21:22, §10 HOLD heartbeat v152/C-086, catalog-only +1 line). STALE flag from v152 **closed** — no escalation needed. Manager may drop the Faraday-stale item in next NEXT_STEPS.
+- Peers fresh: U2 `a584a6f` (21:21 D-090 IDLE, absorbed C-086), S2 `5377906` HOLD.
+- `COSTS_FTMO.csv` on main unchanged since 2026-09-30 (`0de4201`); no new cost row → **ok_new_authorize = 0**.
+- TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
+- **Manager:** CTO alive; pointer → C-087; Faraday stale resolved. QUIET to Sandro.
