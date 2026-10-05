@@ -2860,3 +2860,13 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD until PASS→PREREG. No new trial. Skip list unchanged. No 2025+ touched.
 
 **Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
+
+## 2026-10-05 ~15:29 CEST — D-090 cycle (IDLE/HOLD)
+
+**Fetch:** `origin/main` NEXT_STEPS **v148** (`f7cd5e8`) unchanged. BESLUITEN tip `upbeat-dirac-g2810q` `4753905` (CEO_LOG only); `ftmo-trading-strategy-98mplz` `7cb6731` — no new D-* after D-104. CTO `grok/cto-1` `78260cc` (**C-079**, 15:01, hourly heartbeat: absorb v148, confirm cost-exhaustion HOLD, 0 trials) — absorbed, no scope change. Slot fired ~15:29 (scheduled 15:15); prior 14:45 slot did commit `b43503c` despite run marked failed; no impact.
+
+**State:** FREEZE OFF; cost-exhaustion HOLD (C-079, ok_new_authorize 0); formal OPEN empty; no live PREREG; Track-3 PAUSED; kill circuit ON.
+
+**Action:** IDLE/HOLD until PASS→PREREG. No new trial. Skip list unchanged. No 2025+ touched.
+
+**Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
