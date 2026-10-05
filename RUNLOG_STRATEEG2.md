@@ -592,3 +592,4 @@
 - 2026-10-05 16:47 CEST — hourly: HOLD still binds (NEXT_STEPS v149 cc42ac2; CTO C-080 9f87fb7 heartbeat cost-exhaustion; ok_new_authorize=0; TRIAL 471; OPEN empty; no new COSTS_FTMO.csv row). Quiet, no VOORSTEL/PREREG.
 - 2026-10-05 17:53 CEST — HOLD still binds (NEXT_STEPS v151 1b95404; CTO C-082 68c49c6 cost-exhaustion, ok_new_authorize=0; COSTS_FTMO.csv unchanged since 0de4201; Faraday recovered; TRIAL 471; OPEN empty). Quiet, no VOORSTEL/PREREG.
 - 2026-10-05 ~18:54 CEST — hourly: HOLD still binds (NEXT_STEPS v151 `1b95404`; CTO C-083 `c566744` cost-exhaustion; ok_new_authorize=0; COSTS_FTMO.csv unchanged since `79d09e0`; TRIAL 471; OPEN empty). Quiet, no VOORSTEL/PREREG.
+- 2026-10-05 19:48 CEST — hourly: HOLD still binds (NEXT_STEPS main v151 1b95404; CTO C-084 584e14e cost-exhaustion heartbeat; ok_new_authorize=0; COSTS_FTMO.csv unchanged since 79d09e0; TRIAL 471; OPEN empty). No VOORSTEL/PREREG; quiet.
