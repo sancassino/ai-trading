@@ -24,3 +24,19 @@ forward_portfolio[1]: 1 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 1
 forward_portfolio[2]: 1 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 1
 port3 forward: 1 nieuwe dag(en)
 port4 forward: 1 nieuwe dag(en)
+To https://github.com/sancassino/ai-trading.git
+ ! [rejected]        HEAD -> main (fetch first)
+error: failed to push some refs to 'https://github.com/sancassino/ai-trading.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+/home/sandro_cassino/ai-trading/forward_portfolio.py:104: RuntimeWarning: Mean of empty slice
+  avg = np.nanmean(ks * X, axis=0)
+/home/sandro_cassino/ai-trading/catalogus/C33_trend_lowvol.py:13: RuntimeWarning: divide by zero encountered in divide
+  return hold_monthly(s * np.minimum(3.0, 0.10 / sg) * calm, month_end(df["date"]))
+forward_portfolio[1]: 1 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 2
+forward_portfolio[2]: 1 nieuwe dag(en) gelogd (vanaf 2026-10-01); totaal 2
+port3 forward: 1 nieuwe dag(en)
+port4 forward: 1 nieuwe dag(en)
