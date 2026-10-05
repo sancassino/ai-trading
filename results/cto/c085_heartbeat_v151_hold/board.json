@@ -1,0 +1,17 @@
+{
+ "c": "C-085",
+ "ts": "2026-10-05T20:01+02:00",
+ "main": "1b95404 v151",
+ "faraday": "498444b",
+ "u2": "baacbc4",
+ "s2": "3f95c08",
+ "ceo": "7cb6731",
+ "trial_count": 471,
+ "ok_new_authorize": 0,
+ "cost_md5_main": {
+  "COSTS_FTMO.csv": "76a571355a1e66714d480795fd24705e",
+  "COSTS_FTMO_alle.csv": "c280810150e0bb65db8d745d9d056d35",
+  "COSTS_FTMO_per_uur.csv": "5e7a2950fec23a733dc96505ea99dc73",
+  "COSTS_FTMO_alle_per_uur.csv": "c8a1c7de987e393f028189247c3ce8ff"
+ }
+}
