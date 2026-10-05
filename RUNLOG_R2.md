@@ -2910,3 +2910,13 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 **Action:** IDLE/HOLD until PASS→PREREG. No new trial. Skip list unchanged. No 2025+ touched.
 
 **Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
+
+## 2026-10-05 ~17:51 CEST — D-090 cycle (IDLE/HOLD)
+
+**Fetch:** merged `origin/main` NEXT_STEPS **v151** (`1b95404`, Manager 17:42: Faraday recovered `8979d5c` 17:18, STALE flag closed, Sandro routine-check withdrawn; absorbs CTO C-082 `68c49c6` HOLD — new routing rule: HOLD-only agent staleness → CTO, not Sandro, unless >24h or blocking). BESLUITEN tip `upbeat-dirac-g2810q` `4753905` (CEO_LOG only); no new D-* after D-104.
+
+**State:** FREEZE OFF; cost-exhaustion HOLD (C-082, ok_new_authorize 0); formal OPEN empty; no live PREREG; Track-3 PAUSED; kill circuit ON.
+
+**Action:** IDLE/HOLD until PASS→PREREG. No new trial. Skip list unchanged. No 2025+ touched.
+
+**Book end:** TRIAL_COUNT **471** unchanged (`catalogus/TRIALS.csv` untouched). Quiet — no Sandro/CTO ping.
