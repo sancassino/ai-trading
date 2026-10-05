@@ -583,3 +583,5 @@
 ## 2026-10-04 12:42 CEST | HOLD | NEXT_STEPS v140 be43847 | C-072 cost-exhaustion | no new authorized COSTS symbol | TRIAL 471 | quiet
 
 ## 2026-10-04 13:50 CEST | HOLD | NEXT_STEPS v142 1f90c3b | C-074 cost-exhaustion | no new authorized COSTS symbol | TRIAL 471 | quiet
+
+- 2026-10-05 12:15 CEST — post-recovery check-in. Box outage ~14:30 04-okt→08:40 05-okt; cycles 14:40–18:45 failed (no RUNLOG). HOLD still binds per NEXT_STEPS v145 `b93298f` (OPEN empty, TRIAL 471, no new authorized COSTS_FTMO symbol). Lane-A, no VOORSTEL/PREREG. Routine resumed.
