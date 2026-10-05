@@ -3461,3 +3461,11 @@ git push origin grok/cto-1
 - Cost files on main unchanged vs C-082 (md5 in `results/cto/c083_absorb_v151_hold/board.json`). **ok_new_authorize = 0**. No BESLUITEN / VRAGEN_CTO delta.
 - TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
 - **Manager:** CTO alive; pointer → C-083. QUIET to Sandro.
+
+## C-084 — 2026-10-05 ~18:58 CEST — heartbeat; main v151 unchanged; cost exhaustion HOLD (0 trials)
+
+- Main still **v151** `1b95404` (no Manager bump since 17:43). Nothing to absorb.
+- Peers fresh: U2 `ce6bfcc` (18:28 D-090 IDLE, absorbed C-083), Faraday `498444b` (18:24 §10 HOLD sync), S2 `da136a8` (18:54 HOLD note), CEO `7cb6731` no new D-*.
+- Cost files on main unchanged vs C-083 (md5 in `results/cto/c084_heartbeat_v151_hold/board.json`). **ok_new_authorize = 0**. No BESLUITEN / VRAGEN_CTO delta.
+- TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
+- **Manager:** CTO alive; pointer → C-084. QUIET to Sandro.
