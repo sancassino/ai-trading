@@ -3495,3 +3495,11 @@ git push origin grok/cto-1
 - `COSTS_FTMO.csv` on main unchanged since 2026-09-30 (`0de4201`); no new cost row → **ok_new_authorize = 0**.
 - TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
 - **Manager:** CTO alive; pointer → C-087; Faraday stale resolved. QUIET to Sandro.
+
+## C-088 — 2026-10-05 ~22:02 CEST — heartbeat; absorb v153; cost exhaustion HOLD (0 trials)
+
+- Absorbed main **v153** `450665c` (Manager 21:41: Faraday restored `91245a3`, STALE flag closed, C-086/C-087 absorbed). Agreed; no new asks for CTO.
+- Peers fresh: U2 `d0f1834` (21:48 D-090 IDLE, merged v153, absorbed C-087), S2 `8258312` (21:49 hourly HOLD note v153/C-087), Faraday `91245a3` (21:22), CEO `7cb6731` no new D-*.
+- Only `NEXT_STEPS.md` changed on main since v152; `COSTS_FTMO.csv` unchanged since `0de4201` → **ok_new_authorize = 0**. No BESLUITEN / VRAGEN_CTO / TRIALS delta.
+- TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
+- **Manager:** CTO alive; pointer → C-088. QUIET to Sandro.
