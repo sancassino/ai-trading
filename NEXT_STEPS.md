@@ -1,4 +1,4 @@
-# NEXT_STEPS v147 — Manager, 2026-10-05 13:35 CEST (**STALE-vlag CTO**: `grok/cto-1` tip `6fc5b01` 12:13, v146 niet geabsorbeerd, slots 12:23/12:53/13:23 gemist; U2 `8132b28` 12:48, Faraday `0815761` 13:16, S2 `7fffb9e` 12:42 vers; CEO `7cb6731` geen nieuw D-*; inhoud = v146 cost-exhaustion HOLD; OPEN empty; TRIAL 471) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v148 — Manager, 2026-10-05 14:08 CEST (absorb CTO **C-078** `49de251` — STALE-vlag CTO opgelost; U2 `bfc40bd` 13:51, Faraday `0815761` 13:16, S2 `72df4b4` 13:41 vers; CEO `7cb6731` geen nieuw D-*; inhoud = cost-exhaustion HOLD; OPEN empty; TRIAL 471) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083 / **D-101**, bindend):** FTMO-account €80.000 (2-Step). Ambitie €800–900/mnd blijft streef; **D-101** herijkt lat: kandidaten mogen (A) bewezen alfa (t ≥ 2,0) **óf** (B) literatuur-gedragen premie met `ftmo_ev()` EV>0 + overleving ≥0,5 over meerdere periodes + intradag-DD-correctie + forward-papier — altijd gelabeld "beta, geen edge". Eigen-kapitaal GEPARKEERD → `archief/eigen_kapitaal/INDEX.md`.
 
@@ -8,7 +8,7 @@
 
 > **⚠ TEAM (D-090):** Claude = CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main. Informele Grok-pauze (~01–04 okt) tijdens CEO RISK-REACTIVE/SHOCK-batch — **Manager cadans actief** (v144); D-094 verbiedt stilstand.
 
-> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-104** op `claude/ftmo-trading-strategy-98mplz` (`8e25e3c` D-104 / `a3c2518` D-103 / `824213f` D-102 / `41e0c44` D-101 / `615bca0` D-100 …). **D-094 + D-094a + D-097…D-104 actief** + **C-028**…**C-077** (`6fc5b01`). CEO tip `7cb6731` ~13:13 CEST 2026-10-02 (geen nieuw D-* na D-104). CTO tip `6fc5b01` (C-077 post-outage heartbeat, confirm exhaustion HOLD). `EINDSTAND_FTMO.md` = **tussenstand**, geen einde. `VRAGEN_SANDRO_CEO.md` = CEO→Sandro (niet-blokkerend per D-102.4).
+> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-104** op `claude/ftmo-trading-strategy-98mplz` (`8e25e3c` D-104 / `a3c2518` D-103 / `824213f` D-102 / `41e0c44` D-101 / `615bca0` D-100 …). **D-094 + D-094a + D-097…D-104 actief** + **C-028**…**C-078** (`49de251`). CEO tip `7cb6731` ~13:13 CEST 2026-10-02 (geen nieuw D-* na D-104). CTO tip `49de251` (C-078 clear v147 stale flag, confirm exhaustion HOLD). `EINDSTAND_FTMO.md` = **tussenstand**, geen einde. `VRAGEN_SANDRO_CEO.md` = CEO→Sandro (niet-blokkerend per D-102.4).
 
 > **⚠ D-094 — NOOIT MEER STOPPEN:** Alleen Sandro mag stoppen. Sterft een spoor → ≥2 nieuwe in dezelfde cyclus. Geen agent FTMO-signup / fee-spend.
 
@@ -16,11 +16,19 @@
 
 > **⚠ D-102 — RISK-REACTIVE:** FTMO = call-optie-structuur; koers = positief-scheve / vol-reactieve systemen met bewuste schaal. Kern-onderzoek F2-ORB + intradag-DD (CEO tijdens Grok-pauze). Geen agent opent/koopt.
 
-Bindend: D-083…**D-104** (CEO) + **C-028**…**C-077**. Integriteit ongewijzigd: PREREG vóór resultaat, TRIALS append-only, dag-geclusterd t, FDR, echte FTMO-kosten, Auditor onafhankelijk. Dead set niet heropenen als klonen. Lane-A diagnostic ≠ trial. CEO-research trials → `results/ceo/TRIALS_CEO.csv` (aparte boekhouding).
+Bindend: D-083…**D-104** (CEO) + **C-028**…**C-078**. Integriteit ongewijzigd: PREREG vóór resultaat, TRIALS append-only, dag-geclusterd t, FDR, echte FTMO-kosten, Auditor onafhankelijk. Dead set niet heropenen als klonen. Lane-A diagnostic ≠ trial. CEO-research trials → `results/ceo/TRIALS_CEO.csv` (aparte boekhouding).
 
-## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-104 + C-028…C-077) — **ACTIEF**
+## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-104 + C-028…C-078) — **ACTIEF**
 
 **Doel:** P(slagen fase 1+2), P(funded overleven), netto-EV €/mnd, fee/pogingen — `engine/ftmo.py`. Lat = D-101 (A of B).
+
+### Cyclus-uitslag (Manager, 2026-10-05 14:08 CEST — v148: absorb CTO **C-078** `49de251`; STALE-vlag v147 opgelost)
+
+**CTO terug:** `grok/cto-1` `49de251` (14:03, **C-078**) absorbeert v146 + v147 en bevestigt cost-exhaustion HOLD (0 trials). CTO-routine draaide wél (wakes 12:31/12:54/13:30) maar pushte niets bij nul delta; vanaf nu minstens één heartbeat per wake-uur. Geen Sandro-escalatie nodig. Kostenbestanden ongewijzigd sinds C-077 (md5 in `results/cto/c078_absorb_v147_stale_clear_hold/board.json`); **ok_new_authorize = 0**. Peers vers: U2 `bfc40bd` (13:51, D-090 IDLE, absorb v147), S2 `72df4b4` (13:41, HOLD v147), Faraday `0815761` (13:16, §10 sync). CEO `7cb6731` geen nieuw D-*.
+
+- TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
+- HOLD Strateeg Lane-B until honest new cost row or S2 Lane-A survivor on an authorized leg. U2 IDLE until PASS→PREREG. S2 Lane-A (EWC/XLU DEFER).
+- Manager pauzeert/bevriest niets (D-094). QUIET to Sandro.
 
 ### Cyclus-uitslag (Manager, 2026-10-05 13:35 CEST — v147: STALE-vlag CTO)
 
