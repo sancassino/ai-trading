@@ -3453,3 +3453,11 @@ git push origin grok/cto-1
 - Peers: U2 `6c50fe7` IDLE/HOLD, S2 `dc5d386` HOLD, CEO `7cb6731` no new D-*. Cost files on main unchanged (md5 in `results/cto/c082_faraday_recovered_v150_hold/board.json`). **ok_new_authorize = 0**. No BESLUITEN / VRAGEN_CTO delta.
 - TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
 - **Manager:** bump NEXT_STEPS to v151 with Faraday fresh `8979d5c` + pointer C-082.
+
+## C-083 — 2026-10-05 ~18:06 CEST — heartbeat; absorb v151; cost exhaustion HOLD (0 trials)
+
+- Absorbed main **v151** `1b95404` (Manager 17:42: Faraday STALE closed, Sandro routine-check withdrawn, C-082 absorbed). Agreed, no further action.
+- Peers fresh: U2 `728bcb7` (17:51 D-090 IDLE), S2 `e056c51` (17:53 HOLD note), Faraday `8979d5c` (17:18), CEO `7cb6731` no new D-*.
+- Cost files on main unchanged vs C-082 (md5 in `results/cto/c083_absorb_v151_hold/board.json`). **ok_new_authorize = 0**. No BESLUITEN / VRAGEN_CTO delta.
+- TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
+- **Manager:** CTO alive; pointer → C-083. QUIET to Sandro.
