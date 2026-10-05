@@ -1,4 +1,4 @@
-# NEXT_STEPS v151 — Manager, 2026-10-05 17:42 CEST (**Faraday hersteld** `8979d5c` 17:18 → STALE-vlag v150 gesloten, Sandro-routine-check ingetrokken (Sandro al gemeld: opgelost); CTO **C-082** `68c49c6` (17:33) geabsorbeerd, HOLD 0 trials; U2 `ddb6ac4` 17:33, S2 `dc5d386` 16:47 vers; CEO `7cb6731` geen nieuw D-*; inhoud = cost-exhaustion HOLD; OPEN empty; TRIAL 471) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
+# NEXT_STEPS v152 — Manager, 2026-10-05 20:38 CEST (**Faraday STALE → CTO** per C-082: `claude/trusting-faraday-34tsmg` tip `498444b` 18:24, slots ~19:1x/~20:1x gemist (~2u15 stil); geen Sandro-escalatie (HOLD-only, <24u, niet blokkerend); CTO **C-083** `c566744` / **C-084** `584e14e` / **C-085** `834f9df` (20:00) geabsorbeerd, HOLD 0 trials; U2 `1b313b9` 20:22, S2 `3f95c08` 19:48 vers; CEO `7cb6731` geen nieuw D-*; inhoud = cost-exhaustion HOLD; OPEN empty; TRIAL 471) — FASE 3: FTMO-EV, doel = FTMO-prop €80k
 
 > **⚠ DOEL v3 (D-083 / **D-101**, bindend):** FTMO-account €80.000 (2-Step). Ambitie €800–900/mnd blijft streef; **D-101** herijkt lat: kandidaten mogen (A) bewezen alfa (t ≥ 2,0) **óf** (B) literatuur-gedragen premie met `ftmo_ev()` EV>0 + overleving ≥0,5 over meerdere periodes + intradag-DD-correctie + forward-papier — altijd gelabeld "beta, geen edge". Eigen-kapitaal GEPARKEERD → `archief/eigen_kapitaal/INDEX.md`.
 
@@ -8,7 +8,7 @@
 
 > **⚠ TEAM (D-090):** Claude = CEO + Auditor. Grok = CTO + Manager + Uitvoerder-2 + Strateeg + Strateeg-2. Kickoffs: `GROK_CTO_INSTRUCTIE.md` op main. Informele Grok-pauze (~01–04 okt) tijdens CEO RISK-REACTIVE/SHOCK-batch — **Manager cadans actief** (v144); D-094 verbiedt stilstand.
 
-> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-104** op `claude/ftmo-trading-strategy-98mplz` (`8e25e3c` D-104 / `a3c2518` D-103 / `824213f` D-102 / `41e0c44` D-101 / `615bca0` D-100 …). **D-094 + D-094a + D-097…D-104 actief** + **C-028**…**C-082** (`68c49c6`). CEO tip `7cb6731` ~13:13 CEST 2026-10-02 (geen nieuw D-* na D-104). CTO tip `68c49c6` (C-082 17:33: Faraday recovered, withdraw v150 Sandro-check, staleness HOLD-only agent → CTO, niet Sandro, tenzij >24u of blokkerend; confirm exhaustion HOLD, 0 trials). `EINDSTAND_FTMO.md` = **tussenstand**, geen einde. `VRAGEN_SANDRO_CEO.md` = CEO→Sandro (niet-blokkerend per D-102.4).
+> **⚠ BESLUITEN-bron:** tip `origin/claude/upbeat-dirac-g2810q:BESLUITEN.md` eindigt op D-086; D-087…**D-104** op `claude/ftmo-trading-strategy-98mplz` (`8e25e3c` D-104 / `a3c2518` D-103 / `824213f` D-102 / `41e0c44` D-101 / `615bca0` D-100 …). **D-094 + D-094a + D-097…D-104 actief** + **C-028**…**C-085** (`834f9df`). CEO tip `7cb6731` ~13:13 CEST 2026-10-02 (geen nieuw D-* na D-104). CTO tip `834f9df` (C-085 20:00 heartbeat, main v151 unchanged, confirm exhaustion HOLD, 0 trials; C-082 `68c49c6` routeringsregel: staleness HOLD-only agent → CTO, niet Sandro, tenzij >24u of blokkerend). `EINDSTAND_FTMO.md` = **tussenstand**, geen einde. `VRAGEN_SANDRO_CEO.md` = CEO→Sandro (niet-blokkerend per D-102.4).
 
 > **⚠ D-094 — NOOIT MEER STOPPEN:** Alleen Sandro mag stoppen. Sterft een spoor → ≥2 nieuwe in dezelfde cyclus. Geen agent FTMO-signup / fee-spend.
 
@@ -16,11 +16,21 @@
 
 > **⚠ D-102 — RISK-REACTIVE:** FTMO = call-optie-structuur; koers = positief-scheve / vol-reactieve systemen met bewuste schaal. Kern-onderzoek F2-ORB + intradag-DD (CEO tijdens Grok-pauze). Geen agent opent/koopt.
 
-Bindend: D-083…**D-104** (CEO) + **C-028**…**C-082**. Integriteit ongewijzigd: PREREG vóór resultaat, TRIALS append-only, dag-geclusterd t, FDR, echte FTMO-kosten, Auditor onafhankelijk. Dead set niet heropenen als klonen. Lane-A diagnostic ≠ trial. CEO-research trials → `results/ceo/TRIALS_CEO.csv` (aparte boekhouding).
+Bindend: D-083…**D-104** (CEO) + **C-028**…**C-085**. Integriteit ongewijzigd: PREREG vóór resultaat, TRIALS append-only, dag-geclusterd t, FDR, echte FTMO-kosten, Auditor onafhankelijk. Dead set niet heropenen als klonen. Lane-A diagnostic ≠ trial. CEO-research trials → `results/ceo/TRIALS_CEO.csv` (aparte boekhouding).
 
-## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-104 + C-028…C-080) — **ACTIEF**
+## 0. FASE 3 — FTMO-EV: prioriteiten (D-085…D-104 + C-028…C-085) — **ACTIEF**
 
 **Doel:** P(slagen fase 1+2), P(funded overleven), netto-EV €/mnd, fee/pogingen — `engine/ftmo.py`. Lat = D-101 (A of B).
+
+### Cyclus-uitslag (Manager, 2026-10-05 20:38 CEST — v152: Faraday STALE → CTO (C-082); absorb CTO C-083/C-084/C-085)
+
+**Faraday STALE (route → CTO, niet Sandro):** `claude/trusting-faraday-34tsmg` tip nog steeds `498444b` (18:24, §10 hourly HOLD sync v151/C-083). Routine `strateeg-hourly-ftmo` heeft ~19:1x en ~20:1x gemist (~2u15 stil). Per **C-082**: HOLD-only agent, <24u stil, blokkeert geen eerlijke nieuwe kostenrij of S2 Lane-A survivor → **CTO** handelt af (check-in/routine-health), geen Sandro-ping. **Actie Faraday:** check-in commit + absorb v152 (C-083…C-085). **Actie CTO:** neem Faraday-stale op in volgende heartbeat; escaleer zelf alleen bij >24u of blokkade. Inhoudelijk geen impact: N180–N183 blijven FAIL `1e5a7f1`.
+
+**CTO:** **C-083** `c566744` (18:05), **C-084** `584e14e` (18:58), **C-085** `834f9df` (20:00) = heartbeats, main v151 ongewijzigd, cost-exhaustion HOLD, **ok_new_authorize = 0**, 0 trials. Peers vers: U2 `1b313b9` (20:22, D-090 IDLE, absorb C-085), S2 `3f95c08` (19:48, hourly HOLD note v151/C-084). CEO `7cb6731` geen nieuw D-*. Geen wijzigingen in COSTS_FTMO / PREREG / TRIALS.
+
+- TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
+- HOLD Strateeg Lane-B until honest new cost row or S2 Lane-A survivor on an authorized leg. U2 IDLE until PASS→PREREG. S2 Lane-A (EWC/XLU DEFER).
+- Manager pauzeert/bevriest niets (D-094). QUIET to Sandro.
 
 ### Cyclus-uitslag (Manager, 2026-10-05 17:42 CEST — v151: Faraday hersteld, STALE-vlag gesloten; absorb CTO C-082)
 
@@ -103,13 +113,13 @@ Pre-screen FAIL this cycle: **geen nieuwe** (N180–N183 already in v116). **N17
 
 | Spoor | Inhoud | Eigenaar | Cadans-eis | Status 2026-10-05 |
 |------|--------|----------|------------|-------------------|
-| **1** | Kortere historie / walk-forward; ≥5j default; D-094a; pool N≥150; forward-papier | **Uitvoerder-2** | Gates + land PREREGs | **OPEN** — origin tip `6c50fe7` **IDLE/HOLD** (17:00 05-okt; merge v149; last trial `03a1a1d` N161 FAIL_T); TRIAL **471**; lagging main (OK while IDLE); next = HOLD; C-048 nine closed; C-081 confirm exhaustion HOLD; only after honest new cost row or Lane-A survivor PASS→PREREG |
+| **1** | Kortere historie / walk-forward; ≥5j default; D-094a; pool N≥150; forward-papier | **Uitvoerder-2** | Gates + land PREREGs | **OPEN** — origin tip `1b313b9` **IDLE/HOLD** (20:22 05-okt; absorb C-085, v151; last trial `03a1a1d` N161 FAIL_T); TRIAL **471**; lagging main (OK while IDLE); next = HOLD; C-048 nine closed; C-085 confirm exhaustion HOLD; only after honest new cost row or Lane-A survivor PASS→PREREG |
 | **2** | **Lane-B** FTMO markets → PREREG | **Strateeg** + **S2** feed | ≥3 screens/cyclus; **≥2/3 NEW_FAMILY** | **HOLD** — formal OPEN **empty**; C-048 nine closed N176–N183; C-077 reconfirm ok_new_authorize **0**; no NEW_FAMILY on the closed book; USDHKD skipped not OPEN; USDSEK/USDNOK/USDZAR refused; SPN35/N25/EU50 unauthorized; no closed-17 rescreen; no alle-book; wait for honest new cost row or Lane-A survivor |
 | **3** | Combineren weak+ / ensembles | **CTO** / CEO 3b | Parallel | **PAUSED** tot solo t≥2 (D-097.3) |
-| **4** | **Lane-A→B** + D-102 RISK-REACTIVE / D-103 SHOCK / D-100 carry | **Strateeg + S2** | ≥3; **≥2/3 NEW_FAMILY**; kill circuit | **OPEN** — S2 tip `dc5d386` (16:47 hourly HOLD v149/C-080; promote `e31d1b5`); EWC/XLU **C-049 DEFER_NOT_PROMOTE**; Lane-A = novelty path under C-082; no PREREG on unauthorized; Faraday `8979d5c` (17:18 §10 sync v150/C-081 HOLD; STALE-vlag gesloten; N180–N183 FAIL `1e5a7f1`); C-048 nine closed; kill circuit ON |
-| **5** | FTMO sizing / `recommend_scale` / lat-B `ftmo_ev` | **CTO** | Parallel | **OPEN** — **C-081** tip `f9131ce` (17:08 05-okt hourly heartbeat; 0 trials; confirm exhaustion HOLD; C-080 `9f87fb7` 16:10); formal OPEN empty; no live PREREG |
+| **4** | **Lane-A→B** + D-102 RISK-REACTIVE / D-103 SHOCK / D-100 carry | **Strateeg + S2** | ≥3; **≥2/3 NEW_FAMILY**; kill circuit | **OPEN** — S2 tip `3f95c08` (19:48 hourly HOLD v151/C-084; promote `e31d1b5`); EWC/XLU **C-049 DEFER_NOT_PROMOTE**; Lane-A = novelty path under C-085; no PREREG on unauthorized; Faraday `498444b` (18:24 §10 sync v151/C-083; **STALE** — ~19:1x/~20:1x gemist, gerouteerd naar CTO per C-082; N180–N183 FAIL `1e5a7f1`); C-048 nine closed; kill circuit ON |
+| **5** | FTMO sizing / `recommend_scale` / lat-B `ftmo_ev` | **CTO** | Parallel | **OPEN** — **C-085** tip `834f9df` (20:00 05-okt heartbeat; 0 trials; confirm exhaustion HOLD; C-084 `584e14e` 18:58, C-083 `c566744` 18:05); formal OPEN empty; no live PREREG; owns Faraday-stale follow-up (C-082) |
 | **6** | Lane-A data; PROXY_MAP; FTMO-M5; COSTS 166; HistData A-001; calendar-archief | Team / Sandro | Doorlopend | **OPEN** — COSTS_FTMO_alle **166** op main (`f0f9597`); A-001 OPEN; N110 DXYcash M5 gap noted; C-076: Debian commission / swap snapshots would unblock |
-| **7** | Coördinatie; novelty + kill circuit; D-*/C-* absorb | **Manager** | :05/:35 | **OPEN** — **v151** (Faraday hersteld 17:18, STALE gesloten; CTO C-082 geabsorbeerd; U2/S2 vers; box-outage 04→05-okt hersteld) |
+| **7** | Coördinatie; novelty + kill circuit; D-*/C-* absorb | **Manager** | :05/:35 | **OPEN** — **v152** (Faraday stale ~2u15 → CTO per C-082; CTO C-083…C-085 geabsorbeerd; U2/S2 vers) |
 
 **C-028…C-076 enforce (Manager):**
 - Novelty: Faraday `5e54500`+`1e5a7f1` closed the C-048 nine (N176–N183 FAIL, not FAIL_T). **C-076** reconfirm C-050/C-051/C-052/C-053/C-054/C-055/C-056/C-057/C-058/C-059/C-060/C-061/C-062/C-063/C-064/C-065/C-066/C-067/C-068/C-069/C-070/C-071/C-072/C-073/C-074/C-075 alle-book audit: ok_new_authorize **0** (honest exhaustion). USDHKD stays a pre-screen skip. USDSEK/USDNOK/USDZAR stay refused (M5 **4.74y**). SPN35/N25/EU50 unauthorized. No NEW_FAMILY on the closed book. Pipeline formal OPEN **empty**. No alle-book PASS. **HOLD** until honest new cost row (Debian/evidence) or Lane-A survivor on authorized leg. TRIAL stays **471**.
