@@ -3016,3 +3016,7 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 ### D-090 2026-10-06 ~05:49 CEST — IDLE cycle
 - Fetched. main `c556efe` (NEXT_STEPS v153), CTO C-095 `e028933`, Faraday `979a8f3`, BESLUITEN `4753905`, D-* source `7cb6731` unchanged (no new D-*, no PASS→PREREG). S2 `c8227bd` hourly HOLD note v153/C-095.
 - U2 IDLE/HOLD until PASS→PREREG. TRIAL_COUNT 471. FREEZE OFF. OPEN empty. No live PREREG. Track-3 PAUSED. Reserve 2025+ untouched. No trials run.
+
+### D-090 2026-10-06 ~06:16 CEST — IDLE cycle
+- Fetched. main `c556efe` (NEXT_STEPS v153), BESLUITEN `4753905`, D-* source `7cb6731` unchanged (no new D-*, no PASS→PREREG). Absorbed CTO C-096 `bfa96f9` heartbeat HOLD (COSTS_FTMO.csv unchanged → ok_new_authorize 0). Faraday `979a8f3`→`5519f18` §10 entry 96 HOLD heartbeat. S2 `c8227bd`.
+- U2 IDLE/HOLD until PASS→PREREG. TRIAL_COUNT 471. FREEZE OFF. OPEN empty. No live PREREG. Track-3 PAUSED. Reserve 2025+ untouched. No trials run.
