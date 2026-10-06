@@ -41,3 +41,13 @@ FX_USDCAD + 0
 FX_USDCHF + 0
 FX_NZDUSD + 0
 dagcorrelatie IEF vs BOND10_SYN 0.947; vol IEF 0.068 syn 0.073; CAGR IEF 0.0346 syn 0.0312
+2026-10-06 22:12Z update_daily: 150 nieuwe regels in 195 bestanden
+update_daily: 150 nieuwe regels in 195 bestanden
+FX_EURUSD + 1
+FX_GBPUSD + 1
+FX_USDJPY + 1
+FX_AUDUSD + 1
+FX_USDCAD + 1
+FX_USDCHF + 1
+FX_NZDUSD + 1
+dagcorrelatie IEF vs BOND10_SYN 0.947; vol IEF 0.068 syn 0.073; CAGR IEF 0.0346 syn 0.0312
