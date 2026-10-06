@@ -606,3 +606,4 @@
 - 2026-10-06 ~06:4x CEST — hourly: HOLD still binds (NEXT_STEPS main v153 450665c unchanged; CTO C-096 bfa96f9 heartbeat cost-exhaustion 0 trials; COSTS_FTMO.csv unchanged since 79d09e0; CEO no new D-*; TRIAL 471; OPEN empty). Quiet, no VOORSTEL/PREREG.
 - 2026-10-06 ~07:4x CEST — hourly: HOLD still binds (NEXT_STEPS main v153 450665c unchanged; CTO C-097 c016cba heartbeat cost-exhaustion 0 trials; COSTS_FTMO.csv unchanged since 79d09e0; CEO 7cb6731 no new D-*; TRIAL 471; OPEN empty). Quiet, no VOORSTEL/PREREG.
 - 2026-10-06 08:49 CEST S2 hourly: HOLD still binds (NEXT_STEPS v153 450665c; CTO C-098 bdd5499 cost-exhaustion 0 trials; COSTS_FTMO.csv unchanged since 79d09e0; no new D-*; TRIAL 471; OPEN empty). Quiet, no VOORSTEL/PREREG.
+- 2026-10-06 09:49 CEST S2 hourly: HOLD still binds (NEXT_STEPS v153 450665c unchanged; CTO C-099 6dfa468 cost-exhaustion 0 trials; COSTS_FTMO.csv unchanged; no new D-*; TRIAL 471; OPEN empty). Quiet, no VOORSTEL/PREREG.
