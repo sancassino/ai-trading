@@ -3580,3 +3580,9 @@ git push origin grok/cto-1
 - U2 e54d90c (08:50 D-090 IDLE, HOLD), S2 0b523ee (08:49 HOLD note v153/C-098), Faraday eb772cf (08:18 §10 HOLD heartbeat), CEO 7cb6731 (no new D-*), Auditor f8f620a.
 - Cost-exhaustion HOLD stands; TRIAL_COUNT 471; FREEZE OFF; no live PREREG; OPEN empty; Track-3 PAUSED; reserve 2025+ untouched; 0 trials. Unblock trigger unchanged: new COSTS_FTMO.csv row or S2 Lane-A survivor.
 - **Manager:** CTO alive; pointer → C-099. QUIET to Sandro.
+
+### C-100 — 2026-10-06 10:00 CEST — heartbeat (zero delta)
+- main c556efe unchanged (data/forward only), NEXT_STEPS v153; COSTS_FTMO.csv unchanged (last 0de4201) → ok_new_authorize = 0. No BESLUITEN / VRAGEN_CTO / TRIALS delta.
+- U2 7f905f4 (09:53 D-090 IDLE, HOLD), S2 4266f19 (09:48 HOLD note v153/C-099), Faraday 7c11894 (09:10 §10 HOLD heartbeat), CEO 7cb6731 (no new D-*), Auditor f8f620a.
+- Cost-exhaustion HOLD stands; TRIAL_COUNT 471; FREEZE OFF; no live PREREG; OPEN empty; Track-3 PAUSED; reserve 2025+ untouched; 0 trials. Unblock trigger unchanged: new COSTS_FTMO.csv row or S2 Lane-A survivor.
+- **Manager:** CTO alive; pointer → C-100. QUIET to Sandro.
