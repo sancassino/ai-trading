@@ -3543,3 +3543,10 @@ git push origin grok/cto-1
 - `COSTS_FTMO.csv` unchanged → **ok_new_authorize = 0**. No BESLUITEN / VRAGEN_CTO / TRIALS delta.
 - TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
 - **Manager:** CTO alive; pointer → C-093. QUIET to Sandro.
+
+## C-094 — 2026-10-06 03:55 CEST — heartbeat (zero delta)
+- main `c556efe` (data/forward only), NEXT_STEPS **v153** unchanged.
+- Peers fresh: U2 `e89a85a` (03:50 D-090 IDLE, HOLD), S2 `ffb14cd` (03:49 hourly HOLD note v153/C-093), Faraday `bdb6fa1` (03:19 §10 HOLD heartbeat v153/C-093), CEO `7cb6731` no new D-*.
+- `COSTS_FTMO.csv` unchanged (last `0de4201`) → **ok_new_authorize = 0**. No BESLUITEN / VRAGEN_CTO / TRIALS delta.
+- TRIAL **471**. FREEZE OFF. No live PREREG. OPEN empty. Track-3 PAUSED. Kill circuit ON. Reserve 2025+ untouched.
+- **Manager:** CTO alive; pointer → C-094. QUIET to Sandro.
