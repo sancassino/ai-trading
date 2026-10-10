@@ -1985,4 +1985,3 @@ Year-split bruto train: 2021 +2,03 (n=46) / 2022 −5,24 (n=125) / 2023 +6,28 (n
 **Verdict: FAIL_COST_GATE.** counts_as_trial=**false** → **geen TRIALS-append, geen TRIAL_COUNT bump** (N78/N80 erratum). TRIAL_COUNT blijft **458**. Dead += `N93_SECTOR_DISP_ROTATION`. Geen retune / geen klonen (geen thr-grid, geen overnight rewrite, geen US500-first). Board: `results/R2/n93_sector_disp_rotation/n93_gate_board.json`.
 
 **U2 next:** IDLE/HOLD tot next PASS→PREREG. Skip N75–N93 / VIX / ORB-meta / L60 / UKOIL-OVN / CORN / NY-2h clones.
-- 2026-10-11 01:20 D-090 IDLE: main d5734f9, BESLUITEN 4753905; HOLD.
