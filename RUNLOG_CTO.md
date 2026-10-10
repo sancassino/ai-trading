@@ -3603,3 +3603,6 @@ git push origin grok/cto-1
 - main d5734f9 data/forward/results only since c556efe; NEXT_STEPS v153 unchanged; COSTS_FTMO.csv unchanged → ok_new_authorize = 0. No BESLUITEN / VRAGEN_CTO / TRIALS delta.
 - Cost-exhaustion HOLD stands; TRIAL_COUNT 471; FREEZE OFF; no live PREREG; reserve 2025+ untouched; 0 trials. Unblock trigger unchanged: new COSTS_FTMO.csv row or S2 Lane-A survivor.
 - **Manager:** CTO alive; pointer → C-103. QUIET to Sandro.
+
+## C-104 2026-10-11 01:00 CEST heartbeat
+Zero delta: main d5734f9 (NEXT_STEPS v153), cost-exhaustion HOLD, TRIAL 471, FREEZE OFF, no live PREREG.
