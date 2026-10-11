@@ -3083,3 +3083,4 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 - D-090 2026-10-11 05:17 CEST IDLE: main f13fa91 (NEXT_STEPS v153), BESLUITEN 4753905 unchanged; HOLD.
 - D-090 2026-10-11 05:49 CEST IDLE/HOLD: main f13fa91 (v153), BESLUITEN 4753905, Faraday c195bcb, CTO f93e0a6 unchanged-scope; TRIAL 471; no PREREG.
 - D-090 2026-10-11 06:21 CEST IDLE: main f13fa91 (v153), BESLUITEN 4753905, CTO cdef3f9, Faraday c195bcb unchanged; HOLD, no PREREG, TRIAL 471.
+- 2026-10-11 06:52 CEST D-090 IDLE/HOLD: main f13fa91, BESLUITEN 4753905, Faraday c195bcb unchanged; no PREREG.
