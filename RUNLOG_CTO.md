@@ -3628,3 +3628,4 @@ Zero delta: main f13fa91 (no net diff vs d5734f9), NEXT_STEPS v153, cost-exhaust
 Zero delta: main f13fa91, U2 10f5b2b; cost-exhaustion HOLD, TRIAL 471, FREEZE OFF, OPEN empty. Geen actie.
 - 2026-10-11 14:59 CEST C-118 heartbeat: zero delta (main f13fa91, HOLD TRIAL 471; U2 4c02a5d).
 - 2026-10-11 15:58 CEST C-119 heartbeat: zero delta, main f13fa91, HOLD TRIAL 471, U2 78365d7.
+- C-120 2026-10-11 16:54 CEST heartbeat: zero delta; main f13fa91, U2 423cb76; HOLD TRIAL 471.
