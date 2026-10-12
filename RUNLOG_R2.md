@@ -3151,3 +3151,8 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 - D-090 2026-10-12 16:18 CEST IDLE: main f13fa91 (v153), BESLUITEN 4753905, CTO C-142 a1657f9, Faraday c195bcb, CEO 7cb6731, COSTS_FTMO.csv 0de4201/79d09e0 unchanged; absorbed S2 2b7c626 (hourly HOLD 16:04); HOLD, TRIAL 471, FREEZE OFF, OPEN empty, no PREREG, Track-3 PAUSED.
 - D-090 2026-10-12 17:08 CEST IDLE: main f13fa91 (v153), BESLUITEN 4753905, S2 2b7c626, Faraday c195bcb, CEO 7cb6731, COSTS_FTMO.csv 0de4201/79d09e0 unchanged; absorbed CTO C-143 baf03e0 (zero-delta HOLD); HOLD, TRIAL 471, FREEZE OFF, OPEN empty, no PREREG, Track-3 PAUSED.
 - D-090 2026-10-12 17:39 CEST IDLE: main f13fa91 (v153), BESLUITEN 4753905, CTO C-143 baf03e0, Faraday c195bcb, CEO 7cb6731, COSTS_FTMO.csv 0de4201 unchanged; absorbed S2 a4b80e7 (hourly HOLD 17:10); HOLD, TRIAL 471, FREEZE OFF, OPEN empty, no PREREG, Track-3 PAUSED.
+
+## D-090 2026-10-12 18:14 CEST — IDLE/HOLD
+- main `f13fa91` (NEXT_STEPS v153) unchanged; BESLUITEN `4753905` unchanged; cost-exhaustion HOLD; TRIAL_COUNT 471; FREEZE OFF; OPEN empty; no live PREREG.
+- Absorbed CTO C-144 `96f2470` (17:54) zero-delta HOLD. S2 `a4b80e7` already absorbed; Faraday `c195bcb` stale since 2026-10-06; CEO `7cb6731` no new D-*.
+- No trials run, no reserve access. U2 stays IDLE/HOLD until next PASS→PREREG. Quiet to Sandro.
