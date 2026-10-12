@@ -625,3 +625,6 @@
 - 2026-10-12 17:10 CEST hourly: HOLD still binds (main tip f13fa91 unchanged, NEXT_STEPS v153 stands; COSTS_FTMO.csv unchanged 0de4201 / blob a1090c8). Quiet, no VOORSTEL/PREREG.
 
 - 2026-10-12 19:01 CEST hourly: HOLD still binds (main tip f13fa91 unchanged, NEXT_STEPS v153 stands; COSTS_FTMO.csv unchanged 0de4201 / blob a1090c8; CTO C-145 04ac502 zero-delta HOLD, BESLUITEN ends D-104). Quiet, no VOORSTEL/PREREG.
+
+- 2026-10-12 20:53 CEST hourly: HOLD still binds (main tip f13fa91 unchanged, NEXT_STEPS v153 stands; COSTS_FTMO.csv unchanged 0de4201 / blob a1090c8). Quiet, no VOORSTEL/PREREG.
+
