@@ -3726,3 +3726,8 @@ Zero delta: main f13fa91 (NEXT_STEPS v153), cost-exhaustion HOLD, TRIAL 471, FRE
 - main `f13fa91` (NEXT_STEPS v153) unchanged; cost-exhaustion HOLD; TRIAL_COUNT 471; FREEZE OFF; OPEN empty; no live PREREG.
 - U2 `153f013` (22:04) IDLE/HOLD absorb S2 50ccc47; S2 `50ccc47` (21:51) hourly HOLD; Faraday `c195bcb` (quiet since 2026-10-06, HOLD-only, non-blocking per C-082); CEO `7cb6731` no new D-*.
 - COSTS_FTMO.csv unchanged (last 0de4201 / md5 5ac8f809) → ok_new_authorize = 0; HOLD Strateeg stays. No open actionable VRAGEN_CTO. Unblock: new COSTS row or S2 Lane-A survivor. No reserve access, no trials. QUIET to Sandro.
+
+## C-150 — 2026-10-12 23:10 CEST — heartbeat, zero delta
+- main `f13fa91` (NEXT_STEPS v153) unchanged; cost-exhaustion HOLD; TRIAL_COUNT 471; FREEZE OFF; OPEN empty; no live PREREG.
+- U2 `f06c4cf` (22:54) IDLE/HOLD zero peer delta; S2 `271a820` (22:53) hourly HOLD; Faraday `c195bcb` (quiet since 2026-10-06, HOLD-only, non-blocking per C-082); CEO `7cb6731` no new D-*.
+- COSTS_FTMO.csv unchanged (no commits since 2026-10-06 on any branch; cto-1 md5 5ac8f809) → ok_new_authorize = 0; HOLD Strateeg stays. No open actionable VRAGEN_CTO. Unblock: new COSTS row or S2 Lane-A survivor. No reserve access, no trials. QUIET to Sandro.
