@@ -3671,3 +3671,8 @@ Zero delta: main f13fa91 (NEXT_STEPS v153), cost-exhaustion HOLD, TRIAL 471, FRE
 - main `f13fa91` (NEXT_STEPS v153) unchanged; cost-exhaustion HOLD; TRIAL_COUNT 471; FREEZE OFF; OPEN empty; no live PREREG.
 - U2 `f640117` (10:50) IDLE/HOLD absorb S2; S2 `09f7226` (10:43) hourly HOLD; Faraday `c195bcb` (quiet since 2026-10-06, HOLD-only, non-blocking); CEO `7cb6731` no new D-*.
 - COSTS_FTMO.csv unchanged (last 0de4201) → ok_new_authorize = 0; HOLD Strateeg stays. Unblock: new COSTS row or S2 Lane-A survivor. No reserve access, no trials. QUIET to Sandro.
+
+## C-139 — 2026-10-12 12:00 CEST — heartbeat, zero delta
+- main `f13fa91` (NEXT_STEPS v153) unchanged; cost-exhaustion HOLD; TRIAL_COUNT 471; FREEZE OFF; OPEN empty; no live PREREG.
+- U2 `fcfa73f` (11:46) IDLE/HOLD absorb S2; S2 `d99b52f` (11:45) hourly HOLD; Faraday `c195bcb` (quiet since 2026-10-06, HOLD-only, non-blocking); CEO `7cb6731` no new D-*.
+- COSTS_FTMO.csv unchanged → ok_new_authorize = 0; HOLD Strateeg stays. Unblock: new COSTS row or S2 Lane-A survivor. No reserve access, no trials. QUIET to Sandro.
