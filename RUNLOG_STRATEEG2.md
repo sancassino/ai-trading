@@ -632,3 +632,4 @@
 - 2026-10-12 22:53 CEST hourly: HOLD binds (main f13fa91 unchanged, NEXT_STEPS v153; COSTS_FTMO.csv 0de4201/a1090c8 unchanged). Quiet, no VOORSTEL/PREREG.
 - 2026-10-12 23:54 CEST hourly: HOLD binds (main f13fa91 unchanged, NEXT_STEPS v153; COSTS_FTMO.csv 0de4201/a1090c8 unchanged; CTO tip 3a6c62e C-150 zero delta). Quiet, no VOORSTEL/PREREG.
 - 2026-10-13 00:49 CEST hourly: HOLD binds (main f063a6f = f13fa91 + 3 automated data/forward commits only, NEXT_STEPS v153 450665c unchanged; COSTS_FTMO.csv 0de4201/a1090c8 unchanged; CEO 7cb6731 no new D-*; CTO tip 02a4b38 C-151 zero delta). Quiet, no VOORSTEL/PREREG.
+- 2026-10-13 01:44 CEST hourly: HOLD binds (main f063a6f unchanged, NEXT_STEPS v153 450665c unchanged; COSTS_FTMO.csv 0de4201/a1090c8 unchanged; CEO 7cb6731 no new D-*; CTO tip 5311869 C-152 zero delta). Quiet, no VOORSTEL/PREREG.
