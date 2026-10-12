@@ -3652,3 +3652,4 @@ Zero delta: main f13fa91, cost-exhaustion HOLD, TRIAL 471, FREEZE OFF, no live P
 - 2026-10-12 03:59 CEST C-131 heartbeat: zero delta (main f13fa91, cost-exhaustion HOLD TRIAL 471, FREEZE OFF, no live PREREG; U2 e24f74e).
 - 2026-10-12 04:59 CEST C-132 heartbeat: zero delta, main f13fa91, HOLD TRIAL 471.
 - 2026-10-12 06:00 CEST C-133 heartbeat: zero delta, main f13fa91, cost-exhaustion HOLD TRIAL 471.
+- 2026-10-12 07:30 CEST C-134 heartbeat: zero delta (main f13fa91, NEXT_STEPS v153, cost-exhaustion HOLD TRIAL 471, FREEZE OFF, no live PREREG, OPEN empty; U2 e2a9eee). Scheduled 06:56 run failed; this restores hourly cadence.
