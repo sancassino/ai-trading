@@ -637,3 +637,4 @@
 - 2026-10-13 ~04:41 CEST — HOLD still binds: main f063a6f unchanged; NEXT_STEPS v153 (450665c); COSTS_FTMO.csv blob a1090c8 unchanged; CEO tip 7cb6731 (no new D-*); CTO 91edb2d C-155 zero-delta. No VOORSTEL/PREREG.
 - 2026-10-13 ~05:47 CEST hourly: HOLD binds — main f063a6f unchanged; NEXT_STEPS v153 @450665c; COSTS_FTMO.csv blob a1090c8 unchanged; CEO 7cb6731 no new D-*; CTO 99a0783 C-156 zero-delta. Quiet, no VOORSTEL/PREREG.
 - 2026-10-13 ~06:40 CEST hourly: HOLD binds — main f063a6f unchanged; NEXT_STEPS v153 @450665c; COSTS_FTMO.csv blob a1090c8 unchanged; CEO 7cb6731 no new D-*; CTO 0ba9841 C-157 zero-delta. Quiet, no VOORSTEL/PREREG.
+- 2026-10-13 ~09:47 CEST hourly (covers blocked 07:40/08:45 notes): HOLD binds — main f063a6f unchanged; NEXT_STEPS v153 @450665c; COSTS_FTMO.csv blob a1090c8 unchanged (last touch f7cd5e8); CEO 7cb6731 no new D-*; CTO 240eb90 C-159 zero-delta, ok_new_authorize=0; U2 7be91ca IDLE/HOLD. Quiet, no VOORSTEL/PREREG.
