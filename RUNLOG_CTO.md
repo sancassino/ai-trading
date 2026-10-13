@@ -3772,3 +3772,9 @@ Zero delta: main f13fa91 (NEXT_STEPS v153), cost-exhaustion HOLD, TRIAL 471, FRE
 - main `f063a6f` (weekrapport 2026-10-12), NEXT_STEPS v153, TRIAL_COUNT 471, cost-exhaustion HOLD, OPEN empty.
 - U2 `f39469b` (07:18) IDLE/HOLD absorb S2 40470b6; S2 `40470b6` (06:51) HOLD; Faraday `c195bcb`; CEO `7cb6731` geen nieuw D-*.
 - Geen nieuwe PASS→PREREG, geen VRAGEN open; reserve 2025+ dicht. COSTS_FTMO.csv ongewijzigd (md5 5ac8f809) → ok_new_authorize = 0. Geen actie nodig. QUIET naar Sandro.
+
+## C-159 — 2026-10-13 09:27 CEST — heartbeat 09:xx (covers overdue 08:xx + 09:xx)
+- main `f063a6f` (weekrapport 2026-10-12), NEXT_STEPS v153 (`450665c`), cost-exhaustion HOLD, TRIAL_COUNT 471, FREEZE OFF, OPEN empty, no live PREREG.
+- Team: U2 `28f501a` (09:15) IDLE/HOLD; S2 `40470b6` (06:51) HOLD; Faraday `c195bcb` (quiet since 2026-10-06, HOLD-only, non-blocking per C-082); CEO `7cb6731` no new D-* (last D-104).
+- Note: C-158 `1483338` covered 07:xx; 08:xx wake attempted C-159 but push was blocked as zero-delta filler (no approval card, not retried); 08:57 skipped. This entry is the overdue 08:xx + current 09:xx heartbeat.
+- COSTS_FTMO.csv unchanged (md5 5ac8f809) → ok_new_authorize = 0; HOLD Strateeg stays. No open actionable VRAGEN_CTO. Unblock: new COSTS row or S2 Lane-A survivor. No reserve access, no trials. QUIET to Sandro.
