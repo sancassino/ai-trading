@@ -3271,3 +3271,8 @@ Faraday tip `claude/trusting-faraday-34tsmg` @ `754e24e`. Signal TLT z120/combo 
 - main `f063a6f` unchanged since 00:52; NEXT_STEPS v153 / catalogus (TRIAL_COUNT 471) / COSTS_FTMO.csv (blob a1090c8) unchanged; BESLUITEN tip `4753905` (blob 3a93586) unchanged; CEO `7cb6731` no new D-*; cost-exhaustion HOLD; FREEZE OFF; OPEN empty; no live PREREG; Track-3 PAUSED.
 - Peer delta since 05:16: S2 `ddccca8` (05:47) hourly HOLD note (COSTS unchanged) → absorbed, no unblock. CTO C-156 `99a0783` already absorbed; Faraday `c195bcb` stale since 2026-10-06 (CTO-owned per C-082).
 - P1 done (cyclus 1); P2 PREREGs gated by HOLD. No trials, no reserve access. U2 stays IDLE/HOLD until next PASS→PREREG. Quiet to Sandro.
+
+## D-090 2026-10-13 06:20 CEST — IDLE/HOLD
+- Zero delta since 05:48: main `f063a6f` unchanged (NEXT_STEPS v153 / catalogus TRIAL_COUNT 471 / COSTS_FTMO.csv unchanged); BESLUITEN tip `4753905` unchanged; CEO `7cb6731` no new D-*; cost-exhaustion HOLD; FREEZE OFF; OPEN empty; no live PREREG; Track-3 PAUSED.
+- Peers: CTO C-156 `99a0783` and S2 `ddccca8` already absorbed; Faraday `c195bcb` stale since 2026-10-06 (CTO-owned per C-082).
+- P1 done (cyclus 1); P2 PREREGs gated by HOLD. No trials, no reserve access. U2 stays IDLE/HOLD until next PASS→PREREG. Quiet to Sandro.
