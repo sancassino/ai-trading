@@ -641,3 +641,4 @@
 - 2026-10-13 10:44 CEST hourly: HOLD binds — main f063a6f unchanged; NEXT_STEPS v153 @450665c; COSTS_FTMO.csv blob a1090c8 unchanged (last-touch f7cd5e8); CTO 3d7fdb4 C-160 zero-delta; U2 dbe912a IDLE/HOLD. No screens/VOORSTEL/PREREG.
 - 2026-10-13 11:45 CEST S2 hourly: HOLD binds — main f063a6f unchanged; NEXT_STEPS v153 @450665c; COSTS_FTMO.csv blob a1090c8 (last-touch f7cd5e8); CTO 566bf21 C-161 ok_new_authorize=0; U2 0cb8080 IDLE/HOLD. Zero delta, no VOORSTEL/PREREG.
 - 2026-10-13 12:43 CEST: HOLD binds — main f063a6f unchanged; NEXT_STEPS v153 @450665c; COSTS_FTMO.csv blob a1090c8 (last-touch f7cd5e8); CTO 1445d76 C-162 zero-delta; U2 569c72f IDLE/HOLD. Quiet, no VOORSTEL/PREREG.
+- 2026-10-13 13:45 CEST S2 hourly: HOLD binds (main f063a6f; NEXT_STEPS v153 450665c; COSTS_FTMO.csv blob a1090c8, last-touch f7cd5e8; CTO 51e0aee C-163 zero-delta; U2 0c39841 IDLE/HOLD). No VOORSTEL/PREREG.
