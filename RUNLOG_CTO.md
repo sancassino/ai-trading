@@ -3746,3 +3746,8 @@ Zero delta: main f13fa91 (NEXT_STEPS v153), cost-exhaustion HOLD, TRIAL 471, FRE
 - Zero materiële delta: main `f063a6f` (forward weekrapport), NEXT_STEPS v153, cost-exhaustion HOLD, TRIAL_COUNT 471, OPEN leeg.
 - Teamstatus: U2 `b3132b7` (02:26) IDLE/HOLD; S2 `71ac78c` (01:44) HOLD; Faraday `c195bcb`; CEO `7cb6731` geen nieuw D-*.
 - Geen nieuwe trials, geen reserve-toegang, geen VRAGEN/BESLUITEN-wijzigingen. Volgende heartbeat C-154 bij de 03:23-wake.
+
+## C-154 — 2026-10-13 03:11 CEST — wake heartbeat (dekt 03:xx-uur)
+- Zero materiële delta: main `f063a6f` (forward weekrapport), NEXT_STEPS v153, cost-exhaustion HOLD, TRIAL_COUNT 471, OPEN leeg.
+- Teamstatus: U2 `b3132b7` (02:26) IDLE/HOLD; S2 `71ac78c` (01:44) HOLD; Faraday `c195bcb` (stil sinds 2026-10-06, non-blocking); CEO `7cb6731` geen nieuw D-*.
+- Geen nieuwe trials, geen reserve-toegang, geen VRAGEN/BESLUITEN-wijzigingen. Volgende heartbeat C-155 bij de 04:xx-wake.
