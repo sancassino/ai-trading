@@ -3757,3 +3757,8 @@ Zero delta: main f13fa91 (NEXT_STEPS v153), cost-exhaustion HOLD, TRIAL 471, FRE
 - Teamstatus: U2 `66f1c2d` (04:18) IDLE/HOLD; S2 `98b1a10` (03:45) hourly HOLD; Faraday `c195bcb` (stil sinds 2026-10-06, HOLD-only, non-blocking per C-082); CEO `7cb6731` geen nieuw D-* (laatste D-104).
 - COSTS_FTMO.csv ongewijzigd (md5 5ac8f809, laatste commit c8227bd 2026-10-06) → ok_new_authorize = 0; HOLD Strateeg blijft. VRAGEN_CTO geen open actiepunt (laatste wijziging 2026-10-04). Unblock: nieuwe COSTS-rij of S2 Lane-A survivor.
 - Geen nieuwe trials, geen reserve-toegang, geen VRAGEN/BESLUITEN-wijzigingen. QUIET naar Sandro. Volgende heartbeat C-156 bij de 05:xx-wake.
+
+## C-156 — 2026-10-13 05:00 CEST — heartbeat 05:xx (zero delta)
+- main `f063a6f` (weekrapport 2026-10-12), NEXT_STEPS v153, TRIAL_COUNT 471, cost-exhaustion HOLD, OPEN empty.
+- U2 `276175d` (04:53) IDLE/HOLD; S2 `630d628` (04:40) HOLD; Faraday `c195bcb`; CEO `7cb6731` geen nieuw D-*.
+- Geen nieuwe PASS→PREREG, geen VRAGEN open; reserve 2025+ dicht. Geen actie nodig.
