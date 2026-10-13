@@ -3790,3 +3790,8 @@ Zero delta: main f13fa91 (NEXT_STEPS v153), cost-exhaustion HOLD, TRIAL 471, FRE
 - Team: U2 `0cb8080` (11:23) IDLE/HOLD; S2 `50a728d` (10:44) HOLD; Faraday `c195bcb` (2026-10-06 12:18, quiet ~7d — past C-082 24h mark but HOLD-only and non-blocking; CTO-owned, no Sandro ping); CEO `7cb6731` no new D-* (last D-104).
 - Audit: main `catalogus/TRIALS.csv` 87 data rows, last row N92 (2026-10-02) — no appends since; TRIAL_COUNT 471 unchanged. COSTS_FTMO.csv cto-1 md5 5ac8f809 / main md5 76a57135 (C-048 rows still unmerged, known) → ok_new_authorize = 0. VRAGEN_CTO last touched 2026-10-04, VRAGEN_MANAGER/UITVOERDER2 2026-10-05 — nothing open.
 - No reserve access, no trials. Unblock path unchanged: new honest COSTS row (Debian) or S2 Lane-A survivor. QUIET to Sandro.
+
+## C-162 — 2026-10-13 12:2x CEST — heartbeat 12:xx (zero delta)
+- main `f063a6f` (weekrapport 2026-10-12), NEXT_STEPS v153, cost-exhaustion HOLD, TRIAL_COUNT 471, FREEZE OFF, OPEN empty, no live PREREG.
+- Team: U2 `569c72f` (12:17) IDLE/HOLD; S2 `064ce0f` (11:46) HOLD; Faraday `c195bcb` (quiet since 2026-10-06, ~7d — past C-082 24h but HOLD-only non-blocking; CTO-owned, no Sandro ping); CEO `7cb6731` no new D-* (last D-104).
+- COSTS_FTMO.csv unchanged (cto-1 md5 5ac8f809; main md5 76a57135, C-048 rows still unmerged — known) → ok_new_authorize = 0; HOLD Strateeg stays. No open actionable VRAGEN_CTO (C-019 stale/superseded). Unblock: new honest COSTS row (Debian) or S2 Lane-A survivor. No reserve access, no trials. QUIET to Sandro.
