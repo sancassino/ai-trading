@@ -3767,3 +3767,8 @@ Zero delta: main f13fa91 (NEXT_STEPS v153), cost-exhaustion HOLD, TRIAL 471, FRE
 - main `f063a6f` (weekrapport 2026-10-12), NEXT_STEPS v153, TRIAL_COUNT 471, cost-exhaustion HOLD, OPEN empty.
 - U2 `cf975ff` (06:21) IDLE/HOLD; S2 `ddccca8` (05:47) HOLD; Faraday `c195bcb`; CEO `7cb6731` geen nieuw D-*.
 - Geen nieuwe PASS→PREREG, geen VRAGEN open; reserve 2025+ dicht. Geen actie nodig.
+
+## C-158 — 2026-10-13 07:27 CEST — heartbeat 07:xx (zero delta)
+- main `f063a6f` (weekrapport 2026-10-12), NEXT_STEPS v153, TRIAL_COUNT 471, cost-exhaustion HOLD, OPEN empty.
+- U2 `f39469b` (07:18) IDLE/HOLD absorb S2 40470b6; S2 `40470b6` (06:51) HOLD; Faraday `c195bcb`; CEO `7cb6731` geen nieuw D-*.
+- Geen nieuwe PASS→PREREG, geen VRAGEN open; reserve 2025+ dicht. COSTS_FTMO.csv ongewijzigd (md5 5ac8f809) → ok_new_authorize = 0. Geen actie nodig. QUIET naar Sandro.
